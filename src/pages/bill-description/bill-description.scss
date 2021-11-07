@@ -1,0 +1,200 @@
+page-bill-description {
+  .document-button {
+    div {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+    }
+  }
+
+  .add-button {
+    font-size: 12px;
+    font-weight: 1000 !important;
+    background: #a80852;
+  }
+
+  // div.scrollmenu {
+  //   //background-color: #333;
+  //   position: relative;
+  //   margin-top: 20px;
+  //   overflow: auto;
+  //   white-space: nowrap;
+  //   background: #fff;
+  //   div {
+  //     //width: 100%;
+
+  //     border: 1px solid #0752af;
+  //   }
+
+  //   .fa-angle-down,
+  //   .fa-angle-right {
+  //     font-size: 30px;
+  //     color: #0752af;
+  //     position: absolute;
+  //     bottom: 20px;
+  //   }
+
+  //   .fa-angle-down {
+  //     right: 0;
+  //   }
+
+  //   .fa-angle-right {
+  //     left: 20px;
+  //   }
+  // }
+
+  // div.scrollmenu a {
+  //   display: inline-block;
+  //   //color: white;
+  //   text-align: center;
+  //   padding: 14px;
+  //   font-size: 14px;
+  //   text-decoration: none;
+  //   border: 1px solid #0752af;
+  //   border-bottom: none;
+  // }
+
+  // div.scrollmenu a:hover {
+  //   background-color: #777;
+  // }
+
+  .item {
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+  .item.item-block .item-inner {
+    border-radius: 5px;
+    //border: 1px solid #287ac4;
+  }
+
+  .state {
+    margin: 0px -5px;
+  }
+
+  .label-md {
+    padding-left: 8px;
+    color: rgba(128, 128, 128, 0.849);
+  }
+
+  .profile-picture {
+    margin: 0px;
+    //text-align: center;
+    border-radius: 50%;
+    padding-top: 20px;
+
+    h6 {
+      font-size: 14px;
+      padding-top: 30px;
+      margin-left: -10px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      //background: #f3f3f3;
+      background: #f3f3f3;
+      color: #287ac4;
+      border-radius: 5px 15px 5px 5px;
+    }
+
+    .edit-pencil {
+      position: absolute;
+      background: #287ac4;
+      padding: 10px;
+      right: 30px;
+      top: -10px;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .share-button {
+    background: #0752af;
+  }
+
+  .monthy-button {
+    background: #24e289;
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+    }
+  }
+
+  .problem-work-div {
+    position: relative;
+
+    .problem-work {
+      width: 85%;
+    }
+
+    .icon {
+      position: absolute;
+      right: 10px;
+      font-size: 30px;
+      color: #0752af;
+      bottom: 10px;
+    }
+  }
+
+  .dropdown-two {
+    height: 145px;
+    margin-top: 12px;
+    border: 2px solid #3951b2;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: 360px) {
+    .dropdown-two {
+      height: 166px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .dropdown-two {
+      height: 166px;
+    }
+  }
+}

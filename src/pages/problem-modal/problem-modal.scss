@@ -1,0 +1,27 @@
+page-problem-modal {
+  .searchbar-input-container {
+    border: 1px solid grey;
+    border-radius: 20px;
+  }
+
+  .add-new {
+    background: #0752af;
+    .button-inner {
+      font-size: 12px;
+    }
+  }
+
+  .custom-button {
+    width: 80px !important;
+  }
+
+  .checkbox-md .checkbox-checked {
+    background: rgb(104, 226, 104);
+    border-color: rgb(104, 226, 104);
+    border-radius: 50%;
+  }
+
+  .modal-card-details {
+    margin-top: 10vh;
+  }
+}

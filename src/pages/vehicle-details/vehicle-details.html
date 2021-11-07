@@ -1,0 +1,368 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>      
+      <ion-col col-9 class="person-name text-center">
+        <ion-title>        
+          <i class="fa fa-car" aria-hidden="true"></i>
+          VEHICLE DETAILS
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+  <div class="container">
+
+     
+      <ion-row class="vehicle-details-card">
+        <ion-col col-12>
+          <h4 class=" text-center">VEHICLE DETAILS</h4>
+          <hr>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE NUMBER: </p>
+          <span class="text-color-primary">{{vehicle['vehicle_number']}}</span>
+        </ion-col>
+        <ion-col col-1>
+          <div style="margin-top: 5px; width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>
+    
+        </ion-col>
+        <ion-col col-3>
+          DRIVER
+        </ion-col>
+        <ion-col col-6>
+         <p> TYPE: </p>
+          <span class="text-color-primary">{{vehicle['vehicle_type']}}</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>YEAR OF PURCHASE: </p>
+          <span class="text-color-primary">{{vehicle['year_purchase']}}</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>DRIVER: </p>
+          <span class="text-color-primary" *ngIf="vehicle['driver_details'] != null && vehicle['driver_details'] != undefined">
+            {{vehicle['driver_details']['name']}}
+          </span> 
+        </ion-col>
+        <ion-col col-6>
+            <button ion-button round class="custom-button" (click)="goToModal()">ALLOT/<br>CHANGE/<br>REMOVE DRIVER</button>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE WEIGHT: </p>
+          <span class="text-color-primary">{{vehicle['vehicle_weight']+" "+vehicle['vehicle_weight_type']}}</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE MODEL: </p>
+          <span class="text-color-primary">{{vehicle['vehicle_model']}}</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>KM READING: </p>
+          <span class="text-color-primary">{{vehicle['vehicle_km_reading_current']}}</span>
+        </ion-col>
+
+
+        <ion-col col-6 (click)="showMore()" class="text-right show-more-fa" *ngIf="workdetails.length > 0">
+          <i id="fa-arrow-circle-down" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>
+
+        </ion-col>
+
+     
+
+        <ion-col col-12 *ngIf="isShown">
+
+          <div class="scroll-grid" >
+            <div class="scrollmenu">
+             
+              <a href="#home">DATE</a>
+              <a href="#news">WORK/PART</a>
+              <a href="#contact">DETAILS</a>
+              <a href="#about">KM READING</a>
+              <a href="#about">ID</a>
+              <!-- <a href="#support">COST</a> -->
+              <a href="#blog">DETAIL</a>
+      
+          
+              <div [ngClass]="wd['selected'] == false ? 'scrollmenu-list' : 'scrollmenu-list selected'" *ngFor="let wd of workdetails"  (click)="selectThis(wd)">
+                <p>{{wd['vehicle_update_date']}}</p>
+                <p>{{wd['vehicle_part_work']}}</p>
+                <p>{{wd['vehicle_part_work_details']}}</p>
+                <p>{{wd['vehicle_update_km_reading']}}</p>
+                <p>{{wd['vehicle_user_update_id']}}</p>
+                <!-- <p>RS 400</p> -->
+                <p>{{wd['vehicle_update_details']}}</p>
+           
+              </div>
+        
+        
+            </div>
+            <div class="show-arrows">
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        
+            </div>
+          </div>
+        </ion-col>
+ 
+
+        <!-- <ion-col col-12 class="text-center mt-4">
+          <button ion-button round class="all-button"> ALLOT/CHANGE/REMOVE DRIVER</button>
+
+        </ion-col> -->
+
+        <ion-col col-12>
+          <ion-row class="document-button">
+            <ion-col col-6 (click)="navCtrl.push('VehicleWorkReportPage',{'vehicle':vehicle})">
+              <div>
+                VEHICLE WORK REPORT
+                <i class="fa fa-download" aria-hidden="true"></i>
+      
+              </div>
+              <!-- <button ion-button round outline small></button> -->
+            </ion-col>
+            <ion-col col-6 (click)="navCtrl.push('VehicleBillReportPage',{'vehicle':vehicle})">
+              <div>
+                VEHICLE BILL REPORT
+                <i class="fa fa-download" aria-hidden="true"></i>
+      
+              </div>
+              <!-- <button ion-button round outline small></button> -->
+            </ion-col>
+          </ion-row>
+        </ion-col>
+         
+      </ion-row>
+
+      
+
+      <!-- <ion-row>
+        <ion-col col-6>
+          VEHICLE WORK REPORT
+        </ion-col>
+
+        <ion-col col-6>
+          VEHICLE BILL REPORT
+        </ion-col>
+      </ion-row> -->
+
+      <ion-row class="vehicle-details-card">
+        <ion-col col-12>
+          <h4 class="text-center">DOCUMENTS</h4>
+          <hr>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-category" (click)="openDriverDocument()">
+            <i class="fa fa-user" aria-hidden="true"></i>
+
+            DRIVER
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-category" (click)="openVehicleDocument()">
+            <i class="fa fa-truck" aria-hidden="true"></i>
+            VEHICLE
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-category">
+            <i class="fa fa-share" aria-hidden="true"></i>
+            SHARE
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="vehicle-details-card">
+        <ion-col col-12>
+          <h4 class="text-center">DRIVER HISTORY</h4>
+          <hr>
+        </ion-col>
+
+        <!-- <ion-col col-12>
+          <div class="custom-searchbar-div" style="position: relative;">
+            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          
+        </ion-col> -->
+        <!-- <a href="#home">NUMBER</a>
+        <a href="#news">NAME</a>
+        <a href="#contact">JOINING DATE</a>
+        <a href="#about">LEAVING DATE</a>
+        <a href="#support">REASON</a>
+        <a href="#blog">TOTAL KM</a> -->
+
+        <ion-col col-12>
+          <div class="scroll-grid">
+            <div class="scrollmenu">
+             
+              <a href="#home">VEHICLE NUMBER(S)</a>
+              <a href="#home">NAME</a>
+              <a href="#news">JOINING DATE</a>
+              <a href="#contact">LEAVING DATE</a>
+              <a href="#about">REASON/DETAILS</a>
+              <a href="#about">JOINING KM</a>
+              <a href="#about">LEAVING KM</a>
+
+          
+              <div class="scrollmenu-list" id="1" *ngFor="let drv of driverhistory">
+                <p>{{drv['vehicle']['vehicle_number']}}</p>
+                <p>{{drv['driver']['name']}}</p>
+                <p>{{drv['driver_start_date']}}</p>
+                <p>{{drv['driver_end_date']}}</p>
+                <p>{{drv['driver_start_details']}}</p>
+                <p>{{drv['driver_start_km']}} KM</p>
+                <p>{{drv['driver_end_km']}} KM</p>
+              </div>
+        
+            
+            </div>
+            <div class="show-arrows">
+              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      
+      <ion-row class="vehicle-details-card">
+        <ion-col col-12>
+          <h4 class="text-center">WORK HISTORY</h4>
+          <hr>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-work-category">
+            <p>TOTAL WORK</p>
+            <h6 class="total-work">{{total}}</h6>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-work-category">
+            <p>TOTAL PAID</p>
+            <h6 class="total-paid">{{paid}}</h6>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <div class="each-work-category">
+            <p>TOTAL DUE</p>
+            <h6 class="total-due">{{unpaid}}</h6>
+          </div>
+        </ion-col>
+      </ion-row>
+
+
+      <!-- <div class="custom-searchbar-div" style="position: relative;">
+        <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </div> -->
+        
+
+      <div class="text-center" style="padding-top: 20px;">
+        <button ion-button round class="exchange-button" (click)="openExchangeModal()">EXCHANGE PARTS</button>
+      </div>
+
+
+      <div class="scroll-grid" >
+        <div class="scrollmenu work-history">
+        
+        <a href="#home">PROBLEM</a>
+        <a href="#home">WORK (PART & ID)</a>
+        <a href="#news">DATE</a>
+        <a href="#contact">BILL NUMBER</a>
+        <a href="#about">PERSON NAME</a>
+        <!-- <a href="#support">REPAIR</a> -->
+        <!-- <a href="#support">PART / DOC / MECHANIC</a> -->
+        <!-- <a href="#support">DOC</a> -->
+        <!-- <a href="#blog">PART</a> -->
+        <!-- <a href="#blog">LOAD ID(NEW)</a> -->
+        <a href="#tools">QUANTITY</a>
+        <a href="#tools">RATE</a>
+        <a href="#tools">TOTAL</a>
+        <!-- <a href="#tools">DETAILS</a> -->
+
+          <div class="scrollmenu-list" *ngFor="let vhc of vehicleworkdetails" id="5" (click)="selectThis(5)">
+            <p>{{vhc['problem']}}</p>
+            <p>{{vhc['new_part_name']}}</p>
+            <p>{{vhc['date']}}</p>
+            <p>{{vhc['bill_number']}}</p>
+            <p>{{vhc['person']}}</p>
+            <p>{{vhc['quantity']}}</p>
+            <p>{{vhc['rate']}}</p>
+            <p>{{vhc['total_amount']}}</p>
+          </div>
+        </div>
+        <div class="show-arrows">
+          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+    
+        </div>
+      </div>
+    
+
+
+
+  
+      <!-- <ion-row class="driver-modal">
+        <ion-col col-12 class="text-center driver-modal-header">
+          DRIVER
+        </ion-col>
+        <ion-col col-12>
+          <ion-list radio-group [(ngModel)]="autoManufacturers">
+
+          <ion-row>
+            <ion-col col-4>
+              <ion-item>
+                <ion-label>CHANGE</ion-label>
+                <ion-radio value="change"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4>
+              <ion-item>
+                <ion-label>ALOT</ion-label>
+                <ion-radio value="alot"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col-4>
+              <ion-item>
+                <ion-label>REMOVE</ion-label>
+                <ion-radio value="remove"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        
+
+       
+          
+          </ion-list>
+    
+        </ion-col>
+       
+       
+  
+        <ion-col col-12 class="text-center">
+          <button ion-button round class="custom-button">SAVE</button>
+        </ion-col>
+    
+  
+      </ion-row> -->
+
+
+    
+  
+ 
+
+
+    
+
+  </div>
+</ion-content>  
+

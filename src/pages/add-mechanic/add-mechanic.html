@@ -1,0 +1,140 @@
+<!--
+  Generated template for the AddMechanicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the AddDriverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+      
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <ion-icon ios="ios-create" md="md-create"></ion-icon>
+          ADD MECHANIC
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container edit-profile">
+
+    <ion-list>
+
+   
+      <ion-item>
+        <ion-label>TYPE OF PERSON</ion-label>
+
+        <ion-select [(ngModel)]="gender" >
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input type="text" placeholder="NAME"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input type="text" placeholder="PHONE NUMBER"></ion-input>
+
+
+      </ion-item>
+      
+    
+      <ion-item>
+        <ion-input type="text" placeholder="BUSINESS NAME"></ion-input>
+
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input type="text" placeholder="CITY"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="PAN NUMBER"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-input type="text" placeholder="GST NUMBER(OPTIONAL)"></ion-input>
+      </ion-item>
+
+   
+      <ion-item>
+        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>
+      </ion-item>
+
+      <ion-row class="state">
+        <ion-col col-6>
+          <ion-item>
+            <ion-label>STATE</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="f">Female</ion-option>
+              <ion-option value="m">Male</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-input type="text" placeholder="PNCODE"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item>
+        <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="IFSC"></ion-input>
+      </ion-item>
+
+      
+
+
+      <ion-row class="profile-picture">
+        <ion-col col-4>
+          <i class="fa fa-camera" aria-hidden="true"></i>
+          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>
+
+        </ion-col>
+        <ion-col>
+          <h6></h6> 
+        </ion-col>
+
+      </ion-row>
+
+      <div class="text-center mt-4">
+        <button ion-button round class="custom-button">SAVE DETAILS</button>
+      </div>
+      
+    </ion-list>
+
+  </div>
+</ion-content> 
+

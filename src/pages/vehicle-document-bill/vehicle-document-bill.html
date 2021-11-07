@@ -1,0 +1,122 @@
+<ion-content padding>
+
+  <p style="float: right !important;" (click)="dismiss()">
+    <ion-icon name="close" style="color: red !important;"></ion-icon>
+  </p>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+      <ion-col col-4 style="text-align: left !important;color: rgb(5, 45, 131) !important;">
+        Vehicle #
+      </ion-col>
+      <ion-col col-3 style="text-align: center !important;color: rgb(5, 45, 131) !important;">
+       Expiry Date
+      </ion-col>
+      <ion-col col-2 style="text-align: right !important;color: rgb(5, 45, 131) !important;">
+        Cost
+      </ion-col>
+      <ion-col col-3 style="text-align: center !important;color: rgb(5, 45, 131) !important;">
+        Image
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let det of details">
+      <ion-grid>
+        <ion-row>
+        <ion-col col-4 style="text-align: left !important;color: #000 !important;">
+          {{det['vehicle_number']}}
+        </ion-col>
+        <ion-col col-3 style="text-align: center !important;font-size: 10px;margin-top: 5px;font-weight: 1000;">
+          {{det['expiry_date']}}
+        </ion-col>
+        <ion-col col-2 style="text-align: right !important;color: #000 !important;">
+          ₹  {{det['bill_amount']}}
+        </ion-col>
+        <ion-col col-3 style="text-align: center !important;">
+          <img *ngIf="det['image_url'] != null" style="width: 30%;" [src]="det['image_url']" />
+          <span style="float: right;">
+            <ion-icon name="close-circle" style="color: red;padding-right: 15px;" (click)='removeItem(det)'></ion-icon>
+          </span>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+      <ion-col col-4 style="text-align: left !important;">
+       
+      </ion-col>
+      <ion-col col-3 style="text-align: center !important;color: #000 !important;">
+       Total
+      </ion-col>
+      <ion-col col-2 style="text-align: right !important;color: #000 !important;">
+        ₹ {{total_bill}}
+      </ion-col>
+      <ion-col col-3 style="text-align: center !important;">
+        
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-item>
+
+
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid style="padding:0px !important; ">
+    <ion-item class="label-select" style="margin-top: 0px !important;padding: 10px !important;background: white !important;">
+      <ion-label floating>SELECT VEHICLE</ion-label>
+      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">
+        <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">{{vh['vehicle_number']}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-row class="cost-camera-expiry" style="margin: 0px -6px; padding: 10px !important;background: white !important;">
+
+      <ion-col col-5 style="background: white !important;">
+        <div class="label-float" >
+          <input type="tel" [(ngModel)]="bill_amount"  placeholder=" " />
+          <label>COST</label>
+          <i class="fa fa-money" aria-hidden="true"></i>
+    
+        </div>
+      </ion-col>
+    
+      <ion-col col-2 *ngIf="img == null" style="background: white !important;">
+        <div (click)="openCameraPopup()" class="detail-picture">
+          <i class="fa fa-camera" aria-hidden="true"></i>
+        </div>  
+      </ion-col>
+      <ion-col col-2 *ngIf="img != null" style="background: white !important;">
+        <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
+        <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>       
+      </ion-col>
+      <ion-col col-5 style="background: white !important;">
+        <div class="label-float" >
+          <input type="text"  [(ngModel)]="expiry_date" (click)="openCalendarPopup2()" placeholder=" " />
+          <label>EXPIRY</label>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+    
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="cost-camera-expiry" style="margin: 0px -6px; padding: 10px !important;background: white !important;">
+      <ion-col col-6 style="text-align: center !important;">
+      <button ion-button class="custom-button" style="width: 80% !important;" (click)="addItem()">ADD ITEM</button>
+    </ion-col>
+    <ion-col col-6 style="text-align: center !important;">
+      <button ion-button class="custom-button" style="width: 80% !important;" (click)="saveBills()">SAVE BILLS</button>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

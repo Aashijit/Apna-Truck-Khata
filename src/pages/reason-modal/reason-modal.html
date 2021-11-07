@@ -1,0 +1,60 @@
+<ion-content padding style="background: rgba(0,0,0,0.8) !important;">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+
+        <ion-col col-12>
+          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>
+        </ion-col>
+
+
+ 
+      </ion-row>
+
+      <ion-grid *ngIf="addReason">
+        <ion-row>
+          <ion-col col-12>
+            <h2>Add Reason</h2>
+          </ion-col>
+          <ion-col col-12>
+            <div class="label-float" >
+              <input type="text"  placeholder=" " [(ngModel)]="reasontext" />
+              <label>NAME</label>
+            </div>
+          </ion-col>
+          <!-- <ion-col col-12 style="text-align: center;">
+            <button ion-button round class="custom-button" (click)="savereason()"> ADD REASON  </button>
+          </ion-col> -->
+        </ion-row>
+      </ion-grid>
+
+      <ion-col col-12 style="text-align: center;">
+        <button ion-button round class="custom-button"  (click)="savereason()"> ADD REASON  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>
+      </ion-col>
+
+
+      <ion-row>
+        <ion-col col-12>
+        <ion-list>
+          <ion-item *ngFor="let wp of filterreasons" >
+            <ion-card>
+              <ion-card-content>
+            <ion-row>
+              <ion-col style="text-align: left;" (click)="selectedReason(wp)"> 
+                {{wp['reason']}}
+              </ion-col>
+              <ion-col style="text-align: right;" (click)="deletereason(wp)"> 
+                <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
+              </ion-col> 
+            </ion-row>
+          </ion-card-content>
+          </ion-card>
+          </ion-item>
+        </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

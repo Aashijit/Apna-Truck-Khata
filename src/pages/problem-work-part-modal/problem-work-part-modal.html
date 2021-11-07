@@ -1,0 +1,85 @@
+<ion-content padding style="background: rgba(0,0,0,0.8) !important;">
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-12>
+          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>
+        </ion-col>
+        <ion-col col-12 style="text-align: center;">
+          <button ion-button round class="custom-button" (click)="addWorkPart=!addWorkPart"> ADD REPAIR  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-grid *ngIf="addWorkPart">
+        <ion-row>
+          <ion-col col-12>
+            <h2>Add Repair</h2>
+          </ion-col>
+          
+          <ion-col col-12>
+            <div class="label-float" >
+              <input type="text"  placeholder=" " [(ngModel)]="problem" />
+              <label>PROBLEM/WORK</label>
+            </div>
+          </ion-col>
+          <ion-col col-12>
+            <div class="label-float" >
+              <input type="text"  placeholder=" " [(ngModel)]="part" />
+              <label>PART</label>
+            </div>
+          </ion-col>
+          <ion-col col-12>
+            <div class="label-float" >
+              <input type="text"  placeholder=" " [(ngModel)]="id" />
+              <label>ID</label>
+            </div>
+          </ion-col>
+          <ion-col col-12 style="text-align: center;">
+            <button ion-button round class="custom-button" (click)="saverepair()"> ADD REPAIR  </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-row>
+        <ion-col col-12>
+        <ion-list>
+          <!-- (click)="selectedProblem(wp)" -->
+          <ion-item *ngFor="let wp of problems" >
+              <ion-label style="font-size: 10px;">{{wp['problem_name'] + " "+wp['vehicle_part_name'] +" "+ wp['vehicle_part_id']}}</ion-label>
+              <ion-checkbox [(ngModel)]="wp['selected']" slot="start"></ion-checkbox>
+            <!-- <ion-card>
+              <ion-card-content>
+            <ion-row>
+               [(ngModel)]="wp['selected']" 
+              <ion-col style="text-align: center;" col-12>
+                <ion-item>
+                  
+              </ion-item>
+              </ion-col>
+              <ion-col style="text-align: center;"> 
+                {{wp['problem_name']}}
+              </ion-col>
+              <ion-col style="text-align: center;"> 
+                {{wp['vehicle_part_name']}}
+              </ion-col>
+              <ion-col style="text-align: center;">
+                {{wp['vehicle_part_id']}}
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+          </ion-card> -->
+          </ion-item>
+        </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="text-center">
+          <button ion-button round class="custom-button" (click)="problemsSelected()">Save</button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

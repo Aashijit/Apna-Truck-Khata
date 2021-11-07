@@ -1,0 +1,237 @@
+page-about {
+  .save-details {
+    margin: 10px 0px;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+    background: #287ac4;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .security-details {
+    .item {
+      padding-left: 0px;
+    }
+
+    .item .item-inner {
+      padding-right: 0px;
+    }
+
+    ion-label {
+      color: #818287;
+      font-size: 16px;
+    }
+
+    ion-input {
+      border-radius: 5px;
+      border: 1px solid #287ac4;
+      background: #fff;
+    }
+
+    .confirm-button {
+      margin: 50px 0px;
+      padding: 10px;
+      font-weight: 500;
+      text-align: center;
+      background: #287ac4;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  }
+
+  .total-cost {
+    text-align: center;
+    padding: 20px 5px;
+    color: #468dcc;
+    background: #ffffff;
+    border: 1px solid #287ac4;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+
+  .full-report,
+  .add-person {
+    margin: 20px 0px;
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+    background: #287ac4;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #468dcc;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #468dcc;
+    }
+  }
+
+  .document {
+    .profile-picture {
+      text-align: center;
+
+      img {
+        background: #ffffff;
+
+        border-radius: 50%;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .details {
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
+    color: #818287;
+    font-size: 10px;
+    background: #ffffff;
+    border: 1px solid #287ac4;
+    border-bottom: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  .every-details {
+    text-align: center;
+    padding: 8px 10px;
+    margin: 0px 0px 20px;
+    color: #818287;
+    font-size: 14px;
+    background: #ffffff;
+    border: 1px solid #287ac4;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    .name {
+      padding-right: 37px;
+    }
+
+    .money {
+      padding-left: 37px;
+    }
+  }
+
+  .profile-details {
+    color: #818287;
+
+    margin: 20px 0px;
+  }
+
+  .report-statement {
+    margin: 20px -5px;
+  }
+
+  .full-report-statement {
+    color: #287ac4;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .monthy-statement {
+    color: #287ac4;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .bill {
+    margin: 20px 0px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    color: #818287;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    .col {
+      text-align: center;
+
+      .ammount {
+        margin: 10px 0;
+        padding: 10px;
+        background: #ffffff;
+        border: 1px solid #287ac4;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .ammount.due {
+        color: #fff;
+        background: #e02b2b;
+        border: none;
+      }
+    }
+  }
+
+  .bill-details {
+    margin: 20px -15px 0px;
+    display: flex;
+    flex-direction: row;
+    color: #818287;
+
+    justify-content: space-between;
+
+    div {
+      font-size: 10px;
+      padding: 5px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #287ac4;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+  }
+
+  .bill-details-description {
+    height: 100px;
+    margin: 0px -15px;
+    border: 1px solid #287ac4;
+    border-radius: 5px;
+    background: #fff;
+
+    .fa {
+      color: #287ac4;
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .give-money {
+    margin: 20px 0;
+    text-align: center;
+
+    button {
+      color: #fff;
+      background: #e02b2b;
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,234 @@
+page-vehicle-details {
+  .toolbar-title {
+    padding-left: 25px;
+  }
+
+  .text-color-primary {
+    font-size: 9px;
+  }
+
+  .vehicle-details {
+    .item {
+      margin-top: 20px;
+      padding-left: 0px;
+    }
+    .item.item-block .item-inner {
+      border-radius: 5px;
+      border: 1px solid #0752af;
+      background: #fff;
+    }
+
+    .confirm-button {
+      margin: 10px 0px;
+      padding: 10px;
+      font-weight: 500;
+      text-align: center;
+      background: #0752af;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .profile-picture {
+      margin: 0px;
+
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        background: #ffffff;
+        color: #0752af;
+        border-radius: 5px 15px 5px 5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .edit-pencil {
+        position: absolute;
+        background: #0752af;
+        padding: 10px;
+        right: 30px;
+        top: -10px;
+        color: #fff;
+        border-radius: 50%;
+      }
+
+      h6 {
+        margin-top: 2rem;
+        color: #818287;
+      }
+    }
+  }
+
+  .vehicle-details-card {
+    background: #fff;
+    //background: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    color: #0752af;
+
+    p {
+      font-size: 10px;
+      margin-bottom: -0.5rem;
+      color: rgb(44, 43, 43);
+    }
+
+    .each-category {
+      background: #fff;
+      padding: 10px 0;
+      // border: 1px solid grey;
+      border-radius: 5px;
+      text-align: center;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .driver-modal {
+    background: #fff;
+    //padding: 0 20px;
+
+    .col {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    .item {
+      //margin-top: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .item.item-block .item-inner {
+      border-radius: 2px;
+      padding: 5px 10px;
+      border: 1px solid #287ac4;
+    }
+  }
+
+  .document-button {
+    div {
+      background: #0752af;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 1000;
+    }
+  }
+
+  .all-button {
+    background: red;
+    font-weight: 600;
+  }
+
+  .exchange-button {
+    background: #a80852;
+    font-weight: 1000 !important;
+  }
+
+  .driver-modal-header {
+    color: #fff;
+    font-weight: 600;
+    background: #0752af;
+    padding: 10px !important;
+  }
+
+  // div.scrollmenu {
+  //   //background-color: #333;
+  //   position: relative;
+  //   margin-top: 20px;
+  //   overflow: auto;
+  //   white-space: nowrap;
+  //   background: #fff;
+  //   div {
+  //     //width: 100%;
+
+  //     border: 1px solid #0752af;
+  //   }
+
+  //   .fa-angle-down,
+  //   .fa-angle-right {
+  //     font-size: 30px;
+  //     color: #0752af;
+  //     position: absolute;
+  //     bottom: 20px;
+  //   }
+
+  //   .fa-angle-down {
+  //     right: 0;
+  //   }
+
+  //   .fa-angle-right {
+  //     left: 20px;
+  //   }
+  // }
+
+  // div.scrollmenu a {
+  //   display: inline-block;
+  //   //color: white;
+  //   text-align: center;
+  //   padding: 14px;
+  //   font-size: 14px;
+  //   text-decoration: none;
+  //   color: #0752af;
+  //   border: 1px solid #0752af;
+  //   border-bottom: none;
+  // }
+
+  // div.scrollmenu a:hover {
+  //   background-color: #777;
+  // }
+
+  .each-work-category {
+    text-align: center;
+  }
+
+  .total-work {
+    color: #0752af;
+    font-weight: 600;
+    // padding-top: 5px;
+  }
+
+  .total-paid {
+    color: green;
+    font-weight: 600;
+    //margin-top: 5px;
+  }
+
+  .total-due {
+    color: red;
+    font-weight: 600;
+    //margin-top: 5px;
+  }
+
+  .custom-button {
+    width: 150px !important;
+  }
+
+  @media screen and (max-width: 414px) {
+    .button-inner {
+      font-size: 10px !important;
+    }
+
+    div.work-history {
+      height: 180px;
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .toolbar-title {
+      padding-left: 20px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .button-inner {
+      font-size: 8px !important;
+    }
+    .custom-button {
+      width: 120px !important;
+    }
+  }
+}

@@ -1,0 +1,368 @@
+
+<!--
+  Generated template for the DocumentRenewalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the AddDriverExpensesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <!-- <ion-col col-2 class="custom-back-button"> -->
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      <!-- </ion-col> -->
+    
+      <ion-col col-10 class="person-name text-left">
+        <ion-title>        
+          <ion-icon name="ios-copy"></ion-icon>
+          BILL DETAILS
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-2 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+    <!-- <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div> -->
+
+    <!-- <div class="scrollmenu">
+      <a href="#home">BILL NUMBER</a>
+      <a href="#news">VEHICLE</a>
+      <a href="#contact">PROBLEM/WORK (PART & ID)</a>
+      <a href="#about">DATE OF REPAIR</a>
+      <a href="#support">REPAIR</a>
+      <a href="#blog">QUANTITY</a>
+      <a href="#tools">RATE(PC/FULL)</a>
+      <a href="#tools">TOTAL</a>
+      <a href="#tools">DETAILS</a>
+      <a href="#tools">ID(OPTIONAL)</a>
+      <a href="#tools">KM READING</a> -->
+
+            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>
+      <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+<!-- 
+      <div style="height: 200px;width: 400px">
+
+      </div>
+    </div> -->
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+
+        <a href="#home">BILL NUMBER</a>
+        <a href="#news">VEHICLE</a>
+        <a href="#contact">PROBLEM/WORK (PART & ID)</a>
+        <a href="#about">DATE OF REPAIR</a>
+        <a href="#support">REPAIR</a>
+        <a href="#blog">QUANTITY</a>
+        <a href="#tools">RATE(PC/FULL)</a>
+        <a href="#tools">TOTAL</a>
+        <a href="#tools">DETAILS</a>
+        <a href="#tools">ID(OPTIONAL)</a>
+        <a href="#tools">KM READING</a>
+
+        <div class="scrollmenu-list" id="5" (click)="selectThis(5)">
+          <p>BILL1</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>Yes</p>
+          <p>2</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>ID2</p>
+          <p>25KM</p>
+
+        </div>
+  
+        <div class="scrollmenu-list" id="6" (click)="selectThis(6)">
+          <p>BILL1</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>Yes</p>
+          <p>2</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>ID2</p>
+          <p>25KM</p>
+        </div>
+  
+        <div class="scrollmenu-list" id="7" (click)="selectThis(7)">
+          <p>BILL1</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>Yes</p>
+          <p>2</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>ID2</p>
+          <p>25KM</p>
+
+        </div>
+  
+        <div class="scrollmenu-list" id="8" (click)="selectThis(8)">
+          <p>BILL1</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>Yes</p>
+          <p>2</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>ID2</p>
+          <p>25KM</p>
+
+        </div>
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-angle-down"  aria-hidden="true"></i>
+  
+        <i class="fa fa-angle-right" aria-hidden="true"></i>            
+  
+      </div>
+    </div>
+
+
+
+
+    <ion-item class="label-select" style="border: 2px solid #3951b2; border-radius: 5px;">
+      <ion-label>BILL NUMBER</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+    </ion-item>
+
+  
+    <!-- <ion-item>
+      <ion-input type="text" placeholder="PERSON NAME"></ion-input>
+    </ion-item> -->
+
+
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>PERSON AND BUSINESS NAME</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+    <!-- <ion-item>
+      <ion-input type="text" placeholder="BUSINESS NAME"></ion-input>
+    </ion-item> -->
+
+<!-- 
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>BUSINESS NAME</label> -->
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+<!-- 
+    </div> -->
+
+    <!-- <ion-item>
+      <ion-input type="text" placeholder="VEHICLE NUMBER"></ion-input>
+    </ion-item> -->
+
+
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>VEHICLE NUMBER</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+    <!-- <ion-item>
+      <ion-label>DATE OF REPAIR</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item> -->
+
+
+    <div class="label-float" >
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <label>DATE OF BILL</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+
+    </div>
+
+    <!-- <div class="label-float" >
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <label>TOTAL BILL</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+
+    </div> -->
+
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>TOTAL BILL ₹</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+    <div class="mt-4 text-center">
+
+      <button ion-button round class="share-button">ADD NEW</button>
+
+  
+    </div>
+<!-- 
+    <ion-item>
+      <ion-input type="text" placeholder="TOTAL BILL"></ion-input>
+    </ion-item> -->
+
+    <!-- <div class="problem-work-div">
+    <ion-item class="problem-work">
+
+      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+
+    </ion-item>
+      <ion-icon name="ios-add-circle" ></ion-icon>
+    </div> -->
+
+    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >
+      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>
+
+      <ion-select [(ngModel)]="document" >
+        <ion-option value="Aadharcard">TYRE - 10</ion-option>
+        <ion-option value="Pancard">TYRE - 50</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+    <div class="label-float" >
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <label>DATE OF REPAIR</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+
+    </div>
+
+    <!-- <ion-item>
+      <ion-label>DATE OF REPAIR</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item> -->
+
+    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  *ngIf="typeOfPerson  == 'driver'">
+      <ion-label>LOAN ITEM(PART & ID)</ion-label>
+
+      <ion-select [(ngModel)]="document" >
+        <ion-option value="Aadharcard">TYRE - 10</ion-option>
+        <ion-option value="Pancard">TYRE - 50</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+      <div class="mt-4 text-center">
+
+        <button ion-button round class="share-button">ADD NEW WORK</button>
+  
+    
+      </div>
+  
+      <!-- <ion-item class="ion-col col-3">
+        <ion-label>QUANTITY (PC/LTR)</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item> -->
+
+ 
+
+      <ion-row >
+        <ion-col col-9>
+          <!-- <div class="label-float" >
+            <input type="text"  placeholder=" " />
+            <label>DETAILS</label>
+            <i class="fa fa-money" aria-hidden="true"></i>
+      
+          </div> -->
+          <ion-row >
+            <ion-col col-10 class="detail-popup" (click)="openDetailPopup()">
+              DETAILS
+              <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+      
+            </ion-col>    
+          </ion-row>  
+        </ion-col>
+        <ion-col col-2>
+          <ion-row class="detail-picture">
+            <ion-col col-4 (click)="openCameraPopup()">
+              <i class="fa fa-camera" aria-hidden="true"></i>
+              <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+      
+            </ion-col>    
+          </ion-row>      
+        </ion-col>
+      </ion-row>
+
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>KM READING</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+<!-- 
+    <ion-row class="profile-picture">
+      <ion-col col-4>
+        <i class="fa fa-camera" aria-hidden="true"></i>
+        <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>
+
+      </ion-col>
+      <ion-col>
+        <h6></h6> 
+      </ion-col>
+
+    </ion-row> -->
+ 
+
+    <!-- <ion-item >
+      
+      <ion-input type="text" placeholder="KM READING"></ion-input>
+
+
+    </ion-item> -->
+
+    <div class="mt-4 text-right">
+
+      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+      </button>
+
+    
+
+    </div>
+
+    <div class="text-center mt-4">
+      <button ion-button round class="custom-button" > SAVE</button>
+
+    </div>
+
+
+  </div>
+</ion-content> 
+
+

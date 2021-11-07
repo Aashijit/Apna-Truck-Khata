@@ -1,0 +1,61 @@
+page-parts-bill-details-modal {
+
+    .chip-md{
+        border-radius: 3px;
+        height: 26px;
+        font-size: 8px;
+        line-height: 27px;
+        color: rgba(0, 0, 0, 0.87);
+        background: rgba(0, 0, 0, 0.12);
+        margin: 2px 0;
+    }
+
+    ion-icon{
+        text-align: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 26px;
+    }
+    .badge-md{
+    width: 100% !important;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #488aff;
+    padding-bottom: 5px;
+    }
+
+    .pd{
+        padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    .label-md{
+        margin: 0px !important;
+    }
+
+    .item-md {
+        padding: 0px !important;
+        background: transparent !important;
+    }
+
+    .pd-0{
+        padding: 0px !important;
+    }
+
+    .icon-cust{
+        margin-left: 20px;
+    /* margin-bottom: 3px; */
+    font-size: 13px;
+    position: absolute;
+    top: -4px;
+    }
+
+    .custom-button {
+        width: 86% !important;
+    }
+
+}

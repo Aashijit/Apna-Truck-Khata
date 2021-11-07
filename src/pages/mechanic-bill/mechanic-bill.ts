@@ -1,0 +1,255 @@
+import { MessageProvider } from './../../providers/message/message';
+import { CodesProvider } from './../../providers/codes/codes';
+import { RestProvider } from './../../providers/rest/rest';
+import { Component } from '@angular/core';
+import { IonicPage, ViewController, NavController, NavParams, ModalController } from 'ionic-angular';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-mechanic-bill',
+  templateUrl: 'mechanic-bill.html',
+})
+export class MechanicBillPage {
+
+  vari : any = '';
+  isSelectedBill : boolean = false;
+  mechanics : any = [];
+  vehicles : any = [];
+
+  reason : any = '';
+
+  bills : any = [];
+
+  drivers : any = [];
+
+  bill_id : any = null;
+  worker_id : any = '';
+  person_shop_name : any = '';
+  srth_id : any = '';
+  vehicle_id : any = '';
+  km_reading : any= '';
+  bill_date : any = '';
+  worker_type :any = '';
+  total_bill : any = '';
+  bill_image_id :any = '';
+  bill_details : any = '';
+  last_maint_id : any ='';
+  opt_counte : any = '';
+
+  is_update : boolean = false;
+
+  img : any = null;
+
+
+  constructor(private viewController : ViewController,public navCtrl: NavController, public navParams: NavParams, 
+    private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, private modalCtrl :  ModalController) {
+
+      var upd = this.navParams.get("update");
+      if(upd == 'true'){
+        var bill = JSON.parse(localStorage.getItem("bill"));
+        this.bill_id  = bill['bill_id'];
+        this.worker_id = bill['worker_id'];
+        this.person_shop_name = bill['person_shop_name'];
+        this.srth_id = bill['srth_id'];
+        this.vehicle_id = bill['vehicle_id'];
+        this.km_reading =bill['km_reading'];
+        this.bill_date =bill['bill_date'];
+        this.worker_type =bill['worker_type'];
+        this.total_bill =bill['total_bill'];
+        this.bill_image_id =bill['bill_image_id'];
+        this.bill_details =bill['bill_details'];
+        this.reason = bill['reason'];
+        this.is_update = true;
+      }
+      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+
+      var data = {
+        "srth_id":json[0]['srth_id']
+      };
+
+      this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
+          if(resp['_ReturnCode'] == '0'){
+
+            var dt = resp['data'];
+
+            for(let i=0;i<dt.length;i++){
+              if(dt[i]['worker_type'] == 'mechanic'){
+                this.mechanics.push(dt[i]);
+              }
+            }
+          }
+      });
+
+      if(this.bill_id == null)
+      {
+        this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
+          if(resp['_ReturnCode'] == '0'){
+            this.bill_id = resp['data'];
+          }
+        });
+        
+      }
+      this.bill_id ++;
+
+      this.getVehicles();
+
+  }
+
+  openCalendarPopup() {
+    let calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+
+    calendarModalPage.onDidDismiss(data=> {
+      this.bill_date = localStorage.getItem(this.codes.DATE);
+    });
+
+    calendarModalPage.present();
+  }
+
+  getVehicles(){
+    var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+
+    var data = {
+      "vehicle_owner_srth_id":userinfo[0]['srth_id']
+    };
+    this.rest.post(this.codes.GET_VEHICLE_DETAILS,data).then(resp => {
+      if(resp['_ReturnCode'] == '0') {
+        this.vehicles = resp['data'];
+      }
+    });
+  }
+
+  selectMechanic(worker_id){
+    for(let i=0;i<this.mechanics.length;i++){
+      if(this.mechanics[i]['worker_id'] == worker_id) {
+        this.person_shop_name = this.mechanics[i]['name'];
+        break;
+      }
+    }
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad MechanicBillPage');
+  }
+
+
+  openCameraPopup() {
+    let cameraModalPage = this.modalCtrl.create('AllImageKhataPage',{"isselect":true,"type":"mbills"});
+
+    cameraModalPage.onDidDismiss(resp => {
+      this.img = JSON.parse(localStorage.getItem("selectedimage"));
+    });
+    
+    cameraModalPage.present();
+  }
+
+  selectThis(bill){
+    for(let i=0;i<this.bills.length;i++)
+      this.bills[i]['selected'] = 'false';
+    
+    bill['selected'] = 'true';
+    this.bill_id  = bill['bill_id'];
+    this.worker_id = bill['worker_id'];
+    this.person_shop_name = bill['person_shop_name'];
+    this.srth_id = bill['srth_id'];
+    this.vehicle_id = bill['vehicle_id'];
+    this.km_reading =bill['km_reading'];
+    this.bill_date =bill['bill_date'];
+    this.worker_type =bill['worker_type'];
+    this.total_bill =bill['total_bill'];
+    this.bill_image_id =bill['bill_image_id'];
+    this.bill_details =bill['bill_details'];
+    this.reason = bill['reason'];
+    this.is_update = true;
+  }
+
+
+  change($event){
+    this.vari = $event;
+    this.isSelectedBill = true;
+
+  }
+  openDetailPopup() {
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+
+    detailsModalPage.onDidDismiss(data=> {
+      this.bill_details = localStorage.getItem(this.codes.DETAILS);
+    });
+
+    detailsModalPage.present();
+  }
+
+  save(){
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data = {
+      "person_shop_name":this.person_shop_name,
+      "srth_id":json[0]['srth_id'],
+      "vehicle_id":this.vehicle_id,
+      "reason":this.reason,
+      "km_reading":this.km_reading,
+      "bill_date":this.bill_date,
+      "worker_type":'mechanic',
+      "worker_id":this.worker_id,
+      "total_bill":this.total_bill,
+      "bill_image_id":this.img != null ? this.img['image_id'] : '0',
+      "bill_details":this.bill_details,
+      "last_maint_id":'srth-app',
+      "opt_counter":'0'
+    };
+
+    this.rest.post(this.codes.ADD_EXPENSE_BILL,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+
+        this.worker_id  = '';
+        this.person_shop_name  = '';
+        this.vehicle_id  = '';
+        this.km_reading = '';
+        this.bill_date  = '';
+        this.worker_type  = '';
+        this.total_bill  = '';
+        this.bill_image_id  = '';
+        this.bill_details  = '';
+        this.img = null;
+
+        
+        if(this.img != null)
+        resp['data']['image_content'] = this.img['image_content'];
+          this.bills.push(resp['data']);
+          for(let i=0;i<this.bills.length;i++)
+            this.bills[i]['selected'] = 'false';
+      }
+    });
+  }
+
+  updateBill(){
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data = {
+      "bill_id":this.bill_id,
+      "person_shop_name":this.person_shop_name,
+      "srth_id":json[0]['srth_id'],
+      "vehicle_id":this.vehicle_id,
+      "reason":this.reason,
+      "km_reading":this.km_reading,
+      "bill_date":this.bill_date,
+      "worker_type":'mechanic',
+      "worker_id":this.worker_id,
+      "total_bill":this.total_bill,
+      "bill_image_id":this.img != null ? this.img['image_id'] : '0',
+      "bill_details":this.bill_details,
+      "last_maint_id":'srth-app',
+      "opt_counter":'0'
+    };
+
+    this.rest.post(this.codes.UPDATE_BILL_EXPENSE,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+          this.message.displayToast('The bill has been successfully updated');
+          this.navCtrl.pop();
+      }
+    });
+  }
+
+
+
+}

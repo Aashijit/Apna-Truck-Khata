@@ -1,0 +1,29 @@
+page-report-khata {
+  .report {
+    .report-div {
+      background: #fff;
+      //   border: 1px solid grey;
+      height: 140px;
+      padding: 20px 0;
+      border-radius: 5px;
+
+      h4 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .report .report-div {
+      height: 120px;
+
+      img {
+        width: 50px;
+      }
+
+      h4 {
+        font-size: 12px;
+      }
+    }
+  }
+}

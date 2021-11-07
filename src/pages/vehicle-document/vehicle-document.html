@@ -1,0 +1,306 @@
+<!--
+  Generated template for the VehicleDocumentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the VehicleDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!-- VEHICLE DETAILS-->
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+      
+      <ion-col col-7 class="person-name text-center">
+        <ion-title>        
+          <i class="fa fa-car" aria-hidden="true"></i>
+          VEHICLE DOCUMENTS
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header> 
+
+
+<ion-content padding>
+  <div class="container">
+
+
+    <ion-row class="vehicle-details-card">
+      <ion-col col-12>
+        <h4 class=" text-center">VEHICLE DETAILS</h4>
+        <hr>
+      </ion-col>
+      <ion-col col-6>
+        <p>VEHICLE NUMBER: </p>
+        <span class="text-color-primary">{{vehicle['vehicle_number']}}</span>
+      </ion-col>
+      <ion-col col-1>
+        <div style="margin-top: 5px; width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>
+  
+      </ion-col>
+      <ion-col col-3>
+        DRIVER
+      </ion-col>
+      <ion-col col-6>
+       <p> TYPE: </p>
+        <span class="text-color-primary">{{vehicle['vehicle_type']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        <p>YEAR OF PURCHASE: </p>
+        <span class="text-color-primary">{{vehicle['year_purchase']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        <p>DRIVER: </p>
+        <span class="text-color-primary" *ngIf="vehicle['driver_details'] != null && vehicle['driver_details'] != undefined">
+          {{vehicle['driver_details']['name']}}
+        </span> 
+      </ion-col>
+      <ion-col col-6>
+          <button ion-button round class="custom-button" (click)="goToModal()">ALLOT/<br>CHANGE/<br>REMOVE DRIVER</button>
+      </ion-col>
+      <ion-col col-6>
+        <p>VEHICLE WEIGHT: </p>
+        <span class="text-color-primary">{{vehicle['vehicle_weight']+" "+vehicle['vehicle_weight_type']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        <p>VEHICLE MODEL: </p>
+        <span class="text-color-primary">{{vehicle['vehicle_model']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        <p>KM READING: </p>
+        <span class="text-color-primary">{{vehicle['vehicle_km_reading_current']}}</span>
+      </ion-col>
+
+
+      <!-- <ion-col col-6 (click)="showMore()" class="text-right show-more-fa">
+        <i id="fa-arrow-circle-down" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>
+
+      </ion-col> -->
+
+   
+
+      <ion-col col-12 *ngIf="isShown">
+        <!-- <div class="scrollmenu">
+          <a href="#home">DATE</a>
+          <a href="#news">WORK/PARTS</a>
+          <a href="#contact">DETAILS</a>
+          <a href="#about">KMREADING</a>
+          <a href="#support">ID</a>
+    
+    
+          <div style="height: 200px;width: 400px">
+    
+          </div>
+        </div> -->
+
+        <div class="scroll-grid" >
+          <div class="scrollmenu">
+          
+            <a href="#home">DATE</a>
+            <a href="#news">WORK/PARTS</a>
+            <a href="#contact">DETAILS</a>
+            <a href="#about">KM READING</a>
+            <a href="#support">ID</a>
+      
+            <div class="scrollmenu-list" id="1" (click)="selectThis(1)">
+              <p>13/04/2021</p>
+              <p>XYZ</p>
+              <p>XYZ DETAILS</p>
+              <p>12KM</p>
+              <p>ID1234</p>
+            </div>
+      
+            <div class="scrollmenu-list" id="2" (click)="selectThis(2)">
+              <p>13/04/2021</p>
+              <p>XYZ</p>
+              <p>XYZ DETAILS</p>
+              <p>12KM</p>
+              <p>ID1234</p>
+            </div>
+      
+            <div class="scrollmenu-list" id="3" (click)="selectThis(3)">
+              <p>13/04/2021</p>
+              <p>XYZ</p>
+              <p>XYZ DETAILS</p>
+              <p>12KM</p>
+              <p>ID1234</p>
+            </div>
+      
+            <div class="scrollmenu-list" id="4" (click)="selectThis(4)">
+              <p>13/04/2021</p>
+              <p>XYZ</p>
+              <p>XYZ DETAILS</p>
+              <p>12KM</p>
+              <p>ID1234</p>
+            </div>
+          </div>
+          <div class="show-arrows">
+            <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+      
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+      
+          </div>
+        </div>
+      </ion-col>
+
+
+      <!-- <ion-col col-12 class="text-center mt-4">
+        <button ion-button round class="all-button"> ALLOT/CHANGE/REMOVE DRIVER</button>
+
+      </ion-col> -->
+
+      <ion-col col-12>
+        <ion-row class="document-button">
+          <ion-col col-6 >
+            <div>
+              VEHICLE WORK REPORT
+              <i class="fa fa-download" aria-hidden="true"></i>
+    
+            </div>
+            <!-- <button ion-button round outline small></button> -->
+          </ion-col>
+          <ion-col col-6 >
+            <div>
+              VEHICLE BILL REPORT
+              <i class="fa fa-download" aria-hidden="true"></i>
+    
+            </div>
+            <!-- <button ion-button round outline small></button> -->
+          </ion-col>
+        </ion-row>
+      </ion-col>
+       
+    </ion-row>
+
+    
+     
+      <!-- <ion-row class="vehicle-details-card">
+        <ion-col col-12>
+          <h4 class="text-color-primary text-center">VEHICLE DETAILS</h4>
+          <hr>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE NUMBER: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+         <p> TYPE: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>YEAR OF PURCHASE: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>DRIVER: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE WEIGHT: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>VEHICLE MODEL: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+        <ion-col col-6>
+          <p>KM READING: </p>
+          <span class="text-color-primary">XXXXXXXXX</span>
+        </ion-col>
+
+        <ion-col col-12 class="text-center">
+          <button ion-button round class="custom-button">ALLOT/CHANGE/REMOVE DRIVER</button>
+        </ion-col>
+
+         
+      </ion-row> -->
+
+      <div class="segment row mt-4">
+        <!-- <div class="content-heading"> -->
+          <!-- <div class="text-center text-color-primary " >
+            <h2></h2>
+           
+          </div> -->
+          <ion-col col-12>
+            <div class="text-center text-color-primary " style="padding: 10px;">
+              <h4>DOCUMENTS &nbsp; <i class="fa fa-file-text-o" aria-hidden="true"></i> </h4>
+              <hr>
+            </div>
+
+            <ion-item>
+              <ion-label>REMINDER TIME</ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" value="1990-02-19T07:43Z"> </ion-datetime>           
+  
+            </ion-item>
+  
+          </ion-col>
+     
+  
+        <!-- </div> -->
+  
+        <hr>
+
+        <ion-row class="driver-modal  mt-4" *ngFor="let dc of documents">
+          <ion-col col-12 class="driver-modal-header">
+            <!-- (click)="goToModal()" -->
+            <span class="permit" >{{dc['document_name']}}</span>
+            <!-- (click)="addPermit()" -->
+            <!-- <span class="add-more-modal"  >ADD MORE <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </span> -->
+          </ion-col>
+          <ion-col col-4 class="picture-upload text-center">
+            <i class="fa fa-camera" aria-hidden="true"></i><br>
+            <small>ADD PHOTO</small>
+          </ion-col>
+          <ion-col col-8 class="text-center">
+            <ion-item>
+              <ion-label floating>EXPIRY DATE</ion-label>
+              <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc['document_expiry_date']"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>REMINDER DATE</ion-label>
+              <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc['document_reminder_date']"></ion-datetime>
+            </ion-item>
+          </ion-col>
+          <ion-col col-12 class="text-right">
+              <ion-toggle checked="false" ></ion-toggle>
+          </ion-col>
+        </ion-row>
+  
+   
+  
+
+  
+      </div>
+     
+
+      
+    <ion-row>
+      
+        <ion-col col-12 class="text-center">
+          <button ion-button round class="custom-button" (click)="save()">SAVE</button>
+        </ion-col>
+    
+  
+      </ion-row>
+
+
+    
+
+  </div>
+</ion-content>  
+
+

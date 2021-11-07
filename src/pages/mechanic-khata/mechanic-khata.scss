@@ -1,0 +1,128 @@
+page-mechanic-khata {
+  .document-button {
+    div {
+      background: #0752af;
+      color: #f3f3f3;
+      font-weight: 1000 !important;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .custom-button-u{
+    width: 80px !important;
+    margin-top: -16px !important;
+    height: 21px !important;
+    margin-left: 16px !important;
+    background: #a80852 !important;
+    font-size: 9px !important;
+  }
+
+  div.scrollmenu {
+    height: 150px;
+  }
+
+  .card-md {
+    margin:0px !important;
+    margin-top: -8px !important;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    width: calc(100% - 64px);
+  }
+  .chip-md{
+    border-radius: 3px;
+    height: 26px;
+    font-size: 8px;
+    line-height: 27px;
+    color: rgba(0, 0, 0, 0.87);
+    background: rgba(0, 0, 0, 0.12);
+    margin: 2px 0;
+    }
+
+    ion-icon{
+      text-align: center;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+
+  .ion-icon-w {
+    font-size: 12px;
+    line-height: 33px;
+  }
+
+
+  // div.scrollmenu {
+  //   //background-color: #333;
+  //   position: relative;
+  //   margin-top: 20px;
+  //   overflow: auto;
+  //   white-space: nowrap;
+  //   background: #fff;
+  //   div {
+  //     //width: 100%;
+
+  //     border: 1px solid #0752af;
+  //   }
+
+  //   .fa-angle-down,
+  //   .fa-angle-right {
+  //     font-size: 30px;
+  //     color: #0752af;
+  //     position: absolute;
+  //     bottom: 20px;
+  //   }
+
+  //   .fa-angle-down {
+  //     right: 0;
+  //   }
+
+  //   .fa-angle-right {
+  //     left: 20px;
+  //   }
+  // }
+
+  // div.scrollmenu a {
+  //   display: inline-block;
+  //   //color: white;
+  //   text-align: center;
+  //   padding: 14px;
+  //   font-size: 14px;
+  //   text-decoration: none;
+  //   color: #0752af;
+  //   border: 1px solid #0752af;
+  //   border-bottom: none;
+  // }
+
+  // div.scrollmenu a:hover {
+  //   background-color: #777;
+  // }
+}

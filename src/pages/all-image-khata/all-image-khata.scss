@@ -1,0 +1,116 @@
+page-all-image-khata {
+  .custom-searchbar-div {
+    position: relative;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .picture-div {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  ion-item.item.item-block.item-md.item-radio.item-radio-checked {
+    background: #0752af;
+    border-radius: 5px;
+    .fa {
+      color: #fff;
+    }
+
+    ion-label {
+      color: #fff !important;
+    }
+  }
+
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+  }
+
+  .radio-icon {
+    display: none !important;
+  }
+  .label-md {
+    margin: 0px !important;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .item-radio-checked.item-md ion-label {
+    color: #0752af;
+  }
+
+  .subhead {
+    // margin-left: 8px;
+    font-size: 18px;
+    font-weight: 1000;
+    color: #4545;
+    margin-top: 15px !important;
+    margin-left: 22px !important;
+  }
+
+  .upl_img {
+    width: 50% !important;
+    margin-left: 28% !important;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item-img {
+  width: 100px;
+  min-height: 120px;
+  max-height: auto;
+  float: left;
+  margin: 3px;
+  padding: 3px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.dt {
+  margin: 0px !important;
+  text-align: center;
+  color: #0486f7;
+}
+
+.vw {
+  font-size: 10px;
+  height: 12px;
+  text-transform: capitalize;
+}
+
+
+.item {
+  background: none !important;
+  padding-left: 0px !important;
+}
+
+.radio-md .radio-checked {
+  background: #0752af !important;
+}
+
+}

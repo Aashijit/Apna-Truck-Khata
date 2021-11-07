@@ -1,0 +1,452 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-3 class="person-picture">
+        <ion-icon ios="ios-contact" md="md-contact" style="margin-top: 4px;font-size:4.2rem !important"
+          (click)="openProfilePage()"></ion-icon>
+      </ion-col>
+      <ion-col col-6 class="person-name">
+        <ion-title>{{name}}</ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+
+
+
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openAccountKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/003-file.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          ACCOUNTS & PAYMENT KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openVehicleKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          VEHICLE KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openDriverKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/driver.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          DRIVER KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openShopKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/004-shop.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          SHOP KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openMechanicalKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/007-mechanic.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          MECHANIC KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openDocumentAndInsurance()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/002-folder.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          DOCUMENT KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openComplaintKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/008-report.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          COMPLAINT KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openReportKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/001-clipboard.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          REPORTS KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding class="pd">
+    <ion-col col-12 (click)="openAllImageKhata()"
+      style="background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);">
+      <ion-row>
+        <ion-col col-2 style="text-align:center !important;">
+          <img src="../../assets/saarthi-icon/png/009-image.png" style="width: 50% !important;" alt="">
+        </ion-col>
+        <ion-col col-9 style="margin-top: 6px;font-weight: 1000;">
+          ALL IMAGE KHATA
+        </ion-col>
+        <ion-col col-1 style="    margin-top: 7px;">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- <div class="cards" *ngIf="fuel != '' && fuel.length > 0">
+    <div class="card__k card-1">
+      <h2 class="card__title">
+        {{fuel[0]['productName']}} : ₹ {{fuel[0]['productPrice']}} 
+        <span *ngIf="fuel[0]['priceChangeSign'] == '+'" style="font-size: 11px;color: #ffcdcd;">
+          <ion-icon name="arrow-up"></ion-icon>
+          ₹ {{fuel[0]['priceChange']}}
+        </span>
+        <span *ngIf="fuel[0]['priceChangeSign'] == '-'" style="font-size: 11px;color: #95e795;">
+          <ion-icon name="arrow-down"></ion-icon>
+          ₹{{fuel[0]['priceChange']}}
+        </span>
+      </h2>
+      <h2 class="card__title">
+        {{fuel[1]['productName']}} : ₹ {{fuel[1]['productPrice']}}
+        <span *ngIf="fuel[1]['priceChangeSign'] == '+'" style="font-size: 11px;color: #ffcdcd;">
+          <ion-icon name="arrow-up"></ion-icon>
+          ₹ {{fuel[1]['priceChange']}}
+        </span>
+        <span *ngIf="fuel[1]['priceChangeSign'] == '-'" style="font-size: 11px;color: #95e795;">
+          <ion-icon name="arrow-down"></ion-icon>
+          ₹{{fuel[1]['priceChange']}}
+        </span>
+      </h2>
+      <p class="card__apply" (click)="refresh()">
+        <a class="card__link" href="#">Refresh <i class="fa fa-refresh" aria-hidden="true"></i> </a>
+      </p>
+    </div>
+   
+  </div> -->
+
+  <ion-slides pager="true" autoplay="3000" paginationType="bullet">
+    
+    <ion-slide>
+      <iframe width="98%" height="200" src="https://www.youtube.com/embed/OlaoxdpKcXY" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-slide>
+
+    <ion-slide>
+      <iframe width="98%" height="200" src="https://www.youtube.com/embed/WxiPhcckODc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-slide>
+
+    <ion-slide>
+      <iframe width="98%" height="200" src="https://www.youtube.com/embed/WxiPhcckODc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-slide>
+
+    <ion-slide>
+      <iframe width="98%" height="200" src="https://www.youtube.com/embed/WxiPhcckODc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-slide>
+
+    <ion-slide>
+      <iframe width="98%" height="200" src="https://www.youtube.com/embed/WxiPhcckODc" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-slide>
+  </ion-slides>
+
+
+
+
+
+
+ 
+  
+
+  <!-- (click)="openAccountKhata()" -->
+  <!-- <ion-row padding >
+    <ion-col col-12 class="khata" (click)="openAccountKhata()">
+      <ion-row>
+        <ion-col col-4>
+          <img src="../../assets/saarthi-icon/png/003-file.png" class="img" alt="">
+        </ion-col>
+        <ion-col col-8>
+          <h6>ACCOUNTS KHATA</h6>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row> -->
+
+  <!-- <ion-row padding >
+    <ion-col col-6 class="text-center pl-0 pt-9">
+      <ion-row (click)="openVehicleKhata()" class="khata m-0">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" class="img" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">VEHICLE KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6 class="text-center pr-0 pt-9">
+      <ion-row (click)="openDriverKhata()" class="khata m-0">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/driver.png" class="img" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">DRIVER KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row> -->
+
+  <!-- <ion-row padding >
+    <ion-col col-6 class="text-center pl-0 pt-9">
+      <ion-row (click)="openShopKhata()" class="khata m-0">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/004-shop.png" class="img" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">SHOP KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6 class="text-center pr-0 pt-9">
+      <ion-row (click)="openMechanicalKhata()" class="khata m-0">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/007-mechanic.png" class="img" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">MECHANIC KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+
+  </ion-row> -->
+
+  <!-- <ion-row padding >
+    <ion-col col-6 class="text-center pl-0 pt-9">
+      <ion-row (click)="openDocumentAndInsurance()" class="khata m-0">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/002-folder.png" class="img3" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">DOCUMENT KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6 class="text-center pr-0 pt-9">
+      <ion-row class="khata m-0" (click)="openComplaintKhata()">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/008-report.png" class="img3" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">COMPLAINT KHATA </p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row> -->
+  <!-- <ion-row padding >
+    <ion-col col-6 class="text-center pl-0 pt-9">
+      <ion-row class="khata m-0" (click)="openReportKhata()">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/001-clipboard.png" class="img3" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">REPORTS KHATA </p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6 class="text-center pr-0 pt-9">
+      <ion-row class="khata m-0" (click)="openAllImageKhata()">
+        <ion-col col-12>
+          <img src="../../assets/saarthi-icon/png/009-image.png" class="img3" alt="">
+        </ion-col>
+        <ion-col col-12>
+          <p class="row2">ALL PHOTO KHATA</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row> -->
+
+
+  <!-- <ion-row>
+      
+      <ion-col col-12 class="all-khata first-row-khata">
+        <div class="text-center" (click)=" openAccountKhata()">
+          <img src="../../assets/saarthi-icon/png/003-file.png" class="img-size" alt="">
+          <h6>ACCOUNTS KHATA</h6>
+        </div>
+      </ion-col>
+
+    </ion-row> -->
+
+  <!-- <ion-row>
+
+      <ion-col col-6 class="second-row-khata">
+        <div (click)=" openVehicleKhata()" class="all-khata">
+          <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" class="img2-size" alt="">
+          <h6>VEHICLE KHATA</h6>
+        </div>
+      </ion-col>
+
+     
+
+      <ion-col col-6 class="second-row-khata">
+        <div (click)=" openDriverKhata()" class="all-khata">
+          <img src="../../assets/saarthi-icon/png/driver.png" class="img2-size" alt="">
+          <h6>DRIVER KHATA</h6>
+        </div>
+      </ion-col>
+
+    </ion-row> -->
+  <!-- 
+  <div class="third-row">
+    <div class="all-khata" (click)="openShopKhata()">
+      <img src="../../assets/saarthi-icon/png/004-shop.png" class="img2-size" alt="">
+
+      <h6>
+        SHOP KHATA
+      </h6>    
+    </div>
+    <div class="all-khata" (click)=" openMechanicalKhata()">
+      <img src="../../assets/saarthi-icon/png/007-mechanic.png" class="img2-size" alt="">
+
+      <h6>
+        MECHANIC KHATA
+      </h6>    
+    </div>
+    <div class="all-khata" (click)="openDocumentAndInsurance()">
+      <img src="../../assets/saarthi-icon/png/002-folder.png" class="img2-size" alt="">
+
+      <h6>
+        DOCUMENT AND INSURANCE KHATA
+      </h6>    
+    </div>
+  </div> -->
+
+  <!-- <div class="third-row">
+    <div  class="all-khata" (click)="openComplaintKhata()">
+      <img src="../../assets/saarthi-icon/png/008-report.png"  class="img2-size" alt="">
+
+      <h6>
+        COMPLAINT KHATA
+      </h6>  
+    </div>
+    <div class="all-khata" (click)="openReportKhata()">
+      <img src="../../assets/saarthi-icon/png/001-clipboard.png" class="img2-size" alt="">
+
+      <h6>
+        REPORTS KHATA
+      </h6>  
+    </div>
+    <div class="all-khata" (click)="openAllImageKhata()">
+      <img src="../../assets/saarthi-icon/png/009-image.png" class="img2-size" alt="">
+
+      <h6>
+        ALL IMAGE KHATA
+      </h6>   
+    </div>
+
+ 
+  </div> -->
+
+
+  <!-- <div class="navigation" style="margin-top: 50px;">
+    <button ion-button color="secondary" (click)="openProfilePage()">Profile Page</button>
+    <button ion-button color="secondary" (click)="openDocumentAndInsurance()">Document</button>
+    <button ion-button color="secondary" (click)="openDocumentBill()">Add Bill Document</button>
+    <button ion-button color="secondary" (click)="openEditProfilePage()">Add Bill Document</button>
+    <button ion-button color="secondary" (click)="openLanguagePage()">Language</button>
+    <button ion-button color="secondary" (click)="openSettingsPage()">Settings</button>
+    <button ion-button color="secondary" (click)="openDriverPage()">Driver</button>
+    <button ion-button color="secondary" (click)="openAddNewBankPage()">Add new bank account</button>
+    <button ion-button color="secondary" (click)="openSecurityAndBackup()">Add new bank account</button>
+    <button ion-button color="secondary" (click)="openAddDriverPage()">Add driver</button>
+    <button ion-button color="secondary" (click)="openAddMechanicPage()">Add Mechanic</button>
+    <button ion-button color="secondary" (click)="openLedgerPage()">Ledger</button>
+    <button ion-button color="secondary" (click)="openVehicleDetailsPage()">Vehicle Details</button>
+    <button ion-button color="secondary" (click)="openDriverDocumentPage()">Driver Document</button>
+    <button ion-button color="secondary" (click)="openAddDriverExpensePage()">Add Driver expense</button>
+    <button ion-button color="secondary" (click)="openVehicleDocument()">Vehicle Document</button>
+
+
+  </div> -->
+
+
+</ion-content>

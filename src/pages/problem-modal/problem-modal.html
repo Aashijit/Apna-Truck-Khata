@@ -1,0 +1,92 @@
+
+
+<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">
+
+
+
+  <ion-card class="modal-card-details">
+    <ion-card-header class="custom-card-header">
+      PROBLEMS
+    </ion-card-header>
+    <ion-card-content>
+      
+
+      <ion-row style="margin: 0;">
+        <ion-col col-8>
+          <div class="custom-searchbar-div" style="position: relative;">
+            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH "></ion-searchbar>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+        </ion-col>
+        <ion-col col-4 class="text-center">
+          <button ion-button round class="add-new custom-button"  (click)="addNew()" style="margin-top: 20px;"> ADD + </button>
+
+          <!-- <p class="custom-button" style="margin-top: 20px;">ADD NEW</p> -->
+        </ion-col>
+
+        <ion-col col-12 *ngIf="addNewField">
+          <div class="label-float" >
+            <input type="text"  placeholder=" " />
+            <label>ADD</label>
+            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+      
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-label>Daenerys Targaryen</ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+
+          </ion-item>
+        </ion-col>
+        <ion-col col-2>
+          <i style="margin-top: 10px;
+          font-size: 20px !important;
+          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-label>Daenerys Targaryen</ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+
+          </ion-item>
+        </ion-col>
+        <ion-col col-2>
+          <i style="margin-top: 10px;
+          font-size: 20px !important;
+          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>
+
+        </ion-col>
+      </ion-row>
+
+
+      <!-- <div class="label-float" >
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        <label>DATE</label>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+
+      </div> -->
+      
+        <ion-row class="justify-content-center">
+          <ion-col col-6 class="text-center">
+            <button ion-button round class="custom-button" > SAVE </button>
+    
+          </ion-col>
+          <ion-col col-6 class="text-center">
+            <button ion-button round (click)="exitModal()" class="custom-button exit-button">
+              EXIT
+            </button>
+          </ion-col>
+        </ion-row>
+      
+
+     </ion-card-content>
+  </ion-card>
+
+</ion-content>

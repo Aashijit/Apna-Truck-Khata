@@ -1,0 +1,41 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    }
+  },
+  "dependent_plugins": {}
+}

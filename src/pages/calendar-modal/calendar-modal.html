@@ -1,0 +1,14 @@
+<ion-content padding style="background-color: rgba(0,0,0,0.8);">
+
+  <ion-icon name="close" (click)="dismiss()" style="float: right;font-size: 3rem !important;color: red;padding: 20px"></ion-icon>
+
+  <ion-card>
+    <ion-calendar [(ngModel)]="selectedDate" [options]="optionsMulti" type="string" [format]="'YYYY-MM-DD'">
+    </ion-calendar>
+
+    <button ion-button clear (click)="select()">
+      Select
+    </button>
+  </ion-card>
+
+</ion-content>

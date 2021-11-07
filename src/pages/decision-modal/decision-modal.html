@@ -1,0 +1,41 @@
+<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">
+
+  <ion-card>
+    <ion-card-content>
+      
+      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">
+
+        <ion-list-header class="">
+          SELECT THE OPTION
+        </ion-list-header>
+      
+        <ion-item>
+          <ion-label>CHANGE</ion-label>
+          <ion-radio value="change"></ion-radio>
+        </ion-item>
+      
+        <ion-item *ngIf="showAllot">
+          <ion-label>ALLOT</ion-label>
+          <ion-radio value="allot"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>REMOVE</ion-label>
+          <ion-radio value="remove"></ion-radio>
+        </ion-item>
+      
+      </ion-list>
+
+    </ion-card-content>
+
+    <ion-row class="justify-content-center">
+      <ion-col col-6 class="text-center">
+        <button ion-button round class="custom-button" (click)="exitModal()">
+          EXIT
+        </button>
+      </ion-col>
+    </ion-row>
+   
+  </ion-card>
+
+</ion-content>

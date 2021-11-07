@@ -1,0 +1,108 @@
+page-driver-khata {
+  .document-button {
+    div {
+      background: #0752af;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: 1000 !important;
+      color: #f3f3f3;
+    }
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+
+  .custom-button-u{
+    width: 80px !important;
+    margin-top: -16px !important;
+    height: 21px !important;
+    margin-left: 16px !important;
+    font-size: 8px !important;
+    background: #a80852 !important;
+  }
+
+  div.scrollmenu {
+    height: 52vh;
+  }
+
+  @media screen and (max-width: 414px) {
+    div.scrollmenu {
+      height: 46vh;
+    }
+  }
+
+  @media screen and (max-width: 411px) {
+    div.scrollmenu {
+      height: 48vh;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    div.scrollmenu {
+      height: 42vh;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    div.scrollmenu {
+      height: 40vh;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    div.scrollmenu {
+      height: 34vh;
+    }
+  }
+
+  .item-md{
+    background: transparent !important;
+}
+
+.header{
+    box-shadow: none !important;
+    -webkit-box-shadow : none !important
+}
+
+.chip-md{
+    border-radius: 3px;
+    height: 26px;
+    font-size: 8px;
+    line-height: 27px;
+    color: rgba(0, 0, 0, 0.87);
+    background: rgba(0, 0, 0, 0.12);
+    margin: 2px 0;
+}
+
+ion-icon{
+    text-align: center;
+border-radius: 50%;
+width: 32px;
+height: 32px;
+font-size: 18px;
+line-height: 26px;
+}
+}

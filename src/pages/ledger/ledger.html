@@ -1,0 +1,182 @@
+<!-- Document -->
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+      
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <i class="fa fa-money" aria-hidden="true"></i>
+          PAYMENT
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container document">
+    <ion-row class="profile-details">
+      <ion-col col-12 class="profile-picture">
+        <img width="120px" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="">
+      </ion-col>
+      <ion-col col-6>
+        NAME: <span class="text-color-primary"> <br> {{worker['name']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        PHONE: <br>  <span class="text-color-primary">{{worker['phone_number']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>
+        </span>
+      </ion-col>
+      <ion-col col-6>
+        STATUS: <span  class="text-color-primary"> <br> {{worker['worker_type']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        LOCATION: <span class="text-color-primary"> <br> {{worker['city']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        BUSINESS NAME: <br>  <span class="text-color-primary">{{worker['name']}}</span>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row class="report-statement">
+      <ion-col col-6>
+        <div class="full-report-statement">
+          <i class="fa fa-file-o" aria-hidden="true"></i>
+
+          FULL REPORT
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="monthy-statement">
+          <i class="fa fa-file" aria-hidden="true"></i>
+
+          MONTHY STATEMENT
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row class="bill">
+      <ion-col col-4>
+        <p class="total-bill">TOTAL BILL</p>
+        <div class="ammount">₹{{this.worker['total_bill_money']}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="paid-money">PAID MONEY</p>
+        <div class="ammount">₹{{this.worker['paid_money']}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="due-money">DUE MONEY</p>
+        
+        <div class="ammount">₹{{dueMoney}}</div>
+      </ion-col>
+    </ion-row>
+
+    <div class="white-section"> 
+      <div class="label-float" >
+        <input type="tel" [(ngModel)]="payment_amount"  placeholder=" " />
+        <label>GIVE MONEY</label>
+        <i class="fa fa-money" aria-hidden="true"></i>
+  
+      </div>
+  
+  
+      <div class="total-due-amount">
+        <p><small>₹ {{dueMoney}} - ₹ {{payment_amount}} = ₹ {{dueMoney - payment_amount}} </small></p>
+        <p><small>DUE MONEY - GIVE MONEY = NEW DUE MONEY </small></p>
+      </div>
+  
+  
+      <div class="label-float" >
+        <input type="text" [(ngModel)]="date_of_payment" (click)="openCalendarPopup()"/>
+        <label>DATE OF PAYMENT</label>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+  
+      </div>
+ 
+  
+      <!-- <p class="text-color-primary mode-of-payment" style="margin-top: 25px;" (click)="showPaymentOption()">MODE OF PAYMENT</p> -->
+
+
+      <ion-item  class="label-select">
+        <ion-label floating>MODE OF PAYMENT</ion-label>
+        <ion-select interface="popover" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="mode_of_payment">
+          <ion-option value="CASH">CASH</ion-option>
+          <ion-option value="BANK">BANK</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <!-- <ion-list radio-group [(ngModel)]="mode_of_payment">
+        <ion-row *ngIf="isPaymentOptionShown" style="margin: 0;">
+          <ion-col col-6>
+            <ion-item>
+              <ion-label>CASH</ion-label>
+              <ion-radio value="cash" checked></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label>BANK</ion-label>
+              <ion-radio value="bank"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-list>  -->
+  
+         
+      <ion-row >
+        <ion-col col-9>
+          <ion-row >
+            <ion-col col-10 style="margin-top: -11px;margin-left: 21px;"  (click)="openDetailPopup()">
+              <div class="label-float" >
+                <input type="text" [(ngModel)]="details"  placeholder=" " />
+                <label>DETAILS</label>
+              </div>
+            </ion-col>    
+          </ion-row>  
+        </ion-col>
+        <ion-col col-2>
+          <ion-row class="detail-picture">
+            <ion-col col-4 (click)="openCameraPopup()">
+              <i class="fa fa-camera" aria-hidden="true"></i>
+            </ion-col>    
+          </ion-row>      
+        </ion-col>
+      </ion-row>
+  
+    
+  
+      <ion-row style="margin: 0;">
+        <ion-col col-8>
+          <ion-item  class="label-select">
+            <ion-label floating>CHOOSE BILL #</ion-label>
+            <ion-select multiple="true" [(ngModel)]="bill_ids" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="change($event)">
+              <ion-option value="{{bill['bill_id']}}" *ngFor="let bill of bills">{{bill['bill_id']+" - "+"₹ "+bill['total_bill']}}</ion-option>
+            </ion-select>
+          </ion-item>
+      
+        </ion-col>
+        <ion-col col-4>
+          <button ion-button disabled="true" round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+  
+    </div>
+
+  
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="save()">SAVE</button>
+    </div>
+
+
+  </div>
+</ion-content>  

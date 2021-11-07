@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-3 class="person-picture">
+        <!-- <img width="50px" style="border-radius: 50%; height: 50px;" src="https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70" alt=""> -->
+        <!-- <img width="50px" style="border-radius: 50%" src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"> -->
+      </ion-col>
+      <ion-col col-6 class="person-name">
+        <ion-title>Apna Truck Khata</ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <!-- <img src="../../assets/saarthi-icon/png/youtube.png" alt="" > -->
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-card-header>
+      GET STARTED
+    </ion-card-header>
+
+    <ion-card-content>
+
+  <div class="label-float" >
+    <input type="tel" maxlength="10"  placeholder=" " [(ngModel)]="phoneNumber" />
+    <label>ENTER MOBILE NUMBER</label>
+    <i class="fa fa-phone-square" aria-hidden="true"></i>
+  </div>
+
+  <div class="label-float" *ngIf='showpassword'>
+    <input type="text"  placeholder=" " [(ngModel)]="password" />
+    <label>CREATE PASSWORD</label>
+    <i class="fa fa-key" aria-hidden="true"></i>
+  </div>
+
+
+  <div class="label-float" *ngIf='enterpassword'>
+    <input type="password"  placeholder=" " [(ngModel)]="password" />
+    <label>ENTER PASSWORD</label>
+    <i class="fa fa-key" aria-hidden="true"></i>
+  </div>
+
+
+  <p style="color: red;">
+    {{message}}
+  </p>
+
+
+
+  <p style="text-align: center;margin-top: 20px !important;" *ngIf='!showpassword && !enterpassword'>
+    <button ion-button round (click)="getregistrationinfo()">
+      Next
+    </button>
+  </p>
+
+  <p style="text-align: center;margin-top: 20px !important;" *ngIf='showpassword'>
+    <button ion-button round (click)="createpassword()">
+      Register
+    </button>
+  </p>
+
+
+  <p style="text-align: center;margin-top: 20px !important;" *ngIf='enterpassword'>
+    <button ion-button round (click)="login()">
+      Login
+    </button>
+  </p>
+
+</ion-card-content>
+
+</ion-card>
+
+
+</ion-content>

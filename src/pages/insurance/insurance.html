@@ -1,0 +1,221 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+      
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <i class="fa fa-user" aria-hidden="true"></i>
+          INSURANCE
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container driver">
+
+    <ion-row class="profile-details ">
+      <ion-col col-12 style="text-align: right !important;">
+        <button ion-button outline (click)="update()">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button ion-button outline color="danger" (click)="presentConfirmDelete()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-12 class="profile-picture text-center">
+        <img width="80px" src="../../assets/saarthi-icon/png/002-folder.png" alt="">
+        <p style="margin-top: 10px">ADD PHOTO</p>
+      </ion-col>
+      <ion-col col-6>
+        NAME: <br> <span class="text-color-primary">{{insurance['name']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        PHONE: <br>  <span class="text-color-primary">{{insurance['phone_number']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>
+        </span>
+      </ion-col>
+      <ion-col col-6>
+        STATUS:<br>  <span  class="text-color-primary">{{insurance['worker_type']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        LOCATION: <br>  <span class="text-color-primary">{{insurance['city']}}</span>
+      </ion-col>
+      <ion-col col-6>
+        BUSINESS NAME: <br>  <span class="text-color-primary">{{insurance['name']}}</span>
+      </ion-col>
+      
+      <ion-col col-6>
+      
+      </ion-col>
+      <!-- <ion-col col-6>
+        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="update()">Update</button>
+        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="presentConfirmDelete()">Delete</button>
+      </ion-col> -->
+
+    </ion-row>
+
+    
+
+    <!-- <ion-col col-12 class="text-center">
+      <button ion-button round class="remove-driver"> REMOVE DRIVER</button>
+    </ion-col> -->
+
+   
+
+    <ion-row class="report-statement">
+      <ion-col col-6>
+        <div class="full-report-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.insurance})">
+          <i class="fa fa-file-o" aria-hidden="true"></i>
+
+          FULL REPORT
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="monthy-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.insurance})">
+          <i class="fa fa-file" aria-hidden="true"></i>
+
+          MONTHY STATEMENT
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="bill">
+      <ion-col col-4>
+        <p class="total-bill">TOTAL BILL</p>
+        <div class="ammount">₹{{insurance['total_bill_money'] }}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="paid-money">PAID MONEY</p>
+        <div class="ammount">₹{{insurance['paid_money']}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="due-money">DUE MONEY</p>
+        
+        <div class="ammount">₹{{due}}</div>
+      </ion-col>
+    </ion-row>
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="searchBillDetails()" placeholder="SEARCH"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">
+      <ion-col col-4>
+        <ion-item>
+          <ion-label>Bill #</ion-label>
+          <ion-radio value="bno"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-label>Payment #</ion-label>
+          <ion-radio value="pno"></ion-radio>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-label>All</ion-label>
+          <ion-radio value="ano"></ion-radio>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
+        <ion-label *ngIf="sc['type'] == 'bills'" >Bill # {{sc['id']}}</ion-label>
+        <ion-label *ngIf="sc['type'] == 'payments'" >Payment # {{sc['id']}}</ion-label>
+        <ion-label *ngIf="sc['type'] == 'reasons'" >{{sc['name']}}</ion-label>
+        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>
+      </ion-chip>
+      </p>
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+       
+        <a href="#home">BILL# / PAYMENT#</a>
+        <a href="#news">BILL / PAYMENT</a>
+        <a href="#contact">REASONS</a>
+        <a href="#about">COST / PAID</a>
+        <a href="#about">DETAILS</a>
+
+        <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">
+            <ion-spinner></ion-spinner>
+            <br/>
+          <span style="color: rgb(63, 63, 63);">
+            Loading
+          </span>
+        </div>
+    
+        <div class="scrollmenu-list total-bill " *ngFor="let payment of filterpayments" >
+          <div *ngIf="type=='pno' || type == ''">
+          <p>{{payment['payment_id']}}</p>
+          <p>{{payment['date_of_payment']}}</p>
+          <p></p>
+          <p>₹ {{payment['payment_amount']}}</p>
+          <p>{{payment['details']}}</p>
+          </div>
+
+          <div *ngIf="type=='bno'  || type == ''">
+          <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']">
+            <p>{{bill['bill_id']}}</p>
+            <p>{{bill['bill_date']}}</p>
+            <p>{{bill['reason']}}</p>
+            <p>₹ {{bill['total_bill']}}</p>
+            <p>{{bill['bill_details']}}</p>
+          </div>
+        </div>
+        <div *ngIf="type=='ano'  || type == ''">
+          <p>{{payment['payment_id']}}</p>
+          <p>{{payment['date_of_payment']}}</p>
+          <p></p>
+          <p>₹ {{payment['payment_amount']}}</p>
+          <p>{{payment['details']}}</p>
+          <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']">
+            <p>{{bill['bill_id']}}</p>
+            <p>{{bill['bill_date']}}</p>
+            <p>{{bill['reason']}}</p>
+            <p>₹ {{bill['total_bill']}}</p>
+            <p>{{bill['bill_details']}}</p>
+          </div>
+        </div>
+
+        </div>
+  
+       
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+    
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openLedgePage()">GIVE MONEY</button>
+    </div>
+
+
+  </div>
+</ion-content> 
+
+
+<!-- <ion-card>
+  <ion-card-header>
+    REMOVE DRIVER
+  </ion-card-header>
+  <ion-card-content>
+    
+  </ion-card-content>
+</ion-card>  -->

@@ -1,0 +1,389 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>
+          MECHANIC KHATA
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube text-right">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+    <ion-row class="document-button">
+      <ion-col col-6 (click)="shopBuyReport()">
+        <div>
+          MECHANIC REPAIR REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+        <!-- <button ion-button round outline small></button> -->
+      </ion-col>
+      <ion-col col-6 (click)="shopBillReport()">
+        <div>
+          MECHANIC BILL REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+        <!-- <button ion-button round outline small></button> -->
+      </ion-col>
+    </ion-row>
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC, BILL NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>
+    </div>
+
+    <ion-card *ngIf="displayfilter">
+      <ion-card-content>
+        <ion-list >
+          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">
+           <div *ngIf="sr['type']=='mechanic'">
+            <p style="color: #000;">{{sr['name']}}</p>
+             <p>Mechanic</p>
+            </div>
+           <div *ngIf="sr['type']=='bills'">
+              <p style="color: #000;">{{sr['id']}} ~ {{sr['amount']}}</p>
+              <p>Mechanic : {{sr['name']}}</p>
+           </div>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+        <a href="#home">MECHANIC</a>
+        <a href="#news">BILL NUMBER</a>
+        <a href="#contact">VEHICLE NUMBER</a>
+        <a href="#about">PURCHASE DATE</a>
+        <a href="#support">BILL</a>
+        <a href="#blog">DETAIL</a>
+        <a href="#tools">IMAGE</a>
+        
+        <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
+          <div>
+          <p>{{bill['person_shop_name']}}</p>
+          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['vehicle_number']}}</p>
+          <p>{{bill['bill_date']}}</p>
+          <p>{{bill['total_bill']}}</p>
+          <p>{{bill['bill_details']}}</p>
+          <p>
+            <span *ngIf="bill['image_content'] != null && bill['image_content'] != undefined">
+              <img [src]="bill['image_content']" style="width:11% !important" imageViewer />
+            </span>
+          </p>
+        </div>
+
+        </div>
+  
+     
+        </div>
+    
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Erase &nbsp; <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
+  
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+  
+    
+ 
+
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>
+    </div>
+
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
+        <ion-label *ngIf="sc['type'] == 'bills'" >Bill # {{sc['id']}}</ion-label>
+        <ion-label *ngIf="sc['type'] == 'problems' || sc['type'] == 'vehicles' || sc['type'] == 'mechanic'" >{{sc['name']}}</ion-label>
+        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>
+      </ion-chip>
+      </p>
+
+
+
+
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+       
+      <a href="#home">BILL NUMBER</a>
+      <a href="#news">MECHANIC</a>
+      <!-- <a href="#news">BUSINESS NAME</a> -->
+      <a href="#contact">VEHICLE</a>
+      <a href="#about">REPAIR DATE</a>
+      <!-- <a href="#about">EXCHANGE DATE</a> -->
+      <a href="#support">PROBLEM</a>
+      <!-- <a href="#blog">PARTS</a> -->
+      <!-- <a href="#tools">QUANTITY</a>
+      <a href="#tools">RATE/PC</a> --> 
+      <a href="#tools">TOTAL</a>
+      <a href="#tools">DETAIL</a>
+      <!-- <a href="#tools">ID(OPTIONAL)</a> --> 
+      <a href="#tools">KM READING</a>
+
+
+      <!-- (click)="selectThis(1)" -->
+  
+        <div *ngFor="let detail of filterbillDetails" [ngClass]="detail['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThisDetails(detail)">
+          <p>{{detail['bill_id']}}</p>
+          <p>{{detail['person_shop_name']}}</p>
+          <!-- <p>XYZ BUSINESS</p> -->
+          <p>{{detail['vehicle_number']}}</p>
+          <p>{{detail['date_of_repair']}}</p>
+          <!-- <p>MECHANICAL</p> -->
+          <p>{{detail['problem_name']}}</p>
+          <!-- <p>ONE</p> -->
+          <!-- <p>RS 200</p> -->
+          <p>RS {{detail['total_amount']}}</p>
+          <p>{{detail['additional_info']}}</p>
+          <!-- <p>{{detail['']}}</p> -->
+          <!-- <p>ID123</p> -->
+          <p>{{detail['km_reading']}}</p>
+     
+        </div>
+  
+       
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+      
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openShopBillDetailsPage()">BILL REPAIR DETAILS</button>
+    </div>
+
+
+  </div>
+</ion-content> 
+
+
+
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-1 class="custom-back-button">
+      </ion-col>
+    
+      <ion-col col-8 class="person-name text-left">
+        <ion-title>        
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
+          MECHANIC KHATA
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+    <ion-row class="document-button">
+      <ion-col col-6 >
+        <div>
+          MECHANIC REPAIR REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+      </ion-col>
+      <ion-col col-6 >
+        <div>
+          MECHANIC BILL REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC NAME,BILL NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+       
+        <a href="#home">MECHANIC NAME</a>
+        <a href="#news">BILL NUMBER</a>
+        <a href="#contact">VEHICLE NUMBER</a>
+        <a href="#about">BILL DATE</a>
+        <a href="#support">BILL</a>
+        <a href="#blog">DETAIL</a>
+        <a href="#tools">IMAGE</a>
+
+
+        <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
+          <div>
+          <p>{{bill['person_shop_name']}}</p>
+          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['vehicle_id']}}</p>
+          <p>{{bill['bill_date']}}</p>
+          <p>{{bill['total_bill']}}</p>
+          <p>{{bill['bill_details']}}</p>
+          <p></p>
+        </div>
+
+        </div>
+
+       
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Update</button>
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete</button>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+ 
+   
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>
+    </div>
+
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF REPAIR, MECHANIC"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+  
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+
+        <a href="#home">BILL NUMBER</a>
+        <a href="#news">MECHANIC NAME</a>
+        <a href="#contact">VEHICLE</a>
+        <a href="#about">REPAIR DATE</a>
+        <a href="#about">EXCHANGE DATE</a>
+        <a href="#support">REPAIR TYPE</a>
+        <a href="#blog">ITEM</a>
+        <a href="#tools">QUANTITY</a>
+        <a href="#tools">RATE PER PC</a>
+        <a href="#tools">TOTAL</a>
+        <a href="#tools">DETAIL</a>
+        <a href="#tools">ID(OPTIONAL)</a>
+        <a href="#tools">KM READING</a>
+
+        <div class="scrollmenu-list" id="1" (click)="selectThis(1)">
+          <p>BILL1234</p>
+          <p>Ajay Das </p>
+          <p>MN1234</p>
+          <p>12/09/2020</p>
+          <p>12/09/2020</p>
+          <p>Tyre</p>
+          <p>Item none</p>
+          <p>1</p>
+          <p>RS 200</p>
+          <p>RS 500</p>
+          <p>THIS HAS BEEN REPAIRED</p>
+          <p>ID23</p>
+          <p>12KM</p>
+        </div>
+  
+        <div class="scrollmenu-list" id="2" (click)="selectThis(2)">
+          <p>BILL1234</p>
+          <p>Ajay Das </p>
+          <p>MN1234</p>
+          <p>12/09/2020</p>
+          <p>12/09/2020</p>
+          <p>Tyre</p>
+          <p>Item none</p>
+          <p>1</p>
+          <p>RS 200</p>
+          <p>RS 500</p>
+          <p>THIS HAS BEEN REPAIRED</p>
+          <p>ID23</p>
+          <p>12KM</p>
+        </div>
+  
+        <div class="scrollmenu-list" id="3" (click)="selectThis(3)">
+          <p>BILL1234</p>
+          <p>Ajay Das </p>
+          <p>MN1234</p>
+          <p>12/09/2020</p>
+          <p>12/09/2020</p>
+          <p>Tyre</p>
+          <p>Item none</p>
+          <p>1</p>
+          <p>RS 200</p>
+          <p>RS 500</p>
+          <p>THIS HAS BEEN REPAIRED</p>
+          <p>ID23</p>
+          <p>12KM</p>
+        </div>
+  
+        <div class="scrollmenu-list" id="4" (click)="selectThis(4)">
+          <p>BILL1234</p>
+          <p>Ajay Das </p>
+          <p>MN1234</p>
+          <p>12/09/2020</p>
+          <p>12/09/2020</p>
+          <p>Tyre</p>
+          <p>Item none</p>
+          <p>1</p>
+          <p>RS 200</p>
+          <p>RS 500</p>
+          <p>THIS HAS BEEN REPAIRED</p>
+          <p>ID23</p>
+          <p>12KM</p>
+        </div>
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openBillDescriptionPage()">BILL REPAIR DETAILS</button>
+    </div>
+
+
+  </div>
+</ion-content> 
+ -->

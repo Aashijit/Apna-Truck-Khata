@@ -1,0 +1,241 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+      
+      <ion-col col-7 class="person-name text-left">
+        <ion-title style="margin-left: -30px;">        
+          <i style="margin-left: 10px" class="fa fa-file-text" aria-hidden="true"></i> &nbsp; ACCOUNT KHATA
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+    <!-- <ion-row class="justify-content-center">
+      <ion-col col-3 class="total-cost selected">
+        TOTAL COST
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="total-cost">
+        TOTAL PAID
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="total-cost">
+        TOTAL DUE
+
+      </ion-col>
+
+    </ion-row> -->
+
+    <ion-row class="bill">
+      <ion-col col-4>
+        <p class="total-bill">TOTAL BILL</p>
+        <div class="ammount">₹ {{total_bill}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="paid-money">PAID MONEY</p>
+        <div class="ammount">₹ {{paid_money}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <p class="due-money">DUE MONEY</p>
+        
+        <div class="ammount">₹ {{due_money}}</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="full-report"> 
+      <ion-col col-12 (click)="fullreport()">
+          FULL REPORT <i style="margin-left: 10px" class="fa fa-file-text" aria-hidden="true"></i>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="justify-content-center">
+      <ion-col col-3 [ngClass]="mechanicshop == true ? 'sort-option mechanic selected' : 'sort-option mechanic'" (click)="selectMechanicShop()">
+        MECHANIC SHOP
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 [ngClass]="documentinsurance== true ? 'sort-option document selected' : 'sort-option document'"  (click)="selectDocumentInsurance()">
+        DOCUMENT INSURANCE
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 [ngClass]="driver== true ? 'sort-option drive selected' : 'sort-option drive'" (click)="selectDriver()">
+        DRIVER
+
+      </ion-col>
+
+    </ion-row>
+    <!-- (ionInput)="getItems($event)" -->
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="filterWorker($event)"  placeholder="SEARCH"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <ion-card *ngIf="displayfilter">
+      <ion-card-content>
+        <ion-list >
+          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">
+           <div *ngIf="sr['type']=='name'">
+            <p style="color: #000;">{{sr['name']}}</p>
+             <p>Person</p>
+            </div>
+           <div *ngIf="sr['type']=='type'">
+              <p style="color: #000;">{{sr['name']}}</p>
+              <p>Status</p>
+           </div>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-row class="justify-content-center">
+      <ion-col col-3 class="details driver-name">
+        NAME
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="details status">
+        STATUS
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="details">
+        DUE AMOUNT
+      </ion-col>
+    </ion-row>
+    <div *ngIf="all && !documentinsurance && !mechanicshop && !driver">
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of filterworkers"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="documentinsurance && !all && !mechanicshop && !driver">
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="mechanicshop && !all && !documentinsurance && !driver">
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="driver && !all && !mechanicshop && !documentinsurance">
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">
+      <ion-col col-4 class="name" >
+        {{worker['name']}}
+      </ion-col>
+      <ion-col col-4 >
+        {{worker['worker_type']}}
+      </ion-col>
+      <ion-col col-4 class="money">
+        {{num(worker['total_bill_money']) - num(worker['paid_money'])}}
+      </ion-col>
+    </ion-row>
+  </div>
+
+    <div class="fixed-div text-center mt-4" >
+      <button ion-button round class="custom-button" (click)="openDriverAddPage()">+ ADD PERSON</button>
+    </div>
+    
+  </div>
+</ion-content>  

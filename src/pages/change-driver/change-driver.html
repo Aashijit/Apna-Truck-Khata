@@ -1,0 +1,136 @@
+<!--
+  Generated template for the ChangeDriverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <!-- <ion-col col-2 class="custom-back-button"> -->
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      <!-- </ion-col> -->
+      
+      <ion-col col-12 class="person-name text-center">
+        <ion-title>        
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          CHANGE DRIVER
+        </ion-title>
+
+      </ion-col>
+      <!-- <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col> -->
+    </ion-row>
+  </ion-navbar>
+</ion-header> 
+
+<ion-content padding>
+
+  <div class="container white-section">
+    <ion-row class="driver-modal">
+
+
+      <ion-col col-8>
+        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle['vehicle_number']}}</span>
+  
+        <!-- <span style="float: right;">
+          DRIVER
+        </span> -->
+      </ion-col>
+      <ion-col col-1>
+        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>
+  
+      </ion-col>
+      <ion-col col-3>
+        DRIVER
+      </ion-col>
+  
+      <ion-col col-12>
+        TYPE: <span class="text-color-primary">{{vehicle['vehicle_type']}}</span>
+      </ion-col>
+      <ion-col col-12>
+        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle['driver_details'] != undefined && vehicle['driver_details'] != null">{{vehicle['driver_details']['name']}}({{vehicle['driver_details']['phone_number']}})</span>
+      </ion-col>
+  
+      <ion-col col-12>
+        <div class="label-float" >
+          <input type="date" [(ngModel)]="driver_end_date"/>
+          <label>CURRENT DRIVER LEAVING DATE</label>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+    
+        </div>
+  
+      </ion-col>
+  
+  
+   
+      <ion-col col-12>
+        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >
+          <ion-label>NEW DRIVER</ion-label>
+    
+          <ion-select interface="action-sheet" [(ngModel)]="driver_id" >
+            <ion-option  *ngFor="let driver of drivers"  value="{{driver['worker_id']}}">{{driver['name']}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+     
+  
+      <ion-col col-12>
+        <div class="label-float" >
+          <input type="date" [(ngModel)]="driver_start_date"/>
+          <label>NEW DRIVER START DATE</label>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+    
+        </div>
+        
+      </ion-col>
+  
+      <ion-col col-12>
+        <div class="label-float" >
+          <input type="text" [(ngModel)]="driver_start_details"  placeholder=" " />
+          <label>REASON/DETAILS</label>
+          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->
+    
+        </div>
+      </ion-col>
+  
+      <ion-col col-12>
+        <div class="label-float" >
+          <input type="text" [(ngModel)]="driver_start_km"  placeholder=" " />
+          <label>KM</label>
+          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->
+    
+        </div>
+      </ion-col>
+  
+  
+  
+  
+  
+  
+     
+  
+   
+  
+
+  
+    </ion-row> 
+  </div>
+
+  <ion-row>
+    <ion-col col-6 class="text-center">
+  
+      <button ion-button round class="custom-button" (click)="save()">SAVE</button>
+    </ion-col>
+
+    <ion-col col-6 class="text-center">
+      <button ion-button round class="exit-button" (click)="exitModal()">
+        Exit
+      </button>
+    </ion-col>
+    
+  </ion-row>
+
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>
+
+
+
+</ion-header>
+<ion-content padding>
+
+  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
+      <ion-label *ngIf="sc['type'] == 'bills'" >Bill # {{sc['id']}}</ion-label>
+      <ion-label *ngIf="sc['type'] == 'payments'" >Payment # {{sc['id']}}</ion-label>
+      <ion-label *ngIf="sc['type'] == 'reasons' || sc['type'] == 'vehicles'" >{{sc['name']}}</ion-label>
+      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>
+    </ion-chip>
+    </p>
+
+
+  <ion-list style="margin-top: 20px;">
+
+    <p *ngFor="let sr of displaysearchitems" >
+
+      <ion-item *ngIf="sr['type'] == 'vehicles'" (click)="clickedTerm(sr)">
+        <h2>{{sr['name']}}</h2>
+        <p>Vehicle</p>
+      </ion-item>
+ 
+      <ion-item *ngIf="sr['type'] == 'reasons'" (click)="clickedTerm(sr)">
+        <h2>{{sr['name']}}</h2>
+        <p>Reason</p>
+      </ion-item>
+
+      <ion-item *ngIf="sr['type'] == 'payments'" (click)="clickedTerm(sr)">
+        <h2>Payment # {{sr['id']}}</h2>
+        <p>Shop</p>
+      </ion-item>
+
+      <ion-item *ngIf="sr['type'] == 'bills'" (click)="clickedTerm(sr)">
+        <h2>Bill # {{sr['id']}}</h2>
+      </ion-item>
+    </p>
+
+
+
+  </ion-list>
+
+
+
+
+</ion-content>
+<ion-footer>
+  <button ion-button full (click)="searchGrid()">
+    Search
+  </button>
+</ion-footer>

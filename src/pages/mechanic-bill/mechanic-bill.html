@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-1 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-8 class="person-name text-left">
+        <ion-title>        
+          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>
+          MECHANIC BILL
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <div class="container white-section">
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu" >
+       
+        <!-- <a href="#home">PERSON NAME</a> -->
+        <a href="#home">MECHANIC NAME</a>
+        <a href="#news">BILL NUMBER</a>
+        <a href="#contact">VEHICLE NUMBER</a>
+        <a href="#about">DATE OF BILL</a>
+        <a href="#about">BILL</a>
+        <a href="#blog">DETAIL</a>
+        <a href="#tools">IMAGE</a>
+        
+        <div [ngClass]="bl['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bl of bills">
+        <div (click)="selectThis(bl)">
+          <!-- <p>Ajay Das </p> -->
+          <p>{{bl['person_shop_name']}}</p>
+          <p>{{bl['bill_id']}}</p>
+          <p>{{bl['vehicle_id']}}</p>
+          <p>{{bl['bill_date']}}</p>
+          <p>{{bl['total_bill']}}</p>
+          <p>{{bl['bill_details']}}</p>
+          <p><img [src]="bl['image_content']" imageViewer style="width: 11% !important;"/></p>
+        </div>
+        </div>
+  
+        </div>
+    
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
+
+
+
+    <ion-item *ngIf="!isSelectedBill" class="label-select">
+      <ion-label interface="action-sheet" floating>SELECT MECHANIC</ion-label>
+
+      <ion-select [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">
+        <ion-option value="{{me['worker_id']}}" *ngFor="let me of mechanics" >{{me['name']}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+
+
+    <ion-item class="label-select">
+      <ion-label floating>SELECT VEHICLE</ion-label>
+      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">
+        <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">{{vh['vehicle_number']}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+    <div class="label-float" >
+      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>
+      <label>DATE OF PURCHASE</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+    </div>
+
+    
+
+    <div class="label-float" >
+      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />
+      <label>TOTAL BILL ₹</label>
+      <i class="fa fa-money" aria-hidden="true"></i>
+
+    </div>
+
+    
+    <ion-row >
+      <ion-col col-9>
+
+        <ion-row >
+          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >
+            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />
+            <label>DETAILS</label>
+          </div>
+        </ion-row>  
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="detail-picture">
+          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+    
+          </ion-col>    
+          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
+            <img [src]="img['image_content']" style="opacity: 0.3 !important;"/>
+           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
+    
+          </ion-col>
+        </ion-row>      
+      </ion-col>
+    </ion-row>
+
+
+  </div>
+
+  <div class="text-center mt-4">
+    <button ion-button round class="custom-button" *ngIf="!is_update" (click)="save()"> SAVE</button>
+
+  </div>
+  <ion-row>
+  <ion-col col-12 class="text-center">
+    <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateBill()">Update</button>
+  </ion-col>
+</ion-row>
+
+
+</ion-content> 

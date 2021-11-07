@@ -1,0 +1,225 @@
+page-driver-document {
+  .driver {
+    .profile-picture {
+      margin: 20px 0px;
+      padding: 20px 10px;
+      //background: #ffffff;
+      border-radius: 3px;
+      img {
+        border-radius: 50%;
+        //box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .driver-detail {
+      text-align: right;
+      padding-right: 20px;
+
+      .fa {
+        color: #0752af;
+        font-size: 30px;
+        //float: right;
+      }
+    }
+
+    .profile-details {
+      color: #818287;
+    }
+
+    .report-statement {
+      margin: 20px -5px;
+    }
+
+    .full-report-statement {
+      color: #0752af;
+      text-align: center;
+      background: #fff;
+      border-radius: 7px;
+      padding: 20px 5px;
+      //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .monthy-statement {
+      color: #0752af;
+      text-align: center;
+      background: #fff;
+      border-radius: 7px;
+      padding: 20px 5px;
+      //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .bill {
+      margin: 20px 0px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      color: #818287;
+
+      //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+      .col {
+        text-align: center;
+
+        .ammount {
+          margin: 10px 0;
+          padding: 10px;
+          background: #ffffff;
+          border: 1px solid #0752af;
+          box-sizing: border-box;
+          border-radius: 3px;
+        }
+
+        .ammount.due {
+          color: #fff;
+          background: #e02b2b;
+          border: none;
+        }
+      }
+    }
+
+    .bill-details {
+      //margin: 20px -15px 0px;
+      display: flex;
+      flex-direction: row;
+      color: #818287;
+
+      justify-content: space-between;
+
+      div {
+        font-size: 10px;
+        padding: 5px;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #0752af;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+    }
+
+    .bill-details-description {
+      height: 100px;
+      //margin: 0px -15px;
+      border: 1px solid #0752af;
+      border-radius: 5px;
+      background: #fff;
+      position: relative;
+
+      .fa {
+        color: #287ac4;
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .custom-searchbar-div {
+      position: relative;
+      margin-bottom: 20px;
+
+      .fa.fa-angle-down {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #0752af;
+        font-size: 25px;
+      }
+    }
+
+    .custom-searchbar {
+      padding: 0px;
+
+      .searchbar-input {
+        color: #0752af;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .driver-modal {
+    font-size: 10px;
+    border-radius: 5px;
+    background: #f3f3f3;
+    //padding: 0 20px;
+    .toggle-md {
+      float: right;
+    }
+
+    .col {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    .personal-details {
+      margin-top: 25px;
+    }
+
+    // .item {
+    //   //margin-top: 20px;
+    //   padding-right: 10px;
+    //   padding-left: 10px;
+    // }
+    // .item.item-block .item-inner {
+    //   border-radius: 2px;
+    //   padding: 5px 10px;
+    //   border: 1px solid #287ac4;
+    // }
+  }
+
+  .driver-modal-header {
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    background: #0752af;
+    padding: 10px !important;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .picture-upload {
+    margin: 10px 0;
+    //text-align: center;
+    border-radius: 50%;
+    padding-top: 20px;
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      background: #fff;
+      // background: #ffffff;
+      color: #287ac4;
+      border-radius: 5px 15px 5px 5px;
+    }
+
+    .edit-pencil {
+      position: absolute;
+      background: #287ac4;
+      padding: 10px;
+      right: 30px;
+      top: -10px;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .item-datetime {
+    background: transparent;
+  }
+
+  .datetime-placeholder,
+  .item-input .label-md,
+  .item-select .label-md,
+  .item-datetime .label-md {
+    color: rgba(48, 46, 46, 0.877) !important;
+  }
+
+  .segment {
+    background: #f3f3f3;
+    padding: 10px 20px;
+  }
+
+  // .permit {
+  //   font-size: 12px;
+  // }
+}

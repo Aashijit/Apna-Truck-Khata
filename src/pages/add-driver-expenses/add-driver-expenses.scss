@@ -1,0 +1,127 @@
+page-add-driver-expenses {
+  .driver-expense {
+    background: #fff;
+    padding: 10px;
+  }
+  .document-button {
+    div {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .red {
+    color: red;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+    }
+  }
+
+  .change-button {
+    margin-top: 20px;
+    background: #a80852;
+  }
+
+  .item {
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+  .item.item-block .item-inner {
+    border-radius: 5px;
+    //border: 1px solid #0752af;
+  }
+
+  .state {
+    margin: 0px -5px;
+  }
+
+  .label-md {
+    padding-left: 8px;
+    color: rgba(128, 128, 128, 0.849);
+  }
+
+  .profile-picture {
+    margin: 0px;
+    //text-align: center;
+    border-radius: 50%;
+    padding-top: 20px;
+
+    h6 {
+      font-size: 14px;
+      padding-top: 30px;
+      margin-left: -10px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      //background: #f3f3f3;
+      background: #f3f3f3;
+      color: #0752af;
+      border-radius: 5px 15px 5px 5px;
+    }
+
+    .edit-pencil {
+      position: absolute;
+      background: #0752af;
+      padding: 10px;
+      right: 30px;
+      top: -10px;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .share-button {
+    background: #0752af;
+  }
+
+  .add-button {
+    background: #e02b2b;
+    width: 150px;
+    font-weight: 600;
+  }
+
+  .monthy-button {
+    background: #24e289;
+    width: 155px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 320px) {
+    .add-button,
+    .monthy-button {
+      width: 100px;
+    }
+
+    div.scrollmenu {
+      height: 120px;
+    }
+  }
+}

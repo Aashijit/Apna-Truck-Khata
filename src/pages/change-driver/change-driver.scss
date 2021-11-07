@@ -1,0 +1,35 @@
+page-change-driver {
+  .driver-modal {
+    //font-size: 10px;
+    //background: #fff;
+    //padding: 0 20px;
+
+    .col {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    // .item {
+    //   //margin-top: 20px;
+    //   padding-right: 10px;
+    //   padding-left: 10px;
+    // }
+    // .item.item-block .item-inner {
+    //   border-radius: 2px;
+    //   padding: 5px 10px;
+    //   border: 1px solid #287ac4;
+    //}
+  }
+
+  .driver-modal-header {
+    color: #fff;
+    font-weight: 600;
+    background: #0752af;
+    padding: 10px !important;
+  }
+
+  .custom-button,
+  .exit-button {
+    width: 120px !important;
+  }
+}

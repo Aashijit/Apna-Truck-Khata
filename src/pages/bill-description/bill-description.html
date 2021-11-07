@@ -1,0 +1,494 @@
+<!--
+  Generated template for the BillDescriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <ion-icon name="ios-copy"></ion-icon>
+          BILL REPAIR DETAILS
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-1></ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container  white-section">
+
+    <!-- <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div> -->
+    
+
+    <!-- <div class="scrollmenu">
+      <a href="#home">BILL NUMBER</a>
+      <a href="#news">VEHICLE</a>
+      <a href="#contact">PROBLEM/WORK (PART & ID)</a>
+      <a href="#about">DATE OF REPAIR</a>
+      <a href="#support">REPAIR</a>
+      <a href="#blog">QUANTITY</a>
+      <a href="#tools">RATE(PC/FULL)</a>
+      <a href="#tools">TOTAL</a>
+      <a href="#tools">DETAILS</a>
+      <a href="#tools">ID(OPTIONAL)</a>
+      <a href="#tools">KM READING</a> -->
+
+            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>
+      <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+<!-- 
+      <div style="height: 200px;width: 400px">
+
+      </div>
+    </div> -->
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+
+        <!-- <a href="#home">NUMBER</a>
+        <a href="#news">VEHICLE NUMBER (DRIVER NAME)</a>
+        <a href="#contact">PROBLEM ID</a>
+        <a href="#about">DATE OF COMPLAINT/REMINDER</a>
+        <a href="#support">DETAILS KM READING</a> -->
+
+        <a href="#home" (click)="openBillDetailsPage()">BILL NUMBER</a>
+        <a href="#news">VEHICLE</a>
+        <a href="#contact">PROBLEM/WORK (PART & ID)</a>
+        <a href="#about">DATE OF REPAIR</a>
+        <a href="#support">REPAIR</a>
+        <a href="#blog">QUANTITY</a>
+        <a href="#tools">RATE(PC/FULL)</a>
+        <a href="#tools">TOTAL</a>
+        <a href="#tools">DETAILS</a>
+        <a href="#tools">ID(OPTIONAL)</a>
+        <a href="#tools">KM READING</a>
+
+<!--       
+        <a href="#home">PROBLEM/WORK (PART AND ID)</a>
+        <a href="#news">DATE OF REPAIR/EXCHNAGE</a>
+        <a href="#contact">BILL NUMBER</a>
+        <a href="#about">PERSON NAME</a>
+        <a href="#support">REPAIR/PART/DOC</a>
+        <a href="#blog">PART/LOAD ID(NEW)</a>
+        <a href="#tools">QUANTITY</a>
+        <a href="#tools">RATE</a>
+        <a href="#tools">TOTAL</a>
+        <a href="#tools">DETAILS</a> -->
+
+        <div class="scrollmenu-list" id="5" (click)="selectThis(5)">
+          <p>BILL1</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>1</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>25KM</p>
+
+        </div>
+  
+        <div class="scrollmenu-list" id="6" (click)="selectThis(6)">
+          <p>BILL2</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>1</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>25KM</p>
+
+        </div>
+  
+        <div class="scrollmenu-list" id="7" (click)="selectThis(7)">
+          <p>BILL3</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>1</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>25KM</p>
+
+        </div>
+  
+        <div class="scrollmenu-list" id="8" (click)="selectThis(8)">
+          <p>BILL4</p>
+          <p>V1234</p>
+          <p>PROBLEM ID23</p>
+          <p>12/09/2020</p>
+          <p>1</p>
+          <p>RS 25</p>
+          <p>RS 25</p>
+          <p>THIS IS THE DETAILS</p>
+          <p>25KM</p>
+
+        </div>
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+
+
+
+    <!-- <ion-item>
+      <ion-label>BILL NUMBER</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+    </ion-item> -->
+
+    <ion-item *ngIf="!isSelectedBill" class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
+      <ion-label>BILL NUMBER</ion-label>
+
+      <ion-select [(ngModel)]="document" (ionChange)="change($event)">
+        <ion-option value="Aadharcard">BILL 1</ion-option>
+        <ion-option value="Pancard">BILL 2</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+    <!-- <ion-row class="text-center" *ngIf="vari  == 'Aadharcard' || vari == 'Pancard'" style="margin: 0; margin-top: 20px;">
+      <ion-col col-6>
+        
+      </ion-col>
+      <ion-col col-6>
+      </ion-col>
+      <ion-col col-6>
+      </ion-col>
+      <ion-col col-6>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- <ion-row class="selected-details" *ngIf="vari  == 'Aadharcard' || vari == 'Pancard'" >
+      <ion-col col-4 class="text-center" style="color: white;">
+        <p style="margin-top: 10px;">MECHANIC</p> 
+        <p  style="margin-top: 10px;">13/09/2021</p>
+      </ion-col>
+      <ion-col col-4 class="text-center"  style="color: white;">
+        <p  style="margin-top: 10px;"> V-NUMBER</p>
+        <p  style="margin-top: 10px;" >RS 500</p>
+
+      </ion-col>
+      <ion-col col-4 class="text-center"> 
+        <p  style="margin-top: 10px; color: white;">BILL NUMBER</p>
+
+        <button ion-button round>CHANGE</button>
+      </ion-col>
+    </ion-row> -->
+
+    <ion-row class="selected-details" *ngIf="vari  == 'Aadharcard' || vari == 'Pancard'" >
+      <ion-col col-4 class="text-center">
+        <img  src="../../assets/saarthi-icon/png/007-mechanic.png" alt="">
+      </ion-col>
+      <ion-col col-4 class="text-center">
+        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">ALEX DUE <br> BILL NUMBER</h6>
+      </ion-col>
+      <ion-col col-4 class="text-center"> 
+        <button ion-button round style="margin-top: 15px;" >CHANGE</button>
+      </ion-col>
+    </ion-row>
+  
+
+
+
+
+
+
+    <!-- <ion-item>
+      <ion-input type="text" placeholder="TOTAL BILL"></ion-input>
+    </ion-item> -->
+
+<!-- 
+    <div class="text-center mt-4">
+      <button ion-button round class="share-button">ADD NEW </button>
+    </div> -->
+
+
+
+<!-- 
+    <div class="problem-work-div">
+    <ion-item class="problem-work">
+
+      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+
+    </ion-item>
+      <ion-icon name="ios-add-circle" ></ion-icon>
+    </div> -->
+
+    <ion-item class="label-select" style="margin-top: 12px;border: 2px solid #3951b2; border-radius: 5px;">
+
+      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+
+    </ion-item>
+
+    <!-- <ion-row style="margin: 0px;"> -->
+      <!-- <ion-col col-8>
+
+   
+
+      </ion-col> -->
+      <!-- <ion-col col-4>
+              
+          <button ion-button round class="add-button" style="width: 80px; margin-top: 15px;">ADD NEW </button>
+      
+        </ion-col> -->
+    <!-- </ion-row> -->
+
+    <!-- <div class="add-icon">
+      <ion-item>
+        <ion-label></ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+    </div> -->
+
+    <div class="label-float" >
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <label>DATE OF REPAIR</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+
+    </div>
+
+    <ion-row style="margin: 0;">
+      <ion-col col-6>
+        <ion-item class="label-select dropdown-two" >
+
+          <ion-label>WORK</ion-label>
+          <ion-select [(ngModel)]="gender">
+            <ion-option value="f">Female</ion-option>
+            <ion-option value="m">Male</ion-option>
+          </ion-select>
+    
+        </ion-item>
+        
+    
+      </ion-col>
+      <ion-col col-6>
+        <!-- <ion-col col-12> -->
+
+          <div class="label-float"  >
+            <input type="text"  placeholder=" " />
+            <label >QUANTITY (PC/LTR)</label>
+            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+      
+          </div>
+
+        <!-- </ion-col> -->
+        <!-- <ion-col col-12> -->
+
+
+        
+
+        <!-- </ion-col>
+        <ion-col col-12> -->
+          <ion-row style="margin: 0">
+            <ion-col col-6 >
+              <span style="color: #CB17E9;font-size: 10px;">PC
+                <button ion-button round class="custom-button" style="margin-top: -5px;
+                transform: scale(0.4);
+                background: #CB17E9;padding: 20px;"></button>
+              
+              </span>
+            </ion-col>
+
+            <ion-col col-6>
+              <span style="color: #819315;font-size: 10px;">FULL
+              
+                <button ion-button round class="custom-button" style="margin-top: -5px;
+                       transform: scale(0.4);
+                       background: #819315;padding: 20px;"></button>
+              </span>
+            </ion-col>
+            <!-- <ion-col col-12> -->
+
+              <!-- <span style="font-size: 10px;">PER</span>
+              <span style="color: #CB17E9;font-size: 10px;">PC
+                <button ion-button round class="custom-button" style="margin-top: -5px;
+                transform: scale(0.4);
+                background: #CB17E9;padding: 20px;"></button>
+              
+              </span> -->
+              <!-- <br> -->
+              <!-- <span style="font-size: 10px;">/</span> -->
+              <!-- <span style="color: #819315;font-size: 10px;">FULL
+              
+                <button ion-button round class="custom-button" style="margin-top: -5px;
+                       transform: scale(0.4);
+                       background: #819315;padding: 20px;"></button>
+              </span> -->
+              <!-- <ion-list radio-group [(ngModel)]="relationship">
+                <ion-item>
+                  <ion-radio value="friends" checked></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-radio value="family"></ion-radio>
+                </ion-item>
+              
+              </ion-list> -->
+              
+              <!-- <span> -->
+                <!-- <br> -->
+
+                <!-- <div style="height: 10px; width: 10px; border-radius: 50%; margin: 5px 0; background: #CB17E9;"></div> -->
+              <!-- </span> -->
+              <!-- <div style="height: 10px; width: 10px; border-radius: 50%; margin: 5px 0; background: #CB17E9;"></div>
+              <div style="height: 10px; width: 10px; border-radius: 50%; margin: 5px 0; background: #819315;"></div> -->
+              
+            <!-- </ion-col> -->
+          </ion-row>
+
+          <div class="label-float" style="margin-top: -20px;"  >
+            <input type="text"  placeholder=" " />
+            <label   >₹ RATE</label>
+            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+      
+          </div>
+       
+          <!-- <div class="label-float"  >
+            <input type="text"  placeholder=" " />
+
+            <label  >ID</label> -->
+            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+      
+          <!-- </div> -->
+          
+        <!-- </ion-col> -->
+
+      </ion-col>
+    </ion-row>
+    
+
+    
+  
+
+
+  
+
+
+
+
+    <div class="mt-4 text-center">
+
+      <button ion-button round class="share-button">ADD NEW WORK
+      </button>
+
+    
+
+    </div>
+
+
+      <!-- <ion-item>
+        <ion-label>REPAIR</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+   -->
+      <!-- <ion-item class="ion-col col-3">
+        <ion-label>QUANTITY (PC/LTR)</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item> -->
+    <!-- <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>RATE(PER PC/FULL)</label>
+      <i class="fa fa-money" aria-hidden="true"></i>
+
+    </div> -->
+
+    <ion-row >
+      <ion-col col-9>
+        <!-- <div class="label-float" >
+          <input type="text"  placeholder=" " />
+          <label>DETAILS</label>
+          <i class="fa fa-money" aria-hidden="true"></i>
+    
+        </div> -->
+        <ion-row >
+          <ion-col col-10 class="detail-popup" (click)="openDetailPopup()">
+            DETAILS
+            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+    
+          </ion-col>    
+        </ion-row>  
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="detail-picture">
+          <ion-col col-4 (click)="openCameraPopup()">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+    
+          </ion-col>    
+        </ion-row>      
+      </ion-col>
+    </ion-row>
+
+    <div class="label-float"  >
+      <input type="text"  placeholder=" " />
+      <label>KM READING(OPTIONAL)</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+    <!-- <div class="mt-4 text-right">
+
+      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
+      </button>
+
+    
+
+    </div> -->
+
+
+
+  
+ 
+   
+
+  
+
+
+  </div>
+
+  <div class="text-center mt-4">
+    <button ion-button round class="custom-button"> SAVE</button>
+
+  </div>
+</ion-content> 
+
+

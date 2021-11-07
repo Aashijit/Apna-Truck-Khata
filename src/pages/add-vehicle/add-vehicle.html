@@ -1,0 +1,351 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <i class="fa fa-car" aria-hidden="true"></i>
+          ADD VEHICLE
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube text-right">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+  <div class="segment" *ngIf="!addWork">
+    <div class="text-center text-color-primary " style="padding: 10px;">
+      <h4>VEHICLE DETAILS</h4>
+      <hr>
+    </div>
+
+
+    <div class="label-float" >
+      <input type="text"  placeholder=" " [(ngModel)]="vehicle_number" />
+      <label>VEHICLE NUMBER</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+
+
+    <div class="label-float label-float-date" >
+      <ion-datetime displayFormat="YYYY" [(ngModel)]="year_purchase"></ion-datetime>
+      <label floating>YEAR OF PURCHASE</label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+
+    </div>
+
+   
+
+    <h4 class="text-color-primary text-left" style="font-size: 14px;">VEHICLE TYPE</h4>
+ 
+    <ion-row radio-group  [(ngModel)]="vehicle_type"  style="margin: 0;">
+    
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-truck" aria-hidden="true" ></i></ion-label>
+          <ion-radio checked="true" value="truck"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-motorcycle" aria-hidden="true"></i></ion-label>
+          <ion-radio  value="motorcycle"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-taxi" aria-hidden="true"></i></ion-label>
+          <ion-radio  value="taxi"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-bus" aria-hidden="true"></i></ion-label>
+          <ion-radio  value="bus"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-taxi" aria-hidden="true"></i></ion-label>
+          <ion-radio  value="car"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label><i class="fa fa-bus" aria-hidden="true"></i></ion-label>
+          <ion-radio  value="other"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+
+ 
+
+    
+
+    <h4 class="text-color-primary text-left" style="font-size: 14px;">VEHICLE BRAND </h4>
+   
+
+    <ion-row radio-group style="margin: 0;" [(ngModel)]="vehicle_brand">
+    
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> One</ion-label>
+          <ion-radio checked="true" value="one"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> Two</ion-label>
+          <ion-radio  value="two"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> Three</ion-label>
+          <ion-radio  value="three"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> Four</ion-label>
+          <ion-radio  value="four"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+               
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> Five</ion-label>
+          <ion-radio  value="five"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+         
+      <ion-col col-4>
+        <ion-item>
+          <ion-label> Six</ion-label>
+          <ion-radio  value="six"></ion-radio>
+        </ion-item>
+      </ion-col>
+
+
+      <ion-col col-12>
+
+        <div class="label-float" >
+          <input type="text"  placeholder=" " />
+          <label>OTHERS</label>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+
+
+ 
+    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
+      <ion-label>VEHICLE MODEL</ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="vehicle_model">
+        <ion-option value="hatchback">Hatchback</ion-option>
+        <ion-option value="sedan">Sedan</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-row style="margin: 0 -5px;">
+      <ion-col col-6>
+        <div class="label-float" >
+          <input type="text" [(ngModel)]="vehicle_weight"  placeholder=" " />
+          <label>WEIGHT</label>
+          <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+    
+        </div>
+        <!-- <div class="label-float" >
+          <input type="text"  placeholder=" " />
+          <label>VEHICLE WEIGHT</label>
+    
+        </div>  -->
+      </ion-col>
+      <ion-col col-6>
+        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
+          <ion-label>TONS/KG</ion-label>
+          <ion-select popover [(ngModel)]="vehicle_weight_type">
+            <ion-option value="tons">tons</ion-option>
+            <ion-option value="kg">kg</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+ 
+
+    <!-- <ion-item>
+        
+      <ion-input type="text" placeholder="KM READING(CURRENT)"></ion-input>
+
+
+    </ion-item> -->
+
+    <div class="label-float" >
+      <input type="text" [(ngModel)]="vehicle_km_reading_current"  placeholder=" " />
+      <label>KM READING</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
+
+    <div class="text-center mt-4">
+      <button ion-button round class="custom-button" *ngIf="!updateVehicle" (click)="presentConfirm('Are you sure you want to save this vehicle?')"> ADD WORK HISTORY &nbsp;   <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+      <button ion-button round class="custom-button" *ngIf="updateVehicle" (click)="updatevehicledetails()"> UPDATE VEHICLE</button>
+
+    </div>
+
+
+  </div>
+
+  <div class="segment mt-4" *ngIf="addWork">
+    <div class="text-center text-color-primary " style="padding: 30px 0 10px;">
+      <h4>WORK HISTORY</h4>
+      <hr>
+    </div>
+
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+       
+        <a href="#home">DATE</a>
+        <a href="#news">WORK/PART</a>
+        <a href="#contact">DETAILS</a>
+        <a href="#about">KM READING</a>
+        <a href="#about">ID</a>
+        <!-- <a href="#support">COST</a> -->
+        <a href="#blog">DETAIL</a>
+
+    
+        <div [ngClass]="wd['selected'] == false ? 'scrollmenu-list' : 'scrollmenu-list selected'" *ngFor="let wd of workdetails"  (click)="selectThis(wd)">
+          <p>{{wd['vehicle_update_date']}}</p>
+          <p>{{wd['vehicle_part_work']}}</p>
+          <p>{{wd['vehicle_part_work_details']}}</p>
+          <p>{{wd['vehicle_update_km_reading']}}</p>
+          <p>{{wd['vehicle_user_update_id']}}</p>
+          <!-- <p>RS 400</p> -->
+          <p>{{wd['vehicle_update_details']}}</p>
+     
+        </div>
+  
+  
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+
+ 
+
+      <ion-row style="margin: 0px">
+        <ion-col col-12>
+          
+          <div class="label-float" (click)="openPartsWorkDialog()">
+            <input type="text"  placeholder=""  [(ngModel)]="vehicle_part_work_name" />
+            <label>PARTS OR WORK</label>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>      
+          </div>
+    
+        </ion-col>
+
+       
+      </ion-row>
+
+
+    <div class="label-float" >
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="vehicle_update_date" ></ion-datetime>
+      <ion-label floating>DATE OF WORK</ion-label>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+    </div>
+
+    
+    <div class="label-float" >
+      <input type="text"  placeholder=" " [(ngModel)]="vehicle_user_update_id" />
+      <label>ID (OPTIONAL)</label>
+    </div>
+
+   
+  
+  
+
+    <div class="label-float" >
+      <input type="text"  placeholder=" " [(ngModel)]="vehicle_update_km_reading"/>
+      <label>KM READING</label>
+    </div>
+
+    <ion-row >
+      <ion-col col-9 (click)="openDetailPopup()">
+        <div class="label-float" >
+          <input type="text"  placeholder=" " [(ngModel)]="vehicle_update_details"/>
+          <label>DETAILS</label>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <ion-row class="detail-picture">
+          <ion-col col-4 (click)="openCameraPopup()">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            
+          </ion-col>    
+        </ion-row>      
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+    <ion-col col-12 style="text-align: center;" *ngIf="!updatework">
+      <button ion-button round  class="add-new-button" (click)="saveVehicleWork()">ADD NEW</button>
+    </ion-col>
+
+    <ion-col col-6 style="text-align: center;" *ngIf="updatework">
+      <button ion-button round  class="add-new-button" (click)="presentConfirmDelete()">DELETE</button>
+    </ion-col>
+    <ion-col col-6 style="text-align: center;" *ngIf="updatework">
+      <button ion-button round  class="add-new-button" (click)="updateVehicleWork()">UPDATE</button>
+    </ion-col>
+
+  </ion-row>
+
+  </div>
+   
+
+
+
+
+  </div>
+</ion-content> 
+

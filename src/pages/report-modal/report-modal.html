@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-2 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-6 class="person-name text-left">
+        <ion-title>        
+          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->
+          REPORTS
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube text-right" (click)="dismiss()">
+        <ion-icon name="close" color="light" style="margin-top: 11px;font-size:2.2rem;"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-6>
+      <ion-item>
+        <ion-label floating>
+          <span *ngIf="reporttype=='shopbuyreport' || reporttype == 'shopbillreport'">
+            Shop
+          </span>
+          <span *ngIf="reporttype=='mechanicbuyreport' || reporttype == 'mechanicbillreport'">
+            Mechanic
+          </span>
+        </ion-label>
+        <ion-select interface="popover" [(ngModel)]="worker_id">
+          <ion-option value="0">All</ion-option>
+          <ion-option value="{{shop['worker_id']}}" *ngFor="let shop of shops">
+            {{shop['name']}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col col-6>
+      <ion-item>
+        <ion-label floating>
+          Vehicles
+        </ion-label>
+        <ion-select interface="popover" [(ngModel)]="vehicle_id">
+          <ion-option value="0">All</ion-option>
+          <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">
+            {{vh['vehicle_number']}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col col-11 >
+      <ion-item style="margin-top: 24px;">
+        <ion-label>
+          Date Range : <span *ngIf="this.dateRange['from'] != undefined"> {{this.dateRange['from'] + " - " + this.dateRange['to']}} </span>
+        </ion-label>
+      </ion-item>
+    </ion-col>
+    <ion-col col-1>
+      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>
+    </ion-col>
+  </ion-row>
+  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"
+              [options]="optionsMulti"
+              type="string"
+              [format]="'YYYY-MM-DD'">
+  </ion-calendar>
+
+<p style="text-align: center !important;">
+  <button round class="custom-button" ion-button (click)="generateReport()">Report</button>
+</p>
+
+
+<div id="report">
+
+</div>
+
+<p style="text-align: center;">
+ <a [href]="downloadURL">Download Report</a>
+</p>
+
+  <!-- <ion-card>
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label floating>
+          Shop
+        </ion-label>
+        <ion-select>
+          <ion-option value="{{shop['worker_id']}}" *ngFor="let shop of shops">
+            {{shop['name']}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label floating>
+          Vehicles
+        </ion-label>
+        <ion-select>
+          <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">
+            {{vh['vehicle_number']}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+
+
+      <button ion-button (click)="generateReport()">
+        Generate Report
+      </button>
+
+
+      <a href="https://manpuriaproducts.org/SaarthiReport/public/accountkhatareport">
+        Download Pdf
+      </a>
+
+    </ion-card-content>
+  </ion-card> -->
+
+</ion-content>

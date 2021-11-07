@@ -1,0 +1,7 @@
+{
+  "name": "ApnaTruckKhata",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

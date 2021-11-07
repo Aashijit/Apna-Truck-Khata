@@ -1,0 +1,125 @@
+<ion-content padding>
+      <div class="label-float" style="padding-top: 8px;" (click)="openProblemModal()">
+        <input type="text"  placeholder=" " />
+        <label>PROBLEM/WORK(PART & ID)</label>
+      </div>
+
+      <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+        <ion-chip *ngFor="let problem of problems" style="margin-right: 5px !important; margin-left: 5px !important;">
+          <ion-label  >{{problem['problem_name']+" "+problem['vehicle_part_name']+" "+problem['vehicle_part_id']}}</ion-label>
+          <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeProblem(problem)"></ion-icon>
+        </ion-chip>
+        </p>
+
+        <ion-row>
+          <ion-col col-6>
+            <ion-badge color="primary">Bill Amount : ₹ {{bill['total_bill']}}  </ion-badge>
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="danger">Sub Amount : ₹ {{amount}}  </ion-badge>
+          </ion-col>
+        </ion-row>
+        
+
+        <ion-list *ngIf="problems.length > 0 && problems[0]['parts'] != undefined">
+          <ion-item *ngFor="let prt of problems[0]['parts']">
+            <ion-grid class="pd-0">
+              <ion-row>
+                <ion-col col-4 class="pd-0">
+                  <p style="font-weight: 1000; font-size: 10px !important; margin-left: 17px !important;">
+                  {{prt['part_name']}}
+                  </p>
+                  <p style="font-size: 8px; font-weight: 1000 !important;margin-left: 17px !important;">
+                    {{prt['id']}}
+                  </p>
+                </ion-col>
+
+                <ion-col col-4 class="pd-0">
+                  <p style="text-align: right;font-size: 10px !important;">
+                  ₹ {{prt['rate_per_pc']}}
+                  <sup *ngIf="prt['is_full']">Full</sup>
+                  <sup *ngIf="!prt['is_full']">Per pc</sup>
+                  </p>
+                  <p style="text-align: right;font-size: 10px !important;">
+                    Qty:{{prt['qty']}}
+                  </p>
+                </ion-col>
+
+                <ion-col col-2 class="pd-0" style="text-align: right;font-size: 10px !important;">
+                  ₹ {{prt['total']}}
+                </ion-col>
+                <ion-col col-2 class="pd-0" (click)="removePart(prt)">
+                  <ion-icon name="close-circle" color="danger" class="icon-cust"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+</ion-content>
+
+<ion-footer style="background: #fff; border-radius: 10px !important;">
+
+  <ion-grid >
+
+    <ion-row>
+      <ion-col col-6 class="pd" style="padding-right: 3px !important;">
+        <div class="label-float" (click)="openPartsWorkModal()">
+          <input type="text" [(ngModel)]="part_name" />
+          <label>Parts</label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </ion-col>
+      <ion-col col-6 class="pd" style="padding-left: 3px !important;">
+        <div class="label-float" >
+          <input type="text" [(ngModel)]="id" />
+          <label>ID</label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 class="pd" style="padding-right: 0px !important;">
+        <div class="label-float" >
+          <input type="tel" [(ngModel)]="qty" />
+          <label>Qty</label>
+        </div>
+      </ion-col>
+      <ion-col col-4 class="pd" >
+        <ion-toggle [(ngModel)]="is_full"></ion-toggle>
+        <p>
+          PC/FULL
+        </p>
+      </ion-col>
+      <ion-col col-4 class="pd" style="padding-left: 0px !important;">
+        <div class="label-float" >
+          <input type="tel" [(ngModel)]="rate" />
+          <label>RATE</label>
+        </div>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+
+  <div class="mt-4 text-center">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <button ion-button round class="custom-button" (click)="savePartsBill()">SAVE
+          </button>
+        </ion-col>
+        <ion-col col-4>
+          <button ion-button round class="custom-button" (click)="addPartsBill()">ADD
+          </button>
+        </ion-col>
+        <ion-col col-4 *ngIf="img != null || img != undefined"> 
+          <img [src]="img['image_url']" (click)="viewImage(img['image_url'])" style="width: 30%;border: 2px solid #1e53b5;" />
+          <!-- <button ion-button round class="custom-button" disabled="true">BILL IMG
+          </button> -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-footer>

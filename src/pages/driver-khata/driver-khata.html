@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-1 class="custom-back-button">
+        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      </ion-col>
+    
+      <ion-col col-8 class="person-name text-left">
+        <ion-title>        
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
+          DRIVER KHATA
+        </ion-title>
+
+      </ion-col>
+      <ion-col col-3 class="youtube">
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="container">
+
+    <!-- <ion-row class="document-button">
+      <ion-col col-6 >
+        <div>
+          DOCUMENTS DATE REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+      </ion-col>
+      <ion-col col-6 >
+        <div>
+          DOCUMENTS BILL REPORT
+          <i class="fa fa-download" aria-hidden="true"></i>
+
+        </div>
+      </ion-col>
+    </ion-row> -->
+
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH DRIVER NAME, VEHICLE NUMBER, REASON"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
+        <ion-label *ngIf="sc['type'] == 'reasons' || sc['type'] == 'vehicles' || sc['type'] == 'drivers'" >{{sc['name']}}</ion-label>
+        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>
+      </ion-chip>
+      </p>
+  
+    
+
+    <!-- <div class="scrollmenu">
+      <a href="#home">BILL NUMBER</a>
+      <a href="#news">DRIVER NAME</a>
+      <a href="#contact">VEHICLE NUMBER</a>
+      <a href="#about">REASON</a>
+      <a href="#support">COST</a>
+      <a href="#blog">DETAIL</a>
+      <a href="#tools">KM READING</a> -->
+            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>
+      <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+
+      <!-- <div style="height: 200px;width: 400px">
+
+      </div> -->
+    <!-- </div> -->
+ 
+    <div class="scroll-grid" >
+      <div class="scrollmenu">
+
+        <a href="#home">BILL NUMBER</a>
+        <a href="#news">DRIVER NAME</a>
+        <a href="#contact">VEHICLE NUMBER</a>
+        <a href="#about">REASON</a>
+        <a href="#support">COST</a>
+        <a href="#blog">DETAIL</a>
+        <a href="#tools">KM READING</a>
+
+        <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
+          <div [ngClass]="bill['total_bill'] < 0 ? 'green' : 'red'">
+          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['worker_name']}}</p>
+          <p>{{bill['vehicle_number']}}</p>
+          <p>{{bill['reason']}}</p>
+          <p>{{bill['total_bill']}}</p>
+          <p>{{bill['bill_details']}}</p>
+          <p>{{bill['km_reading']}}</p>
+        </div>
+
+        </div>
+  
+        <!-- <div class="scrollmenu-list" id="6" (click)="selectThis(6)" style="color: #24e289;">
+          <p>TYRE AND TYRE23</p>
+          <p>12-09-2020</p>
+          <p>BILL1234</p>
+          <p>AYAN JANA</p>
+          <p>REPAIR</p>
+          <p>ITEM2</p>
+          <p>1</p>
+         
+
+        </div>
+  
+        <div class="scrollmenu-list" id="7" (click)="selectThis(7)">
+          <p>TYRE AND TYRE23</p>
+          <p>12-09-2020</p>
+          <p>BILL1234</p>
+          <p>AYAN JANA</p>
+          <p>REPAIR</p>
+          <p>ITEM2</p>
+          <p>1</p>
+         
+
+        </div>
+  
+        <div class="scrollmenu-list" id="8" (click)="selectThis(8)">
+          <p>TYRE AND TYRE23</p>
+          <p>12-09-2020</p>
+          <p>BILL1234</p>
+          <p>AYAN JANA</p>
+          <p>REPAIR</p>
+          <p>ITEM2</p>
+          <p>1</p>
+         
+
+        </div> -->
+      </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" style="font-size: 12px !important;margin-top: 7px;"></ion-icon></button>
+        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete &nbsp; <ion-icon name="trash" style="font-size: 12px !important;margin-top: 7px;"></ion-icon></button>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+  
+   
+
+    <div class="text-center">
+      <button ion-button round class="custom-button" (click)="openAddDriverExpensePage()">EXPENSE ADD/LESS</button>
+    </div>
+
+
+  </div>
+</ion-content> 
+

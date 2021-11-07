@@ -1,0 +1,248 @@
+page-vehicle-document {
+  .vehicle-details {
+    .item {
+      margin-top: 20px;
+      padding-left: 0px;
+    }
+    .item.item-block .item-inner {
+      border-radius: 5px;
+      border: 1px solid #0752af;
+      background: #fff;
+    }
+
+    .confirm-button {
+      margin: 10px 0px;
+      padding: 10px;
+      font-weight: 500;
+      text-align: center;
+      background: #0752af;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .profile-picture {
+      margin: 0px;
+
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        background: #ffffff;
+        color: #0752af;
+        border-radius: 5px 15px 5px 5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .edit-pencil {
+        position: absolute;
+        background: #0752af;
+        padding: 10px;
+        right: 30px;
+        top: -10px;
+        color: #fff;
+        border-radius: 50%;
+      }
+
+      h6 {
+        margin-top: 2rem;
+        color: #818287;
+      }
+    }
+  }
+
+  .vehicle-details-card {
+    background: #f3f3f3;
+    padding: 10px;
+    margin-top: 20px;
+    color: #0752af;
+
+    p {
+      font-size: 10px;
+      margin-bottom: -0.5rem;
+      color: rgb(44, 43, 43);
+    }
+
+    .each-category {
+      background: #fff;
+      padding: 10px 0;
+      // border: 1px solid grey;
+      border-radius: 5px;
+      text-align: center;
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .text-color-primary {
+      font-size: 10px;
+    }
+  }
+
+  .driver-modal {
+    background: #fff;
+
+    .col {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    // .item {
+    //   //margin-top: 20px;
+    //   padding-right: 10px;
+    //   padding-left: 10px;
+    // }
+    // .item.item-block .item-inner {
+    //   border-radius: 2px;
+    //   padding: 5px 10px;
+    //   border: 1px solid #287ac4;
+    // }
+  }
+
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .document-button {
+    div {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      color: #0752af;
+    }
+  }
+
+  .all-button,
+  .exchange-button {
+    background: #0752af;
+    font-weight: 600;
+  }
+
+  .driver-modal-header {
+    color: #fff;
+    font-weight: 600;
+    background: #0752af;
+    padding: 10px !important;
+  }
+
+  .each-work-category {
+    text-align: center;
+  }
+
+  .total-work {
+    color: #0752af;
+    font-weight: 600;
+  }
+
+  .total-paid {
+    color: green;
+    font-weight: 600;
+  }
+
+  .total-due {
+    color: red;
+    font-weight: 600;
+  }
+
+  .driver-modal {
+    border-radius: 5px;
+    background: #f3f3f3;
+    //padding: 0 20px;
+    .toggle-md {
+      float: right;
+    }
+
+    .col {
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    .personal-details {
+      margin-top: 25px;
+    }
+
+    // .item {
+    //   //margin-top: 20px;
+    //   padding-right: 10px;
+    //   padding-left: 10px;
+    // }
+    // .item.item-block .item-inner {
+    //   border-radius: 2px;
+    //   padding: 5px 10px;
+    //   border: 1px solid #287ac4;
+    // }
+  }
+
+  .driver-modal-header {
+    color: #fff;
+    font-weight: 600;
+    background: #0752af;
+    padding: 10px !important;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .picture-upload {
+    margin: 10px 0;
+    //text-align: center;
+    border-radius: 50%;
+    padding-top: 20px;
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      background: #fff;
+      // background: #ffffff;
+      color: #287ac4;
+      border-radius: 5px 15px 5px 5px;
+    }
+
+    .edit-pencil {
+      position: absolute;
+      background: #287ac4;
+      padding: 10px;
+      right: 30px;
+      top: -10px;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .item-datetime {
+    background: transparent;
+    border: none;
+  }
+
+  .datetime-placeholder,
+  .item-input .label-md,
+  .item-select .label-md,
+  .item-datetime .label-md {
+    color: rgba(48, 46, 46, 0.877) !important;
+  }
+
+  .segment {
+    background: #f3f3f3;
+    padding: 10px 20px;
+  }
+}

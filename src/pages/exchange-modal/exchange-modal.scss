@@ -1,0 +1,10 @@
+page-exchange-modal {
+  .custom-button {
+    width: 120px !important;
+  }
+  @media screen and (max-width: 320px) {
+    .exchange-details {
+      font-size: 14px;
+    }
+  }
+}

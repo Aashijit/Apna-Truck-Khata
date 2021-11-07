@@ -1,0 +1,972 @@
+// http://ionicframework.com/docs/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+// * {
+//   color: #818287 ;
+// }
+
+//Header
+
+* {
+    // font-family: "Montserrat", sans-serif;
+    font-family: "Lato", sans-serif;
+    //color: black;
+    letter-spacing: 1px;
+  }
+  
+  .header {
+    // padding: 5px;
+    color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  // .toolbar-title {
+  //   padding: 10px 0;
+  // }
+  
+  .toolbar-title {
+    padding: 14px 0 12px;
+    font-size: 15px;
+    font-weight: 1000 !important;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toolbar-background {
+    // background: #287ac4;
+    background: #0752af;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .header-md::after,
+  .tabs-md[tabsPlacement="top"] > .tabbar::after,
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .toolbar-title-md {
+    color: #fff;
+  }
+  
+  .person-picture,
+  .youtube {
+    text-align: center;
+  }
+  
+  //Content
+  .content {
+    //@at-root: white;
+    background: #f3f3f3;
+  }
+  
+  //Tabs
+  
+  .tabs .tabbar {
+    // background: #287ac4;
+    //background: #0752af;
+    height: 70px;
+  }
+  .tabs-md .tab-button-icon {
+    font-size: 3rem;
+  }
+  
+  .tabs .tab-button[aria-selected="true"],
+  .tabs .tab-button[aria-selected="true"] .tab-button-icon {
+    //color: #fff;
+    color: #0752af;
+    text-decoration: none;
+  }
+  
+  .tabs .tab-button[aria-selected="false"],
+  .tabs .tab-button[aria-selected="false"] .tab-button-icon {
+    // color: rgba(255, 255, 255, 0.856);
+    color: #626262;
+  }
+  
+  .text-color-primary {
+    color: #0752af !important;
+  }
+  
+  //Youtube
+  .youtube img {
+    width: 35px;
+    margin-top: 8px;
+  }
+  
+  //Button
+  
+  button {
+    font-weight: 1000 !important;
+  }
+  
+  .fixed-button {
+    position: sticky;
+    top: 50%;
+    // left: 50%;
+    // top: 90%;
+    // transform: translate(-50%, -50%);
+  }
+  
+  .custom-back-button {
+    text-align: center;
+    ion-icon {
+      //padding: 10px 0 0;
+      font-size: 50px;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+  
+  .custom-button,
+  .exit-button {
+    margin: 10px 0;
+    font-weight: 1000 !important;
+    letter-spacing: 1px;
+    background: #a80852;
+  }
+  
+  .bar-button-default-md,
+  .bar-button-clear-md-default,
+  .bar-button-md-default {
+    color: #fff;
+  }
+  
+  .tab-button-text,
+  .tabs-md .tab-button[aria-selected="true"] .tab-button-text {
+    text-decoration: none;
+  }
+  
+  .searchbar-input {
+    font-size: 8px !important;
+  }
+  
+  .add-icon {
+    position: relative;
+  
+    i {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      font-size: 25px;
+      color: #0752af;
+    }
+  
+    .text-input,
+    .datetime-text {
+      padding-right: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .tab-button-text {
+      font-size: 9px !important;
+      font-weight: 800 !important;
+    }
+  
+    .tabs-md .tab-button-icon {
+      font-size: 25px !important;
+    }
+  }
+  
+  @media screen and (max-width: 410px) {
+    .khata {
+      img {
+        width: 50px;
+      }
+    }
+    .documents-expired {
+      padding-top: 19px !important;
+    }
+  
+    .toolbar-title {
+      font-size: 12px !important;
+    }
+  
+    .document-button {
+      div {
+        font-size: 10px;
+      }
+    }
+  
+    .each-category {
+      font-size: 10px !important;
+      font-weight: 800 !important;
+    }
+  
+    .each-work-category {
+      font-size: 10px !important;
+      //padding: 5px !important;
+      border-radius: 10px !important;
+    }
+  
+    .button-inner {
+      font-size: 10px !important;
+    }
+  
+    .text-input {
+      font-size: 12px !important;
+    }
+  
+    .label {
+      font-size: 12px !important;
+    }
+  
+    h6 {
+      font-size: 10px !important;
+    }
+  
+    .tab-button-text {
+      font-size: 8px !important;
+      font-weight: 800 !important;
+    }
+  
+    .tabs-md .tab-button-icon {
+      font-size: 25px !important;
+    }
+  }
+  
+  .scroll-grid {
+    border: 1px solid #0752af;
+    border-top: none;
+    border-bottom: none;
+    background: #fff;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollmenu-list {
+  }
+  
+  .scrollmenu-list.selected p {
+    background: #0752af;
+    color: #fff;
+    font-weight: 900;
+  }
+  
+  // .scrollmenu-list.selected p {
+  //   background: #f3f3f3;
+  //   color: #0752af;
+  // }
+  
+  div.scrollmenu {
+    //background-color: #333;
+    position: relative;
+    //margin-top: 20px;
+    overflow: auto;
+    height: 140px;
+    white-space: nowrap;
+    background: #fff;
+    //border: 1px solid #0752af;
+  
+    // div {
+    //   //width: 100%;
+  
+    //   // border: 1px solid #0752af;
+    // }
+  
+    // .fa-angle-down,
+    // .fa-angle-right {
+    //   font-size: 30px;
+    //   color: #0752af;
+    //   position: absolute;
+    //   bottom: 10px;
+    // }
+  
+    // .fa-angle-down {
+    //   right: 0;
+    // }
+  
+    // .fa-angle-right {
+    //   left: 20px;
+    // }
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    width: 140px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    //color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 10px;
+    text-decoration: none;
+    // background: #0752af;
+    // color: #fff;
+    font-weight: 800 !important ;
+    color: #0752af;
+    border: 1px solid #0752af;
+    //border: 1px solid #0752af;
+    border-left: none;
+    // border-top: none;
+  }
+  
+  div.scrollmenu p {
+    display: inline-block;
+    width: 140px;
+    overflow: auto;
+    //color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 0px;
+    // color: #0752af;
+    // border: 1px solid #0752af;
+    border-bottom: none;
+    transition-duration: 0.5s;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  
+  .show-arrows {
+    padding: 0 10px;
+    border: 1px solid #0752af;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 20px;
+    height: 30px;
+    background: transparent;
+  
+    .fa-long-arrow-down,
+    .fa-long-arrow-right {
+      color: #0752af;
+      //position: absolute;
+    }
+  
+    .fa-long-arrow-down {
+      margin-left: 10px;
+      float: right;
+      // left: 40px;
+      // bottom: 80px;
+    }
+  
+    .fa-long-arrow-right {
+      margin-right: 10px;
+      float: left;
+      // right: 40px;
+      // bottom: 80px;
+    }
+  }
+  
+  .label-select {
+    //padding: 5px 20px;
+    font-size: 12px;
+    ion-label {
+      color: #0752af !important;
+    }
+    color: #0752af;
+  }
+  
+  .label-float {
+    position: relative;
+    padding-top: 13px;
+    &.invalid {
+      label {
+        color: #f53d3d !important;
+      }
+      input {
+        border: 2px solid #f53d3d !important;
+      }
+    }
+  
+    .fa {
+      position: absolute;
+      font-size: 20px;
+      width: 20px;
+      right: 20px;
+      bottom: 15px;
+      color: #0752af;
+    }
+  
+    input,
+    ion-datetime {
+      background-color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+      //min-width: 250px;
+      padding: 10px;
+      font-size: 16px;
+      transition: all 0.1s linear;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      -webkit-appearance: none;
+      border: 2px solid #0752af;
+      &:focus {
+        border: 2px solid #0752af;
+      }
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  
+    label {
+      color: #0752af;
+      //font-size: 10px !important;
+      //font-size: 15px;
+      pointer-events: none;
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 10px;
+      transition: all 0.1s linear;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      background-color: #fff;
+      padding-top: 8px;
+      margin-left: 10px;
+      padding-left: 4px;
+      padding-right: 4px;
+      box-sizing: border-box;
+    }
+  
+    // ion-item.label-option.item.item-block.item-md.item-select {
+    //   border: 2px solid #3951b2 !important;
+    // }
+  
+    ion-datetime {
+      //padding: 18px 20px;
+      border: 2px solid #0752af;
+      border-radius: 5px;
+    }
+  
+    // ion-item.label-option.item.item-block.item-md.item-select {
+    //   background-color: transparent;
+    //   border: 2px solid #fff;
+    //   border-radius: 5px;
+    //   outline: none;
+    //   width: 100%;
+    //   min-width: 250px;
+    //   padding: 15px 20px;
+    //   font-size: 16px;
+    //   transition: all 0.1s linear;
+    //   -webkit-transition: all 0.1s linear;
+    //   -moz-transition: all 0.1s linear;
+    //   -webkit-appearance: none;
+    //   border: 2px solid #3951b2;
+    // }
+  }
+  
+  .label-float ion-datetime:focus + label {
+    label {
+      top: calc(50% - 30px);
+    }
+  }
+  
+  .label-float input:focus + label,
+  input:not(:placeholder-shown):not(.invalid) + label {
+    font-size: 13px;
+    top: 0;
+    color: #0752af;
+  }
+  .label-float input:not(:focus):not(:placeholder-shown):not(.invalid) + label {
+    font-size: 13px;
+    top: 0;
+    color: #0752af;
+  }
+  
+  .custom-searchbar-div {
+    position: relative;
+    margin: 20px 0 10px;
+  
+    .fa.fa-angle-down {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #0752af;
+      font-size: 25px;
+    }
+  }
+  
+  .custom-searchbar {
+    padding: 0px;
+    border-radius: 7px;
+  
+    .searchbar-input {
+      color: #0752af;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .pt-0 {
+    padding-top: 0px !important;
+  }
+  .pb-0 {
+    padding-bottom: 0px !important;
+  }
+  
+  .m-0 {
+    margin: 0px !important;
+  }
+  
+  .pl-0 {
+    padding-left: 0px !important;
+  }
+  
+  .pr-0 {
+    padding-right: 0px !important;
+  }
+  
+  .pt-9 {
+    padding-top: 9px !important;
+  }
+  
+  .pt-3 {
+    padding-top: 3px !important;
+  }
+  .pl-1 {
+    padding-left: 1px !important;
+  }
+  .pr-1 {
+    padding-right: 1px !important;
+  }
+  // @media screen and (max-width: 411px) {
+  //   .toolbar-title {
+  //     padding: 10px 0;
+  //     font-size: 14px;
+  //     font-weight: 600;
+  //     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  //   }
+  // }
+  
+  /* Main site body */
+  .wrapper,
+  .wrapper-2 {
+    //width: 940px;
+    //margin: 0 auto;
+    position: relative; /* Ensure absolute positioned child elements are relative to this*/
+  }
+  
+  /* Absolute positioned wrapper for the element you want to fix position */
+  .fixed-wrapper,
+  .fixed-wrapper-2 {
+    //width: 220px;
+    position: absolute;
+    //top: 0;
+    //left: -240px; /* Move this out to the left of the site body, leaving a 20px gutter */
+  }
+  
+  /* The element you want to fix the position of */
+  .fixed,
+  .fixed-2 {
+    //width: 220px;
+    position: fixed;
+    /* Do not set top / left! */
+    .fa-angle-down,
+    .fa-angle-up {
+      bottom: 0px;
+    }
+  }
+  
+  // .fixed {
+  //   bottom: 80px;
+  //   left: 80px;
+  // }
+  
+  // .fixed-2 {
+  //   right: 80px;
+  //   bottom: 80px;
+  // }
+  
+  @media screen and (max-width: 411px) {
+    .fixed {
+      bottom: 150px;
+      left: 65px;
+    }
+  
+    .fixed-2 {
+      right: 80px;
+      bottom: 150px;
+    }
+  }
+  
+  //Need to work on this
+  // @media screen and (max-width: 900px) and (min-width: 600px)  {
+  
+  // }
+  
+  @media screen and (max-width: 375px) {
+    .fixed {
+      bottom: 275px;
+      left: 65px;
+    }
+  
+    .fixed-2 {
+      right: 80px;
+      bottom: 275px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .fixed {
+      bottom: 60px;
+      left: 65px;
+    }
+  
+    .fixed-2 {
+      right: 80px;
+      bottom: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .fixed {
+      bottom: -20px;
+      left: 65px;
+    }
+  
+    .fixed-2 {
+      right: 80px;
+      bottom: -20px;
+    }
+  }
+  
+  .add-more-modal {
+    position: absolute;
+    right: 5px;
+  }
+  
+  .show-more-fa {
+    color: #0752af;
+    font-size: 20px;
+  }
+  
+  // Details
+  
+  .detail-popup {
+    height: 47px;
+    background: #fff;
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 25px;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 5px;
+    color: #0752af;
+    border: 2px solid #0752af;
+  }
+  
+  // @media screen and (max-width: 320px) {
+  //   .detail-popup {
+  //     font-size: 10px;
+  //     padding-top: 15px;
+  //   }
+  // }
+  
+  .detail-picture {
+    margin: 0px;
+    margin-top: 3px;
+    //text-align: center;
+    border-radius: 50%;
+    .fa {
+      padding: 12px;
+      font-size: 20px;
+      padding-right: 10px;
+      //background: #f3f3f3;
+      background: #fff;
+      color: #0752af;
+      border: 2px solid #0752af;
+      border-radius: 5px 15px 5px 5px;
+    }
+  }
+  
+  @media screen and(max-width: 414px) {
+    .modal-card-details {
+      margin-top: 20vh;
+    }
+    .modal-card-camera {
+      margin-top: 20px;
+    }
+  
+    .detail-picture .fa {
+      padding: 11.5px 20px;
+    }
+  
+    .custom-button {
+      width: 200px !important;
+    }
+  }
+  
+  @media screen and(max-width: 375px) {
+    .detail-picture .fa {
+      padding: 11.5px 16px;
+    }
+  }
+  
+  @media screen and(max-width: 360px) {
+    .modal-card-details {
+      margin-top: 20vh;
+    }
+    .modal-card-camera {
+      margin-top: 20px;
+    }
+    .detail-picture .fa {
+      padding: 11.5px 14px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .modal-card-details {
+      margin-top: 25vh;
+    }
+    .modal-card-camera {
+      margin-top: 20px;
+    }
+    .detail-picture .fa {
+      padding: 11.5px 10px;
+    }
+  }
+  
+  // @media screen and (max-width: 320px) {
+  //   .label-float {
+  //     padding-top: 13px;
+  
+  //     .fa {
+  //       position: absolute;
+  //       font-size: 20px;
+  //       width: 20px;
+  //       right: 20px;
+  //       bottom: 15px;
+  //       color: #0752af;
+  //     }
+  
+  //     input {
+  //       background-color: #fff;
+  //       border: 2px solid #fff;
+  //       border-radius: 5px;
+  //       outline: none;
+  //       width: 100%;
+  //       //min-width: 250px;
+  //       padding: 5px;
+  //       font-size: 12px;
+  //       transition: all 0.1s linear;
+  //       -webkit-transition: all 0.1s linear;
+  //       -moz-transition: all 0.1s linear;
+  //       -webkit-appearance: none;
+  //       border: 2px solid #0752af;
+  //       &:focus {
+  //         border: 2px solid #0752af;
+  //       }
+  //       &::placeholder {
+  //         color: transparent;
+  //       }
+  //     }
+  
+  //     label {
+  //       color: #0752af;
+  //       font-size: 10px !important;
+  //       //font-size: 15px;
+  //       pointer-events: none;
+  //       position: absolute;
+  //       top: calc(50% - 5px);
+  //       left: 10px;
+  //       transition: all 0.1s linear;
+  //       -webkit-transition: all 0.1s linear;
+  //       -moz-transition: all 0.1s linear;
+  //       background-color: #fff;
+  //       padding-top: 5px;
+  //       margin-left: 5px;
+  //       padding-left: 4px;
+  //       padding-right: 4px;
+  //       box-sizing: border-box;
+  //     }
+  
+  //     // ion-item.label-option.item.item-block.item-md.item-select {
+  //     //   border: 2px solid #3951b2 !important;
+  //     // }
+  
+  //     ion-datetime {
+  //       //padding: 18px 20px;
+  //       border: 2px solid #0752af;
+  //       border-radius: 5px;
+  //     }
+  
+  //     // ion-item.label-option.item.item-block.item-md.item-select {
+  //     //   background-color: transparent;
+  //     //   border: 2px solid #fff;
+  //     //   border-radius: 5px;
+  //     //   outline: none;
+  //     //   width: 100%;
+  //     //   min-width: 250px;
+  //     //   padding: 15px 20px;
+  //     //   font-size: 16px;
+  //     //   transition: all 0.1s linear;
+  //     //   -webkit-transition: all 0.1s linear;
+  //     //   -moz-transition: all 0.1s linear;
+  //     //   -webkit-appearance: none;
+  //     //   border: 2px solid #3951b2;
+  //     // }
+  //   }
+  
+  //   .label-float input:focus + label,
+  //   input:not(:placeholder-shown):not(.invalid) + label {
+  //     font-size: 13px;
+  //     top: 0;
+  //     color: #0752af;
+  //   }
+  //   .label-float input:not(:focus):not(:placeholder-shown):not(.invalid) + label {
+  //     font-size: 13px;
+  //     top: 0;
+  //     color: #0752af;
+  //   }
+  // }
+  
+  //Bills, Monthy Statement, Full report statement
+  
+  @media screen and (max-width: 375px) {
+    .bill .col,
+    .monthy-statement,
+    .full-report-statement {
+      font-size: 10px !important;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .bill .col,
+    .monthy-statement,
+    .full-report-statement {
+      font-size: 9px !important;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .bill .col,
+    .monthy-statement,
+    .full-report-statement {
+      font-size: 8px !important;
+    }
+  }
+  
+  .selected-details {
+    margin: 0;
+    margin-top: 20px;
+    background: #0752af;
+  
+    button {
+      background: #fff;
+      font-weight: 1000;
+      width: 90px;
+      color: #0752af;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .selected-details {
+      font-size: 10px;
+      button {
+        width: 80px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .selected-details {
+      font-size: 10px;
+      button {
+        width: 70px;
+      }
+    }
+  }
+  
+  .total-bill {
+    color: #e67235;
+    font-weight: 1000 !important;
+  }
+  
+  .paid-money {
+    color: green;
+    font-weight: 1000 !important;
+  }
+  
+  .due-money {
+    color: #e02b2b;
+    font-weight: 1000 !important;
+  }
+  
+  .radio-checked {
+    border-color: #0752af !important;
+  }
+  
+  .radio-inner {
+    background: #0752af !important;
+  }
+  
+  .item-radio-checked.item-md ion-label {
+    color: #0752af !important;
+  }
+  
+  .custom-card-header {
+    background: #0752af;
+    text-align: center;
+    color: #fff;
+    font-weight: 1000 !important;
+  }
+  
+  .white-section {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #ddd;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+
+
+  .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating], .item-input-has-value .label-md[floating], .input-has-value .label-md[floating] 
+  {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    background: #fff !important;
+    margin-bottom: -8px !important;
+    width: 130px !important;
+    margin-left: 13px !important;
+  }
+
+  .item-inner{
+    padding-right: 0px !important;
+  }
+
+  .zoom {
+    transition: transform .2s; /* Animation */
+    width: 100%;
+    // height: 200px;
+    margin: 0 auto;
+
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); 
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+  

@@ -1,0 +1,274 @@
+page-ledger {
+  .profile-picture {
+    margin: 0px;
+    //text-align: center;
+    border-radius: 50%;
+    padding-top: 20px;
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      background: #f3f3f3;
+      // background: #ffffff;
+      color: #287ac4;
+      border-radius: 5px 15px 5px 5px;
+    }
+
+    .edit-pencil {
+      position: absolute;
+      background: #287ac4;
+      padding: 10px;
+      right: 30px;
+      top: -10px;
+      color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .item {
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+  .item.item-block .item-inner {
+    border-radius: 5px;
+    //border: 1px solid #287ac4;
+  }
+
+  .state {
+    margin: 0px -5px;
+  }
+
+  .label-md {
+    padding-left: 8px;
+    color: rgba(128, 128, 128, 0.849);
+  }
+
+  .document {
+    .profile-picture {
+      text-align: center;
+
+      img {
+        background: #ffffff;
+
+        border-radius: 50%;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .details {
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
+    color: #818287;
+    font-size: 10px;
+    background: #ffffff;
+    border: 1px solid #287ac4;
+    border-bottom: none;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  .every-details {
+    text-align: center;
+    padding: 8px 10px;
+    margin: 0px 0px 20px;
+    color: #818287;
+    font-size: 14px;
+    background: #ffffff;
+    border: 1px solid #287ac4;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    .name {
+      padding-right: 37px;
+    }
+
+    .money {
+      padding-left: 37px;
+    }
+  }
+
+  .profile-details {
+    //color: #818287;
+    padding: 20px 10px;
+    font-size: 10px;
+    //margin: 20px 0px;
+    background: #fff;
+  }
+
+  .report-statement {
+    //margin: 20px -5px;
+    margin-top: 5px;
+  }
+
+  .full-report-statement {
+    color: #287ac4;
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 5px;
+    //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .monthy-statement {
+    color: #287ac4;
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px 5px;
+    //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .bill {
+    //margin: 20px 0px;
+    margin-top: 5px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    color: #818287;
+    font-size: 10px;
+
+    //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    .col {
+      text-align: center;
+
+      .ammount {
+        margin: 10px 0;
+        padding: 10px;
+        background: #ffffff;
+        border: 1px solid #287ac4;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .ammount.due {
+        color: #fff;
+        background: #e02b2b;
+        border: none;
+      }
+    }
+  }
+
+  .bill-details {
+    margin: 20px -15px 0px;
+    display: flex;
+    flex-direction: row;
+    color: #818287;
+
+    justify-content: space-between;
+
+    div {
+      font-size: 10px;
+      padding: 5px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #287ac4;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+  }
+
+  .bill-details-description {
+    height: 100px;
+    margin: 0px -15px;
+    border: 1px solid #287ac4;
+    border-radius: 5px;
+    background: #fff;
+
+    .fa {
+      color: #287ac4;
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .share-button {
+    width: 100px;
+    margin-top: 20px;
+    background: #0752af;
+  }
+
+  @media screen and (max-width: 320px) {
+    .share-button {
+      width: 80px;
+    }
+  }
+
+  .item.item-block.item-md.item-radio {
+    //background: #f3f3f3;
+  }
+
+  // ion-item.item.item-block.item-md.item-radio.item-radio-checked {
+  //   background: #0752af;
+  //   border-radius: 5px;
+  //   .fa {
+  //     color: #fff;
+  //   }
+
+  //   ion-label {
+  //     color: #fff !important;
+  //   }
+  // }
+
+  // .radio-icon {
+  //   display: none !important;
+  // }
+
+  // .item-radio-checked.item-md ion-label {
+  //   color: #0752af;
+  // }
+
+  .total-due-amount {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px 0px 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #c72323;
+    /* border: 1px solid #c72323; */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .mode-of-payment {
+    padding: 10px 20px;
+    color: #0752af !important;
+    border: 2px solid #0752af;
+    border-radius: 5px;
+  }
+
+  .white-section {
+    margin: auto -15px;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  ion-item.item.item-block.item-md.item-radio.item-radio-checked {
+    background: #0752af;
+    border-radius: 5px;
+    .fa {
+      color: #fff;
+    }
+
+    ion-label {
+      color: #fff !important;
+    }
+  }
+
+  .radio-icon {
+    display: none !important;
+  }
+
+  .item-radio-checked.item-md ion-label {
+    color: #0752af;
+  }
+
+  
+}
