@@ -16,7 +16,9 @@ export class DetailsModalPage {
   constructor(private viewController : ViewController,
     public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, private codes : CodesProvider) {
 
-      this.note = localStorage.getItem(this.codes.DETAILS) != undefined ? localStorage.getItem(this.codes.DETAILS) : '';
+      // this.navParams.get("note");
+
+      this.note = this.navParams.get("details");
 
   }
 

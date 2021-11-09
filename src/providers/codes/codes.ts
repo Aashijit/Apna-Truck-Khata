@@ -102,6 +102,9 @@ export class CodesProvider {
   public GET_IMAGES_BY_SRTH_ID=this.BASE_URL+"getimagebysrthid";
 
 
+  public GET_LAST_COMPLAINTS_ID=this.BASE_URL+"getlastcomplaintid";
+
+
   public GET_FUEL_PRICES="https://fuelprice-api-india.herokuapp.com/price/West-Bengal/KOLKATA";
 
 

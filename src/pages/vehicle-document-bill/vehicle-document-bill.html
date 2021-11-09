@@ -1,5 +1,11 @@
 <ion-content padding>
 
+  <p style="text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #042295;" *ngIf="document != ''">
+    {{document['document_name']}}
+  </p>
   <p style="float: right !important;" (click)="dismiss()">
     <ion-icon name="close" style="color: red !important;"></ion-icon>
   </p>

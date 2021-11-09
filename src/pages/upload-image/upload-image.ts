@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Camera, CameraOptions } from '@ionic-native/camera';
@@ -15,12 +16,20 @@ export class UploadImagePage {
 
   data : any = '';
   uploadImage : any = '';
+  imgtagcloud : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     private view : ViewController,private cm : Camera, private ldcontroller : LoadingController, 
-    private rest : RestProvider, private codes : CodesProvider) {
+    private rest : RestProvider, private codes : CodesProvider, private photoViewer : PhotoViewer) {
     
       this.data = this.navParams.get("request");
+
+      var dt = this.navParams.get('image');
+
+      if(dt != null) {
+        this.uploadImage = dt['image_url'];
+      }
+
   }
 
   ionViewDidLoad() {
@@ -33,6 +42,15 @@ export class UploadImagePage {
 
   gallery() {
     this.getImage("gallery");
+  }
+
+  viewImage() {
+      this.photoViewer.show(this.uploadImage,this.imgtagcloud, {share: true});
+  }
+  
+  deleteImage() {
+    this.uploadImage = '';
+    localStorage.removeItem("selectedimage");
   }
 
   getImage(img) {

@@ -16,7 +16,6 @@ export class ShopBillDetailsPage {
   @ViewChild('selectBill') selectbill : Select;
 
 
-
   vari : any = '';
   isSelectedBill : boolean = false;
   header_name : any = '';
@@ -117,7 +116,7 @@ export class ShopBillDetailsPage {
       "tags":JSON.stringify(data)
     }
    
-    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2});
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,"image":this.img});
 
     cameraModalPage.onDidDismiss(resp => {
       this.img = JSON.parse(localStorage.getItem("selectedimage"));
@@ -156,6 +155,7 @@ export class ShopBillDetailsPage {
       if(this.bills[i]['bill_id'] == bill_id){
         this.bill = this.bills[i];
         this.details = this.bill['bill_details'];
+        this.date_of_repair = this.bill['bill_date'];
 
         if(this.bill['image'] != undefined && this.bill['image'] != null){
           this.img = this.bill['image'];

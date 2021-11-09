@@ -1,3 +1,4 @@
+import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
 import { Component } from '@angular/core';
@@ -37,7 +38,7 @@ export class AddComplaintsPage {
   img : any = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private modalCtrl: ModalController,
-    private codes: CodesProvider, private rest: RestProvider) {
+    private codes: CodesProvider, private rest: RestProvider, private message : MessageProvider) {
 
     var update = this.navParams.get("update");
 
@@ -72,6 +73,13 @@ export class AddComplaintsPage {
 
       }
     });
+
+
+    if(this.complaints_id == '') {
+      this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID,{}).then(resp => {
+        this.complaints_id = Number(resp['data']) + 1;
+      })
+    }
 
     // this.getcomplaints();
   }
@@ -115,10 +123,59 @@ export class AddComplaintsPage {
   }
 
   openCameraPopup() {
-    let cameraModalPage = this.modalCtrl.create('AllImageKhataPage',{"isselect":true,"type":"all"});
+  
+
+    if(this.vehicle_id == '' || this.vehicle_id == null) {
+      this.message.displayToast("Please select vehicle");
+      return;
+    }
+
+
+    if(this.date_of_complaint == '' || this.date_of_complaint == null) {
+      this.message.displayToast("Please select date of complaint");
+      return;
+    }
+
+    if(this.date_of_reminder == '' || this.date_of_reminder == null) {
+      this.message.displayToast("Please select date of reminder");
+      return;
+    }
+
+    if(this.problem_id == '' || this.problem_id == null) {
+      this.message.displayToast("Please enter problem id");
+      return;
+    }
+
+    if(this.details == '' || this.details == null) {
+      this.message.displayToast("Please enter details");
+      return;
+    }
+
+    var data = {
+      "vehicle_id":this.vehicle_id,
+      "complaint_date":this.date_of_complaint,
+      "reminder_date":this.date_of_reminder,
+      "details":this.details
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"",
+      "worker_id":0,
+      "document_type":"complaintimage",
+      "type":"complaints",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
     });
     
     cameraModalPage.present();
@@ -135,10 +192,13 @@ export class AddComplaintsPage {
         this.problems = JSON.parse(localStorage.getItem("problem_id"));
 
         var str = "";
+        var str2 = "";
         for (let i = 0; i < this.problems.length; i++) {
           str += this.problems[i]['problem_id'] + " ";
+          str2 += (this.problems[i]['problem_name'] + "-" + this.problems[i]['vehicle_part_name']) + " ";
         }
         this.problem_id = str;
+        this.problem_id = str2;
       }
     });
 
@@ -165,7 +225,9 @@ export class AddComplaintsPage {
     this.details = comp['details'];
     this.km_reading = comp['km_reading'];
     this.status = comp['status'];
-
+    for(let i=0;i<this.complaints.length;i++)
+      this.complaints[i]['selected'] = 'false';
+    comp['selected'] = 'true';
     this.isupdate = true;
   }
 
@@ -235,6 +297,15 @@ export class AddComplaintsPage {
 
     this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(resp => {
       if (resp['_ReturnCode'] == '0') {
+        data['complaints_id'] = this.complaints_id;
+        data['selected'] = false;
+        this.problem_id = '';
+        this.date_of_complaint = '';
+        this.date_of_reminder = '';
+        this.details = '';
+        this.km_reading = '';
+
+        this.complaints_id ++;
         this.complaints.push(data);
         for (let i = 0; i < this.complaints.length; i++) {
           if (this.complaints[i]['problems'] != undefined) {

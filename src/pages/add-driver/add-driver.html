@@ -78,17 +78,17 @@
       <br/>
       <br/> -->
       <!-- (click)="viewContact()" -->
-     
+      <p style="margin-left: 6px;font-size: 14px;color: #0752af;">{{name}}</p>
       <div class="label-float" >
         <input type="text" [(ngModel)]="phone_number" (click)="viewContact()"  placeholder=" " />
         <label>NAME & PHONE</label>
         <i class="fa fa-address-book" aria-hidden="true"></i>
 
       </div>
-      <p style="margin-left: 6px;font-size: 14px;color: #0752af;">{{name}}</p>
+      
 
     <div class="label-float" *ngIf="typeOfPerson  == 'driver'" >
-      <input type="tel" [(ngModel)]="salary"  placeholder=" " />
+      <input type="tel" [(ngModel)]="salary" (keyup.enter)="openCalendarPopup()"  placeholder=" " />
       <label>SALARY (MONTHLY) ₹</label>
       <i class="fa fa-money" aria-hidden="true"></i>
     </div>  

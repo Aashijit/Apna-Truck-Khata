@@ -11,6 +11,7 @@ import { IonicPage, NavController, NavParams, AlertController, ModalController }
 })
 export class DocumentPage {
 
+  isShown : boolean = false;
   document : any = '';
   total : number = 0.00;
   type : any = '';
@@ -48,6 +49,18 @@ export class DocumentPage {
           this.filterpayments = this.payments;
       } 
     });
+  }
+
+  showMore() {
+    if(this.isShown) {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+    } else {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+
+    }
+    this.isShown = !this.isShown;
   }
 
   openLedgePage(){

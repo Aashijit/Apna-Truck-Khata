@@ -1,4 +1,4 @@
-#Sat Nov 06 21:46:18 IST 2021
-base.0=/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Tue Nov 09 21:05:45 IST 2021
+base.0=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

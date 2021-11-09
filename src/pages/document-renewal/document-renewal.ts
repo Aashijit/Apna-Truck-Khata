@@ -109,12 +109,23 @@ export class DocumentRenewalPage {
   }
 
   addDocumentBills(br) {
-    let mdl = this.modalCtrl.create('VehicleDocumentBillPage',{'action':br,'worker_type':this.worker_type,'worker_id':this.worker_id,'details':this.details});
+    let mdl = this.modalCtrl.create('VehicleDocumentBillPage',{'action':br,'worker_type':this.worker_type,'worker_id':this.worker_id,'details':this.details,"document":this.document});
     mdl.present();
 
     mdl.onDidDismiss(resp => {
       if(localStorage.getItem("vehicle_document_bills") != undefined)
         this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
+        this.bills = [];
+        for(let i=0;i<this.details.length;i++) {
+          var bill= {
+            "bill_id":this.bill_id,
+            "vehicle_id":this.details[i]['vehicle_id'],
+            "expiry_date":this.details[i]['expiry_date'],
+            "total_bill":this.details[i]['bill_amount']
+          };
+          this.bills.push(bill);
+        }
+
 
         this.changeCost({});
     });
@@ -202,6 +213,7 @@ export class DocumentRenewalPage {
       this.bill_date = '';
       this.km_reading = '';
       this.bill_details= '';
+      this.total_bill = 0;
       if(resp['_ReturnCode'] == '0'){
         if(this.img != null)
             resp['data']['image_content'] = this.img['image_content'];

@@ -56,6 +56,45 @@
       <ion-col col-6>
       
       </ion-col>
+
+      <ion-col col-12 (click)="showMore()" class="text-right">
+        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>
+      </ion-col>
+
+      
+        <!-- <ion-col col-6 *ngIf="isShown">
+          SALARY: <br>  <span  class="text-color-primary">{{insurance['salary']}}</span>
+        </ion-col>
+        <ion-col col-6 *ngIf="isShown"> 
+          REFERENCE: <br>  <span class="text-color-primary">{{insurance['reference_person']}}</span>
+        </ion-col> -->
+  
+        <ion-col col-12 *ngIf="isShown">
+          <ion-row style="padding: 15px;">
+            <ion-col col-7 class="pt-5">
+              DOCUMENT NUMBER: <br>
+              <span class="text-color-primary" *ngIf="insurance['aadhar_card_number'] != null">AADHAR - {{insurance['aadhar_card_number']}}</span>
+              <span class="text-color-primary" *ngIf="insurance['pan_card_number'] != null">PAN - {{insurance['pan_card_number']}}</span>
+        
+            </ion-col>
+            <ion-col col-5 >
+              <img src="../../assets/imgs/logo.png" alt="" width="100px">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+
+        <ion-col col-12 *ngIf="isShown">
+          <ion-row style="padding: 15px;">
+            <ion-col col-7 class="pt-5">
+              BANK DETAILS: <br>
+              <span class="text-color-primary">{{insurance['account_number']}}</span>
+              
+            </ion-col>
+            <ion-col col-5 >
+              <img src="../../assets/imgs/logo.png" alt="" width="100px">
+            </ion-col>
+          </ion-row>
+        </ion-col>
       <!-- <ion-col col-6>
         <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="update()">Update</button>
         <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="presentConfirmDelete()">Delete</button>

@@ -26,8 +26,8 @@
       <div class="scrollmenu" >
        
         <!-- <a href="#home">PERSON NAME</a> -->
-        <a href="#home">SHOP NAME</a>
         <a href="#news">BILL NUMBER</a>
+        <a href="#home">SHOP NAME</a>
         <a href="#contact">VEHICLE NUMBER</a>
         <a href="#about">DATE OF BILL</a>
         <a href="#about">BILL</a>
@@ -36,8 +36,8 @@
         
         <div [ngClass]="bl['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bl of bills">
         <div (click)="selectThis(bl)">
-          <p>{{bl['person_shop_name']}}</p>
           <p>{{bl['bill_id']}}</p>
+          <p>{{bl['person_shop_name']}}</p>
           <p>{{bl['vehicle_id']}}</p>
           <p>{{bl['bill_date']}}</p>
           <p>{{bl['total_bill']}}</p>

@@ -39,8 +39,7 @@ page-complaints-khata {
   .custom-button-u{
     width: 80px !important;
     margin-top: -16px !important;
-    height: 21px !important;
-    margin-left: 16px !important;
+    height: 21px !important;  
     background: #a80852 !important;
     font-size: 9px !important;
   }
@@ -112,6 +111,14 @@ page-complaints-khata {
 
   .problem-button {
     color: red;
+  }
+
+  .prob {
+    color: red;
+  }
+
+  .sol {
+    color: green;  
   }
 
   .ok-button {

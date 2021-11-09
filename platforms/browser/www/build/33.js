@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 879:
+/***/ 880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InitPageModule", function() { return InitPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__init__ = __webpack_require__(953);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__init__ = __webpack_require__(954);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var InitPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 953:
+/***/ 954:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121,7 +121,7 @@ var InitPage = /** @class */ (function () {
     };
     InitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-init',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/init/init.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-3 class="person-picture">\n        <!-- <img width="50px" style="border-radius: 50%; height: 50px;" src="https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70" alt=""> -->\n        <!-- <img width="50px" style="border-radius: 50%" src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"> -->\n      </ion-col>\n      <ion-col col-6 class="person-name">\n        <ion-title>Apna Truck Khata</ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <!-- <img src="../../assets/saarthi-icon/png/youtube.png" alt="" > -->\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n  <ion-card>\n    <ion-card-header>\n      GET STARTED\n    </ion-card-header>\n\n    <ion-card-content>\n\n  <div class="label-float" >\n    <input type="tel" maxlength="10"  placeholder=" " [(ngModel)]="phoneNumber" />\n    <label>ENTER MOBILE NUMBER</label>\n    <i class="fa fa-phone-square" aria-hidden="true"></i>\n  </div>\n\n  <div class="label-float" *ngIf=\'showpassword\'>\n    <input type="text"  placeholder=" " [(ngModel)]="password" />\n    <label>CREATE PASSWORD</label>\n    <i class="fa fa-key" aria-hidden="true"></i>\n  </div>\n\n\n  <div class="label-float" *ngIf=\'enterpassword\'>\n    <input type="password"  placeholder=" " [(ngModel)]="password" />\n    <label>ENTER PASSWORD</label>\n    <i class="fa fa-key" aria-hidden="true"></i>\n  </div>\n\n\n  <p style="color: red;">\n    {{message}}\n  </p>\n\n\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'!showpassword && !enterpassword\'>\n    <button ion-button round (click)="getregistrationinfo()">\n      Next\n    </button>\n  </p>\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'showpassword\'>\n    <button ion-button round (click)="createpassword()">\n      Register\n    </button>\n  </p>\n\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'enterpassword\'>\n    <button ion-button round (click)="login()">\n      Login\n    </button>\n  </p>\n\n</ion-card-content>\n\n</ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/init/init.html"*/,
+            selector: 'page-init',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/init/init.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-3 class="person-picture">\n        <!-- <img width="50px" style="border-radius: 50%; height: 50px;" src="https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70" alt=""> -->\n        <!-- <img width="50px" style="border-radius: 50%" src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"> -->\n      </ion-col>\n      <ion-col col-6 class="person-name">\n        <ion-title>Apna Truck Khata</ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <!-- <img src="../../assets/saarthi-icon/png/youtube.png" alt="" > -->\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n  <ion-card>\n    <ion-card-header>\n      GET STARTED\n    </ion-card-header>\n\n    <ion-card-content>\n\n  <div class="label-float" >\n    <input type="tel" maxlength="10"  placeholder=" " [(ngModel)]="phoneNumber" />\n    <label>ENTER MOBILE NUMBER</label>\n    <i class="fa fa-phone-square" aria-hidden="true"></i>\n  </div>\n\n  <div class="label-float" *ngIf=\'showpassword\'>\n    <input type="text"  placeholder=" " [(ngModel)]="password" />\n    <label>CREATE PASSWORD</label>\n    <i class="fa fa-key" aria-hidden="true"></i>\n  </div>\n\n\n  <div class="label-float" *ngIf=\'enterpassword\'>\n    <input type="password"  placeholder=" " [(ngModel)]="password" />\n    <label>ENTER PASSWORD</label>\n    <i class="fa fa-key" aria-hidden="true"></i>\n  </div>\n\n\n  <p style="color: red;">\n    {{message}}\n  </p>\n\n\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'!showpassword && !enterpassword\'>\n    <button ion-button round (click)="getregistrationinfo()">\n      Next\n    </button>\n  </p>\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'showpassword\'>\n    <button ion-button round (click)="createpassword()">\n      Register\n    </button>\n  </p>\n\n\n  <p style="text-align: center;margin-top: 20px !important;" *ngIf=\'enterpassword\'>\n    <button ion-button round (click)="login()">\n      Login\n    </button>\n  </p>\n\n</ion-card-content>\n\n</ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/init/init.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
             __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])

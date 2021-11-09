@@ -6,7 +6,7 @@
     </button>
   </p>
 
-<p style="text-align: center !important;margin-top: 50%;">
+<p style="text-align: center !important;margin-top: 20%;">
   <button ion-button round (click)="camera()" style="width: 50%;height: 100px;font-size: 5rem;">
     <ion-icon name="camera"></ion-icon>
   </button>
@@ -16,5 +16,18 @@
     <ion-icon name="image"></ion-icon>
   </button>
 </p>
+
+<p style="text-align: center !important;">
+  <button ion-button round [disabled]="uploadImage == ''"  (click)="viewImage()" style="width: 50%;height: 100px;font-size: 5rem;">
+    <ion-icon name="eye"></ion-icon>
+  </button>
+</p>
+
+<p style="text-align: center !important;">
+  <button ion-button round  [disabled]="uploadImage == ''" (click)="deleteImage()" style="width: 50%;height: 100px;font-size: 5rem;">
+    <ion-icon name="trash"></ion-icon>
+  </button>
+</p>
+
 
 </ion-content>

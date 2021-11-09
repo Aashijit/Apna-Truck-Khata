@@ -93,11 +93,11 @@
     <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
 
         
-    <ion-item *ngIf="!isSelectedBill" class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
-      <ion-label>SELECT DRIVER</ion-label>
+    <ion-item *ngIf="!isSelectedBill" class="label-select">
+      <ion-label floating>SELECT DRIVER</ion-label>
       <!--  -->
-      <ion-select [(ngModel)]="worker_id" (ionChange)="change($event)">
-        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}}</ion-option>
+      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important" #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)" >
+        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} -  {{dr['vehicle']['vehicle_number']}}</ion-option>
       </ion-select>
     </ion-item>
 
@@ -116,6 +116,7 @@
         <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>
       </ion-col>
     </ion-row>
+    <!-- (click)="" -->
    
 
 
@@ -180,7 +181,7 @@
     
           </ion-col>    
           <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
-            <img [src]="img['image_content']" style="opacity: 0.3 !important;"/>
+            <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
            <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
     
           </ion-col>

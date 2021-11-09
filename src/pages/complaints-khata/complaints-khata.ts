@@ -1,7 +1,7 @@
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -30,7 +30,8 @@ export class ComplaintsKhataPage {
   displaysearchitems : any = [];
   searchTerm : any = '';
 
-  constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, private codes : CodesProvider) {
+  constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, 
+    private codes : CodesProvider, private mdl : ModalController) {
 
   }
 
@@ -238,11 +239,14 @@ export class ComplaintsKhataPage {
       if(resp['_ReturnCode'] == '0'){
         this.complaints = resp['data'];
 
+        console.error(JSON.stringify(this.complaints));
+
         for (let i = 0; i < this.complaints.length; i++) {
           if (this.complaints[i]['problems'] != undefined) {
             var str = "";
+            // console.debug("PROBLEMS : "+JSON.stringify(this.complaints[i]['problems']));
             for (let j = 0; j < this.complaints[i]['problems'].length; j++) {
-              str += this.complaints[i]['problems'][j]['problem_id'] + " ";
+              str += ( this.complaints[i]['problems'][j]['details']['problem_name'] + " - " + this.complaints[i]['problems'][j]['details']['vehicle_part_name'] + " - " + this.complaints[i]['problems'][j]['details']['vehicle_part_id']  ) + " ";
             }
             this.complaints[i]['problem_id'] = str;
           }
@@ -269,6 +273,11 @@ export class ComplaintsKhataPage {
       }
     });
 
+  }
+
+  viewComplaint() {
+    let mdl = this.mdl.create('ViewTransactionPage',{'complaint':this.complaint});
+    mdl.present();
   }
 
 

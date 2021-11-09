@@ -3,24 +3,21 @@ import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
 import { ReasonModalPage } from './../reason-modal/reason-modal';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Component, ViewChild, ViewChildren } from '@angular/core';
+import { IonicPage, NavController, NavParams, ViewController, Select } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { DetailsModalPage } from '../details-modal/details-modal';
 import { CameraModalPage } from '../camera-modal/camera-modal';
 
-/**
- * Generated class for the AddDriverExpensesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
   selector: 'page-add-driver-expenses',
   templateUrl: 'add-driver-expenses.html',
 })
+
+
 export class AddDriverExpensesPage {
 
   vari : any = '';
@@ -141,6 +138,10 @@ export class AddDriverExpensesPage {
       }
   }
 
+  openDriverDialog() {
+    // this.selectRef.open();
+  }   
+
   openReasonDialog(){
 
     let reasonModal = this.modalCtrl.create('ReasonModalPage');
@@ -165,10 +166,48 @@ export class AddDriverExpensesPage {
   }
 
   openCameraPopup() {
-    let cameraModalPage = this.modalCtrl.create('AllImageKhataPage',{"isselect":true,"type":"drbills"});
+
+    if(this.vehicle_id == '' || this.vehicle_id == null) {
+      this.message.displayToast("Please select vehicle");
+      return;
+    }
+
+    if(this.bill_date == '' || this.bill_date == null) {
+      this.message.displayToast("Please enter bill date");
+      return;
+    }
+
+    if(this.bill_details == '' || this.bill_details == null) {
+      this.message.displayToast("Please enter bill details");
+      return;
+    }
+
+    var data = {
+      "person_shop_name":this.person_shop_name,
+      "vehicle_id":this.vehicle_id,
+      "bill_date":this.bill_date,
+      "worker_type":'shop',
+      "bill_details":this.bill_details
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"driver",
+      "worker_id":this.worker_id,
+      "document_type":"driverbill",
+      "type":"bills",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
     });
     
     cameraModalPage.present();

@@ -50,7 +50,7 @@
         <a href="#about">KM READING</a>
 
         <div *ngFor="let cm of complaints">
-        <div [ngClass]="cm['status']=='solved' ? 'scrollmenu-list-selected green' : 'scrollmenu-list red'" id="1" (click)="selectThis(cm)" >
+        <div [ngClass]="cm['selected']=='true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThis(cm)" >
           <p>{{cm['complaints_id']}} </p>
           <p>{{cm['vehicle_id']}}</p>
           <p>{{cm['problem_id']}}</p>
@@ -79,7 +79,10 @@
       </ion-select>
     </ion-item> -->
 
-    <ion-item *ngIf="!isSelectedBill" class="label-select">
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_id}}</ion-badge>
+
+
+    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">
       <ion-label floating>VEHICLE NUMBER</ion-label>
 
       <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id" (ionChange)="change($event)">
@@ -149,7 +152,7 @@
             <i class="fa fa-camera" aria-hidden="true"></i>
           </ion-col>    
           <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
-            <img [src]="img['image_content']" style="opacity: 0.9 !important;"/>
+            <img [src]="img['image_url']" style="opacity: 0.9 !important;"/>
            <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
     
           </ion-col>

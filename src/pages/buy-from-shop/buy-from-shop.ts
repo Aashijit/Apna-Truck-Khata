@@ -168,7 +168,7 @@ export class BuyFromShopPage {
   }
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{"details":this.bill_details});
 
     detailsModalPage.onDidDismiss(data=> {
       this.bill_details = localStorage.getItem(this.codes.DETAILS);
@@ -217,11 +217,14 @@ export class BuyFromShopPage {
       "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
       "tags":JSON.stringify(data)
     }
-   
-    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2});
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
     });
     
     cameraModalPage.present();

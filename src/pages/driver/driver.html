@@ -1,9 +1,3 @@
-<!--
-  Generated template for the DriverPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <!-- Driver -->
 <ion-header>
   <ion-navbar>
@@ -84,8 +78,9 @@
           <ion-row style="padding: 15px;">
             <ion-col col-7 class="pt-5">
               DOCUMENT NUMBER: <br>
-              <span class="text-color-primary">AADHAR - {{driver['aadhar_card_number']}}</span>
-              
+              <span class="text-color-primary" *ngIf="driver['aadhar_card_number'] != null">AADHAR - {{driver['aadhar_card_number']}}</span>
+              <span class="text-color-primary" *ngIf="driver['pan_card_number'] != null">PAN - {{driver['pan_card_number']}}</span>
+                      
             </ion-col>
             <ion-col col-5 >
               <img src="../../assets/imgs/logo.png" alt="" width="100px">

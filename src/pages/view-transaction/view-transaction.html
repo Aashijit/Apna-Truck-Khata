@@ -1,0 +1,99 @@
+<ion-content padding style="background: rgba(0,0,0,0.6);">
+
+  <p style="text-align: right !important;">
+    <button ion-button clear (click)="close()" style="font-size: 2rem; color: red;">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </p>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Complaint Id
+          </ion-col>
+          <ion-col col-6>
+            {{comp['complaints_id']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Date of Complaint
+          </ion-col>
+          <ion-col col-6>
+            {{comp['date_of_complaint']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Date of Reminder
+          </ion-col>
+          <ion-col col-6>
+            {{comp['date_of_reminder']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Details
+          </ion-col>
+          <ion-col col-6>
+            {{comp['details']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            KM Reading
+          </ion-col>
+          <ion-col col-6>
+            {{comp['km_reading']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Status
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge *ngIf="comp['status'] == ''">Unsolved</ion-badge>
+            <ion-badge *ngIf="comp['status'] != ''">{{comp['status']}}</ion-badge>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Problems
+          </ion-col>
+          <ion-col col-6>
+            <!-- <ion-badge>{{comp['status']}}</ion-badge> -->
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let prb of comp['problems']">
+          <ion-col col-6 class="hd">
+            Problem Name
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="secondary">{{prb['details']['problem_name']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Part Name
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="dark">{{prb['details']['vehicle_part_name']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Part Id
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="light">{{prb['details']['vehicle_part_id']}}</ion-badge>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

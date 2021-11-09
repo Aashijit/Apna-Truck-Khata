@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 864:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DecisionModalPageModule", function() { return DecisionModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__decision_modal__ = __webpack_require__(939);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__decision_modal__ = __webpack_require__(940);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var DecisionModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 939:
+/***/ 940:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94,7 +94,7 @@ var DecisionModalPage = /** @class */ (function () {
     };
     DecisionModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-decision-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/decision-modal/decision-modal.html"*/'<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      \n      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">\n\n        <ion-list-header class="">\n          SELECT THE OPTION\n        </ion-list-header>\n      \n        <ion-item>\n          <ion-label>CHANGE</ion-label>\n          <ion-radio value="change"></ion-radio>\n        </ion-item>\n      \n        <ion-item *ngIf="showAllot">\n          <ion-label>ALLOT</ion-label>\n          <ion-radio value="allot"></ion-radio>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label>REMOVE</ion-label>\n          <ion-radio value="remove"></ion-radio>\n        </ion-item>\n      \n      </ion-list>\n\n    </ion-card-content>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-6 class="text-center">\n        <button ion-button round class="custom-button" (click)="exitModal()">\n          EXIT\n        </button>\n      </ion-col>\n    </ion-row>\n   \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/decision-modal/decision-modal.html"*/,
+            selector: 'page-decision-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/'<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      \n      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">\n\n        <ion-list-header class="">\n          SELECT THE OPTION\n        </ion-list-header>\n      \n        <ion-item>\n          <ion-label>CHANGE</ion-label>\n          <ion-radio value="change"></ion-radio>\n        </ion-item>\n      \n        <ion-item *ngIf="showAllot">\n          <ion-label>ALLOT</ion-label>\n          <ion-radio value="allot"></ion-radio>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label>REMOVE</ion-label>\n          <ion-radio value="remove"></ion-radio>\n        </ion-item>\n      \n      </ion-list>\n\n    </ion-card-content>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-6 class="text-center">\n        <button ion-button round class="custom-button" (click)="exitModal()">\n          EXIT\n        </button>\n      </ion-col>\n    </ion-row>\n   \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])

@@ -29,6 +29,11 @@ export class CalendarModalPage {
     console.log('ionViewDidLoad CalendarModalPage');
   }
 
+  change(date){
+    localStorage.setItem(this.codes.DATE,date);
+    this.view.dismiss();
+  }
+
   select() {
     localStorage.setItem(this.codes.DATE,this.selectedDate);
     this.view.dismiss();

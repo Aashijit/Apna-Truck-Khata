@@ -20,7 +20,7 @@ export class LedgerPage {
   date_of_payment : any = '';
   mode_of_payment : any = '';
   details : any = '' ;
-  payment_amount : any = 0;
+  payment_amount : any = '';
   payment_image_1_id : any = '0';
   payment_image_2_id : any = '0';
   payment_date : any = '';
@@ -30,6 +30,7 @@ export class LedgerPage {
   bills : any = [];
   filterbills : any = [];
 
+  money_to_pay : any = 0.00;
   totalBill : Number = 0.00;
   paidMoney : Number = 0.00;
   dueMoney : Number = 0.00;
@@ -64,7 +65,7 @@ export class LedgerPage {
   }
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{'details':this.details});
 
     detailsModalPage.onDidDismiss(data=> {
       this.details = localStorage.getItem(this.codes.DETAILS);
@@ -127,7 +128,7 @@ export class LedgerPage {
 
   change(billIds){
     if(this.payment_amount != '')
-    return;
+      return;
 
     this.totalBill = 0.00;
     for(let i=0;i<billIds.length;i++){
@@ -135,6 +136,7 @@ export class LedgerPage {
     }
 
       this.payment_amount = this.totalBill;
+      this.money_to_pay = this.payment_amount;
   }
 
   getBillMoney(billId) : Number{

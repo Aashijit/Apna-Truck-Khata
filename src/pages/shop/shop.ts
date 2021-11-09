@@ -11,6 +11,7 @@ import { IonicPage, NavController, NavParams, AlertController, Modal, ModalContr
 })
 export class ShopPage {
 
+  isShown : boolean = false;
   shop : any = '';
   due : Number = 0.00;
   payments : any = [];
@@ -45,6 +46,19 @@ export class ShopPage {
       } 
     });
   }
+
+  showMore() {
+    if(this.isShown) {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+    } else {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+
+    }
+    this.isShown = !this.isShown;
+  }
+
 
 
 

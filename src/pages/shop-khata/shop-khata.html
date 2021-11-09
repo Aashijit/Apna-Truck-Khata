@@ -62,8 +62,8 @@
 
     <div class="scroll-grid" >
       <div class="scrollmenu">
-        <a href="#home">SHOP NAME</a>
         <a href="#news">BILL NUMBER</a>
+        <a href="#home">SHOP NAME</a>
         <a href="#contact">VEHICLE NUMBER</a>
         <a href="#about">PURCHASE DATE</a>
         <a href="#support">BILL</a>
@@ -72,8 +72,8 @@
         
         <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
           <div>
-          <p>{{bill['person_shop_name']}}</p>
           <p>{{bill['bill_id']}}</p>
+          <p>{{bill['person_shop_name']}}</p>
           <p>{{bill['vehicle_number']}}</p>
           <p>{{bill['bill_date']}}</p>
           <p>{{bill['total_bill']}}</p>

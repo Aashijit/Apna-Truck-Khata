@@ -7,13 +7,18 @@ page-vehicle-khata {
       border-radius: 10px;
       color: #f3f3f3;
       font-weight: 1000;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .content-heading {
     h2 {
       font-size: 2rem !important;
     }
+  }
+
+  .fixed-div {
+    position: sticky;
+    bottom: 0px;
   }
 
   .vehicle-khata {

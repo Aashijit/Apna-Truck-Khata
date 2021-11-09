@@ -1,6 +1,6 @@
 webpackJsonp([55],{
 
-/***/ 860:
+/***/ 858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calendar_modal__ = __webpack_require__(935);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calendar_modal__ = __webpack_require__(934);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var CalendarModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 935:
+/***/ 934:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82,6 +82,10 @@ var CalendarModalPage = /** @class */ (function () {
     CalendarModalPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CalendarModalPage');
     };
+    CalendarModalPage.prototype.change = function (date) {
+        localStorage.setItem(this.codes.DATE, date);
+        this.view.dismiss();
+    };
     CalendarModalPage.prototype.select = function () {
         localStorage.setItem(this.codes.DATE, this.selectedDate);
         this.view.dismiss();
@@ -91,7 +95,7 @@ var CalendarModalPage = /** @class */ (function () {
     };
     CalendarModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-calendar-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/calendar-modal/calendar-modal.html"*/'<ion-content padding style="background-color: rgba(0,0,0,0.8);">\n\n  <ion-icon name="close" (click)="dismiss()" style="float: right;font-size: 3rem !important;color: red;padding: 20px"></ion-icon>\n\n  <ion-card>\n    <ion-calendar [(ngModel)]="selectedDate" [options]="optionsMulti" type="string" [format]="\'YYYY-MM-DD\'">\n    </ion-calendar>\n\n    <button ion-button clear (click)="select()">\n      Select\n    </button>\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/calendar-modal/calendar-modal.html"*/,
+            selector: 'page-calendar-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/calendar-modal/calendar-modal.html"*/'<ion-content padding style="background-color: rgba(0,0,0,0.8);">\n\n  <ion-icon name="close" (click)="dismiss()" style="float: right;font-size: 3rem !important;color: red;padding: 20px"></ion-icon>\n\n  <ion-card>\n    <ion-calendar [(ngModel)]="selectedDate" [options]="optionsMulti" type="string" [format]="\'YYYY-MM-DD\'" (onChange)="change($event)">\n    </ion-calendar>\n\n    <!-- <button ion-button clear (click)="select()">\n      Select\n    </button> -->\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/calendar-modal/calendar-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ViewController"]])
     ], CalendarModalPage);

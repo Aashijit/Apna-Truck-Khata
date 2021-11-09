@@ -1,6 +1,6 @@
 webpackJsonp([36],{
 
-/***/ 876:
+/***/ 878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExchangeModalPageModule", function() { return ExchangeModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exchange_modal__ = __webpack_require__(950);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exchange_modal__ = __webpack_require__(952);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var ExchangeModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 950:
+/***/ 952:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,7 +157,7 @@ var ExchangeModalPage = /** @class */ (function () {
     };
     ExchangeModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-exchange-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/exchange-modal/exchange-modal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>EXCHANGE PART</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div class="container white-section">\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="exchange_date" (click)="openCalendarPopup()"/>\n      <label>EXHCANGE DATE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n  \n    \n    <ion-row class="exchange-details" style="margin: 0; padding-top: 20px;">\n      <ion-col col-6 class="text-center">\n        VEHICLE NUMBER\n      </ion-col>\n      <ion-col col-6 class="text-center text-color-primary ">\n        {{vehicle[\'vehicle_number\']}}\n      </ion-col>\n    </ion-row>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name"  (click)="openPartsWorkModal(\'1\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <div class="text-center">\n      <i class="fa fa-exchange" aria-hidden="true" style="transform: rotate(90deg);"></i>\n    </div>\n\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">\n      <ion-label>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="exchange_vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name_2" (click)="openPartsWorkModal(\'2\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button" (click)="saveExchangeModel()"> SAVE</button>\n\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round (click)="exitModal()" class="custom-button">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/src/pages/exchange-modal/exchange-modal.html"*/,
+            selector: 'page-exchange-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>EXCHANGE PART</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div class="container white-section">\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="exchange_date" (click)="openCalendarPopup()"/>\n      <label>EXHCANGE DATE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n  \n    \n    <ion-row class="exchange-details" style="margin: 0; padding-top: 20px;">\n      <ion-col col-6 class="text-center">\n        VEHICLE NUMBER\n      </ion-col>\n      <ion-col col-6 class="text-center text-color-primary ">\n        {{vehicle[\'vehicle_number\']}}\n      </ion-col>\n    </ion-row>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name"  (click)="openPartsWorkModal(\'1\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <div class="text-center">\n      <i class="fa fa-exchange" aria-hidden="true" style="transform: rotate(90deg);"></i>\n    </div>\n\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">\n      <ion-label>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="exchange_vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name_2" (click)="openPartsWorkModal(\'2\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button" (click)="saveExchangeModel()"> SAVE</button>\n\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round (click)="exitModal()" class="custom-button">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"],
             __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],

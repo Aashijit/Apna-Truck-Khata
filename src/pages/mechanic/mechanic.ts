@@ -11,6 +11,7 @@ import { IonicPage, NavController, NavParams, AlertController, ModalController }
 })
 export class MechanicPage {
 
+  isShown : boolean = false;
   mechanic : any = '';
   due : number = 0.00;
   payments : any = [];
@@ -44,6 +45,18 @@ export class MechanicPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MechanicPage');
+  }
+
+  showMore() {
+    if(this.isShown) {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+    } else {
+      document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+      document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+
+    }
+    this.isShown = !this.isShown;
   }
 
       
