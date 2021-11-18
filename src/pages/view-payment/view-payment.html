@@ -1,0 +1,110 @@
+<ion-content padding style="background: rgba(0,0,0,0.6);">
+
+  <p style="text-align: right !important;">
+    <button ion-button clear (click)="close()" style="font-size: 2rem; color: red;">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </p>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Payment Id
+          </ion-col>
+          <ion-col col-6>
+            {{payment['payment_id']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Date of payment
+          </ion-col>
+          <ion-col col-6>
+            {{payment['date_of_payment']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Mode of payment
+          </ion-col>
+          <ion-col col-6>
+            {{payment['mode_of_payment']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Payment amount
+          </ion-col>
+          <ion-col col-6>
+            {{payment['payment_amount']}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Details
+          </ion-col>
+          <ion-col col-6>
+            {{payment['details']}}
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 class="hd">
+            Bills
+          </ion-col>
+          <ion-col col-6>
+            <!-- <ion-badge>{{payment['status']}}</ion-badge> -->
+          </ion-col>
+        </ion-row>
+
+        <p *ngIf="payment['bills'] != undefined">
+        <ion-row *ngFor="let prb of payment['bills']">
+          <ion-col col-6 class="hd">
+            Bill Id
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="secondary">{{prb['bill_id']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Person/Shop Name
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="dark">{{prb['person_shop_name']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Bill Date
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="primary">{{prb['bill_date']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Bill Amount
+          </ion-col>
+          <ion-col col-6>
+            <ion-badge color="light">{{prb['total_bill']}}</ion-badge>
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Bill Details
+          </ion-col>
+          <ion-col col-6>
+            {{prb['bill_details']}}
+          </ion-col>
+          <ion-col col-6 class="hd">
+            Vehicle Number
+          </ion-col>
+          <ion-col col-6>
+            {{prb['vehicle_number']}}
+          </ion-col>
+        </ion-row>
+      </p>
+        
+      </ion-grid>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

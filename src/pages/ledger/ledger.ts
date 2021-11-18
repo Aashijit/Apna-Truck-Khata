@@ -35,11 +35,22 @@ export class LedgerPage {
   paidMoney : Number = 0.00;
   dueMoney : Number = 0.00;
 
+  payment : any = '';
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     private modalCtrl : ModalController,private codes : CodesProvider, private rest : RestProvider, private message : MessageProvider ) {
     this.worker = JSON.parse(localStorage.getItem("worker"));
     this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
+
+    if(this.navParams.get("payment") != undefined) {
+      this.payment = this.navParams.get("payment");
+      this.payment_amount = this.payment['payment_amount'];
+      this.date_of_payment = this.payment['date_of_payment'];
+      this.mode_of_payment = this.payment['mode_of_payment'];
+      this.details = this.payment['details'];
+      this.bill_ids  = this.payment['bills'];
+    }
   }
 
   ionViewDidLoad() {

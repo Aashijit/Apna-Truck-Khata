@@ -19,6 +19,11 @@ export class MechanicPage {
   searchTerm : any = '';
   type : any = '';
   selectedfilters : any = [];
+  updatebill : boolean = false;
+  updatepayment : boolean = false;
+
+  selectedbill : any = '';
+  selectedpayment : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
     private codes : CodesProvider, private message : MessageProvider, private alertCtrl : AlertController, 
@@ -38,6 +43,12 @@ export class MechanicPage {
     this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.payments = resp['data'];
+          for(let i=0;i<this.payments.length;i++) {
+            this.payments['selected'] = 'false';
+            for(let j=0;j<this.payments[i]['bills'].length;j++) {
+              this.payments[i]['bills'][j]['selected'] = 'false';
+            }
+          }
           this.filterpayments = this.payments;
       } 
     });
@@ -113,6 +124,113 @@ export class MechanicPage {
       else 
         return this.payments;
     });
+  }
+
+
+  selectThisPayment(payment) {
+    this.updatebill = false;
+    this.updatepayment = true;
+    
+    this.selectedpayment = payment;
+
+    for(let i=0;i<this.filterpayments.length;i++){
+      if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+        this.filterpayments[i]['selected'] = 'true';
+      }
+      this.filterpayments[i]['selected'] = 'false';
+    }
+
+    for(let i=0;i<payment.bills.length;i++){
+     payment.bills[i]['selected'] = 'false';
+    }
+
+    payment['selected'] = 'true';
+  }
+
+  selectThisBill(bill,payment) {
+    this.updatepayment = false;
+    this.updatebill = true;
+
+    this.selectedpayment = payment;
+    this.selectedbill = bill;
+
+    for(let i=0;i<this.filterpayments.length;i++){
+      if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+        this.filterpayments[i]['selected'] = 'true';
+      }
+      this.filterpayments[i]['selected'] = 'false';
+    }
+
+    for(let i=0;i<payment.bills.length;i++){
+     payment.bills[i]['selected'] = 'false';
+    }
+
+    bill['selected'] = 'true';
+
+  }
+
+  viewBill(){
+    let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
+    mdl.present();
+  }
+
+  updateBill(){
+    localStorage.setItem('bill',JSON.stringify(this.selectedbill));
+    this.navCtrl.push('MechanicBillPage',{'update':'true'});
+  }
+
+  deleteBill(){
+      let alert = this.alertCtrl.create({
+        title: 'Confirm',
+        message: "Are you sure you want to delete this bill?",
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
+          },
+          {
+            text: 'Delete',
+            handler: () => {
+              this.deleteWorker();
+            }
+          }
+        ]
+      });
+      alert.present();
+  }
+
+  viewPayment() {
+    let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
+    mdl.present();
+  }
+  updatePayment() {
+    localStorage.setItem("worker_type","mechanic");
+    this.navCtrl.push('LedgerPage', {"worker":this.mechanic,'payment':this.selectedpayment});
+  }
+  deletePayment(){
+    let alert = this.alertCtrl.create({
+      title: 'Confirm',
+      message: "Are you sure you want to delete this payment?",
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Delete',
+          handler: () => {
+            this.deleteWorker();
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   searchBillDetails() {

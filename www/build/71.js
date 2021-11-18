@@ -1,1 +1,321 @@
-webpackJsonp([71],{814:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),d["ɵdid"](2,16384,null,0,b.a,[R.a,d.ElementRef,d.Renderer,[2,h.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,M.b,M.a)),d["ɵdid"](5,49152,null,0,v.a,[A.a,[2,h.a],[2,x.a],R.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,E.b,E.a)),d["ɵdid"](8,49152,null,0,K.a,[R.a,d.ElementRef,d.Renderer,[2,w.a],[2,v.a]],null,null),(l()(),d["ɵted"](-1,0,["ADD MORE"])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](13,0,null,null,66,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,F.b,F.a)),d["ɵdid"](14,4374528,null,0,y.a,[R.a,C.a,D.a,d.ElementRef,d.Renderer,A.a,q.a,d.NgZone,[2,h.a],[2,x.a]],null,null),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](16,0,null,1,51,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](17,16384,null,0,L.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](19,0,null,null,7,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](20,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](22,0,null,null,3,"span",[["class","add-more-modal"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.goToModal()&&e}return e},null,null)),(l()(),d["ɵted"](-1,null,["ADD MORE "])),(l()(),d["ɵeld"](24,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-plus-circle"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["    \n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](28,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](29,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](32,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](33,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](36,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](37,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](39,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](42,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](43,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](45,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](48,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](49,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](52,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](53,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](56,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](57,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](59,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](62,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](63,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](65,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](69,0,null,1,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](70,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](72,0,null,null,5,"div",[["class","text-center"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](74,0,null,null,2,"button",[["class","exit-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.exitModal()&&e}return e},P.b,P.a)),d["ɵdid"](75,1097728,null,0,U.a,[[8,""],R.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["\n        Exit\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,["\n"]))],function(l,n){l(n,75,0,"")},function(l,n){l(n,4,0,d["ɵnov"](n,5)._hidden,d["ɵnov"](n,5)._sbPadding);l(n,13,0,d["ɵnov"](n,14).statusbarPadding,d["ɵnov"](n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n,u){this.viewController=l,this.navCtrl=n,this.navParams=u}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AddMoreModalPage")},l.prototype.exitModal=function(){this.viewController.dismiss()},l}()),o=function(){return function(){}}(),a=u(498),i=u(499),c=u(500),r=u(501),s=u(502),m=u(503),p=u(504),f=u(505),g=u(506),b=u(85),R=u(4),h=u(8),M=u(188),v=u(37),A=u(13),x=u(29),E=u(508),K=u(86),w=u(42),F=u(507),y=u(32),C=u(7),D=u(14),q=u(40),L=u(186),O=u(185),P=u(39),U=u(27),N=u(17),k=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),V=d["ɵccf"]("page-add-more-modal",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-add-more-modal",[],null,null,null,e,k)),d["ɵdid"](1,49152,null,0,t,[h.a,x.a,N.a],null,null)],null,null)},{},{},[]),_=u(16),j=u(20),z=u(184),G=u(55);u.d(n,"AddMoreModalPageModuleNgFactory",function(){return S});var S=d["ɵcmf"](o,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[a.a,i.a,c.a,r.a,s.a,m.a,p.a,f.a,g.a,V]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,_.l,_.k,[d.LOCALE_ID,[2,_.t]]),d["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),d["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),d["ɵmpd"](512,_.b,_.b,[]),d["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),d["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),d["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),d["ɵmpd"](512,z.a,z.a,[]),d["ɵmpd"](512,z.b,z.b,[]),d["ɵmpd"](512,o,o,[]),d["ɵmpd"](256,G.a,t,[])])})}});
+webpackJsonp([71],{
+
+/***/ 845:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddDriverExpensesPageModule", function() { return AddDriverExpensesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_driver_expenses__ = __webpack_require__(924);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddDriverExpensesPageModule = /** @class */ (function () {
+    function AddDriverExpensesPageModule() {
+    }
+    AddDriverExpensesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__add_driver_expenses__["a" /* AddDriverExpensesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_driver_expenses__["a" /* AddDriverExpensesPage */]),
+            ],
+        })
+    ], AddDriverExpensesPageModule);
+    return AddDriverExpensesPageModule;
+}());
+
+//# sourceMappingURL=add-driver-expenses.module.js.map
+
+/***/ }),
+
+/***/ 924:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddDriverExpensesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var AddDriverExpensesPage = /** @class */ (function () {
+    function AddDriverExpensesPage(codes, viewController, navCtrl, navParams, modalCtrl, rest, message) {
+        var _this = this;
+        this.codes = codes;
+        this.viewController = viewController;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.rest = rest;
+        this.message = message;
+        this.vari = '';
+        this.isSelectedBill = false;
+        this.name = '';
+        this.reason = '';
+        this.bills = [];
+        this.drivers = [];
+        this.bill_id = null;
+        this.worker_id = '';
+        this.person_shop_name = '';
+        this.srth_id = '';
+        this.vehicle_id = '';
+        this.km_reading = '';
+        this.bill_date = '';
+        this.worker_type = '';
+        this.total_bill = '';
+        this.bill_image_id = '';
+        this.bill_details = '';
+        this.last_maint_id = '';
+        this.opt_counte = '';
+        this.rejoin_date = '';
+        this.is_update = false;
+        this.img = null;
+        this.vehicle_number = '';
+        var upd = this.navParams.get("update");
+        if (upd == 'true') {
+            var bill = JSON.parse(localStorage.getItem("bill"));
+            this.bill_id = bill['bill_id'];
+            this.worker_id = bill['worker_id'];
+            this.person_shop_name = bill['person_shop_name'];
+            this.srth_id = bill['srth_id'];
+            this.vehicle_id = bill['vehicle_id'];
+            this.km_reading = bill['km_reading'];
+            this.bill_date = bill['bill_date'];
+            this.worker_type = bill['worker_type'];
+            this.total_bill = bill['total_bill'];
+            this.bill_image_id = bill['bill_image_id'];
+            this.bill_details = bill['bill_details'];
+            this.reason = bill['reason'];
+            this.is_update = true;
+        }
+        this.getDrivers();
+        if (this.bill_id == null) {
+            this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(function (resp) {
+                if (resp['_ReturnCode'] == '0') {
+                    _this.bill_id = resp['data'];
+                }
+            });
+        }
+    }
+    AddDriverExpensesPage.prototype.openCalendarPopup = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.bill_date = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    AddDriverExpensesPage.prototype.openCalendarPopup1 = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.rejoin_date = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    AddDriverExpensesPage.prototype.getDrivers = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            var workers = resp['data'];
+            if (resp['_ReturnCode'] == '0') {
+                for (var i = 0; i < workers.length; i++) {
+                    if (workers[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(workers[i]);
+                    }
+                }
+            }
+        });
+    };
+    AddDriverExpensesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddDriverExpensesPage');
+    };
+    AddDriverExpensesPage.prototype.change = function (event) {
+        this.isSelectedBill = true;
+        for (var i = 0; i < this.drivers.length; i++)
+            if (this.drivers[i]['worker_id'] == event) {
+                this.name = this.drivers[i]['name'];
+                this.vehicle_id = this.drivers[i]['vehicle']['vehicle_id'];
+                this.vehicle_number = this.drivers[i]['vehicle']['vehicle_number'];
+                break;
+            }
+    };
+    AddDriverExpensesPage.prototype.openDriverDialog = function () {
+        // this.selectRef.open();
+    };
+    AddDriverExpensesPage.prototype.openReasonDialog = function () {
+        var _this = this;
+        var reasonModal = this.modalCtrl.create('ReasonModalPage');
+        reasonModal.present();
+        reasonModal.onDidDismiss(function (data) {
+            //Fetch from the localstorage
+            var data = JSON.parse(localStorage.getItem(_this.codes.SELECTED_REASON));
+            _this.reason = data;
+        });
+    };
+    AddDriverExpensesPage.prototype.openDetailPopup = function () {
+        var _this = this;
+        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+        detailsModalPage.onDidDismiss(function (data) {
+            _this.bill_details = localStorage.getItem(_this.codes.DETAILS);
+        });
+        detailsModalPage.present();
+    };
+    AddDriverExpensesPage.prototype.openCameraPopup = function () {
+        var _this = this;
+        if (this.vehicle_id == '' || this.vehicle_id == null) {
+            this.message.displayToast("Please select vehicle");
+            return;
+        }
+        if (this.bill_date == '' || this.bill_date == null) {
+            this.message.displayToast("Please enter bill date");
+            return;
+        }
+        if (this.bill_details == '' || this.bill_details == null) {
+            this.message.displayToast("Please enter bill details");
+            return;
+        }
+        var data = {
+            "person_shop_name": this.person_shop_name,
+            "vehicle_id": this.vehicle_id,
+            "bill_date": this.bill_date,
+            "worker_type": 'shop',
+            "bill_details": this.bill_details
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "driver",
+            "worker_id": this.worker_id,
+            "document_type": "driverbill",
+            "type": "bills",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+                _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+            else
+                _this.img = null;
+        });
+        cameraModalPage.present();
+    };
+    AddDriverExpensesPage.prototype.saveExpense = function (v) {
+        var _this = this;
+        if (v == '1')
+            this.total_bill = -1 * Number(this.total_bill);
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "person_shop_name": "",
+            "srth_id": json[0]['srth_id'],
+            "vehicle_id": this.vehicle_id,
+            "reason": this.reason,
+            "km_reading": this.km_reading,
+            "bill_date": this.bill_date,
+            "worker_type": 'driver',
+            "worker_id": this.worker_id,
+            "total_bill": this.total_bill,
+            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
+            "bill_details": this.bill_details,
+            "last_maint_id": 'srth-app',
+            "opt_counter": '0'
+        };
+        this.rest.post(this.codes.ADD_EXPENSE_BILL, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills.push(resp['data']);
+                for (var i = 0; i < _this.bills.length; i++)
+                    _this.bills[i]['selected'] = 'false';
+            }
+        });
+    };
+    AddDriverExpensesPage.prototype.selectThis = function (bill) {
+        for (var i = 0; i < this.bills.length; i++)
+            this.bills[i]['selected'] = 'false';
+        bill['selected'] = 'true';
+        this.bill_id = bill['bill_id'];
+        this.worker_id = bill['worker_id'];
+        this.person_shop_name = bill['person_shop_name'];
+        this.srth_id = bill['srth_id'];
+        this.vehicle_id = bill['vehicle_id'];
+        this.km_reading = bill['km_reading'];
+        this.bill_date = bill['bill_date'];
+        this.worker_type = bill['worker_type'];
+        this.total_bill = bill['total_bill'];
+        this.bill_image_id = bill['bill_image_id'];
+        this.bill_details = bill['bill_details'];
+        this.reason = bill['reason'];
+        this.is_update = true;
+    };
+    AddDriverExpensesPage.prototype.updateExpense = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "bill_id": this.bill_id,
+            "person_shop_name": "",
+            "srth_id": json[0]['srth_id'],
+            "vehicle_id": this.vehicle_id,
+            "reason": this.reason,
+            "km_reading": this.km_reading,
+            "bill_date": this.bill_date,
+            "worker_type": 'driver',
+            "worker_id": this.worker_id,
+            "total_bill": this.total_bill,
+            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
+            "bill_details": this.bill_details,
+            "last_maint_id": 'srth-app',
+            "opt_counter": '0'
+        };
+        this.rest.post(this.codes.UPDATE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('The bill has been successfully updated');
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AddDriverExpensesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-add-driver-expenses',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-driver-expenses/add-driver-expenses.html"*/'<!--\n  Generated template for the AddDriverExpensesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n    \n      <ion-col col-10 class="person-name text-center">\n        <ion-title>        \n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          ADD DRIVER EXPENSES\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <!-- <div class="scrollmenu">\n      <a href="#home">BILL NUMBER</a>\n      <a href="#news">DRIVER NAME</a>\n      <a href="#contact">VEHICLE NUMBER</a>\n      <a href="#about">REASON</a>\n      <a href="#about">DATE-START/END</a>\n      <a href="#support">COST</a>\n      <a href="#blog">DETAIL</a>\n      <a href="#tools">KM READING</a> -->\n            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n\n      <!-- <div style="height: 200px;width: 400px">\n\n      </div>\n    </div> -->\n\n\n    <div class="mt-4">\n\n\n    </div>\n\n    \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">BILL NUMBER</a>\n        <a href="#news">DRIVER NAME</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">REASON</a>\n        <a href="#support">COST</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">KM READING</a>\n         \n        <div [ngClass]="bl[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bl of bills">\n        <div [ngClass]="bl[\'total_bill\'] < 0 ? \'green\' : \'red\'"  (click)="selectThis(bl)" >\n          <p>{{bl[\'bill_id\']}}</p>\n          <p>{{bl[\'worker_id\']}}</p>\n          <p>XXXXXX</p>\n          <p>{{bl[\'reason\']}}</p>\n          <p>{{bl[\'total_bill\']}}</p>\n          <p>{{bl[\'km_reading\']}}</p>\n          <p>{{bl[\'bill_details\']}}</p>\n        </div>\n      </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <!-- <button ion-button class="custom-button-u" *ngIf="" (click)="update()">Update</button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete</button>\n   -->\n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    \n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n        \n    <ion-item *ngIf="!isSelectedBill" class="label-select">\n      <ion-label floating>SELECT DRIVER</ion-label>\n      <!--  -->\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important" #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)" >\n        <ion-option *ngFor="let dr of drivers" value="{{dr[\'worker_id\']}}">{{dr[\'name\']}} -  {{dr[\'vehicle\'][\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n \n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center"  style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{name}}<br> {{vehicle_number}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center"> \n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n    <!-- (click)="" -->\n   \n\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="reason" (click)="openReasonDialog()"  placeholder=" " />\n      <label>REASON</label>\n     <i class="fa fa-chevron-down" aria-hidden="true"></i>\n    </div>\n\n\n\n\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>\n      <label>DATE OF EVENT</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    <div class="label-float" *ngIf="reason == \'Holiday\'" >\n      <input type="text" [(ngModel)]="rejoin_date" (click)="openCalendarPopup1()"/>\n      <label>REJOIN DATE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="total_bill"  placeholder=" " />\n      <label>₹ COST</label>\n      <i class="fa fa-money" aria-hidden="true"></i>\n\n    </div>\n\n\n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="km_reading" placeholder=" " />\n      <label>KM READING</label>\n    </div>\n\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <ion-col style="margin-left: 20px;margin-top: -11px;" col-10  (click)="openDetailPopup()">\n            <div class="label-float" >\n              <input type="text" [(ngModel)]="bill_details" placeholder=" " />\n              <label>DETAILS</label>\n              <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n        \n            </div>\n            \n    \n          </ion-col>    \n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n    <!-- <ion-row style="margin: 0;">\n      <ion-col col-8> -->\n        <!-- <div class="label-float" >\n          <input type="text"  placeholder=" " />\n          <label>DETAILS</label>\n          <i class="fa fa-money" aria-hidden="true"></i>\n    \n        </div> -->\n        <!-- <ion-row >\n          <ion-col col-10 class="detail-popup" (click)="openDetailPopup()">\n            DETAILS -->\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n<!--     \n          </ion-col>    \n        </ion-row>  \n      </ion-col>\n      <ion-col col-4>\n        <ion-row class="detail-picture">\n          <ion-col col-4 (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i> -->\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          <!-- </ion-col>    \n        </ion-row>      \n      </ion-col>\n    </ion-row> -->\n\n\n\n\n    <!-- <ion-item >\n      \n      <ion-input type="text" placeholder="KM READING"></ion-input>\n\n\n    </ion-item> -->\n\n\n    <!-- <div class="mt-4 text-right">\n\n      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>\n      </button>\n\n    \n\n    </div> -->\n\n  \n \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="add-button" (click)="saveExpense(\'0\')" *ngIf="!is_update"> ADD <br>EXPENSE</button>\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="monthy-button" (click)="saveExpense(\'1\')" *ngIf="!is_update"> MINUS <br>EXPENSE</button>\n    </ion-col>\n\n    <!-- <ion-col col-12 class="text-center">\n      <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateExpense()">Update</button>\n    </ion-col> -->\n\n    <ion-col col-6 *ngIf="is_update" class="text-center">\n      <button ion-button round class="add-button" (click)="updateExpense()" > ADD <br>EXPENSE</button>\n    </ion-col>\n    <ion-col col-6 *ngIf="is_update" class="text-center">\n      <button ion-button round class="monthy-button" (click)="updateExpense()" > MINUS <br>EXPENSE</button>\n    </ion-col>\n\n  </ion-row>\n</ion-content> \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-driver-expenses/add-driver-expenses.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], AddDriverExpensesPage);
+    return AddDriverExpensesPage;
+}());
+
+//# sourceMappingURL=add-driver-expenses.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=71.js.map
