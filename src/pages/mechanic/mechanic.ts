@@ -194,12 +194,26 @@ export class MechanicPage {
           {
             text: 'Delete',
             handler: () => {
-              this.deleteWorker();
+              this.deleteBillByBillId();
             }
           }
         ]
       });
       alert.present();
+  }
+
+  deleteBillByBillId(){
+  
+    var data = {
+      "bill_id":this.selectedbill['bill_id']
+    };  
+
+    this.rest.post(this.codes.DELETE_BILL_EXPENSE,data).then(resp=> {
+      if(resp['_ReturnCode'] == '0'){
+        this.message.displayToast('Congratulations! You have deleted a bill.'); 
+        this.ionViewWillEnter();
+      }
+    });
   }
 
   viewPayment() {
@@ -208,7 +222,7 @@ export class MechanicPage {
   }
   updatePayment() {
     localStorage.setItem("worker_type","mechanic");
-    this.navCtrl.push('LedgerPage', {"worker":this.mechanic,'payment':this.selectedpayment});
+    this.navCtrl.push('LedgerPage', {"worker":this.mechanic,'payment':this.selectedpayment, 'isupdate':'true'});
   }
   deletePayment(){
     let alert = this.alertCtrl.create({
@@ -225,12 +239,27 @@ export class MechanicPage {
         {
           text: 'Delete',
           handler: () => {
-            this.deleteWorker();
+            this.deletePaymentByPaymentId();
           }
         }
       ]
     });
     alert.present();
+  }
+
+  deletePaymentByPaymentId() {
+
+    var data = {
+      "payment_id":this.selectedpayment['payment_id']
+    };  
+
+    this.rest.post(this.codes.DELETE_PAYMENT,data).then(resp=> {
+      if(resp['_ReturnCode'] == '0'){
+        this.message.displayToast('Congratulations! You have deleted a payment.'); 
+        this.ionViewWillEnter();
+      }
+    });
+
   }
 
   searchBillDetails() {

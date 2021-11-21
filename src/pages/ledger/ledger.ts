@@ -16,6 +16,7 @@ export class LedgerPage {
   worker : any = '';
   total : number = 0.00;
 
+  payment_id : any = '';
   paid_to_worker_id : any = '';
   date_of_payment : any = '';
   mode_of_payment : any = '';
@@ -37,6 +38,8 @@ export class LedgerPage {
 
   payment : any = '';
 
+  isUpdate : boolean = false;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     private modalCtrl : ModalController,private codes : CodesProvider, private rest : RestProvider, private message : MessageProvider ) {
@@ -44,12 +47,23 @@ export class LedgerPage {
     this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
 
     if(this.navParams.get("payment") != undefined) {
+      this.getAllBillsByWorkerId();
       this.payment = this.navParams.get("payment");
+      this.payment_id = this.payment['payment_id'];
       this.payment_amount = this.payment['payment_amount'];
       this.date_of_payment = this.payment['date_of_payment'];
       this.mode_of_payment = this.payment['mode_of_payment'];
       this.details = this.payment['details'];
-      this.bill_ids  = this.payment['bills'];
+
+      var bilds = [];
+      for(let i=0;i<this.payment['bills'].length;i++) {
+          bilds.push(String(this.payment['bills'][i]['bill_id']));
+      }
+      this.bill_ids  = bilds;
+      console.log("BUILD ID  : "+JSON.stringify(this.bill_ids));
+      this.isUpdate = true;
+    } else {
+      this.getBillsByWorkerId();
     }
   }
 
@@ -58,7 +72,7 @@ export class LedgerPage {
   }
 
   ionViewWillEnter(){
-    this.getBillsByWorkerId();
+
   }
 
   openCalendarPopup() {
@@ -85,14 +99,12 @@ export class LedgerPage {
     detailsModalPage.present();
   }
   openCameraPopup() {
-
+    
   }
 
-  save(){
-
-
-
+  update() {
     var data = {
+      'payment_id':this.payment_id,
       "paid_to_worker_id":this.worker['worker_id'],
       "date_of_payment":this.date_of_payment,
       "mode_of_payment":this.mode_of_payment,
@@ -106,6 +118,37 @@ export class LedgerPage {
       "opt_counter":'0'
     };
 
+    this.rest.post(this.codes.UPDATE_PAYMENT,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+        this.message.displayToast('Congratulations! You have updated a payment!');
+        this.worker['paid_money'] = Number(this.worker['paid_money']) + Number(this.payment_amount);
+        localStorage.setItem("worker",JSON.stringify(this.worker));
+        this.date_of_payment = '';
+        this.mode_of_payment = '';
+        this.details  = '' ;
+        this.payment_amount = '';
+        this.bill_ids = [];
+      }
+    });
+  }
+
+  save(){
+    var data = {
+      "paid_to_worker_id":this.worker['worker_id'],
+      "date_of_payment":this.date_of_payment,
+      "mode_of_payment":this.mode_of_payment,
+      "payment_amount":this.payment_amount,
+      "details":this.details,
+      "payment_image_1_id":'0',
+      "payment_image_2_id":'0',
+      "payment_date":this.date_of_payment,
+      "bill_ids":this.bill_ids,
+      "last_maint_id":'srth-app',
+      "opt_counter":'0'
+    }; 
+
+    console.log(JSON.stringify(this.bill_ids));
+
     this.rest.post(this.codes.CREATE_PAYMENT,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have made a payment!');
@@ -118,9 +161,21 @@ export class LedgerPage {
         this.bill_ids = [];
       }
     });
-
   }
 
+  getAllBillsByWorkerId(){
+    
+    var data = {
+      "worker_id":this.worker['worker_id'],
+      "worker_type":localStorage.getItem('worker_type')
+    };
+
+    this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+        this.bills = resp['data'];
+      }
+    });
+  }
 
   getBillsByWorkerId(){
     // this.isupdate = false;
@@ -132,7 +187,6 @@ export class LedgerPage {
     this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID_UNPAID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
         this.bills = resp['data'];
-        this.filterbills = this.bills;
       }
     });
   }

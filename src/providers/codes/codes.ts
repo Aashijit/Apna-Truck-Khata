@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
 export class CodesProvider {
 
 
-  public BASE_URL="http://127.0.0.1:8000/api/";
+  public BASE_URL_PROD="http://127.0.0.1:8000/api/";
   public BASE_URL_SERV_1="https://www.manpuriaproducts.org/saarthi/public/index.php/api/";
   public BASE_URL_SERV_2="https://api.fastdeliveryindia.com/public/index.php/api/";
-  public BASE_URL_PROD="https://www.atkindia.com/public/index.php/api/";
+  public BASE_URL="https://www.atkindia.com/public/index.php/api/";
 
   public BASE_URL_REPORT="http://report.atkindia.com/public/api/";
   public BASE_URL_REPORT_DOWNLOAD="http://report.atkindia.com/public/";
@@ -49,6 +49,9 @@ export class CodesProvider {
 
   public DELETE_BILL_EXPENSE = this.BASE_URL+"deletebillbybillid";
   public UPDATE_BILL_EXPENSE = this.BASE_URL+"updatebillbybillid";
+
+  public DELETE_PAYMENT = this.BASE_URL+"deletepayment";
+  public UPDATE_PAYMENT = this.BASE_URL+"editpayment";
   
   public UPDATE_VEHICLE_DRIVER=this.BASE_URL+"updatevehicledriver";
 
@@ -153,12 +156,9 @@ export class CodesProvider {
   public DATE="date";
 
 
-
   constructor(public http: HttpClient) {
     console.log('Hello CodesProvider Provider');
   }
-
-
 
 
 }

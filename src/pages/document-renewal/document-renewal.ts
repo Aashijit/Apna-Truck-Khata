@@ -103,6 +103,10 @@ export class DocumentRenewalPage {
       this.bill_details = bl['bill_details'];
     }
 
+    if(this.details == undefined || this.details == null) {
+      this.details = [];
+    }
+
 
     this.getVehicles();
 

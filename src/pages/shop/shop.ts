@@ -17,6 +17,12 @@ export class ShopPage {
   payments : any = [];
   filterpayments : any = [];
   searchTerm : any = '';
+
+  updatebill : boolean = false;
+  updatepayment : boolean = false;
+
+  selectedbill : any = '';
+  selectedpayment : any = '';
   
 
   type : any = '';
@@ -166,6 +172,142 @@ export class ShopPage {
 
     });
     mdl.present();
+  }
+
+
+  selectThisPayment(payment) {
+    this.updatebill = false;
+    this.updatepayment = true;
+    
+    this.selectedpayment = payment;
+
+    for(let i=0;i<this.filterpayments.length;i++){
+      if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+        this.filterpayments[i]['selected'] = 'true';
+      }
+      this.filterpayments[i]['selected'] = 'false';
+    }
+
+    for(let i=0;i<payment.bills.length;i++){
+     payment.bills[i]['selected'] = 'false';
+    }
+
+    payment['selected'] = 'true';
+  }
+
+  selectThisBill(bill,payment) {
+    this.updatepayment = false;
+    this.updatebill = true;
+
+    this.selectedpayment = payment;
+    this.selectedbill = bill;
+
+    for(let i=0;i<this.filterpayments.length;i++){
+      if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+        this.filterpayments[i]['selected'] = 'true';
+      }
+      this.filterpayments[i]['selected'] = 'false';
+    }
+
+    for(let i=0;i<payment.bills.length;i++){
+     payment.bills[i]['selected'] = 'false';
+    }
+
+    bill['selected'] = 'true';
+
+  }
+
+  viewBill(){
+    let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
+    mdl.present();
+  }
+
+  updateBill(){
+    localStorage.setItem('bill',JSON.stringify(this.selectedbill));
+    this.navCtrl.push('BuyFromShopPage',{'update':'true'});
+  }
+
+  deleteBill(){
+      let alert = this.alertCtrl.create({
+        title: 'Confirm',
+        message: "Are you sure you want to delete this bill?",
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
+          },
+          {
+            text: 'Delete',
+            handler: () => {
+              this.deleteBillByBillId();
+            }
+          }
+        ]
+      });
+      alert.present();
+  }
+
+  deleteBillByBillId(){
+  
+    var data = {
+      "bill_id":this.selectedbill['bill_id']
+    };  
+
+    this.rest.post(this.codes.DELETE_BILL_EXPENSE,data).then(resp=> {
+      if(resp['_ReturnCode'] == '0'){
+        this.message.displayToast('Congratulations! You have deleted a bill.'); 
+        this.ionViewWillEnter();
+      }
+    });
+  }
+
+  viewPayment() {
+    let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
+    mdl.present();
+  }
+  updatePayment() {
+    localStorage.setItem("worker_type","shop");
+    this.navCtrl.push('LedgerPage', {"worker":this.shop,'payment':this.selectedpayment, 'isupdate':'true'});
+  }
+  deletePayment(){
+    let alert = this.alertCtrl.create({
+      title: 'Confirm',
+      message: "Are you sure you want to delete this payment?",
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Delete',
+          handler: () => {
+            this.deletePaymentByPaymentId();
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  deletePaymentByPaymentId() {
+
+    var data = {
+      "payment_id":this.selectedpayment['payment_id']
+    };  
+
+    this.rest.post(this.codes.DELETE_PAYMENT,data).then(resp=> {
+      if(resp['_ReturnCode'] == '0'){
+        this.message.displayToast('Congratulations! You have deleted a payment.'); 
+        this.ionViewWillEnter();
+      }
+    });
+
   }
 
   removeTerm(sc) {
