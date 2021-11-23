@@ -1,1 +1,270 @@
-webpackJsonp([61],{859:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,36,"ion-header",[],null,null,null,null,null)),d["ɵdid"](1,16384,null,0,b.a,[g.a,d.ElementRef,d.Renderer,[2,E.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](3,0,null,null,32,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,h.b,h.a)),d["ɵdid"](4,49152,null,0,v.a,[P.a,[2,E.a],[2,w.a],g.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](6,0,null,3,28,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](7,16384,null,0,k.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),d["ɵdid"](10,16384,null,0,A.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    \n      "])),(l()(),d["ɵeld"](14,0,null,null,9,"ion-col",[["class","person-name text-left col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](15,16384,null,0,A.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](17,0,null,null,5,"ion-title",[],null,null,null,_.b,_.a)),d["ɵdid"](18,49152,null,0,y.a,[g.a,d.ElementRef,d.Renderer,[2,S.a],[2,v.a]],null,null),(l()(),d["ɵted"](-1,0,["        \n          "])),(l()(),d["ɵeld"](20,0,null,0,1,"ion-icon",[["ios","ios-person"],["md","md-person"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](21,147456,null,0,N.a,[g.a,d.ElementRef,d.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),d["ɵted"](-1,0,["\n           \n          PROFILE\n        "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](25,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),d["ɵdid"](26,16384,null,0,A.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](28,0,null,null,5,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),d["ɵdid"](29,16384,null,0,A.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](31,0,null,null,1,"ion-icon",[["color","danger"],["name","logo-youtube"],["role","img"],["style","font-size: 4.2rem;margin-top: 3px;"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](32,147456,null,0,N.a,[g.a,d.ElementRef,d.Renderer],{color:[0,"color"],name:[1,"name"]},null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](38,0,null,null,135,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),d["ɵdid"](39,4374528,null,0,q.a,[g.a,C.a,I.a,d.ElementRef,d.Renderer,P.a,T.a,d.NgZone,[2,E.a],[2,w.a]],null,null),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](41,0,null,1,131,"div",[["class","container"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n\n    "])),(l()(),d["ɵeld"](43,0,null,null,26,"ion-card",[["class","profile-card"]],null,null,null,null,null)),d["ɵdid"](44,16384,null,0,F.a,[g.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](46,0,null,null,22,"button",[["class","item item-block"],["ion-item",""],["text-wrap",""]],null,null,null,B.b,B.a)),d["ɵdid"](47,1097728,null,3,M.a,[O.a,g.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,1,{contentLabel:0}),d["ɵqud"](603979776,2,{_buttons:1}),d["ɵqud"](603979776,3,{_icons:1}),d["ɵdid"](51,16384,null,0,G.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](53,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-user-circle-o"],["item-start",""]],null,null,null,null,null)),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](55,0,null,2,7,"div",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](57,0,null,null,1,"h6",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Personal Identity"])),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](60,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Name,Business name ..."])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](64,0,null,4,2,"button",[["class","edit-button"],["ion-button",""],["item-end",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openEditProfilePage()&&e}return e},U.b,U.a)),d["ɵdid"](65,1097728,[[2,4]],0,x.a,[[8,""],g.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["EDIT"])),(l()(),d["ɵted"](-1,2,["\n\n        "])),(l()(),d["ɵted"](-1,2,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n      \n    "])),(l()(),d["ɵeld"](71,0,null,null,73,"ion-card",[["class","profile-card"]],null,null,null,null,null)),d["ɵdid"](72,16384,null,0,F.a,[g.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](74,0,null,null,69,"ion-list",[],null,null,null,null,null)),d["ɵdid"](75,16384,null,0,H.a,[g.a,d.ElementRef,d.Renderer,C.a,Y.m,I.a],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](77,0,null,null,21,"button",[["class","item item-block"],["ion-item",""],["text-wrap",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openLanguagePage()&&e}return e},B.b,B.a)),d["ɵdid"](78,1097728,null,3,M.a,[O.a,g.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,4,{contentLabel:0}),d["ɵqud"](603979776,5,{_buttons:1}),d["ɵqud"](603979776,6,{_icons:1}),d["ɵdid"](82,16384,null,0,G.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n         \n            \n          "])),(l()(),d["ɵeld"](84,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-language"],["item-start",""]],null,null,null,null,null)),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](86,0,null,2,8,"div",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](89,0,null,null,1,"h6",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["LANGUAGE"])),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](92,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["CHOOSE YOUR DESIRED LANGUAGE"])),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](96,0,null,4,1,"ion-icon",[["item-end",""],["name","ios-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](97,147456,[[6,4]],0,N.a,[g.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,2,["\n\n        "])),(l()(),d["ɵted"](-1,null,["\n    \n        "])),(l()(),d["ɵeld"](100,0,null,null,20,"button",[["class","item item-block"],["ion-item",""],["text-wrap",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openSecurityAndBackup()&&e}return e},B.b,B.a)),d["ɵdid"](101,1097728,null,3,M.a,[O.a,g.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,7,{contentLabel:0}),d["ɵqud"](603979776,8,{_buttons:1}),d["ɵqud"](603979776,9,{_icons:1}),d["ɵdid"](105,16384,null,0,G.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](107,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-lock"],["item-start",""]],null,null,null,null,null)),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](109,0,null,2,7,"div",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](111,0,null,null,1,"h6",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["PIN CHANGE"])),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](114,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["SECURE YOUR APP WITH PIN"])),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵted"](-1,2,["        \n          "])),(l()(),d["ɵeld"](118,0,null,4,1,"ion-icon",[["item-end",""],["name","ios-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](119,147456,[[9,4]],0,N.a,[g.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,2,["\n\n        "])),(l()(),d["ɵted"](-1,null,["\n    \n        "])),(l()(),d["ɵeld"](122,0,null,null,20,"button",[["class","item item-block"],["ion-item",""],["text-wrap",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openAddNewBankPage()&&e}return e},B.b,B.a)),d["ɵdid"](123,1097728,null,3,M.a,[O.a,g.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,10,{contentLabel:0}),d["ɵqud"](603979776,11,{_buttons:1}),d["ɵqud"](603979776,12,{_icons:1}),d["ɵdid"](127,16384,null,0,G.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](129,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-university"],["item-start",""]],null,null,null,null,null)),(l()(),d["ɵted"](-1,2,["\n          "])),(l()(),d["ɵeld"](131,0,null,2,7,"div",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](133,0,null,null,1,"h6",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["BANK DETAILS"])),(l()(),d["ɵted"](-1,null,["\n            "])),(l()(),d["ɵeld"](136,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["SHARE YOUR BANK/UPI DETAILS TO REQUEST FASTER PAYMENTS"])),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵted"](-1,2,["        \n          "])),(l()(),d["ɵeld"](140,0,null,4,1,"ion-icon",[["item-end",""],["name","ios-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](141,147456,[[12,4]],0,N.a,[g.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵted"](-1,null,["\n  \n    \n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n\n    "])),(l()(),d["ɵeld"](146,0,null,null,24,"ion-card",[["class","profile-card"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openSettingsPage()&&e}return e},null,null)),d["ɵdid"](147,16384,null,0,F.a,[g.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](149,0,null,null,20,"button",[["class","item item-block"],["ion-item",""]],null,null,null,B.b,B.a)),d["ɵdid"](150,1097728,null,3,M.a,[O.a,g.a,d.ElementRef,d.Renderer,[2,D.a]],null,null),d["ɵqud"](335544320,13,{contentLabel:0}),d["ɵqud"](603979776,14,{_buttons:1}),d["ɵqud"](603979776,15,{_icons:1}),d["ɵdid"](154,16384,null,0,G.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](156,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-cog"],["item-start",""]],null,null,null,null,null)),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](158,0,null,2,7,"div",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](160,0,null,null,1,"h6",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["SETTINGS"])),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](163,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["MANAGE THE APP SETTINGS"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,2,["        \n        "])),(l()(),d["ɵeld"](167,0,null,4,1,"ion-icon",[["item-end",""],["name","ios-arrow-round-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](168,147456,[[15,4]],0,N.a,[g.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,2,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n\n    "])),(l()(),d["ɵted"](-1,null,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,[" \n"]))],function(l,n){l(n,21,0,"ios-person","md-person");l(n,32,0,"danger","logo-youtube");l(n,65,0,"");l(n,97,0,"ios-arrow-round-forward");l(n,119,0,"ios-arrow-round-forward");l(n,141,0,"ios-arrow-round-forward");l(n,168,0,"ios-arrow-round-forward")},function(l,n){l(n,3,0,d["ɵnov"](n,4)._hidden,d["ɵnov"](n,4)._sbPadding);l(n,20,0,d["ɵnov"](n,21)._hidden);l(n,31,0,d["ɵnov"](n,32)._hidden);l(n,38,0,d["ɵnov"](n,39).statusbarPadding,d["ɵnov"](n,39)._hasRefresher);l(n,96,0,d["ɵnov"](n,97)._hidden);l(n,118,0,d["ɵnov"](n,119)._hidden);l(n,140,0,d["ɵnov"](n,141)._hidden);l(n,167,0,d["ɵnov"](n,168)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ProfilePage")},l.prototype.openEditProfilePage=function(){this.navCtrl.push("EditProfilePage")},l.prototype.openLanguagePage=function(){this.navCtrl.push("LanguagePage")},l.prototype.openAddNewBankPage=function(){this.navCtrl.push("AddNewBankAccountPage")},l.prototype.openSettingsPage=function(){this.navCtrl.push("SettingsPage")},l.prototype.openSecurityAndBackup=function(){this.navCtrl.push("SecurityAndBackupPage")},l}()),a=function(){return function(){}}(),o=u(498),i=u(499),r=u(500),c=u(501),s=u(502),m=u(503),f=u(504),p=u(505),R=u(506),b=u(85),g=u(4),E=u(8),h=u(188),v=u(37),P=u(13),w=u(29),k=u(186),A=u(185),_=u(508),y=u(86),S=u(42),N=u(41),L=u(507),q=u(32),C=u(7),I=u(14),T=u(40),F=u(191),B=u(509),M=u(31),O=u(28),D=u(58),G=u(121),U=u(39),x=u(27),H=u(87),Y=u(11),K=u(17),V=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),j=d["ɵccf"]("page-profile",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-profile",[],null,null,null,e,V)),d["ɵdid"](1,49152,null,0,t,[w.a,K.a],null,null)],null,null)},{},{},[]),z=u(16),J=u(20),Q=u(184),W=u(55);u.d(n,"ProfilePageModuleNgFactory",function(){return Z});var Z=d["ɵcmf"](a,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,c.a,s.a,m.a,f.a,p.a,R.a,j]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,z.l,z.k,[d.LOCALE_ID,[2,z.t]]),d["ɵmpd"](4608,J["ɵi"],J["ɵi"],[]),d["ɵmpd"](4608,J.FormBuilder,J.FormBuilder,[]),d["ɵmpd"](512,z.b,z.b,[]),d["ɵmpd"](512,J["ɵba"],J["ɵba"],[]),d["ɵmpd"](512,J.FormsModule,J.FormsModule,[]),d["ɵmpd"](512,J.ReactiveFormsModule,J.ReactiveFormsModule,[]),d["ɵmpd"](512,Q.a,Q.a,[]),d["ɵmpd"](512,Q.b,Q.b,[]),d["ɵmpd"](512,a,a,[]),d["ɵmpd"](256,W.a,t,[])])})}});
+webpackJsonp([61],{
+
+/***/ 856:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BillPaymentSearchPageModule", function() { return BillPaymentSearchPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bill_payment_search__ = __webpack_require__(935);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var BillPaymentSearchPageModule = /** @class */ (function () {
+    function BillPaymentSearchPageModule() {
+    }
+    BillPaymentSearchPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__bill_payment_search__["a" /* BillPaymentSearchPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__bill_payment_search__["a" /* BillPaymentSearchPage */]),
+            ],
+        })
+    ], BillPaymentSearchPageModule);
+    return BillPaymentSearchPageModule;
+}());
+
+//# sourceMappingURL=bill-payment-search.module.js.map
+
+/***/ }),
+
+/***/ 935:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillPaymentSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var BillPaymentSearchPage = /** @class */ (function () {
+    // BILL NUMBER, PAYMENT NUMBER, REASONS
+    function BillPaymentSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.worker_type = '';
+        this.worker_id = '';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.payments = [];
+        this.filterpayments = [];
+        this.reasons = [];
+        this.worker_type = this.navParams.get("worker_type");
+        this.worker_id = this.navParams.get("worker_id");
+        this.getBillsBySrthId();
+    }
+    BillPaymentSearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Bill Payment Search Page');
+    };
+    BillPaymentSearchPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
+        }
+        this.selectedfilters.push(sr);
+    };
+    BillPaymentSearchPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+    };
+    BillPaymentSearchPage.prototype.searchGrid = function () {
+        localStorage.setItem("bill_payment_search", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    BillPaymentSearchPage.prototype.getReasons = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_REASON, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.reasons = resp['data'];
+                for (var i = 0; i < _this.reasons.length; i++) {
+                    var searchobj = {
+                        "type": "reasons",
+                        "id": "",
+                        "name": _this.reasons[i]['reason'],
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.payments.length; i++) {
+                    var searchobj = {
+                        "type": "payments",
+                        "id": String(_this.payments[i]['payment_id']),
+                        "name": _this.payments[i]['mode_of_payment'],
+                        "amount": String(_this.bills[i]['payment_amount'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['bill_id']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var data = {
+            "worker_id": this.worker_id,
+            "worker_type": this.worker_type
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getPayments();
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getPayments = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.worker_id
+        };
+        this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.payments = resp['data'];
+                _this.filterpayments = _this.payments;
+                for (var i = 0; i < _this.payments.length; i++) {
+                    _this.payments[i]['selected'] = 'false';
+                    _this.filterpayments[i]['selected'] = 'false';
+                }
+                if (_this.worker_type == 'shop' || _this.worker_type == 'mechanic')
+                    _this.getVehicles();
+                else
+                    _this.getReasons();
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.payments.length; i++) {
+                    var searchobj = {
+                        "type": "payments",
+                        "id": String(_this.payments[i]['payment_id']),
+                        "name": _this.payments[i]['mode_of_payment'],
+                        "amount": String(_this.payments[i]['payment_amount'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['bill_id']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    BillPaymentSearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-bill-payment-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-payment-search/bill-payment-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'payments\'" >Payment # {{sc[\'id\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n\n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n \n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reason</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'payments\'" (click)="clickedTerm(sr)">\n        <h2>Payment # {{sr[\'id\']}}</h2>\n        <p>Shop</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n      </ion-item>\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-payment-search/bill-payment-search.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], BillPaymentSearchPage);
+    return BillPaymentSearchPage;
+}());
+
+//# sourceMappingURL=bill-payment-search.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=61.js.map

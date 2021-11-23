@@ -62,11 +62,22 @@
 
     <ion-item *ngIf="!isSelectedBill" class="label-select">
       <ion-label floating>SELECT SHOP</ion-label>
-
       <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="worker_id" (ionChange)="selectShop($event)">
         <ion-option value="{{shop['worker_id']}}" *ngFor="let shop of shops" >{{shop['name']}}</ion-option>
       </ion-select>
     </ion-item>
+
+    <ion-row class="selected-details" *ngIf="isSelectedBill" >
+      <ion-col col-4 class="text-center"> 
+        <img src='../../assets/saarthi-icon/png/004-shop.png' style="width: 36% !important;" />
+      </ion-col>
+      <ion-col col-4 class="text-center" style="padding: 0px !important;margin-top: 4px;margin-left: -11px ;margin-right: 11px;"> 
+        <p  style="margin-top: 10px;color: white;" >{{person_shop_name}}</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button round (click)="isSelectedBill = !isSelectedBill">CHANGE</button>
+      </ion-col>
+    </ion-row>
 
 
     <ion-item class="label-select">

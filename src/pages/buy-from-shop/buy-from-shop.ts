@@ -78,11 +78,12 @@ export class BuyFromShopPage {
         this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
           if(resp['_ReturnCode'] == '0'){
             this.bill_id = resp['data'];
+            this.bill_id ++;
           }
         });
         
       }
-      this.bill_id ++;
+
 
 
 
@@ -254,12 +255,12 @@ export class BuyFromShopPage {
         if(this.img != null)
             resp['data']['image_content'] = this.img['image_url'];
         this.bills.push(resp['data']);
-        this.worker_id  = '';
-        this.person_shop_name  = '';
+        // this.worker_id  = '';
+        // this.person_shop_name  = '';
         this.vehicle_id  = '';
         this.km_reading = '';
         this.bill_date  = '';
-        this.worker_type  = '';
+        // this.worker_type  = '';
         this.total_bill  = '';
         this.bill_image_id  = '';
         this.bill_details  = '';
@@ -274,6 +275,7 @@ export class BuyFromShopPage {
   }
 
   selectShop(shop){
+    this.isSelectedBill = true;
     for(let i=0;i<this.shops.length;i++){
       if(this.shops[i]['worker_id'] == shop) {
         this.person_shop_name = this.shops[i]['name'];
@@ -310,7 +312,21 @@ export class BuyFromShopPage {
     this.rest.post(this.codes.UPDATE_BILL_EXPENSE,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.message.displayToast('The bill has been successfully updated');
-          this.navCtrl.pop();
+          // this.navCtrl.pop();
+
+          this.vehicle_id  = '';
+          this.km_reading = '';
+          this.bill_date  = '';
+          // this.worker_type  = '';
+          this.total_bill  = '';
+          this.bill_image_id  = '';
+          this.bill_details  = '';
+          this.img = null;
+          this.is_update = false;
+
+          for(let i=0;i<this.bills.length;i++)
+            this.bills[i]['selected'] = 'false';
+
       }
     });
   }
