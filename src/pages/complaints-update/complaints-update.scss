@@ -32,6 +32,27 @@ page-complaints-update {
     }
   }
 
+  .card-md {
+    margin:0px !important;
+    margin-top: -8px !important;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    width: calc(100% - 64px);
+  }
+
+  .checkbox-md{
+    margin-right: 8px !important;
+  }
+
+  .prob {
+    color: red;
+  }
+
+  .sol {
+    color: green;  
+  }
+
   // div.scrollmenu {
   //   //background-color: #333;
   //   position: relative;

@@ -24,6 +24,28 @@
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div> -->
 
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)"  placeholder="SEARCH DRIVER NAME, VEHICLE NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>
+    </div>
+    <ion-card *ngIf="displayfilter">
+      <ion-card-content>
+        <ion-list >
+          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">
+           <div *ngIf="sr['type']=='driver'">
+            <p style="color: #000;">{{sr['name']}}</p>
+             <p>Driver</p>
+            </div>
+           <div *ngIf="sr['type']=='vehicle'">
+              <p style="color: #000;">{{sr['name']}}</p>
+              <p>Vehicle</p>
+           </div>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
     
     <div class="scroll-grid" >
       <div class="scrollmenu">
@@ -48,13 +70,13 @@
           <p>12/09/2020</p>
           <p>BILL123</p>
           <p>RS 200</p> -->
-          <p>{{cm['complaints_id']}} </p>
-          <p>{{cm['vehicle_id']}}</p>
-          <p>{{cm['problem_id']}}</p>
-          <p>{{cm['date_of_complaint']}}</p>
-          <p>{{cm['date_of_reminder']}}</p>
-          <p>{{cm['details']}}</p>
-          <p>{{cm['km_reading']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_id']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['problem_id']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_complaint']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_reminder']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['details']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['km_reading']}}</p>
      
 
         </div>
@@ -91,19 +113,28 @@
       </ion-col>
     </ion-row> -->
     
-    <!--   -->
-    <ion-item class="label-select" *ngIf="complaint['problems'] != undefined">
+     <!--  -->
+    <ion-list class="label-select" *ngIf="complaint['problems'] != undefined">
+      <ion-item *ngFor="let problems of complaint['problems']">
+        <ion-label>{{problems['details']['problem_name'] + "(" + problems['details']['vehicle_part_id']   + ")" + " - "}}
+          <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved</span>
+          <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span></ion-label>
+        <ion-checkbox [(ngModel)]="problems['selected']"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <!-- <ion-item class="label-select" *ngIf="complaint['problems'] != undefined">
 
       <ion-label floating>PROBLEM IDs</ion-label>
       <ion-select multiple="true" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"  [(ngModel)]="problems" >
         <ion-option *ngFor="let problems of complaint['problems']" value="{{problems['problem_id']}}">
-          {{problems['problem_id'] + " - "}}
+          {{problems['details']['problem_name'] + " - "}}
           <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved</span>
           <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span>
         </ion-option>
       </ion-select>
 
-    </ion-item>
+    </ion-item> -->
 
   
 
@@ -115,7 +146,7 @@
       <button ion-button round class="custom-button solved-button" (click)="solved()"> SOLVED</button>
     </ion-col>
     <ion-col col-6 class="text-center">
-      <button ion-button round class="custom-button remind-later-button" (click)="navCtrl.pop()"> REMIND LATER</button>
+      <button ion-button round class="custom-button remind-later-button" (click)="openCalendarPopup2()"> REMIND LATER</button>
     </ion-col>
     <!-- <ion-col col-6 class="text-center">
       <button ion-button round class="custom-button save-button"> SAVE</button>

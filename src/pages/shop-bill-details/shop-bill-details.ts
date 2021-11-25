@@ -247,7 +247,7 @@ export class ShopBillDetailsPage {
       this.problems_parts[i]['km_reading'] = this.km_reading;
       this.problems_parts[i]['mechanic_name'] = '';
       this.problems_parts[i]['mechanic_phone_number'] = '';
-      this.problems_parts[i]['bill_image_id'] = this.img['image_id'];
+      this.problems_parts[i]['bill_image_id'] = this.img != undefined ?  this.img['image_id'] : '0';
     }
     console.log(JSON.stringify(this.problems_parts));
     this.rest.post(this.codes.SAVE_PROBLEM_PARTS,this.problems_parts).then(resp => {

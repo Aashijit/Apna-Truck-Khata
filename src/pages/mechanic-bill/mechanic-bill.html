@@ -64,12 +64,23 @@
 
 
     <ion-item *ngIf="!isSelectedBill" class="label-select">
-      <ion-label interface="action-sheet" floating>SELECT MECHANIC</ion-label>
-
-      <ion-select [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">
+      <ion-label floating>SELECT MECHANIC</ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">
         <ion-option value="{{me['worker_id']}}" *ngFor="let me of mechanics" >{{me['name']}}</ion-option>
       </ion-select>
     </ion-item>
+
+    <ion-row class="selected-details" *ngIf="isSelectedBill" >
+      <ion-col col-4 class="text-center"> 
+        <img src='../../assets/saarthi-icon/png/007-mechanic.png' style="width: 36% !important;" />
+      </ion-col>
+      <ion-col col-4 class="text-center" style="padding: 0px !important;margin-top: 4px;margin-left: -11px ;margin-right: 11px;"> 
+        <p  style="margin-top: 10px;color: white;" >{{person_shop_name}}</p>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button round (click)="isSelectedBill = !isSelectedBill">CHANGE</button>
+      </ion-col>
+    </ion-row>
 
 
 

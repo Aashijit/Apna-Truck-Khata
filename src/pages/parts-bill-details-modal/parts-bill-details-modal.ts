@@ -34,27 +34,13 @@ export class PartsBillDetailsModalPage {
           for(let i=0;i<this.problems[0]['parts'].length;i++){
             this.amount += Number(this.problems[0]['parts'][i]['total']);
           }
-
-
       }
-
       this.img = this.navParams.get("image");
       this.bill = this.navParams.get("bill");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PartsBillDetailsModalPage');
-  }
-
-  addRow(problem){
-    var parts = {
-      "part_name":"",
-      "rate_per_pc":"",
-      "is_full":"",
-      "qty":"",
-      "id":""
-    };
-    problem['parts'].push(parts);
   }
 
   openPartsWorkModal(){
@@ -64,15 +50,10 @@ export class PartsBillDetailsModalPage {
       this.work_part = JSON.parse(localStorage.getItem(this.codes.SELECTED_WORK_PART));
       this.part_name = this.work_part['name'];
     });
-
     mdl.present();
-  
   }
 
   removeProblem(problem){
-
-
-
     console.log("PROBLEM : "+JSON.stringify(this.problems));
 
     if(this.problems.length == 1) {
@@ -129,15 +110,16 @@ export class PartsBillDetailsModalPage {
       console.log("PROBLEMS GOT : "+JSON.stringify(this.problems));
       var parts = [];
       for(let i=0;i<this.problems.length;i++){
-        if(this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null)
+        if(this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null){
           parts = this.problems[i]['parts'];
+        }
         else 
           this.problems[i]['parts'] = [];
       }
 
-      for(let i=0;i<this.problems.length;i++){
-        this.problems[i]['parts'] = parts;
-      }
+      // for(let i=0;i<this.problems.length;i++){
+      //   this.problems[i]['parts'] = parts;
+      // }
       
     });
 
@@ -154,6 +136,11 @@ export class PartsBillDetailsModalPage {
 
   addPartsBill(){
 
+    if(this.problems.length == 0) {
+      this.message.displayToast('You need to add a problem and then add the parts.');
+      return;
+    }
+
     for(let i=0;i<this.problems.length;i++){
       var parts = {};
       if(this.is_full)
@@ -162,7 +149,7 @@ export class PartsBillDetailsModalPage {
         "rate_per_pc":this.rate,
         "is_full":this.is_full,
         "qty":this.qty,
-        "id":this.id,
+        "id":this.id == '' ? (new Date().getTime()) : '',
         "total":this.rate
       };
       else 
@@ -171,7 +158,7 @@ export class PartsBillDetailsModalPage {
         "rate_per_pc":this.rate,
         "is_full":this.is_full,
         "qty":this.qty,
-        "id":this.id,
+        "id":this.id == '' ? (new Date().getTime()) : '',
         "total":Number(this.rate) * Number(this.qty)
       };
 
@@ -185,11 +172,11 @@ export class PartsBillDetailsModalPage {
 
         return;
       }
-    }
+    }  
 
       this.problems[i]['parts'].push(parts);
 
-      console.log("PROBLEM : "+JSON.stringify(this.problems));
+      console.log("PROBLEM : "+i+" :::: "+JSON.stringify(this.problems));
     }
 
     this.part_name = '';

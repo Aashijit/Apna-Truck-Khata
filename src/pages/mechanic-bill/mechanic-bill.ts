@@ -86,11 +86,12 @@ export class MechanicBillPage {
         this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
           if(resp['_ReturnCode'] == '0'){
             this.bill_id = resp['data'];
+            this.bill_id ++;
           }
         });
         
       }
-      this.bill_id ++;
+
 
       this.getVehicles();
 
@@ -120,6 +121,7 @@ export class MechanicBillPage {
   }
 
   selectMechanic(worker_id){
+    this.isSelectedBill = true;
     for(let i=0;i<this.mechanics.length;i++){
       if(this.mechanics[i]['worker_id'] == worker_id) {
         this.person_shop_name = this.mechanics[i]['name'];
@@ -239,13 +241,19 @@ export class MechanicBillPage {
       "bill_image_id":this.img != null ? this.img['image_id'] : '0',
       "bill_details":this.bill_details,
       "last_maint_id":'srth-app',
-      "opt_counter":'0'
+      "opt_counter":'0' 
     };
 
     this.rest.post(this.codes.UPDATE_BILL_EXPENSE,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
-          this.message.displayToast('The bill has been successfully updated');
-          this.navCtrl.pop();
+        this.message.displayToast('The bill has been successfully updated');
+        this.vehicle_id  = '';
+        this.km_reading = '';
+        this.bill_date  = '';
+        this.total_bill  = '';
+        this.bill_image_id  = '';
+        this.bill_details  = '';
+        // this.navCtrl.pop();
       }
     });
   }
