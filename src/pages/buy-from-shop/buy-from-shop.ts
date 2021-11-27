@@ -266,7 +266,7 @@ export class BuyFromShopPage {
         this.bill_details  = '';
         this.img = null;
 
-        this.bill_id ++;
+        this.bill_id = Number(resp['_LatestBillId']) + 1;
 
           for(let i=0;i<this.bills.length;i++)
             this.bills[i]['selected'] = 'false';
@@ -323,6 +323,10 @@ export class BuyFromShopPage {
           this.bill_details  = '';
           this.img = null;
           this.is_update = false;
+
+
+          this.bill_id = Number(resp['_LatestBillId']) + 1;
+
 
           for(let i=0;i<this.bills.length;i++)
             this.bills[i]['selected'] = 'false';

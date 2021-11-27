@@ -1,1 +1,551 @@
-webpackJsonp([31],{809:function(l,n,e){"use strict";function u(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,26,"div",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](2,0,null,null,23,"div",[],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.selectThis(l.context.$implicit)&&u}return u},null,null)),p["ɵdid"](3,278528,null,0,M.h,[p.IterableDiffers,p.KeyValueDiffers,p.ElementRef,p.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](6,null,[""," "])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](8,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](9,null,["",""])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](11,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](12,null,["",""])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](14,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](15,null,["",""])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](17,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](18,null,["",""])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](20,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](21,null,["",""])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](23,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),p["ɵted"](24,null,["",""])),(l()(),p["ɵted"](-1,null,["\n     \n        "])),(l()(),p["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,3,0,"true"==n.context.$implicit.selected?"scrollmenu-list selected":"scrollmenu-list")},function(l,n){l(n,6,0,n.context.$implicit.complaints_id);l(n,9,0,n.context.$implicit.vehicle_id);l(n,12,0,n.context.$implicit.problem_id);l(n,15,0,n.context.$implicit.date_of_complaint);l(n,18,0,n.context.$implicit.date_of_reminder);l(n,21,0,n.context.$implicit.details);l(n,24,0,n.context.$implicit.km_reading)})}function t(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),p["ɵdid"](1,16384,[[4,4]],0,A.a,[p.ElementRef],{value:[0,"value"]},null),(l()(),p["ɵted"](2,null,["",""]))],function(l,n){l(n,1,0,p["ɵinlineInterpolate"](1,"",n.context.$implicit.vehicle_id,""))},function(l,n){l(n,2,0,n.context.$implicit.vehicle_number)})}function i(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,22,"ion-item",[["class","label-select item item-block"],["style","margin-top: 0px !important;"]],null,null,null,O.b,O.a)),p["ɵdid"](1,1097728,null,3,D.a,[P.a,T.a,p.ElementRef,p.Renderer,[2,k.a]],null,null),p["ɵqud"](335544320,1,{contentLabel:0}),p["ɵqud"](603979776,2,{_buttons:1}),p["ɵqud"](603979776,3,{_icons:1}),p["ɵdid"](5,16384,null,0,x.a,[],null,null),(l()(),p["ɵted"](-1,2,["\n      "])),(l()(),p["ɵeld"](7,0,null,1,2,"ion-label",[["floating",""]],null,null,null,null,null)),p["ɵdid"](8,16384,[[1,4]],0,V.a,[T.a,p.ElementRef,p.Renderer,[8,""],[8,null],[8,null],[8,null]],null,null),(l()(),p["ɵted"](-1,null,["VEHICLE NUMBER"])),(l()(),p["ɵted"](-1,2,["\n\n      "])),(l()(),p["ɵeld"](11,0,null,3,10,"ion-select",[["interface","action-sheet"],["style","border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"]],[[2,"select-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"],[null,"click"],[null,"keyup.space"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==p["ɵnov"](l,12)._click(e)&&u}if("keyup.space"===n){u=!1!==p["ɵnov"](l,12)._keyup()&&u}if("ngModelChange"===n){u=!1!==(t.vehicle_id=e)&&u}if("ionChange"===n){u=!1!==t.change(e)&&u}return u},w.b,w.a)),p["ɵdid"](12,1228800,null,1,L.a,[U.a,P.a,T.a,p.ElementRef,p.Renderer,[2,D.a],F.a],{interface:[0,"interface"]},{ionChange:"ionChange"}),p["ɵqud"](603979776,4,{options:1}),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[L.a]),p["ɵdid"](15,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](17,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵand"](16777216,null,null,1,null,t)),p["ɵdid"](20,802816,null,0,M.i,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,2,["\n    "]))],function(l,n){var e=n.component;l(n,12,0,"action-sheet");l(n,15,0,e.vehicle_id);l(n,20,0,e.vehicles)},function(l,n){l(n,11,0,p["ɵnov"](n,12)._disabled,p["ɵnov"](n,17).ngClassUntouched,p["ɵnov"](n,17).ngClassTouched,p["ɵnov"](n,17).ngClassPristine,p["ɵnov"](n,17).ngClassDirty,p["ɵnov"](n,17).ngClassValid,p["ɵnov"](n,17).ngClassInvalid,p["ɵnov"](n,17).ngClassPending)})}function o(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,23,"ion-row",[["class","selected-details row"]],null,null,null,null,null)),p["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](3,0,null,null,4,"ion-col",[["class","text-center col"],["col-4",""],["style","color: white;"]],null,null,null,null,null)),p["ɵdid"](4,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](6,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/driver.png"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](9,0,null,null,5,"ion-col",[["class","text-center col"],["col-4",""],["style","color: white;"]],null,null,null,null,null)),p["ɵdid"](10,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](12,0,null,null,1,"h6",[["style","margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;"]],null,null,null,null,null)),(l()(),p["ɵted"](13,null,["",""])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](16,0,null,null,6,"ion-col",[["class","text-center col"],["col-4",""]],null,null,null,null,null)),p["ɵdid"](17,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,[" \n\n        "])),(l()(),p["ɵeld"](19,0,null,null,2,"button",[["ion-button",""],["round",""],["style","margin-top: 15px;"]],null,[[null,"click"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!=(t.isSelectedBill=!t.isSelectedBill)&&u}return u},j.b,j.a)),p["ɵdid"](20,1097728,null,0,J.a,[[8,""],T.a,p.ElementRef,p.Renderer],{round:[0,"round"]},null),(l()(),p["ɵted"](-1,0,["CHANGE"])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,20,0,"")},function(l,n){l(n,13,0,n.component.vehicle_number)})}function d(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,4,"ion-col",[["class","col"],["col-12",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openCameraPopup()&&u}return u},null,null)),p["ɵdid"](1,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n            "])),(l()(),p["ɵeld"](3,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-camera"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n          "]))],null,null)}function a(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,7,"ion-col",[["class","col"],["col-12",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openCameraPopup()&&u}return u},null,null)),p["ɵdid"](1,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n            "])),(l()(),p["ɵeld"](3,0,null,null,0,"img",[["style","opacity: 0.9 !important;"]],[[8,"src",4]],null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n           "])),(l()(),p["ɵeld"](5,0,null,null,1,"ion-icon",[["class","edit-pencil"],["ios","ios-create"],["md","md-create"],["role","img"],["style","position: absolute;right: 19px;top: 21px;"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](6,147456,null,0,K.a,[T.a,p.ElementRef,p.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),p["ɵted"](-1,null,["\n    \n          "]))],function(l,n){l(n,6,0,"ios-create","md-create")},function(l,n){l(n,3,0,n.component.img.image_url);l(n,5,0,p["ɵnov"](n,6)._hidden)})}function s(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.savecomplaint()&&u}return u},j.b,j.a)),p["ɵdid"](1,1097728,null,0,J.a,[[8,""],T.a,p.ElementRef,p.Renderer],{round:[0,"round"]},null),(l()(),p["ɵted"](-1,0,[" SAVE"]))],function(l,n){l(n,1,0,"")},null)}function r(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.updatecomplaint()&&u}return u},j.b,j.a)),p["ɵdid"](1,1097728,null,0,J.a,[[8,""],T.a,p.ElementRef,p.Renderer],{round:[0,"round"]},null),(l()(),p["ɵted"](-1,0,[" UPDATE"]))],function(l,n){l(n,1,0,"")},null)}function c(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,32,"ion-header",[],null,null,null,null,null)),p["ɵdid"](1,16384,null,0,q.a,[T.a,p.ElementRef,p.Renderer,[2,H.a]],null,null),(l()(),p["ɵted"](-1,null,["\n  "])),(l()(),p["ɵeld"](3,0,null,null,28,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,z.b,z.a)),p["ɵdid"](4,49152,null,0,W.a,[U.a,[2,H.a],[2,Z.a],T.a,p.ElementRef,p.Renderer],null,null),(l()(),p["ɵted"](-1,3,["\n    "])),(l()(),p["ɵeld"](6,0,null,3,24,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](7,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),p["ɵdid"](10,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n    \n      "])),(l()(),p["ɵeld"](14,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-7",""]],null,null,null,null,null)),p["ɵdid"](15,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](17,0,null,null,4,"ion-title",[],null,null,null,Q.b,Q.a)),p["ɵdid"](18,49152,null,0,X.a,[T.a,p.ElementRef,p.Renderer,[2,Y.a],[2,W.a]],null,null),(l()(),p["ɵted"](-1,0,["        \n          "])),(l()(),p["ɵeld"](20,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-file"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,0,["\n          ADD COMPLAINTS\n        "])),(l()(),p["ɵted"](-1,null,["\n\n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](24,0,null,null,5,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),p["ɵdid"](25,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](27,0,null,null,1,"ion-icon",[["color","danger"],["name","logo-youtube"],["role","img"],["style","font-size: 4.2rem;margin-top: 3px;"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](28,147456,null,0,K.a,[T.a,p.ElementRef,p.Renderer],{color:[0,"color"],name:[1,"name"]},null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,3,["\n  "])),(l()(),p["ɵted"](-1,null,["\n"])),(l()(),p["ɵted"](-1,null,["\n\n"])),(l()(),p["ɵeld"](34,0,null,null,176,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ll.b,ll.a)),p["ɵdid"](35,4374528,null,0,nl.a,[T.a,el.a,ul.a,p.ElementRef,p.Renderer,U.a,tl.a,p.NgZone,[2,H.a],[2,Z.a]],null,null),(l()(),p["ɵted"](-1,1,["\n  "])),(l()(),p["ɵeld"](37,0,null,1,163,"div",[["class","container white-section"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n\n  \n\n    "])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵeld"](42,0,null,null,35,"div",[["class","scroll-grid"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](44,0,null,null,25,"div",[["class","scrollmenu"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n       \n        "])),(l()(),p["ɵeld"](46,0,null,null,1,"a",[["href","#home"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["NUMBER"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](49,0,null,null,1,"a",[["href","#news"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["VEHICLE NUMBER"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](52,0,null,null,1,"a",[["href","#contact"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["PROBLEM PART & ID"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](55,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["COMPLAINT DATE"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](58,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["REMINDER DATE"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](61,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["DETAILS"])),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](64,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["KM READING"])),(l()(),p["ɵted"](-1,null,["\n\n        "])),(l()(),p["ɵand"](16777216,null,null,1,null,u)),p["ɵdid"](68,802816,null,0,M.i,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),p["ɵted"](-1,null,["\n\n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](71,0,null,null,5,"div",[["class","show-arrows"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](73,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-down"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n  \n        "])),(l()(),p["ɵeld"](75,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-right"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n  \n      "])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵeld"](80,0,null,null,2,"ion-badge",[["color","primary"],["style","margin-top: 13px;margin-left: 2px;padding: 7px;"]],null,null,null,null,null)),p["ɵdid"](81,16384,null,0,il.a,[T.a,p.ElementRef,p.Renderer],{color:[0,"color"]},null),(l()(),p["ɵted"](82,null,["Complaints # ",""])),(l()(),p["ɵted"](-1,null,["\n\n\n    "])),(l()(),p["ɵand"](16777216,null,null,1,null,i)),p["ɵdid"](85,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵand"](16777216,null,null,1,null,o)),p["ɵdid"](88,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵeld"](90,0,null,null,11,"div",[["class","label-float"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openProblemModal()&&u}return u},null,null)),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](92,0,null,null,5,"input",[["placeholder"," "],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==p["ɵnov"](l,93)._handleInput(e.target.value)&&u}if("blur"===n){u=!1!==p["ɵnov"](l,93).onTouched()&&u}if("compositionstart"===n){u=!1!==p["ɵnov"](l,93)._compositionStart()&&u}if("compositionend"===n){u=!1!==p["ɵnov"](l,93)._compositionEnd(e.target.value)&&u}if("ngModelChange"===n){u=!1!==(t.problem_id=e)&&u}return u},null,null)),p["ɵdid"](93,16384,null,0,B.DefaultValueAccessor,[p.Renderer2,p.ElementRef,[2,B.COMPOSITION_BUFFER_MODE]],null,null),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[B.DefaultValueAccessor]),p["ɵdid"](95,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](97,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](99,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["PROBLEM/WORK(PART & ID)"])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n\n\n\n\n    "])),(l()(),p["ɵeld"](103,0,null,null,40,"ion-row",[["class","complaint row"],["style","margin: 0 -5px;"]],null,null,null,null,null)),p["ɵdid"](104,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](106,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),p["ɵdid"](107,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](109,0,null,null,13,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](111,0,null,null,5,"input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==p["ɵnov"](l,112)._handleInput(e.target.value)&&u}if("blur"===n){u=!1!==p["ɵnov"](l,112).onTouched()&&u}if("compositionstart"===n){u=!1!==p["ɵnov"](l,112)._compositionStart()&&u}if("compositionend"===n){u=!1!==p["ɵnov"](l,112)._compositionEnd(e.target.value)&&u}if("ngModelChange"===n){u=!1!==(t.date_of_complaint=e)&&u}if("click"===n){u=!1!==t.openCalendarPopup()&&u}return u},null,null)),p["ɵdid"](112,16384,null,0,B.DefaultValueAccessor,[p.Renderer2,p.ElementRef,[2,B.COMPOSITION_BUFFER_MODE]],null,null),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[B.DefaultValueAccessor]),p["ɵdid"](114,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](116,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](118,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["COMPLAINT"])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](121,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-calendar"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n    \n        "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](125,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),p["ɵdid"](126,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](128,0,null,null,13,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](130,0,null,null,5,"input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==p["ɵnov"](l,131)._handleInput(e.target.value)&&u}if("blur"===n){u=!1!==p["ɵnov"](l,131).onTouched()&&u}if("compositionstart"===n){u=!1!==p["ɵnov"](l,131)._compositionStart()&&u}if("compositionend"===n){u=!1!==p["ɵnov"](l,131)._compositionEnd(e.target.value)&&u}if("ngModelChange"===n){u=!1!==(t.date_of_reminder=e)&&u}if("click"===n){u=!1!==t.openCalendarPopup2()&&u}return u},null,null)),p["ɵdid"](131,16384,null,0,B.DefaultValueAccessor,[p.Renderer2,p.ElementRef,[2,B.COMPOSITION_BUFFER_MODE]],null,null),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[B.DefaultValueAccessor]),p["ɵdid"](133,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](135,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](137,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["REMINDER"])),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](140,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-calendar"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n    \n        "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n  \n\n\n\n    "])),(l()(),p["ɵeld"](145,0,null,null,41,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](146,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](148,0,null,null,23,"ion-col",[["class","col"],["col-9",""]],null,null,null,null,null)),p["ɵdid"](149,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n\n        "])),(l()(),p["ɵeld"](151,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](152,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵeld"](154,0,null,null,15,"ion-col",[["class","col"],["col-12",""],["style","padding-left: 27px;margin-top: -6px;"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openDetailPopup()&&u}return u},null,null)),p["ɵdid"](155,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n            "])),(l()(),p["ɵeld"](157,0,null,null,11,"div",[["class","label-float"],["style","padding-top: 8px;"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n              "])),(l()(),p["ɵeld"](159,0,null,null,5,"input",[["placeholder"," "],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==p["ɵnov"](l,160)._handleInput(e.target.value)&&u}if("blur"===n){u=!1!==p["ɵnov"](l,160).onTouched()&&u}if("compositionstart"===n){u=!1!==p["ɵnov"](l,160)._compositionStart()&&u}if("compositionend"===n){u=!1!==p["ɵnov"](l,160)._compositionEnd(e.target.value)&&u}if("ngModelChange"===n){u=!1!==(t.details=e)&&u}return u},null,null)),p["ɵdid"](160,16384,null,0,B.DefaultValueAccessor,[p.Renderer2,p.ElementRef,[2,B.COMPOSITION_BUFFER_MODE]],null,null),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[B.DefaultValueAccessor]),p["ɵdid"](162,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](164,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n              "])),(l()(),p["ɵeld"](166,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["DETAILS"])),(l()(),p["ɵted"](-1,null,["\n            "])),(l()(),p["ɵted"](-1,null,["\n    \n          "])),(l()(),p["ɵted"](-1,null,["    \n        "])),(l()(),p["ɵted"](-1,null,["  \n      "])),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](173,0,null,null,12,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),p["ɵdid"](174,16384,null,0,$.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵeld"](176,0,null,null,8,"ion-row",[["class","detail-picture row"]],null,null,null,null,null)),p["ɵdid"](177,16384,null,0,G.a,[],null,null),(l()(),p["ɵted"](-1,null,["\n          "])),(l()(),p["ɵand"](16777216,null,null,1,null,d)),p["ɵdid"](180,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["    \n          "])),(l()(),p["ɵand"](16777216,null,null,1,null,a)),p["ɵdid"](183,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["\n        "])),(l()(),p["ɵted"](-1,null,["      \n      "])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n\n    "])),(l()(),p["ɵeld"](188,0,null,null,11,"div",[["class","label-float"],["style","padding-top: 8px;"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](190,0,null,null,5,"input",[["placeholder"," "],["type","tel"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,e){var u=!0,t=l.component;if("input"===n){u=!1!==p["ɵnov"](l,191)._handleInput(e.target.value)&&u}if("blur"===n){u=!1!==p["ɵnov"](l,191).onTouched()&&u}if("compositionstart"===n){u=!1!==p["ɵnov"](l,191)._compositionStart()&&u}if("compositionend"===n){u=!1!==p["ɵnov"](l,191)._compositionEnd(e.target.value)&&u}if("ngModelChange"===n){u=!1!==(t.km_reading=e)&&u}return u},null,null)),p["ɵdid"](191,16384,null,0,B.DefaultValueAccessor,[p.Renderer2,p.ElementRef,[2,B.COMPOSITION_BUFFER_MODE]],null,null),p["ɵprd"](1024,null,B.NG_VALUE_ACCESSOR,function(l){return[l]},[B.DefaultValueAccessor]),p["ɵdid"](193,671744,null,0,B.NgModel,[[8,null],[8,null],[8,null],[2,B.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,B.NgControl,null,[B.NgModel]),p["ɵdid"](195,16384,null,0,B.NgControlStatus,[B.NgControl],null,null),(l()(),p["ɵted"](-1,null,["\n      "])),(l()(),p["ɵeld"](197,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["KM READING"])),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵted"](-1,null,["\n\n   \n\n  "])),(l()(),p["ɵted"](-1,1,["\n  "])),(l()(),p["ɵeld"](202,0,null,1,7,"div",[["class","text-center mt-4"]],null,null,null,null,null)),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵand"](16777216,null,null,1,null,s)),p["ɵdid"](205,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["\n    "])),(l()(),p["ɵand"](16777216,null,null,1,null,r)),p["ɵdid"](208,16384,null,0,M.j,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),p["ɵted"](-1,null,["\n  "])),(l()(),p["ɵted"](-1,1,["\n"])),(l()(),p["ɵted"](-1,null,[" \n\n\n"]))],function(l,n){var e=n.component;l(n,28,0,"danger","logo-youtube");l(n,68,0,e.complaints);l(n,81,0,"primary");l(n,85,0,!e.isSelectedBill);l(n,88,0,e.isSelectedBill);l(n,95,0,e.problem_id);l(n,114,0,e.date_of_complaint);l(n,133,0,e.date_of_reminder);l(n,162,0,e.details);l(n,180,0,null==e.img);l(n,183,0,null!=e.img);l(n,193,0,e.km_reading);l(n,205,0,!e.isupdate);l(n,208,0,e.isupdate)},function(l,n){var e=n.component;l(n,3,0,p["ɵnov"](n,4)._hidden,p["ɵnov"](n,4)._sbPadding);l(n,27,0,p["ɵnov"](n,28)._hidden);l(n,34,0,p["ɵnov"](n,35).statusbarPadding,p["ɵnov"](n,35)._hasRefresher);l(n,82,0,e.complaints_id);l(n,92,0,p["ɵnov"](n,97).ngClassUntouched,p["ɵnov"](n,97).ngClassTouched,p["ɵnov"](n,97).ngClassPristine,p["ɵnov"](n,97).ngClassDirty,p["ɵnov"](n,97).ngClassValid,p["ɵnov"](n,97).ngClassInvalid,p["ɵnov"](n,97).ngClassPending);l(n,111,0,p["ɵnov"](n,116).ngClassUntouched,p["ɵnov"](n,116).ngClassTouched,p["ɵnov"](n,116).ngClassPristine,p["ɵnov"](n,116).ngClassDirty,p["ɵnov"](n,116).ngClassValid,p["ɵnov"](n,116).ngClassInvalid,p["ɵnov"](n,116).ngClassPending);l(n,130,0,p["ɵnov"](n,135).ngClassUntouched,p["ɵnov"](n,135).ngClassTouched,p["ɵnov"](n,135).ngClassPristine,p["ɵnov"](n,135).ngClassDirty,p["ɵnov"](n,135).ngClassValid,p["ɵnov"](n,135).ngClassInvalid,p["ɵnov"](n,135).ngClassPending);l(n,159,0,p["ɵnov"](n,164).ngClassUntouched,p["ɵnov"](n,164).ngClassTouched,p["ɵnov"](n,164).ngClassPristine,p["ɵnov"](n,164).ngClassDirty,p["ɵnov"](n,164).ngClassValid,p["ɵnov"](n,164).ngClassInvalid,p["ɵnov"](n,164).ngClassPending);l(n,190,0,p["ɵnov"](n,195).ngClassUntouched,p["ɵnov"](n,195).ngClassTouched,p["ɵnov"](n,195).ngClassPristine,p["ɵnov"](n,195).ngClassDirty,p["ɵnov"](n,195).ngClassValid,p["ɵnov"](n,195).ngClassInvalid,p["ɵnov"](n,195).ngClassPending)})}Object.defineProperty(n,"__esModule",{value:!0});var p=e(0),m=(e(2),e(26),e(187)),g=e(183),f=e(84),h=function(){function l(l,n,e,u,t,i){var o=this;this.navCtrl=l,this.navParams=n,this.modalCtrl=e,this.codes=u,this.rest=t,this.message=i,this.vari="",this.isSelectedBill=!1,this.complaints_id="",this.vehicle_id="",this.srth_id="",this.problem_id="",this.date_of_complaint="",this.date_of_reminder="",this.details="",this.km_reading="",this.status="",this.last_maint_id="",this.opt_counter="",this.vehicle_number="",this.isupdate=!1,this.vehicles=[],this.complaints=[],this.problems=[],this.img=null;if("true"==this.navParams.get("update")){var d=this.navParams.get("selectedcomplaint");this.complaints_id=d.complaints_id,this.vehicle_id=d.vehicle_id,this.srth_id=d.srth_id,this.problem_id=d.problem_id,this.date_of_complaint=d.date_of_complaint,this.date_of_reminder=d.date_of_reminder,this.details=d.details,this.km_reading=d.km_reading,this.status=d.status,this.isupdate=!0}var a=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_VEHICLE_DETAILS,{vehicle_owner_srth_id:a[0].srth_id}).then(function(l){"0"==l._ReturnCode&&(o.vehicles=l.data)}),""==this.complaints_id&&this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID,{}).then(function(l){o.complaints_id=Number(l.data)+1})}return l.prototype.updatecomplaint=function(){var l=this;this.rest.post(this.codes.UPDATE_COMPLAINTS,{complaints_id:this.complaints_id,vehicle_id:this.vehicle_id,srth_id:this.srth_id,problem_id:this.problem_id,date_of_complaint:this.date_of_complaint,date_of_reminder:this.date_of_reminder,details:this.details,km_reading:this.km_reading,status:this.status,last_maint_id:"srth-app",opt_counter:"0",problems:this.problems}).then(function(n){"0"==n._ReturnCode&&l.navCtrl.pop()})},l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AddComplaintsPage")},l.prototype.change=function(l){this.isSelectedBill=!0;for(var n=0;n<this.vehicles.length;n++)this.vehicles[n].vehicle_id==l&&(this.vehicle_number=this.vehicles[n].vehicle_number)},l.prototype.openCameraPopup=function(){var l=this;if(""!=this.vehicle_id&&null!=this.vehicle_id)if(""!=this.date_of_complaint&&null!=this.date_of_complaint)if(""!=this.date_of_reminder&&null!=this.date_of_reminder)if(""!=this.problem_id&&null!=this.problem_id)if(""!=this.details&&null!=this.details){var n={vehicle_id:this.vehicle_id,complaint_date:this.date_of_complaint,reminder_date:this.date_of_reminder,details:this.details},e=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO)),u={srth_id:e[0].srth_id,worker_type:"",worker_id:0,document_type:"complaintimage",type:"complaints",file_name:e[0].srth_id+"_"+Date.now()+".jpg",tags:JSON.stringify(n)},t=this.modalCtrl.create("UploadImagePage",{request:u,image:this.img});t.onDidDismiss(function(n){l.img=null!=localStorage.getItem("selectedimage")&&void 0!=localStorage.getItem("selectedimage")?JSON.parse(localStorage.getItem("selectedimage")):null}),t.present()}else this.message.displayToast("Please enter details");else this.message.displayToast("Please enter problem id");else this.message.displayToast("Please select date of reminder");else this.message.displayToast("Please select date of complaint");else this.message.displayToast("Please select vehicle")},l.prototype.openProblemModal=function(){var l=this,n=this.modalCtrl.create("ProblemWorkPartModalPage");n.onDidDismiss(function(n){if(void 0!=localStorage.getItem("problem_id")){l.problems=JSON.parse(localStorage.getItem("problem_id"));for(var e="",u="",t=0;t<l.problems.length;t++)e+=l.problems[t].problem_id+" ",u+=l.problems[t].problem_name+"-"+l.problems[t].vehicle_part_name+" ";l.problem_id=e,l.problem_id=u}}),n.present()},l.prototype.openDetailPopup=function(){var l=this,n=this.modalCtrl.create("DetailsModalPage");n.onDidDismiss(function(n){l.details=localStorage.getItem(l.codes.DETAILS)}),n.present()},l.prototype.selectThis=function(l){this.complaints_id=l.complaints_id,this.vehicle_id=l.vehicle_id,this.srth_id=l.srth_id,this.problem_id=l.problem_id,this.date_of_complaint=l.date_of_complaint,this.date_of_reminder=l.date_of_reminder,this.details=l.details,this.km_reading=l.km_reading,this.status=l.status;for(var n=0;n<this.complaints.length;n++)this.complaints[n].selected="false";l.selected="true",this.isupdate=!0},l.prototype.getcomplaints=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_COMPLAINTS,{srth_id:n[0].srth_id}).then(function(n){if("0"==n._ReturnCode){l.complaints=n.data;for(var e=0;e<l.complaints.length;e++)if(void 0!=l.complaints[e].problems){for(var u="",t=0;t<l.complaints[e].problems.length;t++)u+=l.complaints[e].problems[t].problem_id+" ";l.complaints[e].problem_id=u}}})},l.prototype.openCalendarPopup=function(){var l=this,n=this.modalCtrl.create("CalendarModalPage");n.onDidDismiss(function(n){l.date_of_complaint=localStorage.getItem(l.codes.DATE)}),n.present()},l.prototype.openCalendarPopup2=function(){var l=this,n=this.modalCtrl.create("CalendarModalPage");n.onDidDismiss(function(n){l.date_of_reminder=localStorage.getItem(l.codes.DATE)}),n.present()},l.prototype.savecomplaint=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO)),e={vehicle_id:this.vehicle_id,srth_id:n[0].srth_id,problem_id:this.problem_id,date_of_complaint:this.date_of_complaint,date_of_reminder:this.date_of_reminder,details:this.details,km_reading:this.km_reading,status:this.status,last_maint_id:"srth-app",opt_counter:"0",problems:this.problems};console.error("Check the problems : "+JSON.stringify(e)),this.rest.post(this.codes.SAVE_COMPLAINTS,e).then(function(n){if("0"==n._ReturnCode){e.complaints_id=l.complaints_id,e.selected=!1,l.problem_id="",l.date_of_complaint="",l.date_of_reminder="",l.details="",l.km_reading="",l.complaints_id++,l.complaints.push(e);for(var u=0;u<l.complaints.length;u++)if(void 0!=l.complaints[u].problems){for(var t="",i=0;i<l.complaints[u].problems.length;i++)t+=l.complaints[u].problems[i].problem_id+" ";l.complaints[u].problem_id=t}}})},l}(),_=function(){return function(){}}(),v=e(498),C=e(499),b=e(500),R=e(501),E=e(502),N=e(503),I=e(504),S=e(505),y=e(506),M=e(16),A=e(123),O=e(509),D=e(31),P=e(28),T=e(4),k=e(58),x=e(121),V=e(59),w=e(884),L=e(189),U=e(13),F=e(24),B=e(20),G=e(186),$=e(185),j=e(39),J=e(27),K=e(41),q=e(85),H=e(8),z=e(188),W=e(37),Z=e(29),Q=e(508),X=e(86),Y=e(42),ll=e(507),nl=e(32),el=e(7),ul=e(14),tl=e(40),il=e(196),ol=e(17),dl=e(122),al=p["ɵcrt"]({encapsulation:2,styles:[],data:{}}),sl=p["ɵccf"]("page-add-complaints",h,function(l){return p["ɵvid"](0,[(l()(),p["ɵeld"](0,0,null,null,1,"page-add-complaints",[],null,null,null,c,al)),p["ɵdid"](1,49152,null,0,h,[Z.a,ol.a,dl.a,f.a,g.a,m.a],null,null)],null,null)},{},{},[]),rl=e(184),cl=e(55);e.d(n,"AddComplaintsPageModuleNgFactory",function(){return pl});var pl=p["ɵcmf"](_,[],function(l){return p["ɵmod"]([p["ɵmpd"](512,p.ComponentFactoryResolver,p["ɵCodegenComponentFactoryResolver"],[[8,[v.a,C.a,b.a,R.a,E.a,N.a,I.a,S.a,y.a,sl]],[3,p.ComponentFactoryResolver],p.NgModuleRef]),p["ɵmpd"](4608,M.l,M.k,[p.LOCALE_ID,[2,M.t]]),p["ɵmpd"](4608,B["ɵi"],B["ɵi"],[]),p["ɵmpd"](4608,B.FormBuilder,B.FormBuilder,[]),p["ɵmpd"](512,M.b,M.b,[]),p["ɵmpd"](512,B["ɵba"],B["ɵba"],[]),p["ɵmpd"](512,B.FormsModule,B.FormsModule,[]),p["ɵmpd"](512,B.ReactiveFormsModule,B.ReactiveFormsModule,[]),p["ɵmpd"](512,rl.a,rl.a,[]),p["ɵmpd"](512,rl.b,rl.b,[]),p["ɵmpd"](512,_,_,[]),p["ɵmpd"](256,cl.a,h,[])])})},884:function(l,n,e){"use strict";function u(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"div",[["class","select-placeholder select-text"]],null,null,null,null,null)),(l()(),o["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.placeholder)})}function t(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"div",[["class","select-text"]],null,null,null,null,null)),(l()(),o["ɵted"](1,null,["",""]))],null,function(l,n){var e=n.component;l(n,1,0,e.selectedText||e._text)})}function i(l){return o["ɵvid"](0,[(l()(),o["ɵand"](16777216,null,null,1,null,u)),o["ɵdid"](1,16384,null,0,d.j,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵand"](16777216,null,null,1,null,t)),o["ɵdid"](3,16384,null,0,d.j,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵeld"](4,0,null,null,1,"div",[["class","select-icon"]],null,null,null,null,null)),(l()(),o["ɵeld"](5,0,null,null,0,"div",[["class","select-icon-inner"]],null,null,null,null,null)),(l()(),o["ɵeld"](6,0,null,null,1,"button",[["aria-haspopup","true"],["class","item-cover"],["ion-button","item-cover"],["type","button"]],[[8,"id",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,a.b,a.a)),o["ɵdid"](7,1097728,null,0,s.a,[[8,"item-cover"],r.a,o.ElementRef,o.Renderer],null,null)],function(l,n){var e=n.component;l(n,1,0,!e._text);l(n,3,0,e._text)},function(l,n){var e=n.component;l(n,6,0,e.id,e._labelId,e._disabled)})}e.d(n,"a",function(){return c}),n.b=i;var o=e(0),d=e(16),a=e(39),s=e(27),r=e(4),c=(e(28),e(24),o["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([31],{
+
+/***/ 914:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MechanicKhataPageModule", function() { return MechanicKhataPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_khata__ = __webpack_require__(990);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var MechanicKhataPageModule = /** @class */ (function () {
+    function MechanicKhataPageModule() {
+    }
+    MechanicKhataPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__mechanic_khata__["a" /* MechanicKhataPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__mechanic_khata__["a" /* MechanicKhataPage */]),
+            ],
+        })
+    ], MechanicKhataPageModule);
+    return MechanicKhataPageModule;
+}());
+
+//# sourceMappingURL=mechanic-khata.module.js.map
+
+/***/ }),
+
+/***/ 990:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MechanicKhataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MechanicKhataPage = /** @class */ (function () {
+    function MechanicKhataPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl, ldctrl) {
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.ldctrl = ldctrl;
+        this.bills = [];
+        this.isupdate = false;
+        this.isupdate1 = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.selectedfilters = [];
+    }
+    MechanicKhataPage.prototype.selectThisDetails = function (bill) {
+        for (var i = 0; i < this.billDetails.length; i++) {
+            this.billDetails[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < this.filterbillDetails.length; i++) {
+            this.filterbillDetails[i]['selected'] = 'false';
+        }
+        bill['selected'] = 'true';
+        this.isupdate1 = true;
+        //Fetch bill by bill id
+        var data = {
+            "bill_id": bill['bill_id']
+        };
+        this.rest.post(this.codes.GET_BILL_DETAILS_BY_BILL_ID, data).then(function (resp) {
+            console.debug("GET BILL DETAILS : " + JSON.stringify(resp));
+            var bill_details = resp['data'];
+            localStorage.setItem('bill_details', JSON.stringify(bill_details));
+        });
+    };
+    MechanicKhataPage.prototype.shopBuyReport = function () {
+        var modalCtrl = this.modalCtrl.create('ReportModalPage', { "name": "mechanicbuyreport" });
+        modalCtrl.present();
+    };
+    MechanicKhataPage.prototype.shopBillReport = function () {
+        var modalCtrl = this.modalCtrl.create('ReportModalPage', { "name": "mechanicbillreport" });
+        modalCtrl.present();
+    };
+    MechanicKhataPage.prototype.getShops = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'mechanic') {
+                        _this.shops.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.shops.length; i++) {
+                    var searchobj = {
+                        "type": "mechanic",
+                        "name": _this.shops[i]['name'],
+                        "id": "",
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj2 = {
+                        "type": "bills",
+                        "id": _this.bills[i]['bill_id'],
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": _this.bills[i]['total_bill']
+                    };
+                    _this.search.push(searchobj2);
+                }
+            }
+        });
+    };
+    MechanicKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MechanicKhataPage');
+    };
+    MechanicKhataPage.prototype.openMechanicBillPage = function () {
+        this.navCtrl.push('MechanicBillPage', { 'update': 'false' });
+    };
+    MechanicKhataPage.prototype.update = function () {
+        this.navCtrl.push('MechanicBillPage', { 'update': 'true' });
+    };
+    MechanicKhataPage.prototype.updateDetails = function () {
+        this.navCtrl.push('ShopBillDetailsPage', { "worker_type": "mechanic", 'update': 'true' });
+    };
+    MechanicKhataPage.prototype.ionViewWillEnter = function () {
+        var ld = this.ldctrl.create({
+            'content': 'Loading the bills ...'
+        });
+        this.getBillsBySrthId(ld);
+        this.getBillDetailsBySrthId();
+    };
+    MechanicKhataPage.prototype.getBillsBySrthId = function (ld) {
+        var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "mechanic"
+        };
+        ld.present();
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            ld.dismiss();
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                var _loop_1 = function (i) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                    localStorage.setItem("mechanic_bills", JSON.stringify(_this.bills));
+                    dt = {
+                        "image_id": _this.bills[i]['bill_image_id']
+                    };
+                    _this.rest.post(_this.codes.GET_IMAGE_BY_IMAGE_ID, dt).then(function (resp) {
+                        if (resp['data'].length > 0) {
+                            _this.bills[i]['image_content'] = resp['data'][0]['image_content'];
+                            _this.filterbills[i]['image_content'] = resp['data'][0]['image_content'];
+                        }
+                    });
+                };
+                var dt;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _loop_1(i);
+                }
+                _this.getShops();
+            }
+        });
+    };
+    MechanicKhataPage.prototype.getBillDetailsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "mechanic"
+        };
+        this.rest.post(this.codes.GET_PROBLEM_PARTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.billDetails = resp['data'];
+                _this.filterbillDetails = _this.billDetails;
+                for (var i = 0; i < _this.billDetails.length; i++) {
+                    _this.billDetails[i]['selected'] = 'false';
+                    _this.filterbillDetails[i]['selected'] = 'false';
+                }
+            }
+        });
+    };
+    MechanicKhataPage.prototype.selectThis = function (bill) {
+        for (var i = 0; i < this.bills.length; i++) {
+            this.bills[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < this.filterbills.length; i++) {
+            this.filterbills[i]['selected'] = 'false';
+        }
+        bill['selected'] = 'true';
+        this.isupdate = true;
+        localStorage.setItem('bill', JSON.stringify(bill));
+    };
+    MechanicKhataPage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: 'Are you sure you want to delete this bill?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletebill();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    MechanicKhataPage.prototype.deletebill = function () {
+        var _this = this;
+        var bill = JSON.parse(localStorage.getItem('bill'));
+        var ld = this.ldctrl.create({
+            'content': 'Refreshing the bill list : ' + bill['bill_id']
+        });
+        var data = {
+            "bill_id": bill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.getBillsBySrthId(ld);
+            }
+        });
+    };
+    MechanicKhataPage.prototype.openShopBillDetailsPage = function () {
+        this.navCtrl.push('ShopBillDetailsPage', { "worker_type": "mechanic" });
+    };
+    MechanicKhataPage.prototype.clickedsearchitem = function (sr) {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+        if (sr['type'] == 'mechanic') {
+            this.searchTerm = sr['name'];
+            this.filterbills = [];
+            for (var i = 0; i < this.bills.length; i++) {
+                if (this.bills[i]['person_shop_name'] == sr['name']) {
+                    this.filterbills.push(this.bills[i]);
+                }
+            }
+        }
+        else if (sr['type'] == 'bills') {
+            for (var i = 0; i < this.bills.length; i++) {
+                if (this.bills[i]['bill_id'] == sr['id']) {
+                    this.filterbills = [];
+                    this.searchTerm = sr['id'];
+                    this.filterbills.push(this.bills[i]);
+                    this.selectThis(this.bills[i]);
+                }
+            }
+        }
+    };
+    MechanicKhataPage.prototype.clicksearchbar = function () {
+        this.displayfilter = true;
+        this.displaysearchitems = this.search;
+    };
+    MechanicKhataPage.prototype.closesearchbar = function () {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+    };
+    MechanicKhataPage.prototype.searchBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('BuyDetailsSearchModalPage');
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("searchbilldetails") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("searchbilldetails"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterbillDetails = _this.billDetails;
+                    return;
+                }
+                _this.filterbillDetails = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'problems') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['problem_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'vehicles') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['vehicle_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'mechanic') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['person_shop_name'] == _this.selectedfilters[i]['name']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['bill_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterbillDetails));
+            }
+        });
+        mdl.present();
+    };
+    MechanicKhataPage.prototype.removeTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterbillDetails = this.billDetails;
+            return;
+        }
+        this.filterbillDetails = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'problems') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'vehicles') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'mechanic') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+        }
+    };
+    MechanicKhataPage.prototype.getItems = function ($event) {
+        var _this = this;
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filterbills = this.bills;
+            this.isupdate = false;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            for (var i = 0; i < this.filterbills.length; i++) {
+                this.filterbills[i]['selected'] = 'false';
+            }
+        }
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    MechanicKhataPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-mechanic-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-khata/mechanic-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>\n          MECHANIC KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube text-right">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <ion-row class="document-button">\n      <ion-col col-6 (click)="shopBuyReport()">\n        <div>\n          MECHANIC REPAIR REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n      <ion-col col-6 (click)="shopBillReport()">\n        <div>\n          MECHANIC BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n    </ion-row>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC, BILL NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>\n    </div>\n\n    <ion-card *ngIf="displayfilter">\n      <ion-card-content>\n        <ion-list >\n          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">\n           <div *ngIf="sr[\'type\']==\'mechanic\'">\n            <p style="color: #000;">{{sr[\'name\']}}</p>\n             <p>Mechanic</p>\n            </div>\n           <div *ngIf="sr[\'type\']==\'bills\'">\n              <p style="color: #000;">{{sr[\'id\']}} ~ {{sr[\'amount\']}}</p>\n              <p>Mechanic : {{sr[\'name\']}}</p>\n           </div>\n          </ion-item>\n        </ion-list>\n      </ion-card-content>\n    </ion-card>\n    \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n        <a href="#home">MECHANIC</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">PURCHASE DATE</a>\n        <a href="#support">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n        \n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >\n          <div>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'vehicle_number\']}}</p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>\n            <span *ngIf="bill[\'image_content\'] != null && bill[\'image_content\'] != undefined">\n              <img [src]="bill[\'image_content\']" style="width:11% !important" imageViewer />\n            </span>\n          </p>\n        </div>\n\n        </div>\n  \n     \n        </div>\n    \n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Erase &nbsp; <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n  \n    \n \n\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>\n    </div>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'mechanic\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n\n\n\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n      <a href="#home">BILL NUMBER</a>\n      <a href="#news">MECHANIC</a>\n      <!-- <a href="#news">BUSINESS NAME</a> -->\n      <a href="#contact">VEHICLE</a>\n      <a href="#about">REPAIR DATE</a>\n      <!-- <a href="#about">EXCHANGE DATE</a> -->\n      <a href="#support">PROBLEM</a>\n      <!-- <a href="#blog">PARTS</a> -->\n      <!-- <a href="#tools">QUANTITY</a>\n      <a href="#tools">RATE/PC</a> --> \n      <a href="#tools">TOTAL</a>\n      <a href="#tools">DETAIL</a>\n      <!-- <a href="#tools">ID(OPTIONAL)</a> --> \n      <a href="#tools">KM READING</a>\n\n\n      <!-- (click)="selectThis(1)" -->\n  \n        <div *ngFor="let detail of filterbillDetails" [ngClass]="detail[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" (click)="selectThisDetails(detail)">\n          <p>{{detail[\'bill_id\']}}</p>\n          <p>{{detail[\'person_shop_name\']}}</p>\n          <!-- <p>XYZ BUSINESS</p> -->\n          <p>{{detail[\'vehicle_number\']}}</p>\n          <p>{{detail[\'date_of_repair\']}}</p>\n          <!-- <p>MECHANICAL</p> -->\n          <p>{{detail[\'problem_name\']}}</p>\n          <!-- <p>ONE</p> -->\n          <!-- <p>RS 200</p> -->\n          <p>RS {{detail[\'total_amount\']}}</p>\n          <p>{{detail[\'additional_info\']}}</p>\n          <!-- <p>{{detail[\'\']}}</p> -->\n          <!-- <p>ID123</p> -->\n          <p>{{detail[\'km_reading\']}}</p>\n     \n        </div>\n  \n       \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n      \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openShopBillDetailsPage()">BILL REPAIR DETAILS</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n\n\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          MECHANIC KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <ion-row class="document-button">\n      <ion-col col-6 >\n        <div>\n          MECHANIC REPAIR REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n      <ion-col col-6 >\n        <div>\n          MECHANIC BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC NAME,BILL NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n    \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n        <a href="#home">MECHANIC NAME</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">BILL DATE</a>\n        <a href="#support">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n\n\n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >\n          <div>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'vehicle_id\']}}</p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p></p>\n        </div>\n\n        </div>\n\n       \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Update</button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete</button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n \n   \n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>\n    </div>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF REPAIR, MECHANIC"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">BILL NUMBER</a>\n        <a href="#news">MECHANIC NAME</a>\n        <a href="#contact">VEHICLE</a>\n        <a href="#about">REPAIR DATE</a>\n        <a href="#about">EXCHANGE DATE</a>\n        <a href="#support">REPAIR TYPE</a>\n        <a href="#blog">ITEM</a>\n        <a href="#tools">QUANTITY</a>\n        <a href="#tools">RATE PER PC</a>\n        <a href="#tools">TOTAL</a>\n        <a href="#tools">DETAIL</a>\n        <a href="#tools">ID(OPTIONAL)</a>\n        <a href="#tools">KM READING</a>\n\n        <div class="scrollmenu-list" id="1" (click)="selectThis(1)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="2" (click)="selectThis(2)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="3" (click)="selectThis(3)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="4" (click)="selectThis(4)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openBillDescriptionPage()">BILL REPAIR DETAILS</button>\n    </div>\n\n\n  </div>\n</ion-content> \n -->\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-khata/mechanic-khata.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"]])
+    ], MechanicKhataPage);
+    return MechanicKhataPage;
+}());
+
+// import { MessageProvider } from './../../providers/message/message';
+// import { CodesProvider } from './../../providers/codes/codes';
+// import { RestProvider } from './../../providers/rest/rest';
+// import { Component } from '@angular/core';
+// import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+// import { MechanicPage } from '../mechanic/mechanic';
+// import { BillDescriptionPage } from '../bill-description/bill-description';
+// import { MechanicBillPage } from '../mechanic-bill/mechanic-bill';
+// @IonicPage()
+// @Component({
+//   selector: 'page-mechanic-khata',
+//template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-khata/mechanic-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>\n          MECHANIC KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube text-right">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <ion-row class="document-button">\n      <ion-col col-6 (click)="shopBuyReport()">\n        <div>\n          MECHANIC REPAIR REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n      <ion-col col-6 (click)="shopBillReport()">\n        <div>\n          MECHANIC BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n    </ion-row>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC, BILL NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>\n    </div>\n\n    <ion-card *ngIf="displayfilter">\n      <ion-card-content>\n        <ion-list >\n          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">\n           <div *ngIf="sr[\'type\']==\'mechanic\'">\n            <p style="color: #000;">{{sr[\'name\']}}</p>\n             <p>Mechanic</p>\n            </div>\n           <div *ngIf="sr[\'type\']==\'bills\'">\n              <p style="color: #000;">{{sr[\'id\']}} ~ {{sr[\'amount\']}}</p>\n              <p>Mechanic : {{sr[\'name\']}}</p>\n           </div>\n          </ion-item>\n        </ion-list>\n      </ion-card-content>\n    </ion-card>\n    \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n        <a href="#home">MECHANIC</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">PURCHASE DATE</a>\n        <a href="#support">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n        \n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >\n          <div>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'vehicle_number\']}}</p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>\n            <span *ngIf="bill[\'image_content\'] != null && bill[\'image_content\'] != undefined">\n              <img [src]="bill[\'image_content\']" style="width:11% !important" imageViewer />\n            </span>\n          </p>\n        </div>\n\n        </div>\n  \n     \n        </div>\n    \n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Erase &nbsp; <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n  \n    \n \n\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>\n    </div>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'mechanic\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n\n\n\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n      <a href="#home">BILL NUMBER</a>\n      <a href="#news">MECHANIC</a>\n      <!-- <a href="#news">BUSINESS NAME</a> -->\n      <a href="#contact">VEHICLE</a>\n      <a href="#about">REPAIR DATE</a>\n      <!-- <a href="#about">EXCHANGE DATE</a> -->\n      <a href="#support">PROBLEM</a>\n      <!-- <a href="#blog">PARTS</a> -->\n      <!-- <a href="#tools">QUANTITY</a>\n      <a href="#tools">RATE/PC</a> --> \n      <a href="#tools">TOTAL</a>\n      <a href="#tools">DETAIL</a>\n      <!-- <a href="#tools">ID(OPTIONAL)</a> --> \n      <a href="#tools">KM READING</a>\n\n\n      <!-- (click)="selectThis(1)" -->\n  \n        <div *ngFor="let detail of filterbillDetails" [ngClass]="detail[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" (click)="selectThisDetails(detail)">\n          <p>{{detail[\'bill_id\']}}</p>\n          <p>{{detail[\'person_shop_name\']}}</p>\n          <!-- <p>XYZ BUSINESS</p> -->\n          <p>{{detail[\'vehicle_number\']}}</p>\n          <p>{{detail[\'date_of_repair\']}}</p>\n          <!-- <p>MECHANICAL</p> -->\n          <p>{{detail[\'problem_name\']}}</p>\n          <!-- <p>ONE</p> -->\n          <!-- <p>RS 200</p> -->\n          <p>RS {{detail[\'total_amount\']}}</p>\n          <p>{{detail[\'additional_info\']}}</p>\n          <!-- <p>{{detail[\'\']}}</p> -->\n          <!-- <p>ID123</p> -->\n          <p>{{detail[\'km_reading\']}}</p>\n     \n        </div>\n  \n       \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n      \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openShopBillDetailsPage()">BILL REPAIR DETAILS</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n\n\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          MECHANIC KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <ion-row class="document-button">\n      <ion-col col-6 >\n        <div>\n          MECHANIC REPAIR REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n      <ion-col col-6 >\n        <div>\n          MECHANIC BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" placeholder="SEARCH MECHANIC NAME,BILL NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n    \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n        <a href="#home">MECHANIC NAME</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">BILL DATE</a>\n        <a href="#support">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n\n\n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >\n          <div>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'vehicle_id\']}}</p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p></p>\n        </div>\n\n        </div>\n\n       \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Update</button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete</button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n \n   \n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openMechanicBillPage()">MECHANIC BILL</button>\n    </div>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF REPAIR, MECHANIC"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">BILL NUMBER</a>\n        <a href="#news">MECHANIC NAME</a>\n        <a href="#contact">VEHICLE</a>\n        <a href="#about">REPAIR DATE</a>\n        <a href="#about">EXCHANGE DATE</a>\n        <a href="#support">REPAIR TYPE</a>\n        <a href="#blog">ITEM</a>\n        <a href="#tools">QUANTITY</a>\n        <a href="#tools">RATE PER PC</a>\n        <a href="#tools">TOTAL</a>\n        <a href="#tools">DETAIL</a>\n        <a href="#tools">ID(OPTIONAL)</a>\n        <a href="#tools">KM READING</a>\n\n        <div class="scrollmenu-list" id="1" (click)="selectThis(1)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="2" (click)="selectThis(2)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="3" (click)="selectThis(3)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="4" (click)="selectThis(4)">\n          <p>BILL1234</p>\n          <p>Ajay Das </p>\n          <p>MN1234</p>\n          <p>12/09/2020</p>\n          <p>12/09/2020</p>\n          <p>Tyre</p>\n          <p>Item none</p>\n          <p>1</p>\n          <p>RS 200</p>\n          <p>RS 500</p>\n          <p>THIS HAS BEEN REPAIRED</p>\n          <p>ID23</p>\n          <p>12KM</p>\n        </div>\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openBillDescriptionPage()">BILL REPAIR DETAILS</button>\n    </div>\n\n\n  </div>\n</ion-content> \n -->\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-khata/mechanic-khata.html"*/,
+// })
+// export class MechanicKhataPage {
+//   bills : any = [];
+//   isupdate : boolean = false;
+//   filterbills :any = '';
+//   searchTerm : any = '';
+//   constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, 
+//     private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider) {
+//   }
+//   ionViewDidLoad() {
+//     console.log('ionViewDidLoad MechanicKhataPage');
+//   }
+//   ionViewWillEnter(){
+//     this.getBillsBySrthId();
+//   }
+//   getBillsBySrthId(){
+//     this.isupdate = false;
+//     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+//     var data = {
+//       "srth_id":json[0]['srth_id'],
+//       "worker_type":"mechanic"
+//     };
+//     this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID,data).then(resp => {
+//       if(resp['_ReturnCode'] == '0'){
+//         this.bills = resp['data'];
+//         this.filterbills = this.bills;
+//         for(let i=0;i<this.bills.length;i++){
+//           this.bills[i]['selected'] = 'false';
+//           this.filterbills[i]['selected'] = 'false';
+//         }
+//       }
+//     });
+//   }
+//   openBillDescriptionPage() {
+//     this.navCtrl.push(BillDescriptionPage);
+//   }
+//   openMechanicBillPage() {
+//     this.navCtrl.push(MechanicBillPage,{'update':'false'});
+//   }
+//   update(){
+//     this.navCtrl.push(MechanicBillPage,{'update':'true'});
+//   }
+//   selectThis(bill){
+//     for(let i=0;i<this.bills.length;i++){
+//       this.bills[i]['selected'] = 'false';
+//       this.filterbills[i]['selected'] = 'false';
+//     }
+//     bill['selected'] = 'true';
+//     this.isupdate = true;
+//     localStorage.setItem('bill',JSON.stringify(bill));
+//   }
+//   presentConfirmDelete() {
+//     let alert = this.alertCtrl.create({
+//       title: 'Confirm',
+//       message: 'Are you sure you want to delete this bill?',
+//       buttons: [
+//         {
+//           text: 'Cancel',
+//           role: 'cancel',
+//           handler: () => {
+//             console.log('Cancel clicked');
+//           }
+//         },
+//         {
+//           text: 'Delete',
+//           handler: () => {
+//             this.deletebill();
+//           }
+//         }
+//       ]
+//     });
+//     alert.present();
+//   }
+//   deletebill(){
+//     var bill = JSON.parse(localStorage.getItem('bill'));
+//     var data = {
+//       "bill_id":bill['bill_id']
+//     };  
+//     this.rest.post(this.codes.DELETE_BILL_EXPENSE,data).then(resp=> {
+//       if(resp['_ReturnCode'] == '0'){
+//         this.message.displayToast('Congratulations! You have deleted a bill.'); 
+//         this.getBillsBySrthId();
+//       }
+//     });
+//   }
+//   getItems($event){
+//     this.filterbills = this.bills.filter(wp => {
+//       if (this.searchTerm != '') {
+//         var str = wp.person_shop_name+wp.bill_id+wp.vehicle_id+wp.reason+wp.km_reading+wp.bill_date+wp.bill_details+wp.worker_id;
+//         return (str.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1);
+//       }
+//       else 
+//         return this.bills;
+//     });
+//   }
+// }
+//# sourceMappingURL=mechanic-khata.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=31.js.map
