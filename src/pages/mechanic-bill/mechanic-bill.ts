@@ -202,17 +202,17 @@ export class MechanicBillPage {
 
     this.rest.post(this.codes.ADD_EXPENSE_BILL,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
-
-        this.worker_id  = '';
-        this.person_shop_name  = '';
+        
         this.vehicle_id  = '';
         this.km_reading = '';
         this.bill_date  = '';
-        this.worker_type  = '';
         this.total_bill  = '';
         this.bill_image_id  = '';
         this.bill_details  = '';
         this.img = null;
+
+
+        this.bill_id = Number(resp['_LatestBillId']) + 1;
 
         
         if(this.img != null)
@@ -253,7 +253,13 @@ export class MechanicBillPage {
         this.total_bill  = '';
         this.bill_image_id  = '';
         this.bill_details  = '';
-        // this.navCtrl.pop();
+        this.img = null;
+        this.is_update = false;
+
+        this.bill_id = Number(resp['_LatestBillId']) + 1;
+
+        for(let i=0;i<this.bills.length;i++)
+          this.bills[i]['selected'] = 'false';
       }
     });
   }

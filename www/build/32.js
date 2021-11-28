@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 884:
+/***/ 885:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MechanicBillPageModule", function() { return MechanicBillPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(961);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(962);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MechanicBillPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 961:
+/***/ 962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -225,16 +225,14 @@ var MechanicBillPage = /** @class */ (function () {
         };
         this.rest.post(this.codes.ADD_EXPENSE_BILL, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.worker_id = '';
-                _this.person_shop_name = '';
                 _this.vehicle_id = '';
                 _this.km_reading = '';
                 _this.bill_date = '';
-                _this.worker_type = '';
                 _this.total_bill = '';
                 _this.bill_image_id = '';
                 _this.bill_details = '';
                 _this.img = null;
+                _this.bill_id = Number(resp['_LatestBillId']) + 1;
                 if (_this.img != null)
                     resp['data']['image_content'] = _this.img['image_content'];
                 _this.bills.push(resp['data']);
@@ -271,7 +269,11 @@ var MechanicBillPage = /** @class */ (function () {
                 _this.total_bill = '';
                 _this.bill_image_id = '';
                 _this.bill_details = '';
-                // this.navCtrl.pop();
+                _this.img = null;
+                _this.is_update = false;
+                _this.bill_id = Number(resp['_LatestBillId']) + 1;
+                for (var i = 0; i < _this.bills.length; i++)
+                    _this.bills[i]['selected'] = 'false';
             }
         });
     };

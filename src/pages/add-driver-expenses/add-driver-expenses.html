@@ -68,7 +68,7 @@
         <div [ngClass]="bl['total_bill'] < 0 ? 'green' : 'red'"  (click)="selectThis(bl)" >
           <p>{{bl['bill_id']}}</p>
           <p>{{bl['worker_id']}}</p>
-          <p>XXXXXX</p>
+          <p>{{bl['vehicle_number']}}</p>
           <p>{{bl['reason']}}</p>
           <p>{{bl['total_bill']}}</p>
           <p>{{bl['km_reading']}}</p>
@@ -98,6 +98,9 @@
       <!--  -->
       <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important" #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)" >
         <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} -  {{dr['vehicle']['vehicle_number']}}</ion-option>
+
+        <ion-option value="add">Add Driver</ion-option>
+
       </ion-select>
     </ion-item>
 

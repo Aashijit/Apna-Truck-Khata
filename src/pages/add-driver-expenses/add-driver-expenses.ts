@@ -128,6 +128,10 @@ export class AddDriverExpensesPage {
   }
 
   change(event){
+    if(event == 'add') {
+      this.navCtrl.push('AddDriverPage',{'type':'driver'});
+      return;
+    }
     this.isSelectedBill = true;
     for(let i=0;i<this.drivers.length;i++)
       if(this.drivers[i]['worker_id'] == event){
@@ -237,9 +241,24 @@ export class AddDriverExpensesPage {
 
       this.rest.post(this.codes.ADD_EXPENSE_BILL,data).then(resp => {
         if(resp['_ReturnCode'] == '0'){
+            resp['data']['vehicle_number'] = this.vehicle_number;
             this.bills.push(resp['data']);
-            for(let i=0;i<this.bills.length;i++)
+                    
+        this.vehicle_id  = '';
+        this.km_reading = '';
+        this.bill_date  = '';
+        this.rejoin_date = '';
+        this.reason = '';
+        this.total_bill  = '';
+        this.bill_image_id  = '';
+        this.bill_details  = '';
+        this.img = null;
+
+        this.bill_id = Number(resp['_LatestBillId']) + 1;
+
+            for(let i=0;i<this.bills.length;i++) 
               this.bills[i]['selected'] = 'false';
+            
         }
       });
   }
@@ -287,7 +306,27 @@ export class AddDriverExpensesPage {
     this.rest.post(this.codes.UPDATE_BILL_EXPENSE,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.message.displayToast('The bill has been successfully updated');
-          this.navCtrl.pop();
+
+          this.vehicle_id  = '';
+          this.km_reading = '';
+          this.bill_date  = '';
+          this.rejoin_date = '';
+          this.reason = '';
+          this.total_bill  = '';
+          this.bill_image_id  = '';
+          this.bill_details  = '';
+          this.img = null;
+
+          for(let i=0;i<this.bills.length;i++)  {
+            data['vehicle_number'] = this.vehicle_number;
+            if(this.bills[i]['bill_id'] == this.bill_id) {
+              this.bills[i] = data;
+            }
+            this.bills[i]['selected'] = 'false';
+          }
+  
+          this.bill_id = Number(resp['_LatestBillId']) + 1;
+          
       }
     });
   }

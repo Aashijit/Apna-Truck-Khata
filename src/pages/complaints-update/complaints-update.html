@@ -117,7 +117,9 @@
     <ion-list class="label-select" *ngIf="complaint['problems'] != undefined">
       <ion-item *ngFor="let problems of complaint['problems']">
         <ion-label>{{problems['details']['problem_name'] + "(" + problems['details']['vehicle_part_id']   + ")" + " - "}}
-          <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved</span>
+          <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved
+            <p style="color: red; font-weight: 800 !important; font-size:8px !important;">Remind - {{problems['reminder_date']}}</p>
+          </span>
           <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span></ion-label>
         <ion-checkbox [(ngModel)]="problems['selected']"></ion-checkbox>
       </ion-item>

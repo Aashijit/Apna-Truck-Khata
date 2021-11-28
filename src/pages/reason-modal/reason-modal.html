@@ -44,7 +44,7 @@
               <ion-col style="text-align: left;" (click)="selectedReason(wp)"> 
                 {{wp['reason']}}
               </ion-col>
-              <ion-col style="text-align: right;" (click)="deletereason(wp)"> 
+              <ion-col style="text-align: right;" *ngIf="wp['reason']!='Holiday'" (click)="deletereason(wp)"> 
                 <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
               </ion-col> 
             </ion-row>

@@ -60,6 +60,11 @@ export class AddDriverPage {
       
       var update = this.navParams.get("update");
 
+      if(this.navParams.get('type') != undefined && this.navParams.get('type') != null) {
+        this.worker_type = this.navParams.get('type');
+        this.typeOfPerson = this.worker_type;
+      }
+
       if(update == "true"){
         this.is_update = true;
         this.addMore = true;

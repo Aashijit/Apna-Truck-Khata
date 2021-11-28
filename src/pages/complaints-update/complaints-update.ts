@@ -1,7 +1,7 @@
 import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -29,8 +29,9 @@ export class ComplaintsUpdatePage {
   searchTerm : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes : CodesProvider, 
-    private rest : RestProvider, private modalCtrl : ModalController) {
-    this.getcomplaints();
+    private rest : RestProvider, private modalCtrl : ModalController, 
+    private ldl : LoadingController) {
+    this.getcomplaints(0,null);
     this.getVehicles();
   }
 
@@ -39,7 +40,7 @@ export class ComplaintsUpdatePage {
   }
 
   ionViewWillEnter(){
-    this.getcomplaints();
+    this.getcomplaints(0,null);
   }
 
   change($event){
@@ -173,9 +174,12 @@ export class ComplaintsUpdatePage {
     this.complaint['status'] = 'solved';
 
     var dt = [];
+    this.problems = [];
 
     for(let i=0;i<this.complaint['problems'].length;i++){
+      if(this.complaint['problems'][i]['selected']) { 
       this.problems.push(this.complaint['problems'][i]['problem_id']);
+      }
     }
 
     console.error(JSON.stringify(this.problems));
@@ -188,11 +192,17 @@ export class ComplaintsUpdatePage {
       dt.push(data);
     }
 
+    let lc = this.ldl.create({
+      content:'Solving the problems ...'
+    });
 
+    lc.present();
     this.rest.post(this.codes.SOLVE_COMPLAINTS,dt).then(resp => {
 
       if(resp['_ReturnCode'] == '0'){
 
+          this.getcomplaints(1,this.complaint);
+          lc.dismiss();
       }
     });
 
@@ -202,7 +212,44 @@ export class ComplaintsUpdatePage {
     let calendarModalPage = this.modalCtrl.create('CalendarModalPage');
 
     calendarModalPage.onDidDismiss(data=> {
-      this.navCtrl.pop();
+
+      var dt = [];
+      this.problems = [];
+
+      for(let i=0;i<this.complaint['problems'].length;i++){
+        if(this.complaint['problems'][i]['selected']) { 
+        this.problems.push(this.complaint['problems'][i]['problem_id']);
+        }
+      }
+  
+
+  
+      for(let i=0;i<this.problems.length;i++) {
+        var dt2 = {
+          "complaints_id":this.complaint['complaints_id'],
+          "problem_id":this.problems[i],
+          "reminder_date":localStorage.getItem(this.codes.DATE)
+        };
+        dt.push(dt2);
+      }
+
+      console.error(JSON.stringify(dt));
+
+      let lc = this.ldl.create({
+        content:'Reminding later ...'
+      });
+  
+      lc.present();
+
+      this.rest.post(this.codes.REMIND_LATER, dt).then(resp => {
+        if(resp['_ReturnCode'] == '0'){
+
+          this.getcomplaints(1,this.complaint);
+          lc.dismiss();
+      }
+      });
+
+
     });
 
     calendarModalPage.present();
@@ -225,7 +272,7 @@ export class ComplaintsUpdatePage {
 
   }
 
-  getcomplaints(){
+  getcomplaints(v,cm){
     var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
     var data = {
       "srth_id":userinfo[0]['srth_id']
@@ -242,6 +289,16 @@ export class ComplaintsUpdatePage {
             }
             this.complaints[i]['problem_id'] = str;
           }
+        }
+
+        if(v == 1) {
+          cm['selected'] = true;
+          for(let i=0;i<this.complaints.length;i++) {
+            if(this.complaints[i]['complaints_id'] == cm['complaints_id']) {
+              this.complaint = this.complaints[i];
+            }
+          }
+          // this.complaint = cm;
         }
 
       }

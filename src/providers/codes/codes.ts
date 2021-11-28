@@ -74,6 +74,7 @@ export class CodesProvider {
   public UPDATE_COMPLAINTS = this.BASE_URL + "updatecomplaintsbycomplaintid";
   public SOLVE_COMPLAINTS = this.BASE_URL + "solvecomplaintbyid";
   public DELETE_COMPLAINTS=this.BASE_URL+"deletecomplaintbyid";
+  public REMIND_LATER=this.BASE_URL+"remindlater";
 
   public UPDATE_DOCUMENT_BILL=this.BASE_URL+"updatedocumentbill";
 

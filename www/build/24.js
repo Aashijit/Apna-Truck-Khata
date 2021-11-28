@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 891:
+/***/ 893:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReasonModalPageModule", function() { return ReasonModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reason_modal__ = __webpack_require__(967);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reason_modal__ = __webpack_require__(969);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var ReasonModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 967:
+/***/ 969:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,7 +127,7 @@ var ReasonModalPage = /** @class */ (function () {
     };
     ReasonModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-reason-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n\n\n \n      </ion-row>\n\n      <ion-grid *ngIf="addReason">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Reason</h2>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="reasontext" />\n              <label>NAME</label>\n            </div>\n          </ion-col>\n          <!-- <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="savereason()"> ADD REASON  </button>\n          </ion-col> -->\n        </ion-row>\n      </ion-grid>\n\n      <ion-col col-12 style="text-align: center;">\n        <button ion-button round class="custom-button"  (click)="savereason()"> ADD REASON  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n      </ion-col>\n\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <ion-item *ngFor="let wp of filterreasons" >\n            <ion-card>\n              <ion-card-content>\n            <ion-row>\n              <ion-col style="text-align: left;" (click)="selectedReason(wp)"> \n                {{wp[\'reason\']}}\n              </ion-col>\n              <ion-col style="text-align: right;" (click)="deletereason(wp)"> \n                <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>\n              </ion-col> \n            </ion-row>\n          </ion-card-content>\n          </ion-card>\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/,
+            selector: 'page-reason-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n\n\n \n      </ion-row>\n\n      <ion-grid *ngIf="addReason">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Reason</h2>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="reasontext" />\n              <label>NAME</label>\n            </div>\n          </ion-col>\n          <!-- <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="savereason()"> ADD REASON  </button>\n          </ion-col> -->\n        </ion-row>\n      </ion-grid>\n\n      <ion-col col-12 style="text-align: center;">\n        <button ion-button round class="custom-button"  (click)="savereason()"> ADD REASON  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n      </ion-col>\n\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <ion-item *ngFor="let wp of filterreasons" >\n            <ion-card>\n              <ion-card-content>\n            <ion-row>\n              <ion-col style="text-align: left;" (click)="selectedReason(wp)"> \n                {{wp[\'reason\']}}\n              </ion-col>\n              <ion-col style="text-align: right;" *ngIf="wp[\'reason\']!=\'Holiday\'" (click)="deletereason(wp)"> \n                <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>\n              </ion-col> \n            </ion-row>\n          </ion-card-content>\n          </ion-card>\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */],
             __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */],
