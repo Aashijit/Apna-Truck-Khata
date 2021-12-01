@@ -79,4 +79,29 @@ page-document-and-insurance {
       box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     }
   }
+
+  .ok-button-selected,
+  .problem-button-selected,
+  .all-button-selected {
+    width: 100px;
+    background: #fff;
+    border: 0.5px solid #0752af;
+    font-weight: 1000 !important;
+  }
+
+  .problem-button-selected {
+    color: white;
+    background: red !important;
+  }
+
+  .ok-button-selected {
+    color: white;
+    background: green !important;
+  }
+
+  .all-button-selected {
+    color: white;
+    background: #0752af !important;
+  }
+
 }

@@ -13,6 +13,9 @@ export class DocumentAndInsurancePage {
   segment : any = "all";
   documents : any =  [];
   docs : any = [];
+  ok : boolean = false;
+  expired : boolean = false;
+  all : boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes : CodesProvider, private rest : RestProvider) {
     
@@ -72,6 +75,24 @@ export class DocumentAndInsurancePage {
       docs.push(dtr);
     }
     return docs;
+  }
+
+  displayOk(){
+    this.all = false;
+    this.ok = true;
+    this.expired = false;
+  }
+
+  displayExpired(){
+    this.all = false;
+    this.ok = false;
+    this.expired = true;
+  }
+
+  displayALL(){
+    this.all = true;
+    this.ok = false;
+    this.expired = false;
   }
 
   

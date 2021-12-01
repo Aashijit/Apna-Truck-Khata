@@ -23,6 +23,8 @@ export class DocumentRenewalPage {
 
   vehicles : any = [];
 
+  vehicle_string : any = "";
+
 
   bill_id : any = null;
   worker_id : any = '';
@@ -120,6 +122,7 @@ export class DocumentRenewalPage {
       if(localStorage.getItem("vehicle_document_bills") != undefined)
         this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
         this.bills = [];
+        var vhcls
         for(let i=0;i<this.details.length;i++) {
           var bill= {
             "bill_id":this.bill_id,
@@ -127,10 +130,14 @@ export class DocumentRenewalPage {
             "expiry_date":this.details[i]['expiry_date'],
             "total_bill":this.details[i]['bill_amount']
           };
+          // console.error("Vehicle number : " + JSON.stringify(this.details[i]));
+          if(this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
+          vhcls += " ";
+          else
+          vhcls += this.details[i]['vehicle_number'] + " ";
           this.bills.push(bill);
         }
-
-
+        this.vehicle_string = vhcls.replace("undefined","");
         this.changeCost({});
     });
   }

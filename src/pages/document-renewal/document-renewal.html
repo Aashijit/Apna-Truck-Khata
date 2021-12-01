@@ -39,7 +39,7 @@
       <div class="scrollmenu-list" id="1" *ngFor="let bill of bills" (click)="selectThis(1)">
         <p>{{bill['bill_id']}}</p>
         <p>{{bill['person_shop_name']}}</p>
-        <p>{{bill['vehicle_id']}}</p>
+        <p>{{vehicle_string}}</p>
         <p>{{bill['expiry_date']}}</p>
         <p>₹ {{bill['total_bill']}}</p>
    
@@ -59,6 +59,7 @@
 
     <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
 
+    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">Total ₹ {{total_bill}}</ion-badge>
 
 
     <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;" >
@@ -132,7 +133,7 @@
     </div>  -->
 
     <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">
-      <button ion-button round class="custom-button" style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;" (click)="addDocumentBills('save')">ADD DOCUMENT BILLS</button>
+      <button ion-button [disabled]="details.length > 0" round class="custom-button" style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;" (click)="addDocumentBills('save')">ADD DOCUMENT BILLS</button>
 
       <span *ngIf="details.length > 0" style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">
         <ion-icon name="thumbs-up" color="success"></ion-icon> 
