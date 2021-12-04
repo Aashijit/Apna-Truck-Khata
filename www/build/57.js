@@ -1,1 +1,141 @@
-webpackJsonp([57],{866:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵeld"](2,0,null,null,30,"ion-header",[],null,null,null,null,null)),d["ɵdid"](3,16384,null,0,R.a,[v.a,d.ElementRef,d.Renderer,[2,g.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](5,0,null,null,26,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,y.b,y.a)),d["ɵdid"](6,49152,null,0,h.a,[C.a,[2,g.a],[2,E.a],v.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](8,0,null,3,22,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](9,16384,null,0,F.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      \n      "])),(l()(),d["ɵeld"](14,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-9",""]],null,null,null,null,null)),d["ɵdid"](15,16384,null,0,I.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](17,0,null,null,4,"ion-title",[],null,null,null,N.b,N.a)),d["ɵdid"](18,49152,null,0,P.a,[v.a,d.ElementRef,d.Renderer,[2,D.a],[2,h.a]],null,null),(l()(),d["ɵted"](-1,0,["        \n          "])),(l()(),d["ɵeld"](20,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-lock"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,0,["\n          SECURITY AND BACKUP\n        "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](25,0,null,null,4,"ion-col",[["class","youtube col"],["col-2",""]],null,null,null,null,null)),d["ɵdid"](26,16384,null,0,I.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](28,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](34,0,null,null,35,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,M.b,M.a)),d["ɵdid"](35,4374528,null,0,k.a,[v.a,_.a,w.a,d.ElementRef,d.Renderer,C.a,A.a,d.NgZone,[2,g.a],[2,E.a]],null,null),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](37,0,null,1,31,"div",[["class","container"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n\n    "])),(l()(),d["ɵeld"](39,0,null,null,28,"ion-list",[["class","security-details"]],null,null,null,null,null)),d["ɵdid"](40,16384,null,0,B.a,[v.a,d.ElementRef,d.Renderer,_.a,O.m,w.a],null,null),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](43,0,null,null,7,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](45,0,null,null,0,"input",[["placeholder"," "],["type","text"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](47,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["4 DIGIT CURRENT PIN CODE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n  \n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](52,0,null,null,7,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](54,0,null,null,0,"input",[["placeholder"," "],["type","text"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](56,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["4 DIGIT NEW PIN CODE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n  \n      "])),(l()(),d["ɵted"](-1,null,["\n  \n\n\n      "])),(l()(),d["ɵeld"](61,0,null,null,5,"div",[["class","text-center mt-4"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](63,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,null,null,x.b,x.a)),d["ɵdid"](64,1097728,null,0,L.a,[[8,""],v.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["CONFIRM"])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      \n      \n\n\n    \n    "])),(l()(),d["ɵted"](-1,null,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,[" \n"]))],function(l,n){l(n,64,0,"")},function(l,n){l(n,5,0,d["ɵnov"](n,6)._hidden,d["ɵnov"](n,6)._sbPadding);l(n,34,0,d["ɵnov"](n,35).statusbarPadding,d["ɵnov"](n,35)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad SecurityAndBackupPage")},l}()),a=function(){return function(){}}(),o=u(498),i=u(499),r=u(500),s=u(501),c=u(502),p=u(503),m=u(504),b=u(505),f=u(506),R=u(85),v=u(4),g=u(8),y=u(188),h=u(37),C=u(13),E=u(29),F=u(186),I=u(185),N=u(508),P=u(86),D=u(42),M=u(507),k=u(32),_=u(7),w=u(14),A=u(40),B=u(87),O=u(11),x=u(39),L=u(27),T=u(17),S=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),U=d["ɵccf"]("page-security-and-backup",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-security-and-backup",[],null,null,null,e,S)),d["ɵdid"](1,49152,null,0,t,[E.a,T.a],null,null)],null,null)},{},{},[]),G=u(16),V=u(20),j=u(184),J=u(55);u.d(n,"SecurityAndBackupPageModuleNgFactory",function(){return K});var K=d["ɵcmf"](a,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,s.a,c.a,p.a,m.a,b.a,f.a,U]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,G.l,G.k,[d.LOCALE_ID,[2,G.t]]),d["ɵmpd"](4608,V["ɵi"],V["ɵi"],[]),d["ɵmpd"](4608,V.FormBuilder,V.FormBuilder,[]),d["ɵmpd"](512,G.b,G.b,[]),d["ɵmpd"](512,V["ɵba"],V["ɵba"],[]),d["ɵmpd"](512,V.FormsModule,V.FormsModule,[]),d["ɵmpd"](512,V.ReactiveFormsModule,V.ReactiveFormsModule,[]),d["ɵmpd"](512,j.a,j.a,[]),d["ɵmpd"](512,j.b,j.b,[]),d["ɵmpd"](512,a,a,[]),d["ɵmpd"](256,J.a,t,[])])})}});
+webpackJsonp([57],{
+
+/***/ 861:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeDriverPageModule", function() { return ChangeDriverPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__change_driver__ = __webpack_require__(940);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ChangeDriverPageModule = /** @class */ (function () {
+    function ChangeDriverPageModule() {
+    }
+    ChangeDriverPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */]),
+            ],
+        })
+    ], ChangeDriverPageModule);
+    return ChangeDriverPageModule;
+}());
+
+//# sourceMappingURL=change-driver.module.js.map
+
+/***/ }),
+
+/***/ 940:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangeDriverPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ChangeDriverPage = /** @class */ (function () {
+    function ChangeDriverPage(viewController, navCtrl, navParams, codes, message, rest) {
+        var _this = this;
+        this.viewController = viewController;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.codes = codes;
+        this.message = message;
+        this.rest = rest;
+        this.vehicle = '';
+        this.driver_end_date = '';
+        this.driver_end_details = '';
+        this.driver_end_km = '';
+        this.vehicle_id = '';
+        this.driver_id = '';
+        this.driver_start_date = '';
+        this.driver_start_details = '';
+        this.driver_start_km = '';
+        this.drivers = [];
+        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+            }
+        });
+    }
+    ChangeDriverPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ChangeDriverPage');
+    };
+    ChangeDriverPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    ChangeDriverPage.prototype.save = function () {
+        var _this = this;
+        var data = {
+            "type": "change",
+            "vehicle_id": this.vehicle['vehicle_id'],
+            "driver_id": this.driver_id,
+            "driver_start_details": this.driver_start_details,
+            "driver_start_km": this.driver_start_km,
+            "driver_start_date": this.driver_start_date,
+            "driver_end_date": this.driver_end_date,
+            "driver_end_details": this.driver_end_details,
+            "driver_end_km": this.driver_end_km
+        };
+        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have changed the driver to this vehicle successfully!');
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    ChangeDriverPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-change-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/'<!--\n  Generated template for the ChangeDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n      \n      <ion-col col-12 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-user-circle" aria-hidden="true"></i>\n          CHANGE DRIVER\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col> -->\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n<ion-content padding>\n\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n\n\n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n  \n        <!-- <span style="float: right;">\n          DRIVER\n        </span> -->\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n  \n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != undefined && vehicle[\'driver_details\'] != null">{{vehicle[\'driver_details\'][\'name\']}}({{vehicle[\'driver_details\'][\'phone_number\']}})</span>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_end_date"/>\n          <label>CURRENT DRIVER LEAVING DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n  \n      </ion-col>\n  \n  \n   \n      <ion-col col-12>\n        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n          <ion-label>NEW DRIVER</ion-label>\n    \n          <ion-select interface="action-sheet" [(ngModel)]="driver_id" >\n            <ion-option  *ngFor="let driver of drivers"  value="{{driver[\'worker_id\']}}">{{driver[\'name\']}}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n     \n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_start_date"/>\n          <label>NEW DRIVER START DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n        \n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_details"  placeholder=" " />\n          <label>REASON/DETAILS</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_km"  placeholder=" " />\n          <label>KM</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n  \n  \n  \n  \n  \n     \n  \n   \n  \n\n  \n    </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n  \n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n    \n  </ion-row>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */]])
+    ], ChangeDriverPage);
+    return ChangeDriverPage;
+}());
+
+//# sourceMappingURL=change-driver.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=57.js.map

@@ -1,1 +1,1122 @@
-webpackJsonp([76],{183:function(e,a,o){"use strict";o.d(a,"a",function(){return r});o(2);var t=o(73),r=function(){function e(e){this.http=e,console.log("Hello RestProvider Provider")}return e.prototype.post=function(e,a){var o=this,r=(new t.g).set("Content-type","application/json");return new Promise(function(t,l){o.http.post(e,JSON.stringify(a),{headers:r}).subscribe(function(e){t(e)},function(e){l(e)})})},e.prototype.get=function(e,a){var o=this;(new t.g).set("Content-type","application/json");return new Promise(function(a,t){o.http.get(e).subscribe(function(e){a(e)},function(e){t(e)})})},e}()},187:function(e,a,o){"use strict";o.d(a,"a",function(){return t});o(2),o(26);var t=function(){function e(e,a){this.http=e,this.toast=a,console.log("Hello MessageProvider Provider")}return e.prototype.displayToast=function(e){var a=this.toast.create({message:e,position:"bottom",showCloseButton:!0});a.onDidDismiss(function(){console.log("Dismissed toast")}),a.present()},e}()},221:function(e,a){function o(e){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+e+"'.")})}o.keys=function(){return[]},o.resolve=o,e.exports=o,o.id=221},245:function(e,a,o){function t(e){var a=r[e];return a?o.e(a[1]).then(function(){return o(a[0])}):Promise.reject(new Error("Cannot find module '"+e+"'."))}var r={"../pages/about/about.module.ngfactory":[808,75],"../pages/account-khata/account-khata.module.ngfactory":[809,47],"../pages/add-complaints/add-complaints.module.ngfactory":[810,31],"../pages/add-document-bill/add-document-bill.module.ngfactory":[811,74],"../pages/add-driver-expenses/add-driver-expenses.module.ngfactory":[812,30],"../pages/add-driver/add-driver.module.ngfactory":[813,29],"../pages/add-mechanic/add-mechanic.module.ngfactory":[814,4],"../pages/add-more-modal/add-more-modal.module.ngfactory":[815,73],"../pages/add-new-bank-account/add-new-bank-account.module.ngfactory":[816,72],"../pages/add-permit/add-permit.module.ngfactory":[817,49],"../pages/add-vehicle/add-vehicle.module.ngfactory":[818,0],"../pages/all-image-khata/all-image-khata.module.ngfactory":[819,46],"../pages/allot-driver/allot-driver.module.ngfactory":[820,28],"../pages/bill-description/bill-description.module.ngfactory":[826,9],"../pages/bill-details/bill-details.module.ngfactory":[821,8],"../pages/bill-payment-search/bill-payment-search.module.ngfactory":[822,45],"../pages/buy-details-search-modal/buy-details-search-modal.module.ngfactory":[824,44],"../pages/buy-from-shop/buy-from-shop.module.ngfactory":[823,27],"../pages/calendar-modal/calendar-modal.module.ngfactory":[829,71],"../pages/camera-modal/camera-modal.module.ngfactory":[825,13],"../pages/change-driver/change-driver.module.ngfactory":[827,26],"../pages/complaints-khata/complaints-khata.module.ngfactory":[828,43],"../pages/complaints-update/complaints-update.module.ngfactory":[831,12],"../pages/contact/contact.module.ngfactory":[830,70],"../pages/decision-modal/decision-modal.module.ngfactory":[832,69],"../pages/details-modal/details-modal.module.ngfactory":[833,3],"../pages/document-and-insurance/document-and-insurance.module.ngfactory":[835,68],"../pages/document-bill-report/document-bill-report.module.ngfactory":[834,67],"../pages/document-date-report/document-date-report.module.ngfactory":[836,66],"../pages/document-renewal/document-renewal.module.ngfactory":[837,25],"../pages/document/document.module.ngfactory":[838,42],"../pages/driver-details-search/driver-details-search.module.ngfactory":[839,41],"../pages/driver-document/driver-document.module.ngfactory":[840,6],"../pages/driver-khata-search/driver-khata-search.module.ngfactory":[841,40],"../pages/driver-khata/driver-khata.module.ngfactory":[842,39],"../pages/driver/driver.module.ngfactory":[843,38],"../pages/edit-profile/edit-profile.module.ngfactory":[845,24],"../pages/exchange-modal/exchange-modal.module.ngfactory":[844,2],"../pages/full-report/full-report.module.ngfactory":[846,65],"../pages/home/home.module.ngfactory":[847,64],"../pages/init/init.module.ngfactory":[848,63],"../pages/insurance/insurance.module.ngfactory":[851,37],"../pages/language/language.module.ngfactory":[849,62],"../pages/ledger/ledger.module.ngfactory":[850,23],"../pages/mechanic-bill/mechanic-bill.module.ngfactory":[852,22],"../pages/mechanic-khata/mechanic-khata.module.ngfactory":[858,36],"../pages/mechanic/mechanic.module.ngfactory":[853,35],"../pages/parts-bill-details-modal/parts-bill-details-modal.module.ngfactory":[854,15],"../pages/parts-work-modal/parts-work-modal.module.ngfactory":[855,1],"../pages/problem-modal/problem-modal.module.ngfactory":[883,11],"../pages/problem-work-part-modal/problem-work-part-modal.module.ngfactory":[856,10],"../pages/profile/profile.module.ngfactory":[857,61],"../pages/reason-modal/reason-modal.module.ngfactory":[859,34],"../pages/remove-driver-from-account/remove-driver-from-account.module.ngfactory":[860,48],"../pages/remove-driver/remove-driver.module.ngfactory":[861,60],"../pages/report-all-comp/report-all-comp.module.ngfactory":[865,59],"../pages/report-full/report-full.module.ngfactory":[862,21],"../pages/report-khata/report-khata.module.ngfactory":[863,58],"../pages/report-modal/report-modal.module.ngfactory":[864,20],"../pages/security-and-backup/security-and-backup.module.ngfactory":[866,57],"../pages/settings/settings.module.ngfactory":[867,14],"../pages/shop-bill-description/shop-bill-description.module.ngfactory":[868,7],"../pages/shop-bill-details/shop-bill-details.module.ngfactory":[869,19],"../pages/shop-khata/shop-khata.module.ngfactory":[870,33],"../pages/shop/shop.module.ngfactory":[871,32],"../pages/tabs/tabs.module.ngfactory":[872,56],"../pages/upload-image/upload-image.module.ngfactory":[873,55],"../pages/vehicle-bill-report/vehicle-bill-report.module.ngfactory":[876,18],"../pages/vehicle-details/vehicle-details.module.ngfactory":[874,54],"../pages/vehicle-document-bill/vehicle-document-bill.module.ngfactory":[877,17],"../pages/vehicle-document/vehicle-document.module.ngfactory":[875,5],"../pages/vehicle-khata/vehicle-khata.module.ngfactory":[879,53],"../pages/vehicle-work-report/vehicle-work-report.module.ngfactory":[878,16],"../pages/view-bill/view-bill.module.ngfactory":[880,52],"../pages/view-payment/view-payment.module.ngfactory":[882,51],"../pages/view-transaction/view-transaction.module.ngfactory":[881,50]};t.keys=function(){return Object.keys(r)},t.id=245,e.exports=t},514:function(e,a,o){"use strict";function t(e){return l["ɵvid"](0,[(e()(),l["ɵeld"](0,0,null,null,2,"ion-nav",[],null,null,null,j.b,j.a)),l["ɵprd"](6144,null,k.a,null,[U.a]),l["ɵdid"](2,4374528,null,0,U.a,[[2,I.a],[2,F.a],H.a,V.a,W.a,l.ElementRef,l.NgZone,l.Renderer,l.ComponentFactoryResolver,K.m,G.a,[2,x.a],z.a,l.ErrorHandler],{root:[0,"root"]},null)],function(e,a){e(a,2,0,a.component.rootPage)},null)}Object.defineProperty(a,"__esModule",{value:!0});var r=o(34),l=o(0),i=(o(2),o(512),o(16)),d=o(206),n=o(187),s=o(84),m=o(183),c=o(210),g=(o(26),o(109)),p=o(110),u=function(){return function(e,a,o,t){var r=this;this.codes=t,this.rootPage="",e.ready().then(function(){a.styleDefault(),o.hide(),r.rootPage=null==localStorage.getItem(r.codes.K_ACCOUNT_INFO)||void 0==localStorage.getItem(r.codes.K_ACCOUNT_INFO)?"InitPage":"TabsPage"})}}(),h=o(73),y=(o(524),o(496)),f=o(195),E=function(){return function(){}}(),_=o(65),P=o(498),R=o(499),b=o(500),A=o(501),v=o(502),L=o(503),D=o(504),S=o(505),w=o(506),C=o(513),N=o(127),T=o(126),B=o(510),M=o(202),O=o(806),j=o(807),k=o(52),U=o(72),I=o(8),F=o(29),H=o(13),V=o(4),W=o(7),K=o(11),G=o(44),x=o(24),z=o(14),Y=l["ɵcrt"]({encapsulation:2,styles:[],data:{}}),X=l["ɵccf"]("ng-component",u,function(e){return l["ɵvid"](0,[(e()(),l["ɵeld"](0,0,null,null,1,"ng-component",[],null,null,null,t,Y)),l["ɵdid"](1,49152,null,0,u,[W.a,g.a,p.a,s.a],null,null)],null,null)},{},{},[]),Z=o(151),q=o(497),J=o(20),Q=o(51),$=o(67),ee=o(184),ae=o(55),oe=o(122),te=o(128),re=o(203),le=o(111),ie=o(182),de=o(142),ne=o(124),se=o(150),me=o(28),ce=o(43),ge=o(40),pe=o(125),ue=o(88),he=o(157),ye=o(153),fe=o(162),Ee=o(402),_e=o(152),Pe=o(48),Re=o(149),be=o(154),Ae=o(403),ve=l["ɵcmf"](E,[_.b],function(e){return l["ɵmod"]([l["ɵmpd"](512,l.ComponentFactoryResolver,l["ɵCodegenComponentFactoryResolver"],[[8,[P.a,R.a,b.a,A.a,v.a,L.a,D.a,S.a,w.a,C.a,N.a,T.a,B.a,M.a,O.a,X]],[3,l.ComponentFactoryResolver],l.NgModuleRef]),l["ɵmpd"](5120,l.LOCALE_ID,l["ɵq"],[[3,l.LOCALE_ID]]),l["ɵmpd"](4608,i.l,i.k,[l.LOCALE_ID,[2,i.t]]),l["ɵmpd"](5120,l.APP_ID,l["ɵi"],[]),l["ɵmpd"](5120,l.IterableDiffers,l["ɵn"],[]),l["ɵmpd"](5120,l.KeyValueDiffers,l["ɵo"],[]),l["ɵmpd"](4608,r.c,r.q,[i.c]),l["ɵmpd"](6144,l.Sanitizer,null,[r.c]),l["ɵmpd"](4608,r.f,Z.a,[]),l["ɵmpd"](5120,r.d,function(e,a,o,t,l){return[new r.k(e,a),new r.o(o),new r.n(t,l)]},[i.c,l.NgZone,i.c,i.c,r.f]),l["ɵmpd"](4608,r.e,r.e,[r.d,l.NgZone]),l["ɵmpd"](135680,r.m,r.m,[i.c]),l["ɵmpd"](4608,r.l,r.l,[r.e,r.m]),l["ɵmpd"](5120,q.a,y.d,[]),l["ɵmpd"](5120,q.c,y.e,[]),l["ɵmpd"](4608,q.b,y.c,[q.a,q.c]),l["ɵmpd"](5120,l.RendererFactory2,y.f,[r.l,q.b,l.NgZone]),l["ɵmpd"](6144,r.p,null,[r.m]),l["ɵmpd"](4608,l.Testability,l.Testability,[l.NgZone]),l["ɵmpd"](4608,r.h,r.h,[i.c]),l["ɵmpd"](4608,r.i,r.i,[i.c]),l["ɵmpd"](4608,h.i,h.o,[i.c,l.PLATFORM_ID,h.m]),l["ɵmpd"](4608,h.p,h.p,[h.i,h.n]),l["ɵmpd"](5120,h.a,function(e){return[e]},[h.p]),l["ɵmpd"](4608,h.l,h.l,[]),l["ɵmpd"](6144,h.j,null,[h.l]),l["ɵmpd"](4608,h.h,h.h,[h.j]),l["ɵmpd"](6144,h.b,null,[h.h]),l["ɵmpd"](4608,h.f,h.k,[h.b,l.Injector]),l["ɵmpd"](4608,h.c,h.c,[h.f]),l["ɵmpd"](4608,J["ɵi"],J["ɵi"],[]),l["ɵmpd"](4608,J.FormBuilder,J.FormBuilder,[]),l["ɵmpd"](4608,Q.CalendarService,Q.CalendarService,[]),l["ɵmpd"](5120,$.b,$.d,[H.a,$.a]),l["ɵmpd"](5120,i.g,ee.c,[i.r,[2,i.a],V.a]),l["ɵmpd"](4608,i.f,i.f,[i.g]),l["ɵmpd"](5120,x.a,x.b,[H.a,$.b,i.f,ae.b,l.ComponentFactoryResolver]),l["ɵmpd"](4608,oe.a,oe.a,[H.a,V.a,x.a]),l["ɵmpd"](5120,te.CalendarController,re.calendarController,[oe.a,Q.CalendarService]),l["ɵmpd"](4608,le.a,le.a,[H.a,V.a,x.a]),l["ɵmpd"](4608,ie.b,y.b,[l.RendererFactory2,r.b]),l["ɵmpd"](4608,de.a,de.a,[H.a,V.a]),l["ɵmpd"](4608,ne.a,ne.a,[H.a,V.a]),l["ɵmpd"](4608,se.a,se.a,[]),l["ɵmpd"](4608,me.a,me.a,[]),l["ɵmpd"](4608,ce.a,ce.a,[W.a]),l["ɵmpd"](4608,ge.a,ge.a,[V.a,W.a,l.NgZone,z.a]),l["ɵmpd"](4608,pe.a,pe.a,[H.a,V.a]),l["ɵmpd"](4608,ue.a,ue.a,[H.a,V.a]),l["ɵmpd"](4608,he.a,he.a,[H.a,V.a,x.a]),l["ɵmpd"](4608,ye.a,ye.a,[V.a,W.a,z.a,H.a,K.m]),l["ɵmpd"](4608,fe.a,fe.a,[H.a,V.a]),l["ɵmpd"](4608,G.a,G.a,[W.a,V.a]),l["ɵmpd"](4608,g.a,g.a,[]),l["ɵmpd"](4608,p.a,p.a,[]),l["ɵmpd"](4608,c.a,c.a,[]),l["ɵmpd"](4608,c.b,c.b,[]),l["ɵmpd"](4608,m.a,m.a,[h.c]),l["ɵmpd"](4608,s.a,s.a,[h.c]),l["ɵmpd"](4608,f.a,f.a,[]),l["ɵmpd"](4608,n.a,n.a,[h.c,fe.a]),l["ɵmpd"](4608,d.a,d.a,[]),l["ɵmpd"](4608,i.d,i.d,[l.LOCALE_ID]),l["ɵmpd"](512,i.b,i.b,[]),l["ɵmpd"](512,l.ErrorHandler,Ee.a,[]),l["ɵmpd"](256,V.b,{},[]),l["ɵmpd"](1024,_e.a,_e.b,[]),l["ɵmpd"](1024,W.a,W.b,[r.b,_e.a,l.NgZone]),l["ɵmpd"](1024,V.a,V.c,[V.b,W.a]),l["ɵmpd"](512,z.a,z.a,[W.a]),l["ɵmpd"](512,Pe.a,Pe.a,[]),l["ɵmpd"](512,H.a,H.a,[V.a,W.a,[2,Pe.a]]),l["ɵmpd"](512,K.m,K.m,[H.a]),l["ɵmpd"](256,$.a,{links:[{loadChildren:"../pages/about/about.module.ngfactory#HomePageModuleNgFactory",name:"AboutPage",segment:"about",priority:"low",defaultHistory:[]},{loadChildren:"../pages/account-khata/account-khata.module.ngfactory#AccountKhataPageModuleNgFactory",name:"AccountKhataPage",segment:"account-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-complaints/add-complaints.module.ngfactory#AddComplaintsPageModuleNgFactory",name:"AddComplaintsPage",segment:"add-complaints",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-document-bill/add-document-bill.module.ngfactory#AddDocumentBillPageModuleNgFactory",name:"AddDocumentBillPage",segment:"add-document-bill",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-driver-expenses/add-driver-expenses.module.ngfactory#AddDriverExpensesPageModuleNgFactory",name:"AddDriverExpensesPage",segment:"add-driver-expenses",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-driver/add-driver.module.ngfactory#AddDriverPageModuleNgFactory",name:"AddDriverPage",segment:"add-driver",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-mechanic/add-mechanic.module.ngfactory#AddMechanicPageModuleNgFactory",name:"AddMechanicPage",segment:"add-mechanic",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-more-modal/add-more-modal.module.ngfactory#AddMoreModalPageModuleNgFactory",name:"AddMoreModalPage",segment:"add-more-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-new-bank-account/add-new-bank-account.module.ngfactory#AddNewBankAccountPageModuleNgFactory",name:"AddNewBankAccountPage",segment:"add-new-bank-account",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-permit/add-permit.module.ngfactory#AddPermitPageModuleNgFactory",name:"AddPermitPage",segment:"add-permit",priority:"low",defaultHistory:[]},{loadChildren:"../pages/add-vehicle/add-vehicle.module.ngfactory#AddVehiclePageModuleNgFactory",name:"AddVehiclePage",segment:"add-vehicle",priority:"low",defaultHistory:[]},{loadChildren:"../pages/all-image-khata/all-image-khata.module.ngfactory#AllImageKhataPageModuleNgFactory",name:"AllImageKhataPage",segment:"all-image-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/allot-driver/allot-driver.module.ngfactory#AllotDriverPageModuleNgFactory",name:"AllotDriverPage",segment:"allot-driver",priority:"low",defaultHistory:[]},{loadChildren:"../pages/bill-details/bill-details.module.ngfactory#BillDetailsPageModuleNgFactory",name:"BillDetailsPage",segment:"bill-details",priority:"low",defaultHistory:[]},{loadChildren:"../pages/bill-payment-search/bill-payment-search.module.ngfactory#BillPaymentSearchPageModuleNgFactory",name:"BillPaymentSearchPage",segment:"bill-payment-search",priority:"low",defaultHistory:[]},{loadChildren:"../pages/buy-from-shop/buy-from-shop.module.ngfactory#BuyFromShopPageModuleNgFactory",name:"BuyFromShopPage",segment:"buy-from-shop",priority:"low",defaultHistory:[]},{loadChildren:"../pages/buy-details-search-modal/buy-details-search-modal.module.ngfactory#BuyDetailsSearchModalPageModuleNgFactory",name:"BuyDetailsSearchModalPage",segment:"buy-details-search-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/camera-modal/camera-modal.module.ngfactory#CameraModalPageModuleNgFactory",name:"CameraModalPage",segment:"camera-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/bill-description/bill-description.module.ngfactory#BillDescriptionPageModuleNgFactory",name:"BillDescriptionPage",segment:"bill-description",priority:"low",defaultHistory:[]},{loadChildren:"../pages/change-driver/change-driver.module.ngfactory#ChangeDriverPageModuleNgFactory",name:"ChangeDriverPage",segment:"change-driver",priority:"low",defaultHistory:[]},{loadChildren:"../pages/complaints-khata/complaints-khata.module.ngfactory#ComplaintsKhataPageModuleNgFactory",name:"ComplaintsKhataPage",segment:"complaints-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/calendar-modal/calendar-modal.module.ngfactory#CalendarModalPageModuleNgFactory",name:"CalendarModalPage",segment:"calendar-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/contact/contact.module.ngfactory#ContactPageModuleNgFactory",name:"ContactPage",segment:"contact",priority:"low",defaultHistory:[]},{loadChildren:"../pages/complaints-update/complaints-update.module.ngfactory#ComplaintsUpdatePageModuleNgFactory",name:"ComplaintsUpdatePage",segment:"complaints-update",priority:"low",defaultHistory:[]},{loadChildren:"../pages/decision-modal/decision-modal.module.ngfactory#DecisionModalPageModuleNgFactory",name:"DecisionModalPage",segment:"decision-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/details-modal/details-modal.module.ngfactory#DetailsModalPageModuleNgFactory",name:"DetailsModalPage",segment:"details-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/document-bill-report/document-bill-report.module.ngfactory#DocumentBillReportPageModuleNgFactory",name:"DocumentBillReportPage",segment:"document-bill-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/document-and-insurance/document-and-insurance.module.ngfactory#DocumentAndInsurancePageModuleNgFactory",name:"DocumentAndInsurancePage",segment:"document-and-insurance",priority:"low",defaultHistory:[]},{loadChildren:"../pages/document-date-report/document-date-report.module.ngfactory#DocumentDateReportPageModuleNgFactory",name:"DocumentDateReportPage",segment:"document-date-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/document-renewal/document-renewal.module.ngfactory#DocumentRenewalPageModuleNgFactory",name:"DocumentRenewalPage",segment:"document-renewal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/document/document.module.ngfactory#DocumentPageModuleNgFactory",name:"DocumentPage",segment:"document",priority:"low",defaultHistory:[]},{loadChildren:"../pages/driver-details-search/driver-details-search.module.ngfactory#DriverDetailsSearchPageModuleNgFactory",name:"DriverDetailsSearchPage",segment:"driver-details-search",priority:"low",defaultHistory:[]},{loadChildren:"../pages/driver-document/driver-document.module.ngfactory#DriverDocumentPageModuleNgFactory",name:"DriverDocumentPage",segment:"driver-document",priority:"low",defaultHistory:[]},{loadChildren:"../pages/driver-khata-search/driver-khata-search.module.ngfactory#DriverKhataSearchPageModuleNgFactory",name:"DriverKhataSearchPage",segment:"driver-khata-search",priority:"low",defaultHistory:[]},{loadChildren:"../pages/driver-khata/driver-khata.module.ngfactory#DriverKhataPageModuleNgFactory",name:"DriverKhataPage",segment:"driver-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/driver/driver.module.ngfactory#DriverPageModuleNgFactory",name:"DriverPage",segment:"driver",priority:"low",defaultHistory:[]},{loadChildren:"../pages/exchange-modal/exchange-modal.module.ngfactory#ExchangeModalPageModuleNgFactory",name:"ExchangeModalPage",segment:"exchange-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/edit-profile/edit-profile.module.ngfactory#EditProfilePageModuleNgFactory",name:"EditProfilePage",segment:"edit-profile",priority:"low",defaultHistory:[]},{loadChildren:"../pages/full-report/full-report.module.ngfactory#FullReportPageModuleNgFactory",name:"FullReportPage",segment:"full-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/home/home.module.ngfactory#HomePageModuleNgFactory",name:"HomePage",segment:"home",priority:"low",defaultHistory:[]},{loadChildren:"../pages/init/init.module.ngfactory#InitPageModuleNgFactory",name:"InitPage",segment:"init",priority:"low",defaultHistory:[]},{loadChildren:"../pages/language/language.module.ngfactory#LanguagePageModuleNgFactory",name:"LanguagePage",segment:"language",priority:"low",defaultHistory:[]},{loadChildren:"../pages/ledger/ledger.module.ngfactory#LedgerPageModuleNgFactory",name:"LedgerPage",segment:"ledger",priority:"low",defaultHistory:[]},{loadChildren:"../pages/insurance/insurance.module.ngfactory#InsurancePageModuleNgFactory",name:"InsurancePage",segment:"insurance",priority:"low",defaultHistory:[]},{loadChildren:"../pages/mechanic-bill/mechanic-bill.module.ngfactory#MechanicBillPageModuleNgFactory",name:"MechanicBillPage",segment:"mechanic-bill",priority:"low",defaultHistory:[]},{loadChildren:"../pages/mechanic/mechanic.module.ngfactory#MechanicPageModuleNgFactory",name:"MechanicPage",segment:"mechanic",priority:"low",defaultHistory:[]},{loadChildren:"../pages/parts-bill-details-modal/parts-bill-details-modal.module.ngfactory#PartsBillDetailsModalPageModuleNgFactory",name:"PartsBillDetailsModalPage",segment:"parts-bill-details-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/parts-work-modal/parts-work-modal.module.ngfactory#PartsWorkModalPageModuleNgFactory",name:"PartsWorkModalPage",segment:"parts-work-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/problem-work-part-modal/problem-work-part-modal.module.ngfactory#ProblemWorkPartModalPageModuleNgFactory",name:"ProblemWorkPartModalPage",segment:"problem-work-part-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/profile/profile.module.ngfactory#ProfilePageModuleNgFactory",name:"ProfilePage",segment:"profile",priority:"low",defaultHistory:[]},{loadChildren:"../pages/mechanic-khata/mechanic-khata.module.ngfactory#MechanicKhataPageModuleNgFactory",name:"MechanicKhataPage",segment:"mechanic-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/reason-modal/reason-modal.module.ngfactory#ReasonModalPageModuleNgFactory",name:"ReasonModalPage",segment:"reason-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/remove-driver-from-account/remove-driver-from-account.module.ngfactory#RemoveDriverFromAccountPageModuleNgFactory",name:"RemoveDriverFromAccountPage",segment:"remove-driver-from-account",priority:"low",defaultHistory:[]},{loadChildren:"../pages/remove-driver/remove-driver.module.ngfactory#RemoveDriverPageModuleNgFactory",name:"RemoveDriverPage",segment:"remove-driver",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-full/report-full.module.ngfactory#ReportFullPageModuleNgFactory",name:"ReportFullPage",segment:"report-full",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-khata/report-khata.module.ngfactory#ReportKhataPageModuleNgFactory",name:"ReportKhataPage",segment:"report-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-modal/report-modal.module.ngfactory#ReportModalPageModuleNgFactory",name:"ReportModalPage",segment:"report-modal",priority:"low",defaultHistory:[]},{loadChildren:"../pages/report-all-comp/report-all-comp.module.ngfactory#ReportAllCompPageModuleNgFactory",name:"ReportAllCompPage",segment:"report-all-comp",priority:"low",defaultHistory:[]},{loadChildren:"../pages/security-and-backup/security-and-backup.module.ngfactory#SecurityAndBackupPageModuleNgFactory",name:"SecurityAndBackupPage",segment:"security-and-backup",priority:"low",defaultHistory:[]},{loadChildren:"../pages/settings/settings.module.ngfactory#SettingsPageModuleNgFactory",name:"SettingsPage",segment:"settings",priority:"low",defaultHistory:[]},{loadChildren:"../pages/shop-bill-description/shop-bill-description.module.ngfactory#ShopBillDescriptionPageModuleNgFactory",name:"ShopBillDescriptionPage",segment:"shop-bill-description",priority:"low",defaultHistory:[]},{loadChildren:"../pages/shop-bill-details/shop-bill-details.module.ngfactory#ShopBillDetailsPageModuleNgFactory",name:"ShopBillDetailsPage",segment:"shop-bill-details",priority:"low",defaultHistory:[]},{loadChildren:"../pages/shop-khata/shop-khata.module.ngfactory#ShopKhataPageModuleNgFactory",name:"ShopKhataPage",segment:"shop-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/shop/shop.module.ngfactory#ShopPageModuleNgFactory",name:"ShopPage",segment:"shop",priority:"low",defaultHistory:[]},{loadChildren:"../pages/tabs/tabs.module.ngfactory#TabsPageModuleNgFactory",name:"TabsPage",segment:"tabs",priority:"low",defaultHistory:[]},{loadChildren:"../pages/upload-image/upload-image.module.ngfactory#UploadImagePageModuleNgFactory",name:"UploadImagePage",segment:"upload-image",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-details/vehicle-details.module.ngfactory#VehicleDetailsPageModuleNgFactory",name:"VehicleDetailsPage",segment:"vehicle-details",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-document/vehicle-document.module.ngfactory#VehicleDocumentPageModuleNgFactory",name:"VehicleDocumentPage",segment:"vehicle-document",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-bill-report/vehicle-bill-report.module.ngfactory#VehicleBillReportPageModuleNgFactory",name:"VehicleBillReportPage",segment:"vehicle-bill-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-document-bill/vehicle-document-bill.module.ngfactory#VehicleDocumentBillPageModuleNgFactory",name:"VehicleDocumentBillPage",segment:"vehicle-document-bill",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-work-report/vehicle-work-report.module.ngfactory#VehicleWorkReportPageModuleNgFactory",name:"VehicleWorkReportPage",segment:"vehicle-work-report",priority:"low",defaultHistory:[]},{loadChildren:"../pages/vehicle-khata/vehicle-khata.module.ngfactory#VehicleKhataPageModuleNgFactory",name:"VehicleKhataPage",segment:"vehicle-khata",priority:"low",defaultHistory:[]},{loadChildren:"../pages/view-bill/view-bill.module.ngfactory#ViewBillPageModuleNgFactory",name:"ViewBillPage",segment:"view-bill",priority:"low",defaultHistory:[]},{loadChildren:"../pages/view-transaction/view-transaction.module.ngfactory#ViewTransactionPageModuleNgFactory",name:"ViewTransactionPage",segment:"view-transaction",priority:"low",defaultHistory:[]},{loadChildren:"../pages/view-payment/view-payment.module.ngfactory#ViewPaymentPageModuleNgFactory",name:"ViewPaymentPage",segment:"view-payment",priority:"low",defaultHistory:[]},{loadChildren:"../pages/problem-modal/problem-modal.module.ngfactory#ProblemModalPageModuleNgFactory",name:"ProblemModalPage",segment:"problem-modal",priority:"low",defaultHistory:[]}]},[]),l["ɵmpd"](512,l.Compiler,l.Compiler,[]),l["ɵmpd"](512,Re.a,Re.a,[l.Compiler]),l["ɵmpd"](1024,ae.b,ae.c,[Re.a,l.Injector]),l["ɵmpd"](1024,l.APP_INITIALIZER,function(e,a,o,t,l,i,d,n,s,m,c,g,p){return[r.s(e),be.a(a),se.c(o,t),ye.c(l,i,d,n,s),ae.d(m,c,g,p)]},[[2,l.NgProbeToken],V.a,W.a,z.a,V.a,W.a,z.a,H.a,K.m,V.a,$.a,ae.b,l.NgZone]),l["ɵmpd"](512,l.ApplicationInitStatus,l.ApplicationInitStatus,[[2,l.APP_INITIALIZER]]),l["ɵmpd"](131584,l.ApplicationRef,l.ApplicationRef,[l.NgZone,l["ɵConsole"],l.Injector,l.ErrorHandler,l.ComponentFactoryResolver,l.ApplicationInitStatus]),l["ɵmpd"](512,l.ApplicationModule,l.ApplicationModule,[l.ApplicationRef]),l["ɵmpd"](512,r.a,r.a,[[3,r.a]]),l["ɵmpd"](512,h.e,h.e,[]),l["ɵmpd"](512,h.d,h.d,[]),l["ɵmpd"](512,J["ɵba"],J["ɵba"],[]),l["ɵmpd"](512,J.FormsModule,J.FormsModule,[]),l["ɵmpd"](512,J.ReactiveFormsModule,J.ReactiveFormsModule,[]),l["ɵmpd"](512,ee.a,ee.a,[]),l["ɵmpd"](512,re.CalendarModule,re.CalendarModule,[]),l["ɵmpd"](512,Ae.a,Ae.a,[]),l["ɵmpd"](512,y.a,y.a,[]),l["ɵmpd"](512,E,E,[]),l["ɵmpd"](256,h.m,"XSRF-TOKEN",[]),l["ɵmpd"](256,h.n,"X-XSRF-TOKEN",[]),l["ɵmpd"](256,i.a,"/",[]),l["ɵmpd"](256,_.a,u,[])])});Object(l.enableProdMode)(),Object(r.j)().bootstrapModuleFactory(ve)},522:function(e,a,o){function t(e){return o(r(e))}function r(e){var a=l[e];if(!(a+1))throw new Error("Cannot find module '"+e+"'.");return a}var l={"./af":266,"./af.js":266,"./ar":267,"./ar-dz":268,"./ar-dz.js":268,"./ar-kw":269,"./ar-kw.js":269,"./ar-ly":270,"./ar-ly.js":270,"./ar-ma":271,"./ar-ma.js":271,"./ar-sa":272,"./ar-sa.js":272,"./ar-tn":273,"./ar-tn.js":273,"./ar.js":267,"./az":274,"./az.js":274,"./be":275,"./be.js":275,"./bg":276,"./bg.js":276,"./bm":277,"./bm.js":277,"./bn":278,"./bn-bd":279,"./bn-bd.js":279,"./bn.js":278,"./bo":280,"./bo.js":280,"./br":281,"./br.js":281,"./bs":282,"./bs.js":282,"./ca":283,"./ca.js":283,"./cs":284,"./cs.js":284,"./cv":285,"./cv.js":285,"./cy":286,"./cy.js":286,"./da":287,"./da.js":287,"./de":288,"./de-at":289,"./de-at.js":289,"./de-ch":290,"./de-ch.js":290,"./de.js":288,"./dv":291,"./dv.js":291,"./el":292,"./el.js":292,"./en-au":293,"./en-au.js":293,"./en-ca":294,"./en-ca.js":294,"./en-gb":295,"./en-gb.js":295,"./en-ie":296,"./en-ie.js":296,"./en-il":297,"./en-il.js":297,"./en-in":298,"./en-in.js":298,"./en-nz":299,"./en-nz.js":299,"./en-sg":300,"./en-sg.js":300,"./eo":301,"./eo.js":301,"./es":302,"./es-do":303,"./es-do.js":303,"./es-mx":304,"./es-mx.js":304,"./es-us":305,"./es-us.js":305,"./es.js":302,"./et":306,"./et.js":306,"./eu":307,"./eu.js":307,"./fa":308,"./fa.js":308,"./fi":309,"./fi.js":309,"./fil":310,"./fil.js":310,"./fo":311,"./fo.js":311,"./fr":312,"./fr-ca":313,"./fr-ca.js":313,"./fr-ch":314,"./fr-ch.js":314,"./fr.js":312,"./fy":315,"./fy.js":315,"./ga":316,"./ga.js":316,"./gd":317,"./gd.js":317,"./gl":318,"./gl.js":318,"./gom-deva":319,"./gom-deva.js":319,"./gom-latn":320,"./gom-latn.js":320,"./gu":321,"./gu.js":321,"./he":322,"./he.js":322,"./hi":323,"./hi.js":323,"./hr":324,"./hr.js":324,"./hu":325,"./hu.js":325,"./hy-am":326,"./hy-am.js":326,"./id":327,"./id.js":327,"./is":328,"./is.js":328,"./it":329,"./it-ch":330,"./it-ch.js":330,"./it.js":329,"./ja":331,"./ja.js":331,"./jv":332,"./jv.js":332,"./ka":333,"./ka.js":333,"./kk":334,"./kk.js":334,"./km":335,"./km.js":335,"./kn":336,"./kn.js":336,"./ko":337,"./ko.js":337,"./ku":338,"./ku.js":338,"./ky":339,"./ky.js":339,"./lb":340,"./lb.js":340,"./lo":341,"./lo.js":341,"./lt":342,"./lt.js":342,"./lv":343,"./lv.js":343,"./me":344,"./me.js":344,"./mi":345,"./mi.js":345,"./mk":346,"./mk.js":346,"./ml":347,"./ml.js":347,"./mn":348,"./mn.js":348,"./mr":349,"./mr.js":349,"./ms":350,"./ms-my":351,"./ms-my.js":351,"./ms.js":350,"./mt":352,"./mt.js":352,"./my":353,"./my.js":353,"./nb":354,"./nb.js":354,"./ne":355,"./ne.js":355,"./nl":356,"./nl-be":357,"./nl-be.js":357,"./nl.js":356,"./nn":358,"./nn.js":358,"./oc-lnc":359,"./oc-lnc.js":359,"./pa-in":360,"./pa-in.js":360,"./pl":361,"./pl.js":361,"./pt":362,"./pt-br":363,"./pt-br.js":363,"./pt.js":362,"./ro":364,"./ro.js":364,"./ru":365,"./ru.js":365,"./sd":366,"./sd.js":366,"./se":367,"./se.js":367,"./si":368,"./si.js":368,"./sk":369,"./sk.js":369,"./sl":370,"./sl.js":370,"./sq":371,"./sq.js":371,"./sr":372,"./sr-cyrl":373,"./sr-cyrl.js":373,"./sr.js":372,"./ss":374,"./ss.js":374,"./sv":375,"./sv.js":375,"./sw":376,"./sw.js":376,"./ta":377,"./ta.js":377,"./te":378,"./te.js":378,"./tet":379,"./tet.js":379,"./tg":380,"./tg.js":380,"./th":381,"./th.js":381,"./tk":382,"./tk.js":382,"./tl-ph":383,"./tl-ph.js":383,"./tlh":384,"./tlh.js":384,"./tr":385,"./tr.js":385,"./tzl":386,"./tzl.js":386,"./tzm":387,"./tzm-latn":388,"./tzm-latn.js":388,"./tzm.js":387,"./ug-cn":389,"./ug-cn.js":389,"./uk":390,"./uk.js":390,"./ur":391,"./ur.js":391,"./uz":392,"./uz-latn":393,"./uz-latn.js":393,"./uz.js":392,"./vi":394,"./vi.js":394,"./x-pseudo":395,"./x-pseudo.js":395,"./yo":396,"./yo.js":396,"./zh-cn":397,"./zh-cn.js":397,"./zh-hk":398,"./zh-hk.js":398,"./zh-mo":399,"./zh-mo.js":399,"./zh-tw":400,"./zh-tw.js":400};t.keys=function(){return Object.keys(l)},t.resolve=r,e.exports=t,t.id=522},84:function(e,a,o){"use strict";o.d(a,"a",function(){return t});o(2);var t=function(){return function(e){this.http=e,this.BASE_URL_PROD="http://127.0.0.1:8000/api/",this.BASE_URL_SERV_1="https://www.manpuriaproducts.org/saarthi/public/index.php/api/",this.BASE_URL_SERV_2="https://api.fastdeliveryindia.com/public/index.php/api/",this.BASE_URL="https://www.atkindia.com/public/index.php/api/",this.BASE_URL_REPORT="http://report.atkindia.com/public/api/",this.BASE_URL_REPORT_DOWNLOAD="http://report.atkindia.com/public/",this.BASE_URL_REPORT_TEST="http://127.0.0.1:8001/api/",this.BASE_URL_REPORT_DOWNLOAD_TEST="http://127.0.0.1:8001/",this.GET_REGISTRATION_INFO=this.BASE_URL+"getregistrationinfo",this.SAVE_REGISTRATION_INFO=this.BASE_URL+"saveregistrationinfo",this.LOGIN=this.BASE_URL+"login",this.SAVE_VEHICLE_DETAILS=this.BASE_URL+"savevehicledetails",this.UPDATE_VEHICLE_DETAILS=this.BASE_URL+"updatevehiclebyvehicleid",this.DELETE_VEHICLE_DETAILS=this.BASE_URL+"deletevehiclebyid",this.UPDATE_WORK_DETAILS=this.BASE_URL+"updatevehiclestatus",this.GET_UPDATE_WORK_DETAILS=this.BASE_URL+"getupdatevehiclestatus",this.SAVE_WORK_PART=this.BASE_URL+"saveworkpart",this.GET_WORK_PART=this.BASE_URL+"getworkpart",this.UPDATE_WORK_UPDATE=this.BASE_URL+"updatevehiclestatusbyid",this.UPDATE_WORK_DELETE=this.BASE_URL+"deletevehiclestatusbyid",this.GET_VEHICLE_DETAILS=this.BASE_URL+"getvehicledetailsbysrthid",this.UPDATE_PROFILE=this.BASE_URL+"updateprofile",this.GET_PROFILE=this.BASE_URL+"getprofile",this.SAVE_REASON=this.BASE_URL+"savedriverreason",this.GET_REASON=this.BASE_URL+"getdriverreason",this.DELETE_REASON=this.BASE_URL+"deletedriverreason",this.ADD_EXPENSE_BILL=this.BASE_URL+"adddriverexpensebill",this.GET_EXPENSE_BILL_BY_SRTH_ID=this.BASE_URL+"getdriverexpensebillbysrthid",this.GET_EXPENSE_BILL_BY_WORKER_ID=this.BASE_URL+"getdriverexpensebillbyworkerid",this.GET_EXPENSE_BILL_BY_WORKER_ID_UNPAID=this.BASE_URL+"getdriverexpensebillbyworkeridunpaid",this.DELETE_BILL_EXPENSE=this.BASE_URL+"deletebillbybillid",this.UPDATE_BILL_EXPENSE=this.BASE_URL+"updatebillbybillid",this.DELETE_PAYMENT=this.BASE_URL+"deletepayment",this.UPDATE_PAYMENT=this.BASE_URL+"editpayment",this.UPDATE_VEHICLE_DRIVER=this.BASE_URL+"updatevehicledriver",this.GET_DISPLAY_BILL_BY_WORKER_ID=this.BASE_URL+"getdisplaybillbyworkerid",this.CREATE_WORKER=this.BASE_URL+"createworker",this.GET_WORKER=this.BASE_URL+"getworkerbysrrthid",this.UPDATE_WORKER=this.BASE_URL+"updateworker",this.DELETE_WORKER=this.BASE_URL+"deleteworker",this.CREATE_PAYMENT=this.BASE_URL+"createpayment",this.GET_VEHICLE_BY_WORKER_ID=this.BASE_URL+"getvehiclehistorybyworkerid",this.GET_BILL_DETAILS_BY_BILL_ID=this.BASE_URL+"getbilldetailsbybillid",this.SAVE_COMPLAINTS=this.BASE_URL+"savecomplaints",this.GET_COMPLAINTS=this.BASE_URL+"getcomplaintsbysrthid",this.UPDATE_COMPLAINTS=this.BASE_URL+"updatecomplaintsbycomplaintid",this.SOLVE_COMPLAINTS=this.BASE_URL+"solvecomplaintbyid",this.DELETE_COMPLAINTS=this.BASE_URL+"deletecomplaintbyid",this.REMIND_LATER=this.BASE_URL+"remindlater",this.UPDATE_DOCUMENT_BILL=this.BASE_URL+"updatedocumentbill",this.SAVE_PROBLEM=this.BASE_URL+"saveproblem",this.GET_PROBLEM=this.BASE_URL+"getproblembysrthid",this.SAVE_PROBLEM_PARTS=this.BASE_URL+"saveproblemparts",this.GET_PROBLEM_PARTS=this.BASE_URL+"getbillproblemparts",this.UPDATE_DOCUMENT_INFO=this.BASE_URL+"updatedocumentinfo",this.GET_DOCUMENT_INFO=this.BASE_URL+"getdocumentinfo",this.GET_DOCUMENT_INFO_BY_SRTH_ID=this.BASE_URL+"getdocumentinfobysrthid",this.GET_LAST_BILL_ID=this.BASE_URL+"getlastbillid",this.SAVE_IMAGE=this.BASE_URL+"saveimage",this.GET_IMAGE_BY_IMAGE_ID=this.BASE_URL+"getimagebyimageid",this.GET_IMAGE_BY_WORKER_TYPE=this.BASE_URL+"getimagebyworkertype",this.GET_IMAGE_BY_TYPE_WORKER_TYPE=this.BASE_URL+"getimagebytypeworkertype",this.SAVE_EXCHANGE_PART=this.BASE_URL+"savevehicleexchangeinfo",this.GET_EXCHANGE_PART=this.BASE_URL+"getvehicleexchangeinfo",this.GET_BILL_FOR_VEHICLE=this.BASE_URL+"getallbillsforvehicle",this.GET_BILL_SUMMARY=this.BASE_URL+"getbillsummary",this.GET_IMAGES_BY_SRTH_ID=this.BASE_URL+"getimagebysrthid",this.GET_LAST_COMPLAINTS_ID=this.BASE_URL+"getlastcomplaintid",this.GET_FUEL_PRICES="https://fuelprice-api-india.herokuapp.com/price/West-Bengal/KOLKATA",this.SHOP_BILL_REPORT=this.BASE_URL_REPORT+"shopbillreportweb",this.SHOP_BILL_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"shopbillreport",this.SHOP_BUY_REPORT=this.BASE_URL_REPORT+"shopbuyreportweb",this.SHOP_BUY_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"shopbuyreportapi",this.MECHANIC_BILL_REPORT=this.BASE_URL_REPORT+"mechanicbillreportapi",this.MECHANIC_BILL_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"mechanicbillreportweb",this.MECHANIC_BUY_REPORT=this.BASE_URL_REPORT+"mechanicbuyreportapi",this.MECHANIC_BUY_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"mechanicbuyreportweb",this.FULL_REPORT=this.BASE_URL_REPORT+"fullreportapi",this.FULL_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"fullreportweb",this.DOCUMENT_BILL_REPORT=this.BASE_URL_REPORT+"documentbillreportapi",this.DOCUMENT_BILL_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"documentbillreportweb",this.DOCUMENT_DATE_REPORT=this.BASE_URL_REPORT+"documentdatereportapi",this.DOCUMENT_DATE_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"documentdatereportweb",this.VEHICLE_WORK_REPORT=this.BASE_URL_REPORT+"vehicleworkreportapi",this.VEHICLE_WORK_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"vehicleworkreportweb",this.VEHICLE_BILL_REPORT=this.BASE_URL_REPORT+"vehiclebillreportapi",this.VEHICLE_BILL_REPORT_DOWNLOAD=this.BASE_URL_REPORT_DOWNLOAD+"vehiclebillreportweb",this.K_ACCOUNT_INFO="accountinfo",this.SELECTED_WORK_PART="selectedworkpart",this.DETAILS="details",this.ADDED_VEHICLE_ID="addedvehicleid",this.SELECTED_REASON="selectedreason",this.DATE="date",console.log("Hello CodesProvider Provider")}}()}},[514]);
+webpackJsonp([77],{
+
+/***/ 159:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CodesProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CodesProvider = /** @class */ (function () {
+    function CodesProvider(http) {
+        this.http = http;
+        this.BASE_URL_PROD = "http://127.0.0.1:8000/api/";
+        this.BASE_URL_SERV_1 = "https://www.manpuriaproducts.org/saarthi/public/index.php/api/";
+        this.BASE_URL_SERV_2 = "https://api.fastdeliveryindia.com/public/index.php/api/";
+        this.BASE_URL = "https://www.atkindia.com/public/index.php/api/";
+        this.BASE_URL_REPORT = "http://report.atkindia.com/public/api/";
+        this.BASE_URL_REPORT_DOWNLOAD = "http://report.atkindia.com/public/";
+        this.BASE_URL_REPORT_TEST = "http://127.0.0.1:8001/api/";
+        this.BASE_URL_REPORT_DOWNLOAD_TEST = "http://127.0.0.1:8001/";
+        this.GET_REGISTRATION_INFO = this.BASE_URL + "getregistrationinfo";
+        this.SAVE_REGISTRATION_INFO = this.BASE_URL + "saveregistrationinfo";
+        this.LOGIN = this.BASE_URL + "login";
+        this.SAVE_VEHICLE_DETAILS = this.BASE_URL + "savevehicledetails";
+        this.UPDATE_VEHICLE_DETAILS = this.BASE_URL + "updatevehiclebyvehicleid";
+        this.DELETE_VEHICLE_DETAILS = this.BASE_URL + "deletevehiclebyid";
+        this.UPDATE_WORK_DETAILS = this.BASE_URL + "updatevehiclestatus";
+        this.GET_UPDATE_WORK_DETAILS = this.BASE_URL + "getupdatevehiclestatus";
+        this.SAVE_WORK_PART = this.BASE_URL + "saveworkpart";
+        this.GET_WORK_PART = this.BASE_URL + "getworkpart";
+        this.UPDATE_WORK_UPDATE = this.BASE_URL + "updatevehiclestatusbyid";
+        this.UPDATE_WORK_DELETE = this.BASE_URL + "deletevehiclestatusbyid";
+        this.GET_VEHICLE_DETAILS = this.BASE_URL + "getvehicledetailsbysrthid";
+        this.UPDATE_PROFILE = this.BASE_URL + "updateprofile";
+        this.GET_PROFILE = this.BASE_URL + "getprofile";
+        this.SAVE_REASON = this.BASE_URL + "savedriverreason";
+        this.GET_REASON = this.BASE_URL + "getdriverreason";
+        this.DELETE_REASON = this.BASE_URL + "deletedriverreason";
+        this.ADD_EXPENSE_BILL = this.BASE_URL + "adddriverexpensebill";
+        this.GET_EXPENSE_BILL_BY_SRTH_ID = this.BASE_URL + "getdriverexpensebillbysrthid";
+        this.GET_EXPENSE_BILL_BY_WORKER_ID = this.BASE_URL + "getdriverexpensebillbyworkerid";
+        this.GET_EXPENSE_BILL_BY_WORKER_ID_UNPAID = this.BASE_URL + "getdriverexpensebillbyworkeridunpaid";
+        this.DELETE_BILL_EXPENSE = this.BASE_URL + "deletebillbybillid";
+        this.UPDATE_BILL_EXPENSE = this.BASE_URL + "updatebillbybillid";
+        this.DELETE_PAYMENT = this.BASE_URL + "deletepayment";
+        this.UPDATE_PAYMENT = this.BASE_URL + "editpayment";
+        this.UPDATE_VEHICLE_DRIVER = this.BASE_URL + "updatevehicledriver";
+        this.GET_DISPLAY_BILL_BY_WORKER_ID = this.BASE_URL + "getdisplaybillbyworkerid";
+        this.CREATE_WORKER = this.BASE_URL + "createworker";
+        this.GET_WORKER = this.BASE_URL + "getworkerbysrrthid";
+        this.UPDATE_WORKER = this.BASE_URL + "updateworker";
+        this.DELETE_WORKER = this.BASE_URL + "deleteworker";
+        this.CREATE_PAYMENT = this.BASE_URL + "createpayment";
+        this.GET_VEHICLE_BY_WORKER_ID = this.BASE_URL + "getvehiclehistorybyworkerid";
+        this.GET_BILL_DETAILS_BY_BILL_ID = this.BASE_URL + "getbilldetailsbybillid";
+        this.SAVE_COMPLAINTS = this.BASE_URL + "savecomplaints";
+        this.GET_COMPLAINTS = this.BASE_URL + "getcomplaintsbysrthid";
+        this.UPDATE_COMPLAINTS = this.BASE_URL + "updatecomplaintsbycomplaintid";
+        this.SOLVE_COMPLAINTS = this.BASE_URL + "solvecomplaintbyid";
+        this.DELETE_COMPLAINTS = this.BASE_URL + "deletecomplaintbyid";
+        this.REMIND_LATER = this.BASE_URL + "remindlater";
+        this.UPDATE_DOCUMENT_BILL = this.BASE_URL + "updatedocumentbill";
+        this.SAVE_PROBLEM = this.BASE_URL + "saveproblem";
+        this.GET_PROBLEM = this.BASE_URL + "getproblembysrthid";
+        this.SAVE_PROBLEM_PARTS = this.BASE_URL + "saveproblemparts";
+        this.GET_PROBLEM_PARTS = this.BASE_URL + "getbillproblemparts";
+        this.UPDATE_DOCUMENT_INFO = this.BASE_URL + "updatedocumentinfo";
+        this.GET_DOCUMENT_INFO = this.BASE_URL + "getdocumentinfo";
+        this.GET_DOCUMENT_INFO_BY_SRTH_ID = this.BASE_URL + "getdocumentinfobysrthid";
+        this.GET_LAST_BILL_ID = this.BASE_URL + "getlastbillid";
+        this.SAVE_IMAGE = this.BASE_URL + "saveimage";
+        this.GET_IMAGE_BY_IMAGE_ID = this.BASE_URL + "getimagebyimageid";
+        this.GET_IMAGE_BY_WORKER_TYPE = this.BASE_URL + "getimagebyworkertype";
+        this.GET_IMAGE_BY_TYPE_WORKER_TYPE = this.BASE_URL + "getimagebytypeworkertype";
+        this.SAVE_EXCHANGE_PART = this.BASE_URL + "savevehicleexchangeinfo";
+        this.GET_EXCHANGE_PART = this.BASE_URL + "getvehicleexchangeinfo";
+        this.GET_BILL_FOR_VEHICLE = this.BASE_URL + "getallbillsforvehicle";
+        this.GET_BILL_SUMMARY = this.BASE_URL + "getbillsummary";
+        this.GET_IMAGES_BY_SRTH_ID = this.BASE_URL + "getimagebysrthid";
+        this.GET_LAST_COMPLAINTS_ID = this.BASE_URL + "getlastcomplaintid";
+        this.GET_FUEL_PRICES = "https://fuelprice-api-india.herokuapp.com/price/West-Bengal/KOLKATA";
+        //Reports
+        this.SHOP_BILL_REPORT = this.BASE_URL_REPORT + "shopbillreportweb";
+        this.SHOP_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "shopbillreport";
+        this.SHOP_BUY_REPORT = this.BASE_URL_REPORT + "shopbuyreportweb";
+        this.SHOP_BUY_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "shopbuyreportapi";
+        this.MECHANIC_BILL_REPORT = this.BASE_URL_REPORT + "mechanicbillreportapi";
+        this.MECHANIC_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "mechanicbillreportweb";
+        this.MECHANIC_BUY_REPORT = this.BASE_URL_REPORT + "mechanicbuyreportapi";
+        this.MECHANIC_BUY_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "mechanicbuyreportweb";
+        this.FULL_REPORT = this.BASE_URL_REPORT + "fullreportapi";
+        this.FULL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "fullreportweb";
+        this.DOCUMENT_BILL_REPORT = this.BASE_URL_REPORT + "documentbillreportapi";
+        this.DOCUMENT_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "documentbillreportweb";
+        this.DOCUMENT_DATE_REPORT = this.BASE_URL_REPORT + "documentdatereportapi";
+        this.DOCUMENT_DATE_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "documentdatereportweb";
+        this.VEHICLE_WORK_REPORT = this.BASE_URL_REPORT + "vehicleworkreportapi";
+        this.VEHICLE_WORK_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "vehicleworkreportweb";
+        this.VEHICLE_BILL_REPORT = this.BASE_URL_REPORT + "vehiclebillreportapi";
+        this.VEHICLE_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "vehiclebillreportweb";
+        this.K_ACCOUNT_INFO = "accountinfo";
+        this.SELECTED_WORK_PART = "selectedworkpart";
+        this.DETAILS = "details";
+        this.ADDED_VEHICLE_ID = "addedvehicleid";
+        this.SELECTED_REASON = "selectedreason";
+        this.DATE = "date";
+        console.log('Hello CodesProvider Provider');
+    }
+    CodesProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], CodesProvider);
+    return CodesProvider;
+}());
+
+//# sourceMappingURL=codes.js.map
+
+/***/ }),
+
+/***/ 170:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 170;
+
+/***/ }),
+
+/***/ 213:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/about/about.module": [
+		841,
+		76
+	],
+	"../pages/account-khata/account-khata.module": [
+		842,
+		75
+	],
+	"../pages/add-complaints/add-complaints.module": [
+		843,
+		74
+	],
+	"../pages/add-document-bill/add-document-bill.module": [
+		844,
+		73
+	],
+	"../pages/add-driver-expenses/add-driver-expenses.module": [
+		845,
+		72
+	],
+	"../pages/add-driver/add-driver.module": [
+		846,
+		71
+	],
+	"../pages/add-mechanic/add-mechanic.module": [
+		847,
+		70
+	],
+	"../pages/add-more-modal/add-more-modal.module": [
+		848,
+		69
+	],
+	"../pages/add-new-bank-account/add-new-bank-account.module": [
+		849,
+		68
+	],
+	"../pages/add-permit/add-permit.module": [
+		850,
+		67
+	],
+	"../pages/add-vehicle/add-vehicle.module": [
+		851,
+		0
+	],
+	"../pages/all-image-khata/all-image-khata.module": [
+		852,
+		66
+	],
+	"../pages/allot-driver/allot-driver.module": [
+		853,
+		65
+	],
+	"../pages/bill-description/bill-description.module": [
+		854,
+		64
+	],
+	"../pages/bill-details/bill-details.module": [
+		855,
+		63
+	],
+	"../pages/bill-payment-search/bill-payment-search.module": [
+		856,
+		62
+	],
+	"../pages/buy-details-search-modal/buy-details-search-modal.module": [
+		857,
+		61
+	],
+	"../pages/buy-from-shop/buy-from-shop.module": [
+		859,
+		60
+	],
+	"../pages/calendar-modal/calendar-modal.module": [
+		858,
+		59
+	],
+	"../pages/camera-modal/camera-modal.module": [
+		860,
+		58
+	],
+	"../pages/change-driver/change-driver.module": [
+		861,
+		57
+	],
+	"../pages/complaints-khata/complaints-khata.module": [
+		862,
+		56
+	],
+	"../pages/complaints-update/complaints-update.module": [
+		863,
+		55
+	],
+	"../pages/contact/contact.module": [
+		864,
+		54
+	],
+	"../pages/decision-modal/decision-modal.module": [
+		865,
+		53
+	],
+	"../pages/details-modal/details-modal.module": [
+		866,
+		52
+	],
+	"../pages/document-and-insurance/document-and-insurance.module": [
+		867,
+		51
+	],
+	"../pages/document-bill-report/document-bill-report.module": [
+		868,
+		50
+	],
+	"../pages/document-date-report/document-date-report.module": [
+		869,
+		49
+	],
+	"../pages/document-renewal/document-renewal.module": [
+		870,
+		48
+	],
+	"../pages/document/document.module": [
+		871,
+		47
+	],
+	"../pages/driver-details-search/driver-details-search.module": [
+		872,
+		46
+	],
+	"../pages/driver-document/driver-document.module": [
+		873,
+		45
+	],
+	"../pages/driver-khata-search/driver-khata-search.module": [
+		874,
+		44
+	],
+	"../pages/driver-khata/driver-khata.module": [
+		875,
+		43
+	],
+	"../pages/driver/driver.module": [
+		876,
+		42
+	],
+	"../pages/edit-other-document-name/edit-other-document-name.module": [
+		878,
+		41
+	],
+	"../pages/edit-profile/edit-profile.module": [
+		877,
+		40
+	],
+	"../pages/exchange-modal/exchange-modal.module": [
+		879,
+		39
+	],
+	"../pages/full-report/full-report.module": [
+		880,
+		38
+	],
+	"../pages/home/home.module": [
+		881,
+		37
+	],
+	"../pages/init/init.module": [
+		882,
+		36
+	],
+	"../pages/insurance/insurance.module": [
+		883,
+		35
+	],
+	"../pages/language/language.module": [
+		885,
+		34
+	],
+	"../pages/ledger/ledger.module": [
+		884,
+		33
+	],
+	"../pages/mechanic-bill/mechanic-bill.module": [
+		886,
+		32
+	],
+	"../pages/mechanic-khata/mechanic-khata.module": [
+		887,
+		31
+	],
+	"../pages/mechanic/mechanic.module": [
+		889,
+		30
+	],
+	"../pages/parts-bill-details-modal/parts-bill-details-modal.module": [
+		888,
+		29
+	],
+	"../pages/parts-work-modal/parts-work-modal.module": [
+		891,
+		28
+	],
+	"../pages/problem-modal/problem-modal.module": [
+		890,
+		27
+	],
+	"../pages/problem-work-part-modal/problem-work-part-modal.module": [
+		896,
+		26
+	],
+	"../pages/profile/profile.module": [
+		892,
+		25
+	],
+	"../pages/reason-modal/reason-modal.module": [
+		893,
+		24
+	],
+	"../pages/remove-driver-from-account/remove-driver-from-account.module": [
+		894,
+		23
+	],
+	"../pages/remove-driver/remove-driver.module": [
+		895,
+		22
+	],
+	"../pages/report-all-comp/report-all-comp.module": [
+		899,
+		21
+	],
+	"../pages/report-full/report-full.module": [
+		898,
+		20
+	],
+	"../pages/report-khata/report-khata.module": [
+		897,
+		19
+	],
+	"../pages/report-modal/report-modal.module": [
+		900,
+		18
+	],
+	"../pages/security-and-backup/security-and-backup.module": [
+		901,
+		17
+	],
+	"../pages/settings/settings.module": [
+		902,
+		16
+	],
+	"../pages/shop-bill-description/shop-bill-description.module": [
+		904,
+		15
+	],
+	"../pages/shop-bill-details/shop-bill-details.module": [
+		903,
+		14
+	],
+	"../pages/shop-khata/shop-khata.module": [
+		905,
+		13
+	],
+	"../pages/shop/shop.module": [
+		906,
+		12
+	],
+	"../pages/tabs/tabs.module": [
+		907,
+		11
+	],
+	"../pages/upload-image/upload-image.module": [
+		908,
+		10
+	],
+	"../pages/vehicle-bill-report/vehicle-bill-report.module": [
+		909,
+		9
+	],
+	"../pages/vehicle-details/vehicle-details.module": [
+		911,
+		8
+	],
+	"../pages/vehicle-document-bill/vehicle-document-bill.module": [
+		910,
+		7
+	],
+	"../pages/vehicle-document/vehicle-document.module": [
+		913,
+		6
+	],
+	"../pages/vehicle-khata/vehicle-khata.module": [
+		912,
+		5
+	],
+	"../pages/vehicle-work-report/vehicle-work-report.module": [
+		914,
+		4
+	],
+	"../pages/view-bill/view-bill.module": [
+		915,
+		3
+	],
+	"../pages/view-payment/view-payment.module": [
+		916,
+		2
+	],
+	"../pages/view-transaction/view-transaction.module": [
+		917,
+		1
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 213;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 493:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var RestProvider = /** @class */ (function () {
+    function RestProvider(http) {
+        this.http = http;
+        console.log('Hello RestProvider Provider');
+    }
+    RestProvider.prototype.post = function (url, data) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]()
+            .set("Content-type", "application/json");
+        return new Promise(function (resolve, reject) {
+            _this.http.post(url, JSON.stringify(data), { headers: headers })
+                .subscribe(function (res) {
+                resolve(res);
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    RestProvider.prototype.get = function (url, data) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]()
+            .set("Content-type", "application/json");
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url)
+                .subscribe(function (res) {
+                resolve(res);
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    RestProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], RestProvider);
+    return RestProvider;
+}());
+
+//# sourceMappingURL=rest.js.map
+
+/***/ }),
+
+/***/ 494:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the MessageProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var MessageProvider = /** @class */ (function () {
+    function MessageProvider(http, toast) {
+        this.http = http;
+        this.toast = toast;
+        console.log('Hello MessageProvider Provider');
+    }
+    MessageProvider.prototype.displayToast = function (message) {
+        var toast = this.toast.create({
+            message: message,
+            // duration: 3000,
+            position: 'bottom',
+            showCloseButton: true
+        });
+        toast.onDidDismiss(function () {
+            console.log('Dismissed toast');
+        });
+        toast.present();
+    };
+    MessageProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ToastController"]])
+    ], MessageProvider);
+    return MessageProvider;
+}());
+
+//# sourceMappingURL=message.js.map
+
+/***/ }),
+
+/***/ 499:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(504);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 504:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_contacts__ = __webpack_require__(498);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(550);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_img_viewer__ = __webpack_require__(551);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser_animations__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_photo_viewer__ = __webpack_require__(496);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_7__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"],
+                __WEBPACK_IMPORTED_MODULE_14_ionic_img_viewer__["a" /* IonicImageViewerModule */],
+                __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/about/about.module#HomePageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/account-khata/account-khata.module#AccountKhataPageModule', name: 'AccountKhataPage', segment: 'account-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-complaints/add-complaints.module#AddComplaintsPageModule', name: 'AddComplaintsPage', segment: 'add-complaints', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-document-bill/add-document-bill.module#AddDocumentBillPageModule', name: 'AddDocumentBillPage', segment: 'add-document-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-driver-expenses/add-driver-expenses.module#AddDriverExpensesPageModule', name: 'AddDriverExpensesPage', segment: 'add-driver-expenses', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-driver/add-driver.module#AddDriverPageModule', name: 'AddDriverPage', segment: 'add-driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-mechanic/add-mechanic.module#AddMechanicPageModule', name: 'AddMechanicPage', segment: 'add-mechanic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-more-modal/add-more-modal.module#AddMoreModalPageModule', name: 'AddMoreModalPage', segment: 'add-more-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-new-bank-account/add-new-bank-account.module#AddNewBankAccountPageModule', name: 'AddNewBankAccountPage', segment: 'add-new-bank-account', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-permit/add-permit.module#AddPermitPageModule', name: 'AddPermitPage', segment: 'add-permit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-vehicle/add-vehicle.module#AddVehiclePageModule', name: 'AddVehiclePage', segment: 'add-vehicle', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-image-khata/all-image-khata.module#AllImageKhataPageModule', name: 'AllImageKhataPage', segment: 'all-image-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/allot-driver/allot-driver.module#AllotDriverPageModule', name: 'AllotDriverPage', segment: 'allot-driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/bill-description/bill-description.module#BillDescriptionPageModule', name: 'BillDescriptionPage', segment: 'bill-description', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/bill-details/bill-details.module#BillDetailsPageModule', name: 'BillDetailsPage', segment: 'bill-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/bill-payment-search/bill-payment-search.module#BillPaymentSearchPageModule', name: 'BillPaymentSearchPage', segment: 'bill-payment-search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/buy-details-search-modal/buy-details-search-modal.module#BuyDetailsSearchModalPageModule', name: 'BuyDetailsSearchModalPage', segment: 'buy-details-search-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calendar-modal/calendar-modal.module#CalendarModalPageModule', name: 'CalendarModalPage', segment: 'calendar-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/buy-from-shop/buy-from-shop.module#BuyFromShopPageModule', name: 'BuyFromShopPage', segment: 'buy-from-shop', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/camera-modal/camera-modal.module#CameraModalPageModule', name: 'CameraModalPage', segment: 'camera-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/change-driver/change-driver.module#ChangeDriverPageModule', name: 'ChangeDriverPage', segment: 'change-driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/complaints-khata/complaints-khata.module#ComplaintsKhataPageModule', name: 'ComplaintsKhataPage', segment: 'complaints-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/complaints-update/complaints-update.module#ComplaintsUpdatePageModule', name: 'ComplaintsUpdatePage', segment: 'complaints-update', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/decision-modal/decision-modal.module#DecisionModalPageModule', name: 'DecisionModalPage', segment: 'decision-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/details-modal/details-modal.module#DetailsModalPageModule', name: 'DetailsModalPage', segment: 'details-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document-and-insurance/document-and-insurance.module#DocumentAndInsurancePageModule', name: 'DocumentAndInsurancePage', segment: 'document-and-insurance', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document-bill-report/document-bill-report.module#DocumentBillReportPageModule', name: 'DocumentBillReportPage', segment: 'document-bill-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document-date-report/document-date-report.module#DocumentDateReportPageModule', name: 'DocumentDateReportPage', segment: 'document-date-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document-renewal/document-renewal.module#DocumentRenewalPageModule', name: 'DocumentRenewalPage', segment: 'document-renewal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document/document.module#DocumentPageModule', name: 'DocumentPage', segment: 'document', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-details-search/driver-details-search.module#DriverDetailsSearchPageModule', name: 'DriverDetailsSearchPage', segment: 'driver-details-search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-document/driver-document.module#DriverDocumentPageModule', name: 'DriverDocumentPage', segment: 'driver-document', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-khata-search/driver-khata-search.module#DriverKhataSearchPageModule', name: 'DriverKhataSearchPage', segment: 'driver-khata-search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-khata/driver-khata.module#DriverKhataPageModule', name: 'DriverKhataPage', segment: 'driver-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver/driver.module#DriverPageModule', name: 'DriverPage', segment: 'driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-other-document-name/edit-other-document-name.module#EditOtherDocumentNamePageModule', name: 'EditOtherDocumentNamePage', segment: 'edit-other-document-name', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/exchange-modal/exchange-modal.module#ExchangeModalPageModule', name: 'ExchangeModalPage', segment: 'exchange-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/full-report/full-report.module#FullReportPageModule', name: 'FullReportPage', segment: 'full-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/init/init.module#InitPageModule', name: 'InitPage', segment: 'init', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/insurance/insurance.module#InsurancePageModule', name: 'InsurancePage', segment: 'insurance', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ledger/ledger.module#LedgerPageModule', name: 'LedgerPage', segment: 'ledger', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/language/language.module#LanguagePageModule', name: 'LanguagePage', segment: 'language', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mechanic-bill/mechanic-bill.module#MechanicBillPageModule', name: 'MechanicBillPage', segment: 'mechanic-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mechanic-khata/mechanic-khata.module#MechanicKhataPageModule', name: 'MechanicKhataPage', segment: 'mechanic-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/parts-bill-details-modal/parts-bill-details-modal.module#PartsBillDetailsModalPageModule', name: 'PartsBillDetailsModalPage', segment: 'parts-bill-details-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mechanic/mechanic.module#MechanicPageModule', name: 'MechanicPage', segment: 'mechanic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/problem-modal/problem-modal.module#ProblemModalPageModule', name: 'ProblemModalPage', segment: 'problem-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/parts-work-modal/parts-work-modal.module#PartsWorkModalPageModule', name: 'PartsWorkModalPage', segment: 'parts-work-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/reason-modal/reason-modal.module#ReasonModalPageModule', name: 'ReasonModalPage', segment: 'reason-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/remove-driver-from-account/remove-driver-from-account.module#RemoveDriverFromAccountPageModule', name: 'RemoveDriverFromAccountPage', segment: 'remove-driver-from-account', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/remove-driver/remove-driver.module#RemoveDriverPageModule', name: 'RemoveDriverPage', segment: 'remove-driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/problem-work-part-modal/problem-work-part-modal.module#ProblemWorkPartModalPageModule', name: 'ProblemWorkPartModalPage', segment: 'problem-work-part-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-khata/report-khata.module#ReportKhataPageModule', name: 'ReportKhataPage', segment: 'report-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-full/report-full.module#ReportFullPageModule', name: 'ReportFullPage', segment: 'report-full', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-all-comp/report-all-comp.module#ReportAllCompPageModule', name: 'ReportAllCompPage', segment: 'report-all-comp', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-modal/report-modal.module#ReportModalPageModule', name: 'ReportModalPage', segment: 'report-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/security-and-backup/security-and-backup.module#SecurityAndBackupPageModule', name: 'SecurityAndBackupPage', segment: 'security-and-backup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/shop-bill-details/shop-bill-details.module#ShopBillDetailsPageModule', name: 'ShopBillDetailsPage', segment: 'shop-bill-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/shop-bill-description/shop-bill-description.module#ShopBillDescriptionPageModule', name: 'ShopBillDescriptionPage', segment: 'shop-bill-description', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/shop-khata/shop-khata.module#ShopKhataPageModule', name: 'ShopKhataPage', segment: 'shop-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/shop/shop.module#ShopPageModule', name: 'ShopPage', segment: 'shop', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/upload-image/upload-image.module#UploadImagePageModule', name: 'UploadImagePage', segment: 'upload-image', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-bill-report/vehicle-bill-report.module#VehicleBillReportPageModule', name: 'VehicleBillReportPage', segment: 'vehicle-bill-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-document-bill/vehicle-document-bill.module#VehicleDocumentBillPageModule', name: 'VehicleDocumentBillPage', segment: 'vehicle-document-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-details/vehicle-details.module#VehicleDetailsPageModule', name: 'VehicleDetailsPage', segment: 'vehicle-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-khata/vehicle-khata.module#VehicleKhataPageModule', name: 'VehicleKhataPage', segment: 'vehicle-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-document/vehicle-document.module#VehicleDocumentPageModule', name: 'VehicleDocumentPage', segment: 'vehicle-document', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-work-report/vehicle-work-report.module#VehicleWorkReportPageModule', name: 'VehicleWorkReportPage', segment: 'vehicle-work-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-bill/view-bill.module#ViewBillPageModule', name: 'ViewBillPage', segment: 'view-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-payment/view-payment.module#ViewPaymentPageModule', name: 'ViewPaymentPage', segment: 'view-payment', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-transaction/view-transaction.module#ViewTransactionPageModule', name: 'ViewTransactionPage', segment: 'view-transaction', priority: 'low', defaultHistory: [] }
+                    ]
+                })
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_9_ionic_angular__["IonicApp"]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_contacts__["a" /* Contact */],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_contacts__["b" /* Contacts */],
+                { provide: __WEBPACK_IMPORTED_MODULE_7__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["IonicErrorHandler"] },
+                __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */],
+                __WEBPACK_IMPORTED_MODULE_4__providers_codes_codes__["a" /* CodesProvider */],
+                __WEBPACK_IMPORTED_MODULE_16__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+                __WEBPACK_IMPORTED_MODULE_3__providers_message_message__["a" /* MessageProvider */],
+                __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["d" /* DatePipe */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 546:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 259,
+	"./af.js": 259,
+	"./ar": 260,
+	"./ar-dz": 261,
+	"./ar-dz.js": 261,
+	"./ar-kw": 262,
+	"./ar-kw.js": 262,
+	"./ar-ly": 263,
+	"./ar-ly.js": 263,
+	"./ar-ma": 264,
+	"./ar-ma.js": 264,
+	"./ar-sa": 265,
+	"./ar-sa.js": 265,
+	"./ar-tn": 266,
+	"./ar-tn.js": 266,
+	"./ar.js": 260,
+	"./az": 267,
+	"./az.js": 267,
+	"./be": 268,
+	"./be.js": 268,
+	"./bg": 269,
+	"./bg.js": 269,
+	"./bm": 270,
+	"./bm.js": 270,
+	"./bn": 271,
+	"./bn-bd": 272,
+	"./bn-bd.js": 272,
+	"./bn.js": 271,
+	"./bo": 273,
+	"./bo.js": 273,
+	"./br": 274,
+	"./br.js": 274,
+	"./bs": 275,
+	"./bs.js": 275,
+	"./ca": 276,
+	"./ca.js": 276,
+	"./cs": 277,
+	"./cs.js": 277,
+	"./cv": 278,
+	"./cv.js": 278,
+	"./cy": 279,
+	"./cy.js": 279,
+	"./da": 280,
+	"./da.js": 280,
+	"./de": 281,
+	"./de-at": 282,
+	"./de-at.js": 282,
+	"./de-ch": 283,
+	"./de-ch.js": 283,
+	"./de.js": 281,
+	"./dv": 284,
+	"./dv.js": 284,
+	"./el": 285,
+	"./el.js": 285,
+	"./en-au": 286,
+	"./en-au.js": 286,
+	"./en-ca": 287,
+	"./en-ca.js": 287,
+	"./en-gb": 288,
+	"./en-gb.js": 288,
+	"./en-ie": 289,
+	"./en-ie.js": 289,
+	"./en-il": 290,
+	"./en-il.js": 290,
+	"./en-in": 291,
+	"./en-in.js": 291,
+	"./en-nz": 292,
+	"./en-nz.js": 292,
+	"./en-sg": 293,
+	"./en-sg.js": 293,
+	"./eo": 294,
+	"./eo.js": 294,
+	"./es": 295,
+	"./es-do": 296,
+	"./es-do.js": 296,
+	"./es-mx": 297,
+	"./es-mx.js": 297,
+	"./es-us": 298,
+	"./es-us.js": 298,
+	"./es.js": 295,
+	"./et": 299,
+	"./et.js": 299,
+	"./eu": 300,
+	"./eu.js": 300,
+	"./fa": 301,
+	"./fa.js": 301,
+	"./fi": 302,
+	"./fi.js": 302,
+	"./fil": 303,
+	"./fil.js": 303,
+	"./fo": 304,
+	"./fo.js": 304,
+	"./fr": 305,
+	"./fr-ca": 306,
+	"./fr-ca.js": 306,
+	"./fr-ch": 307,
+	"./fr-ch.js": 307,
+	"./fr.js": 305,
+	"./fy": 308,
+	"./fy.js": 308,
+	"./ga": 309,
+	"./ga.js": 309,
+	"./gd": 310,
+	"./gd.js": 310,
+	"./gl": 311,
+	"./gl.js": 311,
+	"./gom-deva": 312,
+	"./gom-deva.js": 312,
+	"./gom-latn": 313,
+	"./gom-latn.js": 313,
+	"./gu": 314,
+	"./gu.js": 314,
+	"./he": 315,
+	"./he.js": 315,
+	"./hi": 316,
+	"./hi.js": 316,
+	"./hr": 317,
+	"./hr.js": 317,
+	"./hu": 318,
+	"./hu.js": 318,
+	"./hy-am": 319,
+	"./hy-am.js": 319,
+	"./id": 320,
+	"./id.js": 320,
+	"./is": 321,
+	"./is.js": 321,
+	"./it": 322,
+	"./it-ch": 323,
+	"./it-ch.js": 323,
+	"./it.js": 322,
+	"./ja": 324,
+	"./ja.js": 324,
+	"./jv": 325,
+	"./jv.js": 325,
+	"./ka": 326,
+	"./ka.js": 326,
+	"./kk": 327,
+	"./kk.js": 327,
+	"./km": 328,
+	"./km.js": 328,
+	"./kn": 329,
+	"./kn.js": 329,
+	"./ko": 330,
+	"./ko.js": 330,
+	"./ku": 331,
+	"./ku.js": 331,
+	"./ky": 332,
+	"./ky.js": 332,
+	"./lb": 333,
+	"./lb.js": 333,
+	"./lo": 334,
+	"./lo.js": 334,
+	"./lt": 335,
+	"./lt.js": 335,
+	"./lv": 336,
+	"./lv.js": 336,
+	"./me": 337,
+	"./me.js": 337,
+	"./mi": 338,
+	"./mi.js": 338,
+	"./mk": 339,
+	"./mk.js": 339,
+	"./ml": 340,
+	"./ml.js": 340,
+	"./mn": 341,
+	"./mn.js": 341,
+	"./mr": 342,
+	"./mr.js": 342,
+	"./ms": 343,
+	"./ms-my": 344,
+	"./ms-my.js": 344,
+	"./ms.js": 343,
+	"./mt": 345,
+	"./mt.js": 345,
+	"./my": 346,
+	"./my.js": 346,
+	"./nb": 347,
+	"./nb.js": 347,
+	"./ne": 348,
+	"./ne.js": 348,
+	"./nl": 349,
+	"./nl-be": 350,
+	"./nl-be.js": 350,
+	"./nl.js": 349,
+	"./nn": 351,
+	"./nn.js": 351,
+	"./oc-lnc": 352,
+	"./oc-lnc.js": 352,
+	"./pa-in": 353,
+	"./pa-in.js": 353,
+	"./pl": 354,
+	"./pl.js": 354,
+	"./pt": 355,
+	"./pt-br": 356,
+	"./pt-br.js": 356,
+	"./pt.js": 355,
+	"./ro": 357,
+	"./ro.js": 357,
+	"./ru": 358,
+	"./ru.js": 358,
+	"./sd": 359,
+	"./sd.js": 359,
+	"./se": 360,
+	"./se.js": 360,
+	"./si": 361,
+	"./si.js": 361,
+	"./sk": 362,
+	"./sk.js": 362,
+	"./sl": 363,
+	"./sl.js": 363,
+	"./sq": 364,
+	"./sq.js": 364,
+	"./sr": 365,
+	"./sr-cyrl": 366,
+	"./sr-cyrl.js": 366,
+	"./sr.js": 365,
+	"./ss": 367,
+	"./ss.js": 367,
+	"./sv": 368,
+	"./sv.js": 368,
+	"./sw": 369,
+	"./sw.js": 369,
+	"./ta": 370,
+	"./ta.js": 370,
+	"./te": 371,
+	"./te.js": 371,
+	"./tet": 372,
+	"./tet.js": 372,
+	"./tg": 373,
+	"./tg.js": 373,
+	"./th": 374,
+	"./th.js": 374,
+	"./tk": 375,
+	"./tk.js": 375,
+	"./tl-ph": 376,
+	"./tl-ph.js": 376,
+	"./tlh": 377,
+	"./tlh.js": 377,
+	"./tr": 378,
+	"./tr.js": 378,
+	"./tzl": 379,
+	"./tzl.js": 379,
+	"./tzm": 380,
+	"./tzm-latn": 381,
+	"./tzm-latn.js": 381,
+	"./tzm.js": 380,
+	"./ug-cn": 382,
+	"./ug-cn.js": 382,
+	"./uk": 383,
+	"./uk.js": 383,
+	"./ur": 384,
+	"./ur.js": 384,
+	"./uz": 385,
+	"./uz-latn": 386,
+	"./uz-latn.js": 386,
+	"./uz.js": 385,
+	"./vi": 387,
+	"./vi.js": 387,
+	"./x-pseudo": 388,
+	"./x-pseudo.js": 388,
+	"./yo": 389,
+	"./yo.js": 389,
+	"./zh-cn": 390,
+	"./zh-cn.js": 390,
+	"./zh-hk": 391,
+	"./zh-hk.js": 391,
+	"./zh-mo": 392,
+	"./zh-mo.js": 392,
+	"./zh-tw": 393,
+	"./zh-tw.js": 393
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 546;
+
+/***/ }),
+
+/***/ 550:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(399);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+// import { TabsPage } from '../pages/tabs/tabs';
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, splashScreen, codes) {
+        var _this = this;
+        this.codes = codes;
+        this.rootPage = '';
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+            if (localStorage.getItem(_this.codes.K_ACCOUNT_INFO) == null || localStorage.getItem(_this.codes.K_ACCOUNT_INFO) == undefined) {
+                _this.rootPage = 'InitPage';
+            }
+            else
+                _this.rootPage = 'TabsPage';
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["Platform"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ })
+
+},[499]);
+//# sourceMappingURL=main.js.map

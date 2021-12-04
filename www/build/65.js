@@ -1,1 +1,135 @@
-webpackJsonp([65],{846:function(l,n,e){"use strict";function u(l){return a["ɵvid"](0,[(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),a["ɵdid"](2,16384,null,0,v.a,[R.a,a.ElementRef,a.Renderer,[2,g.a]],null,null),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,F.b,F.a)),a["ɵdid"](5,49152,null,0,h.a,[y.a,[2,g.a],[2,M.a],R.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,3,["\n    "])),(l()(),a["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,C.b,C.a)),a["ɵdid"](8,49152,null,0,P.a,[R.a,a.ElementRef,a.Renderer,[2,_.a],[2,h.a]],null,null),(l()(),a["ɵted"](-1,0,["full-report"])),(l()(),a["ɵted"](-1,3,["\n  "])),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵted"](-1,null,["\n\n"])),(l()(),a["ɵeld"](13,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,E.b,E.a)),a["ɵdid"](14,4374528,null,0,L.a,[R.a,w.a,D.a,a.ElementRef,a.Renderer,y.a,N.a,a.NgZone,[2,g.a],[2,M.a]],null,null),(l()(),a["ɵted"](-1,1,["\n\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],null,function(l,n){l(n,4,0,a["ɵnov"](n,5)._hidden,a["ɵnov"](n,5)._sbPadding);l(n,13,0,a["ɵnov"](n,14).statusbarPadding,a["ɵnov"](n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),d=(e(2),e(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad FullReportPage")},l}()),t=function(){return function(){}}(),o=e(498),r=e(499),i=e(500),p=e(501),s=e(502),c=e(503),m=e(504),f=e(505),b=e(506),v=e(85),R=e(4),g=e(8),F=e(188),h=e(37),y=e(13),M=e(29),C=e(508),P=e(86),_=e(42),E=e(507),L=e(32),w=e(7),D=e(14),N=e(40),k=e(17),B=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),O=a["ɵccf"]("page-full-report",d,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-full-report",[],null,null,null,u,B)),a["ɵdid"](1,49152,null,0,d,[M.a,k.a],null,null)],null,null)},{},{},[]),V=e(16),j=e(20),A=e(184),I=e(55);e.d(n,"FullReportPageModuleNgFactory",function(){return J});var J=a["ɵcmf"](t,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[o.a,r.a,i.a,p.a,s.a,c.a,m.a,f.a,b.a,O]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,V.l,V.k,[a.LOCALE_ID,[2,V.t]]),a["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),a["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),a["ɵmpd"](512,V.b,V.b,[]),a["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),a["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),a["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),a["ɵmpd"](512,A.a,A.a,[]),a["ɵmpd"](512,A.b,A.b,[]),a["ɵmpd"](512,t,t,[]),a["ɵmpd"](256,I.a,d,[])])})}});
+webpackJsonp([65],{
+
+/***/ 853:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllotDriverPageModule", function() { return AllotDriverPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allot_driver__ = __webpack_require__(933);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AllotDriverPageModule = /** @class */ (function () {
+    function AllotDriverPageModule() {
+    }
+    AllotDriverPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__allot_driver__["a" /* AllotDriverPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__allot_driver__["a" /* AllotDriverPage */]),
+            ],
+        })
+    ], AllotDriverPageModule);
+    return AllotDriverPageModule;
+}());
+
+//# sourceMappingURL=allot-driver.module.js.map
+
+/***/ }),
+
+/***/ 933:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllotDriverPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AllotDriverPage = /** @class */ (function () {
+    function AllotDriverPage(viewController, navCtrl, navParams, rest, codes, message) {
+        var _this = this;
+        this.viewController = viewController;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.vehicle = '';
+        this.drivers = [];
+        this.vehicle_id = '';
+        this.driver_id = '';
+        this.driver_start_details = '';
+        this.driver_start_km = '';
+        this.driver_start_date = '';
+        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+            }
+        });
+    }
+    AllotDriverPage.prototype.save = function () {
+        var _this = this;
+        var data = {
+            "type": "allot",
+            "vehicle_id": this.vehicle['vehicle_id'],
+            "driver_id": this.driver_id,
+            "driver_start_details": this.driver_start_details,
+            "driver_start_km": this.driver_start_km,
+            "driver_start_date": this.driver_start_date
+        };
+        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have allocated this vehicle successfully!');
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AllotDriverPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AllotDriverPage');
+    };
+    AllotDriverPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    AllotDriverPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-allot-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/allot-driver/allot-driver.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-row>\n        <!-- <ion-col col-2 class="custom-back-button"> -->\n          <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n        <!-- </ion-col> -->\n        \n        <ion-col col-12 class="person-name text-center">\n          <ion-title>        \n            <i class="fa fa-user-circle" aria-hidden="true"></i>\n            ALLOT DRIVER\n          </ion-title>\n  \n        </ion-col>\n        <!-- <ion-col col-3 class="youtube">\n          <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n        </ion-col> -->\n      </ion-row>\n    </ion-navbar>\n  </ion-header> \n\n<ion-content padding>\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n       \n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary">NOT PRESENT</span>\n      </ion-col>\n\n    \n      <ion-col col-12>\n        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n          <ion-label>NEW DRIVER</ion-label>\n          <ion-select [(ngModel)]="driver_id">\n            <ion-option value="{{dr[\'worker_id\']}}" *ngFor="let dr of drivers" >{{dr[\'name\']}}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n    \n\n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_start_date"/>\n          <label>NEW DRIVER START DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n\n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_start_details" placeholder=" " />\n      <label>REASON/DETAILS</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n\n    </div>\n  </ion-col>\n\n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_start_km" placeholder=" " />\n      <label>KM</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n\n    </div>\n  </ion-col>\n\n\n      \n   \n    \n\n  </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n\n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/allot-driver/allot-driver.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], AllotDriverPage);
+    return AllotDriverPage;
+}());
+
+//# sourceMappingURL=allot-driver.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=65.js.map

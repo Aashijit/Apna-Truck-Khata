@@ -1,1 +1,87 @@
-webpackJsonp([70],{830:function(l,n,e){"use strict";function u(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,10,"ion-header",[],null,null,null,null,null)),a["ɵdid"](1,16384,null,0,p.a,[v.a,a.ElementRef,a.Renderer,[2,g.a]],null,null),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵeld"](3,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,h.b,h.a)),a["ɵdid"](4,49152,null,0,F.a,[_.a,[2,g.a],[2,E.a],v.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,3,["\n    "])),(l()(),a["ɵeld"](6,0,null,3,2,"ion-title",[],null,null,null,C.b,C.a)),a["ɵdid"](7,49152,null,0,M.a,[v.a,a.ElementRef,a.Renderer,[2,q.a],[2,F.a]],null,null),(l()(),a["ɵted"](-1,0,["\n      Contact\n    "])),(l()(),a["ɵted"](-1,3,["\n  "])),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵted"](-1,null,["\n\n"])),(l()(),a["ɵeld"](12,0,null,null,25,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,y.b,y.a)),a["ɵdid"](13,4374528,null,0,k.a,[v.a,w.a,L.a,a.ElementRef,a.Renderer,_.a,P.a,a.NgZone,[2,g.a],[2,E.a]],null,null),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](15,0,null,1,21,"ion-list",[],null,null,null,null,null)),a["ɵdid"](16,16384,null,0,N.a,[v.a,a.ElementRef,a.Renderer,w.a,B.m,L.a],null,null),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](18,0,null,null,6,"ion-list-header",[["class","item"]],null,null,null,O.b,O.a)),a["ɵdid"](19,1097728,null,3,j.a,[A.a,v.a,a.ElementRef,a.Renderer,[2,D.a]],null,null),a["ɵqud"](335544320,1,{contentLabel:0}),a["ɵqud"](603979776,2,{_buttons:1}),a["ɵqud"](603979776,3,{_icons:1}),a["ɵdid"](23,16384,null,0,I.a,[v.a,a.Renderer,a.ElementRef,[8,null]],null,null),(l()(),a["ɵted"](-1,2,["Follow us on Twitter"])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵeld"](26,0,null,null,9,"ion-item",[["class","item item-block"]],null,null,null,O.b,O.a)),a["ɵdid"](27,1097728,null,3,j.a,[A.a,v.a,a.ElementRef,a.Renderer,[2,D.a]],null,null),a["ɵqud"](335544320,4,{contentLabel:0}),a["ɵqud"](603979776,5,{_buttons:1}),a["ɵqud"](603979776,6,{_icons:1}),a["ɵdid"](31,16384,null,0,J.a,[],null,null),(l()(),a["ɵted"](-1,2,["\n      "])),(l()(),a["ɵeld"](33,0,null,0,1,"ion-icon",[["item-start",""],["name","ionic"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](34,147456,[[6,4]],0,T.a,[v.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵted"](-1,2,["\n      @ionicframework\n    "])),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵted"](-1,1,["\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],function(l,n){l(n,34,0,"ionic")},function(l,n){l(n,3,0,a["ɵnov"](n,4)._hidden,a["ɵnov"](n,4)._sbPadding);l(n,12,0,a["ɵnov"](n,13).statusbarPadding,a["ɵnov"](n,13)._hasRefresher);l(n,33,0,a["ɵnov"](n,34)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),d=(e(2),e(26),function(){return function(l){this.navCtrl=l}}()),t=function(){return function(){}}(),o=e(498),i=e(499),r=e(500),c=e(501),m=e(502),s=e(503),f=e(504),R=e(505),b=e(506),p=e(85),v=e(4),g=e(8),h=e(188),F=e(37),_=e(13),E=e(29),C=e(508),M=e(86),q=e(42),y=e(507),k=e(32),w=e(7),L=e(14),P=e(40),N=e(87),B=e(11),O=e(509),j=e(31),A=e(28),D=e(58),I=e(132),J=e(121),T=e(41),Z=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),x=a["ɵccf"]("page-contact",d,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-contact",[],null,null,null,u,Z)),a["ɵdid"](1,49152,null,0,d,[E.a],null,null)],null,null)},{},{},[]),z=e(16),G=e(20),H=e(184),K=e(55);e.d(n,"ContactPageModuleNgFactory",function(){return Q});var Q=a["ɵcmf"](t,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,c.a,m.a,s.a,f.a,R.a,b.a,x]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,z.l,z.k,[a.LOCALE_ID,[2,z.t]]),a["ɵmpd"](4608,G["ɵi"],G["ɵi"],[]),a["ɵmpd"](4608,G.FormBuilder,G.FormBuilder,[]),a["ɵmpd"](512,z.b,z.b,[]),a["ɵmpd"](512,G["ɵba"],G["ɵba"],[]),a["ɵmpd"](512,G.FormsModule,G.FormsModule,[]),a["ɵmpd"](512,G.ReactiveFormsModule,G.ReactiveFormsModule,[]),a["ɵmpd"](512,H.a,H.a,[]),a["ɵmpd"](512,H.b,H.b,[]),a["ɵmpd"](512,t,t,[]),a["ɵmpd"](256,K.a,d,[])])})}});
+webpackJsonp([70],{
+
+/***/ 847:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddMechanicPageModule", function() { return AddMechanicPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_mechanic__ = __webpack_require__(927);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddMechanicPageModule = /** @class */ (function () {
+    function AddMechanicPageModule() {
+    }
+    AddMechanicPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__add_mechanic__["a" /* AddMechanicPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_mechanic__["a" /* AddMechanicPage */]),
+            ],
+        })
+    ], AddMechanicPageModule);
+    return AddMechanicPageModule;
+}());
+
+//# sourceMappingURL=add-mechanic.module.js.map
+
+/***/ }),
+
+/***/ 927:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddMechanicPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the AddMechanicPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddMechanicPage = /** @class */ (function () {
+    function AddMechanicPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AddMechanicPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddMechanicPage');
+    };
+    AddMechanicPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-add-mechanic',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-mechanic/add-mechanic.html"*/'<!--\n  Generated template for the AddMechanicPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--\n  Generated template for the AddDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n          ADD MECHANIC\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container edit-profile">\n\n    <ion-list>\n\n   \n      <ion-item>\n        <ion-label>TYPE OF PERSON</ion-label>\n\n        <ion-select [(ngModel)]="gender" >\n          <ion-option value="f">Female</ion-option>\n          <ion-option value="m">Male</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="NAME"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        \n        <ion-input type="text" placeholder="PHONE NUMBER"></ion-input>\n\n\n      </ion-item>\n      \n    \n      <ion-item>\n        <ion-input type="text" placeholder="BUSINESS NAME"></ion-input>\n\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="CITY"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="PAN NUMBER"></ion-input>\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="GST NUMBER(OPTIONAL)"></ion-input>\n      </ion-item>\n\n   \n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>\n      </ion-item>\n\n      <ion-row class="state">\n        <ion-col col-6>\n          <ion-item>\n            <ion-label>STATE</ion-label>\n            <ion-select [(ngModel)]="gender">\n              <ion-option value="f">Female</ion-option>\n              <ion-option value="m">Male</ion-option>\n            </ion-select>\n          </ion-item>\n        </ion-col>\n        <ion-col col-6>\n          <ion-item>\n            <ion-input type="text" placeholder="PNCODE"></ion-input>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="IFSC"></ion-input>\n      </ion-item>\n\n      \n\n\n      <ion-row class="profile-picture">\n        <ion-col col-4>\n          <i class="fa fa-camera" aria-hidden="true"></i>\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n        </ion-col>\n        <ion-col>\n          <h6></h6> \n        </ion-col>\n\n      </ion-row>\n\n      <div class="text-center mt-4">\n        <button ion-button round class="custom-button">SAVE DETAILS</button>\n      </div>\n      \n    </ion-list>\n\n  </div>\n</ion-content> \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-mechanic/add-mechanic.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], AddMechanicPage);
+    return AddMechanicPage;
+}());
+
+//# sourceMappingURL=add-mechanic.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=70.js.map

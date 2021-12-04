@@ -1,0 +1,65 @@
+
+
+<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">
+
+
+
+  <ion-card class="modal-card-details">
+    <ion-card-header class="custom-card-header">
+      ENTER DOCUMENT NAME
+      <span style="float: right;" (click)="exitModal()">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+
+      </span>
+    </ion-card-header>
+    <ion-card-content>
+      
+
+      <div class="details-div">
+        <ion-row>
+          <!-- <ion-col col-12 class="date">
+            <p style="font-size: 9px !important;">{{date}}</p>
+          </ion-col> -->
+          <ion-col col-12>
+            <ion-item no-lines>
+              <ion-textarea rows="1" placeholder="Tap here" 
+                  [(ngModel)]="note" [(ngModel)]="note" autocomplete="on" autocorrect="on"></ion-textarea>
+             </ion-item>
+          </ion-col>
+        </ion-row>
+        
+       
+      </div>
+      
+
+        <!-- <div class="label-float" >
+          <input type="text"  placeholder=" " />
+          <label>DETAILS</label> -->
+          <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+    
+        <!-- </div> -->
+
+
+      <!-- <div class="label-float" >
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        <label>DATE</label>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+
+      </div> -->
+      
+        <ion-row class="justify-content-center">
+          <ion-col col-6 class="text-center">
+            <button ion-button round class="custom-button save-button" (click)="storetext()"> SAVE </button>
+          </ion-col>
+          <!-- <ion-col col-6 class="text-center">
+            <button ion-button round  class="custom-button exit-button">
+              EXIT
+            </button>
+          </ion-col> -->
+        </ion-row>
+      
+
+     </ion-card-content>
+  </ion-card>
+
+</ion-content>

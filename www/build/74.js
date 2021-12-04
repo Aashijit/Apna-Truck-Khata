@@ -1,1 +1,336 @@
-webpackJsonp([74],{811:function(l,n,e){"use strict";function u(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),a["ɵted"](1,null,["\n            ","\n          "]))],null,function(l,n){l(n,1,0,n.context.$implicit.vehicle_detail.vehicle_number+"  ")})}function t(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,24,"div",[],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.selectThis(l.context.$implicit)&&u}return u},null,null)),a["ɵdid"](1,278528,null,0,C.h,[a.IterableDiffers,a.KeyValueDiffers,a.ElementRef,a.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](3,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](4,null,["",""])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](6,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](7,null,["",""])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](9,0,null,null,4,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n            "])),(l()(),a["ɵand"](16777216,null,null,1,null,u)),a["ɵdid"](12,802816,null,0,C.i,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](15,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](16,null,["",""])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](18,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](19,null,["",""])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵted"](-1,null,["\n          "])),(l()(),a["ɵeld"](22,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),a["ɵted"](23,null,["",""])),(l()(),a["ɵted"](-1,null,["\n     \n        "]))],function(l,n){l(n,1,0,"true"==n.context.$implicit.selected?"scrollmenu-list selected":"scrollmenu-list");l(n,12,0,n.context.$implicit.details)},function(l,n){l(n,4,0,n.context.$implicit.bill_id);l(n,7,0,n.context.$implicit.person_shop_name);l(n,16,0,n.context.$implicit.bill_date);l(n,19,0,n.context.$implicit.total_bill);l(n,23,0,n.context.$implicit.bill_details)})}function d(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,5,"button",[["class","custom-button-u"],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.update()&&u}return u},w.b,w.a)),a["ɵdid"](1,1097728,null,0,I.a,[[8,""],D.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,0,["Change   "])),(l()(),a["ɵeld"](3,0,null,0,1,"ion-icon",[["class","ion-icon-w"],["name","create"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](4,147456,null,0,B.a,[D.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵted"](-1,0,[" "]))],function(l,n){l(n,4,0,"create")},function(l,n){l(n,3,0,a["ɵnov"](n,4)._hidden)})}function i(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,5,"button",[["class","custom-button-u"],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.presentConfirmDelete()&&u}return u},w.b,w.a)),a["ɵdid"](1,1097728,null,0,I.a,[[8,""],D.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,0,["    Erase  "])),(l()(),a["ɵeld"](3,0,null,0,1,"ion-icon",[["class","ion-icon-w"],["name","ios-trash"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](4,147456,null,0,B.a,[D.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵted"](-1,0,[" "]))],function(l,n){l(n,4,0,"ios-trash")},function(l,n){l(n,3,0,a["ɵnov"](n,4)._hidden)})}function o(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,32,"ion-header",[],null,null,null,null,null)),a["ɵdid"](1,16384,null,0,S.a,[D.a,a.ElementRef,a.Renderer,[2,N.a]],null,null),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵeld"](3,0,null,null,28,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,F.b,F.a)),a["ɵdid"](4,49152,null,0,L.a,[O.a,[2,N.a],[2,x.a],D.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,3,["\n    "])),(l()(),a["ɵeld"](6,0,null,3,24,"ion-row",[["class","row"]],null,null,null,null,null)),a["ɵdid"](7,16384,null,0,P.a,[],null,null),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),a["ɵdid"](10,16384,null,0,T.a,[],null,null),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    \n      "])),(l()(),a["ɵeld"](14,0,null,null,9,"ion-col",[["class","person-name text-left col"],["col-7",""]],null,null,null,null,null)),a["ɵdid"](15,16384,null,0,T.a,[],null,null),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](17,0,null,null,5,"ion-title",[],null,null,null,k.b,k.a)),a["ɵdid"](18,49152,null,0,M.a,[D.a,a.ElementRef,a.Renderer,[2,$.a],[2,L.a]],null,null),(l()(),a["ɵted"](-1,0,["        \n          "])),(l()(),a["ɵeld"](20,0,null,0,1,"ion-icon",[["ios","ios-copy"],["md","md-copy"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](21,147456,null,0,B.a,[D.a,a.ElementRef,a.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),a["ɵted"](22,0,["\n          ","\n        "])),(l()(),a["ɵted"](-1,null,["\n\n      "])),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](25,0,null,null,4,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),a["ɵdid"](26,16384,null,0,T.a,[],null,null),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](28,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵted"](-1,3,["\n  "])),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵted"](-1,null,["\n\n"])),(l()(),a["ɵeld"](34,0,null,null,58,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,A.b,A.a)),a["ɵdid"](35,4374528,null,0,V.a,[D.a,J.a,j.a,a.ElementRef,a.Renderer,O.a,U.a,a.NgZone,[2,N.a],[2,x.a]],null,null),(l()(),a["ɵted"](-1,1,["\n  "])),(l()(),a["ɵeld"](37,0,null,1,54,"div",[["class","container"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,[" \n\n    "])),(l()(),a["ɵted"](-1,null,["\n\n    "])),(l()(),a["ɵeld"](40,0,null,null,1,"div",[["class","text-center mt-4"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n      \n\n\n    "])),(l()(),a["ɵted"](-1,null,["\n\n    "])),(l()(),a["ɵted"](-1,null,["\n\n   \n\n \n\n    "])),(l()(),a["ɵeld"](44,0,null,null,39,"div",[["class","scroll-grid"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](46,0,null,null,23,"div",[["class","scrollmenu"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](48,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["BILL NUMBER"])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](51,0,null,null,1,"a",[["href","#home"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["PERSON"])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](54,0,null,null,1,"a",[["href","#news"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["VEHICLE NUMBER"])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](57,0,null,null,1,"a",[["href","#contact"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["BILL DATE"])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](60,0,null,null,1,"a",[["href","#support"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["COST"])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](64,0,null,null,1,"a",[["href","#support"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["DETAIL"])),(l()(),a["ɵted"](-1,null,["\n    \n        "])),(l()(),a["ɵand"](16777216,null,null,1,null,t)),a["ɵdid"](68,802816,null,0,C.i,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](-1,null,["\n  \n     \n      "])),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](71,0,null,null,11,"div",[["class","show-arrows"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵeld"](73,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-down"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n        \n        "])),(l()(),a["ɵand"](16777216,null,null,1,null,d)),a["ɵdid"](76,16384,null,0,C.j,[a.ViewContainerRef,a.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),a["ɵted"](-1,null,["\n        "])),(l()(),a["ɵand"](16777216,null,null,1,null,i)),a["ɵdid"](79,16384,null,0,C.j,[a.ViewContainerRef,a.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),a["ɵted"](-1,null,["\n  \n        "])),(l()(),a["ɵeld"](81,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-right"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n  \n      "])),(l()(),a["ɵted"](-1,null,["\n    "])),(l()(),a["ɵted"](-1,null,["\n   \n\n    "])),(l()(),a["ɵeld"](85,0,null,null,5,"div",[["class","text-center"]],null,null,null,null,null)),(l()(),a["ɵted"](-1,null,["\n      "])),(l()(),a["ɵeld"](87,0,null,null,2,"button",[["class","custom-button add-complaint"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.openRenewalDocumentPage()&&u}return u},w.b,w.a)),a["ɵdid"](88,1097728,null,0,I.a,[[8,""],D.a,a.ElementRef,a.Renderer],{round:[0,"round"]},null),(l()(),a["ɵted"](-1,0,["RENEW/ADD"])),(l()(),a["ɵted"](-1,null,["\n\n    "])),(l()(),a["ɵted"](-1,null,["\n\n\n  "])),(l()(),a["ɵted"](-1,1,["\n"])),(l()(),a["ɵted"](-1,null,[" \n\n\n\n"]))],function(l,n){var e=n.component;l(n,21,0,"ios-copy","md-copy");l(n,68,0,e.bills);l(n,76,0,e.isupdate);l(n,79,0,e.isupdate);l(n,88,0,"")},function(l,n){var e=n.component;l(n,3,0,a["ɵnov"](n,4)._hidden,a["ɵnov"](n,4)._sbPadding);l(n,20,0,a["ɵnov"](n,21)._hidden);l(n,22,0,e.document.document_name);l(n,34,0,a["ɵnov"](n,35).statusbarPadding,a["ɵnov"](n,35)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),r=(e(2),e(26),e(187)),s=e(183),c=e(84),m=function(){function l(l,n,e,u,t,d){this.navCtrl=l,this.navParams=n,this.codes=e,this.rest=u,this.message=t,this.alertCtrl=d,this.document="",this.bills=[],this.isupdate=!1,this.document=this.navParams.get("document"),console.log(JSON.stringify(this.document))}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AddDocumentBillPage"),this.getBillsBySrthId()},l.prototype.getBillsBySrthId=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID,{srth_id:n[0].srth_id,worker_type:"documents"}).then(function(n){if("0"==n._ReturnCode)for(var e=n.data,u=0;u<e.length;u++)e[u].reason==l.document.document_name&&(e[u].selected="false",l.bills.push(e[u]))})},l.prototype.openRenewalDocumentPage=function(){this.navCtrl.push("DocumentRenewalPage",{document:this.document})},l.prototype.selectThis=function(l){this.isupdate=!0;for(var n=0;n<this.bills.length;n++)this.bills[n].selected="false";l.selected="true",localStorage.setItem("bill",JSON.stringify(l))},l.prototype.update=function(){var l=JSON.parse(localStorage.getItem("bill"));this.navCtrl.push("DocumentRenewalPage",{document:this.document,bill:l})},l.prototype.presentConfirmDelete=function(){var l=this;this.alertCtrl.create({title:"Confirm",message:"Are you sure you want to delete this bill?",buttons:[{text:"Cancel",role:"cancel",handler:function(){console.log("Cancel clicked")}},{text:"Delete",handler:function(){l.deletebill()}}]}).present()},l.prototype.deletebill=function(){var l=this,n=JSON.parse(localStorage.getItem("bill"));this.rest.post(this.codes.DELETE_BILL_EXPENSE,{bill_id:n.bill_id}).then(function(n){"0"==n._ReturnCode&&(l.message.displayToast("Congratulations! You have deleted a bill."),l.getBillsBySrthId())})},l}(),f=function(){return function(){}}(),p=e(498),h=e(499),b=e(500),g=e(501),v=e(502),R=e(503),_=e(504),E=e(505),y=e(506),C=e(16),w=e(39),I=e(27),D=e(4),B=e(41),S=e(85),N=e(8),F=e(188),L=e(37),O=e(13),x=e(29),P=e(186),T=e(185),k=e(508),M=e(86),$=e(42),A=e(507),V=e(32),J=e(7),j=e(14),U=e(40),H=e(17),K=e(124),X=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Y=a["ɵccf"]("page-add-document-bill",m,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-add-document-bill",[],null,null,null,o,X)),a["ɵdid"](1,49152,null,0,m,[x.a,H.a,c.a,s.a,r.a,K.a],null,null)],null,null)},{},{},[]),G=e(20),W=e(184),Z=e(55);e.d(n,"AddDocumentBillPageModuleNgFactory",function(){return q});var q=a["ɵcmf"](f,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[p.a,h.a,b.a,g.a,v.a,R.a,_.a,E.a,y.a,Y]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,C.l,C.k,[a.LOCALE_ID,[2,C.t]]),a["ɵmpd"](4608,G["ɵi"],G["ɵi"],[]),a["ɵmpd"](4608,G.FormBuilder,G.FormBuilder,[]),a["ɵmpd"](512,C.b,C.b,[]),a["ɵmpd"](512,G["ɵba"],G["ɵba"],[]),a["ɵmpd"](512,G.FormsModule,G.FormsModule,[]),a["ɵmpd"](512,G.ReactiveFormsModule,G.ReactiveFormsModule,[]),a["ɵmpd"](512,W.a,W.a,[]),a["ɵmpd"](512,W.b,W.b,[]),a["ɵmpd"](512,f,f,[]),a["ɵmpd"](256,Z.a,m,[])])})}});
+webpackJsonp([74],{
+
+/***/ 843:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddComplaintsPageModule", function() { return AddComplaintsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_complaints__ = __webpack_require__(923);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddComplaintsPageModule = /** @class */ (function () {
+    function AddComplaintsPageModule() {
+    }
+    AddComplaintsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */]),
+            ],
+        })
+    ], AddComplaintsPageModule);
+    return AddComplaintsPageModule;
+}());
+
+//# sourceMappingURL=add-complaints.module.js.map
+
+/***/ }),
+
+/***/ 923:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddComplaintsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AddComplaintsPage = /** @class */ (function () {
+    function AddComplaintsPage(navCtrl, navParams, modalCtrl, codes, rest, message) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.codes = codes;
+        this.rest = rest;
+        this.message = message;
+        this.vari = '';
+        this.isSelectedBill = false;
+        this.complaints_id = '';
+        this.vehicle_id = '';
+        this.srth_id = '';
+        this.problem_id = '';
+        this.date_of_complaint = '';
+        this.date_of_reminder = '';
+        this.details = '';
+        this.km_reading = '';
+        this.status = '';
+        this.last_maint_id = '';
+        this.opt_counter = '';
+        this.vehicle_number = '';
+        this.isupdate = false;
+        this.vehicles = [];
+        this.complaints = [];
+        this.problems = [];
+        this.img = null;
+        var update = this.navParams.get("update");
+        if (update == "true") {
+            var comp = this.navParams.get("selectedcomplaint");
+            this.complaints_id = comp['complaints_id'];
+            this.vehicle_id = comp['vehicle_id'];
+            this.srth_id = comp['srth_id'];
+            this.problem_id = comp['problem_id'];
+            this.date_of_complaint = comp['date_of_complaint'];
+            this.date_of_reminder = comp['date_of_reminder'];
+            this.details = comp['details'];
+            this.km_reading = comp['km_reading'];
+            this.status = comp['status'];
+            this.isupdate = true;
+        }
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+        });
+        if (this.complaints_id == '') {
+            this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID, {}).then(function (resp) {
+                _this.complaints_id = Number(resp['data']) + 1;
+            });
+        }
+        // this.getcomplaints();
+    }
+    AddComplaintsPage.prototype.updatecomplaint = function () {
+        var _this = this;
+        var data = {
+            "complaints_id": this.complaints_id,
+            "vehicle_id": this.vehicle_id,
+            "srth_id": this.srth_id,
+            "problem_id": this.problem_id,
+            "date_of_complaint": this.date_of_complaint,
+            "date_of_reminder": this.date_of_reminder,
+            "details": this.details,
+            "km_reading": this.km_reading,
+            "status": this.status,
+            "last_maint_id": "srth-app",
+            "opt_counter": "0",
+            "problems": this.problems
+        };
+        this.rest.post(this.codes.UPDATE_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AddComplaintsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddComplaintsPage');
+    };
+    AddComplaintsPage.prototype.change = function (vehicleId) {
+        this.isSelectedBill = true;
+        for (var i = 0; i < this.vehicles.length; i++) {
+            if (this.vehicles[i]['vehicle_id'] == vehicleId) {
+                this.vehicle_number = this.vehicles[i]['vehicle_number'];
+            }
+        }
+    };
+    AddComplaintsPage.prototype.openCameraPopup = function () {
+        var _this = this;
+        if (this.vehicle_id == '' || this.vehicle_id == null) {
+            this.message.displayToast("Please select vehicle");
+            return;
+        }
+        if (this.date_of_complaint == '' || this.date_of_complaint == null) {
+            this.message.displayToast("Please select date of complaint");
+            return;
+        }
+        if (this.date_of_reminder == '' || this.date_of_reminder == null) {
+            this.message.displayToast("Please select date of reminder");
+            return;
+        }
+        if (this.problem_id == '' || this.problem_id == null) {
+            this.message.displayToast("Please enter problem id");
+            return;
+        }
+        if (this.details == '' || this.details == null) {
+            this.message.displayToast("Please enter details");
+            return;
+        }
+        var data = {
+            "vehicle_id": this.vehicle_id,
+            "complaint_date": this.date_of_complaint,
+            "reminder_date": this.date_of_reminder,
+            "details": this.details
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "",
+            "worker_id": 0,
+            "document_type": "complaintimage",
+            "type": "complaints",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+                _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+            else
+                _this.img = null;
+        });
+        cameraModalPage.present();
+    };
+    AddComplaintsPage.prototype.openProblemModal = function () {
+        var _this = this;
+        var problemModal = this.modalCtrl.create('ProblemWorkPartModalPage');
+        problemModal.onDidDismiss(function (data) {
+            if (localStorage.getItem("problem_id") != undefined) {
+                _this.problems = JSON.parse(localStorage.getItem("problem_id"));
+                var str = "";
+                var str2 = "";
+                for (var i = 0; i < _this.problems.length; i++) {
+                    str += _this.problems[i]['problem_id'] + " ";
+                    str2 += (_this.problems[i]['problem_name'] + "-" + _this.problems[i]['vehicle_part_name']) + " ";
+                }
+                _this.problem_id = str;
+                _this.problem_id = str2;
+            }
+        });
+        problemModal.present();
+    };
+    AddComplaintsPage.prototype.openDetailPopup = function () {
+        var _this = this;
+        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+        detailsModalPage.onDidDismiss(function (data) {
+            _this.details = localStorage.getItem(_this.codes.DETAILS);
+        });
+        detailsModalPage.present();
+    };
+    AddComplaintsPage.prototype.selectThis = function (comp) {
+        this.complaints_id = comp['complaints_id'];
+        this.vehicle_id = comp['vehicle_id'];
+        this.srth_id = comp['srth_id'];
+        this.problem_id = comp['problem_id'];
+        this.date_of_complaint = comp['date_of_complaint'];
+        this.date_of_reminder = comp['date_of_reminder'];
+        this.details = comp['details'];
+        this.km_reading = comp['km_reading'];
+        this.status = comp['status'];
+        for (var i = 0; i < this.complaints.length; i++)
+            this.complaints[i]['selected'] = 'false';
+        comp['selected'] = 'true';
+        this.isupdate = true;
+    };
+    AddComplaintsPage.prototype.getcomplaints = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.complaints = resp['data'];
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    if (_this.complaints[i]['problems'] != undefined) {
+                        var str = "";
+                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
+                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
+                        }
+                        _this.complaints[i]['problem_id'] = str;
+                    }
+                }
+            }
+        });
+    };
+    AddComplaintsPage.prototype.openCalendarPopup = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.date_of_complaint = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    AddComplaintsPage.prototype.openCalendarPopup2 = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.date_of_reminder = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    AddComplaintsPage.prototype.savecomplaint = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_id": this.vehicle_id,
+            "srth_id": userinfo[0]['srth_id'],
+            "problem_id": this.problem_id,
+            "date_of_complaint": this.date_of_complaint,
+            "date_of_reminder": this.date_of_reminder,
+            "details": this.details,
+            "km_reading": this.km_reading,
+            "status": this.status,
+            "last_maint_id": "srth-app",
+            "opt_counter": "0",
+            "problems": this.problems
+        };
+        console.error("Check the problems : " + JSON.stringify(data));
+        this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                data['complaints_id'] = _this.complaints_id;
+                data['selected'] = false;
+                _this.problem_id = '';
+                _this.date_of_complaint = '';
+                _this.date_of_reminder = '';
+                _this.details = '';
+                _this.km_reading = '';
+                _this.complaints_id++;
+                _this.complaints.push(data);
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    if (_this.complaints[i]['problems'] != undefined) {
+                        var str = "";
+                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
+                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
+                        }
+                        _this.complaints[i]['problem_id'] = str;
+                    }
+                }
+            }
+        });
+    };
+    AddComplaintsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-add-complaints',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file" aria-hidden="true"></i>\n          ADD COMPLAINTS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n  \n\n    <!-- <div class="scrollmenu">\n      <a href="#home">NUMBER</a>\n      <a href="#news">VEHICLE NUMBER(DRIVER NAME)</a>\n      <a href="#contact">PROBLEM PART AND ID</a>\n      <a href="#about">DATE OF COMPLAINT/REMINDER</a>\n      <a href="#about">DETAILS/KM READING</a> -->\n    <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n\n    <!-- <div style="height: 200px;width: 400px">\n\n      </div>\n    </div> -->\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n        <a href="#home">NUMBER</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">PROBLEM PART & ID</a>\n        <a href="#about">COMPLAINT DATE</a>\n        <a href="#about">REMINDER DATE</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">KM READING</a>\n\n        <div *ngFor="let cm of complaints">\n        <div [ngClass]="cm[\'selected\']==\'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" (click)="selectThis(cm)" >\n          <p>{{cm[\'complaints_id\']}} </p>\n          <p>{{cm[\'vehicle_id\']}}</p>\n          <p>{{cm[\'problem_id\']}}</p>\n          <p>{{cm[\'date_of_complaint\']}}</p>\n          <p>{{cm[\'date_of_reminder\']}}</p>\n          <p>{{cm[\'details\']}}</p>\n          <p>{{cm[\'km_reading\']}}</p>\n     \n        </div>\n      </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <!-- <ion-item>\n      <ion-label>VEHICLE NUMBER &nbsp; &nbsp; &nbsp; &nbsp; DRIVER</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="f">Female</ion-option>\n        <ion-option value="m">Male</ion-option>\n      </ion-select>\n    </ion-item> -->\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_id}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>VEHICLE NUMBER</ion-label>\n\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id" (ionChange)="change($event)">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center"  style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{vehicle_number}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center"> \n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill=!isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" (click)="openProblemModal()">\n      <input type="text"  [(ngModel)]="problem_id" placeholder=" " />\n      <label>PROBLEM/WORK(PART & ID)</label>\n    </div>\n\n\n\n\n    <ion-row style="margin: 0 -5px;" class="complaint">\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"  [(ngModel)]="date_of_complaint" (click)="openCalendarPopup()"/>\n          <label>COMPLAINT</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"   [(ngModel)]="date_of_reminder" (click)="openCalendarPopup2()"/>\n          <label>REMINDER</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    </ion-row>\n  \n\n\n\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <ion-col  col-12 (click)="openDetailPopup()" style="padding-left: 27px;margin-top: -6px;">\n            <div class="label-float" style="padding-top: 8px;">\n              <input type="text"  [(ngModel)]="details" placeholder=" " />\n              <label>DETAILS</label>\n            </div>\n    \n          </ion-col>    \n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-12 *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.9 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" style="padding-top: 8px;" >\n      <input type="tel" [(ngModel)]="km_reading" placeholder=" " />\n      <label>KM READING</label>\n    </div>\n\n   \n\n  </div>\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!isupdate" (click)="savecomplaint()"> SAVE</button>\n    <button ion-button round class="custom-button" *ngIf="isupdate" (click)="updatecomplaint()"> UPDATE</button>\n  </div>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], AddComplaintsPage);
+    return AddComplaintsPage;
+}());
+
+//# sourceMappingURL=add-complaints.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=74.js.map

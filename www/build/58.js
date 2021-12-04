@@ -1,1 +1,91 @@
-webpackJsonp([58],{863:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,31,"ion-header",[],null,null,null,null,null)),d["ɵdid"](1,16384,null,0,h.a,[f.a,d.ElementRef,d.Renderer,[2,R.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](3,0,null,null,27,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,b.b,b.a)),d["ɵdid"](4,49152,null,0,C.a,[E.a,[2,R.a],[2,y.a],f.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](6,0,null,3,23,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](7,16384,null,0,F.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),d["ɵdid"](10,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      \n      "])),(l()(),d["ɵeld"](14,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](15,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](17,0,null,null,4,"ion-title",[],null,null,null,P.b,P.a)),d["ɵdid"](18,49152,null,0,N.a,[f.a,d.ElementRef,d.Renderer,[2,k.a],[2,C.a]],null,null),(l()(),d["ɵted"](-1,0,["        \n          "])),(l()(),d["ɵeld"](20,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-file-image-o"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,0,["\n          REPORT KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](24,0,null,null,4,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),d["ɵdid"](25,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](27,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](33,0,null,null,81,"ion-content",[["class","report"],["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,A.b,A.a)),d["ɵdid"](34,4374528,null,0,w.a,[f.a,x.a,D.a,d.ElementRef,d.Renderer,E.a,I.a,d.NgZone,[2,R.a],[2,y.a]],null,null),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](36,0,null,1,77,"div",[["class","container"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](38,0,null,null,74,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](39,16384,null,0,F.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](41,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.navCtrl.push("ReportAllCompPage")&&e}return e},null,null)),d["ɵdid"](42,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](44,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](46,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/006-delivery-truck.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](48,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["VEHICLE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n       \n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](53,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](54,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](56,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](58,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/driver.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](60,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["DRIVER"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n    \n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](65,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](66,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](68,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](70,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png//004-shop.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](72,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["SHOP"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n    \n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](77,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](78,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](80,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](82,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/007-mechanic.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](84,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["MECHANIC"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      \n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](89,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](90,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](92,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](94,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/002-folder.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](96,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["DOCUMENTS AND INSURANCE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n       \n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](101,0,null,null,10,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](102,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](104,0,null,null,6,"div",[["class","report-div"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](106,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/008-report.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](108,0,null,null,1,"h4",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["COMPLAINT"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      \n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n"])),(l()(),d["ɵted"](-1,null,["\n"]))],null,function(l,n){l(n,3,0,d["ɵnov"](n,4)._hidden,d["ɵnov"](n,4)._sbPadding);l(n,33,0,d["ɵnov"](n,34).statusbarPadding,d["ɵnov"](n,34)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ReportKhataPage")},l}()),a=function(){return function(){}}(),o=u(498),i=u(499),r=u(500),s=u(501),c=u(502),p=u(503),m=u(504),g=u(505),v=u(506),h=u(85),f=u(4),R=u(8),b=u(188),C=u(37),E=u(13),y=u(29),F=u(186),M=u(185),P=u(508),N=u(86),k=u(42),A=u(507),w=u(32),x=u(7),D=u(14),I=u(40),L=u(17),O=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),_=d["ɵccf"]("page-report-khata",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-report-khata",[],null,null,null,e,O)),d["ɵdid"](1,49152,null,0,t,[y.a,L.a],null,null)],null,null)},{},{},[]),H=u(16),T=u(20),V=u(184),K=u(55);u.d(n,"ReportKhataPageModuleNgFactory",function(){return S});var S=d["ɵcmf"](a,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,s.a,c.a,p.a,m.a,g.a,v.a,_]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,H.l,H.k,[d.LOCALE_ID,[2,H.t]]),d["ɵmpd"](4608,T["ɵi"],T["ɵi"],[]),d["ɵmpd"](4608,T.FormBuilder,T.FormBuilder,[]),d["ɵmpd"](512,H.b,H.b,[]),d["ɵmpd"](512,T["ɵba"],T["ɵba"],[]),d["ɵmpd"](512,T.FormsModule,T.FormsModule,[]),d["ɵmpd"](512,T.ReactiveFormsModule,T.ReactiveFormsModule,[]),d["ɵmpd"](512,V.a,V.a,[]),d["ɵmpd"](512,V.b,V.b,[]),d["ɵmpd"](512,a,a,[]),d["ɵmpd"](256,K.a,t,[])])})}});
+webpackJsonp([58],{
+
+/***/ 860:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraModalPageModule", function() { return CameraModalPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_modal__ = __webpack_require__(920);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var CameraModalPageModule = /** @class */ (function () {
+    function CameraModalPageModule() {
+    }
+    CameraModalPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */]),
+            ],
+        })
+    ], CameraModalPageModule);
+    return CameraModalPageModule;
+}());
+
+//# sourceMappingURL=camera-modal.module.js.map
+
+/***/ }),
+
+/***/ 920:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the CameraModalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CameraModalPage = /** @class */ (function () {
+    function CameraModalPage(viewController, navCtrl, navParams) {
+        this.viewController = viewController;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CameraModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CameraModalPage');
+    };
+    CameraModalPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    CameraModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-camera-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  \n\n  <ion-card class="modal-card-camera">\n    <ion-card-header class="custom-card-header">\n      PHOTOS\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <ion-row>\n        <ion-col col-12>\n          <span class="add-more-modal" (click)="goToModal()" ><i style="color: #0752af;font-size: 30px" class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->\n          </span>    \n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n      </ion-row>\n      <ion-col col-12 >\n        <div class="text-center">\n          <button ion-button round class="exit-button" (click)="exitModal()">\n            EXIT\n          </button>\n        </div>\n      </ion-col>\n      \n\n\n     </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], CameraModalPage);
+    return CameraModalPage;
+}());
+
+//# sourceMappingURL=camera-modal.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=58.js.map

@@ -1,1 +1,168 @@
-webpackJsonp([73],{815:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),d["ɵdid"](2,16384,null,0,b.a,[R.a,d.ElementRef,d.Renderer,[2,h.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,M.b,M.a)),d["ɵdid"](5,49152,null,0,v.a,[A.a,[2,h.a],[2,x.a],R.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,E.b,E.a)),d["ɵdid"](8,49152,null,0,K.a,[R.a,d.ElementRef,d.Renderer,[2,w.a],[2,v.a]],null,null),(l()(),d["ɵted"](-1,0,["ADD MORE"])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](13,0,null,null,66,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,F.b,F.a)),d["ɵdid"](14,4374528,null,0,y.a,[R.a,C.a,D.a,d.ElementRef,d.Renderer,A.a,q.a,d.NgZone,[2,h.a],[2,x.a]],null,null),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](16,0,null,1,51,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](17,16384,null,0,L.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](19,0,null,null,7,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](20,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](22,0,null,null,3,"span",[["class","add-more-modal"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.goToModal()&&e}return e},null,null)),(l()(),d["ɵted"](-1,null,["ADD MORE "])),(l()(),d["ɵeld"](24,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-plus-circle"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["    \n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](28,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](29,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](32,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](33,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](36,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](37,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](39,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](42,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](43,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](45,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](48,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](49,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](52,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](53,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](56,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](57,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](59,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](62,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](63,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](65,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](69,0,null,1,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](70,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](72,0,null,null,5,"div",[["class","text-center"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](74,0,null,null,2,"button",[["class","exit-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.exitModal()&&e}return e},P.b,P.a)),d["ɵdid"](75,1097728,null,0,U.a,[[8,""],R.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["\n        Exit\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,["\n"]))],function(l,n){l(n,75,0,"")},function(l,n){l(n,4,0,d["ɵnov"](n,5)._hidden,d["ɵnov"](n,5)._sbPadding);l(n,13,0,d["ɵnov"](n,14).statusbarPadding,d["ɵnov"](n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n,u){this.viewController=l,this.navCtrl=n,this.navParams=u}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AddMoreModalPage")},l.prototype.exitModal=function(){this.viewController.dismiss()},l}()),o=function(){return function(){}}(),a=u(498),i=u(499),c=u(500),r=u(501),s=u(502),m=u(503),p=u(504),f=u(505),g=u(506),b=u(85),R=u(4),h=u(8),M=u(188),v=u(37),A=u(13),x=u(29),E=u(508),K=u(86),w=u(42),F=u(507),y=u(32),C=u(7),D=u(14),q=u(40),L=u(186),O=u(185),P=u(39),U=u(27),N=u(17),k=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),V=d["ɵccf"]("page-add-more-modal",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-add-more-modal",[],null,null,null,e,k)),d["ɵdid"](1,49152,null,0,t,[h.a,x.a,N.a],null,null)],null,null)},{},{},[]),_=u(16),j=u(20),z=u(184),G=u(55);u.d(n,"AddMoreModalPageModuleNgFactory",function(){return S});var S=d["ɵcmf"](o,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[a.a,i.a,c.a,r.a,s.a,m.a,p.a,f.a,g.a,V]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,_.l,_.k,[d.LOCALE_ID,[2,_.t]]),d["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),d["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),d["ɵmpd"](512,_.b,_.b,[]),d["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),d["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),d["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),d["ɵmpd"](512,z.a,z.a,[]),d["ɵmpd"](512,z.b,z.b,[]),d["ɵmpd"](512,o,o,[]),d["ɵmpd"](256,G.a,t,[])])})}});
+webpackJsonp([73],{
+
+/***/ 844:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddDocumentBillPageModule", function() { return AddDocumentBillPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_document_bill__ = __webpack_require__(924);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddDocumentBillPageModule = /** @class */ (function () {
+    function AddDocumentBillPageModule() {
+    }
+    AddDocumentBillPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__add_document_bill__["a" /* AddDocumentBillPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_document_bill__["a" /* AddDocumentBillPage */]),
+            ],
+        })
+    ], AddDocumentBillPageModule);
+    return AddDocumentBillPageModule;
+}());
+
+//# sourceMappingURL=add-document-bill.module.js.map
+
+/***/ }),
+
+/***/ 924:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddDocumentBillPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AddDocumentBillPage = /** @class */ (function () {
+    function AddDocumentBillPage(navCtrl, navParams, codes, rest, message, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.codes = codes;
+        this.rest = rest;
+        this.message = message;
+        this.alertCtrl = alertCtrl;
+        this.document = '';
+        this.bills = [];
+        this.isupdate = false;
+        this.document = this.navParams.get("document");
+        console.log(JSON.stringify(this.document));
+    }
+    AddDocumentBillPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddDocumentBillPage');
+        this.getBillsBySrthId();
+    };
+    AddDocumentBillPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        // this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "documents"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var bls = resp['data'];
+                for (var i = 0; i < bls.length; i++) {
+                    if (bls[i]['reason'] == _this.document['document_name']) {
+                        bls[i]['selected'] = 'false';
+                        _this.bills.push(bls[i]);
+                    }
+                }
+            }
+        });
+    };
+    AddDocumentBillPage.prototype.openRenewalDocumentPage = function () {
+        this.navCtrl.push('DocumentRenewalPage', { "document": this.document });
+    };
+    AddDocumentBillPage.prototype.selectThis = function (bill) {
+        this.isupdate = true;
+        for (var i = 0; i < this.bills.length; i++)
+            this.bills[i]['selected'] = 'false';
+        bill['selected'] = 'true';
+        localStorage.setItem("bill", JSON.stringify(bill));
+    };
+    AddDocumentBillPage.prototype.update = function () {
+        var bill = JSON.parse(localStorage.getItem("bill"));
+        this.navCtrl.push('DocumentRenewalPage', { "document": this.document, "bill": bill });
+    };
+    AddDocumentBillPage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: 'Are you sure you want to delete this bill?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletebill();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    AddDocumentBillPage.prototype.deletebill = function () {
+        var _this = this;
+        var bill = JSON.parse(localStorage.getItem('bill'));
+        var data = {
+            "bill_id": bill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.getBillsBySrthId();
+            }
+        });
+    };
+    AddDocumentBillPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-add-document-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-document-bill/add-document-bill.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-copy" md="md-copy"></ion-icon>\n          {{document[\'document_name\']}}\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container"> \n\n    <!-- <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL, NUMBER, VEHICLE NUMBER, DOCUMENT"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div> -->\n\n    <div class="text-center mt-4">\n      \n\n\n    </div>\n\n    <!-- <ion-row>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class="expired-button" >EXPIRED</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class="ok-button" >OK</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class=" all-button" >ALL</button>\n      </ion-col>\n    </ion-row> -->\n\n   \n\n \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n        <a href="#about">BILL NUMBER</a>\n        <a href="#home">PERSON</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">BILL DATE</a>\n        <a href="#support">COST</a>\n        <!-- <a href="#support">BILL</a> -->\n        <a href="#support">DETAIL</a>\n    \n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bill of bills" (click)="selectThis(bill)">\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>\n            <span *ngFor="let vh of bill[\'details\']">\n            {{vh[\'vehicle_detail\'][\'vehicle_number\'] + "  "}}\n          </span>\n          </p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <!-- <p>RS 400</p> -->\n          <p>{{bill[\'bill_details\']}}</p>\n     \n        </div>\n  \n     \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()"> &nbsp;  Erase &nbsp;<ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n   \n\n    <div class="text-center">\n      <button ion-button round class="custom-button add-complaint" (click)="openRenewalDocumentPage()">RENEW/ADD</button>\n\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-document-bill/add-document-bill.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"]])
+    ], AddDocumentBillPage);
+    return AddDocumentBillPage;
+}());
+
+//# sourceMappingURL=add-document-bill.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=73.js.map

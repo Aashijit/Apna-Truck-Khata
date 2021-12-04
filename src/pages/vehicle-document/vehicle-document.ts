@@ -16,54 +16,63 @@ export class VehicleDocumentPage {
   vehicle : any = '';
   documents : any = [
     {
+      "dc_id":"0",
       "document_name":"National Permit",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"1",
       "document_name":"Insurance",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"2",
       "document_name":"Pollution Certificate",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"3",
       "document_name":"Certificate of fitness",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"4",
       "document_name":"Tax token",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"5",
       "document_name":"5 Year Authorization",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"6",
       "document_name":"Registration Certificate",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"-100",
       "document_name":"Others 1X",
       "document_image_id":"0",
       "document_expiry_date":"",
       "document_reminder_date":""
     },
     {
+      "dc_id":"-200",
       "document_name":"Others 2X",
       "document_image_id":"0",
       "document_expiry_date":"",
@@ -121,6 +130,18 @@ export class VehicleDocumentPage {
   addPermit() {
     let addPermit = this.modalCtrl.create('AddPermitPage');
     addPermit.present();
+  }
+
+  editDocumentName(docId) {
+    let mod = this.modalCtrl.create("EditOtherDocumentNamePage");
+    mod.onDidDismiss(resp => {
+      for(let i=0;i<this.documents.length;i++) {
+        if(this.documents[i]['dc_id'] == docId) {
+          this.documents[i]['document_name'] = resp;
+        }
+      }
+    });
+    mod.present();
   }
 
   save(){

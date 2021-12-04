@@ -1,1 +1,319 @@
-webpackJsonp([56],{872:function(l,n,t){"use strict";function e(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,1,"ion-icon",[["class","tab-button-icon"],["role","img"]],[[1,"aria-hidden",0],[2,"hide",null]],null,null,null,null)),b["ɵdid"](1,147456,null,0,C.a,[E.a,b.ElementRef,b.Renderer],{name:[0,"name"],isActive:[1,"isActive"]},null)],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon,t.tab.isSelected)},function(l,n){l(n,0,0,n.component.hasTitle?"true":null,b["ɵnov"](n,1)._hidden)})}function a(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,1,"span",[["class","tab-button-text"]],null,null,null,null,null)),(l()(),b["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.tab.tabTitle)})}function o(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,2,"ion-badge",[["class","tab-badge"]],null,null,null,null,null)),b["ɵdid"](1,16384,null,0,F.a,[E.a,b.ElementRef,b.Renderer],{color:[0,"color"]},null),(l()(),b["ɵted"](2,null,["",""]))],function(l,n){l(n,1,0,n.component.tab.tabBadgeStyle)},function(l,n){l(n,2,0,n.component.tab.tabBadge)})}function u(l){return b["ɵvid"](0,[(l()(),b["ɵand"](16777216,null,null,1,null,e)),b["ɵdid"](1,16384,null,0,_.j,[b.ViewContainerRef,b.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),b["ɵand"](16777216,null,null,1,null,a)),b["ɵdid"](3,16384,null,0,_.j,[b.ViewContainerRef,b.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),b["ɵand"](16777216,null,null,1,null,o)),b["ɵdid"](5,16384,null,0,_.j,[b.ViewContainerRef,b.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),b["ɵeld"](6,0,null,null,0,"div",[["class","button-effect"]],null,null,null,null,null))],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon);l(n,3,0,t.tab.tabTitle);l(n,5,0,t.tab.tabBadge)},null)}function i(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,1,"a",[["class","tab-button"],["href","#"],["role","tab"]],[[1,"id",0],[1,"aria-controls",0],[1,"aria-selected",0],[2,"has-title",null],[2,"has-icon",null],[2,"has-title-only",null],[2,"icon-only",null],[2,"has-badge",null],[2,"disable-hover",null],[2,"tab-disabled",null],[2,"tab-hidden",null]],[[null,"ionSelect"],[null,"click"]],function(l,n,t){var e=!0,a=l.component;if("click"===n){e=!1!==b["ɵnov"](l,1).onClick()&&e}if("ionSelect"===n){e=!1!==a.select(l.context.$implicit)&&e}return e},u,O)),b["ɵdid"](1,114688,null,0,N.a,[E.a,b.ElementRef,b.Renderer],{tab:[0,"tab"]},{ionSelect:"ionSelect"})],function(l,n){l(n,1,0,n.context.$implicit)},function(l,n){l(n,0,1,[b["ɵnov"](n,1).tab._btnId,b["ɵnov"](n,1).tab._tabId,b["ɵnov"](n,1).tab.isSelected,b["ɵnov"](n,1).hasTitle,b["ɵnov"](n,1).hasIcon,b["ɵnov"](n,1).hasTitleOnly,b["ɵnov"](n,1).hasIconOnly,b["ɵnov"](n,1).hasBadge,b["ɵnov"](n,1).disHover,!b["ɵnov"](n,1).tab.enabled,!b["ɵnov"](n,1).tab.show])})}function d(l){return b["ɵvid"](0,[b["ɵqud"](402653184,1,{_highlight:0}),b["ɵqud"](402653184,2,{_tabbar:0}),b["ɵqud"](402653184,3,{portal:0}),(l()(),b["ɵeld"](3,0,[[2,0],["tabbar",1]],null,4,"div",[["class","tabbar"],["role","tablist"]],null,null,null,null,null)),(l()(),b["ɵand"](16777216,null,null,1,null,i)),b["ɵdid"](5,802816,null,0,_.i,[b.ViewContainerRef,b.TemplateRef,b.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),b["ɵeld"](6,0,null,null,1,"div",[["class","tab-highlight"]],null,null,null,null,null)),b["ɵdid"](7,16384,[[1,4]],0,S.a,[b.ElementRef,H.a],null,null),b["ɵncd"](null,0),(l()(),b["ɵeld"](9,16777216,[[3,3],["portal",1]],null,0,"div",[["tab-portal",""]],null,null,null,null,null))],function(l,n){l(n,5,0,n.component._tabs)},null)}function r(l){return b["ɵvid"](0,[b["ɵqud"](402653184,1,{_vp:0}),(l()(),b["ɵeld"](1,16777216,[[1,3],["viewport",1]],null,0,"div",[],null,null,null,null,null)),(l()(),b["ɵeld"](2,0,null,null,0,"div",[["class","nav-decor"]],null,null,null,null,null))],null,null)}function c(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,15,"ion-tabs",[],null,null,null,d,j)),b["ɵprd"](6144,null,M.a,null,[P.a]),b["ɵdid"](2,4374528,null,0,P.a,[[2,w.a],[2,A.a],B.a,E.a,b.ElementRef,D.a,b.Renderer,k.a,x.a],null,null),(l()(),b["ɵted"](-1,0,["\n  "])),(l()(),b["ɵeld"](4,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","home"],["tabTitle","HOME"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,r,Z)),b["ɵdid"](5,245760,null,0,q.a,[P.a,B.a,E.a,D.a,b.ElementRef,b.NgZone,b.Renderer,b.ComponentFactoryResolver,b.ChangeDetectorRef,L.m,V.a,[2,k.a],H.a,b.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),b["ɵted"](-1,0,["\n  "])),(l()(),b["ɵeld"](7,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","information-circle"],["tabTitle","HELP"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,r,Z)),b["ɵdid"](8,245760,null,0,q.a,[P.a,B.a,E.a,D.a,b.ElementRef,b.NgZone,b.Renderer,b.ComponentFactoryResolver,b.ChangeDetectorRef,L.m,V.a,[2,k.a],H.a,b.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),b["ɵted"](-1,0,["\n  "])),(l()(),b["ɵeld"](10,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","md-list-box"],["tabTitle","NEWS"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,r,Z)),b["ɵdid"](11,245760,null,0,q.a,[P.a,B.a,E.a,D.a,b.ElementRef,b.NgZone,b.Renderer,b.ComponentFactoryResolver,b.ChangeDetectorRef,L.m,V.a,[2,k.a],H.a,b.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),b["ɵted"](-1,0,["\n  "])),(l()(),b["ɵeld"](13,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","notifications"],["tabTitle","NOTIFICATIONS"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,r,Z)),b["ɵdid"](14,245760,null,0,q.a,[P.a,B.a,E.a,D.a,b.ElementRef,b.NgZone,b.Renderer,b.ComponentFactoryResolver,b.ChangeDetectorRef,L.m,V.a,[2,k.a],H.a,b.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),b["ɵted"](-1,0,["\n"])),(l()(),b["ɵted"](-1,null,["\n"]))],function(l,n){var t=n.component;l(n,5,0,t.tab1Root,"HOME","home");l(n,8,0,t.tab2Root,"HELP","information-circle");l(n,11,0,t.tab3Root,"NEWS","md-list-box");l(n,14,0,t.tab4Root,"NOTIFICATIONS","notifications")},function(l,n){l(n,4,0,b["ɵnov"](n,5)._tabId,b["ɵnov"](n,5)._btnId);l(n,7,0,b["ɵnov"](n,8)._tabId,b["ɵnov"](n,8)._btnId);l(n,10,0,b["ɵnov"](n,11)._tabId,b["ɵnov"](n,11)._btnId);l(n,13,0,b["ɵnov"](n,14)._tabId,b["ɵnov"](n,14)._btnId)})}Object.defineProperty(n,"__esModule",{value:!0});var b=t(0),s=(t(2),function(){return function(){this.tab1Root="HomePage",this.tab2Root="AboutPage",this.tab3Root="ContactPage",this.tab4Root="ContactPage"}}()),f=(t(26),function(){return function(){}}()),m=t(498),v=t(499),p=t(500),R=t(501),I=t(502),g=t(503),h=t(504),T=t(505),y=t(506),C=t(41),E=t(4),F=t(196),_=t(16),N=t(209),O=b["ɵcrt"]({encapsulation:2,styles:[],data:{}}),S=t(133),H=t(14),M=t(52),P=t(131),w=t(29),A=t(8),B=t(13),D=t(7),k=t(24),x=t(40),j=b["ɵcrt"]({encapsulation:2,styles:[],data:{}}),q=t(208),L=t(11),V=t(44),Z=b["ɵcrt"]({encapsulation:2,styles:[],data:{}}),W=b["ɵcrt"]({encapsulation:2,styles:[],data:{}}),$=b["ɵccf"]("ng-component",s,function(l){return b["ɵvid"](0,[(l()(),b["ɵeld"](0,0,null,null,1,"ng-component",[],null,null,null,c,W)),b["ɵdid"](1,49152,null,0,s,[],null,null)],null,null)},{},{},[]),J=t(20),z=t(184),G=t(55);t.d(n,"TabsPageModuleNgFactory",function(){return K});var K=b["ɵcmf"](f,[],function(l){return b["ɵmod"]([b["ɵmpd"](512,b.ComponentFactoryResolver,b["ɵCodegenComponentFactoryResolver"],[[8,[m.a,v.a,p.a,R.a,I.a,g.a,h.a,T.a,y.a,$]],[3,b.ComponentFactoryResolver],b.NgModuleRef]),b["ɵmpd"](4608,_.l,_.k,[b.LOCALE_ID,[2,_.t]]),b["ɵmpd"](4608,J["ɵi"],J["ɵi"],[]),b["ɵmpd"](4608,J.FormBuilder,J.FormBuilder,[]),b["ɵmpd"](512,_.b,_.b,[]),b["ɵmpd"](512,J["ɵba"],J["ɵba"],[]),b["ɵmpd"](512,J.FormsModule,J.FormsModule,[]),b["ɵmpd"](512,J.ReactiveFormsModule,J.ReactiveFormsModule,[]),b["ɵmpd"](512,z.a,z.a,[]),b["ɵmpd"](512,z.b,z.b,[]),b["ɵmpd"](512,f,f,[]),b["ɵmpd"](256,G.a,s,[])])})}});
+webpackJsonp([56],{
+
+/***/ 862:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComplaintsKhataPageModule", function() { return ComplaintsKhataPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__complaints_khata__ = __webpack_require__(941);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ComplaintsKhataPageModule = /** @class */ (function () {
+    function ComplaintsKhataPageModule() {
+    }
+    ComplaintsKhataPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__complaints_khata__["a" /* ComplaintsKhataPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__complaints_khata__["a" /* ComplaintsKhataPage */]),
+            ],
+        })
+    ], ComplaintsKhataPageModule);
+    return ComplaintsKhataPageModule;
+}());
+
+//# sourceMappingURL=complaints-khata.module.js.map
+
+/***/ }),
+
+/***/ 941:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComplaintsKhataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ComplaintsKhataPage = /** @class */ (function () {
+    function ComplaintsKhataPage(alertCtrl, navCtrl, navParams, rest, codes, mdl) {
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.mdl = mdl;
+        this.complaints = [];
+        this.filtercomplaints = [];
+        this.nocomplaints = true;
+        this.problemcomplaints = [];
+        this.solvedcomplaints = [];
+        this.updatecomplaint = false;
+        this.complaint = '';
+        this.drivers = [];
+        this.vehicles = [];
+        this.ok = false;
+        this.problem = false;
+        this.all = true;
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.searchTerm = '';
+    }
+    ComplaintsKhataPage.prototype.ionViewWillEnter = function () {
+        this.getcomplaints();
+        this.getVehicles();
+        this.updatecomplaint = false;
+    };
+    ComplaintsKhataPage.prototype.getVehicles = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                _this.getDrivers();
+            }
+        });
+    };
+    ComplaintsKhataPage.prototype.clicksearchbar = function () {
+        this.displayfilter = true;
+        this.displaysearchitems = this.search;
+    };
+    ComplaintsKhataPage.prototype.closesearchbar = function () {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+    };
+    ComplaintsKhataPage.prototype.clickedsearchitem = function (sr) {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+        if (sr['type'] == 'driver') {
+            this.searchTerm = sr['name'];
+            this.filtercomplaints = [];
+            for (var i = 0; i < this.complaints.length; i++) {
+                if (this.complaints[i]['driver'] != null && this.complaints[i]['driver']['driver_id'] == sr['id']) {
+                    this.filtercomplaints.push(this.complaints[i]);
+                }
+            }
+        }
+        else if (sr['type'] == 'vehicle') {
+            this.filtercomplaints = [];
+            this.searchTerm = sr['id'];
+            for (var i = 0; i < this.complaints.length; i++) {
+                if (this.complaints[i]['vehicle_id'] == sr['id']) {
+                    this.filtercomplaints.push(this.complaints[i]);
+                }
+            }
+        }
+    };
+    ComplaintsKhataPage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: 'Are you sure you want to delete this complaint?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteComplaint();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    ComplaintsKhataPage.prototype.deleteComplaint = function () {
+        var _this = this;
+        var data = {
+            "complaints_id": this.complaint['complaints_id']
+        };
+        this.rest.post(this.codes.DELETE_COMPLAINTS, data).then(function (resp) {
+            _this.getcomplaints();
+            _this.updatecomplaint = false;
+        });
+    };
+    ComplaintsKhataPage.prototype.getItems = function ($event) {
+        var _this = this;
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filtercomplaints = this.complaints;
+            this.updatecomplaint = false;
+            for (var i = 0; i < this.filtercomplaints.length; i++) {
+                this.filtercomplaints[i]['selected'] = 'false';
+            }
+            for (var i = 0; i < this.complaints.length; i++) {
+                this.complaints[i]['selected'] = 'false';
+            }
+        }
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    ComplaintsKhataPage.prototype.getDrivers = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.drivers.length; i++) {
+                    var searchobj = {
+                        "type": "driver",
+                        "name": _this.drivers[i]['name'],
+                        "id": _this.drivers[i]['worker_id']
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj2 = {
+                        "type": "vehicle",
+                        "id": _this.vehicles[i]['vehicle_id'],
+                        "name": _this.vehicles[i]['vehicle_number']
+                    };
+                    _this.search.push(searchobj2);
+                }
+            }
+        });
+    };
+    ComplaintsKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ComplaintsKhataPage');
+    };
+    ComplaintsKhataPage.prototype.openAddComplaintsPage = function () {
+        this.navCtrl.push('AddComplaintsPage', { "update": "false" });
+    };
+    ComplaintsKhataPage.prototype.openUpdateComplaintsPage = function () {
+        this.navCtrl.push('ComplaintsUpdatePage');
+    };
+    ComplaintsKhataPage.prototype.displayOk = function () {
+        this.all = false;
+        this.ok = true;
+        this.problem = false;
+    };
+    ComplaintsKhataPage.prototype.displayProblem = function () {
+        this.all = false;
+        this.ok = false;
+        this.problem = true;
+    };
+    ComplaintsKhataPage.prototype.displayALL = function () {
+        this.all = true;
+        this.ok = false;
+        this.problem = false;
+    };
+    ComplaintsKhataPage.prototype.getcomplaints = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.complaints = resp['data'];
+                console.error(JSON.stringify(_this.complaints));
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    if (_this.complaints[i]['problems'] != undefined) {
+                        var str = "";
+                        // console.debug("PROBLEMS : "+JSON.stringify(this.complaints[i]['problems']));
+                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
+                            str += (_this.complaints[i]['problems'][j]['details']['problem_name'] + " - " + _this.complaints[i]['problems'][j]['details']['vehicle_part_name'] + " - " + _this.complaints[i]['problems'][j]['details']['vehicle_part_id']) + " ";
+                        }
+                        _this.complaints[i]['problem_id'] = str;
+                    }
+                }
+                _this.filtercomplaints = _this.complaints;
+                if (_this.complaints.length == 0) {
+                    _this.nocomplaints = true;
+                }
+                _this.problemcomplaints = [];
+                _this.solvedcomplaints = [];
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    _this.complaints[i]['selected'] = false;
+                    if (_this.complaints[i]['status'] == null)
+                        _this.problemcomplaints.push(_this.complaints[i]);
+                    if (_this.complaints[i]['status'] == 'solved')
+                        _this.solvedcomplaints.push(_this.complaints[i]);
+                }
+            }
+        });
+    };
+    ComplaintsKhataPage.prototype.viewComplaint = function () {
+        var mdl = this.mdl.create('ViewTransactionPage', { 'complaint': this.complaint });
+        mdl.present();
+    };
+    ComplaintsKhataPage.prototype.selectThis = function (cm) {
+        for (var i = 0; i < this.complaints.length; i++)
+            this.complaints[i]['selected'] = false;
+        cm['selected'] = true;
+        localStorage.setItem("selectedcomplaint", JSON.stringify(cm));
+        this.complaint = cm;
+        this.updatecomplaint = true;
+    };
+    ComplaintsKhataPage.prototype.updatecomplaints = function () {
+        this.navCtrl.push('AddComplaintsPage', { "update": "true", "selectedcomplaint": this.complaint });
+    };
+    ComplaintsKhataPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-complaints-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/complaints-khata/complaints-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file" aria-hidden="true"></i>\n          COMPLAINTS KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container ">\n\n    <!-- <ion-row class="document-button justify-content-center">\n      <ion-col col-12>\n        <div>\n          VEHICLE COMPLAINT REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n   \n    </ion-row> -->\n\n    <ion-row>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="ok == true ? \'ok-button-selected\' : \'ok-button\'" (click)="displayOk()">OK</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="problem == true ? \'problem-button-selected\' : \'problem-button\'" (click)="displayProblem()">PROBLEM</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="all == true ? \'all-button-selected\' : \'all-button\'" (click)="displayALL()">ALL</button>\n      </ion-col>\n    </ion-row>\n\n    <!-- <div class="text-center mt-4">  \n\n\n    </div> -->\n    <!-- (ionInput)="getItems($event)" -->\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)"  placeholder="SEARCH DRIVER NAME, VEHICLE NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>\n    </div>\n    <ion-card *ngIf="displayfilter">\n      <ion-card-content>\n        <ion-list >\n          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">\n           <div *ngIf="sr[\'type\']==\'driver\'">\n            <p style="color: #000;">{{sr[\'name\']}}</p>\n             <p>Driver</p>\n            </div>\n           <div *ngIf="sr[\'type\']==\'vehicle\'">\n              <p style="color: #000;">{{sr[\'name\']}}</p>\n              <p>Vehicle</p>\n           </div>\n          </ion-item>\n        </ion-list>\n      </ion-card-content>\n    </ion-card>\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">NUMBER</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#news">DRIVER NAME</a>\n        <a href="#contact">PROB/WORK/PART</a>\n        <a href="#about">DATE OF COMPLAINT</a>\n        <a href="#about">REMINDER</a>\n        <a href="#support">DETAILS</a>\n        <a href="#support">KM READING</a>\n    \n\n      <div *ngIf="complaints.length == 0 && !nocomplaints" style="padding: 15px;text-align: center;">\n          <ion-spinner name="bubbles"></ion-spinner>\n          <br/>\n        <span style="color: rgb(63, 63, 63);">\n          Loading\n        </span>\n      </div>\n\n    <div *ngIf="all">\n\n      <div  *ngFor="let cm of filtercomplaints" >\n        <div [ngClass]="cm[\'selected\'] == true ?  \'scrollmenu-list selected\' : \'scrollmenu-list\' " (click)="selectThis(cm)">\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'complaints_id\']}} </p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'vehicle_info\'][\'vehicle_number\']}}</p>\n          <p *ngIf="cm[\'driver\'] != null">{{cm[\'driver\'][\'name\']}}</p>\n          <p *ngIf="cm[\'driver\'] == null"></p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'problem_id\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_complaint\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_reminder\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'details\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'km_reading\']}}</p>\n        </div>\n      </div>\n    </div>\n    <div *ngIf="problem">\n      <div  *ngFor="let cm of problemcomplaints" >\n        <div [ngClass]="cm[\'selected\'] == true ?  \'scrollmenu-list selected\' : \'scrollmenu-list\' " (click)="selectThis(cm)">\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'complaints_id\']}} </p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'vehicle_info\'][\'vehicle_number\']}}</p>\n          <p *ngIf="cm[\'driver\'] != null">{{cm[\'driver\'][\'name\']}}</p>\n          <p *ngIf="cm[\'driver\'] == null"></p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'problem_id\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_complaint\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_reminder\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'details\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'km_reading\']}}</p>\n        </div>\n      </div>\n      </div>\n\n      <div *ngIf="ok">\n      <div  *ngFor="let cm of solvedcomplaints" >\n        <div [ngClass]="cm[\'selected\'] == true ?  \'scrollmenu-list selected\' : \'scrollmenu-list\' " (click)="selectThis(cm)">\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'complaints_id\']}} </p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'vehicle_info\'][\'vehicle_number\']}}</p>\n          <p *ngIf="cm[\'driver\'] != null">{{cm[\'driver\'][\'name\']}}</p>\n          <p *ngIf="cm[\'driver\'] == null"></p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'problem_id\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_complaint\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'date_of_reminder\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'details\']}}</p>\n          <p [ngClass]="cm[\'status\'] == \'\' ? \'prob\' : \'sol\'">{{cm[\'km_reading\']}}</p>\n        </div>\n      </div>\n    </div>\n\n      </div>\n      <div class="show-arrows" style="text-align:center !important">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n\n        <button ion-button class="custom-button-u" style="width:30px !important" *ngIf="updatecomplaint" (click)="viewComplaint()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatecomplaint" (click)="updatecomplaints()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatecomplaint" (click)="presentConfirmDelete()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n \n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n<!--  \n    <div class="text-center">\n\n    </div> -->\n\n\n  </div>\n\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button add-complaint" (click)="openAddComplaintsPage()">ADD COMPLAINT</button>\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button update-status" (click)="openUpdateComplaintsPage()">UPDATE STATUS</button>\n    </ion-col>\n<!-- \n    <ion-col col-12 class="text-center">\n      <button ion-button round class="custom-button update-status" *ngIf="updatecomplaint" (click)="updatecomplaints()">UPDATE COMPLAINTS</button>\n    </ion-col> -->\n  </ion-row>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/complaints-khata/complaints-khata.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"]])
+    ], ComplaintsKhataPage);
+    return ComplaintsKhataPage;
+}());
+
+//# sourceMappingURL=complaints-khata.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=56.js.map
