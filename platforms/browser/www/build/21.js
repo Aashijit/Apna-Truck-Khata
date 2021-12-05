@@ -1,14 +1,14 @@
 webpackJsonp([21],{
 
-/***/ 892:
+/***/ 897:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReasonModalPageModule", function() { return ReasonModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportAllCompPageModule", function() { return ReportAllCompPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reason_modal__ = __webpack_require__(965);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_all_comp__ = __webpack_require__(974);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReasonModalPageModule = /** @class */ (function () {
-    function ReasonModalPageModule() {
+var ReportAllCompPageModule = /** @class */ (function () {
+    function ReportAllCompPageModule() {
     }
-    ReasonModalPageModule = __decorate([
+    ReportAllCompPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__reason_modal__["a" /* ReasonModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__report_all_comp__["a" /* ReportAllCompPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__reason_modal__["a" /* ReasonModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__report_all_comp__["a" /* ReportAllCompPage */]),
             ],
         })
-    ], ReasonModalPageModule);
-    return ReasonModalPageModule;
+    ], ReportAllCompPageModule);
+    return ReportAllCompPageModule;
 }());
 
-//# sourceMappingURL=reason-modal.module.js.map
+//# sourceMappingURL=report-all-comp.module.js.map
 
 /***/ }),
 
-/***/ 965:
+/***/ 974:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReasonModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportAllCompPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -60,83 +60,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ReasonModalPage = /** @class */ (function () {
-    function ReasonModalPage(codes, rest, viewController, navCtrl, navParams) {
-        this.codes = codes;
-        this.rest = rest;
-        this.viewController = viewController;
+var ReportAllCompPage = /** @class */ (function () {
+    function ReportAllCompPage(navCtrl, navParams, rest, codes) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.filterreasons = [];
-        this.reasons = [];
-        this.reasontext = '';
-        this.searchTerm = '';
-        this.addReason = false;
-        this.getreason();
+        this.rest = rest;
+        this.codes = codes;
+        this.type = '';
+        this.object = '';
+        this.vehicles = [];
+        this.persons = [];
     }
-    ReasonModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ReasonModalPage');
+    ReportAllCompPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ReportAllCompPage');
+        this.getVehicles();
+        this.getPersons();
     };
-    ReasonModalPage.prototype.selectedReason = function (reason) {
-        localStorage.setItem(this.codes.SELECTED_REASON, JSON.stringify(reason['reason']));
-        this.viewController.dismiss();
-    };
-    ReasonModalPage.prototype.getreason = function () {
+    ReportAllCompPage.prototype.getVehicles = function () {
         var _this = this;
-        this.rest.post(this.codes.GET_REASON, {}).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.reasons = resp['data'];
-                _this.filterreasons = _this.reasons;
-            }
-        });
-    };
-    ReasonModalPage.prototype.savereason = function () {
-        var _this = this;
-        if (this.addReason == true) {
-            var data = {
-                'reason': this.reasontext
-            };
-            this.rest.post(this.codes.SAVE_REASON, data).then(function (resp) {
-                if (resp['_ReturnCode'] == '0') {
-                    _this.getreason();
-                }
-            });
-            this.addReason = false;
-        }
-        else
-            this.addReason = true;
-    };
-    ReasonModalPage.prototype.deletereason = function (reason) {
-        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            'property_id': reason['property_id']
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
         };
-        this.rest.post(this.codes.DELETE_REASON, data).then(function (resp) {
-            _this.getreason();
-        });
-    };
-    ReasonModalPage.prototype.filterList = function (event) {
-        var _this = this;
-        this.filterreasons = this.reasons.filter(function (wp) {
-            if (_this.searchTerm != '') {
-                return (wp.reason.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
             }
-            else
-                return _this.reasons;
         });
     };
-    ReasonModalPage = __decorate([
+    // (click)="navCtrl.push('ReportFullPage',{'person':this.driver})"
+    ReportAllCompPage.prototype.getPersons = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.persons = resp['data'];
+            }
+        });
+    };
+    ReportAllCompPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-reason-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n\n\n \n      </ion-row>\n\n      <ion-grid *ngIf="addReason">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Reason</h2>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="reasontext" />\n              <label>NAME</label>\n            </div>\n          </ion-col>\n          <!-- <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="savereason()"> ADD REASON  </button>\n          </ion-col> -->\n        </ion-row>\n      </ion-grid>\n\n      <ion-col col-12 style="text-align: center;">\n        <button ion-button round class="custom-button"  (click)="savereason()"> ADD REASON  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n      </ion-col>\n\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <ion-item *ngFor="let wp of filterreasons" >\n            <ion-card>\n              <ion-card-content>\n            <ion-row>\n              <ion-col style="text-align: left;" (click)="selectedReason(wp)"> \n                {{wp[\'reason\']}}\n              </ion-col>\n              <ion-col style="text-align: right;" (click)="deletereason(wp)"> \n                <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>\n              </ion-col> \n            </ion-row>\n          </ion-card-content>\n          </ion-card>\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/reason-modal/reason-modal.html"*/,
+            selector: 'page-report-all-comp',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-all-comp/report-all-comp.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          REPORTS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Vehicle Reports</h2>\n  <p *ngFor="let veh of vehicles">\n  <button ion-button full (click)="navCtrl.push(\'VehicleWorkReportPage\',{\'vehicle\':veh})">Vehicle Work Report : {{veh[\'vehicle_number\']}}</button>\n  <button ion-button full (click)="navCtrl.push(\'VehicleBillReportPage\',{\'vehicle\':veh})">Vehicle Bill Report : {{veh[\'vehicle_number\']}}</button>\n  </p>  \n  <hr/>\n\n  <h2>Person Reports</h2>\n  <p *ngFor="let per of persons">\n  <button ion-button full (click)="navCtrl.push(\'ReportFullPage\',{\'person\':per})">Report : {{per[\'name\']+" ~ "+per[\'worker_type\']}}</button>\n  </p>  \n  <hr/>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-all-comp/report-all-comp.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"]])
-    ], ReasonModalPage);
-    return ReasonModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], ReportAllCompPage);
+    return ReportAllCompPage;
 }());
 
-//# sourceMappingURL=reason-modal.js.map
+//# sourceMappingURL=report-all-comp.js.map
 
 /***/ })
 

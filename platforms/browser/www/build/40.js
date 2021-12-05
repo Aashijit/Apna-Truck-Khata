@@ -1,14 +1,14 @@
 webpackJsonp([40],{
 
-/***/ 874:
+/***/ 878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverKhataSearchPageModule", function() { return DriverKhataSearchPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditProfilePageModule", function() { return EditProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_khata_search__ = __webpack_require__(948);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profile__ = __webpack_require__(956);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DriverKhataSearchPageModule = /** @class */ (function () {
-    function DriverKhataSearchPageModule() {
+var EditProfilePageModule = /** @class */ (function () {
+    function EditProfilePageModule() {
     }
-    DriverKhataSearchPageModule = __decorate([
+    EditProfilePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__driver_khata_search__["a" /* DriverKhataSearchPage */],
+                __WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_khata_search__["a" /* DriverKhataSearchPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */]),
             ],
         })
-    ], DriverKhataSearchPageModule);
-    return DriverKhataSearchPageModule;
+    ], EditProfilePageModule);
+    return EditProfilePageModule;
 }());
 
-//# sourceMappingURL=driver-khata-search.module.js.map
+//# sourceMappingURL=edit-profile.module.js.map
 
 /***/ }),
 
-/***/ 948:
+/***/ 956:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverKhataSearchPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,148 +62,67 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DriverKhataSearchPage = /** @class */ (function () {
-    function DriverKhataSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
-        this.alertCtrl = alertCtrl;
+var EditProfilePage = /** @class */ (function () {
+    function EditProfilePage(navCtrl, navParams, codes, rest, loading, msg) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
         this.codes = codes;
-        this.message = message;
-        this.modalCtrl = modalCtrl;
-        this.bills = [];
-        this.isupdate = false;
-        this.filterbills = '';
-        this.searchTerm = '';
-        this.billDetails = [];
-        this.filterbillDetails = [];
-        this.shops = [];
-        this.vehicles = [];
-        this.drivers = [];
-        this.search = [];
-        this.displayfilter = false;
-        this.displaysearchitems = [];
-        this.problems = [];
-        this.reasons = [];
-        this.selectedfilters = [];
-        this.getVehicles();
+        this.rest = rest;
+        this.loading = loading;
+        this.msg = msg;
+        this.profile = {
+            "srth_id": '1',
+            "name": '',
+            "business_name": '',
+            "city": '',
+            "GSTN": '',
+            "pan": '',
+            "address_line_1": '',
+            "address_line_2": '',
+            "state": '',
+            "pincode": '',
+            "profile_image_id": '',
+            "last_maint_id": 'srth_app',
+            "opt_counter": '0'
+        };
+        var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        this.profile['srth_id'] = acc[0]['srth_id'];
+        var data = {
+            "srth_id": acc[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_PROFILE, data).then(function (resp) {
+            _this.profile = resp['data'][0];
+        });
     }
-    DriverKhataSearchPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DriverKhataSearchPage');
+    EditProfilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EditProfilePage');
     };
-    DriverKhataSearchPage.prototype.getVehicles = function () {
+    EditProfilePage.prototype.saveDetails = function () {
         var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+        var lng = this.loading.create({
+            content: 'Saving the profile ...'
+        });
+        lng.present();
+        this.rest.post(this.codes.UPDATE_PROFILE, this.profile).then(function (resp) {
+            lng.dismiss();
             if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
-                _this.getreason();
+                _this.msg.displayToast('Saved profile.');
+                _this.navCtrl.pop();
             }
         });
     };
-    DriverKhataSearchPage.prototype.getreason = function () {
-        var _this = this;
-        this.rest.post(this.codes.GET_REASON, {}).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.reasons = resp['data'];
-                _this.getDrivers();
-            }
-        });
-    };
-    DriverKhataSearchPage.prototype.getDrivers = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": json[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                var dt = resp['data'];
-                for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'driver') {
-                        _this.drivers.push(dt[i]);
-                    }
-                }
-                for (var i = 0; i < _this.vehicles.length; i++) {
-                    var searchobj = {
-                        "type": "vehicles",
-                        "name": _this.vehicles[i]['vehicle_number'],
-                        "id": String(_this.vehicles[i]['vehicle_id']),
-                        "amount": ""
-                    };
-                    _this.search.push(searchobj);
-                }
-                for (var i = 0; i < _this.drivers.length; i++) {
-                    var searchobj = {
-                        "type": "driver",
-                        "name": _this.drivers[i]['name'],
-                        "id": String(_this.drivers[i]['worker_id']),
-                        "amount": ""
-                    };
-                    _this.search.push(searchobj);
-                }
-                for (var i = 0; i < _this.reasons.length; i++) {
-                    var searchobj = {
-                        "type": "reasons",
-                        "id": "",
-                        "name": _this.reasons[i]['reason'],
-                        "amount": ""
-                    };
-                    _this.search.push(searchobj);
-                }
-                _this.displaysearchitems = _this.search;
-                console.log(JSON.stringify(_this.search));
-            }
-        });
-    };
-    DriverKhataSearchPage.prototype.clickedTerm = function (sr) {
-        for (var i = 0; i < this.selectedfilters.length; i++) {
-            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
-                return;
-            }
-        }
-        this.selectedfilters.push(sr);
-    };
-    DriverKhataSearchPage.prototype.removeTerm = function (sr) {
-        var sFilters = [];
-        for (var i = 0; i < this.selectedfilters.length; i++) {
-            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
-            }
-            else {
-                sFilters.push(this.selectedfilters[i]);
-            }
-        }
-        this.selectedfilters = sFilters;
-    };
-    DriverKhataSearchPage.prototype.searchGrid = function () {
-        localStorage.setItem("searchdriver", JSON.stringify(this.selectedfilters));
-        this.navCtrl.pop();
-    };
-    DriverKhataSearchPage.prototype.filterDetails = function (event) {
-        var _this = this;
-        this.displaysearchitems = this.search.filter(function (wp) {
-            if (_this.searchTerm != '') {
-                var str = wp.id + wp.name;
-                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
-            }
-            else
-                return _this.search;
-        });
-    };
-    DriverKhataSearchPage = __decorate([
+    EditProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-driver-khata-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata-search/driver-khata-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <!-- <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label> -->\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'drivers\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n \n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'shopname\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Driver</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reason</p>\n      </ion-item>\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata-search/driver-khata-search.html"*/,
+            selector: 'page-edit-profile',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/edit-profile/edit-profile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n          &nbsp;\n          EDIT PROFILE\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container edit-profile">\n\n    <ion-list>\n\n      <!-- <ion-row class="profile-picture">\n        <ion-col col-4>\n          <i class="fa fa-camera" aria-hidden="true"></i>\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n        </ion-col>\n        <ion-col>\n          <h6>MAX 1</h6> \n        </ion-col>\n\n      </ion-row> -->\n\n      <!-- <ion-item>\n        \n        <ion-input type="text" placeholder="NAME"></ion-input>\n\n\n      </ion-item> -->\n      <!-- "srth_id",\n      "name",\n      "business_name",\n      "city",\n      "GSTN",\n      "pan",\n      "address_line_1",\n      "address_line_2",\n      "state",\n      "pincode",\n      "profile_image_id",\n      "last_maint_id",\n      "opt_counter" -->\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.name"/>\n        <label>NAME</label>\n        <i class="fa fa-user" aria-hidden="true"></i>\n\n      </div>\n\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.business_name"/>\n        <label>BUSINESS NAME</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px" >\n        <ion-label>CITY</ion-label>\n\n        <ion-select interface="popover" [(ngModel)]="profile.city">\n          <ion-option value="city1">CITY 1</ion-option>\n          <ion-option value="city2">CITY 2</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.GSTN"/>\n        <label>GST NUMBER</label>\n        <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n\n      </div>\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.pan"/>\n        <label>PAN NUMBER</label>\n        <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n\n      </div>\n\n<!-- \n      <ion-item>\n        <ion-label>CITY</ion-label>\n        <ion-select [(ngModel)]="gender">\n          <ion-option value="f">Female</ion-option>\n          <ion-option value="m">Male</ion-option>\n        </ion-select>\n      </ion-item> -->\n<!-- \n      <ion-item>\n        <ion-input type="text" placeholder="GST NUMBER"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="PAN NUMBER"></ion-input>\n      </ion-item> -->\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.address_line_1"/>\n        <label>ADDRESS LINE 1</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.address_line_2"/>\n        <label>ADDRESS LINE 2</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>\n      </ion-item> -->\n\n      <ion-row class="state">\n        <ion-col col-6>\n          <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px" >\n            <ion-label>STATE</ion-label>\n    \n            <ion-select interface="popover" [(ngModel)]="profile.state" >\n              <ion-option value="city1">STATE 1</ion-option>\n              <ion-option value="city2">STATE 2</ion-option>\n            </ion-select>\n          </ion-item>\n    \n          <!-- <ion-item>\n            <ion-label>STATE</ion-label>\n            <ion-select [(ngModel)]="gender">\n              <ion-option value="f">Female</ion-option>\n              <ion-option value="m">Male</ion-option>\n            </ion-select>\n          </ion-item> -->\n        </ion-col>\n        <ion-col col-6>\n          <div class="label-float"  >\n            <input type="tel" maxlength="6"  placeholder=" " [(ngModel)]="profile.pincode" />\n            <label>PINCODE</label>\n            <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n          </div>\n          <!-- <ion-item>\n            <ion-input type="text" placeholder="PINCODE"></ion-input>\n          </ion-item> -->\n        </ion-col>\n      </ion-row>\n\n      <div class="text-center mt-4">\n        <button ion-button round class="custom-button" (click)="saveDetails()">SAVE DETAILS</button>\n      </div>\n      \n\n\n    \n    </ion-list>\n\n  </div>\n</ion-content> \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/edit-profile/edit-profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
-    ], DriverKhataSearchPage);
-    return DriverKhataSearchPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], EditProfilePage);
+    return EditProfilePage;
 }());
 
-//# sourceMappingURL=driver-khata-search.js.map
+//# sourceMappingURL=edit-profile.js.map
 
 /***/ })
 

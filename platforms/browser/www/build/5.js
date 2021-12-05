@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 909:
+/***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDetailsPageModule", function() { return VehicleDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleKhataPageModule", function() { return VehicleKhataPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_details__ = __webpack_require__(982);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_khata__ = __webpack_require__(990);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VehicleDetailsPageModule = /** @class */ (function () {
-    function VehicleDetailsPageModule() {
+var VehicleKhataPageModule = /** @class */ (function () {
+    function VehicleKhataPageModule() {
     }
-    VehicleDetailsPageModule = __decorate([
+    VehicleKhataPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__vehicle_details__["a" /* VehicleDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__vehicle_khata__["a" /* VehicleKhataPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__vehicle_details__["a" /* VehicleDetailsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__vehicle_khata__["a" /* VehicleKhataPage */]),
             ],
         })
-    ], VehicleDetailsPageModule);
-    return VehicleDetailsPageModule;
+    ], VehicleKhataPageModule);
+    return VehicleKhataPageModule;
 }());
 
-//# sourceMappingURL=vehicle-details.module.js.map
+//# sourceMappingURL=vehicle-khata.module.js.map
 
 /***/ }),
 
-/***/ 982:
+/***/ 990:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleKhataPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
@@ -60,130 +60,154 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var VehicleDetailsPage = /** @class */ (function () {
-    function VehicleDetailsPage(navCtrl, navParams, modalCtrl, rest, codes) {
+var VehicleKhataPage = /** @class */ (function () {
+    function VehicleKhataPage(alertCtrl, navCtrl, navParams, rest, codes) {
+        var _this = this;
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
         this.rest = rest;
         this.codes = codes;
-        this.isShown = false;
-        this.vehicle = '';
-        this.workdetails = [];
-        this.driverhistory = [];
-        this.vehicleworkdetails = [];
-        this.paid = 0;
-        this.unpaid = 0;
-        this.total = 0;
-        this.vehicle = this.navParams.get("vehicle");
-    }
-    VehicleDetailsPage.prototype.getVehicleWorkDetails = function () {
-        var _this = this;
+        this.vehicles = [];
+        this.vehicledrivers = [];
+        this.vehiclenodrivers = [];
+        this.displaycontrol = false;
+        this.isselect = '3';
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
         };
-        this.rest.post(this.codes.GET_BILL_FOR_VEHICLE, data).then(function (resp) {
-            _this.vehicleworkdetails = resp['data'];
-        });
-    };
-    VehicleDetailsPage.prototype.getworkdetails = function () {
-        var _this = this;
-        var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
-        };
-        this.rest.post(this.codes.GET_UPDATE_WORK_DETAILS, data).then(function (resp) {
-            _this.workdetails = resp['data'];
-            for (var i = 0; i < _this.workdetails.length; i++) {
-                _this.workdetails[i]['selected'] = false;
-            }
-        });
-    };
-    VehicleDetailsPage.prototype.getVehicleDriverHistory = function () {
-        var _this = this;
-        var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID, data).then(function (resp) {
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.driverhistory = resp['data'];
-                // for(let i=0;i<this.driverhistory.length;i++){
-                //   if(this.driverhistory[i]['is_remove'] == '0'){
-                //     this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
-                //     this.vehicle_joining_date = this.driverhistory[i]['vehicle']['vehicle_start_date'];
-                //   }
-                // }
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    _this.vehicles[i]['displaycontrol'] = false;
+                    _this.vehicles[i]['selected'] = false;
+                    if (_this.vehicles[i]['driver_details'] != null || _this.vehicles[i]['vehicle_details'] != undefined) {
+                        _this.vehicledrivers.push(_this.vehicles[i]);
+                    }
+                    else {
+                        _this.vehiclenodrivers.push(_this.vehicles[i]);
+                    }
+                }
+            }
+        });
+    }
+    VehicleKhataPage.prototype.select = function (id) {
+        this.isselect = id;
+    };
+    VehicleKhataPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    _this.vehicles[i]['displaycontrol'] = false;
+                    _this.vehicles[i]['selected'] = false;
+                    if (_this.vehicles[i]['driver_details'] != null || _this.vehicles[i]['vehicle_details'] != undefined) {
+                        _this.vehicledrivers.push(_this.vehicles[i]);
+                    }
+                    else {
+                        _this.vehiclenodrivers.push(_this.vehicles[i]);
+                    }
+                }
             }
         });
     };
-    VehicleDetailsPage.prototype.getBillSummary = function () {
+    VehicleKhataPage.prototype.presentConfirmDelete = function (vd) {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this vehicle?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteVehicle(vd);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    VehicleKhataPage.prototype.deleteVehicle = function (vd) {
         var _this = this;
         var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
+            "vehicle_id": vd['vehicle_id']
         };
-        this.rest.post(this.codes.GET_BILL_SUMMARY, data).then(function (resp) {
-            var det = resp['data'];
-            for (var i = 0; i < det.length; i++) {
-                if (det[i]['status'] == 'PAID') {
-                    _this.paid = Number(det[i]['count']);
-                }
-                else {
-                    _this.unpaid = Number(det[i]['count']);
-                }
+        this.rest.post(this.codes.DELETE_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.getVehicles();
             }
-            _this.total = _this.unpaid + _this.paid;
         });
     };
-    VehicleDetailsPage.prototype.ionViewWillEnter = function () {
-        this.getworkdetails();
-        this.getVehicleDriverHistory();
-        this.getVehicleWorkDetails();
-        this.getBillSummary();
+    VehicleKhataPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    _this.vehicles[i]['displaycontrol'] = false;
+                    _this.vehicles[i]['selected'] = false;
+                    if (_this.vehicles[i]['driver_details'] != null || _this.vehicles[i]['vehicle_details'] != undefined) {
+                        _this.vehicledrivers.push(_this.vehicles[i]);
+                    }
+                    else {
+                        _this.vehiclenodrivers.push(_this.vehicles[i]);
+                    }
+                }
+            }
+        });
     };
-    VehicleDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VehicleDetailsPage');
+    VehicleKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VehicleKhataPage');
     };
-    VehicleDetailsPage.prototype.getItems = function ($event) {
-    };
-    VehicleDetailsPage.prototype.goToModal = function () {
-        localStorage.setItem("vehicle_details", JSON.stringify(this.vehicle));
-        var profileModal = this.modalCtrl.create('DecisionModalPage');
-        profileModal.present();
-    };
-    VehicleDetailsPage.prototype.openExchangeModal = function () {
-        var exchangeModal = this.modalCtrl.create('ExchangeModalPage', { 'vehicle': this.vehicle });
-        exchangeModal.present();
-    };
-    VehicleDetailsPage.prototype.showMore = function () {
-        if (this.isShown) {
-            document.getElementById("fa-arrow-circle-down").classList.remove("fa-arrow-circle-up");
-            document.getElementById("fa-arrow-circle-down").classList.add("fa-arrow-circle-down");
+    VehicleKhataPage.prototype.selectedvehicle = function (vh) {
+        for (var i = 0; i < this.vehicles.length; i++) {
+            this.vehicles[i]['displaycontrol'] = false;
+            this.vehicles[i]['selected'] = false;
         }
-        else {
-            document.getElementById("fa-arrow-circle-down").classList.remove("fa-arrow-circle-down");
-            document.getElementById("fa-arrow-circle-down").classList.add("fa-arrow-circle-up");
-        }
-        this.isShown = !this.isShown;
+        vh['displaycontrol'] = true;
+        vh['selected'] = true;
     };
-    VehicleDetailsPage.prototype.selectThis = function (i) {
-        document.getElementById(i).classList.toggle("selected");
+    VehicleKhataPage.prototype.openAddVehiclePage = function () {
+        this.navCtrl.push('AddVehiclePage', { 'updatevehicle': 'false', 'updateworkpart': 'false' });
     };
-    VehicleDetailsPage.prototype.openDriverDocument = function () {
-        this.navCtrl.push('DriverDocumentPage', { "driver": this.vehicle['driver_details'] });
+    VehicleKhataPage.prototype.openVehicleDetails = function (vh) {
+        this.navCtrl.push('VehicleDetailsPage', { 'vehicle': vh });
     };
-    VehicleDetailsPage.prototype.openVehicleDocument = function () {
-        this.navCtrl.push('VehicleDocumentPage', { "vehicle": this.vehicle });
+    VehicleKhataPage.prototype.updateVehicleDetails = function (vh) {
+        this.navCtrl.push('AddVehiclePage', { 'updateworkpart': 'false', 'updatevehicle': 'true', 'vehicle': vh });
     };
-    VehicleDetailsPage = __decorate([
+    VehicleKhataPage.prototype.updateWorkPart = function (vh) {
+        this.navCtrl.push('AddVehiclePage', { 'updateworkpart': 'true', 'updatevehicle': 'false', 'vehicle': vh });
+    };
+    VehicleKhataPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-vehicle-details',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-details/vehicle-details.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>      \n      <ion-col col-9 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-car" aria-hidden="true"></i>\n          VEHICLE DETAILS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n\n<ion-content padding>\n  <div class="container">\n\n     \n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class=" text-center">VEHICLE DETAILS</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE NUMBER: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n        </ion-col>\n        <ion-col col-1>\n          <div style="margin-top: 5px; width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n    \n        </ion-col>\n        <ion-col col-3>\n          DRIVER\n        </ion-col>\n        <ion-col col-6>\n         <p> TYPE: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>YEAR OF PURCHASE: </p>\n          <span class="text-color-primary">{{vehicle[\'year_purchase\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>DRIVER: </p>\n          <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != null && vehicle[\'driver_details\'] != undefined">\n            {{vehicle[\'driver_details\'][\'name\']}}\n          </span> \n        </ion-col>\n        <ion-col col-6>\n            <button ion-button round class="custom-button" (click)="goToModal()">ALLOT/<br>CHANGE/<br>REMOVE DRIVER</button>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE WEIGHT: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_weight\']+" "+vehicle[\'vehicle_weight_type\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE MODEL: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_model\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>KM READING: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_km_reading_current\']}}</span>\n        </ion-col>\n\n\n        <ion-col col-6 (click)="showMore()" class="text-right show-more-fa" *ngIf="workdetails.length > 0">\n          <i id="fa-arrow-circle-down" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>\n\n        </ion-col>\n\n     \n\n        <ion-col col-12 *ngIf="isShown">\n\n          <div class="scroll-grid" >\n            <div class="scrollmenu">\n             \n              <a href="#home">DATE</a>\n              <a href="#news">WORK/PART</a>\n              <a href="#contact">DETAILS</a>\n              <a href="#about">KM READING</a>\n              <a href="#about">ID</a>\n              <!-- <a href="#support">COST</a> -->\n              <a href="#blog">DETAIL</a>\n      \n          \n              <div [ngClass]="wd[\'selected\'] == false ? \'scrollmenu-list\' : \'scrollmenu-list selected\'" *ngFor="let wd of workdetails"  (click)="selectThis(wd)">\n                <p>{{wd[\'vehicle_update_date\']}}</p>\n                <p>{{wd[\'vehicle_part_work\']}}</p>\n                <p>{{wd[\'vehicle_part_work_details\']}}</p>\n                <p>{{wd[\'vehicle_update_km_reading\']}}</p>\n                <p>{{wd[\'vehicle_user_update_id\']}}</p>\n                <!-- <p>RS 400</p> -->\n                <p>{{wd[\'vehicle_update_details\']}}</p>\n           \n              </div>\n        \n        \n            </div>\n            <div class="show-arrows">\n              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n        \n            </div>\n          </div>\n        </ion-col>\n \n\n        <!-- <ion-col col-12 class="text-center mt-4">\n          <button ion-button round class="all-button"> ALLOT/CHANGE/REMOVE DRIVER</button>\n\n        </ion-col> -->\n\n        <ion-col col-12>\n          <ion-row class="document-button">\n            <ion-col col-6 (click)="navCtrl.push(\'VehicleWorkReportPage\',{\'vehicle\':vehicle})">\n              <div>\n                VEHICLE WORK REPORT\n                <i class="fa fa-download" aria-hidden="true"></i>\n      \n              </div>\n              <!-- <button ion-button round outline small></button> -->\n            </ion-col>\n            <ion-col col-6 (click)="navCtrl.push(\'VehicleBillReportPage\',{\'vehicle\':vehicle})">\n              <div>\n                VEHICLE BILL REPORT\n                <i class="fa fa-download" aria-hidden="true"></i>\n      \n              </div>\n              <!-- <button ion-button round outline small></button> -->\n            </ion-col>\n          </ion-row>\n        </ion-col>\n         \n      </ion-row>\n\n      \n\n      <!-- <ion-row>\n        <ion-col col-6>\n          VEHICLE WORK REPORT\n        </ion-col>\n\n        <ion-col col-6>\n          VEHICLE BILL REPORT\n        </ion-col>\n      </ion-row> -->\n\n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">DOCUMENTS</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category" (click)="openDriverDocument()">\n            <i class="fa fa-user" aria-hidden="true"></i>\n\n            DRIVER\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category" (click)="openVehicleDocument()">\n            <i class="fa fa-truck" aria-hidden="true"></i>\n            VEHICLE\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category">\n            <i class="fa fa-share" aria-hidden="true"></i>\n            SHARE\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">DRIVER HISTORY</h4>\n          <hr>\n        </ion-col>\n\n        <!-- <ion-col col-12>\n          <div class="custom-searchbar-div" style="position: relative;">\n            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>\n            <i class="fa fa-angle-down" aria-hidden="true"></i>\n          </div>\n          \n        </ion-col> -->\n        <!-- <a href="#home">NUMBER</a>\n        <a href="#news">NAME</a>\n        <a href="#contact">JOINING DATE</a>\n        <a href="#about">LEAVING DATE</a>\n        <a href="#support">REASON</a>\n        <a href="#blog">TOTAL KM</a> -->\n\n        <ion-col col-12>\n          <div class="scroll-grid">\n            <div class="scrollmenu">\n             \n              <a href="#home">VEHICLE NUMBER(S)</a>\n              <a href="#home">NAME</a>\n              <a href="#news">JOINING DATE</a>\n              <a href="#contact">LEAVING DATE</a>\n              <a href="#about">REASON/DETAILS</a>\n              <a href="#about">JOINING KM</a>\n              <a href="#about">LEAVING KM</a>\n\n          \n              <div class="scrollmenu-list" id="1" *ngFor="let drv of driverhistory">\n                <p>{{drv[\'vehicle\'][\'vehicle_number\']}}</p>\n                <p>{{drv[\'driver\'][\'name\']}}</p>\n                <p>{{drv[\'driver_start_date\']}}</p>\n                <p>{{drv[\'driver_end_date\']}}</p>\n                <p>{{drv[\'driver_start_details\']}}</p>\n                <p>{{drv[\'driver_start_km\']}} KM</p>\n                <p>{{drv[\'driver_end_km\']}} KM</p>\n              </div>\n        \n            \n            </div>\n            <div class="show-arrows">\n              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n        \n            </div>\n          </div>\n        </ion-col>\n      </ion-row>\n\n      \n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">WORK HISTORY</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL WORK</p>\n            <h6 class="total-work">{{total}}</h6>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL PAID</p>\n            <h6 class="total-paid">{{paid}}</h6>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL DUE</p>\n            <h6 class="total-due">{{unpaid}}</h6>\n          </div>\n        </ion-col>\n      </ion-row>\n\n\n      <!-- <div class="custom-searchbar-div" style="position: relative;">\n        <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>\n        <i class="fa fa-angle-down" aria-hidden="true"></i>\n      </div> -->\n        \n\n      <div class="text-center" style="padding-top: 20px;">\n        <button ion-button round class="exchange-button" (click)="openExchangeModal()">EXCHANGE PARTS</button>\n      </div>\n\n\n      <div class="scroll-grid" >\n        <div class="scrollmenu work-history">\n        \n        <a href="#home">PROBLEM</a>\n        <a href="#home">WORK (PART & ID)</a>\n        <a href="#news">DATE</a>\n        <a href="#contact">BILL NUMBER</a>\n        <a href="#about">PERSON NAME</a>\n        <!-- <a href="#support">REPAIR</a> -->\n        <!-- <a href="#support">PART / DOC / MECHANIC</a> -->\n        <!-- <a href="#support">DOC</a> -->\n        <!-- <a href="#blog">PART</a> -->\n        <!-- <a href="#blog">LOAD ID(NEW)</a> -->\n        <a href="#tools">QUANTITY</a>\n        <a href="#tools">RATE</a>\n        <a href="#tools">TOTAL</a>\n        <!-- <a href="#tools">DETAILS</a> -->\n\n          <div class="scrollmenu-list" *ngFor="let vhc of vehicleworkdetails" id="5" (click)="selectThis(5)">\n            <p>{{vhc[\'problem\']}}</p>\n            <p>{{vhc[\'new_part_name\']}}</p>\n            <p>{{vhc[\'date\']}}</p>\n            <p>{{vhc[\'bill_number\']}}</p>\n            <p>{{vhc[\'person\']}}</p>\n            <p>{{vhc[\'quantity\']}}</p>\n            <p>{{vhc[\'rate\']}}</p>\n            <p>{{vhc[\'total_amount\']}}</p>\n          </div>\n        </div>\n        <div class="show-arrows">\n          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n    \n          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n    \n        </div>\n      </div>\n    \n\n\n\n  \n      <!-- <ion-row class="driver-modal">\n        <ion-col col-12 class="text-center driver-modal-header">\n          DRIVER\n        </ion-col>\n        <ion-col col-12>\n          <ion-list radio-group [(ngModel)]="autoManufacturers">\n\n          <ion-row>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>CHANGE</ion-label>\n                <ion-radio value="change"></ion-radio>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>ALOT</ion-label>\n                <ion-radio value="alot"></ion-radio>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>REMOVE</ion-label>\n                <ion-radio value="remove"></ion-radio>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        \n\n       \n          \n          </ion-list>\n    \n        </ion-col>\n       \n       \n  \n        <ion-col col-12 class="text-center">\n          <button ion-button round class="custom-button">SAVE</button>\n        </ion-col>\n    \n  \n      </ion-row> -->\n\n\n    \n  \n \n\n\n    \n\n  </div>\n</ion-content>  \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-details/vehicle-details.html"*/,
+            selector: 'page-vehicle-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-khata/vehicle-khata.html"*/'\n<!-- Vehicle Khata -->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-car" aria-hidden="true"></i>\n          VEHICLE KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-row class="document-button justify-content-center">\n    <ion-col col-6 (click)="navCtrl.push(\'VehicleWorkReportPage\')">\n      <div>\n        VEHICLE WORK REPORT\n        <i class="fa fa-download" aria-hidden="true"></i>\n\n      </div>\n    </ion-col>\n\n    <ion-col col-6 (click)="navCtrl.push(\'VehicleBillReportPage\')">\n      <div>\n        VEHICLE BILL REPORT\n        <i class="fa fa-download" aria-hidden="true"></i>\n\n      </div>\n    </ion-col>\n\n    \n \n  </ion-row>\n\n  <div class="container vehicle-khata">\n   \n    <ion-row class="vehicle-filter">\n      <ion-col col-4>\n        <div [ngClass]="isselect == \'1\' ? \'vehicle-driver-selected\' : \'vehicle-driver\'" (click)="select(\'1\')">\n          VEHICLE WITH DRIVER\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div [ngClass]="isselect == \'2\' ? \'vehicle-no-driver-selected\' : \'vehicle-no-driver\'"  (click)="select(\'2\')">\n          VEHICLE WITHOUT DRIVER\n        </div>\n      </ion-col>\n      <ion-col col-4>\n        <div [ngClass]="isselect == \'3\' ? \'all-vehicle-selected\' : \'all-vehicle\'" (click)="select(\'3\')">\n          ALL VEHICLE \n        </div>\n      </ion-col>\n    </ion-row>\n\n    <!-- [ngClass]=" vh[\'selected\']==false ? \'vehicle-details\' : \'vehicle-details-selected\'"s -->\n    <div *ngIf="isselect == \'3\'">\n    <ion-grid *ngFor="let vh of vehicles" (click)="selectedvehicle(vh)"  >\n    <ion-row class="vehicle-details" >\n      <ion-col col-12>\n        <h4>{{vh[\'vehicle_number\']}} \n          <span style="float: right ;">\n            <button ion-button clear color="danger" style="position: absolute;right: 13px;bottom: 15px;" (click)="presentConfirmDelete(vh)">\n              <ion-icon name="trash"></ion-icon>\n            </button>\n          </span>\n        </h4>\n\n\n\n        <hr>\n      </ion-col>\n      <ion-row (click)="openVehicleDetails(vh)" style="padding-left: 13px !important;">\n      <ion-col col-6 >\n        <p>DRIVER NAME:</p> \n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> CONTACT NO: </p>\n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'phone_number\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE BODY TYPE: </p>\n        <span >{{vh[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE WEIGHT: </p>\n        <span >{{vh[\'vehicle_weight\']+" "+vh[\'vehicle_weight_type\']}}</span>\n      </ion-col>\n    </ion-row>\n    </ion-row>\n\n    </ion-grid>\n  </div>\n\n  <div *ngIf="isselect == \'2\'">\n    <ion-grid *ngFor="let vh of vehiclenodrivers" (click)="selectedvehicle(vh)"  >\n    <ion-row class="vehicle-details" >\n      <ion-col col-12>\n        <h4>{{vh[\'vehicle_number\']}} \n          <span style="float: right ;">\n            <button ion-button clear color="danger" style="position: absolute;right: 13px;bottom: 15px;" (click)="presentConfirmDelete(vh)">\n              <ion-icon name="trash"></ion-icon>\n            </button>\n          </span>\n        </h4>\n\n\n\n        <hr>\n      </ion-col>\n      <ion-row (click)="openVehicleDetails(vh)" style="padding-left: 13px !important;">\n      <ion-col col-6 >\n        <p>DRIVER NAME:</p> \n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> CONTACT NO: </p>\n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'phone_number\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE BODY TYPE: </p>\n        <span >{{vh[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE WEIGHT: </p>\n        <span >{{vh[\'vehicle_weight\']+" "+vh[\'vehicle_weight_type\']}}</span>\n      </ion-col>\n    </ion-row>\n    </ion-row>\n\n    </ion-grid>\n  </div>\n\n  <div *ngIf="isselect == \'1\'">\n    <ion-grid *ngFor="let vh of vehicledrivers" (click)="selectedvehicle(vh)"  >\n    <ion-row class="vehicle-details" >\n      <ion-col col-12>\n        <h4>{{vh[\'vehicle_number\']}} \n          <span style="float: right ;">\n            <button ion-button clear color="danger" style="position: absolute;right: 13px;bottom: 15px;" (click)="presentConfirmDelete(vh)">\n              <ion-icon name="trash"></ion-icon>\n            </button>\n          </span>\n        </h4>\n\n\n\n        <hr>\n      </ion-col>\n      <ion-row (click)="openVehicleDetails(vh)" style="padding-left: 13px !important;">\n      <ion-col col-6 >\n        <p>DRIVER NAME:</p> \n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> CONTACT NO: </p>\n        <span *ngIf="vh[\'driver_details\'] != undefined && vh[\'driver_details\'] != null">{{vh[\'driver_details\'][\'phone_number\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE BODY TYPE: </p>\n        <span >{{vh[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        <p> VEHICLE WEIGHT: </p>\n        <span >{{vh[\'vehicle_weight\']+" "+vh[\'vehicle_weight_type\']}}</span>\n      </ion-col>\n    </ion-row>\n    </ion-row>\n\n    </ion-grid>\n  </div>\n  \n    <div class="fixed-div text-center mt-4">\n      <button ion-button round class="custom-button" (click)="openAddVehiclePage()">+ ADD NEW VEHICLE</button>\n    </div>\n\n\n  </div>\n\n\n\n</ion-content> \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-khata/vehicle-khata.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], VehicleDetailsPage);
-    return VehicleDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], VehicleKhataPage);
+    return VehicleKhataPage;
 }());
 
-//# sourceMappingURL=vehicle-details.js.map
+//# sourceMappingURL=vehicle-khata.js.map
 
 /***/ })
 

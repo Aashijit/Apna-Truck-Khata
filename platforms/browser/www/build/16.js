@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 898:
+/***/ 902:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportKhataPageModule", function() { return ReportKhataPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsPageModule", function() { return SettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_khata__ = __webpack_require__(971);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(979);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReportKhataPageModule = /** @class */ (function () {
-    function ReportKhataPageModule() {
+var SettingsPageModule = /** @class */ (function () {
+    function SettingsPageModule() {
     }
-    ReportKhataPageModule = __decorate([
+    SettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__report_khata__["a" /* ReportKhataPage */],
+                __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__report_khata__["a" /* ReportKhataPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* SettingsPage */]),
             ],
         })
-    ], ReportKhataPageModule);
-    return ReportKhataPageModule;
+    ], SettingsPageModule);
+    return SettingsPageModule;
 }());
 
-//# sourceMappingURL=report-khata.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 971:
+/***/ 979:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportKhataPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the ReportKhataPage page.
+ * Generated class for the SettingsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var ReportKhataPage = /** @class */ (function () {
-    function ReportKhataPage(navCtrl, navParams) {
+var SettingsPage = /** @class */ (function () {
+    function SettingsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    ReportKhataPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ReportKhataPage');
+    SettingsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SettingsPage');
     };
-    ReportKhataPage = __decorate([
+    SettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-report-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-khata/report-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file-image-o" aria-hidden="true"></i>\n          REPORT KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="report">\n\n  <div class="container">\n    <ion-row>\n      <ion-col col-6 class="text-center" (click)="navCtrl.push(\'ReportAllCompPage\')">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" alt="">\n          <h4>VEHICLE</h4>\n        </div>\n       \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/driver.png" alt="">\n          <h4>DRIVER</h4>\n        </div>\n    \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png//004-shop.png" alt="">\n          <h4>SHOP</h4>\n        </div>\n    \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/007-mechanic.png" alt="">\n          <h4>MECHANIC</h4>\n        </div>\n      \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n          <h4>DOCUMENTS AND INSURANCE</h4>\n        </div>\n       \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/008-report.png" alt="">\n          <h4>COMPLAINT</h4>\n        </div>\n      \n      </ion-col>\n    </ion-row>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-khata/report-khata.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/settings/settings.html"*/'<!--\n  Generated template for the SettingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- Settings -->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-wrench" aria-hidden="true"></i>\n          SETTINGS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container settings-div">\n\n    \n      <ion-row >\n        <ion-col col-2>\n          <img src="https://image.flaticon.com/icons/png/512/733/733585.png" alt="">\n        </ion-col>\n        <ion-col col-7>\n          <h6>WHATSAPP</h6>\n          <p>GET NOTIFIED</p>\n        </ion-col>\n        <ion-col col-3>\n          <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n        \n      </ion-row>\n   \n    \n      <ion-row >\n        <ion-col col-2>\n          <i class="fa fa-bell" aria-hidden="true"></i>\n        </ion-col>\n        <ion-col col-7>\n          <h6>NOTIFICATION</h6>\n          <p>GET NOTIFIED ON THE APP</p>\n        </ion-col>\n        <ion-col col-3>\n          <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n        \n      </ion-row>\n\n      <ion-row >\n        <ion-col col-2>\n          <i class="fa fa-commenting" aria-hidden="true"></i>\n        </ion-col>\n        <ion-col col-7>\n          <h6>SMS ALERTS</h6>\n          <p>GET NOTIFIED VIA SMS</p>\n        </ion-col>\n        <ion-col col-3>\n          <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n        \n      </ion-row>\n    \n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/settings/settings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], ReportKhataPage);
-    return ReportKhataPage;
+    ], SettingsPage);
+    return SettingsPage;
 }());
 
-//# sourceMappingURL=report-khata.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

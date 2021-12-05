@@ -1,16 +1,14 @@
 webpackJsonp([46],{
 
-/***/ 867:
+/***/ 872:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentBillReportPageModule", function() { return DocumentBillReportPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(495);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__document_bill_report__ = __webpack_require__(941);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverDetailsSearchPageModule", function() { return DriverDetailsSearchPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_details_search__ = __webpack_require__(950);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var DocumentBillReportPageModule = /** @class */ (function () {
-    function DocumentBillReportPageModule() {
+var DriverDetailsSearchPageModule = /** @class */ (function () {
+    function DriverDetailsSearchPageModule() {
     }
-    DocumentBillReportPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    DriverDetailsSearchPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__document_bill_report__["a" /* DocumentBillReportPage */],
+                __WEBPACK_IMPORTED_MODULE_2__driver_details_search__["a" /* DriverDetailsSearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__document_bill_report__["a" /* DocumentBillReportPage */]),
-                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_details_search__["a" /* DriverDetailsSearchPage */]),
             ],
         })
-    ], DocumentBillReportPageModule);
-    return DocumentBillReportPageModule;
+    ], DriverDetailsSearchPageModule);
+    return DriverDetailsSearchPageModule;
 }());
 
-//# sourceMappingURL=document-bill-report.module.js.map
+//# sourceMappingURL=driver-details-search.module.js.map
 
 /***/ }),
 
-/***/ 941:
+/***/ 950:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentBillReportPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverDetailsSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,72 +61,182 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DocumentBillReportPage = /** @class */ (function () {
-    function DocumentBillReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
+
+var DriverDetailsSearchPage = /** @class */ (function () {
+    function DriverDetailsSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.rest = rest;
         this.codes = codes;
+        this.message = message;
         this.modalCtrl = modalCtrl;
-        this.viewCont = viewCont;
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
         this.shops = [];
         this.vehicles = [];
-        this.html = '';
-        this.vehicle_id = '';
-        this.from_date = '';
-        this.to_date = '';
-        this.worker_id = '';
-        this.dt = new Date(2000, 1, 1);
-        this.displayCalendar = false;
-        this.dateRange = { from: '', to: '' };
-        this.downloadURL = '';
-        this.apiendpoint = '';
-        this.downloadendpoint = '';
-        this.optionsMulti = {
-            pickMode: 'range',
-            from: this.dt,
-            to: 0,
-            showMonthPicker: true,
-            showToggleButtons: true,
-            color: 'primary'
-        };
+        this.drivers = [];
+        this.reasons = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.getVehicles();
     }
-    DocumentBillReportPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DocumentBillReportPage');
+    DriverDetailsSearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DriverDetailsSearchPage');
     };
-    DocumentBillReportPage.prototype.generateReport = function () {
+    DriverDetailsSearchPage.prototype.getDriverreason = function () {
         var _this = this;
-        this.displayCalendar = false;
-        if (this.worker_id == 0)
-            this.worker_id = null;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
+            "srth_id": userinfo[0]['srth_id']
         };
-        this.rest.post(this.codes.DOCUMENT_BILL_REPORT, data).then(function (resp) {
-            console.log(resp);
-            document.getElementById("report").innerHTML = resp['data'];
-            _this.html = resp['data'];
+        this.rest.post(this.codes.GET_REASON, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.reasons = resp['data'];
+            }
+            _this.getDrivers();
         });
-        this.downloadURL = this.codes.DOCUMENT_BILL_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
     };
-    DocumentBillReportPage.prototype.dismiss = function () {
-        this.viewCont.dismiss();
+    DriverDetailsSearchPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
+        }
+        this.selectedfilters.push(sr);
     };
-    DocumentBillReportPage.prototype.openCalendar = function () {
-        this.displayCalendar = true;
+    DriverDetailsSearchPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
     };
-    DocumentBillReportPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-document-bill-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-bill-report/document-bill-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          DOCUMENT BILL REPORT\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube text-right" (click)="dismiss()">\n        <ion-icon name="close" color="light" style="margin-top: 11px;font-size:2.2rem;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n \n<p style="text-align: center !important;">\n<button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n</p>\n\n\n<div  class="zoom" style="margin-top: 5% !important;" id="report">\n\n</div>\n\n<p style="text-align: center;">\n<a [href]="downloadURL">Download Report</a>\n</p>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-bill-report/document-bill-report.html"*/,
+    DriverDetailsSearchPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+            _this.getDriverreason();
+        });
+    };
+    DriverDetailsSearchPage.prototype.searchGrid = function () {
+        localStorage.setItem("searchdriverdetails", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    DriverDetailsSearchPage.prototype.getDrivers = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.reasons.length; i++) {
+                    var searchobj = {
+                        "type": "reasons",
+                        "name": _this.reasons[i]['reason'],
+                        "id": String(_this.reasons[i]['property_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.drivers.length; i++) {
+                    var searchobj = {
+                        "type": "drivers",
+                        "name": _this.drivers[i]['name'],
+                        "id": String(_this.drivers[i]['worker_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                // for(let i=0;i<this.bills.length;i++){
+                //   var searchobj = {
+                //     "type":"bills",
+                //     "id":String(this.bills[i]['bill_id']),
+                //     "name":this.bills[i]['person_shop_name'],
+                //     "amount":String(this.bills[i]['total_bill'])
+                //   };
+                //   this.search.push(searchobj);
+                // }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    DriverDetailsSearchPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "shop"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getVehicles();
+            }
+        });
+    };
+    DriverDetailsSearchPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    DriverDetailsSearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-driver-details-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-details-search/driver-details-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'drivers\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n\n      <ion-item *ngIf="sr[\'type\'] == \'drivers\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Driver</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reasons</p>\n      </ion-item>\n \n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-details-search/driver-details-search.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
-    ], DocumentBillReportPage);
-    return DocumentBillReportPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], DriverDetailsSearchPage);
+    return DriverDetailsSearchPage;
 }());
 
-//# sourceMappingURL=document-bill-report.js.map
+//# sourceMappingURL=driver-details-search.js.map
 
 /***/ })
 

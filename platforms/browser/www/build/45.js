@@ -1,14 +1,14 @@
 webpackJsonp([45],{
 
-/***/ 869:
+/***/ 873:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentDateReportPageModule", function() { return DocumentDateReportPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverDocumentPageModule", function() { return DriverDocumentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document_date_report__ = __webpack_require__(943);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_document__ = __webpack_require__(951);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DocumentDateReportPageModule = /** @class */ (function () {
-    function DocumentDateReportPageModule() {
+var DriverDocumentPageModule = /** @class */ (function () {
+    function DriverDocumentPageModule() {
     }
-    DocumentDateReportPageModule = __decorate([
+    DriverDocumentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__document_date_report__["a" /* DocumentDateReportPage */],
+                __WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document_date_report__["a" /* DocumentDateReportPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */]),
             ],
         })
-    ], DocumentDateReportPageModule);
-    return DocumentDateReportPageModule;
+    ], DriverDocumentPageModule);
+    return DriverDocumentPageModule;
 }());
 
-//# sourceMappingURL=document-date-report.module.js.map
+//# sourceMappingURL=driver-document.module.js.map
 
 /***/ }),
 
-/***/ 943:
+/***/ 951:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentDateReportPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverDocumentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,72 +61,145 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DocumentDateReportPage = /** @class */ (function () {
-    function DocumentDateReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
+
+var DriverDocumentPage = /** @class */ (function () {
+    function DriverDocumentPage(message, codes, rest, viewController, navCtrl, navParams, modalCtrl) {
+        var _this = this;
+        this.message = message;
+        this.codes = codes;
+        this.rest = rest;
+        this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
-        this.codes = codes;
         this.modalCtrl = modalCtrl;
-        this.viewCont = viewCont;
-        this.shops = [];
-        this.vehicles = [];
-        this.html = '';
-        this.vehicle_id = '';
-        this.from_date = '';
-        this.to_date = '';
-        this.worker_id = '';
-        this.dt = new Date(2000, 1, 1);
-        this.displayCalendar = false;
-        this.dateRange = { from: '', to: '' };
-        this.downloadURL = '';
-        this.apiendpoint = '';
-        this.downloadendpoint = '';
-        this.optionsMulti = {
-            pickMode: 'range',
-            from: this.dt,
-            to: 0,
-            showMonthPicker: true,
-            showToggleButtons: true,
-            color: 'primary'
+        this.isShown = false;
+        this.driver = '';
+        this.documents = [
+            {
+                "document_name": "National Permit",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Insurance",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Pollution Certificate",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Certificate of fitness",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Tax token",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "5 Year Authorization",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Registration Certificate",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Others 1X",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Others 2X",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            }
+        ];
+        this.driver = this.navParams.get("driver");
+        var req = {
+            "type": "driver",
+            "driver_id": this.driver['worker_id']
         };
-    }
-    DocumentDateReportPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DocumentBillReportPage');
-    };
-    DocumentDateReportPage.prototype.generateReport = function () {
-        var _this = this;
-        this.displayCalendar = false;
-        if (this.worker_id == 0)
-            this.worker_id = null;
-        var data = {
-            "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
-        };
-        this.rest.post(this.codes.DOCUMENT_DATE_REPORT, data).then(function (resp) {
-            console.log(resp);
-            document.getElementById("report").innerHTML = resp['data'];
-            _this.html = resp['data'];
+        this.rest.post(this.codes.GET_DOCUMENT_INFO, req).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                if (resp['data'].length > 0)
+                    _this.documents = resp['data'];
+            }
         });
-        this.downloadURL = this.codes.DOCUMENT_DATE_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
+    }
+    DriverDocumentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DriverDocumentPage');
     };
-    DocumentDateReportPage.prototype.dismiss = function () {
-        this.viewCont.dismiss();
+    DriverDocumentPage.prototype.showMore = function () {
+        if (this.isShown) {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+        }
+        else {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        }
+        this.isShown = !this.isShown;
     };
-    DocumentDateReportPage.prototype.openCalendar = function () {
-        this.displayCalendar = true;
+    DriverDocumentPage.prototype.goToModal = function () {
+        var addMoreModal = this.modalCtrl.create('AddMoreModalPage');
+        addMoreModal.present();
     };
-    DocumentDateReportPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-document-date-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-date-report/document-date-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          DOCUMENT DATE REPORT\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-3 class="youtube text-right" (click)="dismiss()">\n        <ion-icon name="close" color="light" style="margin-top: 11px;font-size:2.2rem;"></ion-icon>\n      </ion-col> -->\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n<ion-content padding>\n \n<p style="text-align: center !important;">\n<button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n</p>\n\n\n<div class="zoom" style="margin-top:5%" id="report">\n\n</div>\n\n\n<p style="text-align: center;margin-top:20%">\n<a [href]="downloadURL">Download Report</a>\n</p>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-date-report/document-date-report.html"*/,
+    DriverDocumentPage.prototype.addPermit = function () {
+        var addPermit = this.modalCtrl.create('AddPermitPage');
+        addPermit.present();
+    };
+    DriverDocumentPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    DriverDocumentPage.prototype.save = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var _loop_1 = function (i) {
+            this_1.documents[i]['worker_type'] = 'driver';
+            this_1.documents[i]['srth_id'] = json[0]['srth_id'];
+            this_1.documents[i]['driver_id'] = this_1.driver['worker_id'];
+            this_1.documents[i]['is_active'] = '1';
+            this_1.documents[i]['is_remove'] = '0';
+            this_1.documents[i]['last_maint_id'] = 'srth_app';
+            this_1.documents[i]['opt_counter'] = '0';
+            this_1.rest.post(this_1.codes.UPDATE_DOCUMENT_INFO, this_1.documents[i]).then(function (resp) {
+                _this.message.displayToast(_this.documents[i]['document_name'] + " saved.");
+            });
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.documents.length; i++) {
+            _loop_1(i);
+        }
+        this.navCtrl.pop();
+        // this.message.displayToast("All the documents are saved");
+    };
+    DriverDocumentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-driver-document',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/'<!-- Driver -->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          DRIVER DOCUMENT\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-1></ion-col> -->\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <!-- <ion-row class="driver-modal">\n      <ion-col col-12 class="text-center driver-modal-header">\n        DRIVER DETAIL\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center mb-4">\n        <img width="120px" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="">\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}}</span> <i class="fa fa-phone" aria-hidden="true" style="color: #0752af; font-size: 12px"></i>\n\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">DRIVER</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">KOLKATA</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">3/05/2021</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">XUX-423</span>\n      </ion-col>\n      \n      <ion-col col-6>\n        SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        TOTAL KM: <br>  <span  class="text-color-primary">XXXX</span>\n      </ion-col>\n      <ion-col col-6>\n        REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n      </ion-col>\n\n      <ion-col col-6>\n        PREVIOUS VEHICLE NUMBER: <br>  <span class="text-color-primary">XXXX</span>\n      </ion-col>\n\n      <ion-col col-6>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="showMore()" class="text-right show-more-fa">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>\n\n      </ion-col>\n\n\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">PAN CARD - 10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row> -->\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 class="profile-picture text-center">\n        <img width="80px" src="../../assets/saarthi-icon/png/driver.png" alt="">\n        <p style="margin-top: 10px">ADD PHOTO</p>\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{driver[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">{{driver[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">XXXXXX</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">XXXXXXX</span>\n      </ion-col>\n\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n        </ion-col>\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">AADHAR - {{driver[\'aadhar_card_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">{{driver[\'license_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{driver[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row>\n \n\n    <div class="segment row mt-4">\n      <!-- <div class="content-heading"> -->\n        <!-- <div class="text-center text-color-primary " >\n          <h2></h2>\n         \n        </div> -->\n        <ion-col col-12>\n          <div class="text-center text-color-primary " style="padding: 10px;">\n            <h4>DOCUMENTS &nbsp; <i class="fa fa-file-text-o" aria-hidden="true"></i> </h4>\n            <hr>\n          </div>\n\n          <ion-item>\n            <ion-label>REMINDER TIME</ion-label>\n            <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" value="1990-02-19T07:43Z"> </ion-datetime>           \n\n          </ion-item>\n \n        </ion-col>\n   \n\n      <!-- </div> -->\n\n      <hr>\n\n      <ion-row class="driver-modal  mt-4" *ngFor="let dc of documents">\n        <ion-col col-12 class="driver-modal-header">\n          <!-- (click)="goToModal()" -->\n          <span class="permit" >{{dc[\'document_name\']}}</span>\n          <!-- (click)="addPermit()" -->\n          <!-- <span class="add-more-modal"  >ADD MORE <i class="fa fa-plus-circle" aria-hidden="true"></i>\n          </span> -->\n        </ion-col>\n        <ion-col col-4 class="picture-upload text-center">\n          <i class="fa fa-camera" aria-hidden="true"></i><br>\n          <small>ADD PHOTO</small>\n        </ion-col>\n        <ion-col col-8 class="text-center">\n          <ion-item>\n            <ion-label floating>EXPIRY DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_expiry_date\']"></ion-datetime>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>REMINDER DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_reminder_date\']"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col col-12 class="text-right">\n            <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n      </ion-row>\n\n \n\n    </div>\n   \n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </div>\n\n  </div>\n\n\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
-    ], DocumentDateReportPage);
-    return DocumentDateReportPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], DriverDocumentPage);
+    return DriverDocumentPage;
 }());
 
-//# sourceMappingURL=document-date-report.js.map
+//# sourceMappingURL=driver-document.js.map
 
 /***/ })
 

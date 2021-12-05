@@ -1,16 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 913:
+/***/ 917:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleWorkReportPageModule", function() { return VehicleWorkReportPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(495);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__ = __webpack_require__(986);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewTransactionPageModule", function() { return ViewTransactionPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_transaction__ = __webpack_require__(994);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,37 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var VehicleWorkReportPageModule = /** @class */ (function () {
-    function VehicleWorkReportPageModule() {
+var ViewTransactionPageModule = /** @class */ (function () {
+    function ViewTransactionPageModule() {
     }
-    VehicleWorkReportPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    ViewTransactionPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__["a" /* VehicleWorkReportPage */],
+                __WEBPACK_IMPORTED_MODULE_2__view_transaction__["a" /* ViewTransactionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__["a" /* VehicleWorkReportPage */]),
-                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__view_transaction__["a" /* ViewTransactionPage */]),
             ],
         })
-    ], VehicleWorkReportPageModule);
-    return VehicleWorkReportPageModule;
+    ], ViewTransactionPageModule);
+    return ViewTransactionPageModule;
 }());
 
-//# sourceMappingURL=vehicle-work-report.module.js.map
+//# sourceMappingURL=view-transaction.module.js.map
 
 /***/ }),
 
-/***/ 986:
+/***/ 994:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleWorkReportPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewTransactionPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,112 +56,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-var VehicleWorkReportPage = /** @class */ (function () {
-    function VehicleWorkReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
+var ViewTransactionPage = /** @class */ (function () {
+    function ViewTransactionPage(navCtrl, navParams, view) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
-        this.codes = codes;
-        this.modalCtrl = modalCtrl;
-        this.viewCont = viewCont;
-        this.problem = '';
-        this.problems = [];
-        this.shops = [];
-        this.vehicles = [];
-        this.html = '';
-        this.vehicle_id = '';
-        this.from_date = '';
-        this.to_date = '';
-        this.worker_id = '';
-        this.dt = new Date(2000, 1, 1);
-        this.displayCalendar = false;
-        this.dateRange = { from: '', to: '' };
-        this.downloadURL = '';
-        this.apiendpoint = '';
-        this.downloadendpoint = '';
-        this.optionsMulti = {
-            pickMode: 'range',
-            from: this.dt,
-            to: 0,
-            showMonthPicker: true,
-            showToggleButtons: true,
-            color: 'primary'
-        };
-        if (this.navParams.get("vehicle") != null || this.navParams.get("vehicle") != undefined) {
-            this.vehicle_id = this.navParams.get("vehicle")['vehicle_id'];
-        }
+        this.view = view;
+        this.header = '';
+        this.comp = '';
+        this.comp = this.navParams.get("complaint");
     }
-    VehicleWorkReportPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VehicleWorkReportPage');
+    ViewTransactionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ViewTransactionPage');
     };
-    VehicleWorkReportPage.prototype.ionViewWillEnter = function () {
-        this.getrepair();
-        this.getVehicles();
+    ViewTransactionPage.prototype.close = function () {
+        this.view.dismiss();
     };
-    VehicleWorkReportPage.prototype.openCalendar = function () {
-        this.displayCalendar = true;
-    };
-    VehicleWorkReportPage.prototype.getrepair = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_PROBLEM, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.problems = resp['data'];
-                for (var i = 0; i < _this.problems.length; i++) {
-                    _this.problems[i]['selected'] = false;
-                }
-            }
-        });
-    };
-    VehicleWorkReportPage.prototype.getVehicles = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
-            }
-        });
-    };
-    VehicleWorkReportPage.prototype.generateReport = function () {
-        var _this = this;
-        this.displayCalendar = false;
-        if (this.vehicle_id == 0)
-            this.vehicle_id = null;
-        var data = {
-            "vehicle_id": this.vehicle_id,
-            "problem": this.problem,
-            "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
-        };
-        this.rest.post(this.codes.VEHICLE_WORK_REPORT, data).then(function (resp) {
-            console.log(resp);
-            document.getElementById("report").innerHTML = resp['data'];
-            _this.html = resp['data'];
-        });
-        this.downloadURL = this.codes.VEHICLE_WORK_REPORT_DOWNLOAD + "?vehicle_id=" + this.vehicle_id + "&problem=" + this.problem + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
-    };
-    VehicleWorkReportPage.prototype.dismiss = function () {
-        this.viewCont.dismiss();
-    };
-    VehicleWorkReportPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-vehicle-work-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-work-report/vehicle-work-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          VEHICLE WORK REPORT\n        </ion-title>\n\n      </ion-col>\n      \n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Vehicles\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="vehicle_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{vehicle[\'vehicle_id\']}}" *ngFor="let vehicle of vehicles">\n            {{vehicle[\'vehicle_number\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Problem\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="problem">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{problem[\'problem_name\']}}" *ngFor="let problem of problems">\n            {{problem[\'problem_name\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-11 >\n      <ion-item style="margin-top: 24px;">\n        <ion-label>\n          Date Range : <span *ngIf="this.dateRange[\'from\'] != undefined"> {{this.dateRange[\'from\'] + " - " + this.dateRange[\'to\']}} </span>\n        </ion-label>\n      </ion-item>\n    </ion-col>\n    <ion-col col-1>\n      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>\n    </ion-col>\n  </ion-row>\n  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"\n              [options]="optionsMulti"\n              type="string"\n              [format]="\'YYYY-MM-DD\'">\n  </ion-calendar>\n\n  <p style="text-align: center !important;">\n    <button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n  </p>\n  \n  \n  <div id="report">\n  \n  </div>\n  \n  <p style="text-align: center;">\n    <a [href]="downloadURL">Download Report</a>\n  </p>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-work-report/vehicle-work-report.html"*/,
+    ViewTransactionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-view-transaction',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/view-transaction/view-transaction.html"*/'<ion-content padding style="background: rgba(0,0,0,0.6);">\n\n  <p style="text-align: right !important;">\n    <button ion-button clear (click)="close()" style="font-size: 2rem; color: red;">\n      <ion-icon name="close"></ion-icon>\n    </button>\n  </p>\n\n\n  <ion-card>\n    <ion-card-content>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Complaint Id\n          </ion-col>\n          <ion-col col-6>\n            {{comp[\'complaints_id\']}}\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Date of Complaint\n          </ion-col>\n          <ion-col col-6>\n            {{comp[\'date_of_complaint\']}}\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Date of Reminder\n          </ion-col>\n          <ion-col col-6>\n            {{comp[\'date_of_reminder\']}}\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Details\n          </ion-col>\n          <ion-col col-6>\n            {{comp[\'details\']}}\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            KM Reading\n          </ion-col>\n          <ion-col col-6>\n            {{comp[\'km_reading\']}}\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Status\n          </ion-col>\n          <ion-col col-6>\n            <ion-badge *ngIf="comp[\'status\'] == \'\'">Unsolved</ion-badge>\n            <ion-badge *ngIf="comp[\'status\'] != \'\'">{{comp[\'status\']}}</ion-badge>\n          </ion-col>\n        </ion-row>\n\n        <ion-row>\n          <ion-col col-6 class="hd">\n            Problems\n          </ion-col>\n          <ion-col col-6>\n            <!-- <ion-badge>{{comp[\'status\']}}</ion-badge> -->\n          </ion-col>\n        </ion-row>\n\n        <ion-row *ngFor="let prb of comp[\'problems\']">\n          <ion-col col-6 class="hd">\n            Problem Name\n          </ion-col>\n          <ion-col col-6>\n            <ion-badge color="secondary">{{prb[\'details\'][\'problem_name\']}}</ion-badge>\n          </ion-col>\n          <ion-col col-6 class="hd">\n            Part Name\n          </ion-col>\n          <ion-col col-6>\n            <ion-badge color="dark">{{prb[\'details\'][\'vehicle_part_name\']}}</ion-badge>\n          </ion-col>\n          <ion-col col-6 class="hd">\n            Part Id\n          </ion-col>\n          <ion-col col-6>\n            <ion-badge color="light">{{prb[\'details\'][\'vehicle_part_id\']}}</ion-badge>\n          </ion-col>\n        </ion-row>\n        \n      </ion-grid>\n\n\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/view-transaction/view-transaction.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
-    ], VehicleWorkReportPage);
-    return VehicleWorkReportPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"]])
+    ], ViewTransactionPage);
+    return ViewTransactionPage;
 }());
 
-//# sourceMappingURL=vehicle-work-report.js.map
+//# sourceMappingURL=view-transaction.js.map
 
 /***/ })
 

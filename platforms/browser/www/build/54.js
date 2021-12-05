@@ -1,14 +1,14 @@
 webpackJsonp([54],{
 
-/***/ 860:
+/***/ 864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraModalPageModule", function() { return CameraModalPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_modal__ = __webpack_require__(916);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact__ = __webpack_require__(943);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CameraModalPageModule = /** @class */ (function () {
-    function CameraModalPageModule() {
+var ContactPageModule = /** @class */ (function () {
+    function ContactPageModule() {
     }
-    CameraModalPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    ContactPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */],
+                __WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */]),
             ],
         })
-    ], CameraModalPageModule);
-    return CameraModalPageModule;
+    ], ContactPageModule);
+    return ContactPageModule;
 }());
 
-//# sourceMappingURL=camera-modal.module.js.map
+//# sourceMappingURL=contact.module.js.map
 
 /***/ }),
 
-/***/ 916:
+/***/ 943:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraModalPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,34 +56,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the CameraModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CameraModalPage = /** @class */ (function () {
-    function CameraModalPage(viewController, navCtrl, navParams) {
-        this.viewController = viewController;
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
     }
-    CameraModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CameraModalPage');
-    };
-    CameraModalPage.prototype.exitModal = function () {
-        this.viewController.dismiss();
-    };
-    CameraModalPage = __decorate([
+    ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-camera-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  \n\n  <ion-card class="modal-card-camera">\n    <ion-card-header class="custom-card-header">\n      PHOTOS\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <ion-row>\n        <ion-col col-12>\n          <span class="add-more-modal" (click)="goToModal()" ><i style="color: #0752af;font-size: 30px" class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->\n          </span>    \n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n      </ion-row>\n      <ion-col col-12 >\n        <div class="text-center">\n          <button ion-button round class="exit-button" (click)="exitModal()">\n            EXIT\n          </button>\n        </div>\n      </ion-col>\n      \n\n\n     </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/,
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], CameraModalPage);
-    return CameraModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
+    ], ContactPage);
+    return ContactPage;
 }());
 
-//# sourceMappingURL=camera-modal.js.map
+//# sourceMappingURL=contact.js.map
 
 /***/ })
 

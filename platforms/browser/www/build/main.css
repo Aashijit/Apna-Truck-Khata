@@ -29496,6 +29496,15 @@ page-add-document-bill .document-button div {
   border-radius: 10px;
 }
 
+page-add-document-bill .card-md {
+  margin: 0px !important;
+  margin-top: -8px !important;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1000;
+  width: calc(100% - 64px);
+}
+
 page-add-document-bill .custom-searchbar-div {
   position: relative;
   margin: 20px 0 10px;
@@ -30730,7 +30739,6 @@ page-complaints-khata .custom-button-u {
   width: 80px !important;
   margin-top: -16px !important;
   height: 21px !important;
-  margin-left: 16px !important;
   background: #a80852 !important;
   font-size: 9px !important;
 }
@@ -30756,6 +30764,14 @@ page-complaints-khata .all-button {
 
 page-complaints-khata .problem-button {
   color: red;
+}
+
+page-complaints-khata .prob {
+  color: red;
+}
+
+page-complaints-khata .sol {
+  color: green;
 }
 
 page-complaints-khata .ok-button {
@@ -30916,6 +30932,27 @@ page-complaints-update .custom-searchbar .searchbar-input {
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+page-complaints-update .card-md {
+  margin: 0px !important;
+  margin-top: -8px !important;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1000;
+  width: calc(100% - 64px);
+}
+
+page-complaints-update .checkbox-md {
+  margin-right: 8px !important;
+}
+
+page-complaints-update .prob {
+  color: red;
+}
+
+page-complaints-update .sol {
+  color: green;
 }
 
 page-complaints-update .item {
@@ -31194,7 +31231,20 @@ page-document .driver .profile-details .bill-details-description .fa {
 }
 
 page-document .driver .label-md {
-  font-size: 14px !important;
+  font-size: 10px !important;
+}
+
+page-document .driver .custom-button-u {
+  width: 80px !important;
+  margin-top: -16px !important;
+  height: 21px !important;
+  background: #a80852 !important;
+  font-size: 9px !important;
+}
+
+page-document .driver .ion-icon-w {
+  margin-top: 6px;
+  font-size: 12px;
 }
 
 page-document .driver .remove-driver {
@@ -31496,6 +31546,30 @@ page-document-and-insurance .custom-searchbar .searchbar-input {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
+page-document-and-insurance .ok-button-selected,
+page-document-and-insurance .problem-button-selected,
+page-document-and-insurance .all-button-selected {
+  width: 100px;
+  background: #fff;
+  border: 0.5px solid #0752af;
+  font-weight: 1000 !important;
+}
+
+page-document-and-insurance .problem-button-selected {
+  color: white;
+  background: red !important;
+}
+
+page-document-and-insurance .ok-button-selected {
+  color: white;
+  background: green !important;
+}
+
+page-document-and-insurance .all-button-selected {
+  color: white;
+  background: #0752af !important;
+}
+
 page-document-renewal .document-button div {
   background: #fff;
   padding: 10px;
@@ -31679,6 +31753,23 @@ page-driver .driver .profile-details .bill-details-description .fa {
   right: 30px;
   font-size: 20px;
   font-weight: 600;
+}
+
+page-driver .driver .label-md {
+  font-size: 10px !important;
+}
+
+page-driver .driver .custom-button-u {
+  width: 80px !important;
+  margin-top: -16px !important;
+  height: 21px !important;
+  background: #a80852 !important;
+  font-size: 9px !important;
+}
+
+page-driver .driver .ion-icon-w {
+  margin-top: 6px;
+  font-size: 12px;
 }
 
 page-driver .driver .driver-detail {
@@ -32934,7 +33025,20 @@ page-insurance .driver .profile-details .bill-details-description .fa {
 }
 
 page-insurance .driver .label-md {
-  font-size: 14px !important;
+  font-size: 10px !important;
+}
+
+page-insurance .driver .custom-button-u {
+  width: 80px !important;
+  margin-top: -16px !important;
+  height: 21px !important;
+  background: #a80852 !important;
+  font-size: 9px !important;
+}
+
+page-insurance .driver .ion-icon-w {
+  margin-top: 6px;
+  font-size: 12px;
 }
 
 page-insurance .driver .remove-driver {
@@ -33624,7 +33728,20 @@ page-mechanic .rejoin-driver-header {
 }
 
 page-mechanic .label-md {
-  font-size: 14px !important;
+  font-size: 10px !important;
+}
+
+page-mechanic .custom-button-u {
+  width: 80px !important;
+  margin-top: -16px !important;
+  height: 21px !important;
+  background: #a80852 !important;
+  font-size: 9px !important;
+}
+
+page-mechanic .ion-icon-w {
+  margin-top: 6px;
+  font-size: 12px;
 }
 
 page-mechanic .chip-md {
@@ -34284,6 +34401,23 @@ page-shop .driver .custom-searchbar {
 page-shop .driver .custom-searchbar .searchbar-input {
   color: #468dcc;
   border-radius: 20px;
+}
+
+page-shop .label-md {
+  font-size: 10px !important;
+}
+
+page-shop .custom-button-u {
+  width: 80px !important;
+  margin-top: -16px !important;
+  height: 21px !important;
+  background: #a80852 !important;
+  font-size: 9px !important;
+}
+
+page-shop .ion-icon-w {
+  margin-top: 6px;
+  font-size: 12px;
 }
 
 page-shop .remove-driver-modal,
@@ -35281,11 +35415,17 @@ page-vehicle-khata .document-button div {
   border-radius: 10px;
   color: #f3f3f3;
   font-weight: 1000;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 page-vehicle-khata .content-heading h2 {
   font-size: 2rem !important;
+}
+
+page-vehicle-khata .fixed-div {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
 }
 
 page-vehicle-khata .vehicle-khata h4 {
@@ -35418,4 +35558,22 @@ page-vehicle-khata .text-color-primary {
 
 page-vehicle-work-report .item {
   background: none !important;
+}
+
+page-view-payment .card-md {
+  border-radius: 7px !important;
+}
+
+page-view-payment .hd {
+  font-weight: 800 !important;
+  color: #00266d !important;
+}
+
+page-view-transaction .card-md {
+  border-radius: 7px !important;
+}
+
+page-view-transaction .hd {
+  font-weight: 800 !important;
+  color: #00266d !important;
 }

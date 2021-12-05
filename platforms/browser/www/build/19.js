@@ -1,14 +1,14 @@
 webpackJsonp([19],{
 
-/***/ 893:
+/***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RemoveDriverPageModule", function() { return RemoveDriverPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportKhataPageModule", function() { return ReportKhataPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__remove_driver__ = __webpack_require__(966);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_khata__ = __webpack_require__(975);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RemoveDriverPageModule = /** @class */ (function () {
-    function RemoveDriverPageModule() {
+var ReportKhataPageModule = /** @class */ (function () {
+    function ReportKhataPageModule() {
     }
-    RemoveDriverPageModule = __decorate([
+    ReportKhataPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__remove_driver__["a" /* RemoveDriverPage */],
+                __WEBPACK_IMPORTED_MODULE_2__report_khata__["a" /* ReportKhataPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__remove_driver__["a" /* RemoveDriverPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__report_khata__["a" /* ReportKhataPage */]),
             ],
         })
-    ], RemoveDriverPageModule);
-    return RemoveDriverPageModule;
+    ], ReportKhataPageModule);
+    return ReportKhataPageModule;
 }());
 
-//# sourceMappingURL=remove-driver.module.js.map
+//# sourceMappingURL=report-khata.module.js.map
 
 /***/ }),
 
-/***/ 966:
+/***/ 975:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RemoveDriverPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportKhataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,72 +56,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-var RemoveDriverPage = /** @class */ (function () {
-    function RemoveDriverPage(viewController, navCtrl, navParams, codes, message, rest, modalCtrl) {
-        this.viewController = viewController;
+/**
+ * Generated class for the ReportKhataPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ReportKhataPage = /** @class */ (function () {
+    function ReportKhataPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.codes = codes;
-        this.message = message;
-        this.rest = rest;
-        this.modalCtrl = modalCtrl;
-        this.vehicle = '';
-        this.driver_end_date = '';
-        this.driver_end_details = '';
-        this.driver_end_km = '';
-        this.vehicle_id = '';
-        this.driver_id = '';
-        this.driver_start_date = '';
-        this.driver_start_details = '';
-        this.driver_start_km = '';
-        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
     }
-    RemoveDriverPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad RemoveDriverPage');
+    ReportKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ReportKhataPage');
     };
-    RemoveDriverPage.prototype.exitModal = function () {
-        this.viewController.dismiss();
-    };
-    RemoveDriverPage.prototype.openCalendarPopup = function () {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.driver_end_date = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    RemoveDriverPage.prototype.save = function () {
-        var _this = this;
-        var data = {
-            "type": "remove",
-            "vehicle_id": this.vehicle['vehicle_id'],
-            "driver_id": this.driver_id,
-            "driver_end_date": this.driver_end_date,
-            "driver_end_details": this.driver_end_details,
-            "driver_end_km": this.driver_end_km
-        };
-        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.message.displayToast('Congratulations! You have removed the driver successfully!');
-                _this.navCtrl.pop();
-            }
-        });
-    };
-    RemoveDriverPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-remove-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/remove-driver/remove-driver.html"*/'<!--\n  Generated template for the RemoveDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n      \n      <ion-col col-12 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-user-circle" aria-hidden="true"></i>\n          REMOVE DRIVER\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col> -->\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n<ion-content padding>\n\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n       \n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != undefined && vehicle[\'driver_details\'] != null">{{vehicle[\'driver_details\'][\'name\']}}</span>\n      </ion-col>\n  \n      <ion-col col-12>\n\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_end_date" (click)="openCalendarPopup()"/>\n          <label>DRIVER REMOVE DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n        </div>\n\n      </ion-col>\n  \n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_end_details"  placeholder=" " />\n      <label>REASON/DETAILS</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n  \n    </div>\n  </ion-col>\n  \n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_end_km"  placeholder=" " />\n      <label>KM</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n  \n    </div>\n  </ion-col>\n  \n  \n      \n\n    \n  \n  </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n  \n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n  \n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/remove-driver/remove-driver.html"*/,
+    ReportKhataPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-report-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-khata/report-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file-image-o" aria-hidden="true"></i>\n          REPORT KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="report">\n\n  <div class="container">\n    <ion-row>\n      <ion-col col-6 class="text-center" (click)="navCtrl.push(\'ReportAllCompPage\')">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" alt="">\n          <h4>VEHICLE</h4>\n        </div>\n       \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/driver.png" alt="">\n          <h4>DRIVER</h4>\n        </div>\n    \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png//004-shop.png" alt="">\n          <h4>SHOP</h4>\n        </div>\n    \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/007-mechanic.png" alt="">\n          <h4>MECHANIC</h4>\n        </div>\n      \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n          <h4>DOCUMENTS AND INSURANCE</h4>\n        </div>\n       \n      </ion-col>\n      <ion-col col-6 class="text-center">\n        <div class="report-div">\n          <img src="../../assets/saarthi-icon/png/008-report.png" alt="">\n          <h4>COMPLAINT</h4>\n        </div>\n      \n      </ion-col>\n    </ion-row>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-khata/report-khata.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
-    ], RemoveDriverPage);
-    return RemoveDriverPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], ReportKhataPage);
+    return ReportKhataPage;
 }());
 
-//# sourceMappingURL=remove-driver.js.map
+//# sourceMappingURL=report-khata.js.map
 
 /***/ })
 

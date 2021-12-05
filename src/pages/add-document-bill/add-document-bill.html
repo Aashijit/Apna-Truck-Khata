@@ -21,12 +21,6 @@
 
 <ion-content padding>
   <div class="container"> 
-
-    <!-- <div class="custom-searchbar-div" style="position: relative;">
-      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL, NUMBER, VEHICLE NUMBER, DOCUMENT"></ion-searchbar>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-    </div> -->
-
     <div class="text-center mt-4">
       
 
@@ -45,7 +39,27 @@
       </ion-col>
     </ion-row> -->
 
-   
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH PERSON NAME, BILL NUMBER"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>
+    </div>
+
+    <ion-card *ngIf="displayfilter">
+      <ion-card-content>
+        <ion-list >
+          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">
+           <div *ngIf="sr['type']=='shopname'">
+            <p style="color: #000;">{{sr['name']}}</p>
+             <p>Person</p>
+            </div>
+           <div *ngIf="sr['type']=='bills'">
+              <p style="color: #000;">{{sr['id']}} ~ {{sr['amount']}}</p>
+              <p>Person : {{sr['name']}}</p>
+           </div>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
 
  
 
@@ -59,7 +73,7 @@
         <!-- <a href="#support">BILL</a> -->
         <a href="#support">DETAIL</a>
     
-        <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bill of bills" (click)="selectThis(bill)">
+        <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bill of filterbills" (click)="selectThis(bill)">
           <p>{{bill['bill_id']}}</p>
           <p>{{bill['person_shop_name']}}</p>
           <p>

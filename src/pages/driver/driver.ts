@@ -29,6 +29,7 @@ export class DriverPage {
   selectedpayment : any = '';
 
   selectedfilters : any = [];
+  img : any = null;
 
   constructor( private viewController : ViewController, public navCtrl: NavController, public navParams: NavParams, public modalCtrl : ModalController, 
     private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, 
@@ -207,6 +208,36 @@ export class DriverPage {
 
     bill['selected'] = 'true';
 
+  }
+
+  addProfilePic() {
+    var data = {
+      "person_shop_name":this.driver['name'],
+      "phone_number":this.driver['phone_number'],
+      "worker_type":'driver'
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"driver",
+      "worker_id":this.driver['worker_id'],
+      "document_type":"profile",
+      "type":"profile",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
+
+    cameraModalPage.onDidDismiss(resp => {
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
+    });
+    
+    cameraModalPage.present();
   }
 
   viewBill(){

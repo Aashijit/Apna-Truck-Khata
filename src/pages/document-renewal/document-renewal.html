@@ -2,18 +2,18 @@
   <ion-navbar>
     <ion-row>
       <!-- <ion-col col-2 class="custom-back-button"> -->
-        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
+      <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
       <!-- </ion-col> -->
-    
+
       <ion-col col-10 class="person-name text-left">
-        <ion-title>        
+        <ion-title>
           <ion-icon name="ios-copy"></ion-icon>
           {{document['document_name']}} - RENEWAL
         </ion-title>
 
       </ion-col>
       <ion-col col-2 class="youtube" style="margin-left: -20px;">
-        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">
       </ion-col>
     </ion-row>
   </ion-navbar>
@@ -22,35 +22,30 @@
 <ion-content padding>
   <div class="container white-section">
 
-    <!-- <div class="custom-searchbar-div" style="position: relative;">
-      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER"></ion-searchbar>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-    </div> -->
-
-    <div class="scroll-grid" >
+    <div class="scroll-grid">
       <div class="scrollmenu">
-       
-      <a href="#about">BILL NUMBER</a>
-      <a href="#home">PERSON</a>
-      <a href="#news">VEHICLE NUMBER</a>
-      <a href="#contact">EXPIRY DATE</a>
-      <a href="#support">COST</a>
+        <a href="#about">BILL NUMBER</a>
+        <a href="#home">PERSON</a>
+        <a href="#news">VEHICLE NUMBER</a>
+        <a href="#contact">EXPIRY DATE</a>
+        <a href="#support">COST</a>
 
-      <div class="scrollmenu-list" id="1" *ngFor="let bill of bills" (click)="selectThis(1)">
-        <p>{{bill['bill_id']}}</p>
-        <p>{{bill['person_shop_name']}}</p>
-        <p>{{vehicle_string}}</p>
-        <p>{{bill['expiry_date']}}</p>
-        <p>₹ {{bill['total_bill']}}</p>
-   
-      </div>
-  
+        <div *ngFor="let bill of bills" (click)="selectThis(bill)">
+          <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list' : 'scrollmenu-list selected'">
+            <p>{{bill['bill_id']}}</p>
+            <p>{{bill['person_shop_name']}}</p>
+            <p>{{vehicle_string}}</p>
+            <p>{{bill['expiry_date']}}</p>
+            <p>₹ {{bill['total_bill']}}</p>
+          </div>
+        </div>
+
       </div>
       <div class="show-arrows">
         <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-  
+
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-  
+
       </div>
     </div>
 
@@ -59,145 +54,76 @@
 
     <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
 
-    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">Total ₹ {{total_bill}}</ion-badge>
+    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">
+      Total ₹ {{total_bill}}</ion-badge>
 
 
-    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;" >
+    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">
       <ion-label floating>SELECT PERSON</ion-label>
 
-      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="worker_id"  (ionChange)="change($event)">
+      <ion-select interface="action-sheet"
+        style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"
+        [(ngModel)]="worker_id" (ionChange)="change($event)">
         <ion-option value="{{per['worker_id']}}" *ngFor="let per of persons">{{per['name']}}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-row class="selected-details" *ngIf="isSelectedBill">
       <ion-col col-4 class="text-center" style="color: white;">
-        <img  src="../../assets/saarthi-icon/png/002-folder.png" alt="">
+        <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">
       </ion-col>
-      <ion-col col-4 class="text-center"  style="color: white;">
-        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}} <br>{{document['document_name']}}</h6>
+      <ion-col col-4 class="text-center" style="color: white;">
+        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}}
+          <br>{{document['document_name']}}</h6>
       </ion-col>
-      <ion-col col-4 class="text-center"> 
+      <ion-col col-4 class="text-center">
 
         <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>
       </ion-col>
     </ion-row>
-  
 
-
-    <!-- <div class="text-center" style="box-shadow: 0px 0px 20px rgba(0,0,0,0.2)">
-      BILL NUMBER
-    </div> -->
-    
-    <!-- <p *ngFor="let det of details">
-    <ion-item class="label-select" style="margin-top: 0px !important;">
-      <ion-label floating>SELECT VEHICLE</ion-label>
-      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="det['vehicle_id']">
-        <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">{{vh['vehicle_number']}}</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-row class="cost-camera-expiry" style="margin: 0px -6px;">
-
-      <ion-col col-5>
-        <div class="label-float" >
-          <input type="tel" [(ngModel)]="det['bill_amount']" (blur)="changeCost(det)" placeholder=" " />
-          <label>COST</label>
-          <i class="fa fa-money" aria-hidden="true"></i>
-    
-        </div>
-      </ion-col>
-    
-      <ion-col col-2 *ngIf="det['img'] == null">
-        <div (click)="openCameraPopup(det)" class="detail-picture">
-          <i class="fa fa-camera" aria-hidden="true"></i>
-        </div>  
-      </ion-col>
-      <ion-col col-2 *ngIf="det['img'] != null">
-        <img [src]="det['img']['image_content']" style="opacity: 0.3 !important;"/>
-        <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>       
-      </ion-col>
-      <ion-col col-5>
-        <div class="label-float" >
-          <input type="text"  [(ngModel)]="det['expiry_date']" (click)="openCalendarPopup2(det)" placeholder=" " />
-          <label>EXPIRY</label>
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-    
-        </div>
-      </ion-col>
-    </ion-row>
-    </p> -->
-   
-
-    <!-- <div class="text-center">
-      <button ion-button round class="add-new-button" (click)="addNew()">ADD NEW</button>
-    </div>  -->
 
     <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">
-      <button ion-button [disabled]="details.length > 0" round class="custom-button" style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;" (click)="addDocumentBills('save')">ADD DOCUMENT BILLS</button>
+      <button ion-button [disabled]="details.length > 0" round class="custom-button"
+        style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;"
+        (click)="addDocumentBills('save')">ADD DOCUMENT BILLS</button>
 
-      <span *ngIf="details.length > 0" style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">
-        <ion-icon name="thumbs-up" color="success"></ion-icon> 
-        &nbsp; 
+      <span *ngIf="details.length > 0"
+        style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">
+        <ion-icon name="thumbs-up" color="success"></ion-icon>
+        &nbsp;
         Vehciles Added
       </span>
 
       <span style="float: right !important;float: right !important;position: absolute;right: 22px;">
-        <button ion-button clear color="danger" (click)="addDocumentBills('edit')" [disabled]="details.length == 0" style="margin-top: 6px;">
+        <button ion-button clear color="danger" (click)="addDocumentBills('edit')" [disabled]="details.length == 0"
+          style="margin-top: 6px;">
           Edit &nbsp;
           <ion-icon name="create"></ion-icon>
         </button>
       </span>
     </div>
 
-
-    <div class="label-float" >
-      <input type="tel" [(ngModel)]="total_bill"  placeholder=" " />
+    <div class="label-float">
+      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />
       <label>TOTAL</label>
-
     </div>
 
-    <div class="label-float" >
-      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>
+    <div class="label-float">
+      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()" />
       <label>DATE OF BILL</label>
       <i class="fa fa-calendar" aria-hidden="true"></i>
-
     </div>
 
-    <div class="label-float" (click)="openDetailPopup()" >
+    <div class="label-float" (click)="openDetailPopup()">
       <input type="text" placeholder="" [(ngModel)]="bill_details" />
       <label>DETAILS</label>
-      <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
-
     </div>
-
-
-
-
-<!-- 
-    <div class="mt-4 text-right">
-
-      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
-      </button>
-
-    
-
-    </div> -->
-
-
-
-  
- 
-   
-
-
-
 
   </div>
 
   <div class="text-center mt-4">
     <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>
-
   </div>
-</ion-content> 
 
-
+</ion-content>

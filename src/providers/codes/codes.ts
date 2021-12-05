@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CodesProvider {
 
-
   public BASE_URL_PROD="http://127.0.0.1:8000/api/";
   public BASE_URL_SERV_1="https://www.manpuriaproducts.org/saarthi/public/index.php/api/";
   public BASE_URL_SERV_2="https://api.fastdeliveryindia.com/public/index.php/api/";

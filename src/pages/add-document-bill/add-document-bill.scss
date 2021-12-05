@@ -28,6 +28,16 @@ page-add-document-bill {
     }
   }
 
+  .card-md {
+    margin:0px !important;
+    margin-top: -8px !important;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    width: calc(100% - 64px);
+  }
+  
+
   .custom-searchbar-div {
     position: relative;
     margin: 20px 0 10px;

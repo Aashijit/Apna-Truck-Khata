@@ -1,14 +1,14 @@
 webpackJsonp([44],{
 
-/***/ 870:
+/***/ 874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentRenewalPageModule", function() { return DocumentRenewalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverKhataSearchPageModule", function() { return DriverKhataSearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document_renewal__ = __webpack_require__(944);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_khata_search__ = __webpack_require__(952);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DocumentRenewalPageModule = /** @class */ (function () {
-    function DocumentRenewalPageModule() {
+var DriverKhataSearchPageModule = /** @class */ (function () {
+    function DriverKhataSearchPageModule() {
     }
-    DocumentRenewalPageModule = __decorate([
+    DriverKhataSearchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__document_renewal__["a" /* DocumentRenewalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__driver_khata_search__["a" /* DriverKhataSearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document_renewal__["a" /* DocumentRenewalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_khata_search__["a" /* DriverKhataSearchPage */]),
             ],
         })
-    ], DocumentRenewalPageModule);
-    return DocumentRenewalPageModule;
+    ], DriverKhataSearchPageModule);
+    return DriverKhataSearchPageModule;
 }());
 
-//# sourceMappingURL=document-renewal.module.js.map
+//# sourceMappingURL=driver-khata-search.module.js.map
 
 /***/ }),
 
-/***/ 944:
+/***/ 952:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentRenewalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverKhataSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,92 +61,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DocumentRenewalPage = /** @class */ (function () {
-    function DocumentRenewalPage(navCtrl, navParams, codes, rest, modalCtrl) {
-        var _this = this;
+
+var DriverKhataSearchPage = /** @class */ (function () {
+    function DriverKhataSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.codes = codes;
         this.rest = rest;
+        this.codes = codes;
+        this.message = message;
         this.modalCtrl = modalCtrl;
-        // UPDATE_DOCUMENT_BILL
-        this.gender = '';
-        this.myDate = '';
-        this.vari = '';
-        this.isSelectedBill = false;
-        this.persons = [];
-        this.vehicles = [];
-        this.bill_id = null;
-        this.worker_id = '';
-        this.person_shop_name = '';
-        this.srth_id = '';
-        this.vehicle_id = '';
-        this.km_reading = '';
-        this.bill_date = '';
-        this.worker_type = '';
-        this.total_bill = 0;
-        this.bill_image_id = '';
-        this.bill_details = '';
-        this.last_maint_id = '';
-        this.opt_counte = '';
-        this.expiry_date = '';
-        this.total_bill_full = 0;
         this.bills = [];
-        this.details = [];
-        this.is_update = false;
-        this.document = '';
-        this.img = null;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        this.document = this.navParams.get("document");
-        console.log(JSON.stringify(this.document));
-        var data = {
-            "srth_id": json[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                var dt = resp['data'];
-                for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'documents' || dt[i]['worker_type'] == 'insurance') {
-                        _this.persons.push(dt[i]);
-                    }
-                }
-            }
-        });
-        if (this.bill_id == null) {
-            this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(function (resp) {
-                if (resp['_ReturnCode'] == '0') {
-                    _this.bill_id = resp['data'];
-                    _this.bill_id = Number(_this.bill_id) + 1;
-                }
-            });
-        }
-        var bl = this.navParams.get("bill");
-        if (bl != undefined && bl != null) {
-            this.is_update = true;
-            this.details = bl['details'];
-            this.bill_id = bl['bill_id'];
-            this.worker_id = bl['worker_id'];
-            this.person_shop_name = bl['person_shop_name'];
-            this.srth_id = bl['srth_id'];
-            this.km_reading = bl['km_reading'];
-            this.bill_date = bl['bill_date'];
-            this.worker_type = bl['worker_type'];
-            this.total_bill = bl['total_bill'];
-            this.bill_details = bl['bill_details'];
-        }
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.drivers = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.reasons = [];
+        this.selectedfilters = [];
         this.getVehicles();
     }
-    DocumentRenewalPage.prototype.addDocumentBills = function (br) {
-        var _this = this;
-        var mdl = this.modalCtrl.create('VehicleDocumentBillPage', { 'action': br, 'worker_type': this.worker_type, 'worker_id': this.worker_id, 'details': this.details });
-        mdl.present();
-        mdl.onDidDismiss(function (resp) {
-            if (localStorage.getItem("vehicle_document_bills") != undefined)
-                _this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
-            _this.changeCost({});
-        });
+    DriverKhataSearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DriverKhataSearchPage');
     };
-    DocumentRenewalPage.prototype.getVehicles = function () {
+    DriverKhataSearchPage.prototype.getVehicles = function () {
         var _this = this;
         var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
@@ -154,125 +100,110 @@ var DocumentRenewalPage = /** @class */ (function () {
         this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
                 _this.vehicles = resp['data'];
+                _this.getreason();
             }
         });
     };
-    DocumentRenewalPage.prototype.openDetailPopup = function () {
+    DriverKhataSearchPage.prototype.getreason = function () {
         var _this = this;
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
-        detailsModalPage.onDidDismiss(function (data) {
-            _this.bill_details = localStorage.getItem(_this.codes.DETAILS);
+        this.rest.post(this.codes.GET_REASON, {}).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.reasons = resp['data'];
+                _this.getDrivers();
+            }
         });
-        detailsModalPage.present();
     };
-    DocumentRenewalPage.prototype.openCameraPopup = function (det) {
-        var cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "all" });
-        cameraModalPage.onDidDismiss(function (resp) {
-            det['img'] = JSON.parse(localStorage.getItem("selectedimage"));
-        });
-        cameraModalPage.present();
-    };
-    DocumentRenewalPage.prototype.addNew = function () {
-        var dtls = {
-            "bill_amount": "",
-            "expiry_date": "",
-            "vehicle_id": "",
-            "img": null
-        };
-        this.details.push(dtls);
-    };
-    DocumentRenewalPage.prototype.changeCost = function (det) {
-        // alert(JSON.stringify(det));
-        this.total_bill = 0;
-        for (var i = 0; i < this.details.length; i++) {
-            this.total_bill = Number(this.total_bill) + Number(this.details[i]['bill_amount']);
-        }
-    };
-    DocumentRenewalPage.prototype.saveBill = function () {
+    DriverKhataSearchPage.prototype.getDrivers = function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "person_shop_name": this.person_shop_name,
-            "srth_id": json[0]['srth_id'],
-            "vehicle_id": this.vehicle_id,
-            "reason": this.document['document_name'],
-            "km_reading": this.km_reading,
-            "bill_date": this.bill_date,
-            "worker_type": this.worker_type,
-            "worker_id": this.worker_id,
-            "total_bill": this.total_bill,
-            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
-            "bill_details": this.bill_details,
-            "last_maint_id": 'srth-app',
-            "opt_counter": '0',
-            "expiry_date": this.expiry_date,
-            "details": this.details
+            "srth_id": json[0]['srth_id']
         };
-        if (this.is_update == true)
-            data['bill_id'] = this.bill_id;
-        this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(function (resp) {
-            _this.details = [];
-            _this.bill_date = '';
-            _this.km_reading = '';
-            _this.bill_details = '';
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                if (_this.img != null)
-                    resp['data']['image_content'] = _this.img['image_content'];
-                _this.bills.push(resp['data']);
-                for (var i = 0; i < _this.bills.length; i++)
-                    _this.bills[i]['selected'] = 'false';
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.drivers.length; i++) {
+                    var searchobj = {
+                        "type": "driver",
+                        "name": _this.drivers[i]['name'],
+                        "id": String(_this.drivers[i]['worker_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.reasons.length; i++) {
+                    var searchobj = {
+                        "type": "reasons",
+                        "id": "",
+                        "name": _this.reasons[i]['reason'],
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
             }
         });
     };
-    DocumentRenewalPage.prototype.change = function (event) {
-        this.vari = event;
-        this.isSelectedBill = true;
-        for (var i = 0; i < this.persons.length; i++) {
-            if (this.persons[i]['worker_id'] == event) {
-                this.person_shop_name = this.persons[i]['name'];
-                this.worker_type = this.persons[i]['worker_type'];
+    DriverKhataSearchPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
             }
         }
+        this.selectedfilters.push(sr);
     };
-    DocumentRenewalPage.prototype.openCalendarPopup = function () {
+    DriverKhataSearchPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+    };
+    DriverKhataSearchPage.prototype.searchGrid = function () {
+        localStorage.setItem("searchdriver", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    DriverKhataSearchPage.prototype.filterDetails = function (event) {
         var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.bill_date = localStorage.getItem(_this.codes.DATE);
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
         });
-        calendarModalPage.present();
     };
-    DocumentRenewalPage.prototype.openCalendarPopup2 = function (det) {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            det['expiry_date'] = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    DocumentRenewalPage.prototype.selectThis = function (i) {
-        // if ( !document.getElementById(i).classList.contains('selected')) {
-        //   // do some stuff
-        //   document.getElementById(i).classList.add("selected");
-        // } else {
-        //   document.getElementById(i).classList.add("not-selected");
-        // }
-        document.getElementById(i).classList.toggle("selected");
-    };
-    DocumentRenewalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DocumentRenewalPage');
-    };
-    DocumentRenewalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-document-renewal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n    \n      <ion-col col-10 class="person-name text-left">\n        <ion-title>        \n          <ion-icon name="ios-copy"></ion-icon>\n          {{document[\'document_name\']}} - RENEWAL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube" style="margin-left: -20px;">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <!-- <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div> -->\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n      <a href="#about">BILL NUMBER</a>\n      <a href="#home">PERSON</a>\n      <a href="#news">VEHICLE NUMBER</a>\n      <a href="#contact">EXPIRY DATE</a>\n      <a href="#support">COST</a>\n\n      <div class="scrollmenu-list" id="1" *ngFor="let bill of bills" (click)="selectThis(1)">\n        <p>{{bill[\'bill_id\']}}</p>\n        <p>{{bill[\'person_shop_name\']}}</p>\n        <p>{{bill[\'vehicle_id\']}}</p>\n        <p>{{bill[\'expiry_date\']}}</p>\n        <p>₹ {{bill[\'total_bill\']}}</p>\n   \n      </div>\n  \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n\n\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;" >\n      <ion-label floating>SELECT PERSON</ion-label>\n\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="worker_id"  (ionChange)="change($event)">\n        <ion-option value="{{per[\'worker_id\']}}" *ngFor="let per of persons">{{per[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img  src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center"  style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}} <br>{{document[\'document_name\']}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center"> \n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n  \n\n\n    <!-- <div class="text-center" style="box-shadow: 0px 0px 20px rgba(0,0,0,0.2)">\n      BILL NUMBER\n    </div> -->\n    \n    <!-- <p *ngFor="let det of details">\n    <ion-item class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="det[\'vehicle_id\']">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-row class="cost-camera-expiry" style="margin: 0px -6px;">\n\n      <ion-col col-5>\n        <div class="label-float" >\n          <input type="tel" [(ngModel)]="det[\'bill_amount\']" (blur)="changeCost(det)" placeholder=" " />\n          <label>COST</label>\n          <i class="fa fa-money" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    \n      <ion-col col-2 *ngIf="det[\'img\'] == null">\n        <div (click)="openCameraPopup(det)" class="detail-picture">\n          <i class="fa fa-camera" aria-hidden="true"></i>\n        </div>  \n      </ion-col>\n      <ion-col col-2 *ngIf="det[\'img\'] != null">\n        <img [src]="det[\'img\'][\'image_content\']" style="opacity: 0.3 !important;"/>\n        <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>       \n      </ion-col>\n      <ion-col col-5>\n        <div class="label-float" >\n          <input type="text"  [(ngModel)]="det[\'expiry_date\']" (click)="openCalendarPopup2(det)" placeholder=" " />\n          <label>EXPIRY</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    </ion-row>\n    </p> -->\n   \n\n    <!-- <div class="text-center">\n      <button ion-button round class="add-new-button" (click)="addNew()">ADD NEW</button>\n    </div>  -->\n\n    <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">\n      <button ion-button round class="custom-button" style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;" (click)="addDocumentBills(\'save\')">ADD DOCUMENT BILLS</button>\n\n      <span *ngIf="details.length > 0" style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">\n        <ion-icon name="thumbs-up" color="success"></ion-icon> \n        &nbsp; \n        Vehciles Added\n      </span>\n\n      <span style="float: right !important;float: right !important;position: absolute;right: 22px;">\n        <button ion-button clear color="danger" (click)="addDocumentBills(\'edit\')" [disabled]="details.length == 0" style="margin-top: 6px;">\n          Edit &nbsp;\n          <ion-icon name="create"></ion-icon>\n        </button>\n      </span>\n    </div>\n\n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="total_bill"  placeholder=" " />\n      <label>TOTAL</label>\n\n    </div>\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>\n      <label>DATE OF BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n\n    </div>\n\n    <div class="label-float" (click)="openDetailPopup()" >\n      <input type="text" placeholder="" [(ngModel)]="bill_details" />\n      <label>DETAILS</label>\n      <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->\n\n    </div>\n\n\n\n\n<!-- \n    <div class="mt-4 text-right">\n\n      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>\n      </button>\n\n    \n\n    </div> -->\n\n\n\n  \n \n   \n\n\n\n\n  </div>\n\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>\n\n  </div>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/,
+    DriverKhataSearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-driver-khata-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata-search/driver-khata-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <!-- <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label> -->\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'drivers\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n \n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'shopname\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Driver</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reason</p>\n      </ion-item>\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata-search/driver-khata-search.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"]])
-    ], DocumentRenewalPage);
-    return DocumentRenewalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], DriverKhataSearchPage);
+    return DriverKhataSearchPage;
 }());
 
-//# sourceMappingURL=document-renewal.js.map
+//# sourceMappingURL=driver-khata-search.js.map
 
 /***/ })
 

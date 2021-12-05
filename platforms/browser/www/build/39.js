@@ -1,14 +1,14 @@
 webpackJsonp([39],{
 
-/***/ 875:
+/***/ 879:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverKhataPageModule", function() { return DriverKhataPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExchangeModalPageModule", function() { return ExchangeModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_khata__ = __webpack_require__(949);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exchange_modal__ = __webpack_require__(957);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DriverKhataPageModule = /** @class */ (function () {
-    function DriverKhataPageModule() {
+var ExchangeModalPageModule = /** @class */ (function () {
+    function ExchangeModalPageModule() {
     }
-    DriverKhataPageModule = __decorate([
+    ExchangeModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__driver_khata__["a" /* DriverKhataPage */],
+                __WEBPACK_IMPORTED_MODULE_2__exchange_modal__["a" /* ExchangeModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_khata__["a" /* DriverKhataPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__exchange_modal__["a" /* ExchangeModalPage */]),
             ],
         })
-    ], DriverKhataPageModule);
-    return DriverKhataPageModule;
+    ], ExchangeModalPageModule);
+    return ExchangeModalPageModule;
 }());
 
-//# sourceMappingURL=driver-khata.module.js.map
+//# sourceMappingURL=exchange-modal.module.js.map
 
 /***/ }),
 
-/***/ 949:
+/***/ 957:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverKhataPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExchangeModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,197 +62,111 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DriverKhataPage = /** @class */ (function () {
-    function DriverKhataPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
-        this.alertCtrl = alertCtrl;
+var ExchangeModalPage = /** @class */ (function () {
+    function ExchangeModalPage(viewController, navCtrl, navParams, modalCtrl, codes, rest, msg) {
+        this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
-        this.codes = codes;
-        this.message = message;
         this.modalCtrl = modalCtrl;
-        this.bills = [];
-        this.filterbills = [];
-        this.isupdate = false;
-        this.searchTerm = '';
-        this.selectedfilters = [];
+        this.codes = codes;
+        this.rest = rest;
+        this.msg = msg;
+        this.vehicle_id = '';
+        this.exchange_vehicle_id = '';
+        this.exchange_date = '';
+        this.item_id = '';
+        this.item_name = '';
+        this.item_number = '';
+        this.item_id_2 = '';
+        this.item_name_2 = '';
+        this.item_number_2 = '';
+        this.last_maint_id = '';
+        this.last_maint_ts = '';
+        this.opt_counter = '';
+        this.vehicles = [];
+        this.vehicle = '';
+        this.vehicle = this.navParams.get("vehicle");
+        this.getVehicles();
     }
-    DriverKhataPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DriverKhataPage');
+    ExchangeModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExchangeModalPage');
     };
-    DriverKhataPage.prototype.ionViewWillEnter = function () {
-        this.getBillsBySrthId();
+    ExchangeModalPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
     };
-    DriverKhataPage.prototype.getBillsBySrthId = function () {
+    ExchangeModalPage.prototype.openCalendarPopup = function () {
         var _this = this;
-        this.isupdate = false;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": json[0]['srth_id'],
-            "worker_type": "driver"
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.exchange_date = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    ExchangeModalPage.prototype.saveExchangeModel = function () {
+        var _this = this;
+        var dt = {
+            "vehicle_id": this.vehicle['vehicle_id'],
+            "exchange_vehicle_id": this.exchange_vehicle_id,
+            "exchange_date": this.exchange_date,
+            "item_id": this.item_name,
+            "item_name": '',
+            "item_number": '',
+            "item_id_2": this.item_name_2,
+            "item_name_2": '',
+            "item_number_2": '',
+            "last_maint_id": 'srth_app',
+            "opt_counter": '0'
         };
-        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+        this.rest.post(this.codes.SAVE_EXCHANGE_PART, dt).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.bills = resp['data'];
-                _this.filterbills = _this.bills;
-                for (var i = 0; i < _this.bills.length; i++) {
-                    _this.bills[i]['selected'] = 'false';
-                    _this.filterbills[i]['selected'] = 'false';
-                }
+                _this.msg.displayToast('Exchange part is saved !!!');
+                _this.exchange_vehicle_id = '';
+                _this.item_id = '';
+                _this.item_id_2 = '';
+                _this.exchange_date = '';
+                return;
             }
         });
     };
-    DriverKhataPage.prototype.selectThis = function (bill) {
-        for (var i = 0; i < this.bills.length; i++) {
-            this.bills[i]['selected'] = 'false';
-            this.filterbills[i]['selected'] = 'false';
-        }
-        bill['selected'] = 'true';
-        this.isupdate = true;
-        localStorage.setItem('bill', JSON.stringify(bill));
-    };
-    DriverKhataPage.prototype.update = function () {
-        this.navCtrl.push('AddDriverExpensesPage', { 'update': 'true' });
-    };
-    DriverKhataPage.prototype.presentConfirmDelete = function () {
+    ExchangeModalPage.prototype.openPartsWorkModal = function (id) {
         var _this = this;
-        var alert = this.alertCtrl.create({
-            title: 'Confirm',
-            message: 'Are you sure you want to delete this bill?',
-            buttons: [
-                {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: function () {
-                        console.log('Cancel clicked');
-                    }
-                },
-                {
-                    text: 'Delete',
-                    handler: function () {
-                        _this.deletebill();
-                    }
-                }
-            ]
-        });
-        alert.present();
-    };
-    DriverKhataPage.prototype.searchBillDetails = function () {
-        var _this = this;
-        var mdl = this.modalCtrl.create('DriverDetailsSearchPage');
+        var mdl = this.modalCtrl.create('PartsWorkModalPage');
         mdl.onDidDismiss(function (data) {
-            if (localStorage.getItem("searchdriverdetails") != undefined) {
-                _this.selectedfilters = JSON.parse(localStorage.getItem("searchdriverdetails"));
-                if (_this.selectedfilters.length == 0) {
-                    _this.filterbills = _this.bills;
-                    return;
-                }
-                _this.filterbills = [];
-                for (var i = 0; i < _this.selectedfilters.length; i++) {
-                    if (_this.selectedfilters[i]['type'] == 'reasons') {
-                        for (var j = 0; j < _this.bills.length; j++) {
-                            if (_this.bills[j]['reason'] == _this.selectedfilters[i]['name']) {
-                                _this.filterbills.push(_this.bills[j]);
-                            }
-                        }
-                    }
-                    else if (_this.selectedfilters[i]['type'] == 'vehicles') {
-                        for (var j = 0; j < _this.bills.length; j++) {
-                            if (_this.bills[j]['vehicle_id'] == _this.selectedfilters[i]['id']) {
-                                _this.filterbills.push(_this.bills[j]);
-                            }
-                        }
-                    }
-                    else if (_this.selectedfilters[i]['type'] == 'drivers') {
-                        for (var j = 0; j < _this.bills.length; j++) {
-                            if (_this.bills[j]['worker_id'] == _this.selectedfilters[i]['id']) {
-                                _this.filterbills.push(_this.bills[j]);
-                            }
-                        }
-                    }
-                }
-                console.error(JSON.stringify(_this.filterbills));
+            if (id == '1') {
+                var work_part = JSON.parse(localStorage.getItem(_this.codes.SELECTED_WORK_PART));
+                _this.item_name = work_part['name'];
+            }
+            else if (id == '2') {
+                var work_part = JSON.parse(localStorage.getItem(_this.codes.SELECTED_WORK_PART));
+                _this.item_name_2 = work_part['name'];
             }
         });
         mdl.present();
     };
-    DriverKhataPage.prototype.removeTerm = function (sc) {
-        var sFilters = [];
-        for (var i = 0; i < this.selectedfilters.length; i++) {
-            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
-            }
-            else {
-                sFilters.push(this.selectedfilters[i]);
-            }
-        }
-        this.selectedfilters = sFilters;
-        if (this.selectedfilters.length == 0) {
-            this.filterbills = this.bills;
-            return;
-        }
-        this.filterbills = [];
-        for (var i = 0; i < this.selectedfilters.length; i++) {
-            if (this.selectedfilters[i]['type'] == 'reasons') {
-                for (var j = 0; j < this.bills.length; j++) {
-                    if (this.bills[j]['reason'] == this.selectedfilters[i]['name']) {
-                        this.filterbills.push(this.bills[j]);
-                    }
-                }
-            }
-            else if (this.selectedfilters[i]['type'] == 'vehicles') {
-                for (var j = 0; j < this.bills.length; j++) {
-                    if (this.bills[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
-                        this.filterbills.push(this.bills[j]);
-                    }
-                }
-            }
-            else if (this.selectedfilters[i]['type'] == 'drivers') {
-                for (var j = 0; j < this.bills.length; j++) {
-                    if (this.bills[j]['worker_id'] == this.selectedfilters[i]['id']) {
-                        this.filterbills.push(this.bills[j]);
-                    }
-                }
-            }
-        }
-    };
-    DriverKhataPage.prototype.deletebill = function () {
+    ExchangeModalPage.prototype.getVehicles = function () {
         var _this = this;
-        var bill = JSON.parse(localStorage.getItem('bill'));
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "bill_id": bill['bill_id']
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
         };
-        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.message.displayToast('Congratulations! You have deleted a bill.');
-                _this.getBillsBySrthId();
+                _this.vehicles = resp['data'];
             }
         });
     };
-    DriverKhataPage.prototype.openAddDriverExpensePage = function () {
-        this.navCtrl.push('AddDriverExpensesPage', { 'update': 'false' });
-    };
-    DriverKhataPage.prototype.getItems = function ($event) {
-        var _this = this;
-        this.filterbills = this.bills.filter(function (wp) {
-            if (_this.searchTerm != '') {
-                var str = wp.bill_id + wp.vehicle_id + wp.reason + wp.km_reading + wp.bill_date + wp.bill_details + wp.worker_id;
-                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
-            }
-            else
-                return _this.bills;
-        });
-    };
-    DriverKhataPage = __decorate([
+    ExchangeModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-driver-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata/driver-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          DRIVER KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <!-- <ion-row class="document-button">\n      <ion-col col-6 >\n        <div>\n          DOCUMENTS DATE REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n      <ion-col col-6 >\n        <div>\n          DOCUMENTS BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n      </ion-col>\n    </ion-row> -->\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH DRIVER NAME, VEHICLE NUMBER, REASON"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'drivers\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n  \n    \n\n    <!-- <div class="scrollmenu">\n      <a href="#home">BILL NUMBER</a>\n      <a href="#news">DRIVER NAME</a>\n      <a href="#contact">VEHICLE NUMBER</a>\n      <a href="#about">REASON</a>\n      <a href="#support">COST</a>\n      <a href="#blog">DETAIL</a>\n      <a href="#tools">KM READING</a> -->\n            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n\n      <!-- <div style="height: 200px;width: 400px">\n\n      </div> -->\n    <!-- </div> -->\n \n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">BILL NUMBER</a>\n        <a href="#news">DRIVER NAME</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">REASON</a>\n        <a href="#support">COST</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">KM READING</a>\n\n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >\n          <div [ngClass]="bill[\'total_bill\'] < 0 ? \'green\' : \'red\'">\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'worker_name\']}}</p>\n          <p>{{bill[\'vehicle_number\']}}</p>\n          <p>{{bill[\'reason\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>{{bill[\'km_reading\']}}</p>\n        </div>\n\n        </div>\n  \n        <!-- <div class="scrollmenu-list" id="6" (click)="selectThis(6)" style="color: #24e289;">\n          <p>TYRE AND TYRE23</p>\n          <p>12-09-2020</p>\n          <p>BILL1234</p>\n          <p>AYAN JANA</p>\n          <p>REPAIR</p>\n          <p>ITEM2</p>\n          <p>1</p>\n         \n\n        </div>\n  \n        <div class="scrollmenu-list" id="7" (click)="selectThis(7)">\n          <p>TYRE AND TYRE23</p>\n          <p>12-09-2020</p>\n          <p>BILL1234</p>\n          <p>AYAN JANA</p>\n          <p>REPAIR</p>\n          <p>ITEM2</p>\n          <p>1</p>\n         \n\n        </div>\n  \n        <div class="scrollmenu-list" id="8" (click)="selectThis(8)">\n          <p>TYRE AND TYRE23</p>\n          <p>12-09-2020</p>\n          <p>BILL1234</p>\n          <p>AYAN JANA</p>\n          <p>REPAIR</p>\n          <p>ITEM2</p>\n          <p>1</p>\n         \n\n        </div> -->\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" style="font-size: 12px !important;margin-top: 7px;"></ion-icon></button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete &nbsp; <ion-icon name="trash" style="font-size: 12px !important;margin-top: 7px;"></ion-icon></button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n  \n   \n\n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openAddDriverExpensePage()">EXPENSE ADD/LESS</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-khata/driver-khata.html"*/,
+            selector: 'page-exchange-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>EXCHANGE PART</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div class="container white-section">\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="exchange_date" (click)="openCalendarPopup()"/>\n      <label>EXHCANGE DATE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n  \n    \n    <ion-row class="exchange-details" style="margin: 0; padding-top: 20px;">\n      <ion-col col-6 class="text-center">\n        VEHICLE NUMBER\n      </ion-col>\n      <ion-col col-6 class="text-center text-color-primary ">\n        {{vehicle[\'vehicle_number\']}}\n      </ion-col>\n    </ion-row>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name"  (click)="openPartsWorkModal(\'1\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <div class="text-center">\n      <i class="fa fa-exchange" aria-hidden="true" style="transform: rotate(90deg);"></i>\n    </div>\n\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">\n      <ion-label>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="exchange_vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name_2" (click)="openPartsWorkModal(\'2\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button" (click)="saveExchangeModel()"> SAVE</button>\n\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round (click)="exitModal()" class="custom-button">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
-    ], DriverKhataPage);
-    return DriverKhataPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], ExchangeModalPage);
+    return ExchangeModalPage;
 }());
 
-//# sourceMappingURL=driver-khata.js.map
+//# sourceMappingURL=exchange-modal.js.map
 
 /***/ })
 

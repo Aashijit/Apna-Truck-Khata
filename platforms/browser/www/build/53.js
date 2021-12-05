@@ -1,14 +1,14 @@
 webpackJsonp([53],{
 
-/***/ 859:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeDriverPageModule", function() { return ChangeDriverPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DecisionModalPageModule", function() { return DecisionModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__change_driver__ = __webpack_require__(935);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__decision_modal__ = __webpack_require__(944);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ChangeDriverPageModule = /** @class */ (function () {
-    function ChangeDriverPageModule() {
+var DecisionModalPageModule = /** @class */ (function () {
+    function DecisionModalPageModule() {
     }
-    ChangeDriverPageModule = __decorate([
+    DecisionModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */],
+                __WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */]),
             ],
         })
-    ], ChangeDriverPageModule);
-    return ChangeDriverPageModule;
+    ], DecisionModalPageModule);
+    return DecisionModalPageModule;
 }());
 
-//# sourceMappingURL=change-driver.module.js.map
+//# sourceMappingURL=decision-modal.module.js.map
 
 /***/ }),
 
-/***/ 935:
+/***/ 944:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangeDriverPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DecisionModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,80 +57,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-var ChangeDriverPage = /** @class */ (function () {
-    function ChangeDriverPage(viewController, navCtrl, navParams, codes, message, rest) {
-        var _this = this;
+var DecisionModalPage = /** @class */ (function () {
+    function DecisionModalPage(viewController, navCtrl, navParams, modalCtrl) {
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.codes = codes;
-        this.message = message;
-        this.rest = rest;
-        this.vehicle = '';
-        this.driver_end_date = '';
-        this.driver_end_details = '';
-        this.driver_end_km = '';
-        this.vehicle_id = '';
-        this.driver_id = '';
-        this.driver_start_date = '';
-        this.driver_start_details = '';
-        this.driver_start_km = '';
-        this.drivers = [];
-        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": json[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                var dt = resp['data'];
-                for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'driver') {
-                        _this.drivers.push(dt[i]);
-                    }
-                }
-            }
-        });
+        this.modalCtrl = modalCtrl;
+        this.options = '';
+        this.showAllot = true;
+        this.vehicles = '';
+        this.vehicles = JSON.parse(localStorage.getItem("vehicle_details"));
+        if (this.vehicles['driver_details'] == undefined || this.vehicles['driver_details'] == null)
+            this.showAllot = true;
+        else
+            this.showAllot = false;
     }
-    ChangeDriverPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ChangeDriverPage');
+    DecisionModalPage.prototype.presentModal = function () {
+        if (this.options == 'change') {
+            var changeDriverModal = this.modalCtrl.create('ChangeDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'allot') {
+            var changeDriverModal = this.modalCtrl.create('AllotDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'remove') {
+            var changeDriverModal = this.modalCtrl.create('RemoveDriverPage');
+            changeDriverModal.present();
+        }
     };
-    ChangeDriverPage.prototype.exitModal = function () {
+    DecisionModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DecisionModalPage');
+    };
+    DecisionModalPage.prototype.exitModal = function () {
         this.viewController.dismiss();
     };
-    ChangeDriverPage.prototype.save = function () {
-        var _this = this;
-        var data = {
-            "type": "change",
-            "vehicle_id": this.vehicle['vehicle_id'],
-            "driver_id": this.driver_id,
-            "driver_start_details": this.driver_start_details,
-            "driver_start_km": this.driver_start_km,
-            "driver_start_date": this.driver_start_date,
-            "driver_end_date": this.driver_end_date,
-            "driver_end_details": this.driver_end_details,
-            "driver_end_km": this.driver_end_km
-        };
-        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.message.displayToast('Congratulations! You have changed the driver to this vehicle successfully!');
-                _this.navCtrl.pop();
-            }
-        });
-    };
-    ChangeDriverPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-change-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/'<!--\n  Generated template for the ChangeDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n      \n      <ion-col col-12 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-user-circle" aria-hidden="true"></i>\n          CHANGE DRIVER\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col> -->\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n<ion-content padding>\n\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n\n\n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n  \n        <!-- <span style="float: right;">\n          DRIVER\n        </span> -->\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n  \n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != undefined && vehicle[\'driver_details\'] != null">{{vehicle[\'driver_details\'][\'name\']}}({{vehicle[\'driver_details\'][\'phone_number\']}})</span>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_end_date"/>\n          <label>CURRENT DRIVER LEAVING DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n  \n      </ion-col>\n  \n  \n   \n      <ion-col col-12>\n        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n          <ion-label>NEW DRIVER</ion-label>\n    \n          <ion-select interface="action-sheet" [(ngModel)]="driver_id" >\n            <ion-option  *ngFor="let driver of drivers"  value="{{driver[\'worker_id\']}}">{{driver[\'name\']}}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n     \n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_start_date"/>\n          <label>NEW DRIVER START DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n        \n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_details"  placeholder=" " />\n          <label>REASON/DETAILS</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_km"  placeholder=" " />\n          <label>KM</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n  \n  \n  \n  \n  \n     \n  \n   \n  \n\n  \n    </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n  \n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n    \n  </ion-row>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/,
+    DecisionModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-decision-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/'<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      \n      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">\n\n        <ion-list-header class="">\n          SELECT THE OPTION\n        </ion-list-header>\n      \n        <ion-item>\n          <ion-label>CHANGE</ion-label>\n          <ion-radio value="change"></ion-radio>\n        </ion-item>\n      \n        <ion-item *ngIf="showAllot">\n          <ion-label>ALLOT</ion-label>\n          <ion-radio value="allot"></ion-radio>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label>REMOVE</ion-label>\n          <ion-radio value="remove"></ion-radio>\n        </ion-item>\n      \n      </ion-list>\n\n    </ion-card-content>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-6 class="text-center">\n        <button ion-button round class="custom-button" (click)="exitModal()">\n          EXIT\n        </button>\n      </ion-col>\n    </ion-row>\n   \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */]])
-    ], ChangeDriverPage);
-    return ChangeDriverPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
+    ], DecisionModalPage);
+    return DecisionModalPage;
 }());
 
-//# sourceMappingURL=change-driver.js.map
+//# sourceMappingURL=decision-modal.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([61],{
 
-/***/ 853:
+/***/ 856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllotDriverPageModule", function() { return AllotDriverPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuyDetailsSearchModalPageModule", function() { return BuyDetailsSearchModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__allot_driver__ = __webpack_require__(929);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__buy_details_search_modal__ = __webpack_require__(936);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AllotDriverPageModule = /** @class */ (function () {
-    function AllotDriverPageModule() {
+var BuyDetailsSearchModalPageModule = /** @class */ (function () {
+    function BuyDetailsSearchModalPageModule() {
     }
-    AllotDriverPageModule = __decorate([
+    BuyDetailsSearchModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__allot_driver__["a" /* AllotDriverPage */],
+                __WEBPACK_IMPORTED_MODULE_2__buy_details_search_modal__["a" /* BuyDetailsSearchModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__allot_driver__["a" /* AllotDriverPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__buy_details_search_modal__["a" /* BuyDetailsSearchModalPage */]),
             ],
         })
-    ], AllotDriverPageModule);
-    return AllotDriverPageModule;
+    ], BuyDetailsSearchModalPageModule);
+    return BuyDetailsSearchModalPageModule;
 }());
 
-//# sourceMappingURL=allot-driver.module.js.map
+//# sourceMappingURL=buy-details-search-modal.module.js.map
 
 /***/ }),
 
-/***/ 929:
+/***/ 936:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllotDriverPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BuyDetailsSearchModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
@@ -62,23 +62,85 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AllotDriverPage = /** @class */ (function () {
-    function AllotDriverPage(viewController, navCtrl, navParams, rest, codes, message) {
-        var _this = this;
-        this.viewController = viewController;
+var BuyDetailsSearchModalPage = /** @class */ (function () {
+    // BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP
+    function BuyDetailsSearchModalPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.rest = rest;
         this.codes = codes;
         this.message = message;
-        this.vehicle = '';
-        this.drivers = [];
-        this.vehicle_id = '';
-        this.driver_id = '';
-        this.driver_start_details = '';
-        this.driver_start_km = '';
-        this.driver_start_date = '';
-        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
+        this.modalCtrl = modalCtrl;
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.getBillsBySrthId();
+    }
+    BuyDetailsSearchModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BuyDetailsSearchModalPage');
+    };
+    BuyDetailsSearchModalPage.prototype.getProblemsBySrthId = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_PROBLEM, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.problems = resp['data'];
+            }
+            _this.getShops();
+        });
+    };
+    BuyDetailsSearchModalPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
+        }
+        this.selectedfilters.push(sr);
+    };
+    BuyDetailsSearchModalPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+    };
+    BuyDetailsSearchModalPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+            _this.getProblemsBySrthId();
+        });
+    };
+    BuyDetailsSearchModalPage.prototype.searchGrid = function () {
+        localStorage.setItem("searchbilldetails", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    BuyDetailsSearchModalPage.prototype.getShops = function () {
+        var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "srth_id": json[0]['srth_id']
@@ -87,47 +149,93 @@ var AllotDriverPage = /** @class */ (function () {
             if (resp['_ReturnCode'] == '0') {
                 var dt = resp['data'];
                 for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'driver') {
-                        _this.drivers.push(dt[i]);
+                    if (dt[i]['worker_type'] == 'shop') {
+                        _this.shops.push(dt[i]);
                     }
                 }
+                for (var i = 0; i < _this.problems.length; i++) {
+                    var searchobj = {
+                        "type": "problems",
+                        "name": _this.problems[i]['problem_name'],
+                        "id": String(_this.problems[i]['problem_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.shops.length; i++) {
+                    var searchobj = {
+                        "type": "shopname",
+                        "name": _this.shops[i]['name'],
+                        "id": String(_this.shops[i]['worker_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['bill_id']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
             }
         });
-    }
-    AllotDriverPage.prototype.save = function () {
+    };
+    BuyDetailsSearchModalPage.prototype.getBillsBySrthId = function () {
         var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "type": "allot",
-            "vehicle_id": this.vehicle['vehicle_id'],
-            "driver_id": this.driver_id,
-            "driver_start_details": this.driver_start_details,
-            "driver_start_km": this.driver_start_km,
-            "driver_start_date": this.driver_start_date
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "shop"
         };
-        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.message.displayToast('Congratulations! You have allocated this vehicle successfully!');
-                _this.navCtrl.pop();
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getVehicles();
             }
         });
     };
-    AllotDriverPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AllotDriverPage');
+    BuyDetailsSearchModalPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
     };
-    AllotDriverPage.prototype.exitModal = function () {
-        this.viewController.dismiss();
-    };
-    AllotDriverPage = __decorate([
+    BuyDetailsSearchModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-allot-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/allot-driver/allot-driver.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-row>\n        <!-- <ion-col col-2 class="custom-back-button"> -->\n          <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n        <!-- </ion-col> -->\n        \n        <ion-col col-12 class="person-name text-center">\n          <ion-title>        \n            <i class="fa fa-user-circle" aria-hidden="true"></i>\n            ALLOT DRIVER\n          </ion-title>\n  \n        </ion-col>\n        <!-- <ion-col col-3 class="youtube">\n          <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n        </ion-col> -->\n      </ion-row>\n    </ion-navbar>\n  </ion-header> \n\n<ion-content padding>\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n       \n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary">NOT PRESENT</span>\n      </ion-col>\n\n    \n      <ion-col col-12>\n        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n          <ion-label>NEW DRIVER</ion-label>\n          <ion-select [(ngModel)]="driver_id">\n            <ion-option value="{{dr[\'worker_id\']}}" *ngFor="let dr of drivers" >{{dr[\'name\']}}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n    \n\n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_start_date"/>\n          <label>NEW DRIVER START DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n\n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_start_details" placeholder=" " />\n      <label>REASON/DETAILS</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n\n    </div>\n  </ion-col>\n\n  <ion-col col-12>\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="driver_start_km" placeholder=" " />\n      <label>KM</label>\n      <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n\n    </div>\n  </ion-col>\n\n\n      \n   \n    \n\n  </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n\n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/allot-driver/allot-driver.html"*/,
+            selector: 'page-buy-details-search-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/buy-details-search-modal/buy-details-search-modal.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n      <ion-item *ngIf="sr[\'type\'] == \'problems\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Problem</p>\n      </ion-item>\n \n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'shopname\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Shop</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n        <p>Shop : {{sr[\'name\']}} ~ ₹ {{sr[\'amount\']}}</p>\n      </ion-item>\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/buy-details-search-modal/buy-details-search-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
-    ], AllotDriverPage);
-    return AllotDriverPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], BuyDetailsSearchModalPage);
+    return BuyDetailsSearchModalPage;
 }());
 
-//# sourceMappingURL=allot-driver.js.map
+//# sourceMappingURL=buy-details-search-modal.js.map
 
 /***/ })
 

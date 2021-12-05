@@ -1,14 +1,16 @@
 webpackJsonp([4],{
 
-/***/ 910:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDocumentBillPageModule", function() { return VehicleDocumentBillPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_document_bill__ = __webpack_require__(983);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleWorkReportPageModule", function() { return VehicleWorkReportPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__ = __webpack_require__(991);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +20,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VehicleDocumentBillPageModule = /** @class */ (function () {
-    function VehicleDocumentBillPageModule() {
+
+var VehicleWorkReportPageModule = /** @class */ (function () {
+    function VehicleWorkReportPageModule() {
     }
-    VehicleDocumentBillPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    VehicleWorkReportPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__vehicle_document_bill__["a" /* VehicleDocumentBillPage */],
+                __WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__["a" /* VehicleWorkReportPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__vehicle_document_bill__["a" /* VehicleDocumentBillPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__vehicle_work_report__["a" /* VehicleWorkReportPage */]),
+                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
             ],
         })
-    ], VehicleDocumentBillPageModule);
-    return VehicleDocumentBillPageModule;
+    ], VehicleWorkReportPageModule);
+    return VehicleWorkReportPageModule;
 }());
 
-//# sourceMappingURL=vehicle-document-bill.module.js.map
+//# sourceMappingURL=vehicle-work-report.module.js.map
 
 /***/ }),
 
-/***/ 983:
+/***/ 991:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleDocumentBillPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleWorkReportPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -60,144 +64,110 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var VehicleDocumentBillPage = /** @class */ (function () {
-    function VehicleDocumentBillPage(navCtrl, navParams, codes, rest, modalCtrl, viewC, ldc) {
+var VehicleWorkReportPage = /** @class */ (function () {
+    function VehicleWorkReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.codes = codes;
         this.rest = rest;
+        this.codes = codes;
         this.modalCtrl = modalCtrl;
-        this.viewC = viewC;
-        this.ldc = ldc;
+        this.viewCont = viewCont;
+        this.problem = '';
+        this.problems = [];
+        this.shops = [];
         this.vehicles = [];
-        this.bill_amount = '';
-        this.expiry_date = '';
-        this.img = null;
-        this.total_bill = 0;
+        this.html = '';
         this.vehicle_id = '';
-        this.person_shop_name = '';
-        this.document_name = '';
-        this.worker_type = '';
+        this.from_date = '';
+        this.to_date = '';
         this.worker_id = '';
-        this.details = [];
-        this.getVehicles();
-        this.worker_id = this.navParams.get("worker_id");
-        this.worker_type = this.navParams.get("worker_type");
-        var action = this.navParams.get("action");
-        if (action == 'edit') {
-            this.details = this.navParams.get('details');
+        this.dt = new Date(2000, 1, 1);
+        this.displayCalendar = false;
+        this.dateRange = { from: '', to: '' };
+        this.downloadURL = '';
+        this.apiendpoint = '';
+        this.downloadendpoint = '';
+        this.optionsMulti = {
+            pickMode: 'range',
+            from: this.dt,
+            to: 0,
+            showMonthPicker: true,
+            showToggleButtons: true,
+            color: 'primary'
+        };
+        if (this.navParams.get("vehicle") != null || this.navParams.get("vehicle") != undefined) {
+            this.vehicle_id = this.navParams.get("vehicle")['vehicle_id'];
         }
     }
-    VehicleDocumentBillPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VehicleDocumentBillPage');
+    VehicleWorkReportPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VehicleWorkReportPage');
     };
-    VehicleDocumentBillPage.prototype.dismiss = function () {
-        this.viewC.dismiss();
+    VehicleWorkReportPage.prototype.ionViewWillEnter = function () {
+        this.getrepair();
+        this.getVehicles();
     };
-    VehicleDocumentBillPage.prototype.getVehicles = function () {
+    VehicleWorkReportPage.prototype.openCalendar = function () {
+        this.displayCalendar = true;
+    };
+    VehicleWorkReportPage.prototype.getrepair = function () {
         var _this = this;
         var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var lc = this.ldc.create({
-            content: 'Loading the vehicles...'
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_PROBLEM, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.problems = resp['data'];
+                for (var i = 0; i < _this.problems.length; i++) {
+                    _this.problems[i]['selected'] = false;
+                }
+            }
         });
-        lc.present();
+    };
+    VehicleWorkReportPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "vehicle_owner_srth_id": userinfo[0]['srth_id']
         };
         this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            lc.dismiss();
             if (resp['_ReturnCode'] == '0') {
                 _this.vehicles = resp['data'];
             }
         });
     };
-    VehicleDocumentBillPage.prototype.addItem = function () {
-        var vno = "";
-        for (var i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i]['vehicle_id'] == this.vehicle_id)
-                vno = this.vehicles[i]['vehicle_number'];
-        }
-        var item = {
-            "bill_amount": this.bill_amount,
-            "expiry_date": this.expiry_date,
-            "vehicle_id": this.vehicle_id,
-            "vehicle_number": vno
-        };
-        if (this.img != null) {
-            item["img"] = this.img['image_id'];
-            item['image_url'] = this.img['image_url'];
-        }
-        this.details.push(item);
-        this.changeCost();
-        this.bill_amount = "";
-        this.vehicle_id = "";
-        this.expiry_date = "";
-        this.img = null;
-    };
-    VehicleDocumentBillPage.prototype.removeItem = function (it) {
-        var tmpdetails = [];
-        for (var i = 0; i < this.details.length; i++) {
-            if (this.details[i]['vehicle_id'] == it['vehicle_id'] && this.details[i]['bill_amount'] == it['bill_amount']) {
-            }
-            else {
-                tmpdetails.push(this.details[i]);
-            }
-        }
-        this.details = tmpdetails;
-        this.changeCost();
-    };
-    VehicleDocumentBillPage.prototype.saveBills = function () {
-        localStorage.setItem("vehicle_document_bills", JSON.stringify(this.details));
-        this.viewC.dismiss();
-    };
-    VehicleDocumentBillPage.prototype.changeCost = function () {
-        // alert(JSON.stringify(det));
-        this.total_bill = 0;
-        for (var i = 0; i < this.details.length; i++) {
-            this.total_bill = Number(this.total_bill) + Number(this.details[i]['bill_amount']);
-        }
-    };
-    VehicleDocumentBillPage.prototype.openCameraPopup = function (det) {
+    VehicleWorkReportPage.prototype.generateReport = function () {
         var _this = this;
+        this.displayCalendar = false;
+        if (this.vehicle_id == 0)
+            this.vehicle_id = null;
         var data = {
-            "person_shop_name": this.person_shop_name,
-            "document_name": this.document_name
+            "vehicle_id": this.vehicle_id,
+            "problem": this.problem,
+            "date_from": this.dateRange['from'],
+            "date_to": this.dateRange['to']
         };
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data2 = {
-            "srth_id": json[0]['srth_id'],
-            "worker_type": this.worker_type,
-            "worker_id": this.worker_id,
-            "document_type": "documentbill",
-            "type": "bills",
-            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
-            "tags": JSON.stringify(data)
-        };
-        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2 });
-        cameraModalPage.onDidDismiss(function (resp) {
-            _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+        this.rest.post(this.codes.VEHICLE_WORK_REPORT, data).then(function (resp) {
+            console.log(resp);
+            document.getElementById("report").innerHTML = resp['data'];
+            _this.html = resp['data'];
         });
-        cameraModalPage.present();
+        this.downloadURL = this.codes.VEHICLE_WORK_REPORT_DOWNLOAD + "?vehicle_id=" + this.vehicle_id + "&problem=" + this.problem + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
     };
-    VehicleDocumentBillPage.prototype.openCalendarPopup2 = function (det) {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.expiry_date = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
+    VehicleWorkReportPage.prototype.dismiss = function () {
+        this.viewCont.dismiss();
     };
-    VehicleDocumentBillPage = __decorate([
+    VehicleWorkReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-vehicle-document-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-document-bill/vehicle-document-bill.html"*/'<ion-content padding>\n\n  <p style="float: right !important;" (click)="dismiss()">\n    <ion-icon name="close" style="color: red !important;"></ion-icon>\n  </p>\n\n  <ion-item>\n    <ion-grid>\n      <ion-row>\n      <ion-col col-4 style="text-align: left !important;color: rgb(5, 45, 131) !important;">\n        Vehicle #\n      </ion-col>\n      <ion-col col-3 style="text-align: center !important;color: rgb(5, 45, 131) !important;">\n       Expiry Date\n      </ion-col>\n      <ion-col col-2 style="text-align: right !important;color: rgb(5, 45, 131) !important;">\n        Cost\n      </ion-col>\n      <ion-col col-3 style="text-align: center !important;color: rgb(5, 45, 131) !important;">\n        Image\n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-item>\n\n  <ion-list>\n    <ion-item *ngFor="let det of details">\n      <ion-grid>\n        <ion-row>\n        <ion-col col-4 style="text-align: left !important;color: #000 !important;">\n          {{det[\'vehicle_number\']}}\n        </ion-col>\n        <ion-col col-3 style="text-align: center !important;font-size: 10px;margin-top: 5px;font-weight: 1000;">\n          {{det[\'expiry_date\']}}\n        </ion-col>\n        <ion-col col-2 style="text-align: right !important;color: #000 !important;">\n          ₹  {{det[\'bill_amount\']}}\n        </ion-col>\n        <ion-col col-3 style="text-align: center !important;">\n          <img *ngIf="det[\'image_url\'] != null" style="width: 30%;" [src]="det[\'image_url\']" />\n          <span style="float: right;">\n            <ion-icon name="close-circle" style="color: red;padding-right: 15px;" (click)=\'removeItem(det)\'></ion-icon>\n          </span>\n        </ion-col>\n      </ion-row>\n      </ion-grid>\n    </ion-item>\n\n  </ion-list>\n\n  <ion-item>\n    <ion-grid>\n      <ion-row>\n      <ion-col col-4 style="text-align: left !important;">\n       \n      </ion-col>\n      <ion-col col-3 style="text-align: center !important;color: #000 !important;">\n       Total\n      </ion-col>\n      <ion-col col-2 style="text-align: right !important;color: #000 !important;">\n        ₹ {{total_bill}}\n      </ion-col>\n      <ion-col col-3 style="text-align: center !important;">\n        \n      </ion-col>\n    </ion-row>\n    </ion-grid>\n  </ion-item>\n\n\n\n</ion-content>\n\n\n<ion-footer>\n  <ion-grid style="padding:0px !important; ">\n    <ion-item class="label-select" style="margin-top: 0px !important;padding: 10px !important;background: white !important;">\n      <ion-label floating>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-row class="cost-camera-expiry" style="margin: 0px -6px; padding: 10px !important;background: white !important;">\n\n      <ion-col col-5 style="background: white !important;">\n        <div class="label-float" >\n          <input type="tel" [(ngModel)]="bill_amount"  placeholder=" " />\n          <label>COST</label>\n          <i class="fa fa-money" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    \n      <ion-col col-2 *ngIf="img == null" style="background: white !important;">\n        <div (click)="openCameraPopup()" class="detail-picture">\n          <i class="fa fa-camera" aria-hidden="true"></i>\n        </div>  \n      </ion-col>\n      <ion-col col-2 *ngIf="img != null" style="background: white !important;">\n        <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n        <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>       \n      </ion-col>\n      <ion-col col-5 style="background: white !important;">\n        <div class="label-float" >\n          <input type="text"  [(ngModel)]="expiry_date" (click)="openCalendarPopup2()" placeholder=" " />\n          <label>EXPIRY</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="cost-camera-expiry" style="margin: 0px -6px; padding: 10px !important;background: white !important;">\n      <ion-col col-6 style="text-align: center !important;">\n      <button ion-button class="custom-button" style="width: 80% !important;" (click)="addItem()">ADD ITEM</button>\n    </ion-col>\n    <ion-col col-6 style="text-align: center !important;">\n      <button ion-button class="custom-button" style="width: 80% !important;" (click)="saveBills()">SAVE BILLS</button>\n    </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-document-bill/vehicle-document-bill.html"*/,
+            selector: 'page-vehicle-work-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-work-report/vehicle-work-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          VEHICLE WORK REPORT\n        </ion-title>\n\n      </ion-col>\n      \n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Vehicles\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="vehicle_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{vehicle[\'vehicle_id\']}}" *ngFor="let vehicle of vehicles">\n            {{vehicle[\'vehicle_number\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Problem\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="problem">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{problem[\'problem_name\']}}" *ngFor="let problem of problems">\n            {{problem[\'problem_name\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-11 >\n      <ion-item style="margin-top: 24px;">\n        <ion-label>\n          Date Range : <span *ngIf="this.dateRange[\'from\'] != undefined"> {{this.dateRange[\'from\'] + " - " + this.dateRange[\'to\']}} </span>\n        </ion-label>\n      </ion-item>\n    </ion-col>\n    <ion-col col-1>\n      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>\n    </ion-col>\n  </ion-row>\n  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"\n              [options]="optionsMulti"\n              type="string"\n              [format]="\'YYYY-MM-DD\'">\n  </ion-calendar>\n\n  <p style="text-align: center !important;">\n    <button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n  </p>\n  \n  \n  <div id="report">\n  \n  </div>\n  \n  <p style="text-align: center;">\n    <a [href]="downloadURL">Download Report</a>\n  </p>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-work-report/vehicle-work-report.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["LoadingController"]])
-    ], VehicleDocumentBillPage);
-    return VehicleDocumentBillPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
+    ], VehicleWorkReportPage);
+    return VehicleWorkReportPage;
 }());
 
-//# sourceMappingURL=vehicle-document-bill.js.map
+//# sourceMappingURL=vehicle-work-report.js.map
 
 /***/ })
 

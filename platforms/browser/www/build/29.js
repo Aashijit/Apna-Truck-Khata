@@ -1,14 +1,14 @@
 webpackJsonp([29],{
 
-/***/ 884:
+/***/ 889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MechanicBillPageModule", function() { return MechanicBillPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PartsBillDetailsModalPageModule", function() { return PartsBillDetailsModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(958);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parts_bill_details_modal__ = __webpack_require__(967);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MechanicBillPageModule = /** @class */ (function () {
-    function MechanicBillPageModule() {
+var PartsBillDetailsModalPageModule = /** @class */ (function () {
+    function PartsBillDetailsModalPageModule() {
     }
-    MechanicBillPageModule = __decorate([
+    PartsBillDetailsModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__["a" /* MechanicBillPage */],
+                __WEBPACK_IMPORTED_MODULE_2__parts_bill_details_modal__["a" /* PartsBillDetailsModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__mechanic_bill__["a" /* MechanicBillPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__parts_bill_details_modal__["a" /* PartsBillDetailsModalPage */]),
             ],
         })
-    ], MechanicBillPageModule);
-    return MechanicBillPageModule;
+    ], PartsBillDetailsModalPageModule);
+    return PartsBillDetailsModalPageModule;
 }());
 
-//# sourceMappingURL=mechanic-bill.module.js.map
+//# sourceMappingURL=parts-bill-details-modal.module.js.map
 
 /***/ }),
 
-/***/ 958:
+/***/ 967:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MechanicBillPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartsBillDetailsModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,223 +62,166 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MechanicBillPage = /** @class */ (function () {
-    function MechanicBillPage(viewController, navCtrl, navParams, rest, codes, message, modalCtrl) {
-        var _this = this;
-        this.viewController = viewController;
+var PartsBillDetailsModalPage = /** @class */ (function () {
+    function PartsBillDetailsModalPage(navCtrl, navParams, modalCtrl, viewController, codes, message, pv) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
+        this.modalCtrl = modalCtrl;
+        this.viewController = viewController;
         this.codes = codes;
         this.message = message;
-        this.modalCtrl = modalCtrl;
-        this.vari = '';
-        this.isSelectedBill = false;
-        this.mechanics = [];
-        this.vehicles = [];
-        this.reason = '';
-        this.bills = [];
-        this.drivers = [];
-        this.bill_id = null;
-        this.worker_id = '';
-        this.person_shop_name = '';
-        this.srth_id = '';
-        this.vehicle_id = '';
-        this.km_reading = '';
-        this.bill_date = '';
-        this.worker_type = '';
-        this.total_bill = '';
-        this.bill_image_id = '';
-        this.bill_details = '';
-        this.last_maint_id = '';
-        this.opt_counte = '';
-        this.is_update = false;
-        this.img = null;
-        var upd = this.navParams.get("update");
-        if (upd == 'true') {
-            var bill = JSON.parse(localStorage.getItem("bill"));
-            this.bill_id = bill['bill_id'];
-            this.worker_id = bill['worker_id'];
-            this.person_shop_name = bill['person_shop_name'];
-            this.srth_id = bill['srth_id'];
-            this.vehicle_id = bill['vehicle_id'];
-            this.km_reading = bill['km_reading'];
-            this.bill_date = bill['bill_date'];
-            this.worker_type = bill['worker_type'];
-            this.total_bill = bill['total_bill'];
-            this.bill_image_id = bill['bill_image_id'];
-            this.bill_details = bill['bill_details'];
-            this.reason = bill['reason'];
-            this.is_update = true;
-        }
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": json[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                var dt = resp['data'];
-                for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'mechanic') {
-                        _this.mechanics.push(dt[i]);
-                    }
-                }
+        this.pv = pv;
+        this.problems = [];
+        this.bill = '';
+        this.amount = 0.00;
+        this.part_name = '';
+        this.id = '';
+        this.rate = '';
+        this.is_full = false;
+        this.work_part = '';
+        this.qty = '';
+        this.img = '';
+        if (this.navParams.get("action") == "edit") {
+            this.problems = this.navParams.get("problem_part");
+            for (var i = 0; i < this.problems[0]['parts'].length; i++) {
+                this.amount += Number(this.problems[0]['parts'][i]['total']);
             }
-        });
-        if (this.bill_id == null) {
-            this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(function (resp) {
-                if (resp['_ReturnCode'] == '0') {
-                    _this.bill_id = resp['data'];
-                }
-            });
         }
-        this.bill_id++;
-        this.getVehicles();
+        this.img = this.navParams.get("image");
+        this.bill = this.navParams.get("bill");
     }
-    MechanicBillPage.prototype.openCalendarPopup = function () {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.bill_date = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
+    PartsBillDetailsModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PartsBillDetailsModalPage');
     };
-    MechanicBillPage.prototype.getVehicles = function () {
+    PartsBillDetailsModalPage.prototype.openPartsWorkModal = function () {
         var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
+        var mdl = this.modalCtrl.create('PartsWorkModalPage');
+        mdl.onDidDismiss(function (data) {
+            _this.work_part = JSON.parse(localStorage.getItem(_this.codes.SELECTED_WORK_PART));
+            _this.part_name = _this.work_part['name'];
+        });
+        mdl.present();
+    };
+    PartsBillDetailsModalPage.prototype.removeProblem = function (problem) {
+        console.log("PROBLEM : " + JSON.stringify(this.problems));
+        if (this.problems.length == 1) {
+            this.message.displayToast('Atleast one problem is needed for the parts. Please add a different problem and then delete this.');
+            return;
+        }
+        var prblms = [];
+        var parts = [];
+        for (var i = 0; i < this.problems.length; i++) {
+            if (i == 0) {
+                parts = this.problems[i]['parts'];
             }
-        });
-    };
-    MechanicBillPage.prototype.selectMechanic = function (worker_id) {
-        for (var i = 0; i < this.mechanics.length; i++) {
-            if (this.mechanics[i]['worker_id'] == worker_id) {
-                this.person_shop_name = this.mechanics[i]['name'];
-                break;
+            if (this.problems[i]['problem_id'] == problem['problem_id']) {
+            }
+            else {
+                this.problems[i]['parts'] = parts;
+                prblms.push(this.problems[i]);
             }
         }
+        console.log("PROBLEM NEW : " + JSON.stringify(this.problems));
+        // console.debug(JSON.stringify(prblms));
+        this.problems = prblms;
     };
-    MechanicBillPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MechanicBillPage');
+    PartsBillDetailsModalPage.prototype.viewImage = function (imageUrl) {
+        this.pv.show(imageUrl, "Bill Image", { share: true });
     };
-    MechanicBillPage.prototype.openCameraPopup = function () {
+    PartsBillDetailsModalPage.prototype.removeRow = function (problem) {
+        problem['parts'].pop();
+    };
+    PartsBillDetailsModalPage.prototype.removePart = function (prt) {
+        var prts = [];
+        for (var i = 0; i < this.problems[0]['parts'].length; i++) {
+            if (this.problems[0]['parts'][i]['part_name'] != prt['part_name'])
+                prts.push(this.problems[0]['parts'][i]);
+            else if (this.problems[0]['parts'][i]['part_name'] == prt['part_name'])
+                this.amount -= Number(prt['total']);
+        }
+        this.problems[0]['parts'] = prts;
+    };
+    PartsBillDetailsModalPage.prototype.openProblemModal = function () {
         var _this = this;
-        var cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "mbills" });
-        cameraModalPage.onDidDismiss(function (resp) {
-            _this.img = JSON.parse(localStorage.getItem("selectedimage"));
-        });
-        cameraModalPage.present();
-    };
-    MechanicBillPage.prototype.selectThis = function (bill) {
-        for (var i = 0; i < this.bills.length; i++)
-            this.bills[i]['selected'] = 'false';
-        bill['selected'] = 'true';
-        this.bill_id = bill['bill_id'];
-        this.worker_id = bill['worker_id'];
-        this.person_shop_name = bill['person_shop_name'];
-        this.srth_id = bill['srth_id'];
-        this.vehicle_id = bill['vehicle_id'];
-        this.km_reading = bill['km_reading'];
-        this.bill_date = bill['bill_date'];
-        this.worker_type = bill['worker_type'];
-        this.total_bill = bill['total_bill'];
-        this.bill_image_id = bill['bill_image_id'];
-        this.bill_details = bill['bill_details'];
-        this.reason = bill['reason'];
-        this.is_update = true;
-    };
-    MechanicBillPage.prototype.change = function ($event) {
-        this.vari = $event;
-        this.isSelectedBill = true;
-    };
-    MechanicBillPage.prototype.openDetailPopup = function () {
-        var _this = this;
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
-        detailsModalPage.onDidDismiss(function (data) {
-            _this.bill_details = localStorage.getItem(_this.codes.DETAILS);
-        });
-        detailsModalPage.present();
-    };
-    MechanicBillPage.prototype.save = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "person_shop_name": this.person_shop_name,
-            "srth_id": json[0]['srth_id'],
-            "vehicle_id": this.vehicle_id,
-            "reason": this.reason,
-            "km_reading": this.km_reading,
-            "bill_date": this.bill_date,
-            "worker_type": 'mechanic',
-            "worker_id": this.worker_id,
-            "total_bill": this.total_bill,
-            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
-            "bill_details": this.bill_details,
-            "last_maint_id": 'srth-app',
-            "opt_counter": '0'
-        };
-        this.rest.post(this.codes.ADD_EXPENSE_BILL, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.worker_id = '';
-                _this.person_shop_name = '';
-                _this.vehicle_id = '';
-                _this.km_reading = '';
-                _this.bill_date = '';
-                _this.worker_type = '';
-                _this.total_bill = '';
-                _this.bill_image_id = '';
-                _this.bill_details = '';
-                _this.img = null;
-                if (_this.img != null)
-                    resp['data']['image_content'] = _this.img['image_content'];
-                _this.bills.push(resp['data']);
-                for (var i = 0; i < _this.bills.length; i++)
-                    _this.bills[i]['selected'] = 'false';
+        var problemModal = this.modalCtrl.create('ProblemWorkPartModalPage', { "problems": this.problems });
+        problemModal.onDidDismiss(function (data) {
+            _this.problems = JSON.parse(localStorage.getItem("problem_id"));
+            console.log("PROBLEMS GOT : " + JSON.stringify(_this.problems));
+            var parts = [];
+            for (var i = 0; i < _this.problems.length; i++) {
+                if (_this.problems[i]['parts'] != undefined && _this.problems[i]['parts'] != null) {
+                    parts = _this.problems[i]['parts'];
+                }
+                else
+                    _this.problems[i]['parts'] = [];
             }
+            // for(let i=0;i<this.problems.length;i++){
+            //   this.problems[i]['parts'] = parts;
+            // }
         });
+        problemModal.present();
     };
-    MechanicBillPage.prototype.updateBill = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "bill_id": this.bill_id,
-            "person_shop_name": this.person_shop_name,
-            "srth_id": json[0]['srth_id'],
-            "vehicle_id": this.vehicle_id,
-            "reason": this.reason,
-            "km_reading": this.km_reading,
-            "bill_date": this.bill_date,
-            "worker_type": 'mechanic',
-            "worker_id": this.worker_id,
-            "total_bill": this.total_bill,
-            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
-            "bill_details": this.bill_details,
-            "last_maint_id": 'srth-app',
-            "opt_counter": '0'
-        };
-        this.rest.post(this.codes.UPDATE_BILL_EXPENSE, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.message.displayToast('The bill has been successfully updated');
-                _this.navCtrl.pop();
+    PartsBillDetailsModalPage.prototype.savePartsBill = function () {
+        for (var i = 0; i < this.problems.length; i++) {
+            this.problems[i]['bill_id'] = this.bill['bill_id'];
+        }
+        localStorage.setItem("problem_part", JSON.stringify(this.problems));
+        this.viewController.dismiss();
+    };
+    PartsBillDetailsModalPage.prototype.addPartsBill = function () {
+        if (this.problems.length == 0) {
+            this.message.displayToast('You need to add a problem and then add the parts.');
+            return;
+        }
+        for (var i = 0; i < this.problems.length; i++) {
+            var parts = {};
+            if (this.is_full)
+                parts = {
+                    "part_name": this.part_name,
+                    "rate_per_pc": this.rate,
+                    "is_full": this.is_full,
+                    "qty": this.qty,
+                    "id": this.id == '' ? (new Date().getTime()) : '',
+                    "total": this.rate
+                };
+            else
+                parts = {
+                    "part_name": this.part_name,
+                    "rate_per_pc": this.rate,
+                    "is_full": this.is_full,
+                    "qty": this.qty,
+                    "id": this.id == '' ? (new Date().getTime()) : '',
+                    "total": Number(this.rate) * Number(this.qty)
+                };
+            if (i == 0) {
+                this.amount += Number(parts['total']);
+                if (this.amount > Number(this.bill['total_bill'])) {
+                    this.message.displayToast('The amount is crossing the bill amount! Cannot be added.');
+                    this.amount -= Number(parts['total']);
+                    return;
+                }
             }
-        });
+            this.problems[i]['parts'].push(parts);
+            console.log("PROBLEM : " + i + " :::: " + JSON.stringify(this.problems));
+        }
+        this.part_name = '';
+        this.rate = '';
+        this.is_full = false;
+        this.qty = '';
+        this.id = '';
     };
-    MechanicBillPage = __decorate([
+    PartsBillDetailsModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-mechanic-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>\n          MECHANIC BILL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu" >\n       \n        <!-- <a href="#home">PERSON NAME</a> -->\n        <a href="#home">MECHANIC NAME</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">DATE OF BILL</a>\n        <a href="#about">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n        \n        <div [ngClass]="bl[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bl of bills">\n        <div (click)="selectThis(bl)">\n          <!-- <p>Ajay Das </p> -->\n          <p>{{bl[\'person_shop_name\']}}</p>\n          <p>{{bl[\'bill_id\']}}</p>\n          <p>{{bl[\'vehicle_id\']}}</p>\n          <p>{{bl[\'bill_date\']}}</p>\n          <p>{{bl[\'total_bill\']}}</p>\n          <p>{{bl[\'bill_details\']}}</p>\n          <p><img [src]="bl[\'image_content\']" imageViewer style="width: 11% !important;"/></p>\n        </div>\n        </div>\n  \n        </div>\n    \n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select">\n      <ion-label interface="action-sheet" floating>SELECT MECHANIC</ion-label>\n\n      <ion-select [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">\n        <ion-option value="{{me[\'worker_id\']}}" *ngFor="let me of mechanics" >{{me[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n\n\n    <ion-item class="label-select">\n      <ion-label floating>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>\n      <label>DATE OF PURCHASE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    \n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL BILL ₹</label>\n      <i class="fa fa-money" aria-hidden="true"></i>\n\n    </div>\n\n    \n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_content\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!is_update" (click)="save()"> SAVE</button>\n\n  </div>\n  <ion-row>\n  <ion-col col-12 class="text-center">\n    <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateBill()">Update</button>\n  </ion-col>\n</ion-row>\n\n\n</ion-content> '/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/,
+            selector: 'page-parts-bill-details-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/parts-bill-details-modal/parts-bill-details-modal.html"*/'<ion-content padding>\n      <div class="label-float" style="padding-top: 8px;" (click)="openProblemModal()">\n        <input type="text"  placeholder=" " />\n        <label>PROBLEM/WORK(PART & ID)</label>\n      </div>\n\n      <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n        <ion-chip *ngFor="let problem of problems" style="margin-right: 5px !important; margin-left: 5px !important;">\n          <ion-label  >{{problem[\'problem_name\']+" "+problem[\'vehicle_part_name\']+" "+problem[\'vehicle_part_id\']}}</ion-label>\n          <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeProblem(problem)"></ion-icon>\n        </ion-chip>\n        </p>\n\n        <ion-row>\n          <ion-col col-6>\n            <ion-badge color="primary">Bill Amount : ₹ {{bill[\'total_bill\']}}  </ion-badge>\n          </ion-col>\n          <ion-col col-6>\n            <ion-badge color="danger">Sub Amount : ₹ {{amount}}  </ion-badge>\n          </ion-col>\n        </ion-row>\n        \n\n        <ion-list *ngIf="problems.length > 0 && problems[0][\'parts\'] != undefined">\n          <ion-item *ngFor="let prt of problems[0][\'parts\']">\n            <ion-grid class="pd-0">\n              <ion-row>\n                <ion-col col-4 class="pd-0">\n                  <p style="font-weight: 1000; font-size: 10px !important; margin-left: 17px !important;">\n                  {{prt[\'part_name\']}}\n                  </p>\n                  <p style="font-size: 8px; font-weight: 1000 !important;margin-left: 17px !important;">\n                    {{prt[\'id\']}}\n                  </p>\n                </ion-col>\n\n                <ion-col col-4 class="pd-0">\n                  <p style="text-align: right;font-size: 10px !important;">\n                  ₹ {{prt[\'rate_per_pc\']}}\n                  <sup *ngIf="prt[\'is_full\']">Full</sup>\n                  <sup *ngIf="!prt[\'is_full\']">Per pc</sup>\n                  </p>\n                  <p style="text-align: right;font-size: 10px !important;">\n                    Qty:{{prt[\'qty\']}}\n                  </p>\n                </ion-col>\n\n                <ion-col col-2 class="pd-0" style="text-align: right;font-size: 10px !important;">\n                  ₹ {{prt[\'total\']}}\n                </ion-col>\n                <ion-col col-2 class="pd-0" (click)="removePart(prt)">\n                  <ion-icon name="close-circle" color="danger" class="icon-cust"></ion-icon>\n                </ion-col>\n              </ion-row>\n            </ion-grid>\n          </ion-item>\n        </ion-list>\n</ion-content>\n\n<ion-footer style="background: #fff; border-radius: 10px !important;">\n\n  <ion-grid >\n\n    <ion-row>\n      <ion-col col-6 class="pd" style="padding-right: 3px !important;">\n        <div class="label-float" (click)="openPartsWorkModal()">\n          <input type="text" [(ngModel)]="part_name" />\n          <label>Parts</label>\n          <i class="fa fa-chevron-down" aria-hidden="true"></i>\n        </div>\n      </ion-col>\n      <ion-col col-6 class="pd" style="padding-left: 3px !important;">\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="id" />\n          <label>ID</label>\n        </div>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4 class="pd" style="padding-right: 0px !important;">\n        <div class="label-float" >\n          <input type="tel" [(ngModel)]="qty" />\n          <label>Qty</label>\n        </div>\n      </ion-col>\n      <ion-col col-4 class="pd" >\n        <ion-toggle [(ngModel)]="is_full"></ion-toggle>\n        <p>\n          PC/FULL\n        </p>\n      </ion-col>\n      <ion-col col-4 class="pd" style="padding-left: 0px !important;">\n        <div class="label-float" >\n          <input type="tel" [(ngModel)]="rate" />\n          <label>RATE</label>\n        </div>\n      </ion-col>\n    </ion-row>\n\n\n  </ion-grid>\n\n\n\n  <div class="mt-4 text-center">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-4>\n          <button ion-button round class="custom-button" (click)="savePartsBill()">SAVE\n          </button>\n        </ion-col>\n        <ion-col col-4>\n          <button ion-button round class="custom-button" (click)="addPartsBill()">ADD\n          </button>\n        </ion-col>\n        <ion-col col-4 *ngIf="img != null || img != undefined"> \n          <img [src]="img[\'image_url\']" (click)="viewImage(img[\'image_url\'])" style="width: 30%;border: 2px solid #1e53b5;" />\n          <!-- <button ion-button round class="custom-button" disabled="true">BILL IMG\n          </button> -->\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n  </div>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/parts-bill-details-modal/parts-bill-details-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
-    ], MechanicBillPage);
-    return MechanicBillPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_message_message__["a" /* MessageProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], PartsBillDetailsModalPage);
+    return PartsBillDetailsModalPage;
 }());
 
-//# sourceMappingURL=mechanic-bill.js.map
+//# sourceMappingURL=parts-bill-details-modal.js.map
 
 /***/ })
 
