@@ -38,6 +38,19 @@
         <button ion-button round class=" all-button" >ALL</button>
       </ion-col>
     </ion-row> -->
+    
+    <ion-row>
+      <ion-col col-4 class="text-center">
+        <button ion-button round [ngClass]="ok == true ? 'ok-button-selected' : 'ok-button'" (click)="displayOk()">OK</button>
+      </ion-col>
+      <ion-col col-4 class="text-center">
+        <button ion-button round [ngClass]="expired == true ? 'problem-button-selected' : 'problem-button'" (click)="displayExpired()">EXPIRED</button>
+      </ion-col>
+      <ion-col col-4 class="text-center">
+        <button ion-button round [ngClass]="all == true ? 'all-button-selected' : 'all-button'" (click)="displayALL()">ALL</button>
+      </ion-col>
+    </ion-row>
+
 
     <div class="custom-searchbar-div" style="position: relative;">
       <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH PERSON NAME, BILL NUMBER"></ion-searchbar>
@@ -74,6 +87,7 @@
         <a href="#support">DETAIL</a>
     
         <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bill of filterbills" (click)="selectThis(bill)">
+          <div *ngIf="ok && !bill['is_expired']">
           <p>{{bill['bill_id']}}</p>
           <p>{{bill['person_shop_name']}}</p>
           <p>
@@ -83,9 +97,34 @@
           </p>
           <p>{{bill['bill_date']}}</p>
           <p>{{bill['total_bill']}}</p>
-          <!-- <p>RS 400</p> -->
           <p>{{bill['bill_details']}}</p>
-     
+        </div>
+
+        <div *ngIf="expired && bill['is_expired']">
+          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['person_shop_name']}}</p>
+          <p>
+            <span *ngFor="let vh of bill['details']">
+            {{vh['vehicle_detail']['vehicle_number'] + "  "}}
+          </span>
+          </p>
+          <p>{{bill['bill_date']}}</p>
+          <p>{{bill['total_bill']}}</p>
+          <p>{{bill['bill_details']}}</p>
+        </div>
+
+        <div *ngIf="all">
+          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['person_shop_name']}}</p>
+          <p>
+            <span *ngFor="let vh of bill['details']">
+            {{vh['vehicle_detail']['vehicle_number'] + "  "}}
+          </span>
+          </p>
+          <p>{{bill['bill_date']}}</p>
+          <p>{{bill['total_bill']}}</p>
+          <p>{{bill['bill_details']}}</p>
+        </div>
         </div>
   
      

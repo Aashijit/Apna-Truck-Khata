@@ -227,6 +227,9 @@ export class DocumentRenewalPage {
       this.bill_details = '';
       this.total_bill = 0;
       if (resp['_ReturnCode'] == '0') {
+
+        this.bill_id = Number(resp['data']['bill_id']) + 1;
+
         if (this.img != null)
           resp['data']['image_content'] = this.img['image_content'];
         this.bills.push(resp['data']);

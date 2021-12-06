@@ -1,22 +1,28 @@
 page-add-document-bill {
-  .expired-button {
-    color: red;
-  }
-  .ok-button {
-    color: green;
-  }
-  .all-button {
-    color: #0752af;
-  }
 
-  .ok-button,
-  .expired-button,
-  .all-button {
-    width: 90px;
-    //margin-top: 20px;
+
+  .ok-button-selected,
+  .problem-button-selected,
+  .all-button-selected {
+    width: 100px;
     background: #fff;
     border: 0.5px solid #0752af;
     font-weight: 1000 !important;
+  }
+
+  .problem-button-selected {
+    color: white;
+    background: red !important;
+  }
+
+  .ok-button-selected {
+    color: white;
+    background: green !important;
+  }
+
+  .all-button-selected {
+    color: white;
+    background: #0752af !important;
   }
 
   .document-button {
