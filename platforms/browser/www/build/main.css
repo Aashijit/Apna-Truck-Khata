@@ -29468,25 +29468,28 @@ page-add-complaints .complaint label {
   }
 }
 
-page-add-document-bill .expired-button {
-  color: red;
-}
-
-page-add-document-bill .ok-button {
-  color: green;
-}
-
-page-add-document-bill .all-button {
-  color: #0752af;
-}
-
-page-add-document-bill .ok-button,
-page-add-document-bill .expired-button,
-page-add-document-bill .all-button {
-  width: 90px;
+page-add-document-bill .ok-button-selected,
+page-add-document-bill .problem-button-selected,
+page-add-document-bill .all-button-selected {
+  width: 100px;
   background: #fff;
   border: 0.5px solid #0752af;
   font-weight: 1000 !important;
+}
+
+page-add-document-bill .problem-button-selected {
+  color: white;
+  background: red !important;
+}
+
+page-add-document-bill .ok-button-selected {
+  color: white;
+  background: green !important;
+}
+
+page-add-document-bill .all-button-selected {
+  color: white;
+  background: #0752af !important;
 }
 
 page-add-document-bill .document-button div {
@@ -29637,6 +29640,10 @@ page-add-driver .box {
   border-width: thin;
   border-style: solid;
   border-radius: 3px;
+}
+
+page-add-driver .img-buttons {
+  height: auto !important;
 }
 
 page-add-driver .label-select {

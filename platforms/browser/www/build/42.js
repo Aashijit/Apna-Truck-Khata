@@ -245,7 +245,6 @@ var DriverPage = /** @class */ (function () {
         };
         var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
         cameraModalPage.onDidDismiss(function (resp) {
-            alert(localStorage.getItem("selectedimage"));
             if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
                 _this.img = JSON.parse(localStorage.getItem("selectedimage"));
             else

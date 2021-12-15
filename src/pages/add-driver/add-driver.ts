@@ -29,12 +29,18 @@ export class AddDriverPage {
     aadhar_card_number : any = '';
     aadhar_card_front_image_id : any = '0';
     aadhar_card_back_image_id : any = '0';
+    aadhar_card_front_image : any = null;
+    aadhar_card_back_image : any = null;
     pan_card_number : any = '';
     pan_card_front_image_id : any = '0';
     pan_card_back_image_id : any = '0';
+    pan_card_front_image : any = null;
+    pan_card_back_image : any = null;
     license_number : any ='';
     license_card_front_image_id : any = '0';
     license_card_back_image_id : any = '0';
+    license_card_front_image : any = null;
+    license_card_back_image : any = null;
     account_number :any = '';
     ifsc : any = '';
     reference_person :any = '';
@@ -49,6 +55,9 @@ export class AddDriverPage {
     profile_image_id : any = '0';
     extra_image_1_id : any = '0';
     extra_image_2_id : any = '0';
+    profile_image : any = null;
+    extra_image_1 : any = null;
+    extra_image_2 : any = null;
     last_maint_id : any = 'srth-app';
     opt_counter : any = '0';
 
@@ -116,6 +125,84 @@ export class AddDriverPage {
 
   choosePerson($event){
     this.typeOfPerson = $event;
+  }
+
+  openCameraPopup(num, type) {
+    if(this.worker_type == '' || this.worker_type == null) {
+      this.message.displayToast("Please select worker type");
+      return;
+    }
+    var data = {
+      "worker_type":this.worker_type,
+      "doc":type
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"mechanic",
+      "worker_id":this.worker_id,
+      "document_type":"profile",
+      "type":"profileimage",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+
+    var img = null;
+
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':null});
+
+
+
+
+    cameraModalPage.onDidDismiss(resp => {
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        {
+          img = JSON.parse(localStorage.getItem("selectedimage"));
+          if(type == 'Pancard') {
+            if(num == 1) {
+              this.pan_card_front_image_id = img['image_id'];
+              this.pan_card_front_image = img['image_url'];
+            } else {
+              this.pan_card_back_image_id = img['image_id'];
+              this.pan_card_back_image = img['image_url'];
+            }
+      
+          } else if(type == 'Aadharcard') {
+            if(num == 1) {
+              this.aadhar_card_front_image_id = img['image_id'];
+              this.aadhar_card_front_image = img['image_url'];
+            } else {
+              this.aadhar_card_back_image_id = img['image_id'];
+              this.aadhar_card_back_image = img['image_url'];
+            }
+      
+          }
+          else if(type == 'LicenseImage') {
+            if(num == 1) {
+              this.license_card_front_image_id = img['image_id'];
+              this.license_card_front_image = img['image_url'];
+            } else {
+              this.license_card_back_image_id = img['image_id'];
+              this.license_card_back_image = img['image_url'];
+            }
+          }
+          else if(type == 'Profile') {
+            if(num == 0) {
+              this.profile_image_id = img['image_id'];
+              this.profile_image = img['image_url'];
+            } 
+          } else if(type == 'CancelledCheque') {
+            if(num == 0) {
+              this.profile_image_id = img['image_id'];
+              this.profile_image = img['image_url'];
+            } 
+          }
+      
+        }
+    });
+    
+    cameraModalPage.present();
   }
 
   storeImage(num, type){
