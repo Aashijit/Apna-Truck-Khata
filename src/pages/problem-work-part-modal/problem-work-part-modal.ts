@@ -2,6 +2,7 @@ import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { ParseSourceFile } from '@angular/compiler';
 
 @IonicPage()
 @Component({
@@ -80,8 +81,17 @@ export class ProblemWorkPartModalPage {
 
   problemsSelected(){
     var prblems = [];
+    //Fetch the parts
+    var parts = [];
+    for(let i=0;i<this.problems.length;i++) {
+      if(this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null && this.problems[i]['parts'] != []) {
+        parts = this.problems[i]['parts'];
+        break;
+      }
+    }
     for(let i=0;i<this.problems.length;i++){
       if(this.problems[i]['selected'] == true){
+        this.problems[i]['parts'] = parts;
         prblems.push(this.problems[i]);
       }
     }

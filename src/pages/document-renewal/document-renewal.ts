@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { AddDocumentBillPage } from '../add-document-bill/add-document-bill';
 import { ThrowStmt } from '@angular/compiler';
+import { FromEventObservable } from 'rxjs/observable/FromEventObservable';
 
 
 @IonicPage()
@@ -127,7 +128,9 @@ export class DocumentRenewalPage {
           "bill_id": this.bill_id,
           "vehicle_id": this.details[i]['vehicle_id'],
           "expiry_date": this.details[i]['expiry_date'],
-          "total_bill": this.details[i]['bill_amount']
+          "total_bill": this.details[i]['bill_amount'],
+          "person_shop_name":this.person_shop_name
+
         };
         // console.error("Vehicle number : " + JSON.stringify(this.details[i]));
         if (this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
@@ -152,6 +155,62 @@ export class DocumentRenewalPage {
     this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(resp => {
       if (resp['_ReturnCode'] == '0') {
         this.vehicles = resp['data'];
+      }
+    });
+  }
+
+  updateBill() {
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+
+    var data = {
+      "person_shop_name": this.person_shop_name,
+      "srth_id": json[0]['srth_id'],
+      "vehicle_id": this.vehicle_id,
+      "reason": this.document['document_name'],
+      "km_reading": this.km_reading,
+      "bill_date": this.bill_date,
+      "worker_type": this.worker_type,
+      "worker_id": this.worker_id,
+      "total_bill": this.total_bill,
+      "bill_image_id": this.img != null ? this.img['image_id'] : '0',
+      "bill_details": this.bill_details,
+      "last_maint_id": 'srth-app',
+      "opt_counter": '0',
+      "expiry_date": this.expiry_date,
+      "details": this.details
+    };
+
+    if (this.is_update == true)
+      data['bill_id'] = this.bill_id;
+
+    this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(resp => {
+      this.bill_date = '';
+      this.km_reading = '';
+      this.bill_details = '';
+      this.total_bill = 0;
+      if (resp['_ReturnCode'] == '0') {
+        this.is_update = false;
+
+        this.bill_id = Number(resp['data']['bill_id']) + 1;
+
+        if (this.img != null)
+          resp['data']['image_content'] = this.img['image_content'];
+
+        this.bills = [];
+        resp['data']['details'] = this.details; 
+
+        var exp_date = "";
+        for(let j=0;j<this.details.length;j++) {
+          exp_date += this.details[j]['expiry_date'] + " ";
+        }
+
+        resp['data']['expiry_date'] = exp_date;
+
+        this.bills.push(resp['data']);
+        for (let i = 0; i < this.bills.length; i++)
+          this.bills[i]['selected'] = 'false';
+
+          this.details = [];
       }
     });
   }
@@ -221,7 +280,6 @@ export class DocumentRenewalPage {
       data['bill_id'] = this.bill_id;
 
     this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(resp => {
-      this.details = [];
       this.bill_date = '';
       this.km_reading = '';
       this.bill_details = '';
@@ -232,9 +290,21 @@ export class DocumentRenewalPage {
 
         if (this.img != null)
           resp['data']['image_content'] = this.img['image_content'];
+
+        this.bills = [];
+        var exp_date = "";
+        for(let j=0;j<this.details.length;j++) {
+          exp_date += this.details[j]['expiry_date'] + " ";
+        }
+
+        resp['data']['expiry_date'] = exp_date;
+
+        resp['data']['details'] = this.details;
         this.bills.push(resp['data']);
         for (let i = 0; i < this.bills.length; i++)
           this.bills[i]['selected'] = 'false';
+
+          this.details = [];
       }
     });
   }
@@ -275,16 +345,18 @@ export class DocumentRenewalPage {
   selectThis(bl) {
     if (bl != undefined && bl != null) {
       this.is_update = true;
-      this.details = bl['details'] == undefined ? [] : bl['details'];
+      
+      this.details = bl['details'] == undefined ? this.details : bl['details'];
+      // alert(JSON.stringify(this.details));
       this.bill_id = bl['bill_id'];
       this.worker_id = bl['worker_id'];
       this.person_shop_name = bl['person_shop_name'];
       this.srth_id = bl['srth_id'];
       this.km_reading = bl['km_reading'];
-      this.bill_date = bl['bill_date'];
+      this.bill_date = bl['bill_date'] == undefined ? this.bill_date : bl['bill_date'];
       this.worker_type = bl['worker_type'];
       this.total_bill = bl['total_bill'];
-      this.bill_details = bl['bill_details'];
+      this.bill_details = bl['bill_details'] == undefined ? this.bill_details : bl['bill_details'];
     }
 
     for (let i = 0; i < this.bills.length; i++)

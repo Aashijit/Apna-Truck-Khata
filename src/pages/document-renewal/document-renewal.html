@@ -31,13 +31,13 @@
         <a href="#support">COST</a>
 
         <div *ngFor="let bill of bills" (click)="selectThis(bill)">
-          <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list' : 'scrollmenu-list selected'">
+          <!-- <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list' : 'scrollmenu-list selected'"> -->
             <p>{{bill['bill_id']}}</p>
             <p>{{bill['person_shop_name']}}</p>
             <p>{{vehicle_string}}</p>
             <p>{{bill['expiry_date']}}</p>
             <p>₹ {{bill['total_bill']}}</p>
-          </div>
+          <!-- </div> -->
         </div>
 
       </div>
@@ -122,8 +122,11 @@
 
   </div>
 
-  <div class="text-center mt-4">
+  <div class="text-center mt-4" *ngIf="!is_update">
     <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>
+  </div>
+  <div class="text-center mt-4" *ngIf="is_update">
+    <button ion-button round class="custom-button" (click)="updateBill()"> UPDATE</button>
   </div>
 
 </ion-content>

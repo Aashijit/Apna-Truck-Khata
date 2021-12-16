@@ -21,10 +21,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CodesProvider = /** @class */ (function () {
     function CodesProvider(http) {
         this.http = http;
-        this.BASE_URL = "http://127.0.0.1:8000/api/";
+        this.BASE_URL_PROD = "http://127.0.0.1:8000/api/";
         this.BASE_URL_SERV_1 = "https://www.manpuriaproducts.org/saarthi/public/index.php/api/";
         this.BASE_URL_SERV_2 = "https://api.fastdeliveryindia.com/public/index.php/api/";
-        this.BASE_URL_PROD = "https://www.atkindia.com/public/index.php/api/";
+        this.BASE_URL = "https://www.atkindia.com/public/index.php/api/";
         this.BASE_URL_REPORT = "http://report.atkindia.com/public/api/";
         this.BASE_URL_REPORT_DOWNLOAD = "http://report.atkindia.com/public/";
         this.BASE_URL_REPORT_TEST = "http://127.0.0.1:8001/api/";
@@ -150,11 +150,11 @@ webpackEmptyAsyncContext.id = 170;
 
 var map = {
 	"../pages/about/about.module": [
-		841,
+		842,
 		76
 	],
 	"../pages/account-khata/account-khata.module": [
-		842,
+		841,
 		75
 	],
 	"../pages/add-complaints/add-complaints.module": [
@@ -162,11 +162,11 @@ var map = {
 		74
 	],
 	"../pages/add-document-bill/add-document-bill.module": [
-		845,
+		844,
 		73
 	],
 	"../pages/add-driver-expenses/add-driver-expenses.module": [
-		844,
+		845,
 		72
 	],
 	"../pages/add-driver/add-driver.module": [
@@ -174,11 +174,11 @@ var map = {
 		71
 	],
 	"../pages/add-mechanic/add-mechanic.module": [
-		847,
+		848,
 		70
 	],
 	"../pages/add-more-modal/add-more-modal.module": [
-		848,
+		847,
 		69
 	],
 	"../pages/add-new-bank-account/add-new-bank-account.module": [
@@ -206,7 +206,7 @@ var map = {
 		64
 	],
 	"../pages/bill-details/bill-details.module": [
-		858,
+		856,
 		63
 	],
 	"../pages/bill-payment-search/bill-payment-search.module": [
@@ -214,19 +214,19 @@ var map = {
 		62
 	],
 	"../pages/buy-details-search-modal/buy-details-search-modal.module": [
-		856,
+		857,
 		61
 	],
 	"../pages/buy-from-shop/buy-from-shop.module": [
-		857,
+		858,
 		60
 	],
 	"../pages/calendar-modal/calendar-modal.module": [
-		860,
+		859,
 		59
 	],
 	"../pages/camera-modal/camera-modal.module": [
-		859,
+		860,
 		58
 	],
 	"../pages/change-driver/change-driver.module": [
@@ -234,19 +234,19 @@ var map = {
 		57
 	],
 	"../pages/complaints-khata/complaints-khata.module": [
-		865,
+		863,
 		56
 	],
 	"../pages/complaints-update/complaints-update.module": [
-		864,
+		862,
 		55
 	],
 	"../pages/contact/contact.module": [
-		862,
+		864,
 		54
 	],
 	"../pages/decision-modal/decision-modal.module": [
-		863,
+		865,
 		53
 	],
 	"../pages/details-modal/details-modal.module": [
@@ -258,15 +258,15 @@ var map = {
 		51
 	],
 	"../pages/document-bill-report/document-bill-report.module": [
-		868,
+		869,
 		50
 	],
 	"../pages/document-date-report/document-date-report.module": [
-		870,
+		868,
 		49
 	],
 	"../pages/document-renewal/document-renewal.module": [
-		869,
+		870,
 		48
 	],
 	"../pages/document/document.module": [
@@ -278,11 +278,11 @@ var map = {
 		46
 	],
 	"../pages/driver-document/driver-document.module": [
-		873,
+		874,
 		45
 	],
 	"../pages/driver-khata-search/driver-khata-search.module": [
-		874,
+		873,
 		44
 	],
 	"../pages/driver-khata/driver-khata.module": [
@@ -294,11 +294,11 @@ var map = {
 		42
 	],
 	"../pages/edit-other-document-name/edit-other-document-name.module": [
-		878,
+		877,
 		41
 	],
 	"../pages/edit-profile/edit-profile.module": [
-		877,
+		878,
 		40
 	],
 	"../pages/exchange-modal/exchange-modal.module": [
@@ -306,51 +306,51 @@ var map = {
 		39
 	],
 	"../pages/full-report/full-report.module": [
-		880,
+		881,
 		38
 	],
 	"../pages/home/home.module": [
-		881,
+		883,
 		37
 	],
 	"../pages/init/init.module": [
-		882,
+		880,
 		36
 	],
 	"../pages/insurance/insurance.module": [
-		883,
+		885,
 		35
 	],
 	"../pages/language/language.module": [
-		884,
+		882,
 		34
 	],
 	"../pages/ledger/ledger.module": [
-		885,
+		884,
 		33
 	],
 	"../pages/mechanic-bill/mechanic-bill.module": [
-		886,
+		887,
 		32
 	],
 	"../pages/mechanic-khata/mechanic-khata.module": [
-		887,
+		886,
 		31
 	],
 	"../pages/mechanic/mechanic.module": [
-		888,
+		889,
 		30
 	],
 	"../pages/parts-bill-details-modal/parts-bill-details-modal.module": [
-		889,
+		888,
 		29
 	],
 	"../pages/parts-work-modal/parts-work-modal.module": [
-		890,
+		891,
 		28
 	],
 	"../pages/problem-modal/problem-modal.module": [
-		891,
+		890,
 		27
 	],
 	"../pages/problem-work-part-modal/problem-work-part-modal.module": [
@@ -358,23 +358,23 @@ var map = {
 		26
 	],
 	"../pages/profile/profile.module": [
-		893,
+		894,
 		25
 	],
 	"../pages/reason-modal/reason-modal.module": [
-		895,
+		893,
 		24
 	],
 	"../pages/remove-driver-from-account/remove-driver-from-account.module": [
-		894,
+		896,
 		23
 	],
 	"../pages/remove-driver/remove-driver.module": [
-		897,
+		895,
 		22
 	],
 	"../pages/report-all-comp/report-all-comp.module": [
-		896,
+		897,
 		21
 	],
 	"../pages/report-full/report-full.module": [
@@ -390,11 +390,11 @@ var map = {
 		18
 	],
 	"../pages/security-and-backup/security-and-backup.module": [
-		901,
+		902,
 		17
 	],
 	"../pages/settings/settings.module": [
-		902,
+		901,
 		16
 	],
 	"../pages/shop-bill-description/shop-bill-description.module": [
@@ -406,27 +406,27 @@ var map = {
 		14
 	],
 	"../pages/shop-khata/shop-khata.module": [
-		906,
+		905,
 		13
 	],
 	"../pages/shop/shop.module": [
-		905,
+		906,
 		12
 	],
 	"../pages/tabs/tabs.module": [
-		907,
+		908,
 		11
 	],
 	"../pages/upload-image/upload-image.module": [
-		908,
+		907,
 		10
 	],
 	"../pages/vehicle-bill-report/vehicle-bill-report.module": [
-		909,
+		910,
 		9
 	],
 	"../pages/vehicle-details/vehicle-details.module": [
-		910,
+		909,
 		8
 	],
 	"../pages/vehicle-document-bill/vehicle-document-bill.module": [
@@ -665,14 +665,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/about/about.module#HomePageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/account-khata/account-khata.module#AccountKhataPageModule', name: 'AccountKhataPage', segment: 'account-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/about/about.module#HomePageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-complaints/add-complaints.module#AddComplaintsPageModule', name: 'AddComplaintsPage', segment: 'add-complaints', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/add-driver-expenses/add-driver-expenses.module#AddDriverExpensesPageModule', name: 'AddDriverExpensesPage', segment: 'add-driver-expenses', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-document-bill/add-document-bill.module#AddDocumentBillPageModule', name: 'AddDocumentBillPage', segment: 'add-document-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-driver-expenses/add-driver-expenses.module#AddDriverExpensesPageModule', name: 'AddDriverExpensesPage', segment: 'add-driver-expenses', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-driver/add-driver.module#AddDriverPageModule', name: 'AddDriverPage', segment: 'add-driver', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/add-mechanic/add-mechanic.module#AddMechanicPageModule', name: 'AddMechanicPage', segment: 'add-mechanic', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-more-modal/add-more-modal.module#AddMoreModalPageModule', name: 'AddMoreModalPage', segment: 'add-more-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-mechanic/add-mechanic.module#AddMechanicPageModule', name: 'AddMechanicPage', segment: 'add-mechanic', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-new-bank-account/add-new-bank-account.module#AddNewBankAccountPageModule', name: 'AddNewBankAccountPage', segment: 'add-new-bank-account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-permit/add-permit.module#AddPermitPageModule', name: 'AddPermitPage', segment: 'add-permit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-vehicle/add-vehicle.module#AddVehiclePageModule', name: 'AddVehiclePage', segment: 'add-vehicle', priority: 'low', defaultHistory: [] },
@@ -680,61 +680,61 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/allot-driver/allot-driver.module#AllotDriverPageModule', name: 'AllotDriverPage', segment: 'allot-driver', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bill-description/bill-description.module#BillDescriptionPageModule', name: 'BillDescriptionPage', segment: 'bill-description', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bill-payment-search/bill-payment-search.module#BillPaymentSearchPageModule', name: 'BillPaymentSearchPage', segment: 'bill-payment-search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/bill-details/bill-details.module#BillDetailsPageModule', name: 'BillDetailsPage', segment: 'bill-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/buy-details-search-modal/buy-details-search-modal.module#BuyDetailsSearchModalPageModule', name: 'BuyDetailsSearchModalPage', segment: 'buy-details-search-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/buy-from-shop/buy-from-shop.module#BuyFromShopPageModule', name: 'BuyFromShopPage', segment: 'buy-from-shop', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/bill-details/bill-details.module#BillDetailsPageModule', name: 'BillDetailsPage', segment: 'bill-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/camera-modal/camera-modal.module#CameraModalPageModule', name: 'CameraModalPage', segment: 'camera-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/calendar-modal/calendar-modal.module#CalendarModalPageModule', name: 'CalendarModalPage', segment: 'calendar-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/camera-modal/camera-modal.module#CameraModalPageModule', name: 'CameraModalPage', segment: 'camera-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/change-driver/change-driver.module#ChangeDriverPageModule', name: 'ChangeDriverPage', segment: 'change-driver', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/decision-modal/decision-modal.module#DecisionModalPageModule', name: 'DecisionModalPage', segment: 'decision-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/complaints-update/complaints-update.module#ComplaintsUpdatePageModule', name: 'ComplaintsUpdatePage', segment: 'complaints-update', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/complaints-khata/complaints-khata.module#ComplaintsKhataPageModule', name: 'ComplaintsKhataPage', segment: 'complaints-khata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/decision-modal/decision-modal.module#DecisionModalPageModule', name: 'DecisionModalPage', segment: 'decision-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/details-modal/details-modal.module#DetailsModalPageModule', name: 'DetailsModalPage', segment: 'details-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/document-and-insurance/document-and-insurance.module#DocumentAndInsurancePageModule', name: 'DocumentAndInsurancePage', segment: 'document-and-insurance', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/document-date-report/document-date-report.module#DocumentDateReportPageModule', name: 'DocumentDateReportPage', segment: 'document-date-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/document-bill-report/document-bill-report.module#DocumentBillReportPageModule', name: 'DocumentBillReportPage', segment: 'document-bill-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/document-renewal/document-renewal.module#DocumentRenewalPageModule', name: 'DocumentRenewalPage', segment: 'document-renewal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/document-date-report/document-date-report.module#DocumentDateReportPageModule', name: 'DocumentDateReportPage', segment: 'document-date-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/document/document.module#DocumentPageModule', name: 'DocumentPage', segment: 'document', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-details-search/driver-details-search.module#DriverDetailsSearchPageModule', name: 'DriverDetailsSearchPage', segment: 'driver-details-search', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/driver-document/driver-document.module#DriverDocumentPageModule', name: 'DriverDocumentPage', segment: 'driver-document', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-khata-search/driver-khata-search.module#DriverKhataSearchPageModule', name: 'DriverKhataSearchPage', segment: 'driver-khata-search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-document/driver-document.module#DriverDocumentPageModule', name: 'DriverDocumentPage', segment: 'driver-document', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-khata/driver-khata.module#DriverKhataPageModule', name: 'DriverKhataPage', segment: 'driver-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver/driver.module#DriverPageModule', name: 'DriverPage', segment: 'driver', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-other-document-name/edit-other-document-name.module#EditOtherDocumentNamePageModule', name: 'EditOtherDocumentNamePage', segment: 'edit-other-document-name', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-profile/edit-profile.module#EditProfilePageModule', name: 'EditProfilePage', segment: 'edit-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/exchange-modal/exchange-modal.module#ExchangeModalPageModule', name: 'ExchangeModalPage', segment: 'exchange-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/full-report/full-report.module#FullReportPageModule', name: 'FullReportPage', segment: 'full-report', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/init/init.module#InitPageModule', name: 'InitPage', segment: 'init', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/insurance/insurance.module#InsurancePageModule', name: 'InsurancePage', segment: 'insurance', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/full-report/full-report.module#FullReportPageModule', name: 'FullReportPage', segment: 'full-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/language/language.module#LanguagePageModule', name: 'LanguagePage', segment: 'language', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ledger/ledger.module#LedgerPageModule', name: 'LedgerPage', segment: 'ledger', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mechanic-bill/mechanic-bill.module#MechanicBillPageModule', name: 'MechanicBillPage', segment: 'mechanic-bill', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/insurance/insurance.module#InsurancePageModule', name: 'InsurancePage', segment: 'insurance', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mechanic-khata/mechanic-khata.module#MechanicKhataPageModule', name: 'MechanicKhataPage', segment: 'mechanic-khata', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mechanic/mechanic.module#MechanicPageModule', name: 'MechanicPage', segment: 'mechanic', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mechanic-bill/mechanic-bill.module#MechanicBillPageModule', name: 'MechanicBillPage', segment: 'mechanic-bill', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/parts-bill-details-modal/parts-bill-details-modal.module#PartsBillDetailsModalPageModule', name: 'PartsBillDetailsModalPage', segment: 'parts-bill-details-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/parts-work-modal/parts-work-modal.module#PartsWorkModalPageModule', name: 'PartsWorkModalPage', segment: 'parts-work-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mechanic/mechanic.module#MechanicPageModule', name: 'MechanicPage', segment: 'mechanic', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/problem-modal/problem-modal.module#ProblemModalPageModule', name: 'ProblemModalPage', segment: 'problem-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/parts-work-modal/parts-work-modal.module#PartsWorkModalPageModule', name: 'PartsWorkModalPage', segment: 'parts-work-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/problem-work-part-modal/problem-work-part-modal.module#ProblemWorkPartModalPageModule', name: 'ProblemWorkPartModalPage', segment: 'problem-work-part-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/remove-driver-from-account/remove-driver-from-account.module#RemoveDriverFromAccountPageModule', name: 'RemoveDriverFromAccountPage', segment: 'remove-driver-from-account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/reason-modal/reason-modal.module#ReasonModalPageModule', name: 'ReasonModalPage', segment: 'reason-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/report-all-comp/report-all-comp.module#ReportAllCompPageModule', name: 'ReportAllCompPage', segment: 'report-all-comp', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/remove-driver/remove-driver.module#RemoveDriverPageModule', name: 'RemoveDriverPage', segment: 'remove-driver', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/remove-driver-from-account/remove-driver-from-account.module#RemoveDriverFromAccountPageModule', name: 'RemoveDriverFromAccountPage', segment: 'remove-driver-from-account', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-all-comp/report-all-comp.module#ReportAllCompPageModule', name: 'ReportAllCompPage', segment: 'report-all-comp', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-full/report-full.module#ReportFullPageModule', name: 'ReportFullPage', segment: 'report-full', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-khata/report-khata.module#ReportKhataPageModule', name: 'ReportKhataPage', segment: 'report-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-modal/report-modal.module#ReportModalPageModule', name: 'ReportModalPage', segment: 'report-modal', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/security-and-backup/security-and-backup.module#SecurityAndBackupPageModule', name: 'SecurityAndBackupPage', segment: 'security-and-backup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/security-and-backup/security-and-backup.module#SecurityAndBackupPageModule', name: 'SecurityAndBackupPage', segment: 'security-and-backup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shop-bill-description/shop-bill-description.module#ShopBillDescriptionPageModule', name: 'ShopBillDescriptionPage', segment: 'shop-bill-description', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shop-bill-details/shop-bill-details.module#ShopBillDetailsPageModule', name: 'ShopBillDetailsPage', segment: 'shop-bill-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/shop/shop.module#ShopPageModule', name: 'ShopPage', segment: 'shop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shop-khata/shop-khata.module#ShopKhataPageModule', name: 'ShopKhataPage', segment: 'shop-khata', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/shop/shop.module#ShopPageModule', name: 'ShopPage', segment: 'shop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/upload-image/upload-image.module#UploadImagePageModule', name: 'UploadImagePage', segment: 'upload-image', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/vehicle-bill-report/vehicle-bill-report.module#VehicleBillReportPageModule', name: 'VehicleBillReportPage', segment: 'vehicle-bill-report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/vehicle-details/vehicle-details.module#VehicleDetailsPageModule', name: 'VehicleDetailsPage', segment: 'vehicle-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vehicle-bill-report/vehicle-bill-report.module#VehicleBillReportPageModule', name: 'VehicleBillReportPage', segment: 'vehicle-bill-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/vehicle-document-bill/vehicle-document-bill.module#VehicleDocumentBillPageModule', name: 'VehicleDocumentBillPage', segment: 'vehicle-document-bill', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/vehicle-document/vehicle-document.module#VehicleDocumentPageModule', name: 'VehicleDocumentPage', segment: 'vehicle-document', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/vehicle-khata/vehicle-khata.module#VehicleKhataPageModule', name: 'VehicleKhataPage', segment: 'vehicle-khata', priority: 'low', defaultHistory: [] },
