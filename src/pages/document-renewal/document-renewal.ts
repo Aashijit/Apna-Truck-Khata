@@ -1,3 +1,4 @@
+import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../../src/providers/rest/rest';
 import { CodesProvider } from './../../../src/providers/codes/codes';
 import { Component } from '@angular/core';
@@ -25,6 +26,8 @@ export class DocumentRenewalPage {
   vehicles: any = [];
 
   vehicle_string: any = "";
+
+  saveupdatebillid : any = null;
 
 
   bill_id: any = null;
@@ -57,7 +60,7 @@ export class DocumentRenewalPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes: CodesProvider, private rest: RestProvider,
-    private modalCtrl: ModalController) {
+    private modalCtrl: ModalController, private message : MessageProvider) {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     this.document = this.navParams.get("document");
@@ -80,18 +83,8 @@ export class DocumentRenewalPage {
       }
     });
 
-
-    if (this.bill_id == null) {
-      this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(resp => {
-        if (resp['_ReturnCode'] == '0') {
-          this.bill_id = resp['data'];
-          this.bill_id = Number(this.bill_id) + 1;
-        }
-      });
-
-    }
     var bl = this.navParams.get("bill");
-    if (bl != undefined && bl != null) {
+      if (bl != undefined && bl != null) {
       this.is_update = true;
       this.details = bl['details'];
       this.bill_id = bl['bill_id'];
@@ -103,7 +96,24 @@ export class DocumentRenewalPage {
       this.worker_type = bl['worker_type'];
       this.total_bill = bl['total_bill'];
       this.bill_details = bl['bill_details'];
+      if(this.details != undefined) {
+      for(let i=0;i<this.details.length;i++){
+        this.details[i]['expiry_date'] = this.details[i]['document_expiry_date'];
+      }
+      }
     }
+
+
+    if (this.bill_id == null) {
+      this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(resp => {
+        if (resp['_ReturnCode'] == '0') {
+          this.bill_id = resp['data'];
+          this.bill_id = Number(this.bill_id) + 1;
+        }
+      });
+
+    }
+
 
     if (this.details == undefined || this.details == null) {
       this.details = [];
@@ -180,8 +190,10 @@ export class DocumentRenewalPage {
       "details": this.details
     };
 
-    if (this.is_update == true)
+    if (this.is_update == true) {
       data['bill_id'] = this.bill_id;
+      this.saveupdatebillid = this.bill_id;
+    }
 
     this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(resp => {
       this.bill_date = '';
@@ -205,6 +217,7 @@ export class DocumentRenewalPage {
         }
 
         resp['data']['expiry_date'] = exp_date;
+        resp['data']['bill_id'] = this.saveupdatebillid;
 
         this.bills.push(resp['data']);
         for (let i = 0; i < this.bills.length; i++)
@@ -225,13 +238,51 @@ export class DocumentRenewalPage {
     detailsModalPage.present();
   }
 
-  openCameraPopup(det) {
-    let cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "all" });
+  openCameraPopup() {
+
+    if(this.person_shop_name == '' || this.person_shop_name == null) {
+      this.message.displayToast("Please select shop");
+      return;
+    }
+
+    if(this.bill_date == '' || this.bill_date == null) {
+      this.message.displayToast("Please enter bill date");
+      return;
+    }
+
+    if(this.bill_details == '' || this.bill_details == null) {
+      this.message.displayToast("Please enter bill details");
+      return;
+    }
+
+    var data = {
+      "person_shop_name":this.person_shop_name,
+      "vehicle_id":this.vehicle_id,
+      "bill_date":this.bill_date,
+      "worker_type":this.worker_type,
+      "bill_details":this.bill_details
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"document",
+      "worker_id":this.worker_id,
+      "document_type":"dbill",
+      "type":"bills",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      det['img'] = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
     });
-
+    
     cameraModalPage.present();
   }
 
@@ -298,6 +349,7 @@ export class DocumentRenewalPage {
         }
 
         resp['data']['expiry_date'] = exp_date;
+        
 
         resp['data']['details'] = this.details;
         this.bills.push(resp['data']);

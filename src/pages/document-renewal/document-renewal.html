@@ -115,10 +115,36 @@
       <i class="fa fa-calendar" aria-hidden="true"></i>
     </div>
 
-    <div class="label-float" (click)="openDetailPopup()">
+    <!-- <div class="label-float" (click)="openDetailPopup()">
       <input type="text" placeholder="" [(ngModel)]="bill_details" />
       <label>DETAILS</label>
-    </div>
+    </div> -->
+    <ion-row >
+      <ion-col col-9>
+
+        <ion-row >
+          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >
+            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />
+            <label>DETAILS</label>
+          </div>
+        </ion-row>  
+      </ion-col>
+      <ion-col col-2>
+        <ion-row class="detail-picture" style="margin-top:0px !important;">
+          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+    
+          </ion-col>    
+          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
+            <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
+           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
+    
+          </ion-col>
+        </ion-row>      
+      </ion-col>
+    </ion-row>
+
 
   </div>
 

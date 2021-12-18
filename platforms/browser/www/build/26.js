@@ -124,8 +124,17 @@ var ProblemWorkPartModalPage = /** @class */ (function () {
     };
     ProblemWorkPartModalPage.prototype.problemsSelected = function () {
         var prblems = [];
+        //Fetch the parts
+        var parts = [];
+        for (var i = 0; i < this.problems.length; i++) {
+            if (this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null && this.problems[i]['parts'] != []) {
+                parts = this.problems[i]['parts'];
+                break;
+            }
+        }
         for (var i = 0; i < this.problems.length; i++) {
             if (this.problems[i]['selected'] == true) {
+                this.problems[i]['parts'] = parts;
                 prblems.push(this.problems[i]);
             }
         }

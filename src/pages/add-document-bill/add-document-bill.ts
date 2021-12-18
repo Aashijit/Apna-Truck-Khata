@@ -39,6 +39,10 @@ export class AddDocumentBillPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddDocumentBillPage');
+    // this.getBillsBySrthId();
+  }
+
+  ionViewWillEnter(){
     this.getBillsBySrthId();
   }
 
