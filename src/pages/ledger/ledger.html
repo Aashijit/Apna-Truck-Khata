@@ -113,24 +113,6 @@
       </ion-item>
 
 
-      <!-- <ion-list radio-group [(ngModel)]="mode_of_payment">
-        <ion-row *ngIf="isPaymentOptionShown" style="margin: 0;">
-          <ion-col col-6>
-            <ion-item>
-              <ion-label>CASH</ion-label>
-              <ion-radio value="cash" checked></ion-radio>
-            </ion-item>
-          </ion-col>
-          <ion-col col-6>
-            <ion-item>
-              <ion-label>BANK</ion-label>
-              <ion-radio value="bank"></ion-radio>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-list>  -->
-  
-         
       <ion-row >
         <ion-col col-9>
           <ion-row >
@@ -144,9 +126,16 @@
         </ion-col>
         <ion-col col-2>
           <ion-row class="detail-picture">
-            <ion-col col-4 (click)="openCameraPopup()">
+            <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">
               <i class="fa fa-camera" aria-hidden="true"></i>
+              <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
+      
             </ion-col>    
+            <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
+              <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
+             <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
+      
+            </ion-col>
           </ion-row>      
         </ion-col>
       </ion-row>

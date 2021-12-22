@@ -184,85 +184,106 @@
       </ion-chip>
       </p>
 
-    <div class="scroll-grid" >
-      <div class="scrollmenu">
-       
-        <a href="#home">BILL# / PAYMENT#</a>
-        <a href="#news">BILL / PAYMENT</a>
-        <a href="#contact">REASONS</a>
-        <a href="#about">COST / PAID</a>
-        <a href="#about">DETAILS</a>
-
-        <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">
-            <ion-spinner></ion-spinner>
-            <br/>
-          <span style="color: rgb(63, 63, 63);">
-            Loading
-          </span>
-        </div>
-    
-        <div class="scrollmenu-list total-bill " *ngFor="let payment of filterpayments" >
-          <div *ngIf="type=='pno' || type == ''" (click)="selectThisPayment(payment)">
+      <div class="scroll-grid" >
+        <div class="scrollmenu">
+         
+          <a href="#home">BILL# / PAYMENT#</a>
+          <a href="#news">BILL / PAYMENT</a>
+          <a href="#contact">VEHICLES</a>
+          <a href="#about">COST / PAID</a>
+          <a href="#about">DETAILS</a>
+          <a href="#about">IMAGE</a>
+  
+          <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">
+              <ion-spinner></ion-spinner>
+              <br/>
+            <span style="color: rgb(63, 63, 63);">
+              Loading
+            </span>
+          </div>
+      
+          <div class="scrollmenu-list total-bill " *ngFor="let payment of filterpayments" >
+            <div *ngIf="type=='pno' || type == ''" (click)="selectThisPayment(payment)">
             <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-          <p>{{payment['payment_id']}}</p>
-          <p>{{payment['date_of_payment']}}</p>
-          <p></p>
-          <p>₹ {{payment['payment_amount']}}</p>
-          <p>{{payment['details']}}</p>
-          </div>
-        </div>
-
-          <div *ngIf="type=='bno'  || type == ''">
-          <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
-            <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-            <p>{{bill['bill_id']}}</p>
-            <p>{{bill['bill_date']}}</p>
-            <p>{{bill['vehicle_number']}}</p>
-            <p>₹ {{bill['total_bill']}}</p>
-            <p>{{bill['bill_details']}}</p>
+            <p>{{payment['payment_id']}}</p>
+            <p>{{payment['date_of_payment']}}</p>
+            <p></p>
+            <p>₹ {{payment['payment_amount']}}</p>
+            <p>{{payment['details']}}</p>
+            <p>
+              <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
+                <img [src]="payment['payment_image_1_id']" style="width:11% !important" (click)="viewImage(payment['payment_image_1_id'])" />
+              </span>
+            </p>
+            </div>
+            </div>
+  
+            <div *ngIf="type=='bno'  || type == ''">
+            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
+              <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
+              <p>{{bill['bill_id']}}</p>
+              <p>{{bill['bill_date']}}</p>
+              <p>{{bill['vehicle_number']}}</p>
+              <p>₹ {{bill['total_bill']}}</p>
+              <p>{{bill['bill_details']}}</p>
+              <p>
+                <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                  <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+                </span>
+              </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div *ngIf="type=='ano'  || type == ''"  (click)="selectThisPayment(payment)">
-          <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-          <p>{{payment['payment_id']}}</p>
-          <p>{{payment['date_of_payment']}}</p>
-          <p></p>
-          <p>₹ {{payment['payment_amount']}}</p>
-          <p>{{payment['details']}}</p>
-          <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
-            <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-            <p>{{bill['bill_id']}}</p>
-            <p>{{bill['bill_date']}}</p>
-            <p>{{bill['reason']}}</p>
-            <p>₹ {{bill['total_bill']}}</p>
-            <p>{{bill['bill_details']}}</p>
+          <div *ngIf="type=='ano'  || type == ''" (click)="selectThisPayment(payment)">
+            <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
+            <p>{{payment['payment_id']}}</p>
+            <p>{{payment['date_of_payment']}}</p>
+            <p></p>
+            <p>₹ {{payment['payment_amount']}}</p>
+            <p>{{payment['details']}}</p>
+            <p>
+              <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
+                <img [src]="payment['payment_image_1_id']" style="width:11% !important" (click)="viewImage(payment['payment_image_1_id'])" />
+              </span>
+            </p>
+            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
+              <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
+              <p>{{bill['bill_id']}}</p>
+              <p>{{bill['bill_date']}}</p>
+              <p>{{bill['reason']}}</p>
+              <p>₹ {{bill['total_bill']}}</p>
+              <p>{{bill['bill_details']}}</p>
+              <p>
+                <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                  <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+                </span>
+              </p>
+              </div>
+            </div>
             </div>
           </div>
-        </div>
-        </div>
-
-        </div>
   
-       
+          </div>
+    
+         
+        </div>
+        <div class="show-arrows">
+          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+  
+  
+          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>
+          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
+   
+          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatepayment" (click)="viewPayment()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>
+          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="updatePayment()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="deletePayment()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
+   
+    
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+    
+        </div>
       </div>
-      <div class="show-arrows">
-        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-
-
-        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>
-        <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
-        <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
- 
-        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatepayment" (click)="viewPayment()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>
-        <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="updatePayment()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
-        <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="deletePayment()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
- 
-  
-        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-  
-      </div>
-    </div>
 
     
     <div class="text-center">

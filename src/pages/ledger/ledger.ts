@@ -15,6 +15,7 @@ export class LedgerPage {
   isPaymentOptionShown : boolean = false;
   worker : any = '';
   total : number = 0.00;
+  img : any = null;
 
   payment_id : any = '';
   paid_to_worker_id : any = '';
@@ -100,6 +101,50 @@ export class LedgerPage {
   }
   openCameraPopup() {
     
+    if(this.date_of_payment == '' || this.date_of_payment == null) {
+      this.message.displayToast("Please select date of payment");
+      return;
+    }
+
+    if(this.mode_of_payment == '' || this.mode_of_payment == null) {
+      this.message.displayToast("Please select mode of payment");
+      return;
+    }
+
+    if(this.details == '' || this.details == null) {
+      this.message.displayToast("Please enter payment details");
+      return;
+    }
+
+    var data = {
+      "payment_details":this.details,
+      "mode_of_payment":this.mode_of_payment,
+      "date_of_payment":this.date_of_payment,
+      "worker_type":this.worker['worker_type'],
+      "payment_id":this.payment_id
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":this.worker['worker_type'],
+      "worker_id":this.worker['worker_id'],
+      "document_type":"paym",
+      "type":"bills",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
+
+    cameraModalPage.onDidDismiss(resp => {
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
+    });
+    
+    cameraModalPage.present();
   }
 
   update() {
@@ -110,7 +155,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "payment_amount":this.payment_amount,
       "details":this.details,
-      "payment_image_1_id":'0',
+      "payment_image_1_id":this.img['image_url'],
       "payment_image_2_id":'0',
       "payment_date":this.date_of_payment,
       "bill_ids":this.bill_ids,
@@ -139,7 +184,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "payment_amount":this.payment_amount,
       "details":this.details,
-      "payment_image_1_id":'0',
+      "payment_image_1_id":this.img['image_url'],
       "payment_image_2_id":'0',
       "payment_date":this.date_of_payment,
       "bill_ids":this.bill_ids,

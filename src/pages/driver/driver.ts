@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -33,7 +34,7 @@ export class DriverPage {
 
   constructor( private viewController : ViewController, public navCtrl: NavController, public navParams: NavParams, public modalCtrl : ModalController, 
     private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, 
-    private alertCtrl : AlertController) {
+    private alertCtrl : AlertController, private pv : PhotoViewer) {
       this.driver = JSON.parse(localStorage.getItem("worker"));
 
       console.log(JSON.stringify(this.driver));
@@ -68,6 +69,15 @@ export class DriverPage {
   update(){
     this.navCtrl.push('AddDriverPage',{"update":"true"});
   }
+
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl,'Payment Image',{'share':true})
+  }
+
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
+  }
+
 
   ionViewWillEnter(){
     var data = {

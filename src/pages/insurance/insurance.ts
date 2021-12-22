@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -31,7 +32,7 @@ export class InsurancePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, 
     private codes : CodesProvider, private alertCtrl : AlertController, private message : MessageProvider, 
-    private modalCtrl : ModalController) {
+    private modalCtrl : ModalController, private pv : PhotoViewer) {
     this.insurance = JSON.parse(localStorage.getItem("worker"));
     this.due = Number(this.insurance['total_bill_money']) - Number(this.insurance['paid_money']);
 
@@ -39,6 +40,14 @@ export class InsurancePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InsurancePage');
+  }
+
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl,'Payment Image',{'share':true})
+  }
+
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
   }
 
   ionViewWillEnter(){

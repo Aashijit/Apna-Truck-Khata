@@ -187,6 +187,7 @@
         <a href="#contact">VEHICLES</a>
         <a href="#about">COST / PAID</a>
         <a href="#about">DETAILS</a>
+        <a href="#about">IMAGE</a>
 
         <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">
             <ion-spinner></ion-spinner>
@@ -204,6 +205,11 @@
           <p></p>
           <p>₹ {{payment['payment_amount']}}</p>
           <p>{{payment['details']}}</p>
+          <p>
+            <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
+              <img [src]="payment['payment_image_1_id']" style="width:11% !important" (click)="viewImage(payment['payment_image_1_id'])" />
+            </span>
+          </p>
           </div>
           </div>
 
@@ -215,6 +221,11 @@
             <p>{{bill['vehicle_number']}}</p>
             <p>₹ {{bill['total_bill']}}</p>
             <p>{{bill['bill_details']}}</p>
+            <p>
+              <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+              </span>
+            </p>
             </div>
           </div>
         </div>
@@ -225,6 +236,11 @@
           <p></p>
           <p>₹ {{payment['payment_amount']}}</p>
           <p>{{payment['details']}}</p>
+          <p>
+            <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
+              <img [src]="payment['payment_image_1_id']" style="width:11% !important" (click)="viewImage(payment['payment_image_1_id'])" />
+            </span>
+          </p>
           <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
             <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
             <p>{{bill['bill_id']}}</p>
@@ -232,6 +248,11 @@
             <p>{{bill['reason']}}</p>
             <p>₹ {{bill['total_bill']}}</p>
             <p>{{bill['bill_details']}}</p>
+            <p>
+              <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+              </span>
+            </p>
             </div>
           </div>
           </div>

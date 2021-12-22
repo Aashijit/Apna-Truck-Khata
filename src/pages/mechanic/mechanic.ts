@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -27,12 +28,19 @@ export class MechanicPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
     private codes : CodesProvider, private message : MessageProvider, private alertCtrl : AlertController, 
-    private modalCtrl : ModalController) {
+    private modalCtrl : ModalController, private pv : PhotoViewer) {
     this.mechanic = JSON.parse(localStorage.getItem("worker"));
     this.due = Number(this.mechanic['total_bill_money']) - Number(this.mechanic['paid_money']);
       
   }
+ 
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl,'Payment Image',{'share':true})
+  }
 
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
+  }
 
 
   ionViewWillEnter(){

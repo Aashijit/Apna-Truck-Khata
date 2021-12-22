@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -29,7 +30,7 @@ export class DocumentPage {
   
   constructor(private alertCtrl :  AlertController,private message : MessageProvider, public navCtrl: NavController, 
     public navParams: NavParams, private rest : RestProvider, private codes : CodesProvider,
-    private modalCtrl : ModalController) {
+    private modalCtrl : ModalController, private pv : PhotoViewer) {
       
     this.document = JSON.parse(localStorage.getItem("worker"));
     this.due = Number(this.document['total_bill_money']) - Number(this.document['paid_money']);
@@ -43,6 +44,15 @@ export class DocumentPage {
   checkChange() {
 
   }
+
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl,'Payment Image',{'share':true})
+  }
+
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
+  }
+
 
   ionViewWillEnter(){
     var data = {

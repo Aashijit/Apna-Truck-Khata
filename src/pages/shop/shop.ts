@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -30,7 +31,7 @@ export class ShopPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     private codes : CodesProvider, private rest : RestProvider, private message : MessageProvider,
-    private alertCtrl : AlertController, private modalCtrl : ModalController) {
+    private alertCtrl : AlertController, private modalCtrl : ModalController, private pv : PhotoViewer) {
       this.shop = JSON.parse(localStorage.getItem("worker"));
       this.due = Number(this.shop['total_bill_money']) - Number(this.shop['paid_money']);
         
@@ -65,8 +66,13 @@ export class ShopPage {
     this.isShown = !this.isShown;
   }
 
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl,'Payment Image',{'share':true})
+  }
 
-
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
+  }
 
       
   update(){
