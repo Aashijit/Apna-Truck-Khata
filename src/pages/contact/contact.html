@@ -1,17 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Notifications
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+    <ion-item *ngFor="let n of notifications">
+        <h2 class="title-n">{{n['title']}}</h2>
+        <p class="message-n"> 
+          {{n['message']}}
+        </p>
+        <p style="float: right !important;">
+        <button ion-button outline round *ngIf="n['click_page'] != ''" (click)="goToActionPage(n['click_page'],n['next_link'])">
+          Update Now
+        </button>
+      </p>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -33,6 +33,9 @@
     },
     "com-sarriaroman-photoviewer": {
       "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
+    },
+    "phonegap-plugin-push": {
+      "PACKAGE_NAME": "com.saarthi.apnatruckkhata"
     }
   },
   "dependent_plugins": {}

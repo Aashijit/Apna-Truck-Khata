@@ -86,6 +86,9 @@ export class CodesProvider {
   public UPDATE_DOCUMENT_INFO = this.BASE_URL+"updatedocumentinfo";
   public GET_DOCUMENT_INFO = this.BASE_URL+"getdocumentinfo";
   public GET_DOCUMENT_INFO_BY_SRTH_ID=this.BASE_URL+"getdocumentinfobysrthid";
+  public GET_DOCUMENT_INFO_BY_DOCUMENT_ID=this.BASE_URL+"getdocumentinfobyid";
+
+  public SAVE_NOTIFICATION_FCM_TOKEN=this.BASE_URL+"savefcmkey";
 
 
   public GET_LAST_BILL_ID = this.BASE_URL+"getlastbillid";
@@ -142,7 +145,7 @@ export class CodesProvider {
   public VEHICLE_BILL_REPORT = this.BASE_URL_REPORT + "vehiclebillreportapi";
   public VEHICLE_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "vehiclebillreportweb";
 
-  
+  public GET_NOTIFICATIONS=this.BASE_URL + "getnotificatonsbysrthid";
 
   
 

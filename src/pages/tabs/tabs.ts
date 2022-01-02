@@ -1,3 +1,5 @@
+import { CodesProvider } from './../../providers/codes/codes';
+import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 
@@ -9,9 +11,15 @@ export class TabsPage {
 
   tab1Root = 'HomePage';
   tab2Root = 'AboutPage';
-  tab3Root = 'ContactPage';
+  tab3Root = '';
   tab4Root = 'ContactPage';
 
-  constructor() {
+  notifications : Number = 0;
+
+  constructor(private rest : RestProvider, private codes : CodesProvider) {
+  }
+
+  ionViewWillEnter(){
+
   }
 }

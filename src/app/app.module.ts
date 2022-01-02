@@ -18,6 +18,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { Push, PushObject, PushOptions } from '@ionic-native/push';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
     PhotoViewer,
     MessageProvider,
     Camera,
-    DatePipe
+    DatePipe,
+    Push
   ]
 })
 export class AppModule {}
