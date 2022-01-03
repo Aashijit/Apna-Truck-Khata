@@ -1,1 +1,110 @@
-webpackJsonp([59],{868:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵeld"](2,0,null,null,30,"ion-header",[],null,null,null,null,null)),d["ɵdid"](3,16384,null,0,R.a,[v.a,d.ElementRef,d.Renderer,[2,g.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](5,0,null,null,26,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,y.b,y.a)),d["ɵdid"](6,49152,null,0,h.a,[C.a,[2,g.a],[2,E.a],v.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](8,0,null,3,22,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](9,16384,null,0,F.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      \n      "])),(l()(),d["ɵeld"](14,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-9",""]],null,null,null,null,null)),d["ɵdid"](15,16384,null,0,I.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](17,0,null,null,4,"ion-title",[],null,null,null,N.b,N.a)),d["ɵdid"](18,49152,null,0,P.a,[v.a,d.ElementRef,d.Renderer,[2,D.a],[2,h.a]],null,null),(l()(),d["ɵted"](-1,0,["        \n          "])),(l()(),d["ɵeld"](20,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-lock"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,0,["\n          SECURITY AND BACKUP\n        "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](25,0,null,null,4,"ion-col",[["class","youtube col"],["col-2",""]],null,null,null,null,null)),d["ɵdid"](26,16384,null,0,I.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](28,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](34,0,null,null,35,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,M.b,M.a)),d["ɵdid"](35,4374528,null,0,k.a,[v.a,_.a,w.a,d.ElementRef,d.Renderer,C.a,A.a,d.NgZone,[2,g.a],[2,E.a]],null,null),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](37,0,null,1,31,"div",[["class","container"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n\n    "])),(l()(),d["ɵeld"](39,0,null,null,28,"ion-list",[["class","security-details"]],null,null,null,null,null)),d["ɵdid"](40,16384,null,0,B.a,[v.a,d.ElementRef,d.Renderer,_.a,O.m,w.a],null,null),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](43,0,null,null,7,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](45,0,null,null,0,"input",[["placeholder"," "],["type","text"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](47,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["4 DIGIT CURRENT PIN CODE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n  \n      "])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵeld"](52,0,null,null,7,"div",[["class","label-float"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](54,0,null,null,0,"input",[["placeholder"," "],["type","text"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](56,0,null,null,1,"label",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["4 DIGIT NEW PIN CODE"])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n  \n      "])),(l()(),d["ɵted"](-1,null,["\n  \n\n\n      "])),(l()(),d["ɵeld"](61,0,null,null,5,"div",[["class","text-center mt-4"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](63,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,null,null,x.b,x.a)),d["ɵdid"](64,1097728,null,0,L.a,[[8,""],v.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["CONFIRM"])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      \n      \n\n\n    \n    "])),(l()(),d["ɵted"](-1,null,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,[" \n"]))],function(l,n){l(n,64,0,"")},function(l,n){l(n,5,0,d["ɵnov"](n,6)._hidden,d["ɵnov"](n,6)._sbPadding);l(n,34,0,d["ɵnov"](n,35).statusbarPadding,d["ɵnov"](n,35)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad SecurityAndBackupPage")},l}()),a=function(){return function(){}}(),o=u(499),i=u(500),r=u(501),s=u(502),c=u(503),p=u(504),m=u(505),b=u(506),f=u(507),R=u(85),v=u(4),g=u(8),y=u(188),h=u(37),C=u(13),E=u(29),F=u(186),I=u(185),N=u(509),P=u(86),D=u(42),M=u(508),k=u(32),_=u(7),w=u(14),A=u(40),B=u(87),O=u(11),x=u(39),L=u(27),T=u(17),S=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),U=d["ɵccf"]("page-security-and-backup",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-security-and-backup",[],null,null,null,e,S)),d["ɵdid"](1,49152,null,0,t,[E.a,T.a],null,null)],null,null)},{},{},[]),G=u(16),V=u(20),j=u(184),J=u(55);u.d(n,"SecurityAndBackupPageModuleNgFactory",function(){return K});var K=d["ɵcmf"](a,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,s.a,c.a,p.a,m.a,b.a,f.a,U]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,G.l,G.k,[d.LOCALE_ID,[2,G.t]]),d["ɵmpd"](4608,V["ɵi"],V["ɵi"],[]),d["ɵmpd"](4608,V.FormBuilder,V.FormBuilder,[]),d["ɵmpd"](512,G.b,G.b,[]),d["ɵmpd"](512,V["ɵba"],V["ɵba"],[]),d["ɵmpd"](512,V.FormsModule,V.FormsModule,[]),d["ɵmpd"](512,V.ReactiveFormsModule,V.ReactiveFormsModule,[]),d["ɵmpd"](512,j.a,j.a,[]),d["ɵmpd"](512,j.b,j.b,[]),d["ɵmpd"](512,a,a,[]),d["ɵmpd"](256,J.a,t,[])])})}});
+webpackJsonp([59],{
+
+/***/ 860:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarModalPageModule", function() { return CalendarModalPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__calendar_modal__ = __webpack_require__(940);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var CalendarModalPageModule = /** @class */ (function () {
+    function CalendarModalPageModule() {
+    }
+    CalendarModalPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__calendar_modal__["a" /* CalendarModalPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__calendar_modal__["a" /* CalendarModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
+            ],
+        })
+    ], CalendarModalPageModule);
+    return CalendarModalPageModule;
+}());
+
+//# sourceMappingURL=calendar-modal.module.js.map
+
+/***/ }),
+
+/***/ 940:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CalendarModalPage = /** @class */ (function () {
+    function CalendarModalPage(navCtrl, navParams, codes, view) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.codes = codes;
+        this.view = view;
+        this.dt = new Date(2000, 1, 1);
+        this.selectedDate = '';
+        this.optionsMulti = {
+            pickMode: 'single',
+            from: this.dt,
+            to: 0,
+            showMonthPicker: true,
+            showToggleButtons: true,
+            color: 'primary'
+        };
+    }
+    CalendarModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CalendarModalPage');
+    };
+    CalendarModalPage.prototype.change = function (date) {
+        localStorage.setItem(this.codes.DATE, date);
+        this.view.dismiss();
+    };
+    CalendarModalPage.prototype.select = function () {
+        localStorage.setItem(this.codes.DATE, this.selectedDate);
+        this.view.dismiss();
+    };
+    CalendarModalPage.prototype.dismiss = function () {
+        this.view.dismiss();
+    };
+    CalendarModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
+            selector: 'page-calendar-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/calendar-modal/calendar-modal.html"*/'<ion-content padding style="background-color: rgba(0,0,0,0.8);">\n\n  <ion-icon name="close" (click)="dismiss()" style="float: right;font-size: 3rem !important;color: red;padding: 20px"></ion-icon>\n\n  <ion-card>\n    <ion-calendar [(ngModel)]="selectedDate" [options]="optionsMulti" type="string" [format]="\'YYYY-MM-DD\'" (onChange)="change($event)">\n    </ion-calendar>\n\n    <!-- <button ion-button clear (click)="select()">\n      Select\n    </button> -->\n  </ion-card>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/calendar-modal/calendar-modal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ViewController"]])
+    ], CalendarModalPage);
+    return CalendarModalPage;
+}());
+
+//# sourceMappingURL=calendar-modal.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=59.js.map
