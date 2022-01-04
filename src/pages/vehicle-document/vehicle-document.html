@@ -261,7 +261,7 @@
             <!-- <span class="add-more-modal" *ngIf="dc['dc_id'] < 0" (click)="editDocumentName(dc['dc_id'])">Edit <i class="fa fa-plus-circle" aria-hidden="true"></i>
             </span> -->
           </ion-col>
-          <ion-col col-4 class="picture-upload text-center">
+          <ion-col col-4 class="picture-upload text-center" (click)="uploadPhoto(dc)">
             <i class="fa fa-camera" aria-hidden="true" *ngIf="dc['document_image_id'] == null || dc['document_image_id'] == undefined || dc['document_image_id'] == '0'" ></i><br>
             <img [src]="dc['document_image_id']" *ngIf="dc['document_image_id'] != '0'" />
             <!-- <small>ADD PHOTO</small> -->

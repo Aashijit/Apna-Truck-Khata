@@ -1,1 +1,321 @@
-webpackJsonp([66],{849:function(l,n,u){"use strict";function e(l){return t["ɵvid"](0,[t["ɵqud"](402653184,1,{slides:0}),(l()(),t["ɵeld"](1,0,null,null,32,"ion-header",[],null,null,null,null,null)),t["ɵdid"](2,16384,null,0,v.a,[x.a,t.ElementRef,t.Renderer,[2,b.a]],null,null),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵeld"](4,0,null,null,28,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,P.b,P.a)),t["ɵdid"](5,49152,null,0,A.a,[C.a,[2,b.a],[2,R.a],x.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,3,["\n    "])),(l()(),t["ɵeld"](7,0,null,3,24,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](8,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](10,0,null,null,5,"ion-col",[["class","person-picture col"],["col-3",""]],null,null,null,null,null)),t["ɵdid"](11,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](13,0,null,null,1,"ion-icon",[["ios","ios-contact"],["md","md-contact"],["role","img"],["style","margin-top: 4px;font-size:4.2rem !important"]],[[2,"hide",null]],[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openProfilePage()&&e}return e},null,null)),t["ɵdid"](14,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](17,0,null,null,6,"ion-col",[["class","person-name col"],["col-6",""]],null,null,null,null,null)),t["ɵdid"](18,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](20,0,null,null,2,"ion-title",[],null,null,null,D.b,D.a)),t["ɵdid"](21,49152,null,0,_.a,[x.a,t.ElementRef,t.Renderer,[2,I.a],[2,A.a]],null,null),(l()(),t["ɵted"](22,0,["",""])),(l()(),t["ɵted"](-1,null,["\n\n      "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](25,0,null,null,5,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),t["ɵdid"](26,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](28,0,null,null,1,"ion-icon",[["color","danger"],["name","logo-youtube"],["role","img"],["style","font-size: 4.2rem;margin-top: 3px;"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](29,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{color:[0,"color"],name:[1,"name"]},null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,3,["\n  "])),(l()(),t["ɵted"](-1,null,["\n"])),(l()(),t["ɵted"](-1,null,["\n\n"])),(l()(),t["ɵeld"](35,0,null,null,264,"ion-content",[["class","home"],["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,T.b,T.a)),t["ɵdid"](36,4374528,null,0,S.a,[x.a,N.a,O.a,t.ElementRef,t.Renderer,C.a,M.a,t.NgZone,[2,b.a],[2,R.a]],null,null),(l()(),t["ɵted"](-1,1,["\n\n\n\n\n  "])),(l()(),t["ɵeld"](38,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](39,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](41,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openAccountKhata()&&e}return e},null,null)),t["ɵdid"](42,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](44,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](45,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](47,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](48,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](50,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/003-file.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](53,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](54,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          ACCOUNTS & PAYMENT KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](57,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](58,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](60,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](61,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n\n  "])),(l()(),t["ɵeld"](67,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](68,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](70,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openVehicleKhata()&&e}return e},null,null)),t["ɵdid"](71,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](73,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](74,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](76,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](77,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](79,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/006-delivery-truck.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](82,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](83,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          VEHICLE KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](86,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](87,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](89,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](90,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](96,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](97,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](99,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openDriverKhata()&&e}return e},null,null)),t["ɵdid"](100,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](102,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](103,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](105,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](106,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](108,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/driver.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](111,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](112,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          DRIVER KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](115,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](116,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](118,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](119,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](125,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](126,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](128,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openShopKhata()&&e}return e},null,null)),t["ɵdid"](129,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](131,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](132,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](134,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](135,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](137,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/004-shop.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](140,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](141,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          SHOP KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](144,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](145,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](147,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](148,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](154,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](155,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](157,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openMechanicalKhata()&&e}return e},null,null)),t["ɵdid"](158,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](160,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](161,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](163,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](164,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](166,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/007-mechanic.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](169,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](170,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          MECHANIC KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](173,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](174,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](176,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](177,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n\n  "])),(l()(),t["ɵeld"](183,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](184,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](186,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openDocumentAndInsurance()&&e}return e},null,null)),t["ɵdid"](187,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](189,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](190,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](192,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](193,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](195,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/002-folder.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](198,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](199,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          DOCUMENT KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](202,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](203,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](205,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](206,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](212,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](213,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](215,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openComplaintKhata()&&e}return e},null,null)),t["ɵdid"](216,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](218,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](219,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](221,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](222,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](224,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/008-report.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](227,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](228,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          COMPLAINT KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](231,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](232,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](234,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](235,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](241,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](242,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](244,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openReportKhata()&&e}return e},null,null)),t["ɵdid"](245,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](247,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](248,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](250,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](251,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](253,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/001-clipboard.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](256,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](257,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          REPORTS KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](260,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](261,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](263,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](264,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](270,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),t["ɵdid"](271,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](273,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openAllImageKhata()&&e}return e},null,null)),t["ɵdid"](274,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](276,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),t["ɵdid"](277,16384,null,0,k.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](279,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),t["ɵdid"](280,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](282,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/009-image.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](285,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),t["ɵdid"](286,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          ALL IMAGE KHATA\n        "])),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](289,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),t["ɵdid"](290,16384,null,0,K.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n          "])),(l()(),t["ɵeld"](292,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](293,147456,null,0,E.a,[x.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n  "])),(l()(),t["ɵted"](-1,1,["\n\n\n  "])),(l()(),t["ɵted"](-1,1,["\n\n\n\n \n\n\n"]))],function(l,n){l(n,14,0,"ios-contact","md-contact");l(n,29,0,"danger","logo-youtube");l(n,61,0,"arrow-forward");l(n,90,0,"arrow-forward");l(n,119,0,"arrow-forward");l(n,148,0,"arrow-forward");l(n,177,0,"arrow-forward");l(n,206,0,"arrow-forward");l(n,235,0,"arrow-forward");l(n,264,0,"arrow-forward");l(n,293,0,"arrow-forward")},function(l,n){var u=n.component;l(n,4,0,t["ɵnov"](n,5)._hidden,t["ɵnov"](n,5)._sbPadding);l(n,13,0,t["ɵnov"](n,14)._hidden);l(n,22,0,u.name);l(n,28,0,t["ɵnov"](n,29)._hidden);l(n,35,0,t["ɵnov"](n,36).statusbarPadding,t["ɵnov"](n,36)._hasRefresher);l(n,60,0,t["ɵnov"](n,61)._hidden);l(n,89,0,t["ɵnov"](n,90)._hidden);l(n,118,0,t["ɵnov"](n,119)._hidden);l(n,147,0,t["ɵnov"](n,148)._hidden);l(n,176,0,t["ɵnov"](n,177)._hidden);l(n,205,0,t["ɵnov"](n,206)._hidden);l(n,234,0,t["ɵnov"](n,235)._hidden);l(n,263,0,t["ɵnov"](n,264)._hidden);l(n,292,0,t["ɵnov"](n,293)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(0),o=(u(2),u(210)),a=u(183),d=u(84),i=(u(26),function(){function l(l,n,u,e){var t=this;this.navCtrl=l,this.codes=n,this.rest=u,this.fcm=e,this.name="",this.fuel="",this.notifications=0,this.slideOptsOne={initialSlide:0,slidesPerView:1,autoplay:!0};var o=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));if(void 0!=localStorage.getItem("name")&&null!=localStorage.getItem("name")){this.rest.post(this.codes.GET_PROFILE,{srth_id:o[0].srth_id}).then(function(l){localStorage.setItem("name",l.data[0].name),t.name=l.data[0].name})}this.name=localStorage.getItem("name")}return l.prototype.ionViewWillEnter=function(){this.refresh()},l.prototype.refresh=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_NOTIFICATIONS,{srth_id:n[0].srth_id}).then(function(n){if(null!=n&&n.data!=[]){l.notifications=n.data.length}}),this.fcm.getToken().then(function(l){alert(l)})},l.prototype.openProfilePage=function(){this.navCtrl.push("ProfilePage")},l.prototype.openVehicleKhata=function(){this.navCtrl.push("VehicleKhataPage")},l.prototype.openDriverKhata=function(){this.navCtrl.push("DriverKhataPage")},l.prototype.openDocumentAndInsurance=function(){this.navCtrl.push("DocumentAndInsurancePage")},l.prototype.openDocumentBill=function(){this.navCtrl.push("AddDocumentBillPage")},l.prototype.openEditProfilePage=function(){this.navCtrl.push("EditProfilePage")},l.prototype.openLanguagePage=function(){this.navCtrl.push("LanguagePage")},l.prototype.openSettingsPage=function(){this.navCtrl.push("SettingsPage")},l.prototype.openDriverPage=function(){this.navCtrl.push("DriverPage")},l.prototype.openAddNewBankPage=function(){this.navCtrl.push("AddNewBankAccountPage")},l.prototype.openSecurityAndBackup=function(){this.navCtrl.push("SecurityAndBackupPage")},l.prototype.openAddDriverPage=function(){this.navCtrl.push("AddDriverPage")},l.prototype.openAddMechanicPage=function(){this.navCtrl.push("AddMechanicPage")},l.prototype.openLedgerPage=function(){this.navCtrl.push("LedgerPage")},l.prototype.openVehicleDetailsPage=function(){this.navCtrl.push("VehicleDetailsPage")},l.prototype.openDriverDocumentPage=function(){this.navCtrl.push("DriverDocumentPage")},l.prototype.openAddDriverExpensePage=function(){this.navCtrl.push("AddDriverExpensesPage")},l.prototype.openComplaintKhata=function(){this.navCtrl.push("ComplaintsKhataPage")},l.prototype.openMechanicalKhata=function(){this.navCtrl.push("MechanicKhataPage")},l.prototype.openShopKhata=function(){this.navCtrl.push("ShopKhataPage")},l.prototype.openAllImageKhata=function(){this.navCtrl.push("AllImageKhataPage")},l.prototype.openReportKhata=function(){this.navCtrl.push("ReportAllCompPage")},l.prototype.openBillDetails=function(){this.navCtrl.push("BillDetailsPage")},l.prototype.openAccountKhata=function(){this.navCtrl.push("AccountKhataPage")},l.prototype.openVehicleDocument=function(){this.navCtrl.push("VehicleDocumentPage")},l}()),r=function(){return function(){}}(),c=u(499),s=u(500),p=u(501),m=u(502),h=u(503),g=u(504),f=u(505),w=u(506),y=u(507),v=u(85),x=u(4),b=u(8),P=u(188),A=u(37),C=u(13),R=u(29),k=u(186),K=u(185),E=u(41),D=u(509),_=u(86),I=u(42),T=u(508),S=u(32),N=u(7),O=u(14),M=u(40),F=t["ɵcrt"]({encapsulation:2,styles:[],data:{}}),H=t["ɵccf"]("page-home",i,function(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,1,"page-home",[],null,null,null,e,F)),t["ɵdid"](1,49152,null,0,i,[R.a,d.a,a.a,o.a],null,null)],null,null)},{},{},[]),L=u(16),V=u(20),B=u(184),U=u(55);u.d(n,"HomePageModuleNgFactory",function(){return G});var G=t["ɵcmf"](r,[],function(l){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[c.a,s.a,p.a,m.a,h.a,g.a,f.a,w.a,y.a,H]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,L.l,L.k,[t.LOCALE_ID,[2,L.t]]),t["ɵmpd"](4608,V["ɵi"],V["ɵi"],[]),t["ɵmpd"](4608,V.FormBuilder,V.FormBuilder,[]),t["ɵmpd"](512,L.b,L.b,[]),t["ɵmpd"](512,V["ɵba"],V["ɵba"],[]),t["ɵmpd"](512,V.FormsModule,V.FormsModule,[]),t["ɵmpd"](512,V.ReactiveFormsModule,V.ReactiveFormsModule,[]),t["ɵmpd"](512,B.a,B.a,[]),t["ɵmpd"](512,B.b,B.b,[]),t["ɵmpd"](512,r,r,[]),t["ɵmpd"](256,U.a,i,[])])})}});
+webpackJsonp([66],{
+
+/***/ 853:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllImageKhataPageModule", function() { return AllImageKhataPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__all_image_khata__ = __webpack_require__(933);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AllImageKhataPageModule = /** @class */ (function () {
+    function AllImageKhataPageModule() {
+    }
+    AllImageKhataPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__all_image_khata__["a" /* AllImageKhataPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__all_image_khata__["a" /* AllImageKhataPage */]),
+            ],
+        })
+    ], AllImageKhataPageModule);
+    return AllImageKhataPageModule;
+}());
+
+//# sourceMappingURL=all-image-khata.module.js.map
+
+/***/ }),
+
+/***/ 933:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllImageKhataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_photo_viewer__ = __webpack_require__(495);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var AllImageKhataPage = /** @class */ (function () {
+    function AllImageKhataPage(navCtrl, navParams, camera, alertCtrl, rest, codes, ldcontroller, message, datetransform, view, photoViewer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.camera = camera;
+        this.alertCtrl = alertCtrl;
+        this.rest = rest;
+        this.codes = codes;
+        this.ldcontroller = ldcontroller;
+        this.message = message;
+        this.datetransform = datetransform;
+        this.view = view;
+        this.photoViewer = photoViewer;
+        this.type = '';
+        this.upload_image = '';
+        this.tp = '';
+        this.images = [];
+        this.filterimages = [];
+        this.isselect = false;
+        this.keys = [];
+        this.searchTerm = '';
+        this.isselect = this.navParams.get("isselect");
+        this.type = this.navParams.get("type");
+        this.tp = this.type;
+        this.getImagesBySrthId();
+    }
+    AllImageKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AllImageKhataPage');
+    };
+    AllImageKhataPage.prototype.saveImage = function () {
+        var _this = this;
+        if (this.tp == '') {
+            this.message.displayToast("Please add a type ");
+            return;
+        }
+        var data = {};
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        data['image_content'] = this.upload_image;
+        data['document_type'] = 'image';
+        data['srth_id'] = json[0]['srth_id'];
+        if (this.tp == 'sbills') {
+            data['worker_type'] = 'shop';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'mbills') {
+            data['worker_type'] = 'mechanic';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'preceipts') {
+            data['worker_type'] = null;
+            data['type'] = 'payment';
+        }
+        else if (this.tp == 'drbills') {
+            data['worker_type'] = 'driver';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'profile') {
+            data['worker_type'] = null;
+            data['type'] = 'profile';
+        }
+        else if (this.tp == 'drdoc' || this.tp == 'vhdoc') {
+            data['worker_type'] = "document";
+            data['type'] = 'bills';
+        }
+        var ldcon = this.ldcontroller.create({
+            content: 'Uploading image to ATK server ... '
+        });
+        ldcon.present();
+        this.rest.post(this.codes.SAVE_IMAGE, data).then(function (resp) {
+            ldcon.dismiss();
+            _this.type = _this.tp;
+            _this.upload_image = '';
+            _this.getImagesByType(_this.type);
+        });
+    };
+    AllImageKhataPage.prototype.filterList = function (events) {
+        var _this = this;
+        this.filterimages = this.images.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var sterm = _this.searchTerm.trim();
+                sterm = sterm.replace(/[^a-zA-Z]/g, "");
+                var tag_cloud = wp.tag_cloud.replace(/[^a-zA-Z]/g, "");
+                return (tag_cloud.toLowerCase().indexOf(sterm.toLowerCase()) > -1);
+            }
+            else
+                return _this.images;
+        });
+    };
+    AllImageKhataPage.prototype.dismiss = function () {
+        this.view.dismiss();
+    };
+    AllImageKhataPage.prototype.selectImage = function (img) {
+        localStorage.setItem("selectedimage", JSON.stringify(img));
+        this.view.dismiss();
+    };
+    AllImageKhataPage.prototype.viewImage = function (image) {
+        this.photoViewer.show(image['image_url'], image['tag_cloud'], { share: true });
+    };
+    AllImageKhataPage.prototype.getImagesBySrthId = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        var ldcon = this.ldcontroller.create({
+            content: 'Loading all the images ... '
+        });
+        ldcon.present();
+        this.rest.post(this.codes.GET_IMAGES_BY_SRTH_ID, data).then(function (resp) {
+            ldcon.dismiss();
+            if (resp['_ReturnCode'] == '0') {
+                _this.images = resp['data'];
+                for (var i = 0; i < _this.images.length; i++) {
+                    console.log(_this.images[i]['image_tags']);
+                    var json = JSON.parse(_this.images[i]['image_tags']);
+                    var keys = Object.keys(json);
+                    _this.keys = keys;
+                    var tagcloud = "";
+                    for (var j = 0; j < keys.length; j++) {
+                        tagcloud += "#" + json[keys[j]] + " ";
+                    }
+                    // keys[j]+":"
+                    _this.images[i]['tag_cloud'] = tagcloud;
+                }
+                _this.filterimages = _this.images;
+            }
+        });
+    };
+    AllImageKhataPage.prototype.getImagesByType = function (event) {
+        var _this = this;
+        this.tp = event;
+        var data = {};
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        data['srth_id'] = json[0]['srth_id'];
+        if (this.tp == 'sbills') {
+            data['worker_type'] = 'shop';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'mbills') {
+            data['worker_type'] = 'mechanic';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'preceipts') {
+            data['worker_type'] = null;
+            data['type'] = 'payment';
+        }
+        else if (this.tp == 'drbills') {
+            data['worker_type'] = 'driver';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'profile') {
+            data['worker_type'] = null;
+            data['type'] = 'profile';
+        }
+        else if (this.tp == 'drdoc' || this.tp == 'vhdoc') {
+            data['worker_type'] = "document";
+            data['type'] = 'bills';
+        }
+        this.rest.post(this.codes.GET_IMAGE_BY_TYPE_WORKER_TYPE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.images = resp['data'];
+                var _loop_1 = function (i) {
+                    data = {
+                        "image_id": _this.images[i]['image_id']
+                    };
+                    _this.rest.post(_this.codes.GET_IMAGE_BY_IMAGE_ID, data).then(function (resp) {
+                        if (resp['data'].length > 0)
+                            _this.images[i]['image_content'] = resp['data'][0]['image_content'];
+                    });
+                };
+                var data;
+                for (var i = 0; i < _this.images.length; i++) {
+                    _loop_1(i);
+                }
+            }
+        });
+    };
+    AllImageKhataPage.prototype.presentConfirm = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to save this image?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Save',
+                    handler: function () {
+                        _this.saveImage();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    AllImageKhataPage.prototype.getImage = function (img) {
+        var _this = this;
+        if (img == 'camera') {
+            var options = {
+                quality: 10,
+                destinationType: this.camera.DestinationType.DATA_URL,
+                encodingType: this.camera.EncodingType.JPEG,
+                mediaType: this.camera.MediaType.PICTURE,
+                sourceType: this.camera.PictureSourceType.CAMERA
+            };
+            this.camera.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.upload_image = base64Image;
+            }, function (err) {
+                // Handle error
+            });
+        }
+        else {
+            var options = {
+                quality: 10,
+                destinationType: this.camera.DestinationType.DATA_URL,
+                encodingType: this.camera.EncodingType.JPEG,
+                mediaType: this.camera.MediaType.PICTURE,
+                sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+            };
+            this.camera.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.upload_image = base64Image;
+            }, function (err) {
+                // Handle error
+            });
+        }
+    };
+    AllImageKhataPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-all-image-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/all-image-khata/all-image-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n\n      <ion-col col-9 class="person-name text-left">\n        <ion-title>\n          <i class="fa fa-file-image-o" aria-hidden="true"></i>\n          ALL PHOTO KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube">\n        <ion-icon name="close" style="font-size: 2em;margin-top: 12px;" (click)="dismiss()"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-col col-12>\n    <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n  </ion-col>\n  <!-- <ion-card style="border-radius: 8px !important;">\n    <ion-grid>\n      <ion-row>\n        <ion-col col-12 style="text-align: center;">\n          <h2 class="subhead">Upload Image</h2>\n        </ion-col>\n        <ion-col col-7 style="text-align: center;">\n          <ion-item style="background: none !important;">\n            <ion-label floating style="text-align: left !important;">Type</ion-label>\n            <ion-select [disabled]="isselect && type != \'all\'" [(ngModel)]="tp" interface="popover">\n              <ion-option value="sbills">Shop Bills</ion-option>\n              <ion-option value="mbills">Mechanic Bills</ion-option>\n              <ion-option value="preceipts">Payment Receipts</ion-option>\n              <ion-option value="drbills">Driver Bills</ion-option>\n              <ion-option value="profile">Profile</ion-option>\n              <ion-option value="drdoc">Driver Document</ion-option>\n              <ion-option value="vhdoc">Vehicle Document</ion-option>\n            </ion-select>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n\n\n      <ion-row>\n        <ion-col col-6>\n          <button ion-button class="custom-button" style="width: 150px !important;margin-left: 18px;"\n            (click)="getImage(\'camera\')">Camera &nbsp; <ion-icon name="camera"></ion-icon></button>\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button class="custom-button" style="width: 150px !important;margin-left: -4px;"\n            (click)="getImage(\'gallery\')">Gallery &nbsp; <ion-icon ios="ios-image" md="md-image"></ion-icon></button>\n        </ion-col>\n      </ion-row>\n\n      <ion-row *ngIf="upload_image != \'\'">\n        <ion-col col-6>\n          <img [src]="upload_image" class="upl_img" />\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button class="custom-button" style="width: 150px !important;margin-left: -4px;"\n            (click)="presentConfirm()">Save Image</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card> -->\n\n  <!-- <h2 class="subhead">Select type of images</h2>\n\n  <ion-row no-lines [disabled]="isselect && type != \'all\'" radio-group style="margin: 0;" [(ngModel)]="type"\n    (ionChange)="getImagesByType($event)">\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label>Shop Bills</ion-label>\n        <ion-radio value="sbills"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label>Mechanic Bills</ion-label>\n        <ion-radio value="mbills"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label>Payment Receipts</ion-label>\n        <ion-radio value="preceipts"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label> Driver Bills</ion-label>\n        <ion-radio value="drbills"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label> Document Bills</ion-label>\n        <ion-radio value="dbills"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label> Profile</ion-label>\n        <ion-radio value="profile"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label> Driver Document</ion-label>\n        <ion-radio value="drdocument"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n\n    <ion-col col-6>\n      <ion-item>\n        <ion-label> Vehicle Document</ion-label>\n        <ion-radio value="vhdocument"></ion-radio>\n      </ion-item>\n    </ion-col>\n\n  </ion-row> -->\n\n\n  <ion-list>\n      <ion-item *ngFor="let img of filterimages" (click)="viewImage(img)">\n        <ion-grid>\n          <ion-row>\n          <ion-col col-4>\n            <p *ngIf="img[\'image_url\'] != null">\n              <img [src]="img[\'image_url\']" style="width: 100px;"  />\n            </p>\n          </ion-col>\n          <ion-col col-8 style="text-align: left !important;margin-top: 10px;">\n            <span style="white-space: normal;font-size: 12px !important;font-weight: 800;color: #0752af;">\n              {{img[\'tag_cloud\']}}\n            </span>\n          </ion-col>\n        </ion-row>\n        </ion-grid>\n      </ion-item>\n  </ion-list>\n\n  <!-- <ion-row style="padding-left:16px !important; padding-right:16px !important">\n    <ion-col col-12>\n      <div *ngFor="let img of images" >\n        <p *ngIf="img[\'image_url\'] != null">\n          <img [src]="img[\'image_url\']" imageViewer />\n        </p>\n        <p class="dt">\n          {{datetransform.transform(img[\'last_maint_ts\'],\'d, MMM yy\')}}\n          <span>\n            {{img[\'tag_cloud\']}}\n          </span>\n        </p>\n      </div>\n    </ion-col>\n  </ion-row> -->\n\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/all-image-khata/all-image-khata.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_common__["d" /* DatePipe */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_7__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], AllImageKhataPage);
+    return AllImageKhataPage;
+}());
+
+//# sourceMappingURL=all-image-khata.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=66.js.map

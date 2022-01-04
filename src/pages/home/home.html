@@ -177,6 +177,21 @@
   </ion-row>
 
 
+  <h2>Recent Notifications</h2>
+  <ion-list>
+    <ion-item *ngFor="let n of notifications">
+        <h2 class="title-n">{{n['title']}}</h2>
+        <p class="message-n"> 
+          {{n['message']}}
+        </p>
+        <p style="float: right !important;">
+        <button ion-button outline round *ngIf="n['click_page'] != ''" (click)="goToActionPage(n['click_page'],n['next_link'])">
+          Update Now
+        </button>
+      </p>
+    </ion-item>
+  </ion-list>
+
   <!-- <ion-slides pager="true" autoplay="3000" paginationType="bullet">
     
     <ion-slide>

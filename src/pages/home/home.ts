@@ -14,7 +14,7 @@ export class HomePage {
 
   name : any = '';
   fuel : any = '';
-  notifications : Number = 0;
+  notifications : any = [];
 
   @ViewChild(Slides) slides: Slides;
 
@@ -86,6 +86,17 @@ export class HomePage {
     pushObject.on('error').subscribe(error => console.error('Error with Push plugin' + error));
   }
 
+  goToActionPage(page, objectId) {
+    if(page=='DocumentAddBill') {
+      var dt = {
+        "document_id":objectId
+      }
+      this.rest.post(this.codes.GET_DOCUMENT_INFO_BY_DOCUMENT_ID,dt).then(resp => {
+        this.navCtrl.push('DocumentRenewalPage',{'document':resp['data']});
+      });
+    }
+  }
+
 
   refresh(){
 
@@ -99,7 +110,7 @@ export class HomePage {
       if(resp != null) {
         if(resp['data'] != []) {
           var n = resp['data'];
-          this.notifications = n.length;
+          this.notifications = n;
         }
       }
     });

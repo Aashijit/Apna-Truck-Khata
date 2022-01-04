@@ -98,6 +98,36 @@ export class VehicleDocumentPage {
 
   }
 
+  uploadPhoto(dc) {
+      var data = {
+        "dodcument_name":dc['document_name'],
+        "vehicle_number":this.vehicle['vehicle_number']
+      };
+      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+   
+      var data2 = {
+        "srth_id":json[0]['srth_id'],
+        "worker_type":"vehicle",
+        "worker_id":this.vehicle['vehicle_id'],
+        "document_type":"document",
+        "type":"document",
+        "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+        "tags":JSON.stringify(data)
+      }
+      
+      let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':dc['document_image_id']});
+  
+      cameraModalPage.onDidDismiss(resp => {
+        if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+          dc['document_image_id'] = JSON.parse(localStorage.getItem("selectedimage"));
+        else
+          dc['document_image_id'] = "0";
+      });
+      
+      cameraModalPage.present();
+    
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad VehicleDocumentPage');
   }
@@ -149,6 +179,7 @@ export class VehicleDocumentPage {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     for(let i=0;i<this.documents.length;i++){
+      this.documents[i]['document_image_id'] = String(this.documents[i]['document_image_id']);
       this.documents[i]['worker_type'] = 'vehicle';
       this.documents[i]['srth_id'] = json[0]['srth_id'];
       this.documents[i]['vehicle_id'] = this.vehicle['vehicle_id'];
