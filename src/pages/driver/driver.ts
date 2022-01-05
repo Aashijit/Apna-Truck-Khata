@@ -4,6 +4,7 @@ import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, ViewController, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 @IonicPage()
 @Component({
@@ -25,8 +26,13 @@ export class DriverPage {
 
   updatebill : boolean = false;
   updatepayment : boolean = false;
+  updatebill1 : boolean = false;
+
+  bills : any = [];
 
   selectedbill : any = '';
+  selectedbill1 : any = '';
+  
   selectedpayment : any = '';
 
   selectedfilters : any = [];
@@ -90,7 +96,25 @@ export class DriverPage {
           this.filterpayments = this.payments;
       } 
     });
+
+
+    this.getAllBillsByWorkerId();
   }
+
+  getAllBillsByWorkerId(){
+    
+    var data = {
+      "worker_id":this.driver['worker_id'],
+      "worker_type":"driver"
+    };
+
+    this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+        this.bills = resp['data'];
+      }
+    });
+  }
+
 
   goToBillPaymentSearch() {
 
@@ -180,8 +204,10 @@ export class DriverPage {
 
   selectThisPayment(payment) {
     this.updatebill = false;
+    this.updatebill1 = false;
     this.updatepayment = true;
     
+    this.selectedbill1 = null;
     this.selectedpayment = payment;
 
     for(let i=0;i<this.filterpayments.length;i++){
@@ -199,11 +225,31 @@ export class DriverPage {
   }
 
   selectThisBill(bill,payment) {
+
+    if(payment == null) {
+      this.selectedbill1 = bill;
+      this.updatebill1 = true;
+      this.selectedbill = null;
+      this.updatebill = false;
+      this.updatepayment = false;
+      this.selectedpayment = null;
+
+      for(let i=0;i<this.bills.length;i++){
+        this.bills[i]['selected'] = 'false';
+       }
+   
+       bill['selected'] = 'true';
+
+      return;
+    }
+
     this.updatepayment = false;
     this.updatebill = true;
+    this.updatebill1= false;
 
     this.selectedpayment = payment;
     this.selectedbill = bill;
+    this.selectedbill1 = null;
 
     for(let i=0;i<this.filterpayments.length;i++){
       if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
@@ -251,11 +297,21 @@ export class DriverPage {
   }
 
   viewBill(){
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedpayment = {
+        "bills":[
+          this.selectedbill1
+        ]
+      }
+    }
     let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
     mdl.present();
   }
 
   updateBill(){
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedbill = this.selectedbill1;
+    }
     localStorage.setItem('bill',JSON.stringify(this.selectedbill));
     this.navCtrl.push('AddDriverExpensesPage',{'update':'true'});
   }
@@ -284,7 +340,9 @@ export class DriverPage {
   }
 
   deleteBillByBillId(){
-  
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedbill = this.selectedbill1;
+    }
     var data = {
       "bill_id":this.selectedbill['bill_id']
     };  

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jan 02 22:58:55 IST 2022
+#Wed Jan 05 22:18:45 IST 2022
 124.path=www/build/47.js
 60.set=ASSET
 52.set=ASSET
@@ -102,7 +102,7 @@
 53.path=www/build/59.js
 7.set=ASSET
 68.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
-128.set=DEX
+128.set=ASSET
 106.baseType=DIRECTORY
 112.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
 21.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
@@ -135,7 +135,7 @@
 113.path=www/plugins/cordova-plugin-contacts/www/ContactOrganization.js
 22.path=www/plugins/cordova-plugin-camera/www/Camera.js
 129.baseType=DIRECTORY
-128.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+128.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
 29.path=www/build/5.js
 2.baseType=DIRECTORY
 132.baseType=DIRECTORY
@@ -143,7 +143,7 @@
 6.set=ASSET
 93.baseType=DIRECTORY
 53.baseType=DIRECTORY
-127.set=ASSET
+127.set=DEX
 13.baseType=DIRECTORY
 0.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
 119.set=ASSET
@@ -213,7 +213,7 @@
 4.baseType=DIRECTORY
 112.path=www/assets/saarthi-icon/png/youtube.png
 21.path=www/plugins/phonegap-plugin-push/www/push.js
-127.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
+127.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 119.path=www/assets/saarthi-icon/png/005-delivery-man.png
 28.path=www/build/49.js
 75.path=www/build/63.js
@@ -237,7 +237,7 @@
 89.path=www/build/1.js
 121.path=www/plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js
 30.set=ASSET
-128.path=classes2.dex
+128.path=www/build/58.js
 22.set=ASSET
 50.base=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/assets/debug
 14.set=ASSET
@@ -320,7 +320,7 @@
 88.path=www/build/45.js
 120.path=www/plugins/cordova-plugin-contacts/www/ContactError.js
 20.set=ASSET
-127.path=www/build/58.js
+127.path=classes2.dex
 119.baseType=DIRECTORY
 12.set=ASSET
 90.set=ASSET

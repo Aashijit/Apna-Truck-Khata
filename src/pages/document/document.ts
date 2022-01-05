@@ -27,6 +27,12 @@ export class DocumentPage {
 
   selectedbill : any = '';
   selectedpayment : any = '';
+
+  updatebill1 : boolean = false;
+
+  bills : any = [];
+
+  selectedbill1 : any = '';
   
   constructor(private alertCtrl :  AlertController,private message : MessageProvider, public navCtrl: NavController, 
     public navParams: NavParams, private rest : RestProvider, private codes : CodesProvider,
@@ -65,7 +71,24 @@ export class DocumentPage {
           this.filterpayments = this.payments;
       } 
     });
+
+    this.getAllBillsByWorkerId();
   }
+
+  getAllBillsByWorkerId(){
+    
+    var data = {
+      "worker_id":this.document['worker_id'],
+      "worker_type":"documents"
+    };
+
+    this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+        this.bills = resp['data'];
+      }
+    });
+  }
+
 
   showMore() {
     if(this.isShown) {
@@ -177,8 +200,10 @@ export class DocumentPage {
 
   selectThisPayment(payment) {
     this.updatebill = false;
+    this.updatebill1 = false;
     this.updatepayment = true;
     
+    this.selectedbill1 = null;
     this.selectedpayment = payment;
 
     for(let i=0;i<this.filterpayments.length;i++){
@@ -196,11 +221,31 @@ export class DocumentPage {
   }
 
   selectThisBill(bill,payment) {
+
+    if(payment == null) {
+      this.selectedbill1 = bill;
+      this.updatebill1 = true;
+      this.selectedbill = null;
+      this.updatebill = false;
+      this.updatepayment = false;
+      this.selectedpayment = null;
+
+      for(let i=0;i<this.bills.length;i++){
+        this.bills[i]['selected'] = 'false';
+       }
+   
+       bill['selected'] = 'true';
+
+      return;
+    }
+
     this.updatepayment = false;
     this.updatebill = true;
+    this.updatebill1= false;
 
     this.selectedpayment = payment;
     this.selectedbill = bill;
+    this.selectedbill1 = null;
 
     for(let i=0;i<this.filterpayments.length;i++){
       if(this.filterpayments[i]['payment_id'] == payment['payment_id']) {
@@ -217,12 +262,23 @@ export class DocumentPage {
 
   }
 
+
   viewBill(){
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedpayment = {
+        "bills":[
+          this.selectedbill1
+        ]
+      }
+    }
     let mdl = this.modalCtrl.create('ViewPaymentPage',{'payment':this.selectedpayment});
     mdl.present();
   }
 
   updateBill(){
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedbill = this.selectedbill1;
+    }
     localStorage.setItem('bill',JSON.stringify(this.selectedbill));
     console.log(JSON.stringify(this.selectedbill));
     var doc = {
@@ -255,7 +311,9 @@ export class DocumentPage {
   }
 
   deleteBillByBillId(){
-  
+    if(this.updatebill1 == true && this.updatebill == false) {
+      this.selectedbill = this.selectedbill1;
+    }
     var data = {
       "bill_id":this.selectedbill['bill_id']
     };  

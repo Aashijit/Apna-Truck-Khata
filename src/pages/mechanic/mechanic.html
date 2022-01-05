@@ -134,6 +134,56 @@
       </ion-col>
     </ion-row>
 
+    <div class="scroll-grid" style="margin-top: 20px !important;">
+      <div class="scrollmenu">
+       
+        <a href="#home">BILL#</a>
+        <a href="#news">BILL </a>
+        <a href="#contact">VEHICLES</a>
+        <a href="#about">COST</a>
+        <a href="#about">DETAILS</a>
+        <a href="#about">IMAGE</a>
+
+        <div *ngIf="bills.length == 0" style="padding: 15px;text-align: center;">
+            <ion-spinner></ion-spinner>
+            <br/>
+          <span style="color: rgb(63, 63, 63);">
+            Loading
+          </span>
+        </div>
+    
+        <div class="scrollmenu-list total-bill " *ngFor="let bill of bills" >
+         
+          <div class="scrollmenu-list paid-money " (click)="selectThisBill(bill,null)">
+            <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
+            <p>{{bill['bill_id']}}</p>
+            <p>{{bill['bill_date']}}</p>
+            <p>{{bill['vehicle_number']}}</p>
+            <p>₹ {{bill['total_bill']}}</p>
+            <p>{{bill['bill_details']}}</p>
+            <p>
+              <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+              </span>
+            </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="show-arrows">
+        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+
+
+        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill1" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>
+        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>
+  
+        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+  
+      </div>
+    </div>
+
+
     <div class="custom-searchbar-div" style="position: relative;">
       <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="searchBillDetails()" placeholder="SEARCH"></ion-searchbar>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
