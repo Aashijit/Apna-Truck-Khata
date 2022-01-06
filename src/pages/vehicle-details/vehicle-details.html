@@ -286,7 +286,7 @@
         <a href="#tools">QUANTITY</a>
         <a href="#tools">RATE</a>
         <a href="#tools">TOTAL</a>
-        <!-- <a href="#tools">DETAILS</a> -->
+        <a href="#tools">DETAILS</a> 
 
           <div class="scrollmenu-list" *ngFor="let vhc of vehicleworkdetails" id="5" (click)="selectThis(5)">
             <p>{{vhc['problem']}}</p>
@@ -297,6 +297,7 @@
             <p>{{vhc['quantity']}}</p>
             <p>{{vhc['rate']}}</p>
             <p>{{vhc['total_amount']}}</p>
+            <p>{{vhc['bill_details']}}</p>
           </div>
         </div>
         <div class="show-arrows">

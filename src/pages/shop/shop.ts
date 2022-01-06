@@ -32,7 +32,7 @@ export class ShopPage {
   selectedpayment : any = '';
 
 
-  type : any = '';
+  type : any = 'ano';
   selectedfilters : any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 

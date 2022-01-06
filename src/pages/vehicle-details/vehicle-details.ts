@@ -32,6 +32,7 @@ export class VehicleDetailsPage {
 
     this.rest.post(this.codes.GET_BILL_FOR_VEHICLE, data).then(resp => {
       this.vehicleworkdetails = resp['data'];
+      console.error(JSON.stringify(this.vehicleworkdetails));
     });
   }
 
