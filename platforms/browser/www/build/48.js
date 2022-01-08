@@ -306,6 +306,7 @@ var DocumentRenewalPage = /** @class */ (function () {
     DocumentRenewalPage.prototype.saveBill = function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        alert(JSON.stringify(this.img));
         var data = {
             "person_shop_name": this.person_shop_name,
             "srth_id": json[0]['srth_id'],

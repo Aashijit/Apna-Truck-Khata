@@ -87,6 +87,9 @@ var InsurancePage = /** @class */ (function () {
         this.updatepayment = false;
         this.selectedbill = '';
         this.selectedpayment = '';
+        this.updatebill1 = false;
+        this.bills = [];
+        this.selectedbill1 = '';
         this.insurance = JSON.parse(localStorage.getItem("worker"));
         this.due = Number(this.insurance['total_bill_money']) - Number(this.insurance['paid_money']);
     }
@@ -108,6 +111,19 @@ var InsurancePage = /** @class */ (function () {
             if (resp['_ReturnCode'] == '0') {
                 _this.payments = resp['data'];
                 _this.filterpayments = _this.payments;
+            }
+        });
+        this.getAllBillsByWorkerId();
+    };
+    InsurancePage.prototype.getAllBillsByWorkerId = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.insurance['worker_id'],
+            "worker_type": "insurance"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
             }
         });
     };
@@ -166,7 +182,9 @@ var InsurancePage = /** @class */ (function () {
     };
     InsurancePage.prototype.selectThisPayment = function (payment) {
         this.updatebill = false;
+        this.updatebill1 = false;
         this.updatepayment = true;
+        this.selectedbill1 = null;
         this.selectedpayment = payment;
         for (var i = 0; i < this.filterpayments.length; i++) {
             if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
@@ -180,10 +198,25 @@ var InsurancePage = /** @class */ (function () {
         payment['selected'] = 'true';
     };
     InsurancePage.prototype.selectThisBill = function (bill, payment) {
+        if (payment == null) {
+            this.selectedbill1 = bill;
+            this.updatebill1 = true;
+            this.selectedbill = null;
+            this.updatebill = false;
+            this.updatepayment = false;
+            this.selectedpayment = null;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            bill['selected'] = 'true';
+            return;
+        }
         this.updatepayment = false;
         this.updatebill = true;
+        this.updatebill1 = false;
         this.selectedpayment = payment;
         this.selectedbill = bill;
+        this.selectedbill1 = null;
         for (var i = 0; i < this.filterpayments.length; i++) {
             if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
                 this.filterpayments[i]['selected'] = 'true';
@@ -196,10 +229,20 @@ var InsurancePage = /** @class */ (function () {
         bill['selected'] = 'true';
     };
     InsurancePage.prototype.viewBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedpayment = {
+                "bills": [
+                    this.selectedbill1
+                ]
+            };
+        }
         var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
         mdl.present();
     };
     InsurancePage.prototype.updateBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
         localStorage.setItem('bill', JSON.stringify(this.selectedbill));
         console.log(JSON.stringify(this.selectedbill));
         var doc = {
@@ -232,6 +275,9 @@ var InsurancePage = /** @class */ (function () {
     };
     InsurancePage.prototype.deleteBillByBillId = function () {
         var _this = this;
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
         var data = {
             "bill_id": this.selectedbill['bill_id']
         };

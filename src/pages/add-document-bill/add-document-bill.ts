@@ -186,7 +186,7 @@ export class AddDocumentBillPage {
 
     var data = {
       "srth_id": json[0]['srth_id'],
-      "worker_type": "documents"
+      "reason": this.document['document_name']
     };
     ld.present();
     this.bills = [];

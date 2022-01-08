@@ -32989,6 +32989,27 @@ page-home .info h1 {
   }
 }
 
+page-home .item-md {
+  background-color: transparent !important;
+  padding-left: 0px !important;
+}
+
+page-home .title-n {
+  white-space: normal;
+  font-weight: 1000;
+  color: cornflowerblue;
+  text-align: left !important;
+}
+
+page-home .message-n {
+  white-space: normal;
+  margin-top: 5px;
+  text-align: justify;
+  font-size: 12px;
+  color: #7e7e7e;
+  margin-bottom: 5px;
+}
+
 page-insurance .driver .profile-details {
   padding: 20px 10px;
   background: #fff;
