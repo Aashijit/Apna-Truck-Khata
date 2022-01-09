@@ -19,6 +19,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
+import { NgOtpInputModule } from  'ng-otp-input';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { Push, PushObject, PushOptions } from '@ionic-native/push';
     CalendarModule,
     IonicImageViewerModule,
     BrowserAnimationsModule,
+    NgOtpInputModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

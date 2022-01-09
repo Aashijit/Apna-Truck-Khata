@@ -31,7 +31,33 @@
     <label>ENTER MOBILE NUMBER</label>
     <i class="fa fa-phone-square" aria-hidden="true"></i>
   </div>
+  <!-- *ngIf='showpassword'  -->
+  <ion-row style="margin-top: 20px !important;" *ngIf='showpassword'>
+    <ion-col col-12 style="margin-left: 16px !important;">
+      <h2 >
+        ENTER OTP
+      </h2>
+      <ng-otp-input #input1 style="margin-top:10px;"   (onInputChange)="updateOtp($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
+    
+    </ion-col>
+    <ion-col col-12 style="margin-left: 16px !important;">
+      <h2>
+        CREATE NEW PIN
+      </h2>
+      <ng-otp-input #input2 style="margin-top:10px;" (onInputChange)="updatePassword($event)" [config]="{length:4,allowNumbersOnly:true,isPasswordInput:true}"></ng-otp-input>
+    
+    </ion-col>
+  </ion-row>
 
+  <ion-row *ngIf='enterpassword'>
+    <ion-col col-12 style="margin-left: 16px !important;">
+    <h2>
+      ENTER YOUR PIN
+    </h2>
+  <ng-otp-input style="margin-top:10px;"   (onInputChange)="updatePassword($event)" [config]="{length:4,allowNumbersOnly:true,isPasswordInput:true}"></ng-otp-input>
+</ion-col>
+</ion-row>
+<!--   
   <div class="label-float" *ngIf='showpassword'>
     <input type="text"  placeholder=" " [(ngModel)]="password" />
     <label>CREATE PASSWORD</label>
@@ -43,7 +69,7 @@
     <input type="password"  placeholder=" " [(ngModel)]="password" />
     <label>ENTER PASSWORD</label>
     <i class="fa fa-key" aria-hidden="true"></i>
-  </div>
+  </div> -->
 
 
   <p style="color: red;">
