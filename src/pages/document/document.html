@@ -203,7 +203,7 @@
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
 
-    <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">
+    <!-- <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">
       <ion-col col-4>
         <ion-item>
           <ion-label>Bill #</ion-label>
@@ -222,16 +222,16 @@
           <ion-radio value="ano"></ion-radio>
         </ion-item>
       </ion-col>
-    </ion-row>
+    </ion-row> -->
 
-    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+    <!-- <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
       <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
         <ion-label *ngIf="sc['type'] == 'bills'" >Bill # {{sc['id']}}</ion-label>
         <ion-label *ngIf="sc['type'] == 'payments'" >Payment # {{sc['id']}}</ion-label>
         <ion-label *ngIf="sc['type'] == 'reasons'" >{{sc['name']}}</ion-label>
         <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>
       </ion-chip>
-      </p>
+      </p> -->
 
       <div class="scroll-grid" >
         <div class="scrollmenu">
@@ -256,7 +256,8 @@
             <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
             <p>{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
-            <p></p>
+            <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
+            <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
             <p>₹ {{payment['payment_amount']}}</p>
             <p>{{payment['details']}}</p>
             <p>
@@ -287,7 +288,8 @@
             <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
             <p>{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
-            <p></p>
+            <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
+            <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
             <p>₹ {{payment['payment_amount']}}</p>
             <p>{{payment['details']}}</p>
             <p>
@@ -299,7 +301,7 @@
               <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
               <p>{{bill['bill_id']}}</p>
               <p>{{bill['bill_date']}}</p>
-              <p>{{bill['reason']}}</p>
+              <p>{{bill['vehicle_number']}}</p>
               <p>₹ {{bill['total_bill']}}</p>
               <p>{{bill['bill_details']}}</p>
               <p>

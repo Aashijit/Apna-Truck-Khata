@@ -80,7 +80,7 @@
 
     <div class="white-section"> 
       <div class="label-float" >
-        <input type="tel" [(ngModel)]="payment_amount"  placeholder=" " />
+        <input type="tel" [(ngModel)]="payment_amount" (keyup)="updateAmount()"  placeholder=" " />
         <label>GIVE MONEY</label>
         <i class="fa fa-money" aria-hidden="true"></i>
   
@@ -143,8 +143,8 @@
     
   
       <ion-row style="margin: 0;">
-        <ion-col col-8>
-          <ion-item  class="label-select">
+        <ion-col col-12>
+          <ion-item  class="label-select" style="margin-top: -15px;margin-left: -3px;">
             <ion-label floating>CHOOSE BILL #</ion-label>
             <ion-select multiple="true" [(ngModel)]="bill_ids" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="change($event)">
               <ion-option value="{{bill['bill_id']}}" *ngFor="let bill of bills">{{bill['bill_id']+" - "+"₹ "+bill['total_bill']}}</ion-option>
@@ -152,10 +152,10 @@
           </ion-item>
       
         </ion-col>
-        <ion-col col-4>
+        <!-- <ion-col col-4>
           <button ion-button disabled="true" round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>
           </button>
-        </ion-col>
+        </ion-col> -->
       </ion-row>
   
     </div>

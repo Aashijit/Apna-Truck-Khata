@@ -155,7 +155,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "payment_amount":this.payment_amount,
       "details":this.details,
-      "payment_image_1_id":this.img['image_url'],
+      "payment_image_1_id":this.img != undefined ? this.img['image_url'] : "0",
       "payment_image_2_id":'0',
       "payment_date":this.date_of_payment,
       "bill_ids":this.bill_ids,
@@ -184,7 +184,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "payment_amount":this.payment_amount,
       "details":this.details,
-      "payment_image_1_id":this.img['image_url'],
+      "payment_image_1_id":this.img != undefined ? this.img['image_url'] : "0",
       "payment_image_2_id":'0',
       "payment_date":this.date_of_payment,
       "bill_ids":this.bill_ids,
@@ -206,6 +206,10 @@ export class LedgerPage {
         this.bill_ids = [];
       }
     });
+  }
+
+  updateAmount() {
+    this.money_to_pay = this.payment_amount;
   }
 
   getAllBillsByWorkerId(){

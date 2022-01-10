@@ -258,7 +258,8 @@
           <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
           <p>{{payment['payment_id']}}</p>
           <p>{{payment['date_of_payment']}}</p>
-          <p></p>
+          <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
+          <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
           <p>₹ {{payment['payment_amount']}}</p>
           <p>{{payment['details']}}</p>
           <p>
@@ -289,7 +290,8 @@
           <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
           <p>{{payment['payment_id']}}</p>
           <p>{{payment['date_of_payment']}}</p>
-          <p></p>
+          <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
+          <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
           <p>₹ {{payment['payment_amount']}}</p>
           <p>{{payment['details']}}</p>
           <p>
@@ -301,7 +303,7 @@
             <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
             <p>{{bill['bill_id']}}</p>
             <p>{{bill['bill_date']}}</p>
-            <p>{{bill['reason']}}</p>
+            <p>{{bill['vehicle_number']}}</p>
             <p>₹ {{bill['total_bill']}}</p>
             <p>{{bill['bill_details']}}</p>
             <p>
