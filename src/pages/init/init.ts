@@ -2,6 +2,7 @@ import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 
 
 @IonicPage()
@@ -21,6 +22,16 @@ export class InitPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
     private codes : CodesProvider, private loading : LoadingController) {
+
+      if(localStorage.getItem(this.codes.K_ACCOUNT_INFO) != null && localStorage.getItem(this.codes.K_ACCOUNT_INFO) != undefined) {
+          var json =  JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+          this.phoneNumber = json[0]['mobile_number'];
+          if(json['password_salt'] != '') 
+            this.enterpassword = true;
+          else 
+            this.showpassword = true;
+      }
+
   }
 
   ionViewDidLoad() {

@@ -11,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
 
-  rootPage:any = '';
+  rootPage:any = 'InitPage';
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private codes : CodesProvider) {
     platform.ready().then(() => {
@@ -21,10 +21,10 @@ export class MyApp {
       splashScreen.hide();
 
 
-      if(localStorage.getItem(this.codes.K_ACCOUNT_INFO) == null || localStorage.getItem(this.codes.K_ACCOUNT_INFO) == undefined){
-         this.rootPage = 'InitPage';
-      }else 
-        this.rootPage = 'TabsPage';
+      // if(localStorage.getItem(this.codes.K_ACCOUNT_INFO) == null || localStorage.getItem(this.codes.K_ACCOUNT_INFO) == undefined){
+      //  this.rootPage = 'InitPage';
+      // }else 
+      //  this.rootPage = 'TabsPage';
 
 
 
