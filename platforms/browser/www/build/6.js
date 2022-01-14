@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 915:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDocumentPageModule", function() { return VehicleDocumentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_document__ = __webpack_require__(992);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_document__ = __webpack_require__(991);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var VehicleDocumentPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 992:
+/***/ 991:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,7 +245,6 @@ var VehicleDocumentPage = /** @class */ (function () {
             this_1.documents[i]['is_remove'] = '0';
             this_1.documents[i]['last_maint_id'] = 'srth_app';
             this_1.documents[i]['opt_counter'] = '0';
-            alert(JSON.stringify(this_1.documents[i]));
             this_1.rest.post(this_1.codes.UPDATE_DOCUMENT_INFO, this_1.documents[i]).then(function (resp) {
                 _this.message.displayToast(_this.documents[i]['document_name'] + " saved.");
             });

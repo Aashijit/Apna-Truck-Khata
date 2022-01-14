@@ -29,14 +29,20 @@
         <a href="#news">VEHICLE NUMBER</a>
         <a href="#contact">EXPIRY DATE</a>
         <a href="#support">COST</a>
+        <a href="#support">IMAGE</a>
 
-        <div *ngFor="let bill of bills" (click)="selectThis(bill)">
+        <div *ngFor="let bill of displayBills" (click)="selectThis(bill)">
           <!-- <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list' : 'scrollmenu-list selected'"> -->
             <p>{{bill['bill_id']}}</p>
             <p>{{bill['person_shop_name']}}</p>
-            <p>{{vehicle_string}}</p>
+            <p>{{bill['vehicle_number']}}</p>
             <p>{{bill['expiry_date']}}</p>
             <p>₹ {{bill['total_bill']}}</p>
+            <p>
+              <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+                <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+              </span>
+            </p>
           <!-- </div> -->
         </div>
 

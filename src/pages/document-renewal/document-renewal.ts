@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../../src/providers/rest/rest';
 import { CodesProvider } from './../../../src/providers/codes/codes';
@@ -56,11 +57,13 @@ export class DocumentRenewalPage {
 
   img: any = null;
 
+  displayBills : any = [];
+
 
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes: CodesProvider, private rest: RestProvider,
-    private modalCtrl: ModalController, private message : MessageProvider) {
+    private modalCtrl: ModalController, private message : MessageProvider, private pv : PhotoViewer) {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     this.document = this.navParams.get("document");
@@ -131,26 +134,33 @@ export class DocumentRenewalPage {
     mdl.onDidDismiss(resp => {
       if (localStorage.getItem("vehicle_document_bills") != undefined)
         this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
+        alert(localStorage.getItem("vehicle_document_bills"));
       this.bills = [];
-      var vhcls
+      var vhcls = "";
       for (let i = 0; i < this.details.length; i++) {
         var bill = {
           "bill_id": this.bill_id,
           "vehicle_id": this.details[i]['vehicle_id'],
           "expiry_date": this.details[i]['expiry_date'],
           "total_bill": this.details[i]['bill_amount'],
-          "person_shop_name":this.person_shop_name
-
+          "person_shop_name":this.person_shop_name,
+          "vehicle_number":this.details[i]['vehicle_number'],
+          "image":this.details[i]['image_url']
         };
         // console.error("Vehicle number : " + JSON.stringify(this.details[i]));
-        if (this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
-          vhcls += " ";
-        else
-          vhcls += this.details[i]['vehicle_number'] + " ";
+        // if (this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
+        //   vhcls += " ";
+        // else
+        //   vhcls += this.details[i]['vehicle_number'] + " ";
         this.bills.push(bill);
         for (let i = 0; i < this.bills.length; i++)
           this.bills[i]['selected'] = 'false';
       }
+
+      if(this.displayBills.length > 0) {
+        this.displayBills.push(this.bills);
+      } else 
+        this.displayBills = this.bills;
       this.vehicle_string = vhcls.replace("undefined", "");
       this.changeCost({});
     });
@@ -167,6 +177,10 @@ export class DocumentRenewalPage {
         this.vehicles = resp['data'];
       }
     });
+  }
+
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Document Image',{'share':true})
   }
 
   updateBill() {
@@ -308,7 +322,7 @@ export class DocumentRenewalPage {
 
   saveBill() {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-    alert(JSON.stringify(this.img));
+    // alert(JSON.stringify(this.img));
     var data = {
       "person_shop_name": this.person_shop_name,
       "srth_id": json[0]['srth_id'],

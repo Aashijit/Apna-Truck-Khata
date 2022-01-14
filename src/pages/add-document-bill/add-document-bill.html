@@ -85,6 +85,7 @@
         <a href="#support">COST</a>
         <!-- <a href="#support">BILL</a> -->
         <a href="#support">DETAIL</a>
+        <a href="#support">IMAGE</a>
     
         <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bill of filterbills" (click)="selectThis(bill)">
           <div *ngIf="ok && !bill['is_expired']">
@@ -92,12 +93,17 @@
           <p>{{bill['person_shop_name']}}</p>
           <p>
             <span *ngFor="let vh of bill['details']">
-            {{vh['vehicle_detail']['vehicle_number'] + "  "}}
-          </span>
+            {{vh['vehicle_detail']['vehicle_number'] + " expires on ("+ vh['document_expiry_date']+") :: "}}
+            </span>
           </p>
           <p>{{bill['bill_date']}}</p>
           <p>{{bill['total_bill']}}</p>
           <p>{{bill['bill_details']}}</p>
+          <p>
+            <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+              <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+            </span>
+          </p>
         </div>
 
         <div *ngIf="expired && bill['is_expired']">
@@ -105,12 +111,17 @@
           <p>{{bill['person_shop_name']}}</p>
           <p>
             <span *ngFor="let vh of bill['details']">
-            {{vh['vehicle_detail']['vehicle_number'] + "  "}}
-          </span>
+              {{vh['vehicle_detail']['vehicle_number'] + " expires on ("+ vh['document_expiry_date']+") :: "}}
+              </span>
           </p>
           <p>{{bill['bill_date']}}</p>
           <p>{{bill['total_bill']}}</p>
           <p>{{bill['bill_details']}}</p>
+          <p>
+            <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+              <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+            </span>
+          </p>
         </div>
 
         <div *ngIf="all">
@@ -118,12 +129,17 @@
           <p>{{bill['person_shop_name']}}</p>
           <p>
             <span *ngFor="let vh of bill['details']">
-            {{vh['vehicle_detail']['vehicle_number'] + "  "}}
-          </span>
+              {{vh['vehicle_detail']['vehicle_number'] + " expires on ("+ vh['document_expiry_date']+") :: "}}
+              </span>
           </p>
           <p>{{bill['bill_date']}}</p>
           <p>{{bill['total_bill']}}</p>
           <p>{{bill['bill_details']}}</p>
+          <p>
+            <span *ngIf="bill['image'] != null && bill['image'] != undefined">
+              <img [src]="bill['image']['image_url']" style="width:11% !important" (click)="viewBillImage(bill['image'])" />
+            </span>
+          </p>
         </div>
         </div>
   

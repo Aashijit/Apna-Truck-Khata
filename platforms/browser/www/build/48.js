@@ -43,11 +43,12 @@ var DocumentRenewalPageModule = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentRenewalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,8 +63,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var DocumentRenewalPage = /** @class */ (function () {
-    function DocumentRenewalPage(navCtrl, navParams, codes, rest, modalCtrl, message) {
+    function DocumentRenewalPage(navCtrl, navParams, codes, rest, modalCtrl, message, pv) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -71,6 +73,7 @@ var DocumentRenewalPage = /** @class */ (function () {
         this.rest = rest;
         this.modalCtrl = modalCtrl;
         this.message = message;
+        this.pv = pv;
         // UPDATE_DOCUMENT_BILL
         this.gender = '';
         this.myDate = '';
@@ -100,6 +103,7 @@ var DocumentRenewalPage = /** @class */ (function () {
         this.is_update = false;
         this.document = '';
         this.img = null;
+        this.displayBills = [];
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         this.document = this.navParams.get("document");
         console.log(JSON.stringify(this.document));
@@ -155,25 +159,33 @@ var DocumentRenewalPage = /** @class */ (function () {
         mdl.onDidDismiss(function (resp) {
             if (localStorage.getItem("vehicle_document_bills") != undefined)
                 _this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
+            alert(localStorage.getItem("vehicle_document_bills"));
             _this.bills = [];
-            var vhcls;
+            var vhcls = "";
             for (var i = 0; i < _this.details.length; i++) {
                 var bill = {
                     "bill_id": _this.bill_id,
                     "vehicle_id": _this.details[i]['vehicle_id'],
                     "expiry_date": _this.details[i]['expiry_date'],
                     "total_bill": _this.details[i]['bill_amount'],
-                    "person_shop_name": _this.person_shop_name
+                    "person_shop_name": _this.person_shop_name,
+                    "vehicle_number": _this.details[i]['vehicle_number'],
+                    "image": _this.details[i]['image_url']
                 };
                 // console.error("Vehicle number : " + JSON.stringify(this.details[i]));
-                if (_this.details[i]['vehicle_number'] == undefined || _this.details[i]['vehicle_number'] == "undefined")
-                    vhcls += " ";
-                else
-                    vhcls += _this.details[i]['vehicle_number'] + " ";
+                // if (this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
+                //   vhcls += " ";
+                // else
+                //   vhcls += this.details[i]['vehicle_number'] + " ";
                 _this.bills.push(bill);
                 for (var i_1 = 0; i_1 < _this.bills.length; i_1++)
                     _this.bills[i_1]['selected'] = 'false';
             }
+            if (_this.displayBills.length > 0) {
+                _this.displayBills.push(_this.bills);
+            }
+            else
+                _this.displayBills = _this.bills;
             _this.vehicle_string = vhcls.replace("undefined", "");
             _this.changeCost({});
         });
@@ -189,6 +201,9 @@ var DocumentRenewalPage = /** @class */ (function () {
                 _this.vehicles = resp['data'];
             }
         });
+    };
+    DocumentRenewalPage.prototype.viewBillImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Document Image', { 'share': true });
     };
     DocumentRenewalPage.prototype.updateBill = function () {
         var _this = this;
@@ -306,7 +321,7 @@ var DocumentRenewalPage = /** @class */ (function () {
     DocumentRenewalPage.prototype.saveBill = function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        alert(JSON.stringify(this.img));
+        // alert(JSON.stringify(this.img));
         var data = {
             "person_shop_name": this.person_shop_name,
             "srth_id": json[0]['srth_id'],
@@ -398,11 +413,11 @@ var DocumentRenewalPage = /** @class */ (function () {
         console.log('ionViewDidLoad DocumentRenewalPage');
     };
     DocumentRenewalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-document-renewal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n      <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n\n      <ion-col col-10 class="person-name text-left">\n        <ion-title>\n          <ion-icon name="ios-copy"></ion-icon>\n          {{document[\'document_name\']}} - RENEWAL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube" style="margin-left: -20px;">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid">\n      <div class="scrollmenu">\n        <a href="#about">BILL NUMBER</a>\n        <a href="#home">PERSON</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">EXPIRY DATE</a>\n        <a href="#support">COST</a>\n\n        <div *ngFor="let bill of bills" (click)="selectThis(bill)">\n          <!-- <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list\' : \'scrollmenu-list selected\'"> -->\n            <p>{{bill[\'bill_id\']}}</p>\n            <p>{{bill[\'person_shop_name\']}}</p>\n            <p>{{vehicle_string}}</p>\n            <p>{{bill[\'expiry_date\']}}</p>\n            <p>₹ {{bill[\'total_bill\']}}</p>\n          <!-- </div> -->\n        </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n\n      </div>\n    </div>\n\n\n\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">\n      Total ₹ {{total_bill}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>SELECT PERSON</ion-label>\n\n      <ion-select interface="action-sheet"\n        style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"\n        [(ngModel)]="worker_id" (ionChange)="change($event)">\n        <ion-option value="{{per[\'worker_id\']}}" *ngFor="let per of persons">{{per[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center" style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}}\n          <br>{{document[\'document_name\']}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n\n    <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">\n      <button ion-button [disabled]="details.length > 0" round class="custom-button"\n        style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;"\n        (click)="addDocumentBills(\'save\')">ADD DOCUMENT BILLS</button>\n\n      <span *ngIf="details.length > 0"\n        style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">\n        <ion-icon name="thumbs-up" color="success"></ion-icon>\n        &nbsp;\n        Vehciles Added\n      </span>\n\n      <span style="float: right !important;float: right !important;position: absolute;right: 22px;">\n        <button ion-button clear color="danger" (click)="addDocumentBills(\'edit\')" [disabled]="details.length == 0"\n          style="margin-top: 6px;">\n          Edit &nbsp;\n          <ion-icon name="create"></ion-icon>\n        </button>\n      </span>\n    </div>\n\n    <div class="label-float">\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL</label>\n    </div>\n\n    <div class="label-float">\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()" />\n      <label>DATE OF BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    <!-- <div class="label-float" (click)="openDetailPopup()">\n      <input type="text" placeholder="" [(ngModel)]="bill_details" />\n      <label>DETAILS</label>\n    </div> -->\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture" style="margin-top:0px !important;">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4" *ngIf="!is_update">\n    <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>\n  </div>\n  <div class="text-center mt-4" *ngIf="is_update">\n    <button ion-button round class="custom-button" (click)="updateBill()"> UPDATE</button>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-document-renewal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n      <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n\n      <ion-col col-10 class="person-name text-left">\n        <ion-title>\n          <ion-icon name="ios-copy"></ion-icon>\n          {{document[\'document_name\']}} - RENEWAL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube" style="margin-left: -20px;">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid">\n      <div class="scrollmenu">\n        <a href="#about">BILL NUMBER</a>\n        <a href="#home">PERSON</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">EXPIRY DATE</a>\n        <a href="#support">COST</a>\n        <a href="#support">IMAGE</a>\n\n        <div *ngFor="let bill of displayBills" (click)="selectThis(bill)">\n          <!-- <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list\' : \'scrollmenu-list selected\'"> -->\n            <p>{{bill[\'bill_id\']}}</p>\n            <p>{{bill[\'person_shop_name\']}}</p>\n            <p>{{bill[\'vehicle_number\']}}</p>\n            <p>{{bill[\'expiry_date\']}}</p>\n            <p>₹ {{bill[\'total_bill\']}}</p>\n            <p>\n              <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n              </span>\n            </p>\n          <!-- </div> -->\n        </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n\n      </div>\n    </div>\n\n\n\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">\n      Total ₹ {{total_bill}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>SELECT PERSON</ion-label>\n\n      <ion-select interface="action-sheet"\n        style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"\n        [(ngModel)]="worker_id" (ionChange)="change($event)">\n        <ion-option value="{{per[\'worker_id\']}}" *ngFor="let per of persons">{{per[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center" style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}}\n          <br>{{document[\'document_name\']}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n\n    <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">\n      <button ion-button [disabled]="details.length > 0" round class="custom-button"\n        style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;"\n        (click)="addDocumentBills(\'save\')">ADD DOCUMENT BILLS</button>\n\n      <span *ngIf="details.length > 0"\n        style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">\n        <ion-icon name="thumbs-up" color="success"></ion-icon>\n        &nbsp;\n        Vehciles Added\n      </span>\n\n      <span style="float: right !important;float: right !important;position: absolute;right: 22px;">\n        <button ion-button clear color="danger" (click)="addDocumentBills(\'edit\')" [disabled]="details.length == 0"\n          style="margin-top: 6px;">\n          Edit &nbsp;\n          <ion-icon name="create"></ion-icon>\n        </button>\n      </span>\n    </div>\n\n    <div class="label-float">\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL</label>\n    </div>\n\n    <div class="label-float">\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()" />\n      <label>DATE OF BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    <!-- <div class="label-float" (click)="openDetailPopup()">\n      <input type="text" placeholder="" [(ngModel)]="bill_details" />\n      <label>DETAILS</label>\n    </div> -->\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture" style="margin-top:0px !important;">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4" *ngIf="!is_update">\n    <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>\n  </div>\n  <div class="text-center mt-4" *ngIf="is_update">\n    <button ion-button round class="custom-button" (click)="updateBill()"> UPDATE</button>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
     ], DocumentRenewalPage);
     return DocumentRenewalPage;
 }());

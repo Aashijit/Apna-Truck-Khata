@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../../src/providers/rest/rest';
 import { CodesProvider } from './../../../src/providers/codes/codes';
@@ -32,7 +33,8 @@ export class AddDocumentBillPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes: CodesProvider, private rest: RestProvider,
-    private message: MessageProvider, private alertCtrl: AlertController, private ldl: LoadingController) {
+    private message: MessageProvider, private alertCtrl: AlertController, private ldl: LoadingController,
+    private pv : PhotoViewer) {
     this.document = this.navParams.get("document");
     console.log(JSON.stringify(this.document));
   }
@@ -172,6 +174,11 @@ export class AddDocumentBillPage {
 
       }
     });
+  }
+
+
+  viewBillImage(imageUrl) {
+    this.pv.show(imageUrl,'Bill Image',{'share':true})
   }
 
 

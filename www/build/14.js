@@ -242,7 +242,11 @@ var ShopBillDetailsPage = /** @class */ (function () {
         this.navCtrl.push('ShopBillDescriptionPage');
     };
     ShopBillDetailsPage.prototype.openDetailPopup = function () {
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+        var _this = this;
+        var detailsModalPage = this.modalCtrl.create('DetailsModalPage', { "details": this.details });
+        detailsModalPage.onDidDismiss(function (data) {
+            _this.details = localStorage.getItem(_this.codes.DETAILS);
+        });
         detailsModalPage.present();
     };
     ShopBillDetailsPage.prototype.saveShopBillDetails = function () {
