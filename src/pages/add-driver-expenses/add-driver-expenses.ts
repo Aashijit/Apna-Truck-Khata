@@ -132,9 +132,16 @@ export class AddDriverExpensesPage {
       this.navCtrl.push('AddDriverPage',{'type':'driver'});
       return;
     }
+
     this.isSelectedBill = true;
     for(let i=0;i<this.drivers.length;i++)
       if(this.drivers[i]['worker_id'] == event){
+        
+        if(this.drivers[i]['vehicle'] == undefined) {
+          this.message.displayToast('Please assign the driver to a car!');
+          break;
+        }
+
         this.name = this.drivers[i]['name'];
         this.vehicle_id = this.drivers[i]['vehicle']['vehicle_id'];
         this.vehicle_number = this.drivers[i]['vehicle']['vehicle_number'];

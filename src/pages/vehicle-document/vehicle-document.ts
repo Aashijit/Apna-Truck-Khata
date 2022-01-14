@@ -3,6 +3,7 @@ import { CodesProvider } from './../../../src/providers/codes/codes';
 import { RestProvider } from './../../../src/providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, ViewController } from 'ionic-angular';
+import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 
 
 @IonicPage()
@@ -91,8 +92,20 @@ export class VehicleDocumentPage {
 
       this.rest.post(this.codes.GET_DOCUMENT_INFO,req).then(resp => {
         if(resp['_ReturnCode'] == '0'){
-          if(resp['data'].length > 0)
-          this.documents = resp['data'];
+          if(resp['data'].length > 0) {
+            var docs = resp['data'];
+            for(let i=0;i<docs.length;i++) {
+              for(let j=0;j<this.documents.length;j++) {
+                if(docs[i]['document_name'] == this.documents[j]['document_name']) {
+                  this.documents[j]['dc_id'] = docs[i]['document_id'];
+                  this.documents[j]['document_image_id'] = docs[i]['document_image_id'];
+                  this.documents[j]['document_expiry_date'] = docs[i]['document_expiry_date'];
+                  this.documents[j]['document_reminder_date'] = docs[i]['document_reminder_date'];
+                  this.documents[j]['previous'] = true;
+                }
+              }
+            }
+          }
         }
       });
 
@@ -179,6 +192,17 @@ export class VehicleDocumentPage {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     for(let i=0;i<this.documents.length;i++){
+
+      if(this.documents[i]['previous'] != undefined) {
+        if(this.documents[i]['previous'] == true) {
+          continue;
+        }
+      }
+
+      if(this.documents[i]['document_expiry_date'] == "") {
+        continue;
+      }
+
       this.documents[i]['document_image_id'] = String(this.documents[i]['document_image_id']);
       this.documents[i]['worker_type'] = 'vehicle';
       this.documents[i]['srth_id'] = json[0]['srth_id'];

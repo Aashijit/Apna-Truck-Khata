@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 913:
+/***/ 915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDocumentPageModule", function() { return VehicleDocumentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_document__ = __webpack_require__(990);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_document__ = __webpack_require__(992);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var VehicleDocumentPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 990:
+/***/ 992:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -146,8 +146,20 @@ var VehicleDocumentPage = /** @class */ (function () {
         };
         this.rest.post(this.codes.GET_DOCUMENT_INFO, req).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                if (resp['data'].length > 0)
-                    _this.documents = resp['data'];
+                if (resp['data'].length > 0) {
+                    var docs = resp['data'];
+                    for (var i = 0; i < docs.length; i++) {
+                        for (var j = 0; j < _this.documents.length; j++) {
+                            if (docs[i]['document_name'] == _this.documents[j]['document_name']) {
+                                _this.documents[j]['dc_id'] = docs[i]['document_id'];
+                                _this.documents[j]['document_image_id'] = docs[i]['document_image_id'];
+                                _this.documents[j]['document_expiry_date'] = docs[i]['document_expiry_date'];
+                                _this.documents[j]['document_reminder_date'] = docs[i]['document_reminder_date'];
+                                _this.documents[j]['previous'] = true;
+                            }
+                        }
+                    }
+                }
             }
         });
     }
@@ -217,6 +229,14 @@ var VehicleDocumentPage = /** @class */ (function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var _loop_1 = function (i) {
+            if (this_1.documents[i]['previous'] != undefined) {
+                if (this_1.documents[i]['previous'] == true) {
+                    return "continue";
+                }
+            }
+            if (this_1.documents[i]['document_expiry_date'] == "") {
+                return "continue";
+            }
             this_1.documents[i]['document_image_id'] = String(this_1.documents[i]['document_image_id']);
             this_1.documents[i]['worker_type'] = 'vehicle';
             this_1.documents[i]['srth_id'] = json[0]['srth_id'];
@@ -225,6 +245,7 @@ var VehicleDocumentPage = /** @class */ (function () {
             this_1.documents[i]['is_remove'] = '0';
             this_1.documents[i]['last_maint_id'] = 'srth_app';
             this_1.documents[i]['opt_counter'] = '0';
+            alert(JSON.stringify(this_1.documents[i]));
             this_1.rest.post(this_1.codes.UPDATE_DOCUMENT_INFO, this_1.documents[i]).then(function (resp) {
                 _this.message.displayToast(_this.documents[i]['document_name'] + " saved.");
             });

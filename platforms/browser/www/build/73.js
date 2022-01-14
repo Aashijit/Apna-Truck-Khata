@@ -212,7 +212,7 @@ var AddDocumentBillPage = /** @class */ (function () {
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "srth_id": json[0]['srth_id'],
-            "reason": document['document_name']
+            "reason": this.document['document_name']
         };
         ld.present();
         this.bills = [];

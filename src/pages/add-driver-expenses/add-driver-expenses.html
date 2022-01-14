@@ -97,7 +97,7 @@
       <ion-label floating>SELECT DRIVER</ion-label>
       <!--  -->
       <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important" #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)" >
-        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} -  {{dr['vehicle']['vehicle_number']}}</ion-option>
+        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} <span *ngIf="dr['vehicle']!=undefined">-  {{dr['vehicle']['vehicle_number']}}</span></ion-option>
 
         <ion-option value="add">Add Driver</ion-option>
 
