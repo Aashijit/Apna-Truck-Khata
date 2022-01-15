@@ -138,9 +138,9 @@
       <a href="#about">REPAIR DATE</a>
       <!-- <a href="#about">EXCHANGE DATE</a> -->
       <a href="#support">PROBLEM</a>
-      <!-- <a href="#blog">PARTS</a> -->
-      <!-- <a href="#tools">QUANTITY</a>
-      <a href="#tools">RATE/PC</a> --> 
+      <a href="#blog">PARTS</a>
+      <a href="#tools">QUANTITY</a>
+      <a href="#tools">RATE/PC</a> 
       <a href="#tools">TOTAL</a>
       <a href="#tools">DETAIL</a>
       <!-- <a href="#tools">ID(OPTIONAL)</a> --> 
@@ -157,8 +157,9 @@
           <p>{{detail['date_of_repair']}}</p>
           <!-- <p>MECHANICAL</p> -->
           <p>{{detail['problem_name']}}</p>
-          <!-- <p>ONE</p> -->
-          <!-- <p>RS 200</p> -->
+          <p>{{detail['part_name']}}</p>
+          <p>{{detail['qty']}}</p>
+          <p>RS {{detail['rate']}}</p>
           <p>RS {{detail['total_amount']}}</p>
           <p>{{detail['additional_info']}}</p>
           <!-- <p>{{detail['']}}</p> -->

@@ -212,7 +212,7 @@ export class ShopKhataPage {
   }
 
   updateDetails(){
-    this.navCtrl.push('ShopBillDetailsPage',{'update':'true'});
+    this.navCtrl.push('ShopBillDetailsPage',{'update':'true','worker_type':'shop'});
   }
 
   presentConfirmDelete() {

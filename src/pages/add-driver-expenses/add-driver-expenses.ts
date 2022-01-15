@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { AllImageKhataPage } from './../all-image-khata/all-image-khata';
 import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../providers/rest/rest';
@@ -53,7 +54,7 @@ export class AddDriverExpensesPage {
   constructor(private codes : CodesProvider,
     private viewController : ViewController,
     public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, 
-    private rest : RestProvider, private message : MessageProvider) {
+    private rest : RestProvider, private message : MessageProvider, private photoViewer : PhotoViewer) {
       var upd = this.navParams.get("update");
       if(upd == 'true'){
         var bill = JSON.parse(localStorage.getItem("bill"));
@@ -127,6 +128,11 @@ export class AddDriverExpensesPage {
     console.log('ionViewDidLoad AddDriverExpensesPage');
   }
 
+  viewImage(image) {
+    this.photoViewer.show(image['image_url'],image['tag_cloud'], {share: true});
+  }
+  
+
   change(event){
     if(event == 'add') {
       this.navCtrl.push('AddDriverPage',{'type':'driver'});
@@ -167,7 +173,7 @@ export class AddDriverExpensesPage {
     
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{"details":this.bill_details});
 
     detailsModalPage.onDidDismiss(data=> {
       this.bill_details = localStorage.getItem(this.codes.DETAILS);
@@ -323,13 +329,18 @@ export class AddDriverExpensesPage {
           this.bill_image_id  = '';
           this.bill_details  = '';
           this.img = null;
-
+          if(this.bills.length > 0) {
           for(let i=0;i<this.bills.length;i++)  {
             data['vehicle_number'] = this.vehicle_number;
+
             if(this.bills[i]['bill_id'] == this.bill_id) {
               this.bills[i] = data;
             }
             this.bills[i]['selected'] = 'false';
+          }
+        } else 
+          {
+            this.bills.push(resp['data']);
           }
   
           this.bill_id = Number(resp['_LatestBillId']) + 1;

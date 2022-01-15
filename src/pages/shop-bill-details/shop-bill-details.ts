@@ -36,18 +36,16 @@ export class ShopBillDetailsPage {
     public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, private codes : CodesProvider,
     private rest : RestProvider, private message : MessageProvider, private ldctrl : LoadingController) {
 
+      this.getBillsBySrthId();
 
       this.worker_type = this.navParams.get("worker_type");
+
       if(this.worker_type == 'mechanic')
         this.header_name = 'MECHANIC REPAIR DETALLS';
       else 
         this.header_name = 'PARTS BILL DETALLS';
-
-
-      this.getBillsBySrthId();
-      
-
-
+        
+    
       var objRec = localStorage.getItem("bill_details");
 
       var isupd = this.navParams.get("update");

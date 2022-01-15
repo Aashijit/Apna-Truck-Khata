@@ -16,7 +16,6 @@ export class InsurancePage {
   isShown : boolean = false;
   insurance : any = '';
   total : number = 0.00;
-  type : any = '';
   due : Number = 0.00;
   selectedfilters : any = [];
   payments : any = [];
@@ -35,6 +34,15 @@ export class InsurancePage {
 
   selectedbill1 : any = '';
   
+  type : any = 'ano';
+
+  search:any = [];
+  displayfilter : boolean = false;
+  displaysearchitems : any = [];
+
+  filterbills :any = '';
+  billDetails : any = [];
+  filterbillDetails : any = [];
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, 
@@ -81,7 +89,8 @@ export class InsurancePage {
 
     this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
-        this.bills = resp['data'];
+        this.billDetails = resp['data'];
+        this.filterbillDetails = this.billDetails;
       }
     });
   }
@@ -423,6 +432,149 @@ export class InsurancePage {
 
 
   }
+
+
+  searchOnlyBillDetails() {
+    let mdl = this.modalCtrl.create('AccountPaymentSearchModalPage',{'worker_type':'insurance'});
+
+    mdl.onDidDismiss(data => {  
+
+      if(localStorage.getItem("searchbilldetails") != undefined) {
+        this.selectedfilters = JSON.parse(localStorage.getItem("searchbilldetails"));
+
+        if(this.selectedfilters.length == 0) {
+          this.filterbillDetails = this.billDetails;
+          return;
+        }
+    
+
+        this.filterbillDetails = [];
+
+        for(let i=0;i<this.selectedfilters.length;i++){
+            if(this.selectedfilters[i]['type'] == 'problems') {
+                for(let j=0;j<this.billDetails.length;j++){
+                  if(this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                    this.filterbillDetails.push(this.billDetails[j]);
+                  }
+                }
+            } else if(this.selectedfilters[i]['type'] == 'vehicles') {
+              for(let j=0;j<this.billDetails.length;j++){
+                if(this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+                  this.filterbillDetails.push(this.billDetails[j]);
+                }
+              }
+
+            } else if(this.selectedfilters[i]['type'] == 'shopname') {
+              for(let j=0;j<this.billDetails.length;j++){
+                if(this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+                  this.filterbillDetails.push(this.billDetails[j]);
+                }
+              }
+
+            } else if(this.selectedfilters[i]['type'] == 'bills') {
+              for(let j=0;j<this.billDetails.length;j++){
+                if(this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+                  this.filterbillDetails.push(this.billDetails[j]);
+                }
+              }
+            }
+
+        }
+
+        console.error(JSON.stringify(this.filterbillDetails));
+
+      }
+
+    });
+    mdl.present();
+  }
+
+  removeOnlyTerm(sc) {
+    var sFilters = [];
+    for(let i=0;i<this.selectedfilters.length;i++){
+      if(this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']){
+      } else  {
+        sFilters.push(this.selectedfilters[i]);
+      }
+    }
+
+    this.selectedfilters = sFilters;
+
+
+    if(this.selectedfilters.length == 0) {
+      this.filterbillDetails = this.billDetails;
+      return;
+    }
+
+    this.filterbillDetails = [];
+
+    for(let i=0;i<this.selectedfilters.length;i++){
+        if(this.selectedfilters[i]['type'] == 'problems') {
+            for(let j=0;j<this.billDetails.length;j++){
+              if(this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                this.filterbillDetails.push(this.billDetails[j]);
+              }
+            }
+        } else if(this.selectedfilters[i]['type'] == 'vehicles') {
+          for(let j=0;j<this.billDetails.length;j++){
+            if(this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+              this.filterbillDetails.push(this.billDetails[j]);
+            }
+          }
+
+        } else if(this.selectedfilters[i]['type'] == 'shopname') {
+          for(let j=0;j<this.billDetails.length;j++){
+            if(this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+              this.filterbillDetails.push(this.billDetails[j]);
+            }
+          }
+
+        } else if(this.selectedfilters[i]['type'] == 'bills') {
+          for(let j=0;j<this.billDetails.length;j++){
+            if(this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+              this.filterbillDetails.push(this.billDetails[j]);
+            }
+          }
+        }
+    }
+
+
+
+  }
+
+
+  getOnlyItems($event){
+
+    if(this.searchTerm != '') {
+      this.displayfilter = true;
+      this.displaysearchitems = this.search;
+    }
+
+    if(this.searchTerm == '') {
+      this.displayfilter = false;
+      this.displaysearchitems = this.search;
+      this.filterbills = this.bills;
+
+      for(let i=0;i<this.bills.length;i++){
+        this.bills[i]['selected'] = 'false';
+      }
+  
+      for(let i=0;i<this.filterbills.length;i++){
+        this.filterbills[i]['selected'] = 'false';
+      }
+
+    }
+
+    this.displaysearchitems = this.search.filter(wp => {
+      if (this.searchTerm != '') {
+        var str = wp.id+wp.name;
+        return (str.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1);
+      }
+      else 
+        return this.search;
+    });
+  }
+
   
 
 }

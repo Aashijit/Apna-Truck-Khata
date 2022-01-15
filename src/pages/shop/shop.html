@@ -147,6 +147,19 @@
 
     <h2>Bill Khata</h2>
 
+    <div class="custom-searchbar-div" style="position: relative;">
+      <ion-searchbar class="custom-searchbar" (ionInput)="getOnlyItems($event)" (click)="searchOnlyBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
+      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">
+        <ion-label *ngIf="sc['type'] == 'bills'" >Bill # {{sc['id']}}</ion-label>
+        <ion-label *ngIf="sc['type'] == 'problems' || sc['type'] == 'vehicles' || sc['type'] == 'shopname'" >{{sc['name']}}</ion-label>
+        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeOnlyTerm(sc)"></ion-icon>
+      </ion-chip>
+      </p>
+
 
     <div class="scroll-grid" style="margin-top: 20px !important;">
       <div class="scrollmenu">
@@ -158,7 +171,7 @@
         <a href="#about">DETAILS</a>
         <a href="#about">IMAGE</a>
 
-        <div *ngIf="bills.length == 0" style="padding: 15px;text-align: center;">
+        <div *ngIf="filterbillDetails.length == 0" style="padding: 15px;text-align: center;">
             <ion-spinner></ion-spinner>
             <br/>
           <span style="color: rgb(63, 63, 63);">
@@ -166,9 +179,9 @@
           </span>
         </div>
     
-        <div class="scrollmenu-list total-bill " *ngFor="let bill of bills" >
+        <div class="scrollmenu-list total-bill " *ngFor="let bill of filterbillDetails" >
          
-          <div class="scrollmenu-list paid-money " (click)="selectThisBill(bill,null)">
+          <div class="scrollmenu-list " (click)="selectThisBill(bill,null)">
             <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
             <p>{{bill['bill_id']}}</p>
             <p>{{bill['bill_date']}}</p>

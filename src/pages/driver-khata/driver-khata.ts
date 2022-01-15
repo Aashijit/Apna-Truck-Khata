@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { DriverDetailsSearchPage } from './../driver-details-search/driver-details-search';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
@@ -21,7 +22,8 @@ export class DriverKhataPage {
   selectedfilters : any = [];
 
   constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, 
-    private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, private modalCtrl : ModalController) {
+    private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, private modalCtrl : ModalController,
+    private photoViewer : PhotoViewer) {
   }
 
   ionViewDidLoad() {
@@ -30,6 +32,11 @@ export class DriverKhataPage {
 
   ionViewWillEnter(){
     this.getBillsBySrthId();
+  }
+
+
+  viewImage(image) {
+    this.photoViewer.show(image['image_url'],image['tag_cloud'], {share: true});
   }
 
   getBillsBySrthId(){

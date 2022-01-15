@@ -132,55 +132,58 @@
 
 
 
-    <div class="scroll-grid" >
-      <div class="scrollmenu">
-       
-      <a href="#home">BILL NUMBER</a>
-      <a href="#news">MECHANIC</a>
-      <!-- <a href="#news">BUSINESS NAME</a> -->
-      <a href="#contact">VEHICLE</a>
-      <a href="#about">REPAIR DATE</a>
-      <!-- <a href="#about">EXCHANGE DATE</a> -->
-      <a href="#support">PROBLEM</a>
-      <!-- <a href="#blog">PARTS</a> -->
-      <!-- <a href="#tools">QUANTITY</a>
-      <a href="#tools">RATE/PC</a> --> 
-      <a href="#tools">TOTAL</a>
-      <a href="#tools">DETAIL</a>
-      <!-- <a href="#tools">ID(OPTIONAL)</a> --> 
-      <a href="#tools">KM READING</a>
-
-
-      <!-- (click)="selectThis(1)" -->
+      <div class="scroll-grid" >
+        <div class="scrollmenu">
+         
+        <a href="#home">BILL NUMBER</a>
+        <a href="#news">SHOP</a>
+        <!-- <a href="#news">BUSINESS NAME</a> -->
+        <a href="#contact">VEHICLE</a>
+        <a href="#about">REPAIR DATE</a>
+        <!-- <a href="#about">EXCHANGE DATE</a> -->
+        <a href="#support">PROBLEM</a>
+        <a href="#blog">PARTS</a>
+        <a href="#tools">QUANTITY</a>
+        <a href="#tools">RATE/PC</a> 
+        <a href="#tools">TOTAL</a>
+        <a href="#tools">DETAIL</a>
+        <!-- <a href="#tools">ID(OPTIONAL)</a> --> 
+        <a href="#tools">KM READING</a>
   
-        <div *ngFor="let detail of filterbillDetails" [ngClass]="detail['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThisDetails(detail)">
-          <p>{{detail['bill_id']}}</p>
-          <p>{{detail['person_shop_name']}}</p>
-          <!-- <p>XYZ BUSINESS</p> -->
-          <p>{{detail['vehicle_number']}}</p>
-          <p>{{detail['date_of_repair']}}</p>
-          <!-- <p>MECHANICAL</p> -->
-          <p>{{detail['problem_name']}}</p>
-          <!-- <p>ONE</p> -->
-          <!-- <p>RS 200</p> -->
-          <p>RS {{detail['total_amount']}}</p>
-          <p>{{detail['additional_info']}}</p>
-          <!-- <p>{{detail['']}}</p> -->
-          <!-- <p>ID123</p> -->
-          <p>{{detail['km_reading']}}</p>
-     
+  
+        <!-- (click)="selectThis(1)" -->
+    
+          <div *ngFor="let detail of filterbillDetails" [ngClass]="detail['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThisDetails(detail)">
+            <p>{{detail['bill_id']}}</p>
+            <p>{{detail['person_shop_name']}}</p>
+            <!-- <p>XYZ BUSINESS</p> -->
+            <p>{{detail['vehicle_number']}}</p>
+            <p>{{detail['date_of_repair']}}</p>
+            <!-- <p>MECHANICAL</p> -->
+            <p>{{detail['problem_name']}}</p>
+            <p>{{detail['part_name']}}</p>
+            <p>{{detail['qty']}}</p>
+            <p>RS {{detail['rate']}}</p>
+            <p>RS {{detail['total_amount']}}</p>
+            <p>{{detail['additional_info']}}</p>
+            <!-- <p>{{detail['']}}</p> -->
+            <!-- <p>ID123</p> -->
+            <p>{{detail['km_reading']}}</p>
+       
+          </div>
+    
+         
         </div>
+        <div class="show-arrows">
+          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
   
-       
+          <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
+          <!-- <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="presentConfirmDelete()"> &nbsp;  Erase &nbsp; <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button> -->
+    
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+    
+        </div>
       </div>
-      <div class="show-arrows">
-        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-        <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
-      
-        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-  
-      </div>
-    </div>
 
     <div class="text-center">
       <button ion-button round class="custom-button" (click)="openShopBillDetailsPage()">BILL REPAIR DETAILS</button>

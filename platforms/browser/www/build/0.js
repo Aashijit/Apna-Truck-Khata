@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 853:
+/***/ 854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddVehiclePageModule", function() { return AddVehiclePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_vehicle__ = __webpack_require__(933);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_vehicle__ = __webpack_require__(935);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var AddVehiclePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 920:
+/***/ 921:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133,7 +133,7 @@ var PartsWorkModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 921:
+/***/ 922:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -190,7 +190,7 @@ var DetailsModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 922:
+/***/ 923:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,19 +239,19 @@ var CameraModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 933:
+/***/ 935:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddVehiclePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__parts_work_modal_parts_work_modal__ = __webpack_require__(920);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__parts_work_modal_parts_work_modal__ = __webpack_require__(921);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__details_modal_details_modal__ = __webpack_require__(921);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__camera_modal_camera_modal__ = __webpack_require__(922);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__details_modal_details_modal__ = __webpack_require__(922);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__camera_modal_camera_modal__ = __webpack_require__(923);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
