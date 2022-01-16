@@ -36,7 +36,7 @@ export class ShopBillDetailsPage {
     public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, private codes : CodesProvider,
     private rest : RestProvider, private message : MessageProvider, private ldctrl : LoadingController) {
 
-      this.getBillsBySrthId();
+      
 
       this.worker_type = this.navParams.get("worker_type");
 
@@ -44,6 +44,8 @@ export class ShopBillDetailsPage {
         this.header_name = 'MECHANIC REPAIR DETALLS';
       else 
         this.header_name = 'PARTS BILL DETALLS';
+
+        this.getBillsBySrthId();
         
     
       var objRec = localStorage.getItem("bill_details");
@@ -181,6 +183,8 @@ export class ShopBillDetailsPage {
        bls_temp = localStorage.getItem("shop_bills");
     else if(this.worker_type == 'mechanic')
        bls_temp = localStorage.getItem("mechanic_bills");
+
+      //  alert(this.worker_type);
 
     if(bls_temp != undefined  && bls_temp != null && bls_temp != "") {
       this.bills = JSON.parse(bls_temp);
