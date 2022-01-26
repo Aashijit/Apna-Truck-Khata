@@ -16,17 +16,21 @@ export class ReportAllCompPage {
   object : any = '';
   vehicles : any  = [] ;
   persons  : any = [];
+  worker_type :any = '';
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, 
     private codes : CodesProvider) {
-
-
+      this.worker_type = this.navParams.get("worker_type");
+      if(this.worker_type == 'vehicle') {
+        this.getVehicles();
+      } else {
+        this.getPersons();
+      }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportAllCompPage');
-    this.getVehicles();
-    this.getPersons();
   }
 
 
@@ -55,6 +59,13 @@ export class ReportAllCompPage {
     this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
         if(resp['_ReturnCode'] == '0'){
           this.persons = resp['data'];
+          var workers = [];
+          for(let i=0;i<this.persons.length;i++){
+            if(this.persons[i]['worker_type'] == this.worker_type) {
+              workers.push(this.persons[i]);
+            }
+          }
+          this.persons = workers;
         }
     });
   }

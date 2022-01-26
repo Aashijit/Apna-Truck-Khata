@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/aashijitmukhopadhyay/Documents/ApnaTruckKhata/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
-            "map": [
-                {
-                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/89c3e38d72e162e6b30c8ad60c8f1458/res/values-ur/values-ur.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "102",
-                        "endOffsets": "153"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
             "map": [
                 {

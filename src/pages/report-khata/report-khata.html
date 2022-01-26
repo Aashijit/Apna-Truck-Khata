@@ -23,45 +23,45 @@
 
   <div class="container">
     <ion-row>
-      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage')">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'vehicle'})">
         <div class="report-div">
           <img src="../../assets/saarthi-icon/png/006-delivery-truck.png" alt="">
           <h4>VEHICLE</h4>
         </div>
        
       </ion-col>
-      <ion-col col-6 class="text-center">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'driver'})">
         <div class="report-div">
           <img src="../../assets/saarthi-icon/png/driver.png" alt="">
           <h4>DRIVER</h4>
         </div>
     
       </ion-col>
-      <ion-col col-6 class="text-center">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'shop'})">
         <div class="report-div">
           <img src="../../assets/saarthi-icon/png//004-shop.png" alt="">
           <h4>SHOP</h4>
         </div>
     
       </ion-col>
-      <ion-col col-6 class="text-center">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'mechanic'})">
         <div class="report-div">
           <img src="../../assets/saarthi-icon/png/007-mechanic.png" alt="">
           <h4>MECHANIC</h4>
         </div>
       
       </ion-col>
-      <ion-col col-6 class="text-center">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'documents'})">
         <div class="report-div">
           <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">
-          <h4>DOCUMENTS AND INSURANCE</h4>
+          <h4>DOCUMENTS</h4>
         </div>
        
       </ion-col>
-      <ion-col col-6 class="text-center">
+      <ion-col col-6 class="text-center" (click)="navCtrl.push('ReportAllCompPage',{'worker_type':'insurance'})">
         <div class="report-div">
-          <img src="../../assets/saarthi-icon/png/008-report.png" alt="">
-          <h4>COMPLAINT</h4>
+          <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">
+          <h4>INSURANCE</h4>
         </div>
       
       </ion-col>

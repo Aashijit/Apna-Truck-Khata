@@ -10,12 +10,11 @@ export class CodesProvider {
   public BASE_URL_SERV_2="https://api.fastdeliveryindia.com/public/index.php/api/";
   public BASE_URL="https://www.apnatruckkhata.in/public/index.php/api/";
 
-  public BASE_URL_REPORT="http://report.atkindia.com/public/api/";
-  public BASE_URL_REPORT_DOWNLOAD="http://report.atkindia.com/public/";
-
+  public BASE_URL_REPORT="http://report.apnatruckkhata.in/public/index.php/api/";
+  public BASE_URL_REPORT_DOWNLOAD="http://report.apnatruckkhata.in/public/index.php/";
+    
   public BASE_URL_REPORT_TEST="http://127.0.0.1:8001/api/";
   public BASE_URL_REPORT_DOWNLOAD_TEST="http://127.0.0.1:8001/";
-
 
   public GET_REGISTRATION_INFO=this.BASE_URL+"getregistrationinfo";
   public SAVE_REGISTRATION_INFO=this.BASE_URL+"saveregistrationinfo";

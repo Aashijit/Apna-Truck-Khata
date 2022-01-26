@@ -208,7 +208,7 @@ export class HomePage {
   }
 
   openReportKhata() {
-    this.navCtrl.push('ReportAllCompPage');
+    this.navCtrl.push('ReportKhataPage');
   }
 
   openBillDetails() {

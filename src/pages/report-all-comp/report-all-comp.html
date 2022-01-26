@@ -4,32 +4,52 @@
       <ion-col col-1 class="custom-back-button">
         <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
       </ion-col>
-    
+
       <ion-col col-8 class="person-name text-left">
-        <ion-title>        
+        <ion-title>
           <ion-icon ios="ios-person" md="md-person"></ion-icon>
           REPORTS
         </ion-title>
 
       </ion-col>
       <ion-col col-3 class="youtube">
-        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">
       </ion-col>
     </ion-row>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Vehicle Reports</h2>
+  <h2 style="text-transform: capitalize !important;">{{worker_type}} Reports</h2>
   <p *ngFor="let veh of vehicles">
-  <button ion-button full (click)="navCtrl.push('VehicleWorkReportPage',{'vehicle':veh})">Vehicle Work Report : {{veh['vehicle_number']}}</button>
-  <button ion-button full (click)="navCtrl.push('VehicleBillReportPage',{'vehicle':veh})">Vehicle Bill Report : {{veh['vehicle_number']}}</button>
-  </p>  
-  <hr/>
+    <ion-row>
+      <ion-col col-12 style="text-align: center !important;">
+        {{veh['vehicle_number']}}
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full (click)="navCtrl.push('VehicleWorkReportPage',{'vehicle':veh})">Vehicle Work
+          Report</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full (click)="navCtrl.push('VehicleBillReportPage',{'vehicle':veh})">Vehicle Bill
+          Report</button>
+      </ion-col>
+    </ion-row>
+  </p>
+  <hr />
 
-  <h2>Person Reports</h2>
   <p *ngFor="let per of persons">
-  <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per})">Report : {{per['name']+" ~ "+per['worker_type']}}</button>
-  </p>  
-  <hr/>
+    <ion-row>
+      <ion-col col-12 style="text-align: center !important;">
+        {{per['name']}}
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per})">Full Report</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per})">Monthly Report</button>
+      </ion-col>
+    </ion-row>
+  </p>
+  <hr />
 </ion-content>
