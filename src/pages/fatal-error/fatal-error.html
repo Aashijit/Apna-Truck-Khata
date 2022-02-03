@@ -1,0 +1,14 @@
+<ion-content padding style="background-color: rgba(0,0,0,0.8);">
+  <ion-card>
+    <ion-card-content>
+      <h2>Something went wrong inside the server! Please try again after sometime.</h2>
+      <h6>Technical</h6>
+      <h5>{{message}}</h5>
+    </ion-card-content>
+    <p>
+      <button ion-button clear>Report</button>
+      <button ion-button clear (click)="navCtrl.pop()">Close</button>
+    </p>
+  </ion-card>
+
+</ion-content>

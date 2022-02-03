@@ -2,7 +2,6 @@ import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
-import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 
 
 @IonicPage()
@@ -67,6 +66,9 @@ export class InitPage {
         localStorage.setItem(this.codes.K_ACCOUNT_INFO,JSON.stringify(dt));
         this.enterpassword = true;
       }
+    }, error => {
+      this.navCtrl.push('FatalErrorPage',{"message":error['error']['_Message']});
+      load.dismiss();
     });
 
   }
@@ -93,6 +95,9 @@ export class InitPage {
       {
         this.message = res['_ReturnMessage'];
       }
+    }, error => {
+      this.navCtrl.push('FatalErrorPage',{"message":error['error']['_Message']});
+      load.dismiss();
     });
   }
 
@@ -113,6 +118,9 @@ export class InitPage {
       } else {
         this.message = res['_ReturnMessage'];
       }
+    }, error => {
+      this.navCtrl.push('FatalErrorPage',{"message":error['error']['_Message']});
+      load.dismiss();
     });
 
   }

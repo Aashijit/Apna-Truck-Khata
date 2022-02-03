@@ -1,1 +1,197 @@
-webpackJsonp([76],{817:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),d["ɵdid"](2,16384,null,0,b.a,[R.a,d.ElementRef,d.Renderer,[2,h.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,M.b,M.a)),d["ɵdid"](5,49152,null,0,v.a,[A.a,[2,h.a],[2,x.a],R.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,E.b,E.a)),d["ɵdid"](8,49152,null,0,K.a,[R.a,d.ElementRef,d.Renderer,[2,w.a],[2,v.a]],null,null),(l()(),d["ɵted"](-1,0,["ADD MORE"])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](13,0,null,null,66,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,F.b,F.a)),d["ɵdid"](14,4374528,null,0,y.a,[R.a,C.a,D.a,d.ElementRef,d.Renderer,A.a,q.a,d.NgZone,[2,h.a],[2,x.a]],null,null),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](16,0,null,1,51,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](17,16384,null,0,L.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](19,0,null,null,7,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](20,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](22,0,null,null,3,"span",[["class","add-more-modal"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.goToModal()&&e}return e},null,null)),(l()(),d["ɵted"](-1,null,["ADD MORE "])),(l()(),d["ɵeld"](24,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-plus-circle"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["    \n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](28,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](29,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](32,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](33,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](36,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](37,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](39,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](42,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](43,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](45,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](48,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](49,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      EXPIRY DATE\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](52,0,null,null,2,"ion-col",[["class","mt-4 col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](53,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      12/11/1994\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](56,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](57,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](59,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](62,0,null,null,4,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](63,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](65,0,null,null,0,"img",[["alt",""],["src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU"],["width","100%"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](69,0,null,1,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d["ɵdid"](70,16384,null,0,O.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](72,0,null,null,5,"div",[["class","text-center"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](74,0,null,null,2,"button",[["class","exit-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.exitModal()&&e}return e},P.b,P.a)),d["ɵdid"](75,1097728,null,0,U.a,[[8,""],R.a,d.ElementRef,d.Renderer],{round:[0,"round"]},null),(l()(),d["ɵted"](-1,0,["\n        Exit\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n"])),(l()(),d["ɵted"](-1,null,["\n"]))],function(l,n){l(n,75,0,"")},function(l,n){l(n,4,0,d["ɵnov"](n,5)._hidden,d["ɵnov"](n,5)._sbPadding);l(n,13,0,d["ɵnov"](n,14).statusbarPadding,d["ɵnov"](n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),t=(u(2),u(26),function(){function l(l,n,u){this.viewController=l,this.navCtrl=n,this.navParams=u}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AddMoreModalPage")},l.prototype.exitModal=function(){this.viewController.dismiss()},l}()),o=function(){return function(){}}(),a=u(500),i=u(501),c=u(502),r=u(503),s=u(504),m=u(505),p=u(506),f=u(507),g=u(508),b=u(85),R=u(4),h=u(8),M=u(188),v=u(37),A=u(13),x=u(29),E=u(510),K=u(86),w=u(42),F=u(509),y=u(32),C=u(7),D=u(14),q=u(40),L=u(186),O=u(185),P=u(39),U=u(27),N=u(17),k=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),V=d["ɵccf"]("page-add-more-modal",t,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-add-more-modal",[],null,null,null,e,k)),d["ɵdid"](1,49152,null,0,t,[h.a,x.a,N.a],null,null)],null,null)},{},{},[]),_=u(15),j=u(19),z=u(184),G=u(55);u.d(n,"AddMoreModalPageModuleNgFactory",function(){return S});var S=d["ɵcmf"](o,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[a.a,i.a,c.a,r.a,s.a,m.a,p.a,f.a,g.a,V]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,_.l,_.k,[d.LOCALE_ID,[2,_.t]]),d["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),d["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),d["ɵmpd"](512,_.b,_.b,[]),d["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),d["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),d["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),d["ɵmpd"](512,z.a,z.a,[]),d["ɵmpd"](512,z.b,z.b,[]),d["ɵmpd"](512,o,o,[]),d["ɵmpd"](256,G.a,t,[])])})}});
+webpackJsonp([76],{
+
+/***/ 845:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountPaymentSearchModalPageModule", function() { return AccountPaymentSearchModalPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_payment_search_modal__ = __webpack_require__(927);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AccountPaymentSearchModalPageModule = /** @class */ (function () {
+    function AccountPaymentSearchModalPageModule() {
+    }
+    AccountPaymentSearchModalPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__account_payment_search_modal__["a" /* AccountPaymentSearchModalPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__account_payment_search_modal__["a" /* AccountPaymentSearchModalPage */]),
+            ],
+        })
+    ], AccountPaymentSearchModalPageModule);
+    return AccountPaymentSearchModalPageModule;
+}());
+
+//# sourceMappingURL=account-payment-search-modal.module.js.map
+
+/***/ }),
+
+/***/ 927:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountPaymentSearchModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AccountPaymentSearchModalPage = /** @class */ (function () {
+    function AccountPaymentSearchModalPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.worker_type = '';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.worker_type = this.navParams.get("worker_type");
+        this.getBillsBySrthId();
+    }
+    AccountPaymentSearchModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AccountPaymentSearchModalPage');
+    };
+    AccountPaymentSearchModalPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
+        }
+        this.selectedfilters.push(sr);
+    };
+    AccountPaymentSearchModalPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+    };
+    AccountPaymentSearchModalPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['bill_id']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill']),
+                        "details": String(_this.bills[i]['bill_details'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "amount": "",
+                        "details": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    AccountPaymentSearchModalPage.prototype.searchGrid = function () {
+        localStorage.setItem("searchbilldetails", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    AccountPaymentSearchModalPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": this.worker_type
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getVehicles();
+            }
+        });
+    };
+    AccountPaymentSearchModalPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name + wp.details;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    AccountPaymentSearchModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-account-payment-search-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'">Bill # {{sc[\'id\'] +" :: " + sc[\'name\'] +" :: " + sc[\'details\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'">{{sc[\'name\']}}\n      </ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;"\n        (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n  </p>\n\n  <ion-list style="margin-top: 20px;">\n    <p *ngFor="let sr of displaysearchitems">\n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n        <p>Shop : {{sr[\'name\']}} ~ ₹ {{sr[\'amount\']}}</p>\n        <p>Details : {{sr[\'details\']}}</p>\n      </ion-item>\n    </p>\n  </ion-list>\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], AccountPaymentSearchModalPage);
+    return AccountPaymentSearchModalPage;
+}());
+
+//# sourceMappingURL=account-payment-search-modal.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=76.js.map

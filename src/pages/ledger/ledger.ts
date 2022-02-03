@@ -35,7 +35,7 @@ export class LedgerPage {
   money_to_pay : any = 0.00;
   totalBill : Number = 0.00;
   paidMoney : Number = 0.00;
-  dueMoney : Number = 0.00;
+  dueMoney : number = 0.00;
 
   payment : any = '';
 
@@ -167,6 +167,7 @@ export class LedgerPage {
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have updated a payment!');
         this.worker['paid_money'] = Number(this.worker['paid_money']) + Number(this.payment_amount);
+        this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
         localStorage.setItem("worker",JSON.stringify(this.worker));
         this.date_of_payment = '';
         this.mode_of_payment = '';
@@ -198,6 +199,7 @@ export class LedgerPage {
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have made a payment!');
         this.worker['paid_money'] = Number(this.worker['paid_money']) + Number(this.payment_amount);
+        this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
         localStorage.setItem("worker",JSON.stringify(this.worker));
         this.date_of_payment = '';
         this.mode_of_payment = '';

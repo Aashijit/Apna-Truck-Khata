@@ -194,8 +194,7 @@ export class AddDriverPage {
             } 
           } else if(type == 'CancelledCheque') {
             if(num == 0) {
-              this.profile_image_id = img['image_id'];
-              this.profile_image = img['image_url'];
+              this.extra_image_1_id = img;
             } 
           }
       
@@ -305,7 +304,7 @@ export class AddDriverPage {
     "pincode":this.pincode,
     "paid_money":this.paid_money,
     "due_money":this.due_money,
-    "profile_image_id":this.profile_image_id,
+    "profile_image_id":this.profile_image,
     "extra_image_1_id":this.extra_image_1_id,
     "extra_image_2_id":this.extra_image_2_id,
     "last_maint_id":this.last_maint_id,
@@ -356,7 +355,7 @@ export class AddDriverPage {
     "pincode":this.pincode,
     "paid_money":this.paid_money,
     "due_money":this.due_money,
-    "profile_image_id":'0',
+    "profile_image_id":this.profile_image,
     "extra_image_1_id":'0',
     "extra_image_2_id":'0',
     "last_maint_id":this.last_maint_id,

@@ -7,7 +7,7 @@ import { RestProvider } from './../providers/rest/rest';
 import { Contact, Contacts } from '@ionic-native/contacts';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, NavController } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 

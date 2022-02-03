@@ -1,14 +1,14 @@
 webpackJsonp([74],{
 
-/***/ 846:
+/***/ 847:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddComplaintsPageModule", function() { return AddComplaintsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddDocumentBillPageModule", function() { return AddDocumentBillPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_complaints__ = __webpack_require__(927);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_document_bill__ = __webpack_require__(929);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddComplaintsPageModule = /** @class */ (function () {
-    function AddComplaintsPageModule() {
+var AddDocumentBillPageModule = /** @class */ (function () {
+    function AddDocumentBillPageModule() {
     }
-    AddComplaintsPageModule = __decorate([
+    AddDocumentBillPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__add_document_bill__["a" /* AddDocumentBillPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_document_bill__["a" /* AddDocumentBillPage */]),
             ],
         })
-    ], AddComplaintsPageModule);
-    return AddComplaintsPageModule;
+    ], AddDocumentBillPageModule);
+    return AddDocumentBillPageModule;
 }());
 
-//# sourceMappingURL=add-complaints.module.js.map
+//# sourceMappingURL=add-document-bill.module.js.map
 
 /***/ }),
 
-/***/ 927:
+/***/ 929:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddComplaintsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddDocumentBillPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,273 +63,253 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AddComplaintsPage = /** @class */ (function () {
-    function AddComplaintsPage(navCtrl, navParams, modalCtrl, codes, rest, message) {
-        var _this = this;
+
+var AddDocumentBillPage = /** @class */ (function () {
+    function AddDocumentBillPage(navCtrl, navParams, codes, rest, message, alertCtrl, ldl, pv) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
         this.codes = codes;
         this.rest = rest;
         this.message = message;
-        this.vari = '';
-        this.isSelectedBill = false;
-        this.complaints_id = '';
-        this.vehicle_id = '';
-        this.srth_id = '';
-        this.problem_id = '';
-        this.date_of_complaint = '';
-        this.date_of_reminder = '';
-        this.details = '';
-        this.km_reading = '';
-        this.status = '';
-        this.last_maint_id = '';
-        this.opt_counter = '';
-        this.vehicle_number = '';
+        this.alertCtrl = alertCtrl;
+        this.ldl = ldl;
+        this.pv = pv;
+        this.document = '';
+        this.bills = [];
         this.isupdate = false;
-        this.vehicles = [];
-        this.complaints = [];
-        this.problems = [];
-        this.img = null;
-        var update = this.navParams.get("update");
-        if (update == "true") {
-            var comp = this.navParams.get("selectedcomplaint");
-            this.complaints_id = comp['complaints_id'];
-            this.vehicle_id = comp['vehicle_id'];
-            this.srth_id = comp['srth_id'];
-            this.problem_id = comp['problem_id'];
-            this.date_of_complaint = comp['date_of_complaint'];
-            this.date_of_reminder = comp['date_of_reminder'];
-            this.details = comp['details'];
-            this.km_reading = comp['km_reading'];
-            this.status = comp['status'];
-            this.isupdate = true;
-        }
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
-            }
-        });
-        if (this.complaints_id == '') {
-            this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID, {}).then(function (resp) {
-                _this.complaints_id = Number(resp['data']) + 1;
-            });
-        }
-        // this.getcomplaints();
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.searchTerm = '';
+        this.selectedfilters = [];
+        this.filterbills = [];
+        this.ok = false;
+        this.expired = false;
+        this.all = true;
+        this.document = this.navParams.get("document");
+        console.log(JSON.stringify(this.document));
     }
-    AddComplaintsPage.prototype.updatecomplaint = function () {
+    AddDocumentBillPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddDocumentBillPage');
+        // this.getBillsBySrthId();
+    };
+    AddDocumentBillPage.prototype.ionViewWillEnter = function () {
+        this.getBillsBySrthId();
+    };
+    AddDocumentBillPage.prototype.clicksearchbar = function () {
+        this.displayfilter = true;
+        this.displaysearchitems = this.search;
+    };
+    AddDocumentBillPage.prototype.closesearchbar = function () {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+    };
+    AddDocumentBillPage.prototype.displayOk = function () {
+        this.all = false;
+        this.ok = true;
+        this.expired = false;
+    };
+    AddDocumentBillPage.prototype.displayExpired = function () {
+        this.all = false;
+        this.ok = false;
+        this.expired = true;
+    };
+    AddDocumentBillPage.prototype.displayALL = function () {
+        this.all = true;
+        this.ok = false;
+        this.expired = false;
+    };
+    AddDocumentBillPage.prototype.getItems = function ($event) {
         var _this = this;
-        var data = {
-            "complaints_id": this.complaints_id,
-            "vehicle_id": this.vehicle_id,
-            "srth_id": this.srth_id,
-            "problem_id": this.problem_id,
-            "date_of_complaint": this.date_of_complaint,
-            "date_of_reminder": this.date_of_reminder,
-            "details": this.details,
-            "km_reading": this.km_reading,
-            "status": this.status,
-            "last_maint_id": "srth-app",
-            "opt_counter": "0",
-            "problems": this.problems
-        };
-        this.rest.post(this.codes.UPDATE_COMPLAINTS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.navCtrl.pop();
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filterbills = this.bills;
+            this.isupdate = false;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
             }
-        });
-    };
-    AddComplaintsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddComplaintsPage');
-    };
-    AddComplaintsPage.prototype.change = function (vehicleId) {
-        this.isSelectedBill = true;
-        for (var i = 0; i < this.vehicles.length; i++) {
-            if (this.vehicles[i]['vehicle_id'] == vehicleId) {
-                this.vehicle_number = this.vehicles[i]['vehicle_number'];
+            for (var i = 0; i < this.filterbills.length; i++) {
+                this.filterbills[i]['selected'] = 'false';
             }
         }
-    };
-    AddComplaintsPage.prototype.openCameraPopup = function () {
-        var _this = this;
-        if (this.vehicle_id == '' || this.vehicle_id == null) {
-            this.message.displayToast("Please select vehicle");
-            return;
-        }
-        if (this.date_of_complaint == '' || this.date_of_complaint == null) {
-            this.message.displayToast("Please select date of complaint");
-            return;
-        }
-        if (this.date_of_reminder == '' || this.date_of_reminder == null) {
-            this.message.displayToast("Please select date of reminder");
-            return;
-        }
-        if (this.problem_id == '' || this.problem_id == null) {
-            this.message.displayToast("Please enter problem id");
-            return;
-        }
-        if (this.details == '' || this.details == null) {
-            this.message.displayToast("Please enter details");
-            return;
-        }
-        var data = {
-            "vehicle_id": this.vehicle_id,
-            "complaint_date": this.date_of_complaint,
-            "reminder_date": this.date_of_reminder,
-            "details": this.details
-        };
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data2 = {
-            "srth_id": json[0]['srth_id'],
-            "worker_type": "",
-            "worker_id": 0,
-            "document_type": "complaintimage",
-            "type": "complaints",
-            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
-            "tags": JSON.stringify(data)
-        };
-        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
-        cameraModalPage.onDidDismiss(function (resp) {
-            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
-                _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
             else
-                _this.img = null;
+                return _this.search;
         });
-        cameraModalPage.present();
     };
-    AddComplaintsPage.prototype.openProblemModal = function () {
-        var _this = this;
-        var problemModal = this.modalCtrl.create('ProblemWorkPartModalPage');
-        problemModal.onDidDismiss(function (data) {
-            if (localStorage.getItem("problem_id") != undefined) {
-                _this.problems = JSON.parse(localStorage.getItem("problem_id"));
-                var str = "";
-                var str2 = "";
-                for (var i = 0; i < _this.problems.length; i++) {
-                    str += _this.problems[i]['problem_id'] + " ";
-                    str2 += (_this.problems[i]['problem_name'] + "-" + _this.problems[i]['vehicle_part_name']) + " ";
+    AddDocumentBillPage.prototype.clickedsearchitem = function (sr) {
+        this.displayfilter = false;
+        this.displaysearchitems = this.search;
+        if (sr['type'] == 'shopname') {
+            this.searchTerm = sr['name'];
+            this.filterbills = [];
+            for (var i = 0; i < this.bills.length; i++) {
+                if (this.bills[i]['person_shop_name'] == sr['name']) {
+                    this.filterbills.push(this.bills[i]);
                 }
-                _this.problem_id = str;
-                _this.problem_id = str2;
+            }
+        }
+        else if (sr['type'] == 'bills') {
+            for (var i = 0; i < this.bills.length; i++) {
+                if (this.bills[i]['bill_id'] == sr['id']) {
+                    this.filterbills = [];
+                    this.searchTerm = sr['id'];
+                    this.filterbills.push(this.bills[i]);
+                    this.selectThis(this.bills[i]);
+                }
+            }
+        }
+    };
+    AddDocumentBillPage.prototype.getShops = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'documents' || dt[i]['worker_type'] == 'insurance') {
+                        _this.shops.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.shops.length; i++) {
+                    var searchobj = {
+                        "type": "shopname",
+                        "name": _this.shops[i]['name'],
+                        "id": "",
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj2 = {
+                        "type": "bills",
+                        "id": _this.bills[i]['bill_id'],
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": _this.bills[i]['total_bill']
+                    };
+                    _this.search.push(searchobj2);
+                }
             }
         });
-        problemModal.present();
     };
-    AddComplaintsPage.prototype.openDetailPopup = function () {
+    AddDocumentBillPage.prototype.viewBillImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Bill Image', { 'share': true });
+    };
+    AddDocumentBillPage.prototype.getBillsBySrthId = function () {
         var _this = this;
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
-        detailsModalPage.onDidDismiss(function (data) {
-            _this.details = localStorage.getItem(_this.codes.DETAILS);
+        // this.isupdate = false;
+        var ld = this.ldl.create({
+            'content': 'Loading the bills ...'
         });
-        detailsModalPage.present();
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "reason": this.document['document_name']
+        };
+        ld.present();
+        this.bills = [];
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            ld.dismiss();
+            if (resp['_ReturnCode'] == '0') {
+                var bls = resp['data'];
+                for (var i = 0; i < bls.length; i++) {
+                    if (bls[i]['reason'] == _this.document['document_name']) {
+                        bls[i]['selected'] = 'false';
+                        _this.bills.push(bls[i]);
+                    }
+                }
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.filterbills.length; i++) {
+                    _this.filterbills[i]['is_expired'] = false;
+                    if (_this.filterbills[i]['details'] != undefined) {
+                        for (var j = 0; j < _this.filterbills[i]['details'].length; j++) {
+                            var dt = new Date(_this.filterbills[i]['details'][j]['document_expiry_date']);
+                            if (dt.getTime() < new Date().getTime()) {
+                                _this.filterbills[i]['is_expired'] = true;
+                            }
+                        }
+                    }
+                }
+                _this.getShops();
+            }
+        });
     };
-    AddComplaintsPage.prototype.selectThis = function (comp) {
-        this.complaints_id = comp['complaints_id'];
-        this.vehicle_id = comp['vehicle_id'];
-        this.srth_id = comp['srth_id'];
-        this.problem_id = comp['problem_id'];
-        this.date_of_complaint = comp['date_of_complaint'];
-        this.date_of_reminder = comp['date_of_reminder'];
-        this.details = comp['details'];
-        this.km_reading = comp['km_reading'];
-        this.status = comp['status'];
-        for (var i = 0; i < this.complaints.length; i++)
-            this.complaints[i]['selected'] = 'false';
-        comp['selected'] = 'true';
+    AddDocumentBillPage.prototype.openRenewalDocumentPage = function () {
+        this.navCtrl.push('DocumentRenewalPage', { "document": this.document });
+    };
+    AddDocumentBillPage.prototype.selectThis = function (bill) {
         this.isupdate = true;
+        for (var i = 0; i < this.bills.length; i++)
+            this.bills[i]['selected'] = 'false';
+        bill['selected'] = 'true';
+        localStorage.setItem("bill", JSON.stringify(bill));
     };
-    AddComplaintsPage.prototype.getcomplaints = function () {
+    AddDocumentBillPage.prototype.update = function () {
+        var bill = JSON.parse(localStorage.getItem("bill"));
+        this.navCtrl.push('DocumentRenewalPage', { "document": this.document, "bill": bill });
+    };
+    AddDocumentBillPage.prototype.presentConfirmDelete = function () {
         var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_COMPLAINTS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.complaints = resp['data'];
-                for (var i = 0; i < _this.complaints.length; i++) {
-                    if (_this.complaints[i]['problems'] != undefined) {
-                        var str = "";
-                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
-                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
-                        }
-                        _this.complaints[i]['problem_id'] = str;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: 'Are you sure you want to delete this bill?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletebill();
                     }
                 }
+            ]
+        });
+        alert.present();
+    };
+    AddDocumentBillPage.prototype.deletebill = function () {
+        var _this = this;
+        var bill = JSON.parse(localStorage.getItem('bill'));
+        var data = {
+            "bill_id": bill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.getBillsBySrthId();
             }
         });
     };
-    AddComplaintsPage.prototype.openCalendarPopup = function () {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.date_of_complaint = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    AddComplaintsPage.prototype.openCalendarPopup2 = function () {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.date_of_reminder = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    AddComplaintsPage.prototype.savecomplaint = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_id": this.vehicle_id,
-            "srth_id": userinfo[0]['srth_id'],
-            "problem_id": this.problem_id,
-            "date_of_complaint": this.date_of_complaint,
-            "date_of_reminder": this.date_of_reminder,
-            "details": this.details,
-            "km_reading": this.km_reading,
-            "status": this.status,
-            "last_maint_id": "srth-app",
-            "opt_counter": "0",
-            "problems": this.problems
-        };
-        console.error("Check the problems : " + JSON.stringify(data));
-        this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                data['complaints_id'] = _this.complaints_id;
-                data['selected'] = false;
-                _this.problem_id = '';
-                _this.date_of_complaint = '';
-                _this.date_of_reminder = '';
-                _this.details = '';
-                _this.km_reading = '';
-                _this.complaints_id++;
-                _this.complaints.push(data);
-                for (var i = 0; i < _this.complaints.length; i++) {
-                    if (_this.complaints[i]['problems'] != undefined) {
-                        var str = "";
-                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
-                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
-                        }
-                        _this.complaints[i]['problem_id'] = str;
-                    }
-                }
-            }
-        });
-    };
-    AddComplaintsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-add-complaints',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file" aria-hidden="true"></i>\n          ADD COMPLAINTS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n  \n\n    <!-- <div class="scrollmenu">\n      <a href="#home">NUMBER</a>\n      <a href="#news">VEHICLE NUMBER(DRIVER NAME)</a>\n      <a href="#contact">PROBLEM PART AND ID</a>\n      <a href="#about">DATE OF COMPLAINT/REMINDER</a>\n      <a href="#about">DETAILS/KM READING</a> -->\n    <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n\n    <!-- <div style="height: 200px;width: 400px">\n\n      </div>\n    </div> -->\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n        <a href="#home">NUMBER</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">PROBLEM PART & ID</a>\n        <a href="#about">COMPLAINT DATE</a>\n        <a href="#about">REMINDER DATE</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">KM READING</a>\n\n        <div *ngFor="let cm of complaints">\n        <div [ngClass]="cm[\'selected\']==\'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" (click)="selectThis(cm)" >\n          <p>{{cm[\'complaints_id\']}} </p>\n          <p>{{cm[\'vehicle_id\']}}</p>\n          <p>{{cm[\'problem_id\']}}</p>\n          <p>{{cm[\'date_of_complaint\']}}</p>\n          <p>{{cm[\'date_of_reminder\']}}</p>\n          <p>{{cm[\'details\']}}</p>\n          <p>{{cm[\'km_reading\']}}</p>\n     \n        </div>\n      </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <!-- <ion-item>\n      <ion-label>VEHICLE NUMBER &nbsp; &nbsp; &nbsp; &nbsp; DRIVER</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="f">Female</ion-option>\n        <ion-option value="m">Male</ion-option>\n      </ion-select>\n    </ion-item> -->\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_id}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>VEHICLE NUMBER</ion-label>\n\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id" (ionChange)="change($event)">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center"  style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{vehicle_number}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center"> \n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill=!isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" (click)="openProblemModal()">\n      <input type="text"  [(ngModel)]="problem_id" placeholder=" " />\n      <label>PROBLEM/WORK(PART & ID)</label>\n    </div>\n\n\n\n\n    <ion-row style="margin: 0 -5px;" class="complaint">\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"  [(ngModel)]="date_of_complaint" (click)="openCalendarPopup()"/>\n          <label>COMPLAINT</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"   [(ngModel)]="date_of_reminder" (click)="openCalendarPopup2()"/>\n          <label>REMINDER</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    </ion-row>\n  \n\n\n\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <ion-col  col-12 (click)="openDetailPopup()" style="padding-left: 27px;margin-top: -6px;">\n            <div class="label-float" style="padding-top: 8px;">\n              <input type="text"  [(ngModel)]="details" placeholder=" " />\n              <label>DETAILS</label>\n            </div>\n    \n          </ion-col>    \n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-12 *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.9 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" style="padding-top: 8px;" >\n      <input type="tel" [(ngModel)]="km_reading" placeholder=" " />\n      <label>KM READING</label>\n    </div>\n\n   \n\n  </div>\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!isupdate" (click)="savecomplaint()"> SAVE</button>\n    <button ion-button round class="custom-button" *ngIf="isupdate" (click)="updatecomplaint()"> UPDATE</button>\n  </div>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/,
+    AddDocumentBillPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-add-document-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-document-bill/add-document-bill.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-copy" md="md-copy"></ion-icon>\n          {{document[\'document_name\']}}\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container"> \n    <div class="text-center mt-4">\n      \n\n\n    </div>\n\n    <!-- <ion-row>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class="expired-button" >EXPIRED</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class="ok-button" >OK</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round class=" all-button" >ALL</button>\n      </ion-col>\n    </ion-row> -->\n    \n    <ion-row>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="ok == true ? \'ok-button-selected\' : \'ok-button\'" (click)="displayOk()">OK</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="expired == true ? \'problem-button-selected\' : \'problem-button\'" (click)="displayExpired()">EXPIRED</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="all == true ? \'all-button-selected\' : \'all-button\'" (click)="displayALL()">ALL</button>\n      </ion-col>\n    </ion-row>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="getItems($event)" placeholder="SEARCH PERSON NAME, BILL NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true" (click)="closesearchbar()"></i>\n    </div>\n\n    <ion-card *ngIf="displayfilter">\n      <ion-card-content>\n        <ion-list >\n          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">\n           <div *ngIf="sr[\'type\']==\'shopname\'">\n            <p style="color: #000;">{{sr[\'name\']}}</p>\n             <p>Person</p>\n            </div>\n           <div *ngIf="sr[\'type\']==\'bills\'">\n              <p style="color: #000;">{{sr[\'id\']}} ~ {{sr[\'amount\']}}</p>\n              <p>Person : {{sr[\'name\']}}</p>\n           </div>\n          </ion-item>\n        </ion-list>\n      </ion-card-content>\n    </ion-card>\n\n \n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n        <a href="#about">BILL NUMBER</a>\n        <a href="#home">PERSON</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">BILL DATE</a>\n        <a href="#support">COST</a>\n        <!-- <a href="#support">BILL</a> -->\n        <a href="#support">DETAIL</a>\n        <a href="#support">IMAGE</a>\n    \n        <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bill of filterbills" (click)="selectThis(bill)">\n          <div *ngIf="ok && !bill[\'is_expired\']">\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>\n            <span *ngFor="let vh of bill[\'details\']">\n            {{vh[\'vehicle_detail\'][\'vehicle_number\'] + " expires on ("+ vh[\'document_expiry_date\']+") :: "}}\n            </span>\n          </p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>\n            <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n              <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n            </span>\n          </p>\n        </div>\n\n        <div *ngIf="expired && bill[\'is_expired\']">\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>\n            <span *ngFor="let vh of bill[\'details\']">\n              {{vh[\'vehicle_detail\'][\'vehicle_number\'] + " expires on ("+ vh[\'document_expiry_date\']+") :: "}}\n              </span>\n          </p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>\n            <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n              <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n            </span>\n          </p>\n        </div>\n\n        <div *ngIf="all">\n          <p>{{bill[\'bill_id\']}}</p>\n          <p>{{bill[\'person_shop_name\']}}</p>\n          <p>\n            <span *ngFor="let vh of bill[\'details\']">\n              {{vh[\'vehicle_detail\'][\'vehicle_number\'] + " expires on ("+ vh[\'document_expiry_date\']+") :: "}}\n              </span>\n          </p>\n          <p>{{bill[\'bill_date\']}}</p>\n          <p>{{bill[\'total_bill\']}}</p>\n          <p>{{bill[\'bill_details\']}}</p>\n          <p>\n            <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n              <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n            </span>\n          </p>\n        </div>\n        </div>\n  \n     \n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="update()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()"> &nbsp;  Erase &nbsp;<ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n   \n\n    <div class="text-center">\n      <button ion-button round class="custom-button add-complaint" (click)="openRenewalDocumentPage()">RENEW/ADD</button>\n\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-document-bill/add-document-bill.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
-            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
-    ], AddComplaintsPage);
-    return AddComplaintsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], AddDocumentBillPage);
+    return AddDocumentBillPage;
 }());
 
-//# sourceMappingURL=add-complaints.js.map
+//# sourceMappingURL=add-document-bill.js.map
 
 /***/ })
 

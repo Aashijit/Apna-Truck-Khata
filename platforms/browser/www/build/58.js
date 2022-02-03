@@ -1,14 +1,14 @@
 webpackJsonp([58],{
 
-/***/ 862:
+/***/ 864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraModalPageModule", function() { return CameraModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangeDriverPageModule", function() { return ChangeDriverPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera_modal__ = __webpack_require__(923);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__change_driver__ = __webpack_require__(945);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CameraModalPageModule = /** @class */ (function () {
-    function CameraModalPageModule() {
+var ChangeDriverPageModule = /** @class */ (function () {
+    function ChangeDriverPageModule() {
     }
-    CameraModalPageModule = __decorate([
+    ChangeDriverPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__camera_modal__["a" /* CameraModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__change_driver__["a" /* ChangeDriverPage */]),
             ],
         })
-    ], CameraModalPageModule);
-    return CameraModalPageModule;
+    ], ChangeDriverPageModule);
+    return ChangeDriverPageModule;
 }());
 
-//# sourceMappingURL=camera-modal.module.js.map
+//# sourceMappingURL=change-driver.module.js.map
 
 /***/ }),
 
-/***/ 923:
+/***/ 945:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CameraModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangeDriverPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,34 +59,81 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the CameraModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CameraModalPage = /** @class */ (function () {
-    function CameraModalPage(viewController, navCtrl, navParams) {
+
+
+
+var ChangeDriverPage = /** @class */ (function () {
+    function ChangeDriverPage(viewController, navCtrl, navParams, codes, message, rest) {
+        var _this = this;
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.codes = codes;
+        this.message = message;
+        this.rest = rest;
+        this.vehicle = '';
+        this.driver_end_date = '';
+        this.driver_end_details = '';
+        this.driver_end_km = '';
+        this.vehicle_id = '';
+        this.driver_id = '';
+        this.driver_start_date = '';
+        this.driver_start_details = '';
+        this.driver_start_km = '';
+        this.drivers = [];
+        this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+            }
+        });
     }
-    CameraModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CameraModalPage');
+    ChangeDriverPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ChangeDriverPage');
     };
-    CameraModalPage.prototype.exitModal = function () {
+    ChangeDriverPage.prototype.exitModal = function () {
         this.viewController.dismiss();
     };
-    CameraModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-camera-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  \n\n  <ion-card class="modal-card-camera">\n    <ion-card-header class="custom-card-header">\n      PHOTOS\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <ion-row>\n        <ion-col col-12>\n          <span class="add-more-modal" (click)="goToModal()" ><i style="color: #0752af;font-size: 30px" class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <i class="fa fa-plus-circle" aria-hidden="true"></i> -->\n          </span>    \n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n        </ion-col>\n        <ion-col col-6 class="mt-4">\n          12/11/1994\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n        <ion-col col-6>\n          <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n        </ion-col>\n      </ion-row>\n      <ion-col col-12 >\n        <div class="text-center">\n          <button ion-button round class="exit-button" (click)="exitModal()">\n            EXIT\n          </button>\n        </div>\n      </ion-col>\n      \n\n\n     </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/camera-modal/camera-modal.html"*/,
+    ChangeDriverPage.prototype.save = function () {
+        var _this = this;
+        var data = {
+            "type": "change",
+            "vehicle_id": this.vehicle['vehicle_id'],
+            "driver_id": this.driver_id,
+            "driver_start_details": this.driver_start_details,
+            "driver_start_km": this.driver_start_km,
+            "driver_start_date": this.driver_start_date,
+            "driver_end_date": this.driver_end_date,
+            "driver_end_details": this.driver_end_details,
+            "driver_end_km": this.driver_end_km
+        };
+        this.rest.post(this.codes.UPDATE_VEHICLE_DRIVER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have changed the driver to this vehicle successfully!');
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    ChangeDriverPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-change-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/'<!--\n  Generated template for the ChangeDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n      \n      <ion-col col-12 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-user-circle" aria-hidden="true"></i>\n          CHANGE DRIVER\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col> -->\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n<ion-content padding>\n\n  <div class="container white-section">\n    <ion-row class="driver-modal">\n\n\n      <ion-col col-8>\n        VEHICLE NUMBER:  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n  \n        <!-- <span style="float: right;">\n          DRIVER\n        </span> -->\n      </ion-col>\n      <ion-col col-1>\n        <div style=" width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n  \n      </ion-col>\n      <ion-col col-3>\n        DRIVER\n      </ion-col>\n  \n      <ion-col col-12>\n        TYPE: <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n      </ion-col>\n      <ion-col col-12>\n        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != undefined && vehicle[\'driver_details\'] != null">{{vehicle[\'driver_details\'][\'name\']}}({{vehicle[\'driver_details\'][\'phone_number\']}})</span>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_end_date"/>\n          <label>CURRENT DRIVER LEAVING DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n  \n      </ion-col>\n  \n  \n   \n      <ion-col col-12>\n        <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n          <ion-label>NEW DRIVER</ion-label>\n    \n          <ion-select interface="action-sheet" [(ngModel)]="driver_id" >\n            <ion-option  *ngFor="let driver of drivers"  value="{{driver[\'worker_id\']}}">{{driver[\'name\']}}</ion-option>\n          </ion-select>\n        </ion-item>\n      </ion-col>\n     \n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="date" [(ngModel)]="driver_start_date"/>\n          <label>NEW DRIVER START DATE</label>\n          <i class="fa fa-calendar" aria-hidden="true"></i>\n    \n        </div>\n        \n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_details"  placeholder=" " />\n          <label>REASON/DETAILS</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n      <ion-col col-12>\n        <div class="label-float" >\n          <input type="text" [(ngModel)]="driver_start_km"  placeholder=" " />\n          <label>KM</label>\n          <!-- <i class="fa fa-file" aria-hidden="true"></i> -->\n    \n        </div>\n      </ion-col>\n  \n  \n  \n  \n  \n  \n     \n  \n   \n  \n\n  \n    </ion-row> \n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n  \n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </ion-col>\n    \n  </ion-row>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/change-driver/change-driver.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], CameraModalPage);
-    return CameraModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_rest_rest__["a" /* RestProvider */]])
+    ], ChangeDriverPage);
+    return ChangeDriverPage;
 }());
 
-//# sourceMappingURL=camera-modal.js.map
+//# sourceMappingURL=change-driver.js.map
 
 /***/ })
 

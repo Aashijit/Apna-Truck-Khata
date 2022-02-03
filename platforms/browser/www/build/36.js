@@ -1,6 +1,6 @@
 webpackJsonp([36],{
 
-/***/ 884:
+/***/ 886:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InitPageModule", function() { return InitPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__init__ = __webpack_require__(963);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__init__ = __webpack_require__(966);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng_otp_input__ = __webpack_require__(500);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var InitPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 963:
+/***/ 966:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115,6 +115,9 @@ var InitPage = /** @class */ (function () {
                 localStorage.setItem(_this.codes.K_ACCOUNT_INFO, JSON.stringify(dt));
                 _this.enterpassword = true;
             }
+        }, function (error) {
+            _this.navCtrl.push('FatalErrorPage', { "message": error['error']['_Message'] });
+            load.dismiss();
         });
     };
     InitPage.prototype.createpassword = function () {
@@ -139,6 +142,9 @@ var InitPage = /** @class */ (function () {
             else {
                 _this.message = res['_ReturnMessage'];
             }
+        }, function (error) {
+            _this.navCtrl.push('FatalErrorPage', { "message": error['error']['_Message'] });
+            load.dismiss();
         });
     };
     InitPage.prototype.login = function () {
@@ -160,6 +166,9 @@ var InitPage = /** @class */ (function () {
             else {
                 _this.message = res['_ReturnMessage'];
             }
+        }, function (error) {
+            _this.navCtrl.push('FatalErrorPage', { "message": error['error']['_Message'] });
+            load.dismiss();
         });
     };
     InitPage = __decorate([

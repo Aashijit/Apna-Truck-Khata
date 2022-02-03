@@ -1,14 +1,14 @@
 webpackJsonp([70],{
 
-/***/ 849:
+/***/ 851:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddMechanicPageModule", function() { return AddMechanicPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddMoreModalPageModule", function() { return AddMoreModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_mechanic__ = __webpack_require__(930);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_more_modal__ = __webpack_require__(933);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddMechanicPageModule = /** @class */ (function () {
-    function AddMechanicPageModule() {
+var AddMoreModalPageModule = /** @class */ (function () {
+    function AddMoreModalPageModule() {
     }
-    AddMechanicPageModule = __decorate([
+    AddMoreModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__add_mechanic__["a" /* AddMechanicPage */],
+                __WEBPACK_IMPORTED_MODULE_2__add_more_modal__["a" /* AddMoreModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_mechanic__["a" /* AddMechanicPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_more_modal__["a" /* AddMoreModalPage */]),
             ],
         })
-    ], AddMechanicPageModule);
-    return AddMechanicPageModule;
+    ], AddMoreModalPageModule);
+    return AddMoreModalPageModule;
 }());
 
-//# sourceMappingURL=add-mechanic.module.js.map
+//# sourceMappingURL=add-more-modal.module.js.map
 
 /***/ }),
 
-/***/ 930:
+/***/ 933:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddMechanicPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddMoreModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the AddMechanicPage page.
+ * Generated class for the AddMoreModalPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var AddMechanicPage = /** @class */ (function () {
-    function AddMechanicPage(navCtrl, navParams) {
+var AddMoreModalPage = /** @class */ (function () {
+    function AddMoreModalPage(viewController, navCtrl, navParams) {
+        this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    AddMechanicPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddMechanicPage');
+    AddMoreModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddMoreModalPage');
     };
-    AddMechanicPage = __decorate([
+    AddMoreModalPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    AddMoreModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-add-mechanic',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-mechanic/add-mechanic.html"*/'<!--\n  Generated template for the AddMechanicPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--\n  Generated template for the AddDriverPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n          ADD MECHANIC\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container edit-profile">\n\n    <ion-list>\n\n   \n      <ion-item>\n        <ion-label>TYPE OF PERSON</ion-label>\n\n        <ion-select [(ngModel)]="gender" >\n          <ion-option value="f">Female</ion-option>\n          <ion-option value="m">Male</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="NAME"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        \n        <ion-input type="text" placeholder="PHONE NUMBER"></ion-input>\n\n\n      </ion-item>\n      \n    \n      <ion-item>\n        <ion-input type="text" placeholder="BUSINESS NAME"></ion-input>\n\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="CITY"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="PAN NUMBER"></ion-input>\n      </ion-item>\n\n\n      <ion-item>\n        <ion-input type="text" placeholder="GST NUMBER(OPTIONAL)"></ion-input>\n      </ion-item>\n\n   \n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>\n      </ion-item>\n\n      <ion-row class="state">\n        <ion-col col-6>\n          <ion-item>\n            <ion-label>STATE</ion-label>\n            <ion-select [(ngModel)]="gender">\n              <ion-option value="f">Female</ion-option>\n              <ion-option value="m">Male</ion-option>\n            </ion-select>\n          </ion-item>\n        </ion-col>\n        <ion-col col-6>\n          <ion-item>\n            <ion-input type="text" placeholder="PNCODE"></ion-input>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="IFSC"></ion-input>\n      </ion-item>\n\n      \n\n\n      <ion-row class="profile-picture">\n        <ion-col col-4>\n          <i class="fa fa-camera" aria-hidden="true"></i>\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n        </ion-col>\n        <ion-col>\n          <h6></h6> \n        </ion-col>\n\n      </ion-row>\n\n      <div class="text-center mt-4">\n        <button ion-button round class="custom-button">SAVE DETAILS</button>\n      </div>\n      \n    </ion-list>\n\n  </div>\n</ion-content> \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-mechanic/add-mechanic.html"*/,
+            selector: 'page-add-more-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-more-modal/add-more-modal.html"*/'<!--\n  Generated template for the AddMoreModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>ADD MORE</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-row>\n    <ion-col col-12>\n      <span class="add-more-modal" (click)="goToModal()" >ADD MORE <i class="fa fa-plus-circle" aria-hidden="true"></i>\n      </span>    \n    </ion-col>\n    <ion-col col-6 class="mt-4">\n      EXPIRY DATE\n    </ion-col>\n    <ion-col col-6 class="mt-4">\n      12/11/1994\n    </ion-col>\n    <ion-col col-6>\n      <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n    </ion-col>\n    <ion-col col-6>\n      <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n    </ion-col>\n    <ion-col col-6 class="mt-4">\n      EXPIRY DATE\n    </ion-col>\n    <ion-col col-6 class="mt-4">\n      12/11/1994\n    </ion-col>\n    <ion-col col-6>\n      <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n    </ion-col>\n    <ion-col col-6>\n      <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6UjfKFKsL1xOguMVhMx8fwz3KS1x90ErKtA&usqp=CAU" alt="">\n    </ion-col>\n  </ion-row>\n  <ion-col col-12 >\n    <div class="text-center">\n      <button ion-button round class="exit-button" (click)="exitModal()">\n        Exit\n      </button>\n    </div>\n  </ion-col>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-more-modal/add-more-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], AddMechanicPage);
-    return AddMechanicPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], AddMoreModalPage);
+    return AddMoreModalPage;
 }());
 
-//# sourceMappingURL=add-mechanic.js.map
+//# sourceMappingURL=add-more-modal.js.map
 
 /***/ })
 

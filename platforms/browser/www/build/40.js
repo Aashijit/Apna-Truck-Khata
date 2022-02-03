@@ -1,14 +1,14 @@
 webpackJsonp([40],{
 
-/***/ 880:
+/***/ 882:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditProfilePageModule", function() { return EditProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExchangeModalPageModule", function() { return ExchangeModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profile__ = __webpack_require__(959);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__exchange_modal__ = __webpack_require__(962);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var EditProfilePageModule = /** @class */ (function () {
-    function EditProfilePageModule() {
+var ExchangeModalPageModule = /** @class */ (function () {
+    function ExchangeModalPageModule() {
     }
-    EditProfilePageModule = __decorate([
+    ExchangeModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__exchange_modal__["a" /* ExchangeModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_profile__["a" /* EditProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__exchange_modal__["a" /* ExchangeModalPage */]),
             ],
         })
-    ], EditProfilePageModule);
-    return EditProfilePageModule;
+    ], ExchangeModalPageModule);
+    return ExchangeModalPageModule;
 }());
 
-//# sourceMappingURL=edit-profile.module.js.map
+//# sourceMappingURL=exchange-modal.module.js.map
 
 /***/ }),
 
-/***/ 959:
+/***/ 962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditProfilePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExchangeModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
@@ -62,67 +62,111 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var EditProfilePage = /** @class */ (function () {
-    function EditProfilePage(navCtrl, navParams, codes, rest, loading, msg) {
-        var _this = this;
+var ExchangeModalPage = /** @class */ (function () {
+    function ExchangeModalPage(viewController, navCtrl, navParams, modalCtrl, codes, rest, msg) {
+        this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
         this.codes = codes;
         this.rest = rest;
-        this.loading = loading;
         this.msg = msg;
-        this.profile = {
-            "srth_id": '1',
-            "name": '',
-            "business_name": '',
-            "city": '',
-            "GSTN": '',
-            "pan": '',
-            "address_line_1": '',
-            "address_line_2": '',
-            "state": '',
-            "pincode": '',
-            "profile_image_id": '',
+        this.vehicle_id = '';
+        this.exchange_vehicle_id = '';
+        this.exchange_date = '';
+        this.item_id = '';
+        this.item_name = '';
+        this.item_number = '';
+        this.item_id_2 = '';
+        this.item_name_2 = '';
+        this.item_number_2 = '';
+        this.last_maint_id = '';
+        this.last_maint_ts = '';
+        this.opt_counter = '';
+        this.vehicles = [];
+        this.vehicle = '';
+        this.vehicle = this.navParams.get("vehicle");
+        this.getVehicles();
+    }
+    ExchangeModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExchangeModalPage');
+    };
+    ExchangeModalPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    ExchangeModalPage.prototype.openCalendarPopup = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.exchange_date = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    ExchangeModalPage.prototype.saveExchangeModel = function () {
+        var _this = this;
+        var dt = {
+            "vehicle_id": this.vehicle['vehicle_id'],
+            "exchange_vehicle_id": this.exchange_vehicle_id,
+            "exchange_date": this.exchange_date,
+            "item_id": this.item_name,
+            "item_name": '',
+            "item_number": '',
+            "item_id_2": this.item_name_2,
+            "item_name_2": '',
+            "item_number_2": '',
             "last_maint_id": 'srth_app',
             "opt_counter": '0'
         };
-        var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        this.profile['srth_id'] = acc[0]['srth_id'];
-        var data = {
-            "srth_id": acc[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_PROFILE, data).then(function (resp) {
-            _this.profile = resp['data'][0];
-        });
-    }
-    EditProfilePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EditProfilePage');
-    };
-    EditProfilePage.prototype.saveDetails = function () {
-        var _this = this;
-        var lng = this.loading.create({
-            content: 'Saving the profile ...'
-        });
-        lng.present();
-        this.rest.post(this.codes.UPDATE_PROFILE, this.profile).then(function (resp) {
-            lng.dismiss();
+        this.rest.post(this.codes.SAVE_EXCHANGE_PART, dt).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.msg.displayToast('Saved profile.');
-                _this.navCtrl.pop();
+                _this.msg.displayToast('Exchange part is saved !!!');
+                _this.exchange_vehicle_id = '';
+                _this.item_id = '';
+                _this.item_id_2 = '';
+                _this.exchange_date = '';
+                return;
             }
         });
     };
-    EditProfilePage = __decorate([
+    ExchangeModalPage.prototype.openPartsWorkModal = function (id) {
+        var _this = this;
+        var mdl = this.modalCtrl.create('PartsWorkModalPage');
+        mdl.onDidDismiss(function (data) {
+            if (id == '1') {
+                var work_part = JSON.parse(localStorage.getItem(_this.codes.SELECTED_WORK_PART));
+                _this.item_name = work_part['name'];
+            }
+            else if (id == '2') {
+                var work_part = JSON.parse(localStorage.getItem(_this.codes.SELECTED_WORK_PART));
+                _this.item_name_2 = work_part['name'];
+            }
+        });
+        mdl.present();
+    };
+    ExchangeModalPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+        });
+    };
+    ExchangeModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-edit-profile',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/edit-profile/edit-profile.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n          &nbsp;\n          EDIT PROFILE\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container edit-profile">\n\n    <ion-list>\n\n      <!-- <ion-row class="profile-picture">\n        <ion-col col-4>\n          <i class="fa fa-camera" aria-hidden="true"></i>\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n        </ion-col>\n        <ion-col>\n          <h6>MAX 1</h6> \n        </ion-col>\n\n      </ion-row> -->\n\n      <!-- <ion-item>\n        \n        <ion-input type="text" placeholder="NAME"></ion-input>\n\n\n      </ion-item> -->\n      <!-- "srth_id",\n      "name",\n      "business_name",\n      "city",\n      "GSTN",\n      "pan",\n      "address_line_1",\n      "address_line_2",\n      "state",\n      "pincode",\n      "profile_image_id",\n      "last_maint_id",\n      "opt_counter" -->\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.name"/>\n        <label>NAME</label>\n        <i class="fa fa-user" aria-hidden="true"></i>\n\n      </div>\n\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.business_name"/>\n        <label>BUSINESS NAME</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px" >\n        <ion-label>CITY</ion-label>\n\n        <ion-select interface="popover" [(ngModel)]="profile.city">\n          <ion-option value="city1">CITY 1</ion-option>\n          <ion-option value="city2">CITY 2</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.GSTN"/>\n        <label>GST NUMBER</label>\n        <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n\n      </div>\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.pan"/>\n        <label>PAN NUMBER</label>\n        <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n\n      </div>\n\n<!-- \n      <ion-item>\n        <ion-label>CITY</ion-label>\n        <ion-select [(ngModel)]="gender">\n          <ion-option value="f">Female</ion-option>\n          <ion-option value="m">Male</ion-option>\n        </ion-select>\n      </ion-item> -->\n<!-- \n      <ion-item>\n        <ion-input type="text" placeholder="GST NUMBER"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="PAN NUMBER"></ion-input>\n      </ion-item> -->\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.address_line_1"/>\n        <label>ADDRESS LINE 1</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <div class="label-float"  >\n        <input type="text"  placeholder=" " [(ngModel)]="profile.address_line_2"/>\n        <label>ADDRESS LINE 2</label>\n        <i class="fa fa-building" aria-hidden="true"></i>\n\n      </div>\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>\n      </ion-item> -->\n\n      <ion-row class="state">\n        <ion-col col-6>\n          <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px" >\n            <ion-label>STATE</ion-label>\n    \n            <ion-select interface="popover" [(ngModel)]="profile.state" >\n              <ion-option value="city1">STATE 1</ion-option>\n              <ion-option value="city2">STATE 2</ion-option>\n            </ion-select>\n          </ion-item>\n    \n          <!-- <ion-item>\n            <ion-label>STATE</ion-label>\n            <ion-select [(ngModel)]="gender">\n              <ion-option value="f">Female</ion-option>\n              <ion-option value="m">Male</ion-option>\n            </ion-select>\n          </ion-item> -->\n        </ion-col>\n        <ion-col col-6>\n          <div class="label-float"  >\n            <input type="tel" maxlength="6"  placeholder=" " [(ngModel)]="profile.pincode" />\n            <label>PINCODE</label>\n            <!-- <i class="fa fa-building" aria-hidden="true"></i> -->\n          </div>\n          <!-- <ion-item>\n            <ion-input type="text" placeholder="PINCODE"></ion-input>\n          </ion-item> -->\n        </ion-col>\n      </ion-row>\n\n      <div class="text-center mt-4">\n        <button ion-button round class="custom-button" (click)="saveDetails()">SAVE DETAILS</button>\n      </div>\n      \n\n\n    \n    </ion-list>\n\n  </div>\n</ion-content> \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/edit-profile/edit-profile.html"*/,
+            selector: 'page-exchange-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>EXCHANGE PART</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div class="container white-section">\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="exchange_date" (click)="openCalendarPopup()"/>\n      <label>EXHCANGE DATE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n  \n    \n    <ion-row class="exchange-details" style="margin: 0; padding-top: 20px;">\n      <ion-col col-6 class="text-center">\n        VEHICLE NUMBER\n      </ion-col>\n      <ion-col col-6 class="text-center text-color-primary ">\n        {{vehicle[\'vehicle_number\']}}\n      </ion-col>\n    </ion-row>\n\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name"  (click)="openPartsWorkModal(\'1\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <div class="text-center">\n      <i class="fa fa-exchange" aria-hidden="true" style="transform: rotate(90deg);"></i>\n    </div>\n\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">\n      <ion-label>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="exchange_vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="item_name_2" (click)="openPartsWorkModal(\'2\')" placeholder="ITEM AND ID NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n  </div>\n\n  <ion-row>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button" (click)="saveExchangeModel()"> SAVE</button>\n\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round (click)="exitModal()" class="custom-button">\n        Exit\n      </button>\n    </ion-col>\n  </ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/exchange-modal/exchange-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
-    ], EditProfilePage);
-    return EditProfilePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], ExchangeModalPage);
+    return ExchangeModalPage;
 }());
 
-//# sourceMappingURL=edit-profile.js.map
+//# sourceMappingURL=exchange-modal.js.map
 
 /***/ })
 

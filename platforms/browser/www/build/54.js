@@ -1,14 +1,14 @@
 webpackJsonp([54],{
 
-/***/ 867:
+/***/ 868:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact__ = __webpack_require__(947);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DecisionModalPageModule", function() { return DecisionModalPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__decision_modal__ = __webpack_require__(949);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ContactPageModule = /** @class */ (function () {
-    function ContactPageModule() {
+var DecisionModalPageModule = /** @class */ (function () {
+    function DecisionModalPageModule() {
     }
-    ContactPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    DecisionModalPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */]),
             ],
         })
-    ], ContactPageModule);
-    return ContactPageModule;
+    ], DecisionModalPageModule);
+    return DecisionModalPageModule;
 }());
 
-//# sourceMappingURL=contact.module.js.map
+//# sourceMappingURL=decision-modal.module.js.map
 
 /***/ }),
 
-/***/ 947:
+/***/ 949:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DecisionModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,50 +57,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var ContactPage = /** @class */ (function () {
-    function ContactPage(navCtrl, rest, codes) {
+var DecisionModalPage = /** @class */ (function () {
+    function DecisionModalPage(viewController, navCtrl, navParams, modalCtrl) {
+        this.viewController = viewController;
         this.navCtrl = navCtrl;
-        this.rest = rest;
-        this.codes = codes;
-        this.notifications = [];
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.options = '';
+        this.showAllot = true;
+        this.vehicles = '';
+        this.vehicles = JSON.parse(localStorage.getItem("vehicle_details"));
+        if (this.vehicles['driver_details'] == undefined || this.vehicles['driver_details'] == null)
+            this.showAllot = true;
+        else
+            this.showAllot = false;
     }
-    ContactPage.prototype.ionViewWillEnter = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": json[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_NOTIFICATIONS, data).then(function (resp) {
-            if (resp != null) {
-                if (resp['data'] != []) {
-                    var n = resp['data'];
-                    _this.notifications = n;
-                }
-            }
-        });
-    };
-    ContactPage.prototype.goToActionPage = function (page, objectId) {
-        var _this = this;
-        if (page == 'DocumentAddBill') {
-            var dt = {
-                "document_id": objectId
-            };
-            this.rest.post(this.codes.GET_DOCUMENT_INFO_BY_DOCUMENT_ID, dt).then(function (resp) {
-                _this.navCtrl.push('DocumentRenewalPage', { 'document': resp['data'] });
-            });
+    DecisionModalPage.prototype.presentModal = function () {
+        if (this.options == 'change') {
+            var changeDriverModal = this.modalCtrl.create('ChangeDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'allot') {
+            var changeDriverModal = this.modalCtrl.create('AllotDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'remove') {
+            var changeDriverModal = this.modalCtrl.create('RemoveDriverPage');
+            changeDriverModal.present();
         }
     };
-    ContactPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Notifications\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let n of notifications">\n        <h2 class="title-n">{{n[\'title\']}}</h2>\n        <p class="message-n"> \n          {{n[\'message\']}}\n        </p>\n        <p style="float: right !important;">\n        <button ion-button outline round *ngIf="n[\'click_page\'] != \'\'" (click)="goToActionPage(n[\'click_page\'],n[\'next_link\'])">\n          Update Now\n        </button>\n      </p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/
+    DecisionModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DecisionModalPage');
+    };
+    DecisionModalPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    DecisionModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-decision-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/'<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      \n      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">\n\n        <ion-list-header class="">\n          SELECT THE OPTION\n        </ion-list-header>\n      \n        <ion-item>\n          <ion-label>CHANGE</ion-label>\n          <ion-radio value="change"></ion-radio>\n        </ion-item>\n      \n        <ion-item *ngIf="showAllot">\n          <ion-label>ALLOT</ion-label>\n          <ion-radio value="allot"></ion-radio>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label>REMOVE</ion-label>\n          <ion-radio value="remove"></ion-radio>\n        </ion-item>\n      \n      </ion-list>\n\n    </ion-card-content>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-6 class="text-center">\n        <button ion-button round class="custom-button" (click)="exitModal()">\n          EXIT\n        </button>\n      </ion-col>\n    </ion-row>\n   \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], ContactPage);
-    return ContactPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
+    ], DecisionModalPage);
+    return DecisionModalPage;
 }());
 
-//# sourceMappingURL=contact.js.map
+//# sourceMappingURL=decision-modal.js.map
 
 /***/ })
 

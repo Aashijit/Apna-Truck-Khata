@@ -118,14 +118,14 @@
 
 
         <div *ngIf="vari  == 'Aadharcard'" class="label-float" >
-          <input type="text" [(ngModel)]="aadhar_card_number"  placeholder=" " />
+          <input type="tel" maxlength="12" max="12" [(ngModel)]="aadhar_card_number"  placeholder=" " />
           <label>AADHAR NUMBER</label>
           <i class="fa fa-file" aria-hidden="true"></i>
 
         </div>
 
         <div *ngIf="vari  == 'Pancard'" class="label-float" >
-          <input type="text"  [(ngModel)]="pan_card_number"   placeholder=" " />
+          <input type="tel"  [(ngModel)]="pan_card_number"   placeholder=" " />
           <label>PAN NUMBER</label>
           <i class="fa fa-file" aria-hidden="true"></i>
 
@@ -184,7 +184,7 @@
       <!-- </ion-item> -->
 
       <div class="label-float" *ngIf="typeOfPerson  == 'driver'">
-        <input type="text" [(ngModel)]="license_number"  placeholder=" " />
+        <input type="tel" [(ngModel)]="license_number"  placeholder=" " />
         <label>LICENSE NUMBER</label>
         <i class="fa fa-file" aria-hidden="true"></i>
 
@@ -249,14 +249,14 @@
       </ion-item>
 
       <div class="label-float" >
-        <input type="text" [(ngModel)]="pan"  placeholder=" " />
+        <input type="tel" [(ngModel)]="pan"  placeholder=" " />
         <label>PAN NUMBER</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
 
       </div>
 
       <div class="label-float" >
-        <input type="text" [(ngModel)]="GSTN"  placeholder=" " />
+        <input type="tel" [(ngModel)]="GSTN"  placeholder=" " />
         <label>GST NUMBER (OPTIONAL)</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
 
@@ -316,7 +316,7 @@
         <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>
       </ion-item> -->
       <div class="label-float" >
-        <input type="text" [(ngModel)]="account_number"  placeholder=" " />
+        <input type="tel" [(ngModel)]="account_number"  placeholder=" " />
         <label>ACCOUNT NUMBER</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
 
@@ -354,7 +354,7 @@
 
           <i class="fa fa-camera" *ngIf="extra_image_1_id == '0'" aria-hidden="true" ></i> 
           <span *ngIf="extra_image_1_id != '0'">
-            <img  [src]="extra_image_1_id['image_content']" />
+            <img  [src]="extra_image_1_id['image_url']" />
           </span>
 
           <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>
