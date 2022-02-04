@@ -107,7 +107,7 @@ export class BillPaymentSearchPage {
               "type":"payments",
               "id":String(this.payments[i]['payment_id']),
               "name":this.payments[i]['mode_of_payment'],
-              "amount":String(this.bills[i]['payment_amount'])
+              "amount":String(this.payments[i]['payment_amount'])
             };
             this.search.push(searchobj);
           }

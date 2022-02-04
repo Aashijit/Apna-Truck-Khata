@@ -140,7 +140,7 @@ export class AddDriverPage {
  
     var data2 = {
       "srth_id":json[0]['srth_id'],
-      "worker_type":"mechanic",
+      "worker_type":this.worker_type,
       "worker_id":this.worker_id,
       "document_type":"profile",
       "type":"profileimage",
@@ -148,12 +148,11 @@ export class AddDriverPage {
       "tags":JSON.stringify(data)
     }
 
-    var img = null;
+    var img = {
+      "image_url":this.profile_image_id
+    };
 
-    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':null});
-
-
-
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':img});
 
     cameraModalPage.onDidDismiss(resp => {
       if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
@@ -317,9 +316,6 @@ export class AddDriverPage {
         this.navCtrl.pop();
       }
     });
-
-
-
 
   } 
 

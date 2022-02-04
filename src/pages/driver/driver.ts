@@ -4,6 +4,7 @@ import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, ViewController, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
+import { P } from '@angular/core/src/render3';
 
 @IonicPage()
 @Component({
@@ -98,6 +99,12 @@ export class DriverPage {
       "worker_id":this.driver['worker_id']
     };
 
+    this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0') {
+        this.driver = resp['data'][0];
+      }
+    });
+
     this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.payments = resp['data'];
@@ -181,15 +188,8 @@ export class DriverPage {
 
 
   openRemoveDriverFromKhata() {
-
-
-    // let removeModal = this.modalCtrl.create(RemoveDriverFromAccountPage);
-    // removeModal.present();
-
-
     let changeDriverModal = this.modalCtrl.create('RemoveDriverPage');
     changeDriverModal.present();
-  
   }
 
   getItems($event){

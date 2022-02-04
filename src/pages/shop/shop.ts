@@ -63,6 +63,15 @@ export class ShopPage {
       "worker_id":this.shop['worker_id']
     };
 
+    this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0') {
+        this.shop = resp['data'][0];
+      }
+    });
+    var data = {
+      "worker_id":this.shop['worker_id']
+    };
+
     this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.payments = resp['data'];

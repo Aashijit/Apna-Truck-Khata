@@ -49,8 +49,6 @@ export class DocumentPage {
       
     this.document = JSON.parse(localStorage.getItem("worker"));
     this.due = Number(this.document['total_bill_money']) - Number(this.document['paid_money']);
-
-
   }
 
   ionViewDidLoad() {
@@ -70,6 +68,17 @@ export class DocumentPage {
 
 
   ionViewWillEnter(){
+
+    var data = {
+      "worker_id":this.document['worker_id']
+    };
+
+    this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0') {
+        this.document = resp['data'][0];
+      }
+    });
+
     var data = {
       "worker_id":this.document['worker_id']
     };

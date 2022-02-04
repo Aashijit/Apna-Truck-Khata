@@ -255,8 +255,9 @@ export class AddDriverExpensesPage {
       this.rest.post(this.codes.ADD_EXPENSE_BILL,data).then(resp => {
         if(resp['_ReturnCode'] == '0'){
             resp['data']['vehicle_number'] = this.vehicle_number;
+            resp['data']['image'] = this.img;
             this.bills.push(resp['data']);
-                    
+                  
         this.vehicle_id  = '';
         this.km_reading = '';
         this.bill_date  = '';

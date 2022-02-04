@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 914:
+/***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDetailsPageModule", function() { return VehicleDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_details__ = __webpack_require__(993);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_details__ = __webpack_require__(992);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var VehicleDetailsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 993:
+/***/ 992:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,6 +116,15 @@ var VehicleDetailsPage = /** @class */ (function () {
             }
         });
     };
+    VehicleDetailsPage.prototype.getVehicleDetails = function () {
+        var _this = this;
+        var data = {
+            "vehicle_id": this.vehicle['vehicle_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_BY_VEHICLE_ID, data).then(function (resp) {
+            _this.vehicle = resp['data'];
+        });
+    };
     VehicleDetailsPage.prototype.getBillSummary = function () {
         var _this = this;
         var data = {
@@ -139,6 +148,7 @@ var VehicleDetailsPage = /** @class */ (function () {
         this.getVehicleDriverHistory();
         this.getVehicleWorkDetails();
         this.getBillSummary();
+        this.getVehicleDetails();
     };
     VehicleDetailsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad VehicleDetailsPage');
@@ -146,9 +156,13 @@ var VehicleDetailsPage = /** @class */ (function () {
     VehicleDetailsPage.prototype.getItems = function ($event) {
     };
     VehicleDetailsPage.prototype.goToModal = function () {
+        var _this = this;
         localStorage.setItem("vehicle_details", JSON.stringify(this.vehicle));
         var profileModal = this.modalCtrl.create('DecisionModalPage');
         profileModal.present();
+        profileModal.onDidDismiss(function (resp) {
+            _this.ionViewWillEnter();
+        });
     };
     VehicleDetailsPage.prototype.openExchangeModal = function () {
         var exchangeModal = this.modalCtrl.create('ExchangeModalPage', { 'vehicle': this.vehicle });

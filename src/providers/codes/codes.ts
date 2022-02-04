@@ -57,6 +57,8 @@ export class CodesProvider {
   
   public CREATE_WORKER=this.BASE_URL+"createworker";
   public GET_WORKER=this.BASE_URL+"getworkerbysrrthid";
+  public GET_WORKER_BY_WORKER_ID=this.BASE_URL+"getworkerbyworkerid";
+
   public UPDATE_WORKER=this.BASE_URL+"updateworker";
   public DELETE_WORKER=this.BASE_URL+"deleteworker";
 
@@ -100,6 +102,10 @@ export class CodesProvider {
 
   public SAVE_EXCHANGE_PART=this.BASE_URL+"savevehicleexchangeinfo";
   public GET_EXCHANGE_PART=this.BASE_URL+"getvehicleexchangeinfo";
+
+
+  public GET_VEHICLE_BY_VEHICLE_ID=this.BASE_URL+"getvehiclebyvehicleid";
+
 
   public GET_BILL_FOR_VEHICLE=this.BASE_URL+"getallbillsforvehicle";
   public GET_BILL_SUMMARY = this.BASE_URL+"getbillsummary";

@@ -71,6 +71,19 @@ export class VehicleDetailsPage {
     });
   }
 
+  getVehicleDetails() {
+    var data = {
+      "vehicle_id":this.vehicle['vehicle_id']
+    };
+
+    this.rest.post(this.codes.GET_VEHICLE_BY_VEHICLE_ID, data).then(resp => {
+      this.vehicle =  resp['data'];
+    });
+
+
+    
+  }
+
   getBillSummary() {
     var data = {
       "vehicle_id":this.vehicle['vehicle_id']
@@ -99,6 +112,7 @@ export class VehicleDetailsPage {
     this.getVehicleDriverHistory();
     this.getVehicleWorkDetails();
     this.getBillSummary();
+    this.getVehicleDetails();
   }
 
   ionViewDidLoad() {
@@ -113,6 +127,10 @@ export class VehicleDetailsPage {
     localStorage.setItem("vehicle_details",JSON.stringify(this.vehicle));
     let profileModal = this.modalCtrl.create('DecisionModalPage');
     profileModal.present();
+
+    profileModal.onDidDismiss(resp=> {
+      this.ionViewWillEnter();
+    });
   }
 
   openExchangeModal() {

@@ -39,8 +39,10 @@
         </button>
       </ion-col>
       <ion-col col-12 class="profile-picture text-center">
-        <img width="80px" src="../../assets/saarthi-icon/png/002-folder.png" alt="">
-        <p style="margin-top: 10px">ADD PHOTO</p>
+       <!-- <p style="margin-top: 10px">ADD PHOTO</p> -->
+        <img width="80px" height="80px" *ngIf="document['profile_image_id'] == '0' || document['profile_image_id'] == null || document['profile_image_id'] == undefined" src="../../assets/saarthi-icon/png/002-folder.png" alt="">
+        <img width="80px" height="80px" *ngIf="document['profile_image_id'] != '0' && document['profile_image_id'] != null && document['profile_image_id'] != undefined" [src]="document['profile_image_id']" alt="">
+       
       </ion-col>
       <ion-col col-6>
         NAME: <br> <span class="text-color-primary">{{document['name']}}</span>
@@ -270,10 +272,10 @@
             </span>
           </div>
       
-          <div class="scrollmenu-list total-bill " *ngFor="let payment of filterpayments" >
+          <div class="scrollmenu-list paid-money " *ngFor="let payment of filterpayments" >
             <div *ngIf="type=='pno' || type == ''" (click)="selectThisPayment(payment)">
             <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-            <p>{{payment['payment_id']}}</p>
+            <p>Pymt #{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
             <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
             <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
@@ -288,9 +290,9 @@
             </div>
   
             <div *ngIf="type=='bno'  || type == ''">
-            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
+            <div class="scrollmenu-list paid-money" *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
               <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-              <p>{{bill['bill_id']}}</p>
+              <p>Bill #{{bill['bill_id']}}</p>
               <p>{{bill['bill_date']}}</p>
               <p>{{bill['vehicle_number']}}</p>
               <p>₹ {{bill['total_bill']}}</p>
@@ -305,7 +307,7 @@
           </div>
           <div *ngIf="type=='ano'  || type == ''" (click)="selectThisPayment(payment)">
             <div [ngClass]="payment['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-            <p>{{payment['payment_id']}}</p>
+            <p>Pymt #{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
             <p *ngIf="payment['bills'] != undefined && payment['bills'].length > 0">{{payment['bills'][0]['vehicle_number']}}</p>
             <p *ngIf="payment['bills'] == undefined || payment['bills'].length == 0"></p>
@@ -318,7 +320,7 @@
             </p>
             <div class="scrollmenu-list paid-money " *ngFor="let bill of payment['bills']" (click)="selectThisBill(bill,payment)">
               <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
-              <p>{{bill['bill_id']}}</p>
+              <p>Bill #{{bill['bill_id']}}</p>
               <p>{{bill['bill_date']}}</p>
               <p>{{bill['vehicle_number']}}</p>
               <p>₹ {{bill['total_bill']}}</p>

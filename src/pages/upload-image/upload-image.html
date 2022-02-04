@@ -8,24 +8,24 @@
 
 <p style="text-align: center !important;margin-top: 20%;">
   <button ion-button round (click)="camera()" style="width: 50%;height: 100px;font-size: 5rem;">
-    <ion-icon name="camera"></ion-icon>
+    <ion-icon name="camera" class="size"></ion-icon>
   </button>
 </p>
 <p style="text-align: center !important;">
   <button ion-button round  (click)="gallery()" style="width: 50%;height: 100px;font-size: 5rem;">
-    <ion-icon name="image"></ion-icon>
+    <ion-icon name="image" class="size"></ion-icon>
   </button>
 </p>
 
 <p style="text-align: center !important;">
   <button ion-button round [disabled]="uploadImage == ''"  (click)="viewImage()" style="width: 50%;height: 100px;font-size: 5rem;">
-    <ion-icon name="eye"></ion-icon>
+    <ion-icon name="eye" class="size"></ion-icon>
   </button>
 </p>
 
 <p style="text-align: center !important;">
   <button ion-button round  [disabled]="uploadImage == ''" (click)="deleteImage()" style="width: 50%;height: 100px;font-size: 5rem;">
-    <ion-icon name="trash"></ion-icon>
+    <ion-icon name="trash" class="size"></ion-icon>
   </button>
 </p>
 

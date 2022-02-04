@@ -143,7 +143,7 @@ var BillPaymentSearchPage = /** @class */ (function () {
                         "type": "payments",
                         "id": String(_this.payments[i]['payment_id']),
                         "name": _this.payments[i]['mode_of_payment'],
-                        "amount": String(_this.bills[i]['payment_amount'])
+                        "amount": String(_this.payments[i]['payment_amount'])
                     };
                     _this.search.push(searchobj);
                 }

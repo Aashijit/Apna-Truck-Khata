@@ -56,7 +56,7 @@
         <ion-col col-6 class="text-center" (click)="openCameraPopup(0,'Profile')">
           <i class="fa fa-camera" *ngIf="profile_image_id == '0'" aria-hidden="true" ></i> 
           <span *ngIf="profile_image_id != '0'">
-            <img  [src]="profile_image" />
+            <img  [src]="profile_image_id" />
           </span>
 
           <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->

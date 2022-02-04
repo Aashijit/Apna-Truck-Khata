@@ -59,6 +59,17 @@ export class MechanicPage {
 
 
   ionViewWillEnter(){
+
+    var data = {
+      "worker_id":this.mechanic['worker_id']
+    };
+
+    this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
+      if(resp['_ReturnCode'] == '0') {
+        this.mechanic = resp['data'][0];
+      }
+    });
+
     var data = {
       "worker_id":this.mechanic['worker_id']
     };

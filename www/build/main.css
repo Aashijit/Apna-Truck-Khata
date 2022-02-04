@@ -34955,6 +34955,10 @@ page-upload-image .button-round-md {
   border-radius: 20px !important;
 }
 
+page-upload-image .size {
+  font-size: 9rem !important;
+}
+
 page-vehicle-bill-report .item {
   background: none !important;
 }
