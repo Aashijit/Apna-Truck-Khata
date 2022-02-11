@@ -5,10 +5,10 @@ webpackJsonp([26],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProblemWorkPartModalPageModule", function() { return ProblemWorkPartModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProblemModalPageModule", function() { return ProblemModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__problem_work_part_modal__ = __webpack_require__(974);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__problem_modal__ = __webpack_require__(974);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ProblemWorkPartModalPageModule = /** @class */ (function () {
-    function ProblemWorkPartModalPageModule() {
+var ProblemModalPageModule = /** @class */ (function () {
+    function ProblemModalPageModule() {
     }
-    ProblemWorkPartModalPageModule = __decorate([
+    ProblemModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__problem_work_part_modal__["a" /* ProblemWorkPartModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__problem_modal__["a" /* ProblemModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__problem_work_part_modal__["a" /* ProblemWorkPartModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__problem_modal__["a" /* ProblemModalPage */]),
             ],
         })
-    ], ProblemWorkPartModalPageModule);
-    return ProblemWorkPartModalPageModule;
+    ], ProblemModalPageModule);
+    return ProblemModalPageModule;
 }());
 
-//# sourceMappingURL=problem-work-part-modal.module.js.map
+//# sourceMappingURL=problem-modal.module.js.map
 
 /***/ }),
 
@@ -42,11 +42,9 @@ var ProblemWorkPartModalPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProblemWorkPartModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProblemModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,114 +56,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-var ProblemWorkPartModalPage = /** @class */ (function () {
-    function ProblemWorkPartModalPage(viewController, navCtrl, navParams, rest, codes) {
+var ProblemModalPage = /** @class */ (function () {
+    function ProblemModalPage(viewController, navCtrl, navParams) {
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
-        this.codes = codes;
-        this.problem = '';
-        this.part = '';
-        this.id = '';
-        this.searchTerm = '';
-        this.addWorkPart = false;
-        this.problems = [];
-        this.filterproblems = [];
-        this.selectedProblems = [];
-        this.getrepair();
+        this.addNewField = false;
     }
-    ProblemWorkPartModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ProblemWorkPartModalPage');
+    ProblemModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ProblemModalPage');
     };
-    ProblemWorkPartModalPage.prototype.saverepair = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userinfo[0]['srth_id'],
-            "problem_name": this.problem,
-            "vehicle_part_name": this.part,
-            "vehicle_part_id": this.id,
-            "last_maint_id": "srth-app",
-            "opt_counter": "0"
-        };
-        this.rest.post(this.codes.SAVE_PROBLEM, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.addWorkPart = false;
-                _this.getrepair();
-            }
-        });
+    ProblemModalPage.prototype.addNew = function () {
+        this.addNewField = true;
     };
-    ProblemWorkPartModalPage.prototype.getrepair = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_PROBLEM, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.problems = resp['data'];
-                var prb_sel = _this.navParams.get("problems");
-                for (var i = 0; i < _this.problems.length; i++) {
-                    _this.problems[i]['selected'] = false;
-                    if (prb_sel != undefined && prb_sel != null) {
-                        for (var j = 0; j < prb_sel.length; j++) {
-                            if (prb_sel[j]['problem_id'] == _this.problems[i]['problem_id']) {
-                                _this.problems[i]['selected'] = true;
-                                _this.problems[i]['parts'] = prb_sel[j]['parts'];
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    };
-    ProblemWorkPartModalPage.prototype.problemsSelected = function () {
-        var prblems = [];
-        //Fetch the parts
-        var parts = [];
-        for (var i = 0; i < this.problems.length; i++) {
-            if (this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null && this.problems[i]['parts'] != []) {
-                parts = this.problems[i]['parts'];
-                break;
-            }
-        }
-        for (var i = 0; i < this.problems.length; i++) {
-            if (this.problems[i]['selected'] == true) {
-                this.problems[i]['parts'] = parts;
-                prblems.push(this.problems[i]);
-            }
-        }
-        localStorage.setItem("problem_id", JSON.stringify(prblems));
+    ProblemModalPage.prototype.exitModal = function () {
         this.viewController.dismiss();
     };
-    ProblemWorkPartModalPage.prototype.selectedProblem = function (problem) {
-        localStorage.setItem("problem_id", problem['problem_id']);
-        this.viewController.dismiss();
-    };
-    ProblemWorkPartModalPage.prototype.filterList = function (event) {
-        var _this = this;
-        this.filterproblems = this.problems.filter(function (wp) {
-            if (_this.searchTerm != '') {
-                return (wp.problem_name.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
-            }
-            else
-                return _this.problems;
-        });
-    };
-    ProblemWorkPartModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-problem-work-part-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n        <ion-col col-12 style="text-align: center;">\n          <button ion-button round class="custom-button" (click)="addWorkPart=!addWorkPart"> ADD REPAIR  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n\n      <ion-grid *ngIf="addWorkPart">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Repair</h2>\n          </ion-col>\n          \n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="problem" />\n              <label>PROBLEM/WORK</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="part" />\n              <label>PART</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="id" />\n              <label>ID</label>\n            </div>\n          </ion-col>\n          <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="saverepair()"> ADD REPAIR  </button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <!-- (click)="selectedProblem(wp)" -->\n          <ion-item *ngFor="let wp of problems" >\n              <ion-label style="font-size: 10px;">{{wp[\'problem_name\'] + " "+wp[\'vehicle_part_name\'] +" "+ wp[\'vehicle_part_id\']}}</ion-label>\n              <ion-checkbox [(ngModel)]="wp[\'selected\']" slot="start"></ion-checkbox>\n            <!-- <ion-card>\n              <ion-card-content>\n            <ion-row>\n               [(ngModel)]="wp[\'selected\']" \n              <ion-col style="text-align: center;" col-12>\n                <ion-item>\n                  \n              </ion-item>\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'problem_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'vehicle_part_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;">\n                {{wp[\'vehicle_part_id\']}}\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n          </ion-card> -->\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-12 class="text-center">\n          <button ion-button round class="custom-button" (click)="problemsSelected()">Save</button>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/,
+    ProblemModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-problem-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-modal/problem-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n\n\n  <ion-card class="modal-card-details">\n    <ion-card-header class="custom-card-header">\n      PROBLEMS\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <ion-row style="margin: 0;">\n        <ion-col col-8>\n          <div class="custom-searchbar-div" style="position: relative;">\n            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH "></ion-searchbar>\n            <i class="fa fa-angle-down" aria-hidden="true"></i>\n          </div>\n        </ion-col>\n        <ion-col col-4 class="text-center">\n          <button ion-button round class="add-new custom-button"  (click)="addNew()" style="margin-top: 20px;"> ADD + </button>\n\n          <!-- <p class="custom-button" style="margin-top: 20px;">ADD NEW</p> -->\n        </ion-col>\n\n        <ion-col col-12 *ngIf="addNewField">\n          <div class="label-float" >\n            <input type="text"  placeholder=" " />\n            <label>ADD</label>\n            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n      \n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n            <ion-label>Daenerys Targaryen</ion-label>\n            <ion-checkbox checked="true"></ion-checkbox>\n\n          </ion-item>\n        </ion-col>\n        <ion-col col-2>\n          <i style="margin-top: 10px;\n          font-size: 20px !important;\n          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>\n\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n            <ion-label>Daenerys Targaryen</ion-label>\n            <ion-checkbox checked="true"></ion-checkbox>\n\n          </ion-item>\n        </ion-col>\n        <ion-col col-2>\n          <i style="margin-top: 10px;\n          font-size: 20px !important;\n          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>\n\n        </ion-col>\n      </ion-row>\n\n\n      <!-- <div class="label-float" >\n        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n        <label>DATE</label>\n        <i class="fa fa-calendar" aria-hidden="true"></i>\n\n      </div> -->\n      \n        <ion-row class="justify-content-center">\n          <ion-col col-6 class="text-center">\n            <button ion-button round class="custom-button" > SAVE </button>\n    \n          </ion-col>\n          <ion-col col-6 class="text-center">\n            <button ion-button round (click)="exitModal()" class="custom-button exit-button">\n              EXIT\n            </button>\n          </ion-col>\n        </ion-row>\n      \n\n     </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-modal/problem-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"],
-            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], ProblemWorkPartModalPage);
-    return ProblemWorkPartModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
+    ], ProblemModalPage);
+    return ProblemModalPage;
 }());
 
-//# sourceMappingURL=problem-work-part-modal.js.map
+//# sourceMappingURL=problem-modal.js.map
 
 /***/ })
 

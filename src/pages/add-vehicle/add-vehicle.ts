@@ -1,3 +1,4 @@
+import { Push } from '@ionic-native/push';
 import { PartsWorkModalPage } from './../parts-work-modal/parts-work-modal';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
@@ -33,7 +34,8 @@ export class AddVehiclePage {
   vehicle_km_reading_current = '';
   is_remove = '';
 
-
+  brands : any = [];
+  models : any = [];
 
 
 
@@ -65,6 +67,15 @@ export class AddVehiclePage {
       var updateworkpart = this.navParams.get('updateworkpart');
       var updatevehicle = this.navParams.get('updatevehicle');
 
+      this.rest.getModelsBrand().then(resp=> {
+        var objs : any = [];
+        objs = resp;
+        for(let i=0;i<objs.length;i++) {
+          this.addBrandsModel(objs[i]);
+        }
+        console.log(JSON.stringify(this.brands));
+      });
+
       if(updateworkpart == 'true') {
         var vehicledetails = this.navParams.get('vehicle');
         localStorage.setItem(this.codes.ADDED_VEHICLE_ID,vehicledetails['vehicle_id']);
@@ -93,9 +104,41 @@ export class AddVehiclePage {
         this.updateVehicle = true;
 
       }
+  }
 
+  selectedBrand() {
+    for(let i=0;i<this.brands.length;i++) {
+      if(this.brands[i]['name'] == this.vehicle_brand) {
+        this.models = this.brands[i]['models'];
+      }
+    }
+  }
 
+  addBrandsModel(obj) {
 
+    if(!this.isBrandPresent(obj)) {
+      var brandName = {
+        "name":obj['brand']
+      }
+      this.brands.push(brandName);
+    }
+
+    for (let i = 0; i < this.brands.length; i++) {
+      if (this.brands[i]['name'] == obj['brand']) {
+        if (this.brands[i]['models'] == null || this.brands[i]['models'] == undefined) {
+          this.brands[i]['models'] = [];
+        }
+        this.brands[i]['models'].push(obj['model']);
+      }
+    }
+  }
+
+  isBrandPresent(obj) {
+    for(let i=0;i<this.brands.length;i++) {
+      if(this.brands[i]['name'] == obj['brand'])
+        return true;
+    }
+    return false;
   }
 
 
@@ -129,7 +172,7 @@ export class AddVehiclePage {
   }
 
   openPartsWorkDialog(){
-    let partsWorkModal = this.modalCtrl.create(PartsWorkModalPage);
+    let partsWorkModal = this.modalCtrl.create('PartsWorkModalPage');
     partsWorkModal.present();
 
     partsWorkModal.onDidDismiss(data=> {
@@ -269,7 +312,7 @@ export class AddVehiclePage {
       "vehicle_user_update_id":this.vehicle_user_update_id,
       "vehicle_update_details":this.vehicle_update_details,
       "vehicle_update_km_reading":this.vehicle_update_km_reading,
-      "vehicle_update_image_id":'0',
+      "vehicle_update_image_id":this.vehicle_update_image_id,
       "vehicle_part_work":this.vehicle_part_work,
       "vehicle_part_work_name":this.vehicle_part_work_name,
       "vehicle_part_work_details":this.vehicle_part_work_details,
@@ -280,6 +323,12 @@ export class AddVehiclePage {
     this.rest.post(this.codes.UPDATE_WORK_UPDATE, data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have updated a work detail to your vehicle.'); 
+        this.vehicle_update_date="";
+        this.vehicle_user_update_id="";
+        this.vehicle_update_details="";
+        this.vehicle_update_km_reading="";
+        this.vehicle_update_image_id=0;
+        this.vehicle_part_work_details="";
         this.getworkdetails();
       }
     });
@@ -326,7 +375,7 @@ export class AddVehiclePage {
       "vehicle_user_update_id":this.vehicle_user_update_id,
       "vehicle_update_details":this.vehicle_update_details,
       "vehicle_update_km_reading":this.vehicle_update_km_reading,
-      "vehicle_update_image_id":'0',
+      "vehicle_update_image_id":this.vehicle_update_image_id,
       "vehicle_part_work":this.vehicle_part_work,
       "vehicle_part_work_name":this.vehicle_part_work_name,
       "vehicle_part_work_details":this.vehicle_part_work_details,
@@ -338,6 +387,12 @@ export class AddVehiclePage {
 
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have added a work detail to your vehicle.'); 
+        this.vehicle_update_date="";
+        this.vehicle_user_update_id="";
+        this.vehicle_update_details="";
+        this.vehicle_update_km_reading="";
+        this.vehicle_update_image_id=0;
+        this.vehicle_part_work_details="";
         this.getworkdetails();
       }
 
@@ -348,7 +403,7 @@ export class AddVehiclePage {
   
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create(DetailsModalPage);
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
 
     detailsModalPage.onDidDismiss(data=> {
       this.vehicle_update_details = localStorage.getItem(this.codes.DETAILS);
@@ -357,8 +412,41 @@ export class AddVehiclePage {
     detailsModalPage.present();
   }
 
+  // openCameraPopup() {
+  //   let cameraModalPage = this.modalCtrl.create('CameraModalPage');
+  //   cameraModalPage.present();
+  // }
+
   openCameraPopup() {
-    let cameraModalPage = this.modalCtrl.create(CameraModalPage);
+    var data = {
+      "brand":this.vehicle_brand
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":'',
+      "worker_id":0,
+      "document_type":"vehicle_part",
+      "type":"vehicle part",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+
+    var img = {
+      "image_url":this.vehicle_update_image_id
+    };
+
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':img});
+
+    cameraModalPage.onDidDismiss(resp => {
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        {
+          img = JSON.parse(localStorage.getItem("selectedimage"));
+          this.vehicle_update_image_id = img['image_url'];
+        }
+    });
+    
     cameraModalPage.present();
   }
 

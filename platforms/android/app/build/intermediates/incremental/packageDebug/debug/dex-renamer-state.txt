@@ -1,4 +1,4 @@
-#Wed Jan 26 17:49:59 IST 2022
+#Sat Feb 12 01:40:25 IST 2022
 base.0=/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.1=classes2.dex
 renamed.1=classes2.dex

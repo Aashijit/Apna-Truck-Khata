@@ -36,4 +36,15 @@ export class RestProvider {
     });
   }
 
+  getModelsBrand() {
+    return new Promise((resolve, reject) => {
+      this.http.get('../../assets/vehicle_master.json')
+        .subscribe(res => {
+          resolve(res);
+        }, (err) => {
+          reject(err);
+        });
+    });
+  }
+
 }

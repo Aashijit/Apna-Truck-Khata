@@ -5,12 +5,10 @@ webpackJsonp([9],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleBillReportPageModule", function() { return VehicleBillReportPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(496);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__ = __webpack_require__(991);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadImagePageModule", function() { return UploadImagePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upload_image__ = __webpack_require__(991);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,25 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var VehicleBillReportPageModule = /** @class */ (function () {
-    function VehicleBillReportPageModule() {
+var UploadImagePageModule = /** @class */ (function () {
+    function UploadImagePageModule() {
     }
-    VehicleBillReportPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    UploadImagePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__["a" /* VehicleBillReportPage */],
+                __WEBPACK_IMPORTED_MODULE_2__upload_image__["a" /* UploadImagePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__["a" /* VehicleBillReportPage */]),
-                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__upload_image__["a" /* UploadImagePage */]),
             ],
         })
-    ], VehicleBillReportPageModule);
-    return VehicleBillReportPageModule;
+    ], UploadImagePageModule);
+    return UploadImagePageModule;
 }());
 
-//# sourceMappingURL=vehicle-bill-report.module.js.map
+//# sourceMappingURL=upload-image.module.js.map
 
 /***/ }),
 
@@ -46,11 +42,13 @@ var VehicleBillReportPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleBillReportPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UploadImagePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,114 +62,111 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var VehicleBillReportPage = /** @class */ (function () {
-    function VehicleBillReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
+
+
+var UploadImagePage = /** @class */ (function () {
+    function UploadImagePage(navCtrl, navParams, view, cm, ldcontroller, rest, codes, photoViewer) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.view = view;
+        this.cm = cm;
+        this.ldcontroller = ldcontroller;
         this.rest = rest;
         this.codes = codes;
-        this.modalCtrl = modalCtrl;
-        this.viewCont = viewCont;
-        this.problem = '';
-        this.problems = [];
-        this.shops = [];
-        this.vehicles = [];
-        this.html = '';
-        this.vehicle_id = '';
-        this.from_date = '';
-        this.to_date = '';
-        this.worker_id = '';
-        this.dt = new Date(2000, 1, 1);
-        this.displayCalendar = false;
-        this.dateRange = { from: '', to: '' };
-        this.downloadURL = '';
-        this.apiendpoint = '';
-        this.downloadendpoint = '';
-        this.optionsMulti = {
-            pickMode: 'range',
-            from: this.dt,
-            to: 0,
-            showMonthPicker: true,
-            showToggleButtons: true,
-            color: 'primary'
-        };
-        if (this.navParams.get("vehicle") != null || this.navParams.get("vehicle") != undefined) {
-            this.vehicle_id = this.navParams.get("vehicle")['vehicle_id'];
+        this.photoViewer = photoViewer;
+        this.data = '';
+        this.uploadImage = '';
+        this.imgtagcloud = '';
+        this.data = this.navParams.get("request");
+        var dt = this.navParams.get('image');
+        if (dt != null) {
+            this.uploadImage = dt['image_url'];
         }
     }
-    VehicleBillReportPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VehicleBillReportPage');
+    UploadImagePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad UploadImagePage');
     };
-    VehicleBillReportPage.prototype.ionViewWillEnter = function () {
-        this.getPersons();
-        this.getVehicles();
+    UploadImagePage.prototype.camera = function () {
+        this.getImage("camera");
     };
-    VehicleBillReportPage.prototype.openCalendar = function () {
-        this.displayCalendar = true;
+    UploadImagePage.prototype.gallery = function () {
+        this.getImage("gallery");
     };
-    VehicleBillReportPage.prototype.getPersons = function () {
+    UploadImagePage.prototype.viewImage = function () {
+        this.photoViewer.show(this.uploadImage, this.imgtagcloud, { share: true });
+    };
+    UploadImagePage.prototype.deleteImage = function () {
+        this.uploadImage = '';
+        localStorage.removeItem("selectedimage");
+    };
+    UploadImagePage.prototype.getImage = function (img) {
         var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                var persons = resp['data'];
-                for (var i = 0; i < persons.length; i++) {
-                    if (persons[i]['worker_type'] == 'shop' || persons[i]['worker_type'] == 'mechanic') {
-                        _this.shops.push(persons[i]);
-                    }
-                }
-            }
-        });
+        if (img == 'camera') {
+            var options = {
+                quality: 10,
+                destinationType: this.cm.DestinationType.DATA_URL,
+                encodingType: this.cm.EncodingType.JPEG,
+                mediaType: this.cm.MediaType.PICTURE,
+                sourceType: this.cm.PictureSourceType.CAMERA
+            };
+            this.cm.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.uploadImage = base64Image;
+                var ldcon = _this.ldcontroller.create({
+                    content: 'Saving the image ... '
+                });
+                ldcon.present();
+                _this.data['image_content'] = _this.uploadImage;
+                _this.rest.post(_this.codes.SAVE_IMAGE, _this.data).then(function (resp) {
+                    localStorage.setItem("selectedimage", JSON.stringify(resp['data']));
+                    ldcon.dismiss();
+                    _this.view.dismiss();
+                });
+            }, function (err) {
+                // Handle error
+            });
+        }
+        else {
+            var options = {
+                quality: 10,
+                destinationType: this.cm.DestinationType.DATA_URL,
+                encodingType: this.cm.EncodingType.JPEG,
+                mediaType: this.cm.MediaType.PICTURE,
+                sourceType: this.cm.PictureSourceType.PHOTOLIBRARY
+            };
+            this.cm.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.uploadImage = base64Image;
+                var ldcon = _this.ldcontroller.create({
+                    content: 'Saving the image ... '
+                });
+                ldcon.present();
+                _this.data['image_content'] = _this.uploadImage;
+                _this.rest.post(_this.codes.SAVE_IMAGE, _this.data).then(function (resp) {
+                    localStorage.setItem("selectedimage", JSON.stringify(resp['data']));
+                    ldcon.dismiss();
+                    _this.view.dismiss();
+                });
+            }, function (err) {
+                // Handle error
+            });
+        }
     };
-    VehicleBillReportPage.prototype.getVehicles = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
-            }
-        });
+    UploadImagePage.prototype.close = function () {
+        this.view.dismiss();
     };
-    VehicleBillReportPage.prototype.generateReport = function () {
-        var _this = this;
-        this.displayCalendar = false;
-        if (this.vehicle_id == 0)
-            this.vehicle_id = null;
-        if (this.worker_id == 0)
-            this.worker_id = null;
-        var data = {
-            "worker_id": this.worker_id,
-            "vehicle_id": this.vehicle_id,
-            "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
-        };
-        this.rest.post(this.codes.VEHICLE_BILL_REPORT, data).then(function (resp) {
-            console.log(resp);
-            document.getElementById("report").innerHTML = resp['data'];
-            _this.html = resp['data'];
-        });
-        this.downloadURL = this.codes.VEHICLE_BILL_REPORT_DOWNLOAD + "?vehicle_id=" + this.vehicle_id + "&worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
-    };
-    VehicleBillReportPage.prototype.dismiss = function () {
-        this.viewCont.dismiss();
-    };
-    VehicleBillReportPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-vehicle-bill-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-bill-report/vehicle-bill-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          VEHICLE BILL REPORT\n        </ion-title>\n\n      </ion-col>\n      \n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Vehicles\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="vehicle_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{vehicle[\'vehicle_id\']}}" *ngFor="let vehicle of vehicles">\n            {{vehicle[\'vehicle_number\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Person\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="worker_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{shop[\'worker_id\']}}" *ngFor="let shop of shops">\n            {{shop[\'name\']+" - " + shop[\'worker_type\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-11 >\n      <ion-item style="margin-top: 24px;">\n        <ion-label>\n          Date Range : <span *ngIf="this.dateRange[\'from\'] != undefined"> {{this.dateRange[\'from\'] + " - " + this.dateRange[\'to\']}} </span>\n        </ion-label>\n      </ion-item>\n    </ion-col>\n    <ion-col col-1>\n      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>\n    </ion-col>\n  </ion-row>\n  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"\n              [options]="optionsMulti"\n              type="string"\n              [format]="\'YYYY-MM-DD\'">\n  </ion-calendar>\n\n  <p style="text-align: center !important;">\n    <button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n  </p>\n  \n  \n  <div id="report">\n  \n  </div>\n  \n  <p style="text-align: center;">\n    <a [href]="downloadURL">Download Report</a>\n  </p>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-bill-report/vehicle-bill-report.html"*/,
+    UploadImagePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-upload-image',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/upload-image/upload-image.html"*/'<ion-content padding style="background: rgba(0,0,0,0.6);">\n\n  <p style="text-align: right !important;">\n    <button ion-button clear (click)="close()" style="font-size: 2rem; color: red;">\n      <ion-icon name="close"></ion-icon>\n    </button>\n  </p>\n\n<p style="text-align: center !important;margin-top: 20%;">\n  <button ion-button round (click)="camera()" style="width: 50%;height: 100px;font-size: 5rem;">\n    <ion-icon name="camera" class="size"></ion-icon>\n  </button>\n</p>\n<p style="text-align: center !important;">\n  <button ion-button round  (click)="gallery()" style="width: 50%;height: 100px;font-size: 5rem;">\n    <ion-icon name="image" class="size"></ion-icon>\n  </button>\n</p>\n\n<p style="text-align: center !important;">\n  <button ion-button round [disabled]="uploadImage == \'\'"  (click)="viewImage()" style="width: 50%;height: 100px;font-size: 5rem;">\n    <ion-icon name="eye" class="size"></ion-icon>\n  </button>\n</p>\n\n<p style="text-align: center !important;">\n  <button ion-button round  [disabled]="uploadImage == \'\'" (click)="deleteImage()" style="width: 50%;height: 100px;font-size: 5rem;">\n    <ion-icon name="trash" class="size"></ion-icon>\n  </button>\n</p>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/upload-image/upload-image.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
-    ], VehicleBillReportPage);
-    return VehicleBillReportPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], UploadImagePage);
+    return UploadImagePage;
 }());
 
-//# sourceMappingURL=vehicle-bill-report.js.map
+//# sourceMappingURL=upload-image.js.map
 
 /***/ })
 

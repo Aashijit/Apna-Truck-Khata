@@ -1,14 +1,14 @@
 webpackJsonp([53],{
 
-/***/ 867:
+/***/ 869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsModalPageModule", function() { return DetailsModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DecisionModalPageModule", function() { return DecisionModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__details_modal__ = __webpack_require__(923);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__decision_modal__ = __webpack_require__(948);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailsModalPageModule = /** @class */ (function () {
-    function DetailsModalPageModule() {
+var DecisionModalPageModule = /** @class */ (function () {
+    function DecisionModalPageModule() {
     }
-    DetailsModalPageModule = __decorate([
+    DecisionModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__details_modal__["a" /* DetailsModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__details_modal__["a" /* DetailsModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__decision_modal__["a" /* DecisionModalPage */]),
             ],
         })
-    ], DetailsModalPageModule);
-    return DetailsModalPageModule;
+    ], DecisionModalPageModule);
+    return DecisionModalPageModule;
 }());
 
-//# sourceMappingURL=details-modal.module.js.map
+//# sourceMappingURL=decision-modal.module.js.map
 
 /***/ }),
 
-/***/ 923:
+/***/ 948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailsModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DecisionModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,40 +57,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var DetailsModalPage = /** @class */ (function () {
-    function DetailsModalPage(viewController, navCtrl, navParams, modalCtrl, codes) {
-        // this.navParams.get("note");
+var DecisionModalPage = /** @class */ (function () {
+    function DecisionModalPage(viewController, navCtrl, navParams, modalCtrl) {
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.modalCtrl = modalCtrl;
-        this.codes = codes;
-        this.note = '';
-        this.date = new Date();
-        this.note = this.navParams.get("details");
+        this.options = '';
+        this.showAllot = true;
+        this.vehicles = '';
+        this.vehicles = JSON.parse(localStorage.getItem("vehicle_details"));
+        if (this.vehicles['driver_details'] == undefined || this.vehicles['driver_details'] == null)
+            this.showAllot = true;
+        else
+            this.showAllot = false;
     }
-    DetailsModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailsModalPage');
+    DecisionModalPage.prototype.presentModal = function () {
+        if (this.options == 'change') {
+            var changeDriverModal = this.modalCtrl.create('ChangeDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'allot') {
+            var changeDriverModal = this.modalCtrl.create('AllotDriverPage');
+            changeDriverModal.present();
+        }
+        else if (this.options == 'remove') {
+            var changeDriverModal = this.modalCtrl.create('RemoveDriverPage');
+            changeDriverModal.present();
+        }
     };
-    DetailsModalPage.prototype.exitModal = function () {
+    DecisionModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DecisionModalPage');
+    };
+    DecisionModalPage.prototype.exitModal = function () {
         this.viewController.dismiss();
     };
-    DetailsModalPage.prototype.storetext = function () {
-        localStorage.setItem(this.codes.DETAILS, this.note);
-        this.viewController.dismiss();
-    };
-    DetailsModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-details-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/details-modal/details-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n\n\n  <ion-card class="modal-card-details">\n    <ion-card-header class="custom-card-header">\n      DETAILS\n      <span style="float: right;" (click)="exitModal()">\n        <i class="fa fa-times-circle" aria-hidden="true"></i>\n\n      </span>\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <div class="details-div">\n        <ion-row>\n          <ion-col col-12 class="date">\n            <p style="font-size: 9px !important;">{{date}}</p>\n          </ion-col>\n          <ion-col col-12>\n            <ion-item no-lines>\n              <ion-textarea rows="5" placeholder="Tap here" \n                  [(ngModel)]="note" [(ngModel)]="note" autocomplete="on" autocorrect="on"></ion-textarea>\n             </ion-item>\n          </ion-col>\n        </ion-row>\n        \n       \n      </div>\n      \n\n        <!-- <div class="label-float" >\n          <input type="text"  placeholder=" " />\n          <label>DETAILS</label> -->\n          <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n    \n        <!-- </div> -->\n\n\n      <!-- <div class="label-float" >\n        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n        <label>DATE</label>\n        <i class="fa fa-calendar" aria-hidden="true"></i>\n\n      </div> -->\n      \n        <ion-row class="justify-content-center">\n          <ion-col col-6 class="text-center">\n            <button ion-button round class="custom-button save-button" (click)="storetext()"> SAVE </button>\n          </ion-col>\n          <!-- <ion-col col-6 class="text-center">\n            <button ion-button round  class="custom-button exit-button">\n              EXIT\n            </button>\n          </ion-col> -->\n        </ion-row>\n      \n\n     </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/details-modal/details-modal.html"*/,
+    DecisionModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-decision-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/'<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      \n      <ion-list radio-group [(ngModel)]="options" (ionChange)="presentModal()">\n\n        <ion-list-header class="">\n          SELECT THE OPTION\n        </ion-list-header>\n      \n        <ion-item>\n          <ion-label>CHANGE</ion-label>\n          <ion-radio value="change"></ion-radio>\n        </ion-item>\n      \n        <ion-item *ngIf="showAllot">\n          <ion-label>ALLOT</ion-label>\n          <ion-radio value="allot"></ion-radio>\n        </ion-item>\n      \n        <ion-item>\n          <ion-label>REMOVE</ion-label>\n          <ion-radio value="remove"></ion-radio>\n        </ion-item>\n      \n      </ion-list>\n\n    </ion-card-content>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-6 class="text-center">\n        <button ion-button round class="custom-button" (click)="exitModal()">\n          EXIT\n        </button>\n      </ion-col>\n    </ion-row>\n   \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/decision-modal/decision-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ViewController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], DetailsModalPage);
-    return DetailsModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
+    ], DecisionModalPage);
+    return DecisionModalPage;
 }());
 
-//# sourceMappingURL=details-modal.js.map
+//# sourceMappingURL=decision-modal.js.map
 
 /***/ })
 

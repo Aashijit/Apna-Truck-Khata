@@ -60,6 +60,7 @@ export class PartsWorkModalPage {
       };
 
       this.rest.post(this.codes.SAVE_WORK_PART,data).then(resp => {
+          this.addWorkPart = false;
           this.getworkpart();
       });
   }

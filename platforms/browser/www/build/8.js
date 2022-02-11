@@ -5,10 +5,12 @@ webpackJsonp([8],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleDetailsPageModule", function() { return VehicleDetailsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vehicle_details__ = __webpack_require__(992);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VehicleBillReportPageModule", function() { return VehicleBillReportPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__ = __webpack_require__(992);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +20,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VehicleDetailsPageModule = /** @class */ (function () {
-    function VehicleDetailsPageModule() {
+
+var VehicleBillReportPageModule = /** @class */ (function () {
+    function VehicleBillReportPageModule() {
     }
-    VehicleDetailsPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    VehicleBillReportPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__vehicle_details__["a" /* VehicleDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__["a" /* VehicleBillReportPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__vehicle_details__["a" /* VehicleDetailsPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__vehicle_bill_report__["a" /* VehicleBillReportPage */]),
+                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
             ],
         })
-    ], VehicleDetailsPageModule);
-    return VehicleDetailsPageModule;
+    ], VehicleBillReportPageModule);
+    return VehicleBillReportPageModule;
 }());
 
-//# sourceMappingURL=vehicle-details.module.js.map
+//# sourceMappingURL=vehicle-bill-report.module.js.map
 
 /***/ }),
 
@@ -42,7 +46,7 @@ var VehicleDetailsPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleDetailsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VehicleBillReportPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
@@ -60,145 +64,114 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var VehicleDetailsPage = /** @class */ (function () {
-    function VehicleDetailsPage(navCtrl, navParams, modalCtrl, rest, codes) {
+var VehicleBillReportPage = /** @class */ (function () {
+    function VehicleBillReportPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
         this.rest = rest;
         this.codes = codes;
-        this.isShown = false;
-        this.vehicle = '';
-        this.workdetails = [];
-        this.driverhistory = [];
-        this.vehicleworkdetails = [];
-        this.paid = 0;
-        this.unpaid = 0;
-        this.total = 0;
-        this.vehicle = this.navParams.get("vehicle");
+        this.modalCtrl = modalCtrl;
+        this.viewCont = viewCont;
+        this.problem = '';
+        this.problems = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.html = '';
+        this.vehicle_id = '';
+        this.from_date = '';
+        this.to_date = '';
+        this.worker_id = '';
+        this.dt = new Date(2000, 1, 1);
+        this.displayCalendar = false;
+        this.dateRange = { from: '', to: '' };
+        this.downloadURL = '';
+        this.apiendpoint = '';
+        this.downloadendpoint = '';
+        this.optionsMulti = {
+            pickMode: 'range',
+            from: this.dt,
+            to: 0,
+            showMonthPicker: true,
+            showToggleButtons: true,
+            color: 'primary'
+        };
+        if (this.navParams.get("vehicle") != null || this.navParams.get("vehicle") != undefined) {
+            this.vehicle_id = this.navParams.get("vehicle")['vehicle_id'];
+        }
     }
-    VehicleDetailsPage.prototype.getVehicleWorkDetails = function () {
-        var _this = this;
-        var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
-        };
-        this.rest.post(this.codes.GET_BILL_FOR_VEHICLE, data).then(function (resp) {
-            _this.vehicleworkdetails = resp['data'];
-            console.error(JSON.stringify(_this.vehicleworkdetails));
-        });
+    VehicleBillReportPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VehicleBillReportPage');
     };
-    VehicleDetailsPage.prototype.getworkdetails = function () {
-        var _this = this;
-        var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
-        };
-        this.rest.post(this.codes.GET_UPDATE_WORK_DETAILS, data).then(function (resp) {
-            _this.workdetails = resp['data'];
-            for (var i = 0; i < _this.workdetails.length; i++) {
-                _this.workdetails[i]['selected'] = false;
-            }
-        });
+    VehicleBillReportPage.prototype.ionViewWillEnter = function () {
+        this.getPersons();
+        this.getVehicles();
     };
-    VehicleDetailsPage.prototype.getVehicleDriverHistory = function () {
+    VehicleBillReportPage.prototype.openCalendar = function () {
+        this.displayCalendar = true;
+    };
+    VehicleBillReportPage.prototype.getPersons = function () {
         var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
+            "srth_id": userinfo[0]['srth_id']
         };
-        this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID, data).then(function (resp) {
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.driverhistory = resp['data'];
-                // for(let i=0;i<this.driverhistory.length;i++){
-                //   if(this.driverhistory[i]['is_remove'] == '0'){
-                //     this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
-                //     this.vehicle_joining_date = this.driverhistory[i]['vehicle']['vehicle_start_date'];
-                //   }
-                // }
+                var persons = resp['data'];
+                for (var i = 0; i < persons.length; i++) {
+                    if (persons[i]['worker_type'] == 'shop' || persons[i]['worker_type'] == 'mechanic') {
+                        _this.shops.push(persons[i]);
+                    }
+                }
+            }
+        });
+    };
+    VehicleBillReportPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
             }
         });
     };
-    VehicleDetailsPage.prototype.getVehicleDetails = function () {
+    VehicleBillReportPage.prototype.generateReport = function () {
         var _this = this;
+        this.displayCalendar = false;
+        if (this.vehicle_id == 0)
+            this.vehicle_id = null;
+        if (this.worker_id == 0)
+            this.worker_id = null;
         var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
+            "worker_id": this.worker_id,
+            "vehicle_id": this.vehicle_id,
+            "date_from": this.dateRange['from'],
+            "date_to": this.dateRange['to']
         };
-        this.rest.post(this.codes.GET_VEHICLE_BY_VEHICLE_ID, data).then(function (resp) {
-            _this.vehicle = resp['data'];
+        this.rest.post(this.codes.VEHICLE_BILL_REPORT, data).then(function (resp) {
+            console.log(resp);
+            document.getElementById("report").innerHTML = resp['data'];
+            _this.html = resp['data'];
         });
+        this.downloadURL = this.codes.VEHICLE_BILL_REPORT_DOWNLOAD + "?vehicle_id=" + this.vehicle_id + "&worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
     };
-    VehicleDetailsPage.prototype.getBillSummary = function () {
-        var _this = this;
-        var data = {
-            "vehicle_id": this.vehicle['vehicle_id']
-        };
-        this.rest.post(this.codes.GET_BILL_SUMMARY, data).then(function (resp) {
-            var det = resp['data'];
-            for (var i = 0; i < det.length; i++) {
-                if (det[i]['status'] == 'PAID') {
-                    _this.paid = Number(det[i]['count']);
-                }
-                else {
-                    _this.unpaid = Number(det[i]['count']);
-                }
-            }
-            _this.total = _this.unpaid + _this.paid;
-        });
+    VehicleBillReportPage.prototype.dismiss = function () {
+        this.viewCont.dismiss();
     };
-    VehicleDetailsPage.prototype.ionViewWillEnter = function () {
-        this.getworkdetails();
-        this.getVehicleDriverHistory();
-        this.getVehicleWorkDetails();
-        this.getBillSummary();
-        this.getVehicleDetails();
-    };
-    VehicleDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VehicleDetailsPage');
-    };
-    VehicleDetailsPage.prototype.getItems = function ($event) {
-    };
-    VehicleDetailsPage.prototype.goToModal = function () {
-        var _this = this;
-        localStorage.setItem("vehicle_details", JSON.stringify(this.vehicle));
-        var profileModal = this.modalCtrl.create('DecisionModalPage');
-        profileModal.present();
-        profileModal.onDidDismiss(function (resp) {
-            _this.ionViewWillEnter();
-        });
-    };
-    VehicleDetailsPage.prototype.openExchangeModal = function () {
-        var exchangeModal = this.modalCtrl.create('ExchangeModalPage', { 'vehicle': this.vehicle });
-        exchangeModal.present();
-    };
-    VehicleDetailsPage.prototype.showMore = function () {
-        if (this.isShown) {
-            document.getElementById("fa-arrow-circle-down").classList.remove("fa-arrow-circle-up");
-            document.getElementById("fa-arrow-circle-down").classList.add("fa-arrow-circle-down");
-        }
-        else {
-            document.getElementById("fa-arrow-circle-down").classList.remove("fa-arrow-circle-down");
-            document.getElementById("fa-arrow-circle-down").classList.add("fa-arrow-circle-up");
-        }
-        this.isShown = !this.isShown;
-    };
-    VehicleDetailsPage.prototype.selectThis = function (i) {
-        document.getElementById(i).classList.toggle("selected");
-    };
-    VehicleDetailsPage.prototype.openDriverDocument = function () {
-        this.navCtrl.push('DriverDocumentPage', { "driver": this.vehicle['driver_details'] });
-    };
-    VehicleDetailsPage.prototype.openVehicleDocument = function () {
-        this.navCtrl.push('VehicleDocumentPage', { "vehicle": this.vehicle });
-    };
-    VehicleDetailsPage = __decorate([
+    VehicleBillReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-vehicle-details',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-details/vehicle-details.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>      \n      <ion-col col-9 class="person-name text-center">\n        <ion-title>        \n          <i class="fa fa-car" aria-hidden="true"></i>\n          VEHICLE DETAILS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header> \n\n\n<ion-content padding>\n  <div class="container">\n\n     \n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class=" text-center">VEHICLE DETAILS</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE NUMBER: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n        </ion-col>\n        <ion-col col-1>\n          <div style="margin-top: 5px; width: 10px; height: 10px; background-color: #4EC576; border-radius: 50%;"></div>\n    \n        </ion-col>\n        <ion-col col-3>\n          DRIVER\n        </ion-col>\n        <ion-col col-6>\n         <p> TYPE: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_type\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>YEAR OF PURCHASE: </p>\n          <span class="text-color-primary">{{vehicle[\'year_purchase\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>DRIVER: </p>\n          <span class="text-color-primary" *ngIf="vehicle[\'driver_details\'] != null && vehicle[\'driver_details\'] != undefined">\n            {{vehicle[\'driver_details\'][\'name\']}}\n          </span> \n        </ion-col>\n        <ion-col col-6>\n            <button ion-button round class="custom-button" (click)="goToModal()">ALLOT/<br>CHANGE/<br>REMOVE DRIVER</button>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE WEIGHT: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_weight\']+" "+vehicle[\'vehicle_weight_type\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>VEHICLE MODEL: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_model\']}}</span>\n        </ion-col>\n        <ion-col col-6>\n          <p>KM READING: </p>\n          <span class="text-color-primary">{{vehicle[\'vehicle_km_reading_current\']}}</span>\n        </ion-col>\n\n\n        <ion-col col-6 (click)="showMore()" class="text-right show-more-fa" *ngIf="workdetails.length > 0">\n          <i id="fa-arrow-circle-down" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>\n\n        </ion-col>\n\n     \n\n        <ion-col col-12 *ngIf="isShown">\n\n          <div class="scroll-grid" >\n            <div class="scrollmenu">\n             \n              <a href="#home">DATE</a>\n              <a href="#news">WORK/PART</a>\n              <a href="#contact">DETAILS</a>\n              <a href="#about">KM READING</a>\n              <a href="#about">ID</a>\n              <!-- <a href="#support">COST</a> -->\n              <a href="#blog">DETAIL</a>\n      \n          \n              <div [ngClass]="wd[\'selected\'] == false ? \'scrollmenu-list\' : \'scrollmenu-list selected\'" *ngFor="let wd of workdetails"  (click)="selectThis(wd)">\n                <p>{{wd[\'vehicle_update_date\']}}</p>\n                <p>{{wd[\'vehicle_part_work\']}}</p>\n                <p>{{wd[\'vehicle_part_work_details\']}}</p>\n                <p>{{wd[\'vehicle_update_km_reading\']}}</p>\n                <p>{{wd[\'vehicle_user_update_id\']}}</p>\n                <!-- <p>RS 400</p> -->\n                <p>{{wd[\'vehicle_update_details\']}}</p>\n           \n              </div>\n        \n        \n            </div>\n            <div class="show-arrows">\n              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n        \n            </div>\n          </div>\n        </ion-col>\n \n\n        <!-- <ion-col col-12 class="text-center mt-4">\n          <button ion-button round class="all-button"> ALLOT/CHANGE/REMOVE DRIVER</button>\n\n        </ion-col> -->\n\n        <ion-col col-12>\n          <ion-row class="document-button">\n            <ion-col col-6 (click)="navCtrl.push(\'VehicleWorkReportPage\',{\'vehicle\':vehicle})">\n              <div>\n                VEHICLE WORK REPORT\n                <i class="fa fa-download" aria-hidden="true"></i>\n      \n              </div>\n              <!-- <button ion-button round outline small></button> -->\n            </ion-col>\n            <ion-col col-6 (click)="navCtrl.push(\'VehicleBillReportPage\',{\'vehicle\':vehicle})">\n              <div>\n                VEHICLE BILL REPORT\n                <i class="fa fa-download" aria-hidden="true"></i>\n      \n              </div>\n              <!-- <button ion-button round outline small></button> -->\n            </ion-col>\n          </ion-row>\n        </ion-col>\n         \n      </ion-row>\n\n      \n\n      <!-- <ion-row>\n        <ion-col col-6>\n          VEHICLE WORK REPORT\n        </ion-col>\n\n        <ion-col col-6>\n          VEHICLE BILL REPORT\n        </ion-col>\n      </ion-row> -->\n\n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">DOCUMENTS</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category" (click)="openDriverDocument()">\n            <i class="fa fa-user" aria-hidden="true"></i>\n\n            DRIVER\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category" (click)="openVehicleDocument()">\n            <i class="fa fa-truck" aria-hidden="true"></i>\n            VEHICLE\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-category">\n            <i class="fa fa-share" aria-hidden="true"></i>\n            SHARE\n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">DRIVER HISTORY</h4>\n          <hr>\n        </ion-col>\n\n        <!-- <ion-col col-12>\n          <div class="custom-searchbar-div" style="position: relative;">\n            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>\n            <i class="fa fa-angle-down" aria-hidden="true"></i>\n          </div>\n          \n        </ion-col> -->\n        <!-- <a href="#home">NUMBER</a>\n        <a href="#news">NAME</a>\n        <a href="#contact">JOINING DATE</a>\n        <a href="#about">LEAVING DATE</a>\n        <a href="#support">REASON</a>\n        <a href="#blog">TOTAL KM</a> -->\n\n        <ion-col col-12>\n          <div class="scroll-grid">\n            <div class="scrollmenu">\n             \n              <a href="#home">VEHICLE NUMBER(S)</a>\n              <a href="#home">NAME</a>\n              <a href="#news">JOINING DATE</a>\n              <a href="#contact">LEAVING DATE</a>\n              <a href="#about">REASON/DETAILS</a>\n              <a href="#about">JOINING KM</a>\n              <a href="#about">LEAVING KM</a>\n\n          \n              <div class="scrollmenu-list" id="1" *ngFor="let drv of driverhistory">\n                <p>{{drv[\'vehicle\'][\'vehicle_number\']}}</p>\n                <p>{{drv[\'driver\'][\'name\']}}</p>\n                <p>{{drv[\'driver_start_date\']}}</p>\n                <p>{{drv[\'driver_end_date\']}}</p>\n                <p>{{drv[\'driver_start_details\']}}</p>\n                <p>{{drv[\'driver_start_km\']}} KM</p>\n                <p>{{drv[\'driver_end_km\']}} KM</p>\n              </div>\n        \n            \n            </div>\n            <div class="show-arrows">\n              <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n        \n              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n        \n            </div>\n          </div>\n        </ion-col>\n      </ion-row>\n\n      \n      <ion-row class="vehicle-details-card">\n        <ion-col col-12>\n          <h4 class="text-center">WORK HISTORY</h4>\n          <hr>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL WORK</p>\n            <h6 class="total-work">{{total}}</h6>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL PAID</p>\n            <h6 class="total-paid">{{paid}}</h6>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n          <div class="each-work-category">\n            <p>TOTAL DUE</p>\n            <h6 class="total-due">{{unpaid}}</h6>\n          </div>\n        </ion-col>\n      </ion-row>\n\n\n      <!-- <div class="custom-searchbar-div" style="position: relative;">\n        <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH SHOP NAME, BILL NUMBER"></ion-searchbar>\n        <i class="fa fa-angle-down" aria-hidden="true"></i>\n      </div> -->\n        \n\n      <div class="text-center" style="padding-top: 20px;">\n        <button ion-button round class="exchange-button" (click)="openExchangeModal()">EXCHANGE PARTS</button>\n      </div>\n\n\n      <div class="scroll-grid" >\n        <div class="scrollmenu work-history">\n        \n        <a href="#home">PROBLEM</a>\n        <a href="#home">WORK (PART & ID)</a>\n        <a href="#news">DATE</a>\n        <a href="#contact">BILL NUMBER</a>\n        <a href="#about">PERSON NAME</a>\n        <!-- <a href="#support">REPAIR</a> -->\n        <!-- <a href="#support">PART / DOC / MECHANIC</a> -->\n        <!-- <a href="#support">DOC</a> -->\n        <!-- <a href="#blog">PART</a> -->\n        <!-- <a href="#blog">LOAD ID(NEW)</a> -->\n        <a href="#tools">QUANTITY</a>\n        <a href="#tools">RATE</a>\n        <a href="#tools">TOTAL</a>\n        <a href="#tools">DETAILS</a> \n\n          <div class="scrollmenu-list" *ngFor="let vhc of vehicleworkdetails" id="5" (click)="selectThis(5)">\n            <p>{{vhc[\'problem\']}}</p>\n            <p>{{vhc[\'new_part_name\']}}</p>\n            <p>{{vhc[\'date\']}}</p>\n            <p>{{vhc[\'bill_number\']}}</p>\n            <p>{{vhc[\'person\']}}</p>\n            <p>{{vhc[\'quantity\']}}</p>\n            <p>{{vhc[\'rate\']}}</p>\n            <p>{{vhc[\'total_amount\']}}</p>\n            <p>{{vhc[\'bill_details\']}}</p>\n          </div>\n        </div>\n        <div class="show-arrows">\n          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n    \n          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n    \n        </div>\n      </div>\n    \n\n\n\n  \n      <!-- <ion-row class="driver-modal">\n        <ion-col col-12 class="text-center driver-modal-header">\n          DRIVER\n        </ion-col>\n        <ion-col col-12>\n          <ion-list radio-group [(ngModel)]="autoManufacturers">\n\n          <ion-row>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>CHANGE</ion-label>\n                <ion-radio value="change"></ion-radio>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>ALOT</ion-label>\n                <ion-radio value="alot"></ion-radio>\n              </ion-item>\n            </ion-col>\n            <ion-col col-4>\n              <ion-item>\n                <ion-label>REMOVE</ion-label>\n                <ion-radio value="remove"></ion-radio>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n        \n\n       \n          \n          </ion-list>\n    \n        </ion-col>\n       \n       \n  \n        <ion-col col-12 class="text-center">\n          <button ion-button round class="custom-button">SAVE</button>\n        </ion-col>\n    \n  \n      </ion-row> -->\n\n\n    \n  \n \n\n\n    \n\n  </div>\n</ion-content>  \n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-details/vehicle-details.html"*/,
+            selector: 'page-vehicle-bill-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-bill-report/vehicle-bill-report.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          VEHICLE BILL REPORT\n        </ion-title>\n\n      </ion-col>\n      \n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Vehicles\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="vehicle_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{vehicle[\'vehicle_id\']}}" *ngFor="let vehicle of vehicles">\n            {{vehicle[\'vehicle_number\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-6>\n      <ion-item>\n        <ion-label floating>\n          Person\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="worker_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{shop[\'worker_id\']}}" *ngFor="let shop of shops">\n            {{shop[\'name\']+" - " + shop[\'worker_type\']}}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-11 >\n      <ion-item style="margin-top: 24px;">\n        <ion-label>\n          Date Range : <span *ngIf="this.dateRange[\'from\'] != undefined"> {{this.dateRange[\'from\'] + " - " + this.dateRange[\'to\']}} </span>\n        </ion-label>\n      </ion-item>\n    </ion-col>\n    <ion-col col-1>\n      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>\n    </ion-col>\n  </ion-row>\n  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"\n              [options]="optionsMulti"\n              type="string"\n              [format]="\'YYYY-MM-DD\'">\n  </ion-calendar>\n\n  <p style="text-align: center !important;">\n    <button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n  </p>\n  \n  \n  <div id="report">\n  \n  </div>\n  \n  <p style="text-align: center;">\n    <a [href]="downloadURL">Download Report</a>\n  </p>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/vehicle-bill-report/vehicle-bill-report.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"],
-            __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], VehicleDetailsPage);
-    return VehicleDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
+    ], VehicleBillReportPage);
+    return VehicleBillReportPage;
 }());
 
-//# sourceMappingURL=vehicle-details.js.map
+//# sourceMappingURL=vehicle-bill-report.js.map
 
 /***/ })
 

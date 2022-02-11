@@ -1,0 +1,894 @@
+[
+    {
+      "brand": "Tata",
+      "model": "TATA ULTRA 1918.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 1918 COWL"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 1918 5L TURBOTRONN COWL"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 2818 COWL & SIGNA 2818.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 2821 Cowl & SIGNA 2821.T BS6 5L"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 3118 COWL & SIGNA 3118.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 3518 COWL & SIGNA 3518.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 3521 COWL & SIGNA 3521.T 5L"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 4225 COWL & SIGNA 4225.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 4825 COWL & SIGNA 4825.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA LPT 4925 COWL & SIGNA 4925.T"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA ULTRA 2821.T RIGID TRUCKS BS6"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 4018.S & LPS 4018 Cowl"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 4625.S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 4625.S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 5530.S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 5530.S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 5525.S 4X2 BS6"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 1923.K"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 2823.K HD 9S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 2825.K/.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "Tata SIGNA 2823.K/.TK STD 6S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 2825.K/.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA Signa 2823.K RMC STD 6S"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 2830.K"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 3523.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 3525.K/.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 3525.K/.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA 3530.K"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 4225.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SIGNA 4825.TK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA ACE"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA ACE ZIP"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA SUPER ACE"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA INTRA"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 207 PICK-UP TRUCK"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 407 EX AND EX2"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 709 EX"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 807"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 809 EX AND EX2"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 909 EX AND EX2"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1210 SE AND SFC (SEMI FORWARD)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1210 LP (LONG PLATE)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1109 (INTERMEDIATE TRUCK/ LCV BUS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1512C (MEDIUM BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1515C (MEDIUM BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1615 (MEDIUM BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1612C (HEAVY BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1616C (HEAVY BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1618C (HEAVY BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1618C (SEMILOW-FLOOR BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1623 (REAR-ENGINED LOW-FLOOR BUS CHASSIS)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1518C (MEDIUM) 10 TON"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1615C (MEDIUM)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1613 (MEDIUM)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1616 (HEAVY DUTY)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 1618C (HEAVY DUTY)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 2515C (HEAVY DUTY 10 WHEELER)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 2516C (HEAVY DUTY 10 WHEELER)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 2518C (HEAVY DUTY 10 WHEELER)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA STARBUS"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA DIVO (HISPANO DIVO)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA CITYRIDE (12- TO 20-SEATER BUSES FOR INTRACITY USE)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 3015"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 3118 (8×2)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 3516"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 4018"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA 4923 (6×4)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA NOVUS"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA PRIMA"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA ULTRA (ICV SEGMENT)"
+    },
+    {
+      "brand": "Tata",
+      "model": "TATA WINGER - MAXIVAN"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1115
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1215
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1315
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1415
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1015
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1115
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1215
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1415
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1615
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 1920
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "2820 6x2"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "2820 6x4"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 2825
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "3120 (6x2)"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "3520 (8x2)"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "3525 8x4"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 4020
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "4120 (8x2)"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "4220 10x2"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "4225 10x2"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 4620
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "4825 10x2"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "4825 10x4"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 5225
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": 5425
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "5525 4x2"
+    },
+    {
+      "brand": "Ashok Leyland",
+      "model": "5525 6x4"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1015R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1215R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1215RE"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1217C"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1415R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1415RE"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1617R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "1923C"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "2823C"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "2828CH"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "3528C"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "3528CM"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "2823R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "3523R"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "4023T"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "5028T"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "5528T"
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": 1624
+    },
+    {
+      "brand": "Bharat Benz",
+      "model": "917 integral"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro3019"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6019"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6028"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6035"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6042"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6048"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6019T"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6028T"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6028TM"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6035T"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6035TM"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6042HT"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro8028XC"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro8028XM"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro8035XM"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6040"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6046"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6055"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro6055 (4*2)"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro8055"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2049"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2049 CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2050"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2055"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2050 CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2055 SD"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2055 K"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2059"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2059 CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2059 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2059 XP CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2075"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2075 CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2080"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2090 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2095"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2095 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2095 XP CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2110"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2110 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2110 XP PLUS"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2110 XP PLUS CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2114 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2114 XP CNG"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro3012"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro3014"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro3015"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro3015 XP"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2055 T"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2080 XPT"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2095 XPT"
+    },
+    {
+      "brand": "Eicher",
+      "model": "Pro2110 XPT"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 7"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Jayo"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 42"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 28"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 35"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 45"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 411"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 55"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "BlazoX 46"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 11"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 12"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 14"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 16"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 2"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 4"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 6"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 7"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 8"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 10"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 12"
+    },
+    {
+      "brand": "Mahindra and Mahindra",
+      "model": "Furio 14"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FMX"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FM"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FM 420"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FMX 460 (20.3)"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FMX 460 (33)"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FMX 380"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FM"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FH"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo 380"
+    },
+    {
+      "brand": "Volvo",
+      "model": "Volvo FM 460"
+    },
+    {
+      "brand": "SML Isuzu",
+      "model": ""
+    },
+    {
+      "brand": "Ural India",
+      "model": ""
+    },
+    {
+      "brand": "Telcon",
+      "model": ""
+    },
+    {
+      "brand": "Komatsu",
+      "model": ""
+    },
+    {
+      "brand": "Jessop",
+      "model": ""
+    },
+    {
+      "brand": "Caterpillar",
+      "model": ""
+    },
+    {
+      "brand": "Ural India",
+      "model": ""
+    },
+    {
+      "brand": "Standard Corp",
+      "model": ""
+    },
+    {
+      "brand": "L&T Motors",
+      "model": ""
+    },
+    {
+      "brand": "JCB",
+      "model": ""
+    },
+    {
+      "brand": "Indo Farm Equipment Limited",
+      "model": ""
+    },
+    {
+      "brand": "Hindustan Agro",
+      "model": ""
+    },
+    {
+      "brand": "Greaves Cotton",
+      "model": ""
+    },
+    {
+      "brand": "Godrej and Boyce",
+      "model": ""
+    },
+    {
+      "brand": "BEML",
+      "model": ""
+    },
+    {
+      "brand": "Action",
+      "model": ""
+    },
+    {
+      "brand": "Premiere",
+      "model": ""
+    },
+    {
+      "brand": "Manforce Truck",
+      "model": ""
+    },
+    {
+      "brand": "Hindustan Motors",
+      "model": ""
+    },
+    {
+      "brand": "Force Motors",
+      "model": ""
+    },
+    {
+      "brand": "Daewoo",
+      "model": ""
+    },
+    {
+      "brand": "Asia Motor Works",
+      "model": ""
+    }
+  ]

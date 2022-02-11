@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 893:
+/***/ 894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProblemModalPageModule", function() { return ProblemModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PartsWorkModalPageModule", function() { return PartsWorkModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__problem_modal__ = __webpack_require__(972);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parts_work_modal__ = __webpack_require__(973);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ProblemModalPageModule = /** @class */ (function () {
-    function ProblemModalPageModule() {
+var PartsWorkModalPageModule = /** @class */ (function () {
+    function PartsWorkModalPageModule() {
     }
-    ProblemModalPageModule = __decorate([
+    PartsWorkModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__problem_modal__["a" /* ProblemModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__parts_work_modal__["a" /* PartsWorkModalPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__problem_modal__["a" /* ProblemModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__parts_work_modal__["a" /* PartsWorkModalPage */]),
             ],
         })
-    ], ProblemModalPageModule);
-    return ProblemModalPageModule;
+    ], PartsWorkModalPageModule);
+    return PartsWorkModalPageModule;
 }());
 
-//# sourceMappingURL=problem-modal.module.js.map
+//# sourceMappingURL=parts-work-modal.module.js.map
 
 /***/ }),
 
-/***/ 972:
+/***/ 973:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProblemModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PartsWorkModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,32 +58,79 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ProblemModalPage = /** @class */ (function () {
-    function ProblemModalPage(viewController, navCtrl, navParams) {
+
+
+var PartsWorkModalPage = /** @class */ (function () {
+    function PartsWorkModalPage(viewController, navCtrl, navParams, rest, codes) {
+        var _this = this;
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.addNewField = false;
+        this.rest = rest;
+        this.codes = codes;
+        this.workparts = [];
+        this.filterworkparts = [];
+        this.work_part_type = '';
+        this.name = '';
+        this.detail = '';
+        this.addWorkPart = false;
+        this.searchTerm = '';
+        this.qty = '';
+        this.rest.post(this.codes.GET_WORK_PART, {}).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.workparts = resp['data'];
+                _this.filterworkparts = _this.workparts;
+            }
+        });
     }
-    ProblemModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ProblemModalPage');
+    PartsWorkModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PartsWorkModalPage');
     };
-    ProblemModalPage.prototype.addNew = function () {
-        this.addNewField = true;
-    };
-    ProblemModalPage.prototype.exitModal = function () {
+    PartsWorkModalPage.prototype.selectedWorkPart = function (workpart) {
+        localStorage.setItem(this.codes.SELECTED_WORK_PART, JSON.stringify(workpart));
         this.viewController.dismiss();
     };
-    ProblemModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-problem-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-modal/problem-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n\n\n  <ion-card class="modal-card-details">\n    <ion-card-header class="custom-card-header">\n      PROBLEMS\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <ion-row style="margin: 0;">\n        <ion-col col-8>\n          <div class="custom-searchbar-div" style="position: relative;">\n            <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH "></ion-searchbar>\n            <i class="fa fa-angle-down" aria-hidden="true"></i>\n          </div>\n        </ion-col>\n        <ion-col col-4 class="text-center">\n          <button ion-button round class="add-new custom-button"  (click)="addNew()" style="margin-top: 20px;"> ADD + </button>\n\n          <!-- <p class="custom-button" style="margin-top: 20px;">ADD NEW</p> -->\n        </ion-col>\n\n        <ion-col col-12 *ngIf="addNewField">\n          <div class="label-float" >\n            <input type="text"  placeholder=" " />\n            <label>ADD</label>\n            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n      \n          </div>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n            <ion-label>Daenerys Targaryen</ion-label>\n            <ion-checkbox checked="true"></ion-checkbox>\n\n          </ion-item>\n        </ion-col>\n        <ion-col col-2>\n          <i style="margin-top: 10px;\n          font-size: 20px !important;\n          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>\n\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n            <ion-label>Daenerys Targaryen</ion-label>\n            <ion-checkbox checked="true"></ion-checkbox>\n\n          </ion-item>\n        </ion-col>\n        <ion-col col-2>\n          <i style="margin-top: 10px;\n          font-size: 20px !important;\n          color: #0752af;"  class="fa fa-times-circle" aria-hidden="true"></i>\n\n        </ion-col>\n      </ion-row>\n\n\n      <!-- <div class="label-float" >\n        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n        <label>DATE</label>\n        <i class="fa fa-calendar" aria-hidden="true"></i>\n\n      </div> -->\n      \n        <ion-row class="justify-content-center">\n          <ion-col col-6 class="text-center">\n            <button ion-button round class="custom-button" > SAVE </button>\n    \n          </ion-col>\n          <ion-col col-6 class="text-center">\n            <button ion-button round (click)="exitModal()" class="custom-button exit-button">\n              EXIT\n            </button>\n          </ion-col>\n        </ion-row>\n      \n\n     </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-modal/problem-modal.html"*/,
+    PartsWorkModalPage.prototype.getworkpart = function () {
+        var _this = this;
+        this.rest.post(this.codes.GET_WORK_PART, {}).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.workparts = resp['data'];
+                _this.filterworkparts = _this.workparts;
+            }
+        });
+    };
+    PartsWorkModalPage.prototype.saveworkpart = function () {
+        var _this = this;
+        var data = {
+            'work_part_type': this.work_part_type,
+            'name': this.name,
+            'details': this.detail
+        };
+        this.rest.post(this.codes.SAVE_WORK_PART, data).then(function (resp) {
+            _this.addWorkPart = false;
+            _this.getworkpart();
+        });
+    };
+    PartsWorkModalPage.prototype.filterList = function (event) {
+        var _this = this;
+        this.filterworkparts = this.workparts.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                return (wp.name.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.workparts;
+        });
+    };
+    PartsWorkModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-parts-work-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/parts-work-modal/parts-work-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n        <ion-col col-12 style="text-align: center;">\n          <button ion-button round class="custom-button" (click)="addWorkPart=!addWorkPart"> ADD WORK/PART  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n\n      <ion-grid *ngIf="addWorkPart">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Work / Part</h2>\n          </ion-col>\n          <ion-col col-12>\n            <ion-row radio-group style="margin: 0;" [(ngModel)]="work_part_type">\n    \n              <ion-col col-6>\n                <ion-item>\n                  <ion-label> Work</ion-label>\n                  <ion-radio checked="true" value="Work"></ion-radio>\n                </ion-item>\n              </ion-col>\n        \n                 \n              <ion-col col-6>\n                <ion-item>\n                  <ion-label> Parts</ion-label>\n                  <ion-radio  value="Part"></ion-radio>\n                </ion-item>\n              </ion-col>\n        \n\n            </ion-row>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="name" />\n              <label>NAME</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="detail" />\n              <label>DETAILS</label>\n            </div>\n          </ion-col>\n          <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="saveworkpart()"> ADD WORK/PART  </button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <ion-item *ngFor="let wp of filterworkparts" (click)="selectedWorkPart(wp)">\n            <ion-card>\n              <ion-card-content>\n            <ion-row>\n              <ion-col style="text-align: left;"> \n                {{wp[\'name\'] + \'(\' + wp[\'type\']+\')\'}}\n              </ion-col>\n              <ion-col style="text-align: right;"> \n                {{wp[\'details\']}}\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n          </ion-card>\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/parts-work-modal/parts-work-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], ProblemModalPage);
-    return ProblemModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], PartsWorkModalPage);
+    return PartsWorkModalPage;
 }());
 
-//# sourceMappingURL=problem-modal.js.map
+//# sourceMappingURL=parts-work-modal.js.map
 
 /***/ })
 

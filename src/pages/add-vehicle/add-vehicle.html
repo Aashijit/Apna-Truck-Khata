@@ -38,12 +38,12 @@
 
 
 
-    <div class="label-float label-float-date" >
+    <ion-item class="label-float label-float-date" style="background-color: transparent !important;" >
       <ion-datetime displayFormat="YYYY" [(ngModel)]="year_purchase"></ion-datetime>
-      <label floating>YEAR OF PURCHASE</label>
+      <ion-label floating>YEAR OF PURCHASE</ion-label>
       <i class="fa fa-calendar" aria-hidden="true"></i>
 
-    </div>
+    </ion-item>
 
    
 
@@ -109,72 +109,23 @@
 
     <ion-row radio-group style="margin: 0;" [(ngModel)]="vehicle_brand">
     
-      <ion-col col-4>
+      <ion-col col-12 *ngFor="let brand of brands">
         <ion-item>
-          <ion-label> One</ion-label>
-          <ion-radio checked="true" value="one"></ion-radio>
+          <ion-label style="font-size: 18px !important;"> {{brand['name']}}</ion-label>
+          <ion-radio value="{{brand['name']}}" (ionSelect)="selectedBrand()"></ion-radio>
         </ion-item>
       </ion-col>
-
-         
-      <ion-col col-4>
-        <ion-item>
-          <ion-label> Two</ion-label>
-          <ion-radio  value="two"></ion-radio>
-        </ion-item>
-      </ion-col>
-
-         
-      <ion-col col-4>
-        <ion-item>
-          <ion-label> Three</ion-label>
-          <ion-radio  value="three"></ion-radio>
-        </ion-item>
-      </ion-col>
-
-         
-      <ion-col col-4>
-        <ion-item>
-          <ion-label> Four</ion-label>
-          <ion-radio  value="four"></ion-radio>
-        </ion-item>
-      </ion-col>
-
-               
-      <ion-col col-4>
-        <ion-item>
-          <ion-label> Five</ion-label>
-          <ion-radio  value="five"></ion-radio>
-        </ion-item>
-      </ion-col>
-
-         
-      <ion-col col-4>
-        <ion-item>
-          <ion-label> Six</ion-label>
-          <ion-radio  value="six"></ion-radio>
-        </ion-item>
-      </ion-col>
-
-
-      <ion-col col-12>
-
-        <div class="label-float" >
-          <input type="text"  placeholder=" " />
-          <label>OTHERS</label>
-        </div>
-      </ion-col>
-
     </ion-row>
 
 
 
  
     <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
-      <ion-label>VEHICLE MODEL</ion-label>
+      <ion-label floating>VEHICLE MODEL</ion-label>
       <ion-select interface="action-sheet" [(ngModel)]="vehicle_model">
-        <ion-option value="hatchback">Hatchback</ion-option>
-        <ion-option value="sedan">Sedan</ion-option>
+        <div *ngFor="let model of models">
+          <ion-option value="{{model}}">{{model}}</ion-option>
+        </div>
       </ion-select>
     </ion-item>
 
@@ -319,8 +270,8 @@
       <ion-col col-3>
         <ion-row class="detail-picture">
           <ion-col col-4 (click)="openCameraPopup()">
-            <i class="fa fa-camera" aria-hidden="true"></i>
-            
+            <i class="fa fa-camera" aria-hidden="true" *ngIf="vehicle_update_image_id == 0"></i>
+            <img [src]="vehicle_update_image_id" *ngIf="vehicle_update_image_id != 0"/>
           </ion-col>    
         </ion-row>      
       </ion-col>

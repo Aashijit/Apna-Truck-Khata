@@ -107,6 +107,7 @@ export class AddDriverPage {
         this.paid_money = worker['paid_money'];
         this.due_money = worker['due_money'];
         this.profile_image_id = worker['profile_image_id'];
+        this.profile_image = worker['profile_image_id'];
         this.extra_image_1_id = worker['extra_image_1_id'];
         this.extra_image_2_id = worker['extra_image_2_id'];
         this.last_maint_id  = 'srth-app';

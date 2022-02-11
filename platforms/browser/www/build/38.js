@@ -5,10 +5,10 @@ webpackJsonp([38],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FullReportPageModule", function() { return FullReportPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FatalErrorPageModule", function() { return FatalErrorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__full_report__ = __webpack_require__(963);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fatal_error__ = __webpack_require__(962);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FullReportPageModule = /** @class */ (function () {
-    function FullReportPageModule() {
+var FatalErrorPageModule = /** @class */ (function () {
+    function FatalErrorPageModule() {
     }
-    FullReportPageModule = __decorate([
+    FatalErrorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__full_report__["a" /* FullReportPage */],
+                __WEBPACK_IMPORTED_MODULE_2__fatal_error__["a" /* FatalErrorPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__full_report__["a" /* FullReportPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__fatal_error__["a" /* FatalErrorPage */]),
             ],
         })
-    ], FullReportPageModule);
-    return FullReportPageModule;
+    ], FatalErrorPageModule);
+    return FatalErrorPageModule;
 }());
 
-//# sourceMappingURL=full-report.module.js.map
+//# sourceMappingURL=fatal-error.module.js.map
 
 /***/ }),
 
-/***/ 963:
+/***/ 962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FullReportPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FatalErrorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -56,30 +56,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the FullReportPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var FullReportPage = /** @class */ (function () {
-    function FullReportPage(navCtrl, navParams) {
+var FatalErrorPage = /** @class */ (function () {
+    function FatalErrorPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.message = '';
+        this.message = this.navParams.get("message");
     }
-    FullReportPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad FullReportPage');
+    FatalErrorPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad FatalErrorPage');
     };
-    FullReportPage = __decorate([
+    FatalErrorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-full-report',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/full-report/full-report.html"*/'<!--\n  Generated template for the FullReportPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>full-report</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/full-report/full-report.html"*/,
+            selector: 'page-fatal-error',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/fatal-error/fatal-error.html"*/'<ion-content padding style="background-color: rgba(0,0,0,0.8);">\n  <ion-card>\n    <ion-card-content>\n      <h2>Something went wrong inside the server! Please try again after sometime.</h2>\n      <h6>Technical</h6>\n      <h5>{{message}}</h5>\n    </ion-card-content>\n    <p>\n      <button ion-button clear>Report</button>\n      <button ion-button clear (click)="navCtrl.pop()">Close</button>\n    </p>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/fatal-error/fatal-error.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], FullReportPage);
-    return FullReportPage;
+    ], FatalErrorPage);
+    return FatalErrorPage;
 }());
 
-//# sourceMappingURL=full-report.js.map
+//# sourceMappingURL=fatal-error.js.map
 
 /***/ })
 

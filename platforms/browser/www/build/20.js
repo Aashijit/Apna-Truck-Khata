@@ -1,16 +1,14 @@
 webpackJsonp([20],{
 
-/***/ 900:
+/***/ 901:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportFullPageModule", function() { return ReportFullPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__ = __webpack_require__(496);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__report_full__ = __webpack_require__(979);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportAllCompPageModule", function() { return ReportAllCompPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_all_comp__ = __webpack_require__(980);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,33 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ReportFullPageModule = /** @class */ (function () {
-    function ReportFullPageModule() {
+var ReportAllCompPageModule = /** @class */ (function () {
+    function ReportAllCompPageModule() {
     }
-    ReportFullPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    ReportAllCompPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__report_full__["a" /* ReportFullPage */],
+                __WEBPACK_IMPORTED_MODULE_2__report_all_comp__["a" /* ReportAllCompPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_3__report_full__["a" /* ReportFullPage */]),
-                __WEBPACK_IMPORTED_MODULE_0_ion2_calendar__["CalendarModule"]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__report_all_comp__["a" /* ReportAllCompPage */]),
             ],
         })
-    ], ReportFullPageModule);
-    return ReportFullPageModule;
+    ], ReportAllCompPageModule);
+    return ReportAllCompPageModule;
 }());
 
-//# sourceMappingURL=report-full.module.js.map
+//# sourceMappingURL=report-all-comp.module.js.map
 
 /***/ }),
 
-/***/ 979:
+/***/ 980:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportFullPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportAllCompPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
@@ -64,44 +60,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ReportFullPage = /** @class */ (function () {
-    function ReportFullPage(navCtrl, navParams, rest, codes, modalCtrl, viewCont) {
+var ReportAllCompPage = /** @class */ (function () {
+    function ReportAllCompPage(navCtrl, navParams, rest, codes) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.rest = rest;
         this.codes = codes;
-        this.modalCtrl = modalCtrl;
-        this.viewCont = viewCont;
-        this.shops = [];
+        this.type = '';
+        this.object = '';
         this.vehicles = [];
-        this.html = '';
-        this.vehicle_id = '';
-        this.from_date = '';
-        this.to_date = '';
-        this.worker_id = '';
-        this.dt = new Date(2000, 1, 1);
-        this.displayCalendar = false;
-        this.dateRange = { from: '', to: '' };
-        this.downloadURL = '';
-        this.apiendpoint = '';
-        this.downloadendpoint = '';
-        this.optionsMulti = {
-            pickMode: 'range',
-            from: this.dt,
-            to: 0,
-            showMonthPicker: true,
-            showToggleButtons: true,
-            color: 'primary'
-        };
-        if (this.navParams.get("person") != null || this.navParams.get("person") != undefined) {
-            this.worker_id = this.navParams.get("person")['worker_id'];
+        this.persons = [];
+        this.worker_type = '';
+        this.worker_type = this.navParams.get("worker_type");
+        if (this.worker_type == 'vehicle') {
+            this.getVehicles();
+        }
+        else {
+            this.getPersons();
         }
     }
-    ReportFullPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ReportFullPage');
-        this.getPersons();
+    ReportAllCompPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ReportAllCompPage');
     };
-    ReportFullPage.prototype.getPersons = function () {
+    ReportAllCompPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+        });
+    };
+    // (click)="navCtrl.push('ReportFullPage',{'person':this.driver})"
+    ReportAllCompPage.prototype.getPersons = function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
@@ -109,44 +103,28 @@ var ReportFullPage = /** @class */ (function () {
         };
         this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                _this.shops = resp['data'];
+                _this.persons = resp['data'];
+                var workers = [];
+                for (var i = 0; i < _this.persons.length; i++) {
+                    if (_this.persons[i]['worker_type'] == _this.worker_type) {
+                        workers.push(_this.persons[i]);
+                    }
+                }
+                _this.persons = workers;
             }
         });
     };
-    ReportFullPage.prototype.openCalendar = function () {
-        this.displayCalendar = true;
-    };
-    ReportFullPage.prototype.generateReport = function () {
-        var _this = this;
-        this.displayCalendar = false;
-        if (this.worker_id == 0)
-            this.worker_id = null;
-        var data = {
-            "worker_id": this.worker_id,
-            "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
-        };
-        this.rest.post(this.codes.FULL_REPORT, data).then(function (resp) {
-            console.log(resp);
-            document.getElementById("report").innerHTML = resp['data'];
-            _this.html = resp['data'];
-        });
-        this.downloadURL = this.codes.FULL_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
-    };
-    ReportFullPage.prototype.dismiss = function () {
-        this.viewCont.dismiss();
-    };
-    ReportFullPage = __decorate([
+    ReportAllCompPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-report-full',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-full/report-full.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <!-- <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon> -->\n          FULL REPORT\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube text-right" (click)="dismiss()">\n        <ion-icon name="close" color="light" style="margin-top: 11px;font-size:2.2rem;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-row>\n    <ion-col col-12>\n      <ion-item>\n        <ion-label floating>\n          Person\n        </ion-label>\n        <ion-select interface="popover" [(ngModel)]="worker_id">\n          <ion-option value="0">All</ion-option>\n          <ion-option value="{{shop[\'worker_id\']}}" *ngFor="let shop of shops">\n            {{shop[\'name\'] + " -  " + shop[\'worker_type\'] }}\n          </ion-option>\n        </ion-select>\n      </ion-item>\n    </ion-col>\n    <ion-col col-11 >\n      <ion-item style="margin-top: 24px;">\n        <ion-label>\n          Date Range : <span *ngIf="this.dateRange[\'from\'] != undefined"> {{this.dateRange[\'from\'] + " - " + this.dateRange[\'to\']}} </span>\n        </ion-label>\n      </ion-item>\n    </ion-col>\n    <ion-col col-1>\n      <ion-icon name="calendar" (click)="openCalendar()" style="position: absolute; top: 45px;"></ion-icon>\n    </ion-col>\n  </ion-row>\n  <ion-calendar *ngIf="displayCalendar" [(ngModel)]="dateRange"\n              [options]="optionsMulti"\n              type="string"\n              [format]="\'YYYY-MM-DD\'">\n  </ion-calendar>\n\n<p style="text-align: center !important;">\n  <button round class="custom-button" ion-button (click)="generateReport()">Report</button>\n</p>\n\n\n<div id="report">\n\n</div>\n\n<p style="text-align: center;">\n  <a [href]="downloadURL">Download Report</a>\n </p>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-full/report-full.html"*/,
+            selector: 'page-report-all-comp',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-all-comp/report-all-comp.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n\n      <ion-col col-8 class="person-name text-left">\n        <ion-title>\n          <ion-icon ios="ios-person" md="md-person"></ion-icon>\n          REPORTS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2 style="text-transform: capitalize !important;">{{worker_type}} Reports</h2>\n  <p *ngFor="let veh of vehicles">\n    <ion-row>\n      <ion-col col-12 style="text-align: center !important;">\n        {{veh[\'vehicle_number\']}}\n      </ion-col>\n      <ion-col col-6>\n        <button ion-button full (click)="navCtrl.push(\'VehicleWorkReportPage\',{\'vehicle\':veh})">Vehicle Work\n          Report</button>\n      </ion-col>\n      <ion-col col-6>\n        <button ion-button full (click)="navCtrl.push(\'VehicleBillReportPage\',{\'vehicle\':veh})">Vehicle Bill\n          Report</button>\n      </ion-col>\n    </ion-row>\n  </p>\n  <hr />\n\n  <p *ngFor="let per of persons">\n    <ion-row>\n      <ion-col col-12 style="text-align: center !important;">\n        {{per[\'name\']}}\n      </ion-col>\n      <ion-col col-6>\n        <button ion-button full (click)="navCtrl.push(\'ReportFullPage\',{\'person\':per})">Full Report</button>\n      </ion-col>\n      <ion-col col-6>\n        <button ion-button full (click)="navCtrl.push(\'ReportFullPage\',{\'person\':per})">Monthly Report</button>\n      </ion-col>\n    </ion-row>\n  </p>\n  <hr />\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/report-all-comp/report-all-comp.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"]])
-    ], ReportFullPage);
-    return ReportFullPage;
+            __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], ReportAllCompPage);
+    return ReportAllCompPage;
 }());
 
-//# sourceMappingURL=report-full.js.map
+//# sourceMappingURL=report-all-comp.js.map
 
 /***/ })
 

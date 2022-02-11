@@ -1,14 +1,14 @@
 webpackJsonp([46],{
 
-/***/ 876:
+/***/ 875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverDocumentPageModule", function() { return DriverDocumentPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverDetailsSearchPageModule", function() { return DriverDetailsSearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_document__ = __webpack_require__(956);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_details_search__ = __webpack_require__(954);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DriverDocumentPageModule = /** @class */ (function () {
-    function DriverDocumentPageModule() {
+var DriverDetailsSearchPageModule = /** @class */ (function () {
+    function DriverDetailsSearchPageModule() {
     }
-    DriverDocumentPageModule = __decorate([
+    DriverDetailsSearchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */],
+                __WEBPACK_IMPORTED_MODULE_2__driver_details_search__["a" /* DriverDetailsSearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_details_search__["a" /* DriverDetailsSearchPage */]),
             ],
         })
-    ], DriverDocumentPageModule);
-    return DriverDocumentPageModule;
+    ], DriverDetailsSearchPageModule);
+    return DriverDetailsSearchPageModule;
 }());
 
-//# sourceMappingURL=driver-document.module.js.map
+//# sourceMappingURL=driver-details-search.module.js.map
 
 /***/ }),
 
-/***/ 956:
+/***/ 954:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverDocumentPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverDetailsSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -62,144 +62,181 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DriverDocumentPage = /** @class */ (function () {
-    function DriverDocumentPage(message, codes, rest, viewController, navCtrl, navParams, modalCtrl) {
-        var _this = this;
-        this.message = message;
-        this.codes = codes;
-        this.rest = rest;
-        this.viewController = viewController;
+var DriverDetailsSearchPage = /** @class */ (function () {
+    function DriverDetailsSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
         this.modalCtrl = modalCtrl;
-        this.isShown = false;
-        this.driver = '';
-        this.documents = [
-            {
-                "document_name": "National Permit",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Insurance",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Pollution Certificate",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Certificate of fitness",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Tax token",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "5 Year Authorization",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Registration Certificate",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Others 1X",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            },
-            {
-                "document_name": "Others 2X",
-                "document_image_id": "0",
-                "document_expiry_date": "",
-                "document_reminder_date": ""
-            }
-        ];
-        this.driver = this.navParams.get("driver");
-        var req = {
-            "type": "driver",
-            "driver_id": this.driver['worker_id']
-        };
-        this.rest.post(this.codes.GET_DOCUMENT_INFO, req).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                if (resp['data'].length > 0)
-                    _this.documents = resp['data'];
-            }
-        });
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.drivers = [];
+        this.reasons = [];
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.getVehicles();
     }
-    DriverDocumentPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DriverDocumentPage');
+    DriverDetailsSearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DriverDetailsSearchPage');
     };
-    DriverDocumentPage.prototype.showMore = function () {
-        if (this.isShown) {
-            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
-            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+    DriverDetailsSearchPage.prototype.getDriverreason = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_REASON, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.reasons = resp['data'];
+            }
+            _this.getDrivers();
+        });
+    };
+    DriverDetailsSearchPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
         }
-        else {
-            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
-            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        this.selectedfilters.push(sr);
+    };
+    DriverDetailsSearchPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
         }
-        this.isShown = !this.isShown;
+        this.selectedfilters = sFilters;
     };
-    DriverDocumentPage.prototype.goToModal = function () {
-        var addMoreModal = this.modalCtrl.create('AddMoreModalPage');
-        addMoreModal.present();
+    DriverDetailsSearchPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+            _this.getDriverreason();
+        });
     };
-    DriverDocumentPage.prototype.addPermit = function () {
-        var addPermit = this.modalCtrl.create('AddPermitPage');
-        addPermit.present();
+    DriverDetailsSearchPage.prototype.searchGrid = function () {
+        localStorage.setItem("searchdriverdetails", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
     };
-    DriverDocumentPage.prototype.exitModal = function () {
-        this.viewController.dismiss();
-    };
-    DriverDocumentPage.prototype.save = function () {
+    DriverDetailsSearchPage.prototype.getDrivers = function () {
         var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var _loop_1 = function (i) {
-            this_1.documents[i]['worker_type'] = 'driver';
-            this_1.documents[i]['srth_id'] = json[0]['srth_id'];
-            this_1.documents[i]['driver_id'] = this_1.driver['worker_id'];
-            this_1.documents[i]['is_active'] = '1';
-            this_1.documents[i]['is_remove'] = '0';
-            this_1.documents[i]['last_maint_id'] = 'srth_app';
-            this_1.documents[i]['opt_counter'] = '0';
-            this_1.rest.post(this_1.codes.UPDATE_DOCUMENT_INFO, this_1.documents[i]).then(function (resp) {
-                _this.message.displayToast(_this.documents[i]['document_name'] + " saved.");
-            });
+        var data = {
+            "srth_id": json[0]['srth_id']
         };
-        var this_1 = this;
-        for (var i = 0; i < this.documents.length; i++) {
-            _loop_1(i);
-        }
-        this.navCtrl.pop();
-        // this.message.displayToast("All the documents are saved");
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var dt = resp['data'];
+                for (var i = 0; i < dt.length; i++) {
+                    if (dt[i]['worker_type'] == 'driver') {
+                        _this.drivers.push(dt[i]);
+                    }
+                }
+                for (var i = 0; i < _this.reasons.length; i++) {
+                    var searchobj = {
+                        "type": "reasons",
+                        "name": _this.reasons[i]['reason'],
+                        "id": String(_this.reasons[i]['property_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.drivers.length; i++) {
+                    var searchobj = {
+                        "type": "drivers",
+                        "name": _this.drivers[i]['name'],
+                        "id": String(_this.drivers[i]['worker_id']),
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                // for(let i=0;i<this.bills.length;i++){
+                //   var searchobj = {
+                //     "type":"bills",
+                //     "id":String(this.bills[i]['bill_id']),
+                //     "name":this.bills[i]['person_shop_name'],
+                //     "amount":String(this.bills[i]['total_bill'])
+                //   };
+                //   this.search.push(searchobj);
+                // }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
     };
-    DriverDocumentPage = __decorate([
+    DriverDetailsSearchPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "shop"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getVehicles();
+            }
+        });
+    };
+    DriverDetailsSearchPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    DriverDetailsSearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-driver-document',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/'<!-- Driver -->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          DRIVER DOCUMENT\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-1></ion-col> -->\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <!-- <ion-row class="driver-modal">\n      <ion-col col-12 class="text-center driver-modal-header">\n        DRIVER DETAIL\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center mb-4">\n        <img width="120px" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="">\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}}</span> <i class="fa fa-phone" aria-hidden="true" style="color: #0752af; font-size: 12px"></i>\n\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">DRIVER</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">KOLKATA</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">3/05/2021</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">XUX-423</span>\n      </ion-col>\n      \n      <ion-col col-6>\n        SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        TOTAL KM: <br>  <span  class="text-color-primary">XXXX</span>\n      </ion-col>\n      <ion-col col-6>\n        REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n      </ion-col>\n\n      <ion-col col-6>\n        PREVIOUS VEHICLE NUMBER: <br>  <span class="text-color-primary">XXXX</span>\n      </ion-col>\n\n      <ion-col col-6>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="showMore()" class="text-right show-more-fa">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>\n\n      </ion-col>\n\n\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">PAN CARD - 10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row> -->\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 class="profile-picture text-center">\n        <img width="80px" src="../../assets/saarthi-icon/png/driver.png" alt="">\n        <p style="margin-top: 10px">ADD PHOTO</p>\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{driver[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">{{driver[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">XXXXXX</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">XXXXXXX</span>\n      </ion-col>\n\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n        </ion-col>\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">AADHAR - {{driver[\'aadhar_card_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">{{driver[\'license_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{driver[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row>\n \n\n    <div class="segment row mt-4">\n      <!-- <div class="content-heading"> -->\n        <!-- <div class="text-center text-color-primary " >\n          <h2></h2>\n         \n        </div> -->\n        <ion-col col-12>\n          <div class="text-center text-color-primary " style="padding: 10px;">\n            <h4>DOCUMENTS &nbsp; <i class="fa fa-file-text-o" aria-hidden="true"></i> </h4>\n            <hr>\n          </div>\n\n          <ion-item>\n            <ion-label>REMINDER TIME</ion-label>\n            <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" value="1990-02-19T07:43Z"> </ion-datetime>           \n\n          </ion-item>\n \n        </ion-col>\n   \n\n      <!-- </div> -->\n\n      <hr>\n\n      <ion-row class="driver-modal  mt-4" *ngFor="let dc of documents">\n        <ion-col col-12 class="driver-modal-header">\n          <!-- (click)="goToModal()" -->\n          <span class="permit" >{{dc[\'document_name\']}}</span>\n          <!-- (click)="addPermit()" -->\n          <!-- <span class="add-more-modal"  >ADD MORE <i class="fa fa-plus-circle" aria-hidden="true"></i>\n          </span> -->\n        </ion-col>\n        <ion-col col-4 class="picture-upload text-center">\n          <i class="fa fa-camera" aria-hidden="true"></i><br>\n          <small>ADD PHOTO</small>\n        </ion-col>\n        <ion-col col-8 class="text-center">\n          <ion-item>\n            <ion-label floating>EXPIRY DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_expiry_date\']"></ion-datetime>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>REMINDER DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_reminder_date\']"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col col-12 class="text-right">\n            <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n      </ion-row>\n\n \n\n    </div>\n   \n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </div>\n\n  </div>\n\n\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/,
+            selector: 'page-driver-details-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-details-search/driver-details-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'drivers\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n\n      <ion-item *ngIf="sr[\'type\'] == \'drivers\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Driver</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reasons</p>\n      </ion-item>\n \n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-details-search/driver-details-search.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
-    ], DriverDocumentPage);
-    return DriverDocumentPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], DriverDetailsSearchPage);
+    return DriverDetailsSearchPage;
 }());
 
-//# sourceMappingURL=driver-document.js.map
+//# sourceMappingURL=driver-details-search.js.map
 
 /***/ })
 
