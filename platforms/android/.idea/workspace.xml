@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="127edfe3-7449-4da4-9b04-3978d570ef0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.sourcemaps/26.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../.sourcemaps/26.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.sourcemaps/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../.sourcemaps/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CordovaLib/build/intermediates/incremental/packageReleaseResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/saarthi/apnatruckkhata/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/saarthi/apnatruckkhata/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/saarthi/apnatruckkhata/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/saarthi/apnatruckkhata/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/15.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/16.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/17.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/18.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/19.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/20.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/21.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/22.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/22.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/23.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/23.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/24.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/24.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/25.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/25.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/26.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/26.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/27.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/29.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/30.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/36.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/36.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/38.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/38.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/41.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/41.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/42.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/42.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/43.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/43.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/44.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/45.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/48.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/48.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/49.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/51.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/51.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/55.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/55.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/56.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/56.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/57.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/58.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/60.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/61.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/69.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/70.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/71.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/71.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/74.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/74.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/75.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/75.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/76.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/76.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/77.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/77.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/www/build/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/saarthi/apnatruckkhata/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/saarthi/apnatruckkhata/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/mergeDexRelease/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/mergeDexRelease/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeReleaseResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/OKvFcc1IHOOdzNG5SYfe8aND7f0=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/OKvFcc1IHOOdzNG5SYfe8aND7f0=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/iYcK0kB6i4tN50S_Pt1WGeJWZJ0=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/iYcK0kB6i4tN50S_Pt1WGeJWZJ0=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/intermediary_bundle/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/intermediary_bundle/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/com/saarthi/apnatruckkhata/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/release/classes/com/saarthi/apnatruckkhata/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/linked_res_for_bundle/release/bundled-res.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/linked_res_for_bundle/release/bundled-res.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/release/manifest-merger-blame-release-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/release/output-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/module_bundle/release/base.zip" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/module_bundle/release/base.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/multi-dex/debug/componentClasses.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/release/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/release/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/release/output-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/xml_config.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/xml_config.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/xml_config.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/xml_config.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/desugar/debug/1/com/saarthi/apnatruckkhata/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/desugar/debug/1/com/saarthi/apnatruckkhata/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/saarthi/apnatruckkhata/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/saarthi/apnatruckkhata/BuildConfig.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/3.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/4.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/output.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/15.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/16.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/17.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/18.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/19.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/20.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/21.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/22.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/22.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/23.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/23.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/24.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/24.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/25.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/25.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/26.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/26.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/27.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/29.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/30.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/36.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/36.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/38.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/38.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/41.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/41.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/42.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/42.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/43.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/43.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/44.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/45.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/48.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/48.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/49.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/51.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/51.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/55.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/55.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/56.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/56.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/57.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/58.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/60.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/61.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/69.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/70.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/71.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/71.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/74.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/74.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/75.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/75.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/76.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/76.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/77.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/77.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/www/build/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/11.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/11.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/12.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/15.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/18.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/19.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/20.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/27.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/28.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/28.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/29.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/30.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/31.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/31.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/33.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/33.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/34.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/34.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/39.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/39.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/40.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/40.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/44.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/45.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/47.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/47.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/49.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/50.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/50.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/52.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/52.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/53.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/53.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/57.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/58.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/60.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/62.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/62.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/63.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/63.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/64.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/64.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/65.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/65.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/66.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/66.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/69.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/70.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/72.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/72.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/8.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/8.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/9.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/9.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/build/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/build/vendor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../browser/www/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../browser/www/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/pages/add-driver/add-driver.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/pages/add-driver/add-driver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/pages/add-driver/add-driver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/pages/add-driver/add-driver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/10.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/10.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/13.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/13.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/14.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/14.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/15.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/15.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/16.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/16.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/17.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/17.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/18.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/18.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/19.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/19.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/20.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/20.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/21.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/21.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/22.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/22.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/23.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/23.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/24.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/24.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/25.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/25.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/26.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/26.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/27.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/27.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/29.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/29.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/30.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/30.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/36.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/36.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/38.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/38.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/41.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/41.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/42.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/42.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/43.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/43.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/44.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/44.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/45.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/45.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/48.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/48.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/49.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/49.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/51.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/51.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/55.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/55.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/56.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/56.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/57.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/57.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/58.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/58.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/59.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/59.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/60.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/60.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/61.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/61.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/69.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/69.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/7.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/70.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/70.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/71.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/71.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/72.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/74.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/74.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/75.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/75.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/76.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/76.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/77.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/77.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/build/main.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/Desktop/ATK_Release/ATK_Prod" />
+    <option name="KEY_ALIAS" value="key0" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2501RpE2bYrWJBrqzYsSCtDw2Mg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="BundleExportedModule" value="android.app" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1644649203608" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="android.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="127edfe3-7449-4da4-9b04-3978d570ef0f" name="Default Changelist" comment="" />
+      <created>1644649184270</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644649184270</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

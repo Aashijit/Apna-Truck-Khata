@@ -137,7 +137,7 @@
               <button ion-button clear (click)="openCameraPopup(1,'Aadharcard')">              
                 <i class="fa fa-camera" *ngIf="aadhar_card_front_image_id == '0'" aria-hidden="true" ></i> 
                 <span *ngIf="aadhar_card_front_image_id != '0'">
-                  <img  [src]="aadhar_card_front_image" />
+                  <img  [src]="aadhar_card_front_image_id" />
                 </span>
               </button>
               <p>(DOCUMENT FRONT SIDE)</p>
@@ -148,7 +148,7 @@
               <button ion-button clear (click)="openCameraPopup(2,'Aadharcard')">              
                 <i class="fa fa-camera" *ngIf="aadhar_card_back_image_id == '0'" aria-hidden="true" ></i> 
                 <span *ngIf="aadhar_card_back_image_id != '0'">
-                  <img  [src]="aadhar_card_back_image" />
+                  <img  [src]="aadhar_card_back_image_id" />
                 </span>
               </button>
               <p>(DOCUMENT BACK SIDE)</p>
@@ -162,7 +162,7 @@
               <button ion-button clear class="img-buttons" (click)="openCameraPopup(1,'Pancard')">              
                 <i class="fa fa-camera" *ngIf="pan_card_front_image_id == '0'" aria-hidden="true" ></i> 
                 <span *ngIf="pan_card_front_image_id != '0'">
-                  <img  [src]="pan_card_front_image" />
+                  <img  [src]="pan_card_front_image_id" />
                 </span>
               </button>
               <p>(DOCUMENT FRONT SIDE)</p>
@@ -173,7 +173,7 @@
               <button ion-button clear class="img-buttons" (click)="openCameraPopup(2,'Pancard')">              
                 <i class="fa fa-camera" *ngIf="pan_card_back_image_id == '0'" aria-hidden="true" ></i> 
                 <span *ngIf="pan_card_back_image_id != '0'">
-                  <img  [src]="pan_card_back_image" />
+                  <img  [src]="pan_card_back_image_id" />
                 </span>
               </button>
               <p>(DOCUMENT BACK SIDE)</p>
@@ -197,7 +197,7 @@
             <button ion-button clear class="img-buttons" (click)="openCameraPopup(1,'LicenseImage')">              
               <i class="fa fa-camera" aria-hidden="true" *ngIf="license_card_front_image_id == '0'" ></i> 
               <span *ngIf="license_card_front_image_id != '0'">
-                <img  [src]="license_card_front_image" />
+                <img  [src]="license_card_front_image_id" />
               </span>
             </button>
 
@@ -214,7 +214,7 @@
           <div class="add-circle-div">
             <button ion-button clear class="img-buttons" (click)="openCameraPopup(2,'LicenseImage')">   
               <span *ngIf="license_card_back_image_id != '0'">
-                <img  [src]="license_card_back_image" />
+                <img  [src]="license_card_back_image_id" />
               </span>           
               <i class="fa fa-camera" *ngIf="license_card_back_image_id == '0'" aria-hidden="true" ></i> 
             </button>
@@ -354,7 +354,7 @@
 
           <i class="fa fa-camera" *ngIf="extra_image_1_id == '0'" aria-hidden="true" ></i> 
           <span *ngIf="extra_image_1_id != '0'">
-            <img  [src]="extra_image_1_id['image_url']" />
+            <img  [src]="extra_image_1_id" />
           </span>
 
           <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>

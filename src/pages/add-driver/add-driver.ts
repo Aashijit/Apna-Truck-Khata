@@ -161,40 +161,40 @@ export class AddDriverPage {
           img = JSON.parse(localStorage.getItem("selectedimage"));
           if(type == 'Pancard') {
             if(num == 1) {
-              this.pan_card_front_image_id = img['image_id'];
+              this.pan_card_front_image_id = img['image_url'];
               this.pan_card_front_image = img['image_url'];
             } else {
-              this.pan_card_back_image_id = img['image_id'];
+              this.pan_card_back_image_id = img['image_url'];
               this.pan_card_back_image = img['image_url'];
             }
       
           } else if(type == 'Aadharcard') {
             if(num == 1) {
-              this.aadhar_card_front_image_id = img['image_id'];
+              this.aadhar_card_front_image_id = img['image_url'];
               this.aadhar_card_front_image = img['image_url'];
             } else {
-              this.aadhar_card_back_image_id = img['image_id'];
+              this.aadhar_card_back_image_id = img['image_url'];
               this.aadhar_card_back_image = img['image_url'];
             }
       
           }
           else if(type == 'LicenseImage') {
             if(num == 1) {
-              this.license_card_front_image_id = img['image_id'];
+              this.license_card_front_image_id = img['image_url'];
               this.license_card_front_image = img['image_url'];
             } else {
-              this.license_card_back_image_id = img['image_id'];
+              this.license_card_back_image_id = img['image_url'];
               this.license_card_back_image = img['image_url'];
             }
           }
           else if(type == 'Profile') {
             if(num == 0) {
-              this.profile_image_id = img['image_id'];
+              this.profile_image_id = img['image_url'];
               this.profile_image = img['image_url'];
             } 
           } else if(type == 'CancelledCheque') {
             if(num == 0) {
-              this.extra_image_1_id = img;
+              this.extra_image_1_id = img['image_url'];
             } 
           }
       
@@ -353,7 +353,7 @@ export class AddDriverPage {
     "paid_money":this.paid_money,
     "due_money":this.due_money,
     "profile_image_id":this.profile_image,
-    "extra_image_1_id":'0',
+    "extra_image_1_id":this.extra_image_1_id,
     "extra_image_2_id":'0',
     "last_maint_id":this.last_maint_id,
     "opt_counter":this.opt_counter
