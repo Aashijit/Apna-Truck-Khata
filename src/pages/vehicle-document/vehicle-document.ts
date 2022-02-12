@@ -131,8 +131,10 @@ export class VehicleDocumentPage {
       let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':dc['document_image_id']});
   
       cameraModalPage.onDidDismiss(resp => {
-        if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
-          dc['document_image_id'] = JSON.parse(localStorage.getItem("selectedimage"));
+        if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+          var img = JSON.parse(localStorage.getItem("selectedimage"));
+          dc['document_image_id'] = img['image_url'];
+        }
         else
           dc['document_image_id'] = "0";
       });

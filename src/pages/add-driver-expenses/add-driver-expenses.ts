@@ -120,6 +120,7 @@ export class AddDriverExpensesPage {
             this.drivers.push(workers[i]);
           }
         }
+        this.change(this.worker_id);
       }      
     });
   }
@@ -320,6 +321,8 @@ export class AddDriverExpensesPage {
     this.rest.post(this.codes.UPDATE_BILL_EXPENSE,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
           this.message.displayToast('The bill has been successfully updated');
+          resp['data']['vehicle_number'] = this.vehicle_number;
+          resp['data']['image'] = this.img;
 
           this.vehicle_id  = '';
           this.km_reading = '';
@@ -343,7 +346,6 @@ export class AddDriverExpensesPage {
           {
             this.bills.push(resp['data']);
           }
-  
           this.bill_id = Number(resp['_LatestBillId']) + 1;
           
       }

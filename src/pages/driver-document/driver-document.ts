@@ -83,8 +83,21 @@ export class DriverDocumentPage {
 
       this.rest.post(this.codes.GET_DOCUMENT_INFO,req).then(resp => {
         if(resp['_ReturnCode'] == '0'){
-          if(resp['data'].length > 0)
-          this.documents = resp['data'];
+          if(resp['data'].length > 0) {
+            var docs = resp['data'];
+            for(let i=0;i<docs.length;i++) {
+              for(let j=0;j<this.documents.length;j++) {
+                if(docs[i]['document_name'] == this.documents[j]['document_name']) {
+                  this.documents[j]['dc_id'] = docs[i]['document_id'];
+                  this.documents[j]['document_image_id'] = docs[i]['document_image_id'];
+                  this.documents[j]['document_expiry_date'] = docs[i]['document_expiry_date'];
+                  this.documents[j]['document_reminder_date'] = docs[i]['document_reminder_date'];
+                  this.documents[j]['previous'] = true;
+                }
+              }
+            }
+          }
+          
         }
       });
   }
@@ -111,6 +124,37 @@ export class DriverDocumentPage {
     addMoreModal.present();
   
   }
+
+  uploadPhoto(dc) {
+    var data = {
+      "document_name":dc['document_name']
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"driver",
+      "worker_id":this.driver['worker_id'],
+      "document_type":"document",
+      "type":"document",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':dc['document_image_id']});
+
+    cameraModalPage.onDidDismiss(resp => {
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+        var img = JSON.parse(localStorage.getItem("selectedimage"));
+        dc['document_image_id'] = img['image_url'];
+      }
+      else
+        dc['document_image_id'] = "0";
+    });
+    
+    cameraModalPage.present();
+  
+}
 
   addPermit() {
     let addPermit = this.modalCtrl.create('AddPermitPage');

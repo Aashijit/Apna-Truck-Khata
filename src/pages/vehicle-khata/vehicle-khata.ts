@@ -20,31 +20,31 @@ export class VehicleKhataPage {
   constructor(private alertCtrl : AlertController,
     public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, private codes : CodesProvider) {
 
-    var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+    // var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
-    var data = {
-      "vehicle_owner_srth_id":userinfo[0]['srth_id']
-    };
-    this.rest.post(this.codes.GET_VEHICLE_DETAILS,data).then(resp => {
-      if(resp['_ReturnCode'] == '0') {
-        this.vehicles = resp['data'];
+    // var data = {
+    //   "vehicle_owner_srth_id":userinfo[0]['srth_id']
+    // };
+    // this.rest.post(this.codes.GET_VEHICLE_DETAILS,data).then(resp => {
+    //   if(resp['_ReturnCode'] == '0') {
+    //     this.vehicles = resp['data'];
 
-        for(let i=0;i<this.vehicles.length;i++) {
-          this.vehicles[i]['displaycontrol'] = false;
-          this.vehicles[i]['selected'] = false;
+    //     for(let i=0;i<this.vehicles.length;i++) {
+    //       this.vehicles[i]['displaycontrol'] = false;
+    //       this.vehicles[i]['selected'] = false;
 
-          if(this.vehicles[i]['driver_details'] != null || this.vehicles[i]['vehicle_details'] != undefined) {
-            this.vehicledrivers.push(this.vehicles[i]);
-          }
-          else {
-            this.vehiclenodrivers.push(this.vehicles[i]);
-          }
+    //       if(this.vehicles[i]['driver_details'] != null || this.vehicles[i]['vehicle_details'] != undefined) {
+    //         this.vehicledrivers.push(this.vehicles[i]);
+    //       }
+    //       else {
+    //         this.vehiclenodrivers.push(this.vehicles[i]);
+    //       }
 
 
-        }
+    //     }
 
-      }
-    });
+    //   }
+    // });
   }
   select(id){
     this.isselect = id;
@@ -52,6 +52,9 @@ export class VehicleKhataPage {
   }
 
   getVehicles(){
+    this.vehicles = [];
+    this.vehicledrivers = [];
+    this.vehiclenodrivers = [];
     var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     var data = {
@@ -65,16 +68,12 @@ export class VehicleKhataPage {
           this.vehicles[i]['displaycontrol'] = false;
           this.vehicles[i]['selected'] = false;
 
-          if(this.vehicles[i]['driver_details'] != null || this.vehicles[i]['vehicle_details'] != undefined) {
+          if(this.vehicles[i]['driver_details'] != null && this.vehicles[i]['vehicle_details'] != undefined) {
             this.vehicledrivers.push(this.vehicles[i]);
           }
           else {
             this.vehiclenodrivers.push(this.vehicles[i]);
           }
-
-
-
-
 
         }
 
