@@ -22,22 +22,22 @@
 <ion-content padding>
   <div class="container">
 
-    <!-- <ion-row class="document-button">
-      <ion-col col-6 >
+    <ion-row class="document-button">
+      <ion-col col-12 (click)="report()">
         <div>
-          DOCUMENTS DATE REPORT
+          DRIVER REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
 
         </div>
       </ion-col>
-      <ion-col col-6 >
+      <!-- <ion-col col-6 (click)="report('documentbillreport')">
         <div>
           DOCUMENTS BILL REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
 
         </div>
-      </ion-col>
-    </ion-row> -->
+      </ion-col> -->
+    </ion-row>
 
     <div class="custom-searchbar-div" style="position: relative;">
       <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH DRIVER NAME, VEHICLE NUMBER, REASON"></ion-searchbar>

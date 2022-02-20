@@ -48,9 +48,28 @@ export class ReportFullPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportFullPage');
+    if(this.navParams.get('worker_type') == 'driver') {
+      this.getDrivers();  
+    } else {
+      this.getPersons();
+    }
+  }
 
-    this.getPersons();
+  getDrivers(){
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+    var data = {
+      "srth_id":json[0]['srth_id']
+    };
 
+    this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
+        if(resp['_ReturnCode'] == '0'){
+          var data = resp['data'];
+          for(let i=0;i<data.length;i++) {
+            if(data[i]['worker_type'] == 'driver')
+              this.shops.push(data[i]);
+          }
+        }
+    });
   }
 
   getPersons(){

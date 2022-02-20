@@ -34,6 +34,11 @@ export class DriverKhataPage {
     this.getBillsBySrthId();
   }
 
+  report() {
+    let modalCtrl = this.modalCtrl.create('ReportFullPage',{"worker_type":'driver'});
+    modalCtrl.present();
+  }
+
 
   viewImage(image) {
     this.photoViewer.show(image['image_url'],image['tag_cloud'], {share: true});
