@@ -66,16 +66,16 @@
     <ion-row class="bill">
       <ion-col col-4>
         <p class="total-bill">TOTAL BILL</p>
-        <div class="ammount">₹{{this.worker['total_bill_money']}}</div>
+        <div class="ammount">&#x20b9;{{this.worker['total_bill_money']}}</div>
       </ion-col>
       <ion-col col-4>
         <p class="paid-money">PAID MONEY</p>
-        <div class="ammount">₹{{this.worker['paid_money']}}</div>
+        <div class="ammount">&#x20b9;{{this.worker['paid_money']}}</div>
       </ion-col>
       <ion-col col-4>
         <p class="due-money">DUE MONEY</p>
         
-        <div class="ammount">₹{{dueMoney}}</div>
+        <div class="ammount">&#x20b9;{{dueMoney}}</div>
       </ion-col>
     </ion-row>
 
@@ -89,7 +89,7 @@
   
   
       <div class="total-due-amount">
-        <p><small>₹ {{dueMoney}} - ₹ {{money_to_pay}} = ₹ {{dueMoney - money_to_pay}} </small></p>
+        <p><small>&#x20b9; {{dueMoney}} - &#x20b9; {{money_to_pay}} = &#x20b9; {{dueMoney - money_to_pay}} </small></p>
         <p><small>DUE MONEY - GIVE MONEY = NEW DUE MONEY </small></p>
       </div>
   
@@ -133,7 +133,7 @@
       
             </ion-col>    
             <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
-              <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
+              <img [src]="img" style="opacity: 0.3 !important;"/>
              <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
       
             </ion-col>
@@ -148,7 +148,7 @@
           <ion-item  class="label-select" style="margin-top: -15px;margin-left: -3px;">
             <ion-label floating>CHOOSE BILL #</ion-label>
             <ion-select multiple="true" [(ngModel)]="bill_ids" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="change($event)">
-              <ion-option value="{{bill['bill_id']}}" *ngFor="let bill of bills">{{bill['bill_id']+" - "+"₹ "+bill['total_bill']}}</ion-option>
+              <ion-option value="{{bill['bill_id']}}" *ngFor="let bill of bills">{{bill['bill_id']+" - "+"&#x20b9; "+bill['total_bill']}}</ion-option>
             </ion-select>
           </ion-item>
       

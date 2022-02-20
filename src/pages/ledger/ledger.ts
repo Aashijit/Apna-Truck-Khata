@@ -55,6 +55,7 @@ export class LedgerPage {
       this.date_of_payment = this.payment['date_of_payment'];
       this.mode_of_payment = this.payment['mode_of_payment'];
       this.details = this.payment['details'];
+      this.img = this.payment['payment_image_1_id'];
 
       var bilds = [];
       for(let i=0;i<this.payment['bills'].length;i++) {

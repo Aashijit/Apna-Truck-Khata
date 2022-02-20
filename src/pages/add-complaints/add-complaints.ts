@@ -206,7 +206,7 @@ export class AddComplaintsPage {
   }
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{'details':this.details});
 
     detailsModalPage.onDidDismiss(data => {
       this.details = localStorage.getItem(this.codes.DETAILS);

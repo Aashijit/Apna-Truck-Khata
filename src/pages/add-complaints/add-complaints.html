@@ -52,7 +52,7 @@
         <div *ngFor="let cm of complaints">
         <div [ngClass]="cm['selected']=='true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThis(cm)" >
           <p>{{cm['complaints_id']}} </p>
-          <p>{{cm['vehicle_id']}}</p>
+          <p>{{vehicle_number}}</p>
           <p>{{cm['problem_id']}}</p>
           <p>{{cm['date_of_complaint']}}</p>
           <p>{{cm['date_of_reminder']}}</p>

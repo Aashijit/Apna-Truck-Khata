@@ -75,7 +75,8 @@ export class ComplaintsKhataPage {
       this.searchTerm = sr['name'];
       this.filtercomplaints = [];
       for(let i=0;i<this.complaints.length;i++){
-        if(this.complaints[i]['driver'] != null && this.complaints[i]['driver']['driver_id'] == sr['id']){
+        
+        if(this.complaints[i]['driver'] != undefined && this.complaints[i]['driver']['worker_id'] == sr['id']){
           this.filtercomplaints.push(this.complaints[i]);
         }
       }

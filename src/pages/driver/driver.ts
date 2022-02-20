@@ -56,25 +56,6 @@ export class DriverPage {
 
       this.due = Number(this.driver['total_bill_money']) - Number(this.driver['paid_money']);
      
-
-      var data = {
-        "driver_id":this.driver['worker_id']
-      };
-
-      this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID,data).then(resp => {
-        if(resp['_ReturnCode'] == '0'){
-          this.driverhistory = resp['data'];
-
-          for(let i=0;i<this.driverhistory.length;i++){
-            if(this.driverhistory[i]['is_remove'] == '0'){
-              localStorage.setItem("vehicle_details",JSON.stringify(this.driverhistory[i]['vehicle']));
-              this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
-              this.vehicle_joining_date = this.driverhistory[i]['vehicle']['vehicle_start_date'];
-            }
-          }
-
-        }
-      });
   }
 
   checkChange() {
@@ -95,6 +76,26 @@ export class DriverPage {
 
 
   ionViewWillEnter(){
+
+    var data1 = {
+      "driver_id":this.driver['worker_id']
+    };
+
+    this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID,data1).then(resp => {
+      if(resp['_ReturnCode'] == '0'){
+        this.driverhistory = resp['data'];
+
+        for(let i=0;i<this.driverhistory.length;i++){
+          if(this.driverhistory[i]['is_remove'] == '0'){
+            localStorage.setItem("vehicle_details",JSON.stringify(this.driverhistory[i]['vehicle']));
+            this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
+            this.vehicle_joining_date = this.driverhistory[i]['driver_start_date'];
+          }
+        }
+
+      }
+    });
+
     var data = {
       "worker_id":this.driver['worker_id']
     };
@@ -102,6 +103,7 @@ export class DriverPage {
     this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.driver = resp['data'][0];
+        this.due = Number(this.driver['total_bill_money']) - Number(this.driver['paid_money']);
       }
     });
 
@@ -189,6 +191,9 @@ export class DriverPage {
 
   openRemoveDriverFromKhata() {
     let changeDriverModal = this.modalCtrl.create('RemoveDriverPage');
+    changeDriverModal.onDidDismiss(resp => {
+      this.ionViewWillEnter();
+    });
     changeDriverModal.present();
   }
 

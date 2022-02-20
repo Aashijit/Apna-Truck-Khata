@@ -69,6 +69,7 @@ export class BuyFromShopPage {
         this.bill_image_id =bill['bill_image_id'];
         this.bill_details =bill['bill_details'];
         this.reason = bill['reason'];
+        this.img = bill['image'];
         this.is_update = true;
       }
 

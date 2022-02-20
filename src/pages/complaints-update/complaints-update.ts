@@ -48,6 +48,15 @@ export class ComplaintsUpdatePage {
     this.isSelectedBill = true;
   }
 
+
+  getProblemNames(problems) {
+    var pname = "";
+    for(let i=0;i<problems.length;i++) {
+      pname += problems[i]['details']['problem_name']+" ";
+    }
+    return pname;
+  }
+
   getVehicles() {
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
     var data = {

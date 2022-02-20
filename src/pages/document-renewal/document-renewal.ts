@@ -99,6 +99,7 @@ export class DocumentRenewalPage {
       this.worker_type = bl['worker_type'];
       this.total_bill = bl['total_bill'];
       this.bill_details = bl['bill_details'];
+      this.img = bl['image'];
       if(this.details != undefined) {
       for(let i=0;i<this.details.length;i++){
         this.details[i]['expiry_date'] = this.details[i]['document_expiry_date'];
@@ -134,7 +135,6 @@ export class DocumentRenewalPage {
     mdl.onDidDismiss(resp => {
       if (localStorage.getItem("vehicle_document_bills") != undefined)
         this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
-        alert(localStorage.getItem("vehicle_document_bills"));
       this.bills = [];
       var vhcls = "";
       for (let i = 0; i < this.details.length; i++) {
@@ -243,7 +243,7 @@ export class DocumentRenewalPage {
   }
 
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{"details":this.bill_details});
 
     detailsModalPage.onDidDismiss(data => {
       this.bill_details = localStorage.getItem(this.codes.DETAILS);

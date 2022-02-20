@@ -67,6 +67,7 @@
       <ion-label floating>SELECT MECHANIC</ion-label>
       <ion-select interface="action-sheet" [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">
         <ion-option value="{{me['worker_id']}}" *ngFor="let me of mechanics" >{{me['name']}}</ion-option>
+        <ion-option value="add">Add Mechanic</ion-option>
       </ion-select>
     </ion-item>
 
@@ -105,7 +106,7 @@
 
     <div class="label-float" >
       <input type="tel" [(ngModel)]="total_bill" placeholder=" " />
-      <label>TOTAL BILL ₹</label>
+      <label>TOTAL BILL &#x20b9;</label>
       <i class="fa fa-money" aria-hidden="true"></i>
 
     </div>
@@ -129,7 +130,7 @@
     
           </ion-col>    
           <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
-            <img [src]="img['image_content']" style="opacity: 0.3 !important;"/>
+            <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
            <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
     
           </ion-col>

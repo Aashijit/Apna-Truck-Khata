@@ -14,6 +14,7 @@ import { IonicPage, ViewController, NavController, NavParams, ModalController } 
 export class RemoveDriverPage {
 
   vehicle : any = '';
+  worker : any = '';
 
   driver_end_date : any = '';
   driver_end_details : any = '';
@@ -28,8 +29,12 @@ export class RemoveDriverPage {
   constructor(private viewController : ViewController,public navCtrl: NavController, public navParams: NavParams,
     private codes : CodesProvider, private message : MessageProvider, private rest : RestProvider,
      private modalCtrl : ModalController) {
-
     this.vehicle = JSON.parse(localStorage.getItem("vehicle_details"));
+    this.worker = JSON.parse(localStorage.getItem("worker"));
+
+    if(this.vehicle['driver_details'] != undefined && this.vehicle['driver_details'] != null) {
+      this.worker = '';
+    }
   }
 
   ionViewDidLoad() {

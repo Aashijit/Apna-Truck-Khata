@@ -1,6 +1,6 @@
 webpackJsonp([76],{
 
-/***/ 845:
+/***/ 846:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountPaymentSearchModalPageModule", function() { return AccountPaymentSearchModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_payment_search_modal__ = __webpack_require__(924);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_payment_search_modal__ = __webpack_require__(925);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var AccountPaymentSearchModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 924:
+/***/ 925:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -181,7 +181,7 @@ var AccountPaymentSearchModalPage = /** @class */ (function () {
     };
     AccountPaymentSearchModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-account-payment-search-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'">Bill # {{sc[\'id\'] +" :: " + sc[\'name\'] +" :: " + sc[\'details\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'">{{sc[\'name\']}}\n      </ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;"\n        (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n  </p>\n\n  <ion-list style="margin-top: 20px;">\n    <p *ngFor="let sr of displaysearchitems">\n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n        <p>Shop : {{sr[\'name\']}} ~ ₹ {{sr[\'amount\']}}</p>\n        <p>Details : {{sr[\'details\']}}</p>\n      </ion-item>\n    </p>\n  </ion-list>\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/,
+            selector: 'page-account-payment-search-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'">Bill # {{sc[\'id\'] +" :: " + sc[\'name\'] +" :: " + sc[\'details\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'">{{sc[\'name\']}}\n      </ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;"\n        (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n  </p>\n\n  <ion-list style="margin-top: 20px;">\n    <p *ngFor="let sr of displaysearchitems">\n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n        <p>Shop : {{sr[\'name\']}} ~ &#x20b9; {{sr[\'amount\']}}</p>\n        <p>Details : {{sr[\'details\']}}</p>\n      </ion-item>\n    </p>\n  </ion-list>\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-payment-search-modal/account-payment-search-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])

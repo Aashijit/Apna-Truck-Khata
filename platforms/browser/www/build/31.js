@@ -1,6 +1,6 @@
 webpackJsonp([31],{
 
-/***/ 890:
+/***/ 889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MechanicBillPageModule", function() { return MechanicBillPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(969);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(968);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MechanicBillPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 969:
+/***/ 968:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,6 +109,7 @@ var MechanicBillPage = /** @class */ (function () {
             this.bill_image_id = bill['bill_image_id'];
             this.bill_details = bill['bill_details'];
             this.reason = bill['reason'];
+            this.img = bill['image'];
             this.is_update = true;
         }
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
@@ -156,6 +157,10 @@ var MechanicBillPage = /** @class */ (function () {
         });
     };
     MechanicBillPage.prototype.selectMechanic = function (worker_id) {
+        if (worker_id == 'add') {
+            this.navCtrl.push('AddDriverPage', { 'type': 'mechanic' });
+            return;
+        }
         this.isSelectedBill = true;
         for (var i = 0; i < this.mechanics.length; i++) {
             if (this.mechanics[i]['worker_id'] == worker_id) {
@@ -169,9 +174,45 @@ var MechanicBillPage = /** @class */ (function () {
     };
     MechanicBillPage.prototype.openCameraPopup = function () {
         var _this = this;
-        var cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "mbills" });
+        if (this.person_shop_name == '' || this.person_shop_name == null) {
+            this.message.displayToast("Please select shop");
+            return;
+        }
+        if (this.vehicle_id == '' || this.vehicle_id == null) {
+            this.message.displayToast("Please select vehicle");
+            return;
+        }
+        if (this.bill_date == '' || this.bill_date == null) {
+            this.message.displayToast("Please enter bill date");
+            return;
+        }
+        if (this.bill_details == '' || this.bill_details == null) {
+            this.message.displayToast("Please enter bill details");
+            return;
+        }
+        var data = {
+            "person_shop_name": this.person_shop_name,
+            "vehicle_id": this.vehicle_id,
+            "bill_date": this.bill_date,
+            "worker_type": 'shop',
+            "bill_details": this.bill_details
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "mechanic",
+            "worker_id": this.worker_id,
+            "document_type": "mbill",
+            "type": "bills",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
         cameraModalPage.onDidDismiss(function (resp) {
-            _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+                _this.img = JSON.parse(localStorage.getItem("selectedimage"));
+            else
+                _this.img = null;
         });
         cameraModalPage.present();
     };
@@ -199,7 +240,7 @@ var MechanicBillPage = /** @class */ (function () {
     };
     MechanicBillPage.prototype.openDetailPopup = function () {
         var _this = this;
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+        var detailsModalPage = this.modalCtrl.create('DetailsModalPage', { "details": this.bill_details });
         detailsModalPage.onDidDismiss(function (data) {
             _this.bill_details = localStorage.getItem(_this.codes.DETAILS);
         });
@@ -279,7 +320,7 @@ var MechanicBillPage = /** @class */ (function () {
     };
     MechanicBillPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
-            selector: 'page-mechanic-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>\n          MECHANIC BILL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu" >\n       \n        <!-- <a href="#home">PERSON NAME</a> -->\n        <a href="#home">MECHANIC NAME</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">DATE OF BILL</a>\n        <a href="#about">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n        \n        <div [ngClass]="bl[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bl of bills">\n        <div (click)="selectThis(bl)">\n          <!-- <p>Ajay Das </p> -->\n          <p>{{bl[\'person_shop_name\']}}</p>\n          <p>{{bl[\'bill_id\']}}</p>\n          <p>{{bl[\'vehicle_id\']}}</p>\n          <p>{{bl[\'bill_date\']}}</p>\n          <p>{{bl[\'total_bill\']}}</p>\n          <p>{{bl[\'bill_details\']}}</p>\n          <p><img [src]="bl[\'image_content\']" imageViewer style="width: 11% !important;"/></p>\n        </div>\n        </div>\n  \n        </div>\n    \n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select">\n      <ion-label floating>SELECT MECHANIC</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">\n        <ion-option value="{{me[\'worker_id\']}}" *ngFor="let me of mechanics" >{{me[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill" >\n      <ion-col col-4 class="text-center"> \n        <img src=\'../../assets/saarthi-icon/png/007-mechanic.png\' style="width: 36% !important;" />\n      </ion-col>\n      <ion-col col-4 class="text-center" style="padding: 0px !important;margin-top: 4px;margin-left: -11px ;margin-right: 11px;"> \n        <p  style="margin-top: 10px;color: white;" >{{person_shop_name}}</p>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button round (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n\n\n\n\n    <ion-item class="label-select">\n      <ion-label floating>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>\n      <label>DATE OF PURCHASE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    \n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL BILL ₹</label>\n      <i class="fa fa-money" aria-hidden="true"></i>\n\n    </div>\n\n    \n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_content\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!is_update" (click)="save()"> SAVE</button>\n\n  </div>\n  <ion-row>\n  <ion-col col-12 class="text-center">\n    <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateBill()">Update</button>\n  </ion-col>\n</ion-row>\n\n\n</ion-content> '/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/,
+            selector: 'page-mechanic-bill',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-8 class="person-name text-left">\n        <ion-title>        \n          <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>\n          MECHANIC BILL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu" >\n       \n        <!-- <a href="#home">PERSON NAME</a> -->\n        <a href="#home">MECHANIC NAME</a>\n        <a href="#news">BILL NUMBER</a>\n        <a href="#contact">VEHICLE NUMBER</a>\n        <a href="#about">DATE OF BILL</a>\n        <a href="#about">BILL</a>\n        <a href="#blog">DETAIL</a>\n        <a href="#tools">IMAGE</a>\n        \n        <div [ngClass]="bl[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'"  *ngFor="let bl of bills">\n        <div (click)="selectThis(bl)">\n          <!-- <p>Ajay Das </p> -->\n          <p>{{bl[\'person_shop_name\']}}</p>\n          <p>{{bl[\'bill_id\']}}</p>\n          <p>{{bl[\'vehicle_id\']}}</p>\n          <p>{{bl[\'bill_date\']}}</p>\n          <p>{{bl[\'total_bill\']}}</p>\n          <p>{{bl[\'bill_details\']}}</p>\n          <p><img [src]="bl[\'image_content\']" imageViewer style="width: 11% !important;"/></p>\n        </div>\n        </div>\n  \n        </div>\n    \n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select">\n      <ion-label floating>SELECT MECHANIC</ion-label>\n      <ion-select interface="action-sheet" [(ngModel)]="worker_id" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="selectMechanic($event)">\n        <ion-option value="{{me[\'worker_id\']}}" *ngFor="let me of mechanics" >{{me[\'name\']}}</ion-option>\n        <ion-option value="add">Add Mechanic</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill" >\n      <ion-col col-4 class="text-center"> \n        <img src=\'../../assets/saarthi-icon/png/007-mechanic.png\' style="width: 36% !important;" />\n      </ion-col>\n      <ion-col col-4 class="text-center" style="padding: 0px !important;margin-top: 4px;margin-left: -11px ;margin-right: 11px;"> \n        <p  style="margin-top: 10px;color: white;" >{{person_shop_name}}</p>\n      </ion-col>\n      <ion-col col-4>\n        <button ion-button round (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n\n\n\n\n    <ion-item class="label-select">\n      <ion-label floating>SELECT VEHICLE</ion-label>\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n    <div class="label-float" >\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>\n      <label>DATE OF PURCHASE</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    \n\n    <div class="label-float" >\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL BILL &#x20b9;</label>\n      <i class="fa fa-money" aria-hidden="true"></i>\n\n    </div>\n\n    \n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!is_update" (click)="save()"> SAVE</button>\n\n  </div>\n  <ion-row>\n  <ion-col col-12 class="text-center">\n    <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateBill()">Update</button>\n  </ion-col>\n</ion-row>\n\n\n</ion-content> '/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/mechanic-bill/mechanic-bill.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
             __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])

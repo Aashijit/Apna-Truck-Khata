@@ -130,16 +130,16 @@
     <ion-row class="bill">
       <ion-col col-4>
         <p class="total-bill">TOTAL BILL</p>
-        <div class="ammount">₹{{insurance['total_bill_money'] }}</div>
+        <div class="ammount">&#x20b9;{{insurance['total_bill_money'] }}</div>
       </ion-col>
       <ion-col col-4>
         <p class="paid-money">PAID MONEY</p>
-        <div class="ammount">₹{{insurance['paid_money']}}</div>
+        <div class="ammount">&#x20b9;{{insurance['paid_money']}}</div>
       </ion-col>
       <ion-col col-4>
         <p class="due-money">DUE MONEY</p>
         
-        <div class="ammount">₹{{due}}</div>
+        <div class="ammount">&#x20b9;{{due}}</div>
       </ion-col>
     </ion-row>
 
@@ -184,7 +184,7 @@
             <p>{{bill['bill_id']}}</p>
             <p>{{bill['bill_date']}}</p>
             <p>{{bill['vehicle_number']}}</p>
-            <p>₹ {{bill['total_bill']}}</p>
+            <p>&#x20b9; {{bill['total_bill']}}</p>
             <p>{{bill['bill_details']}}</p>
             <p>
               <span *ngIf="bill['image'] != null && bill['image'] != undefined">
@@ -270,7 +270,7 @@
             <p>Pymt #{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
             <p></p>
-            <p>₹ {{payment['payment_amount']}}</p>
+            <p>&#x20b9; {{payment['payment_amount']}}</p>
             <p>{{payment['details']}}</p>
             <p>
               <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
@@ -286,7 +286,7 @@
               <p>Bill #{{bill['bill_id']}}</p>
               <p>{{bill['bill_date']}}</p>
               <p>{{bill['vehicle_number']}}</p>
-              <p>₹ {{bill['total_bill']}}</p>
+              <p>&#x20b9; {{bill['total_bill']}}</p>
               <p>{{bill['bill_details']}}</p>
               <p>
                 <span *ngIf="bill['image'] != null && bill['image'] != undefined">
@@ -301,7 +301,7 @@
             <p>Pymt #{{payment['payment_id']}}</p>
             <p>{{payment['date_of_payment']}}</p>
             <p></p>
-            <p>₹ {{payment['payment_amount']}}</p>
+            <p>&#x20b9; {{payment['payment_amount']}}</p>
             <p>{{payment['details']}}</p>
             <p>
               <span *ngIf="payment['payment_image_1_id'] != null && payment['payment_image_1_id'] != undefined">
@@ -312,8 +312,8 @@
               <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'">
               <p>Bill #{{bill['bill_id']}}</p>
               <p>{{bill['bill_date']}}</p>
-              <p>{{bill['reason']}}</p>
-              <p>₹ {{bill['total_bill']}}</p>
+              <p>{{bill['vehicle_number']}}</p>
+              <p>&#x20b9; {{bill['total_bill']}}</p>
               <p>{{bill['bill_details']}}</p>
               <p>
                 <span *ngIf="bill['image'] != null && bill['image'] != undefined">

@@ -44,7 +44,8 @@
         TYPE: <span class="text-color-primary">{{vehicle['vehicle_type']}}</span>
       </ion-col>
       <ion-col col-12>
-        CURRENT DRIVER: <span class="text-color-primary" *ngIf="vehicle['driver_details'] != undefined && vehicle['driver_details'] != null">{{vehicle['driver_details']['name']}}</span>
+        CURRENT DRIVER: <span class="text-color-primary" *ngIf="worker != ''">{{worker['name']}}</span>
+        <span class="text-color-primary" *ngIf="vehicle['driver_details'] != undefined && vehicle['driver_details'] != null">{{vehicle['driver_details']['name']}}</span>
       </ion-col>
   
       <ion-col col-12>

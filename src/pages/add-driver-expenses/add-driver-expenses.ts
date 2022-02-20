@@ -70,6 +70,7 @@ export class AddDriverExpensesPage {
         this.bill_image_id =bill['bill_image_id'];
         this.bill_details =bill['bill_details'];
         this.reason = bill['reason'];
+        this.img = bill['image'];
         this.is_update = true;
       }
       this.getDrivers();
@@ -257,6 +258,7 @@ export class AddDriverExpensesPage {
         if(resp['_ReturnCode'] == '0'){
             resp['data']['vehicle_number'] = this.vehicle_number;
             resp['data']['image'] = this.img;
+            resp['data']['worker_id'] = this.name;
             this.bills.push(resp['data']);
                   
         this.vehicle_id  = '';

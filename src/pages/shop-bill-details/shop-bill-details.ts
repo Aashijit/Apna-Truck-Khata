@@ -56,7 +56,7 @@ export class ShopBillDetailsPage {
         this.isSelectedBill = true;
         this.bill = JSON.parse(objRec);
         this.details = this.bill['bill_details'];
-        this.date_of_repair = this.bill['date_of_repair'];
+        this.date_of_repair = this.bill['bill_date'];
         this.km_reading = this.bill['km_reading'];
 
         console.error("CHECK : "+JSON.stringify(this.bill));
@@ -177,6 +177,15 @@ export class ShopBillDetailsPage {
     this.isSelectedBill = false;
   }
 
+  getProblemName(problemParts) {
+    var problemName = "";
+    for(let i=0;i<problemParts.length;i++) {
+      problemName = problemName + problemParts[i]['problem_name']+" ";
+    }
+
+    return problemName;
+  }
+
   getBillsBySrthId(){
     var bls_temp = "";
     if(this.worker_type == 'shop')
@@ -216,6 +225,7 @@ export class ShopBillDetailsPage {
     partsBillDetailModal.onDidDismiss(data => {
         this.problems_parts = JSON.parse(localStorage.getItem("problem_part"));      
         console.error(JSON.stringify(this.problems_parts));
+
     });
 
     partsBillDetailModal.present();
@@ -225,6 +235,8 @@ export class ShopBillDetailsPage {
       partsBillDetailModal.onDidDismiss(data => {
           this.problems_parts = JSON.parse(localStorage.getItem("problem_part"));      
           console.error(JSON.stringify(this.problems_parts));
+
+        
       });
   
       partsBillDetailModal.present();

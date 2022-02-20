@@ -73,6 +73,7 @@ export class InsurancePage {
     this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.insurance = resp['data'][0];
+        this.due = Number(this.insurance['total_bill_money']) - Number(this.insurance['paid_money']);
       }
     });
 

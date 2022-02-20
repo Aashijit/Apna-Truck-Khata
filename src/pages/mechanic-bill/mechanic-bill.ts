@@ -60,6 +60,7 @@ export class MechanicBillPage {
         this.bill_image_id =bill['bill_image_id'];
         this.bill_details =bill['bill_details'];
         this.reason = bill['reason'];
+        this.img = bill['image'];
         this.is_update = true;
       }
       var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
@@ -121,6 +122,13 @@ export class MechanicBillPage {
   }
 
   selectMechanic(worker_id){
+    
+    if(worker_id == 'add') {
+      this.navCtrl.push('AddDriverPage',{'type':'mechanic'});
+      return;
+    }
+
+
     this.isSelectedBill = true;
     for(let i=0;i<this.mechanics.length;i++){
       if(this.mechanics[i]['worker_id'] == worker_id) {
@@ -136,10 +144,53 @@ export class MechanicBillPage {
 
 
   openCameraPopup() {
-    let cameraModalPage = this.modalCtrl.create('AllImageKhataPage',{"isselect":true,"type":"mbills"});
+
+    if(this.person_shop_name == '' || this.person_shop_name == null) {
+      this.message.displayToast("Please select shop");
+      return;
+    }
+
+    if(this.vehicle_id == '' || this.vehicle_id == null) {
+      this.message.displayToast("Please select vehicle");
+      return;
+    }
+
+    if(this.bill_date == '' || this.bill_date == null) {
+      this.message.displayToast("Please enter bill date");
+      return;
+    }
+
+    if(this.bill_details == '' || this.bill_details == null) {
+      this.message.displayToast("Please enter bill details");
+      return;
+    }
+
+    var data = {
+      "person_shop_name":this.person_shop_name,
+      "vehicle_id":this.vehicle_id,
+      "bill_date":this.bill_date,
+      "worker_type":'shop',
+      "bill_details":this.bill_details
+    };
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+ 
+    var data2 = {
+      "srth_id":json[0]['srth_id'],
+      "worker_type":"mechanic",
+      "worker_id":this.worker_id,
+      "document_type":"mbill",
+      "type":"bills",
+      "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
+      "tags":JSON.stringify(data)
+    }
+    
+    let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
+        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      else
+        this.img = null;
     });
     
     cameraModalPage.present();
@@ -172,7 +223,8 @@ export class MechanicBillPage {
 
   }
   openDetailPopup() {
-    let detailsModalPage = this.modalCtrl.create('DetailsModalPage');
+    
+    let detailsModalPage = this.modalCtrl.create('DetailsModalPage',{"details":this.bill_details});
 
     detailsModalPage.onDidDismiss(data=> {
       this.bill_details = localStorage.getItem(this.codes.DETAILS);

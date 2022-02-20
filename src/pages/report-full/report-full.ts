@@ -1,6 +1,6 @@
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { CalendarComponentOptions } from 'ion2-calendar';
 
@@ -38,7 +38,8 @@ export class ReportFullPage {
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
-    private codes : CodesProvider, private modalCtrl : ModalController, private viewCont : ViewController) {
+    private codes : CodesProvider, private modalCtrl : ModalController, private viewCont : ViewController,
+    private zone : NgZone) {
       
       if(this.navParams.get("person") != null || this.navParams.get("person") != undefined) {
         this.worker_id = this.navParams.get("person")['worker_id'];
@@ -85,7 +86,10 @@ export class ReportFullPage {
     this.rest.post(this.codes.FULL_REPORT,data).then(resp => {
       console.log(resp);
       document.getElementById("report").innerHTML = resp['data'];
-      this.html = resp['data'];
+      this.zone.run(() => {
+        console.log("screen refreshed");
+      });
+      // this.html = resp['data'];
     })
 
     this.downloadURL = this.codes.FULL_REPORT_DOWNLOAD+"?worker_id="+this.worker_id+"&date_from="+this.dateRange['from']+"&date_to="+this.dateRange['to'];

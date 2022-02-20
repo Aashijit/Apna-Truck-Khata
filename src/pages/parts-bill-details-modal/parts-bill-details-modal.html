@@ -6,17 +6,20 @@
 
       <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">
         <ion-chip *ngFor="let problem of problems" style="margin-right: 5px !important; margin-left: 5px !important;">
-          <ion-label  >{{problem['problem_name']+" "+problem['vehicle_part_name']+" "+problem['vehicle_part_id']}}</ion-label>
+          <ion-label  >{{problem['problem_name']+" "}}
+            <span *ngIf="problem['vehicle_part_name'] != undefined">{{problem['vehicle_part_name']+" "}}</span>
+            <span *ngIf="problem['vehicle_part_id'] != undefined">{{problem['vehicle_part_id']}}</span>
+          </ion-label>
           <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeProblem(problem)"></ion-icon>
         </ion-chip>
         </p>
 
         <ion-row>
           <ion-col col-6>
-            <ion-badge color="primary">Bill Amount : ₹ {{bill['total_bill']}}  </ion-badge>
+            <ion-badge color="primary">Bill Amount : &#x20b9; {{bill['total_bill']}}  </ion-badge>
           </ion-col>
           <ion-col col-6>
-            <ion-badge color="danger">Sub Amount : ₹ {{amount}}  </ion-badge>
+            <ion-badge color="danger">Sub Amount : &#x20b9; {{amount}}  </ion-badge>
           </ion-col>
         </ion-row>
         
@@ -36,7 +39,7 @@
 
                 <ion-col col-4 class="pd-0">
                   <p style="text-align: right;font-size: 10px !important;">
-                  ₹ {{prt['rate_per_pc']}}
+                  &#x20b9; {{prt['rate_per_pc']}}
                   <sup *ngIf="prt['is_full']">Full</sup>
                   <sup *ngIf="!prt['is_full']">Per pc</sup>
                   </p>
@@ -46,7 +49,7 @@
                 </ion-col>
 
                 <ion-col col-2 class="pd-0" style="text-align: right;font-size: 10px !important;">
-                  ₹ {{prt['total']}}
+                  &#x20b9; {{prt['total']}}
                 </ion-col>
                 <ion-col col-2 class="pd-0" (click)="removePart(prt)">
                   <ion-icon name="close-circle" color="danger" class="icon-cust"></ion-icon>

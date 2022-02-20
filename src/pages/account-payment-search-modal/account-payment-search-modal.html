@@ -24,7 +24,7 @@
       </ion-item>
       <ion-item *ngIf="sr['type'] == 'bills'" (click)="clickedTerm(sr)">
         <h2>Bill # {{sr['id']}}</h2>
-        <p>Shop : {{sr['name']}} ~ ₹ {{sr['amount']}}</p>
+        <p>Shop : {{sr['name']}} ~ &#x20b9; {{sr['amount']}}</p>
         <p>Details : {{sr['details']}}</p>
       </ion-item>
     </p>

@@ -66,6 +66,7 @@ export class ShopPage {
     this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.shop = resp['data'][0];
+        this.due = Number(this.shop['total_bill_money']) - Number(this.shop['paid_money']);
       }
     });
     var data = {

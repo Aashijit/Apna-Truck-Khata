@@ -40,7 +40,7 @@
           {{det['expiry_date']}}
         </ion-col>
         <ion-col col-2 style="text-align: right !important;color: #000 !important;">
-          ₹  {{det['bill_amount']}}
+          &#x20b9;  {{det['bill_amount']}}
         </ion-col>
         <ion-col col-3 style="text-align: center !important;">
           <img *ngIf="det['image_url'] != null" style="width: 30%;" [src]="det['image_url']" />
@@ -64,7 +64,7 @@
        Total
       </ion-col>
       <ion-col col-2 style="text-align: right !important;color: #000 !important;">
-        ₹ {{total_bill}}
+        &#x20b9; {{total_bill}}
       </ion-col>
       <ion-col col-3 style="text-align: center !important;">
         

@@ -76,6 +76,8 @@ export class DocumentPage {
     this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.document = resp['data'][0];
+        this.due = Number(this.document['total_bill_money']) - Number(this.document['paid_money']);
+
       }
     });
 

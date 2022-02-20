@@ -67,6 +67,7 @@ export class MechanicPage {
     this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.mechanic = resp['data'][0];
+        this.due = Number(this.mechanic['total_bill_money']) - Number(this.mechanic['paid_money']);
       }
     });
 

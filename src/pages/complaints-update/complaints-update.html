@@ -71,8 +71,8 @@
           <p>BILL123</p>
           <p>RS 200</p> -->
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_id']}}</p>
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['problem_id']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{getProblemNames(cm['problems'])}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_complaint']}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_reminder']}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['details']}}</p>
@@ -91,56 +91,19 @@
       </div>
     </div>
 
-   <!-- <ion-item *ngIf="!isSelectedBill" class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"> 
-      <ion-label>VEHICLE NUMBER</ion-label>
 
-      <ion-select [(ngModel)]="document" (ionChange)="change($event)">
-        <ion-option value="Aadharcard">PERSON 1</ion-option>
-        <ion-option value="Pancard">PERSON 2</ion-option>
-      </ion-select>
-    </ion-item> -->
-
-    <!-- <ion-row class="selected-details" *ngIf="vari  == 'Aadharcard' || vari == 'Pancard'">
-      <ion-col col-4 class="text-center" style="color: white;">
-        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">
-      </ion-col>
-      <ion-col col-4 class="text-center"  style="color: white;">
-        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">ALEX DUE <br> VEHICLE NUMBER</h6>
-      </ion-col>
-      <ion-col col-4 class="text-center"> 
-
-        <button ion-button round style="margin-top: 15px;">CHANGE</button>
-      </ion-col>
-    </ion-row> -->
-    
-     <!--  -->
     <ion-list class="label-select" *ngIf="complaint['problems'] != undefined">
       <ion-item *ngFor="let problems of complaint['problems']">
         <ion-label>{{problems['details']['problem_name'] + "(" + problems['details']['vehicle_part_id']   + ")" + " - "}}
           <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved
-            <p style="color: red; font-weight: 800 !important; font-size:8px !important;">Remind - {{problems['reminder_date']}}</p>
+            <p style="color: red; font-weight: 800 !important; font-size:8px !important;">Remind - <span *ngIf="problems['reminder_date'] != undefined">{{problems['reminder_date']}}</span>
+              <span *ngIf="problems['reminder_date'] == undefined">{{complaint['date_of_reminder']}}</span>
+            </p>
           </span>
           <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span></ion-label>
         <ion-checkbox [(ngModel)]="problems['selected']"></ion-checkbox>
       </ion-item>
     </ion-list>
-
-    <!-- <ion-item class="label-select" *ngIf="complaint['problems'] != undefined">
-
-      <ion-label floating>PROBLEM IDs</ion-label>
-      <ion-select multiple="true" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"  [(ngModel)]="problems" >
-        <ion-option *ngFor="let problems of complaint['problems']" value="{{problems['problem_id']}}">
-          {{problems['details']['problem_name'] + " - "}}
-          <span *ngIf="problems['is_solved']=='0'" style="color: red ;">Unsolved</span>
-          <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span>
-        </ion-option>
-      </ion-select>
-
-    </ion-item> -->
-
-  
-
-
   </div>
 
   <ion-row class="justify-content-center">
