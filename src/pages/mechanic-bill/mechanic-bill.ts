@@ -63,38 +63,42 @@ export class MechanicBillPage {
         this.img = bill['image'];
         this.is_update = true;
       }
-      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
-      var data = {
-        "srth_id":json[0]['srth_id']
-      };
+  }
 
-      this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
-          if(resp['_ReturnCode'] == '0'){
+  ionViewWillEnter() {
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
-            var dt = resp['data'];
+    var data = {
+      "srth_id":json[0]['srth_id']
+    };
 
-            for(let i=0;i<dt.length;i++){
-              if(dt[i]['worker_type'] == 'mechanic'){
-                this.mechanics.push(dt[i]);
-              }
+    this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
+        if(resp['_ReturnCode'] == '0'){
+
+          var dt = resp['data'];
+
+          for(let i=0;i<dt.length;i++){
+            if(dt[i]['worker_type'] == 'mechanic'){
+              this.mechanics.push(dt[i]);
             }
           }
+        }
+    });
+
+    if(this.bill_id == null)
+    {
+      this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
+        if(resp['_ReturnCode'] == '0'){
+          this.bill_id = resp['data'];
+          this.bill_id ++;
+        }
       });
-
-      if(this.bill_id == null)
-      {
-        this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
-          if(resp['_ReturnCode'] == '0'){
-            this.bill_id = resp['data'];
-            this.bill_id ++;
-          }
-        });
-        
-      }
+      
+    }
 
 
-      this.getVehicles();
+    this.getVehicles();
 
   }
 

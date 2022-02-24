@@ -122,20 +122,42 @@ export class ComplaintsUpdatePage {
       this.searchTerm = sr['name'];
       this.filtercomplaints = [];
       for(let i=0;i<this.complaints.length;i++){
-        if(this.complaints[i]['driver'] != null && this.complaints[i]['driver']['driver_id'] == sr['id']){
+        
+        if(this.complaints[i]['driver'] != undefined && this.complaints[i]['driver']['worker_id'] == sr['id']){
           this.filtercomplaints.push(this.complaints[i]);
         }
       }
 
     } else if(sr['type'] == 'vehicle') {
       this.filtercomplaints = [];
-      this.searchTerm = sr['id'];
+      this.searchTerm = sr['name'];
       for(let i=0;i<this.complaints.length;i++){
         if(this.complaints[i]['vehicle_id'] == sr['id']){
           this.filtercomplaints.push(this.complaints[i]);
         }
       }
     }
+    // this.displayfilter = false;
+   
+    // this.displaysearchitems = this.search;
+    // if(sr['type'] == 'driver'){
+    //   this.searchTerm = sr['name'];
+    //   this.filtercomplaints = [];
+    //   for(let i=0;i<this.complaints.length;i++){
+    //     if(this.complaints[i]['driver'] != null && this.complaints[i]['driver']['driver_id'] == sr['id']){
+    //       this.filtercomplaints.push(this.complaints[i]);
+    //     }
+    //   }
+
+    // } else if(sr['type'] == 'vehicle') {
+    //   this.filtercomplaints = [];
+    //   this.searchTerm = sr['id'];
+    //   for(let i=0;i<this.complaints.length;i++){
+    //     if(this.complaints[i]['vehicle_id'] == sr['id']){
+    //       this.filtercomplaints.push(this.complaints[i]);
+    //     }
+    //   }
+    // }
   }
 
   getDrivers(){
@@ -309,6 +331,8 @@ export class ComplaintsUpdatePage {
           }
           // this.complaint = cm;
         }
+
+        this.filtercomplaints = this.complaints;
 
       }
     });

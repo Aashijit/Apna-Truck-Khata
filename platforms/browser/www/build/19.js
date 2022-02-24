@@ -1,6 +1,6 @@
 webpackJsonp([19],{
 
-/***/ 905:
+/***/ 902:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ion2_calendar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ion2_calendar__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__report_full__ = __webpack_require__(984);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__report_full__ = __webpack_require__(981);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var ReportFullPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 984:
+/***/ 981:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,28 @@ var ReportFullPage = /** @class */ (function () {
     }
     ReportFullPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ReportFullPage');
-        this.getPersons();
+        if (this.navParams.get('worker_type') == 'driver') {
+            this.getDrivers();
+        }
+        else {
+            this.getPersons();
+        }
+    };
+    ReportFullPage.prototype.getDrivers = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                var data = resp['data'];
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i]['worker_type'] == 'driver')
+                        _this.shops.push(data[i]);
+                }
+            }
+        });
     };
     ReportFullPage.prototype.getPersons = function () {
         var _this = this;

@@ -46,7 +46,7 @@
         <ion-col col-12>
         <ion-list>
           <!-- (click)="selectedProblem(wp)" -->
-          <ion-item *ngFor="let wp of problems" >
+          <ion-item *ngFor="let wp of filterproblems" >
               <ion-label style="font-size: 10px;">{{wp['problem_name'] + " "+wp['vehicle_part_name'] +" "+ wp['vehicle_part_id']}}</ion-label>
               <ion-checkbox [(ngModel)]="wp['selected']" slot="start"></ion-checkbox>
             <!-- <ion-card>

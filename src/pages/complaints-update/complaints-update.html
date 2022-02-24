@@ -57,13 +57,14 @@
         <a href="#about">DETAILS/KM READING</a> -->
         <a href="#home">NUMBER</a>
         <a href="#news">VEHICLE NUMBER</a>
+        <a href="#news">DRIVER NAME</a>
         <a href="#contact">PROBLEM PART & ID</a>
         <a href="#about">COMPLAINT DATE</a>
         <a href="#about">REMINDER DATE</a>
         <a href="#about">DETAILS</a>
         <a href="#about">KM READING</a>
   
-      <div *ngFor="let cm of complaints">
+      <div *ngFor="let cm of filtercomplaints">
         <div [ngClass]="cm['selected'] == true ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThis(cm)">
           <!-- <p>Ajay Das </p>
           <p>MN1234</p>
@@ -72,6 +73,8 @@
           <p>RS 200</p> -->
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
+          <p *ngIf="cm['driver'] != null">{{cm['driver']['name']}}</p>
+          <p *ngIf="cm['driver'] == null"></p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{getProblemNames(cm['problems'])}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_complaint']}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_reminder']}}</p>
@@ -101,7 +104,7 @@
             </p>
           </span>
           <span *ngIf="problems['is_solved']=='1'" style="color: green ;">Solved</span></ion-label>
-        <ion-checkbox [(ngModel)]="problems['selected']"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="problems['selected']" [disabled]="problems['is_solved']=='1'"></ion-checkbox>
       </ion-item>
     </ion-list>
   </div>

@@ -118,7 +118,7 @@ var ComplaintsKhataPage = /** @class */ (function () {
             this.searchTerm = sr['name'];
             this.filtercomplaints = [];
             for (var i = 0; i < this.complaints.length; i++) {
-                if (this.complaints[i]['driver'] != null && this.complaints[i]['driver']['driver_id'] == sr['id']) {
+                if (this.complaints[i]['driver'] != undefined && this.complaints[i]['driver']['worker_id'] == sr['id']) {
                     this.filtercomplaints.push(this.complaints[i]);
                 }
             }
@@ -278,7 +278,7 @@ var ComplaintsKhataPage = /** @class */ (function () {
                 _this.solvedcomplaints = [];
                 for (var i = 0; i < _this.complaints.length; i++) {
                     _this.complaints[i]['selected'] = false;
-                    if (_this.complaints[i]['status'] == null)
+                    if (_this.complaints[i]['status'] == null || _this.complaints[i]['status'] == '' || _this.complaints[i]['status'] == undefined)
                         _this.problemcomplaints.push(_this.complaints[i]);
                     if (_this.complaints[i]['status'] == 'solved')
                         _this.solvedcomplaints.push(_this.complaints[i]);

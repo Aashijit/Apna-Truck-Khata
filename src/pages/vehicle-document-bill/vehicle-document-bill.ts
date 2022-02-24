@@ -24,20 +24,22 @@ export class VehicleDocumentBillPage {
   worker_id : any = '';
   details : any = [];
   document : any = '';
+  action : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes : CodesProvider, private rest : RestProvider, 
     private modalCtrl : ModalController, private viewC : ViewController, private ldc : LoadingController) {
       this.getVehicles();
       this.worker_id = this.navParams.get("worker_id");
       this.worker_type = this.navParams.get("worker_type");
-      var action = this.navParams.get("action");
+      this.action = this.navParams.get("action");
       this.document = this.navParams.get('document');
-      if(action == 'edit') {
+      if(this.action == 'edit') {
         this.details = this.navParams.get('details');
         console.error(JSON.stringify(this.details));
         for(let i=0;i<this.details.length;i++){
           this.details[i]['vehicle_number'] = this.details[i]['vehicle_detail'] == undefined ? this.details[i]['vehicle_number'] : this.details[i]['vehicle_detail']['vehicle_number'];
           this.details[i]['expiry_date'] = this.details[i]['document_expiry_date'] != undefined ? this.details[i]['document_expiry_date'] : this.details[i]['expiry_date'];
+          this.details[i]['image_url'] = this.details[i]['image_id'] != undefined ? this.details[i]['image_id'] : null;
         }
         this.changeCost();
       }

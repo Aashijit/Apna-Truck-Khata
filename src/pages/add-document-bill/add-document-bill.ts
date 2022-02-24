@@ -36,6 +36,7 @@ export class AddDocumentBillPage {
     private message: MessageProvider, private alertCtrl: AlertController, private ldl: LoadingController,
     private pv : PhotoViewer) {
     this.document = this.navParams.get("document");
+    alert(JSON.stringify(this.document));
     console.log(JSON.stringify(this.document));
   }
 

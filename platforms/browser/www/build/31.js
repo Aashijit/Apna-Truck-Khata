@@ -1,6 +1,6 @@
 webpackJsonp([31],{
 
-/***/ 889:
+/***/ 890:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MechanicBillPageModule", function() { return MechanicBillPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(968);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mechanic_bill__ = __webpack_require__(969);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var MechanicBillPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 968:
+/***/ 969:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MechanicBillPage = /** @class */ (function () {
     function MechanicBillPage(viewController, navCtrl, navParams, rest, codes, message, modalCtrl) {
-        var _this = this;
         this.viewController = viewController;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -112,6 +111,9 @@ var MechanicBillPage = /** @class */ (function () {
             this.img = bill['image'];
             this.is_update = true;
         }
+    }
+    MechanicBillPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "srth_id": json[0]['srth_id']
@@ -135,7 +137,7 @@ var MechanicBillPage = /** @class */ (function () {
             });
         }
         this.getVehicles();
-    }
+    };
     MechanicBillPage.prototype.openCalendarPopup = function () {
         var _this = this;
         var calendarModalPage = this.modalCtrl.create('CalendarModalPage');

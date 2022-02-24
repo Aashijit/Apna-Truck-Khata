@@ -89,6 +89,7 @@ var AddDocumentBillPage = /** @class */ (function () {
         this.expired = false;
         this.all = true;
         this.document = this.navParams.get("document");
+        alert(JSON.stringify(this.document));
         console.log(JSON.stringify(this.document));
     }
     AddDocumentBillPage.prototype.ionViewDidLoad = function () {

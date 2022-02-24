@@ -75,6 +75,7 @@ export class ProblemWorkPartModalPage {
             }
           }
         }
+        this.filterproblems = this.problems;
       }
     });
   }
@@ -83,16 +84,16 @@ export class ProblemWorkPartModalPage {
     var prblems = [];
     //Fetch the parts
     var parts = [];
-    for(let i=0;i<this.problems.length;i++) {
-      if(this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null && this.problems[i]['parts'] != []) {
-        parts = this.problems[i]['parts'];
+    for(let i=0;i<this.filterproblems.length;i++) {
+      if(this.filterproblems[i]['parts'] != undefined && this.filterproblems[i]['parts'] != null && this.filterproblems[i]['parts'] != []) {
+        parts = this.filterproblems[i]['parts'];
         break;
       }
     }
-    for(let i=0;i<this.problems.length;i++){
-      if(this.problems[i]['selected'] == true){
-        this.problems[i]['parts'] = parts;
-        prblems.push(this.problems[i]);
+    for(let i=0;i<this.filterproblems.length;i++){
+      if(this.filterproblems[i]['selected'] == true){
+        this.filterproblems[i]['parts'] = parts;
+        prblems.push(this.filterproblems[i]);
       }
     }
     localStorage.setItem("problem_id",JSON.stringify(prblems));

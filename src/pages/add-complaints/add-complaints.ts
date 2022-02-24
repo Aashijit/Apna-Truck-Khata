@@ -55,7 +55,7 @@ export class AddComplaintsPage {
       this.details = comp['details'];
       this.km_reading = comp['km_reading'];
       this.status = comp['status'];
-
+      this.img = comp['image'];
       this.isupdate = true;
 
     }
@@ -95,6 +95,7 @@ export class AddComplaintsPage {
       "details": this.details,
       "km_reading": this.km_reading,
       "status": this.status,
+      "image":this.img,
       "last_maint_id": "srth-app",
       "opt_counter": "0",
       "problems": this.problems
@@ -172,8 +173,10 @@ export class AddComplaintsPage {
     let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
-        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+        var selectedImage = JSON.parse(localStorage.getItem("selectedimage"));
+        this.img = selectedImage['image_url'];
+      }
       else
         this.img = null;
     });
@@ -225,6 +228,7 @@ export class AddComplaintsPage {
     this.details = comp['details'];
     this.km_reading = comp['km_reading'];
     this.status = comp['status'];
+    this.img =comp['image'];
     for(let i=0;i<this.complaints.length;i++)
       this.complaints[i]['selected'] = 'false';
     comp['selected'] = 'true';
@@ -277,8 +281,6 @@ export class AddComplaintsPage {
   savecomplaint() {
     var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
-
-
     var data = {
       "vehicle_id": this.vehicle_id,
       "srth_id": userinfo[0]['srth_id'],
@@ -288,6 +290,7 @@ export class AddComplaintsPage {
       "details": this.details,
       "km_reading": this.km_reading,
       "status": this.status,
+      "image":this.img,
       "last_maint_id": "srth-app",
       "opt_counter": "0",
       "problems": this.problems
@@ -304,6 +307,7 @@ export class AddComplaintsPage {
         this.date_of_reminder = '';
         this.details = '';
         this.km_reading = '';
+        this.img = null;
 
         this.complaints_id ++;
         this.complaints.push(data);

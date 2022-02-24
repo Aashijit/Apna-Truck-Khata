@@ -84,30 +84,29 @@ export class BuyFromShopPage {
         });
         
       }
+  }
 
+  ionViewWillEnter(){
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
+    var data = {
+      "srth_id":json[0]['srth_id']
+    };
 
+    this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
+        if(resp['_ReturnCode'] == '0'){
 
-      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+          var dt = resp['data'];
 
-      var data = {
-        "srth_id":json[0]['srth_id']
-      };
-
-      this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
-          if(resp['_ReturnCode'] == '0'){
-
-            var dt = resp['data'];
-
-            for(let i=0;i<dt.length;i++){
-              if(dt[i]['worker_type'] == 'shop'){
-                this.shops.push(dt[i]);
-              }
+          for(let i=0;i<dt.length;i++){
+            if(dt[i]['worker_type'] == 'shop'){
+              this.shops.push(dt[i]);
             }
           }
-      });
+        }
+    });
 
-      this.getVehicles();
+    this.getVehicles();
   }
 
   getVehicles(){
@@ -276,6 +275,12 @@ export class BuyFromShopPage {
   }
 
   selectShop(shop){
+
+    if(shop == 'add') {
+      this.navCtrl.push('AddDriverPage',{'type':'shop'});
+      return;
+    }
+
     this.isSelectedBill = true;
     for(let i=0;i<this.shops.length;i++){
       if(this.shops[i]['worker_id'] == shop) {

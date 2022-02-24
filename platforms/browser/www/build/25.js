@@ -1,6 +1,6 @@
 webpackJsonp([25],{
 
-/***/ 897:
+/***/ 896:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProblemWorkPartModalPageModule", function() { return ProblemWorkPartModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__problem_work_part_modal__ = __webpack_require__(976);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__problem_work_part_modal__ = __webpack_require__(975);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var ProblemWorkPartModalPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 976:
+/***/ 975:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119,6 +119,7 @@ var ProblemWorkPartModalPage = /** @class */ (function () {
                         }
                     }
                 }
+                _this.filterproblems = _this.problems;
             }
         });
     };
@@ -126,16 +127,16 @@ var ProblemWorkPartModalPage = /** @class */ (function () {
         var prblems = [];
         //Fetch the parts
         var parts = [];
-        for (var i = 0; i < this.problems.length; i++) {
-            if (this.problems[i]['parts'] != undefined && this.problems[i]['parts'] != null && this.problems[i]['parts'] != []) {
-                parts = this.problems[i]['parts'];
+        for (var i = 0; i < this.filterproblems.length; i++) {
+            if (this.filterproblems[i]['parts'] != undefined && this.filterproblems[i]['parts'] != null && this.filterproblems[i]['parts'] != []) {
+                parts = this.filterproblems[i]['parts'];
                 break;
             }
         }
-        for (var i = 0; i < this.problems.length; i++) {
-            if (this.problems[i]['selected'] == true) {
-                this.problems[i]['parts'] = parts;
-                prblems.push(this.problems[i]);
+        for (var i = 0; i < this.filterproblems.length; i++) {
+            if (this.filterproblems[i]['selected'] == true) {
+                this.filterproblems[i]['parts'] = parts;
+                prblems.push(this.filterproblems[i]);
             }
         }
         localStorage.setItem("problem_id", JSON.stringify(prblems));
@@ -157,7 +158,7 @@ var ProblemWorkPartModalPage = /** @class */ (function () {
     };
     ProblemWorkPartModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-problem-work-part-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n        <ion-col col-12 style="text-align: center;">\n          <button ion-button round class="custom-button" (click)="addWorkPart=!addWorkPart"> ADD REPAIR  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n\n      <ion-grid *ngIf="addWorkPart">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Repair</h2>\n          </ion-col>\n          \n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="problem" />\n              <label>PROBLEM/WORK</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="part" />\n              <label>PART</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="id" />\n              <label>ID</label>\n            </div>\n          </ion-col>\n          <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="saverepair()"> ADD REPAIR  </button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <!-- (click)="selectedProblem(wp)" -->\n          <ion-item *ngFor="let wp of problems" >\n              <ion-label style="font-size: 10px;">{{wp[\'problem_name\'] + " "+wp[\'vehicle_part_name\'] +" "+ wp[\'vehicle_part_id\']}}</ion-label>\n              <ion-checkbox [(ngModel)]="wp[\'selected\']" slot="start"></ion-checkbox>\n            <!-- <ion-card>\n              <ion-card-content>\n            <ion-row>\n               [(ngModel)]="wp[\'selected\']" \n              <ion-col style="text-align: center;" col-12>\n                <ion-item>\n                  \n              </ion-item>\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'problem_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'vehicle_part_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;">\n                {{wp[\'vehicle_part_id\']}}\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n          </ion-card> -->\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-12 class="text-center">\n          <button ion-button round class="custom-button" (click)="problemsSelected()">Save</button>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/,
+            selector: 'page-problem-work-part-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/'<ion-content padding style="background: rgba(0,0,0,0.8) !important;">\n\n  <ion-card>\n    <ion-card-content>\n      <ion-row>\n        <ion-col col-12>\n          <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n        </ion-col>\n        <ion-col col-12 style="text-align: center;">\n          <button ion-button round class="custom-button" (click)="addWorkPart=!addWorkPart"> ADD REPAIR  &nbsp; <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n\n      <ion-grid *ngIf="addWorkPart">\n        <ion-row>\n          <ion-col col-12>\n            <h2>Add Repair</h2>\n          </ion-col>\n          \n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="problem" />\n              <label>PROBLEM/WORK</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="part" />\n              <label>PART</label>\n            </div>\n          </ion-col>\n          <ion-col col-12>\n            <div class="label-float" >\n              <input type="text"  placeholder=" " [(ngModel)]="id" />\n              <label>ID</label>\n            </div>\n          </ion-col>\n          <ion-col col-12 style="text-align: center;">\n            <button ion-button round class="custom-button" (click)="saverepair()"> ADD REPAIR  </button>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <ion-row>\n        <ion-col col-12>\n        <ion-list>\n          <!-- (click)="selectedProblem(wp)" -->\n          <ion-item *ngFor="let wp of filterproblems" >\n              <ion-label style="font-size: 10px;">{{wp[\'problem_name\'] + " "+wp[\'vehicle_part_name\'] +" "+ wp[\'vehicle_part_id\']}}</ion-label>\n              <ion-checkbox [(ngModel)]="wp[\'selected\']" slot="start"></ion-checkbox>\n            <!-- <ion-card>\n              <ion-card-content>\n            <ion-row>\n               [(ngModel)]="wp[\'selected\']" \n              <ion-col style="text-align: center;" col-12>\n                <ion-item>\n                  \n              </ion-item>\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'problem_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;"> \n                {{wp[\'vehicle_part_name\']}}\n              </ion-col>\n              <ion-col style="text-align: center;">\n                {{wp[\'vehicle_part_id\']}}\n              </ion-col>\n            </ion-row>\n          </ion-card-content>\n          </ion-card> -->\n          </ion-item>\n        </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-12 class="text-center">\n          <button ion-button round class="custom-button" (click)="problemsSelected()">Save</button>\n        </ion-col>\n      </ion-row>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/problem-work-part-modal/problem-work-part-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ViewController"],
             __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])

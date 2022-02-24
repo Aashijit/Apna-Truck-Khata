@@ -101,6 +101,7 @@ var MechanicKhataPage = /** @class */ (function () {
         this.rest.post(this.codes.GET_BILL_DETAILS_BY_BILL_ID, data).then(function (resp) {
             console.debug("GET BILL DETAILS : " + JSON.stringify(resp));
             var bill_details = resp['data'];
+            bill_details['km_reading'] = bill['km_reading'];
             localStorage.setItem('bill_details', JSON.stringify(bill_details));
         });
     };

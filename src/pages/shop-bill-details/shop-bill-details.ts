@@ -59,6 +59,10 @@ export class ShopBillDetailsPage {
         this.date_of_repair = this.bill['bill_date'];
         this.km_reading = this.bill['km_reading'];
 
+        if(this.bill['image'] != undefined && this.bill['image'] != null){
+          this.img = this.bill['image'];
+        }
+
         console.error("CHECK : "+JSON.stringify(this.bill));
 
         var total = 0.00;

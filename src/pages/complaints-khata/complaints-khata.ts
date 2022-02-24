@@ -265,7 +265,7 @@ export class ComplaintsKhataPage {
 
         for(let i=0;i<this.complaints.length;i++){
           this.complaints[i]['selected'] = false;
-          if(this.complaints[i]['status'] == null)
+          if(this.complaints[i]['status'] == null || this.complaints[i]['status'] == '' || this.complaints[i]['status'] == undefined)
             this.problemcomplaints.push(this.complaints[i]);
           if(this.complaints[i]['status'] == 'solved')
             this.solvedcomplaints.push(this.complaints[i]);

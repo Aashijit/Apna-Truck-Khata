@@ -6,7 +6,7 @@
   color: #042295;" *ngIf="document != ''">
     {{document['document_name']}}
   </p>
-  <p style="float: right !important;" (click)="dismiss()">
+  <p style="float: right !important;" (click)="dismiss()" *ngIf="action != 'edit'">
     <ion-icon name="close" style="color: red !important;"></ion-icon>
   </p>
 

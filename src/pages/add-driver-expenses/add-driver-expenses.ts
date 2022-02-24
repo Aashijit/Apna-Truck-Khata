@@ -239,7 +239,7 @@ export class AddDriverExpensesPage {
       var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
  
       var data = {
-        "person_shop_name":"",
+        "person_shop_name":this.name,
         "srth_id":json[0]['srth_id'],
         "vehicle_id":this.vehicle_id,
         "reason":this.reason,
@@ -305,7 +305,7 @@ export class AddDriverExpensesPage {
  
     var data = {
       "bill_id":this.bill_id,
-      "person_shop_name":"",
+      "person_shop_name":this.name,
       "srth_id":json[0]['srth_id'],
       "vehicle_id":this.vehicle_id,
       "reason":this.reason,

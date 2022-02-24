@@ -98,6 +98,9 @@ var ShopBillDetailsPage = /** @class */ (function () {
             this.details = this.bill['bill_details'];
             this.date_of_repair = this.bill['bill_date'];
             this.km_reading = this.bill['km_reading'];
+            if (this.bill['image'] != undefined && this.bill['image'] != null) {
+                this.img = this.bill['image'];
+            }
             console.error("CHECK : " + JSON.stringify(this.bill));
             var total = 0.00;
             for (var i = 0; i < this.bill['problems_parts'].length; i++) {
