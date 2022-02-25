@@ -2,8 +2,8 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.saarthi.apnatruckkhata"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="11"
-6    android:versionName="0.0.11" >
+5    android:versionCode="12"
+6    android:versionName="0.0.12" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
@@ -121,205 +121,206 @@
 57    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
 57-->[me.leolin:ShortcutBadger:1.1.17] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/81b856033c38d04e675615b31cdb71ac/ShortcutBadger-1.1.17/AndroidManifest.xml:50:5-89
 57-->[me.leolin:ShortcutBadger:1.1.17] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/81b856033c38d04e675615b31cdb71ac/ShortcutBadger-1.1.17/AndroidManifest.xml:50:22-86
-58
-59    <application
-59-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:5-29:19
-60        android:name="android.support.multidex.MultiDexApplication"
-61        android:hardwareAccelerated="true"
-61-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
-62        android:icon="@mipmap/icon"
-62-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-63        android:label="@string/app_name"
-63-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:81-113
-64        android:networkSecurityConfig="@xml/network_security_config"
-64-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:114-174
-65        android:supportsRtl="true" >
-65-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:175-201
-66        <activity
-66-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
-67            android:name="com.saarthi.apnatruckkhata.MainActivity"
-67-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:166-193
-68            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-68-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:19-96
-69            android:label="@string/activity_name"
-69-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
-70            android:launchMode="singleTop"
-70-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:135-165
-71            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
-71-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:194-256
-72            android:windowSoftInputMode="adjustResize" >
-72-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:257-299
-73            <intent-filter android:label="@string/launcher_name" >
-73-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
-73-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
-74                <action android:name="android.intent.action.MAIN" />
-74-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
-74-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
-75
-76                <category android:name="android.intent.category.LAUNCHER" />
-76-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
-76-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
-77            </intent-filter>
-78        </activity>
-79        <activity
-79-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:9-143
-80            android:name="com.sarriaroman.PhotoViewer.PhotoActivity"
-80-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:19-75
-81            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
-81-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:76-140
-82
-83        <provider
-84            android:name="org.apache.cordova.camera.FileProvider"
-84-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:127-180
-85            android:authorities="com.saarthi.apnatruckkhata.provider"
-85-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:19-66
-86            android:exported="false"
-86-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:67-91
-87            android:grantUriPermissions="true" >
-87-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:92-126
-88            <meta-data
-88-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:13-123
-89                android:name="android.support.FILE_PROVIDER_PATHS"
-89-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:24-74
-90                android:resource="@xml/camera_provider_paths" />
-90-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:75-120
-91        </provider>
-92
-93        <activity
-94            android:name="com.adobe.phonegap.push.PushHandlerActivity"
-94-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:43-101
-95            android:exported="true"
-95-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:19-42
-96            android:permission="com.saarthi.apnatruckkhata.permission.PushHandlerActivity" />
-96-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:102-170
-97
-98        <receiver android:name="com.adobe.phonegap.push.BackgroundActionButtonHandler" />
-98-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:17:9-90
-98-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:17:19-87
-99        <receiver android:name="com.adobe.phonegap.push.PushDismissedHandler" />
-99-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:18:9-81
-99-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:18:19-78
-100
-101        <service android:name="com.adobe.phonegap.push.FCMService" >
-101-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:19:9-23:19
-101-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:19:18-67
-102            <intent-filter>
-102-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
-103                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-103-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:17-78
-103-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:25-75
-104            </intent-filter>
-105        </service>
-106        <service android:name="com.adobe.phonegap.push.PushInstanceIDListenerService" >
-106-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:24:9-28:19
-106-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:24:18-86
-107            <intent-filter>
-107-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:25:13-27:29
-108                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-108-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:17-80
-108-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:25-77
-109            </intent-filter>
-110        </service>
-111
-112        <provider
-112-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:8:9-11:40
-113            android:name="com.squareup.picasso.PicassoProvider"
-113-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:9:13-64
-114            android:authorities="com.saarthi.apnatruckkhata.com.squareup.picasso"
-114-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:10:13-72
-115            android:exported="false" />
-115-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:11:13-37
-116        <!--
-117             FirebaseMessagingService performs security checks at runtime,
-118             no need for explicit permissions despite exported="true"
-119        -->
-120        <service
-120-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:28:9-34:19
-121            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-121-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:29:13-82
-122            android:exported="true" >
-122-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:30:13-36
-123            <intent-filter android:priority="-500" >
-123-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
-124                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-124-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:17-78
-124-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:25-75
-125            </intent-filter>
-126        </service>
-127        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
-127-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:35:9-39:19
-127-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:35:18-89
-128            <meta-data
-128-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:36:13-38:85
-129                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-129-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:37:17-96
-130                android:value="com.google.firebase.components.ComponentRegistrar" />
-130-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:38:17-82
-131        </service>
-132
-133        <receiver
-133-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:41:9-50:20
-134            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-134-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:42:13-78
-135            android:exported="true"
-135-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:43:13-36
-136            android:permission="com.google.android.c2dm.permission.SEND" >
-136-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:44:13-73
-137            <intent-filter>
-137-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:45:13-49:29
-138                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-138-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:46:17-81
-138-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:46:25-78
-139
-140                <category android:name="com.saarthi.apnatruckkhata" />
-140-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:48:17-61
-140-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:48:27-58
-141            </intent-filter>
-142        </receiver>
-143        <!--
-144             FirebaseInstanceIdService performs security checks at runtime,
-145             no need for explicit permissions despite exported="true"
-146        -->
-147        <service
-147-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:56:9-62:19
-148            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-148-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:57:13-77
-149            android:exported="true" >
-149-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:58:13-36
-150            <intent-filter android:priority="-500" >
-150-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:25:13-27:29
-151                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-151-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:17-80
-151-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:25-77
-152            </intent-filter>
-153        </service>
-154
-155        <provider
-155-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:9:9-13:39
-156            android:name="com.google.firebase.provider.FirebaseInitProvider"
-156-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:10:13-77
-157            android:authorities="com.saarthi.apnatruckkhata.firebaseinitprovider"
-157-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:11:13-72
-158            android:exported="false"
-158-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:12:13-37
-159            android:initOrder="100" />
-159-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:13:13-36
-160
-161        <activity
-161-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
-162            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-162-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:24:13-79
-163            android:exported="false"
-163-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:25:13-37
-164            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-164-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:26:13-72
-165
-166        <meta-data
-166-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
-167            android:name="com.google.android.gms.version"
-167-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
-168            android:value="@integer/google_play_services_version" />
-168-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
-169    </application>
-170
-171</manifest>
+58    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+59
+60    <application
+60-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:5-29:19
+61        android:name="android.support.multidex.MultiDexApplication"
+62        android:hardwareAccelerated="true"
+62-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
+63        android:icon="@mipmap/icon"
+63-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
+64        android:label="@string/app_name"
+64-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:81-113
+65        android:networkSecurityConfig="@xml/network_security_config"
+65-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:114-174
+66        android:supportsRtl="true" >
+66-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:5:175-201
+67        <activity
+67-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
+68            android:name="com.saarthi.apnatruckkhata.MainActivity"
+68-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:166-193
+69            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+69-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:19-96
+70            android:label="@string/activity_name"
+70-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
+71            android:launchMode="singleTop"
+71-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:135-165
+72            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+72-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:194-256
+73            android:windowSoftInputMode="adjustResize" >
+73-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:6:257-299
+74            <intent-filter android:label="@string/launcher_name" >
+74-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:7:13-10:29
+74-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:7:28-65
+75                <action android:name="android.intent.action.MAIN" />
+75-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:8:17-69
+75-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:8:25-66
+76
+77                <category android:name="android.intent.category.LAUNCHER" />
+77-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
+77-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+78            </intent-filter>
+79        </activity>
+80        <activity
+80-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:9-143
+81            android:name="com.sarriaroman.PhotoViewer.PhotoActivity"
+81-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:19-75
+82            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+82-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:12:76-140
+83
+84        <provider
+85            android:name="org.apache.cordova.camera.FileProvider"
+85-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:127-180
+86            android:authorities="com.saarthi.apnatruckkhata.provider"
+86-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:19-66
+87            android:exported="false"
+87-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:67-91
+88            android:grantUriPermissions="true" >
+88-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:13:92-126
+89            <meta-data
+89-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:13-123
+90                android:name="android.support.FILE_PROVIDER_PATHS"
+90-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:24-74
+91                android:resource="@xml/camera_provider_paths" />
+91-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:14:75-120
+92        </provider>
+93
+94        <activity
+95            android:name="com.adobe.phonegap.push.PushHandlerActivity"
+95-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:43-101
+96            android:exported="true"
+96-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:19-42
+97            android:permission="com.saarthi.apnatruckkhata.permission.PushHandlerActivity" />
+97-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:16:102-170
+98
+99        <receiver android:name="com.adobe.phonegap.push.BackgroundActionButtonHandler" />
+99-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:17:9-90
+99-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:17:19-87
+100        <receiver android:name="com.adobe.phonegap.push.PushDismissedHandler" />
+100-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:18:9-81
+100-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:18:19-78
+101
+102        <service android:name="com.adobe.phonegap.push.FCMService" >
+102-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:19:9-23:19
+102-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:19:18-67
+103            <intent-filter>
+103-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
+104                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+104-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:17-78
+104-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:25-75
+105            </intent-filter>
+106        </service>
+107        <service android:name="com.adobe.phonegap.push.PushInstanceIDListenerService" >
+107-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:24:9-28:19
+107-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:24:18-86
+108            <intent-filter>
+108-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:25:13-27:29
+109                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+109-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:17-80
+109-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:25-77
+110            </intent-filter>
+111        </service>
+112
+113        <provider
+113-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+114            android:name="com.squareup.picasso.PicassoProvider"
+114-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:9:13-64
+115            android:authorities="com.saarthi.apnatruckkhata.com.squareup.picasso"
+115-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:10:13-72
+116            android:exported="false" />
+116-->[com.squareup.picasso:picasso:2.71828] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/671948289f0a25034617218c8cc675e2/picasso-2.71828/AndroidManifest.xml:11:13-37
+117        <!--
+118             FirebaseMessagingService performs security checks at runtime,
+119             no need for explicit permissions despite exported="true"
+120        -->
+121        <service
+121-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:28:9-34:19
+122            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+122-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:29:13-82
+123            android:exported="true" >
+123-->[com.google.firebase:firebase-messaging:17.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/ff6856e3f585bf271ee6d67bcd906410/firebase-messaging-17.0.0/AndroidManifest.xml:30:13-36
+124            <intent-filter android:priority="-500" >
+124-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
+125                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+125-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:17-78
+125-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:21:25-75
+126            </intent-filter>
+127        </service>
+128        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+128-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:35:9-39:19
+128-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:35:18-89
+129            <meta-data
+129-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:36:13-38:85
+130                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+130-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:37:17-96
+131                android:value="com.google.firebase.components.ComponentRegistrar" />
+131-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:38:17-82
+132        </service>
+133
+134        <receiver
+134-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:41:9-50:20
+135            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+135-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:42:13-78
+136            android:exported="true"
+136-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:43:13-36
+137            android:permission="com.google.android.c2dm.permission.SEND" >
+137-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:44:13-73
+138            <intent-filter>
+138-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:45:13-49:29
+139                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+139-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:46:17-81
+139-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:46:25-78
+140
+141                <category android:name="com.saarthi.apnatruckkhata" />
+141-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:48:17-61
+141-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:48:27-58
+142            </intent-filter>
+143        </receiver>
+144        <!--
+145             FirebaseInstanceIdService performs security checks at runtime,
+146             no need for explicit permissions despite exported="true"
+147        -->
+148        <service
+148-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:56:9-62:19
+149            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+149-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:57:13-77
+150            android:exported="true" >
+150-->[com.google.firebase:firebase-iid:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/dfd1515c3b99bae4171ac18eacc8e709/firebase-iid-16.0.0/AndroidManifest.xml:58:13-36
+151            <intent-filter android:priority="-500" >
+151-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:25:13-27:29
+152                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+152-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:17-80
+152-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:26:25-77
+153            </intent-filter>
+154        </service>
+155
+156        <provider
+156-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:9:9-13:39
+157            android:name="com.google.firebase.provider.FirebaseInitProvider"
+157-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:10:13-77
+158            android:authorities="com.saarthi.apnatruckkhata.firebaseinitprovider"
+158-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:11:13-72
+159            android:exported="false"
+159-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:12:13-37
+160            android:initOrder="100" />
+160-->[com.google.firebase:firebase-common:16.0.0] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/e5e0f295a5a907faf72cf1395aa010cf/firebase-common-16.0.0/AndroidManifest.xml:13:13-36
+161
+162        <activity
+162-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
+163            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+163-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:24:13-79
+164            android:exported="false"
+164-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:25:13-37
+165            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+165-->[com.google.android.gms:play-services-base:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/025a0733b8fc821365e36eff2e670501/play-services-base-15.0.1/AndroidManifest.xml:26:13-72
+166
+167        <meta-data
+167-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
+168            android:name="com.google.android.gms.version"
+168-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
+169            android:value="@integer/google_play_services_version" />
+169-->[com.google.android.gms:play-services-basement:15.0.1] /Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/5fadf144cb6bea8998e9f7228193b75e/play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
+170    </application>
+171
+172</manifest>

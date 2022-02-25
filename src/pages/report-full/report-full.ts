@@ -24,6 +24,7 @@ export class ReportFullPage {
   displayCalendar : boolean = false;
   dateRange: any =  { from: '', to: '' };
   downloadURL : any = '';
+  srth_id : any = '';
 
   apiendpoint : any = '';
   downloadendpoint : any = '';
@@ -44,6 +45,9 @@ export class ReportFullPage {
       if(this.navParams.get("person") != null || this.navParams.get("person") != undefined) {
         this.worker_id = this.navParams.get("person")['worker_id'];
       }
+
+      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+      this.srth_id = json[0]['srth_id'];
   }
 
   ionViewDidLoad() {
@@ -100,7 +104,8 @@ export class ReportFullPage {
     var data = {
       "worker_id":this.worker_id,
       "date_from":this.dateRange['from'],
-      "date_to":this.dateRange['to']
+      "date_to":this.dateRange['to'],
+      "srth_id":this.srth_id
     };
     this.rest.post(this.codes.FULL_REPORT,data).then(resp => {
       console.log(resp);
