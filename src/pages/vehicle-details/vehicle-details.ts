@@ -19,6 +19,7 @@ export class VehicleDetailsPage {
   paid : number = 0;
   unpaid : number = 0;
   total : number = 0;
+  driverJoinedDate : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private modalCtrl : ModalController, 
     private rest : RestProvider, private codes : CodesProvider) {
@@ -59,7 +60,11 @@ export class VehicleDetailsPage {
     this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID,data).then(resp => {
       if(resp['_ReturnCode'] == '0'){
         this.driverhistory = resp['data'];
-
+        for(let i=0;i<this.driverhistory.length;i++) {
+          if(this.driverhistory[i]['vehicle_id'] == this.vehicle['vehicle_id']) {
+            this.driverJoinedDate = this.driverhistory[i]['driver_start_date'];
+          }
+        }
         // for(let i=0;i<this.driverhistory.length;i++){
         //   if(this.driverhistory[i]['is_remove'] == '0'){
         //     this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
@@ -155,7 +160,7 @@ export class VehicleDetailsPage {
   }
 
   openDriverDocument() {
-    this.navCtrl.push('DriverDocumentPage',{"driver":this.vehicle['driver_details']});
+    this.navCtrl.push('DriverDocumentPage',{"driver":this.vehicle['driver_details'],"vehicle":this.vehicle,"joining":this.driverJoinedDate});
   }
 
   openVehicleDocument() {

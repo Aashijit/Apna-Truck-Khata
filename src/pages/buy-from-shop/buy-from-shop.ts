@@ -92,7 +92,7 @@ export class BuyFromShopPage {
     var data = {
       "srth_id":json[0]['srth_id']
     };
-
+    this.shops = [];
     this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
         if(resp['_ReturnCode'] == '0'){
 

@@ -15,6 +15,8 @@ export class DriverDocumentPage {
 
   isShown : boolean = false;
   driver : any = '';
+  vehicle : any = '';
+  driverJoiningDate : any = '';
   documents : any = [
     {
       "document_name":"National Permit",
@@ -75,6 +77,9 @@ export class DriverDocumentPage {
   constructor(private message : MessageProvider, private codes : CodesProvider, private rest : RestProvider, 
     private viewController : ViewController, public navCtrl: NavController, public navParams: NavParams, public modalCtrl : ModalController) {
       this.driver = this.navParams.get("driver");
+      this.vehicle = this.navParams.get("vehicle");
+      this.driverJoiningDate = this.navParams.get('joining');
+      console.error("vehicle : "+JSON.stringify(this.vehicle));
 
       var req = {
         "type":"driver",

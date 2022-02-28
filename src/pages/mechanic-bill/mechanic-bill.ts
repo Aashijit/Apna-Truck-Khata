@@ -72,7 +72,7 @@ export class MechanicBillPage {
     var data = {
       "srth_id":json[0]['srth_id']
     };
-
+    this.mechanics = [];
     this.rest.post(this.codes.GET_WORKER,data ).then(resp => {
         if(resp['_ReturnCode'] == '0'){
 
