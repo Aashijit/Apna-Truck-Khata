@@ -4,7 +4,7 @@ import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Modal, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Modal, ModalController, LoadingController } from 'ionic-angular';
 import { AddDriverExpensesPage } from '../add-driver-expenses/add-driver-expenses';
 
 
@@ -23,7 +23,7 @@ export class DriverKhataPage {
 
   constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, 
     private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, private modalCtrl : ModalController,
-    private photoViewer : PhotoViewer) {
+    private photoViewer : PhotoViewer, private ldctrl : LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -47,13 +47,16 @@ export class DriverKhataPage {
   getBillsBySrthId(){
     this.isupdate = false;
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-
+    let ld = this.ldctrl.create({
+      'content':'Loading the drivers ...'
+    });
     var data = {
       "srth_id":json[0]['srth_id'],
       "worker_type":"driver"
     };
 
     this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID,data).then(resp => {
+      ld.dismiss();
       if(resp['_ReturnCode'] == '0'){
         this.bills = resp['data'];
         this.filterbills = this.bills;
@@ -62,6 +65,8 @@ export class DriverKhataPage {
           this.filterbills[i]['selected'] = 'false';
         }
       }
+    }, error => {
+      ld.dismiss();
     });
   }
 

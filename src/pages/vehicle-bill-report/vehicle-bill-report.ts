@@ -72,9 +72,7 @@ export class VehicleBillReportPage {
       if(resp['_ReturnCode'] == '0'){
         var persons = resp['data'];
         for(let i=0;i<persons.length;i++){
-          if(persons[i]['worker_type'] == 'shop' || persons[i]['worker_type'] == 'mechanic') {
             this.shops.push(persons[i]);
-          }
         }
       }
     });

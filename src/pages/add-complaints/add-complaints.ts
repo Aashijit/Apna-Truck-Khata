@@ -301,6 +301,8 @@ export class AddComplaintsPage {
     this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(resp => {
       if (resp['_ReturnCode'] == '0') {
         data['complaints_id'] = this.complaints_id;
+        alert(this.vehicle_number);
+        data['vehicle_number'] = this.vehicle_number;
         data['selected'] = false;
         this.problem_id = '';
         this.date_of_complaint = '';

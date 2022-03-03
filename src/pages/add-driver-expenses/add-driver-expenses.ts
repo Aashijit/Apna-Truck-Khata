@@ -5,7 +5,7 @@ import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
 import { ReasonModalPage } from './../reason-modal/reason-modal';
 import { Component, ViewChild, ViewChildren } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, Select } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, Select, LoadingController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { DetailsModalPage } from '../details-modal/details-modal';
 import { CameraModalPage } from '../camera-modal/camera-modal';
@@ -54,7 +54,8 @@ export class AddDriverExpensesPage {
   constructor(private codes : CodesProvider,
     private viewController : ViewController,
     public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, 
-    private rest : RestProvider, private message : MessageProvider, private photoViewer : PhotoViewer) {
+    private rest : RestProvider, private message : MessageProvider, private photoViewer : PhotoViewer, 
+    private ldctrl : LoadingController) {
       var upd = this.navParams.get("update");
       if(upd == 'true'){
         var bill = JSON.parse(localStorage.getItem("bill"));
@@ -65,6 +66,7 @@ export class AddDriverExpensesPage {
         this.vehicle_id = bill['vehicle_id'];
         this.km_reading =bill['km_reading'];
         this.bill_date =bill['bill_date'];
+        this.rejoin_date = bill['rejoin_date'];
         this.worker_type =bill['worker_type'];
         this.total_bill =bill['total_bill'];
         this.bill_image_id =bill['bill_image_id'];
@@ -109,11 +111,15 @@ export class AddDriverExpensesPage {
   }
 
   getDrivers(){
+    let ld = this.ldctrl.create({
+      'content':'Loading the drivers ...'
+    });
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
     var data= {
       "srth_id":json[0]['srth_id']
     };
     this.rest.post(this.codes.GET_WORKER, data).then(resp => {
+      ld.dismiss();
       var workers = resp['data'];
       if(resp['_ReturnCode'] == '0'){
         for(let i=0;i<workers.length;i++){
@@ -123,6 +129,8 @@ export class AddDriverExpensesPage {
         }
         this.change(this.worker_id);
       }      
+    }, error => {
+      ld.dismiss();
     });
   }
 
@@ -245,6 +253,7 @@ export class AddDriverExpensesPage {
         "reason":this.reason,
         "km_reading":this.km_reading,
         "bill_date":this.bill_date,
+        "rejoin_date":this.rejoin_date,
         "worker_type":'driver',
         "worker_id":this.worker_id,
         "total_bill":this.total_bill,
@@ -311,6 +320,7 @@ export class AddDriverExpensesPage {
       "reason":this.reason,
       "km_reading":this.km_reading,
       "bill_date":this.bill_date,
+      "rejoin_date":this.rejoin_date,
       "worker_type":'driver',
       "worker_id":this.worker_id,
       "total_bill":this.total_bill,

@@ -74,7 +74,7 @@
           <p>{{bl['total_bill']}}</p>
           <p>{{bl['bill_details']}}</p>
           <p>{{bl['km_reading']}}</p>
-          <p>
+          <p *ngIf="bl['image'] != undefined">
               <img [src]="bl['image']['image_url']" style="width:11% !important" (click)="viewImage(bl['image'])" />
           </p>
         </div>
