@@ -247,47 +247,6 @@ var AddDriverPage = /** @class */ (function () {
         });
         cameraModalPage.present();
     };
-    AddDriverPage.prototype.storeImage = function (num, type) {
-        var _this = this;
-        var cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "profile" });
-        cameraModalPage.onDidDismiss(function (resp) {
-            if (type == 'Pancard') {
-                if (num == 1) {
-                    _this.pan_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-                else {
-                    _this.pan_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-            }
-            else if (type == 'Aadharcard') {
-                if (num == 1) {
-                    _this.aadhar_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-                else {
-                    _this.aadhar_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-            }
-            else if (type == 'LicenseImage') {
-                if (num == 1) {
-                    _this.license_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-                else {
-                    _this.license_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-            }
-            else if (type == 'Profile') {
-                if (num == 0) {
-                    _this.profile_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-            }
-            else if (type == 'CancelledCheque') {
-                if (num == 0) {
-                    _this.profile_image_id = JSON.parse(localStorage.getItem("selectedimage"));
-                }
-            }
-        });
-        cameraModalPage.present();
-    };
     AddDriverPage.prototype.viewContact = function () {
         var _this = this;
         this.contacts.pickContact().then(function (resp) {
@@ -318,14 +277,14 @@ var AddDriverPage = /** @class */ (function () {
             "start_date": this.start_date,
             "city": this.city,
             "aadhar_card_number": this.aadhar_card_number,
-            "aadhar_card_front_image_id": this.aadhar_card_front_image_id != '0' ? this.aadhar_card_front_image_id['image_id'] : '0',
-            "aadhar_card_back_image_id": this.aadhar_card_back_image_id != '0' ? this.aadhar_card_back_image_id['image_id'] : '0',
+            "aadhar_card_front_image_id": this.aadhar_card_front_image_id,
+            "aadhar_card_back_image_id": this.aadhar_card_back_image_id,
             "pan_card_number": this.pan_card_number,
-            "pan_card_front_image_id": this.pan_card_front_image_id != '0' ? this.pan_card_front_image_id['image_id'] : '0',
-            "pan_card_back_image_id": this.pan_card_back_image_id != '0' ? this.pan_card_back_image_id['image_id'] : '0',
+            "pan_card_front_image_id": this.pan_card_front_image_id,
+            "pan_card_back_image_id": this.pan_card_back_image_id,
             "license_number": this.license_number,
-            "license_card_front_image_id": this.license_card_front_image_id != '0' ? this.license_card_front_image_id['image_id'] : '0',
-            "license_card_back_image_id": this.license_card_back_image_id != '0' ? this.license_card_back_image_id['image_id'] : '0',
+            "license_card_front_image_id": this.license_card_front_image_id,
+            "license_card_back_image_id": this.license_card_back_image_id,
             "account_number": this.account_number,
             "ifsc": this.ifsc,
             "reference_person": this.reference_person,

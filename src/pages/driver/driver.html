@@ -84,8 +84,23 @@
               <span class="text-color-primary" *ngIf="driver['pan_card_number'] != null">PAN - {{driver['pan_card_number']}}</span>
                       
             </ion-col>
-            <ion-col col-5 >
-              <img src="../../assets/imgs/logo.png" alt="" width="100px">
+            <ion-col col-5 *ngIf="driver['aadhar_card_number'] != null">
+              <img src="../../assets/imgs/logo.png" *ngIf="driver['aadhar_card_back_image_id'] == undefined" alt="" width="100px">
+              <p>
+                <img [src]="driver['aadhar_card_back_image_id']" *ngIf="driver['aadhar_card_back_image_id'] != undefined" alt="" width="100px">
+              </p>
+              <p>
+                <img [src]="driver['aadhar_card_front_image_id']" *ngIf="driver['aadhar_card_front_image_id'] != undefined" alt="" width="100px">
+              </p>
+            </ion-col>
+            <ion-col col-5 *ngIf="driver['pan_card_number'] != null">
+              <img src="../../assets/imgs/logo.png" *ngIf="driver['pan_card_back_image_id'] == undefined" alt="" width="100px">
+              <p>
+                <img [src]="driver['pan_card_back_image_id']" *ngIf="driver['pan_card_back_image_id'] != undefined" alt="" width="100px">
+              </p>
+              <p>
+                <img [src]="driver['pan_card_front_image_id']" *ngIf="driver['pan_card_front_image_id'] != undefined" alt="" width="100px">
+              </p>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -98,7 +113,14 @@
               
             </ion-col>
             <ion-col col-5 >
-              <img src="../../assets/imgs/logo.png" alt="" width="100px">
+              <img src="../../assets/imgs/logo.png" *ngIf="driver['license_card_back_image_id'] == undefined" alt="" width="100px">
+              <p>
+                <img [src]="driver['license_card_back_image_id']" *ngIf="driver['license_card_back_image_id'] != undefined" alt="" width="100px">
+              </p>
+              <p>
+                <img [src]="driver['license_card_front_image_id']" *ngIf="driver['license_card_front_image_id'] != undefined" alt="" width="100px">
+              </p>
+              
             </ion-col>
           </ion-row>
         </ion-col>
@@ -111,7 +133,11 @@
               
             </ion-col>
             <ion-col col-5 >
-              <img src="../../assets/imgs/logo.png" alt="" width="100px">
+              <img src="../../assets/imgs/logo.png" *ngIf="driver['extra_image_1_id'] == undefined" alt="" width="100px">
+              <p>
+                <img [src]="driver['extra_image_1_id']" *ngIf="driver['extra_image_1_id'] != undefined" alt="" width="100px">
+              </p>
+              
             </ion-col>
           </ion-row>
         </ion-col>

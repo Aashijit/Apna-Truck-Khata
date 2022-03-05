@@ -2,14 +2,15 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.saarthi.apnatruckkhata"
 4    android:hardwareAccelerated="true"
-5    android:versionCode="15"
-6    android:versionName="0.0.15" >
+5    android:versionCode="18"
+6    android:versionName="0.0.18" >
 7
 8    <uses-sdk
+8-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:30:5-44
 9        android:minSdkVersion="19"
-9-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml
+9-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:30:15-41
 10        android:targetSdkVersion="30" />
-10-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml
+10-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:30:5-44
 11
 12    <supports-screens
 12-->/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/src/main/AndroidManifest.xml:3:5-191
