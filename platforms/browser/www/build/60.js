@@ -130,6 +130,7 @@ var BuyFromShopPage = /** @class */ (function () {
         var data = {
             "srth_id": json[0]['srth_id']
         };
+        this.shops = [];
         this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
                 var dt = resp['data'];

@@ -83,8 +83,10 @@ var PartsBillDetailsModalPage = /** @class */ (function () {
         this.img = '';
         if (this.navParams.get("action") == "edit") {
             this.problems = this.navParams.get("problem_part");
+            console.log("PROBLEMS : " + JSON.stringify(this.problems));
             for (var i = 0; i < this.problems[0]['parts'].length; i++) {
-                this.amount += Number(this.problems[0]['parts'][i]['total']);
+                var amt = Number(this.problems[0]['parts'][i]['rate_per_pc']) * Number(this.problems[0]['parts'][i]['qty']);
+                this.amount += amt;
             }
         }
         this.img = this.navParams.get("image");

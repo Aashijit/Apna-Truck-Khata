@@ -96,11 +96,9 @@ export class AllImageKhataPage {
   filterList(events) {
       this.filterimages = this.images.filter(wp => {
         if (this.searchTerm != '') {
-
           var sterm = this.searchTerm.trim();
-          sterm = sterm.replace(/[^a-zA-Z]/g,"");
-          var tag_cloud =  wp.tag_cloud.replace(/[^a-zA-Z]/g,"");
-
+          sterm = sterm.replace(/[^a-zA-Z0-9]/g,"");
+          var tag_cloud =  wp.tag_cloud.replace(/[^a-zA-Z0-9]/g,"");
           return (tag_cloud.toLowerCase().indexOf(sterm.toLowerCase()) > -1);
         } 
         else 

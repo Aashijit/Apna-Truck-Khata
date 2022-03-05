@@ -102,9 +102,11 @@ var DocumentBillReportPage = /** @class */ (function () {
         this.displayCalendar = false;
         if (this.worker_id == 0)
             this.worker_id = null;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
+            "date_to": this.dateRange['to'],
+            "srth_id": json[0]['srth_id']
         };
         this.rest.post(this.codes.DOCUMENT_BILL_REPORT, data).then(function (resp) {
             console.log(resp);

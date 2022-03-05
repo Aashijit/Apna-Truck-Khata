@@ -93,6 +93,7 @@ var VehicleDocumentBillPage = /** @class */ (function () {
             for (var i = 0; i < this.details.length; i++) {
                 this.details[i]['vehicle_number'] = this.details[i]['vehicle_detail'] == undefined ? this.details[i]['vehicle_number'] : this.details[i]['vehicle_detail']['vehicle_number'];
                 this.details[i]['expiry_date'] = this.details[i]['document_expiry_date'] != undefined ? this.details[i]['document_expiry_date'] : this.details[i]['expiry_date'];
+                this.details[i]['image_url'] = this.details[i]['image_id'] != undefined ? this.details[i]['image_id'] : null;
             }
             this.changeCost();
         }

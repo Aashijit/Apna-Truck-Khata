@@ -118,6 +118,7 @@ var MechanicBillPage = /** @class */ (function () {
         var data = {
             "srth_id": json[0]['srth_id']
         };
+        this.mechanics = [];
         this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
                 var dt = resp['data'];

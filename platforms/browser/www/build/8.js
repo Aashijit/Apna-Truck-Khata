@@ -119,9 +119,7 @@ var VehicleBillReportPage = /** @class */ (function () {
             if (resp['_ReturnCode'] == '0') {
                 var persons = resp['data'];
                 for (var i = 0; i < persons.length; i++) {
-                    if (persons[i]['worker_type'] == 'shop' || persons[i]['worker_type'] == 'mechanic') {
-                        _this.shops.push(persons[i]);
-                    }
+                    _this.shops.push(persons[i]);
                 }
             }
         });

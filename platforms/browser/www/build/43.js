@@ -65,7 +65,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var DriverKhataPage = /** @class */ (function () {
-    function DriverKhataPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl, photoViewer) {
+    function DriverKhataPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl, photoViewer, ldctrl) {
         this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -74,6 +74,7 @@ var DriverKhataPage = /** @class */ (function () {
         this.message = message;
         this.modalCtrl = modalCtrl;
         this.photoViewer = photoViewer;
+        this.ldctrl = ldctrl;
         this.bills = [];
         this.filterbills = [];
         this.isupdate = false;
@@ -97,11 +98,15 @@ var DriverKhataPage = /** @class */ (function () {
         var _this = this;
         this.isupdate = false;
         var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var ld = this.ldctrl.create({
+            'content': 'Loading the drivers ...'
+        });
         var data = {
             "srth_id": json[0]['srth_id'],
             "worker_type": "driver"
         };
         this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID, data).then(function (resp) {
+            ld.dismiss();
             if (resp['_ReturnCode'] == '0') {
                 _this.bills = resp['data'];
                 _this.filterbills = _this.bills;
@@ -110,6 +115,8 @@ var DriverKhataPage = /** @class */ (function () {
                     _this.filterbills[i]['selected'] = 'false';
                 }
             }
+        }, function (error) {
+            ld.dismiss();
         });
     };
     DriverKhataPage.prototype.selectThis = function (bill) {
@@ -258,7 +265,7 @@ var DriverKhataPage = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"],
             __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"],
-            __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+            __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"]])
     ], DriverKhataPage);
     return DriverKhataPage;
 }());

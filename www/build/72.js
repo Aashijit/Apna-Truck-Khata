@@ -1,1 +1,414 @@
-webpackJsonp([72],{843:function(l,n,e){"use strict";function u(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,h.b,h.a)),t["ɵdid"](1,1097728,null,3,R.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,E.a]],null,null),t["ɵqud"](335544320,8,{contentLabel:0}),t["ɵqud"](603979776,9,{_buttons:1}),t["ɵqud"](603979776,10,{_icons:1}),t["ɵdid"](5,16384,null,0,_.a,[],null,null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](7,0,null,1,2,"ion-label",[],null,null,null,null,null)),t["ɵdid"](8,16384,[[8,4]],0,M.a,[C.a,t.ElementRef,t.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t["ɵted"](-1,null,["ALLOT"])),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](11,0,null,4,1,"ion-radio",[["value","allot"]],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==t["ɵnov"](l,12)._click(e)&&u}return u},k.b,k.a)),t["ɵdid"](12,245760,null,0,q.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,R.a],[2,y.a]],{value:[0,"value"]},null),(l()(),t["ɵted"](-1,2,["\n        "]))],function(l,n){l(n,12,0,"allot")},function(l,n){l(n,11,0,t["ɵnov"](n,12)._disabled)})}function d(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,73,"ion-content",[["padding",""],["style","background-color: rgba(0, 0, 0, 0.8) !important;"]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),t["ɵdid"](1,4374528,null,0,N.a,[C.a,w.a,A.a,t.ElementRef,t.Renderer,P.a,D.a,t.NgZone,[2,F.a],[2,O.a]],null,null),(l()(),t["ɵted"](-1,1,["\n\n  "])),(l()(),t["ɵeld"](3,0,null,1,69,"ion-card",[],null,null,null,null,null)),t["ɵdid"](4,16384,null,0,S.a,[C.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵeld"](6,0,null,null,53,"ion-card-content",[],null,null,null,null,null)),t["ɵdid"](7,16384,null,0,I.a,[C.a,t.ElementRef,t.Renderer],null,null),(l()(),t["ɵted"](-1,null,["\n      \n      "])),(l()(),t["ɵeld"](9,0,null,null,49,"ion-list",[["radio-group",""],["role","radiogroup"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"]],function(l,n,e){var u=!0,d=l.component;if("ngModelChange"===n){u=!1!==(d.options=e)&&u}if("ionChange"===n){u=!1!==d.presentModal()&&u}return u},null,null)),t["ɵdid"](10,1064960,null,1,y.a,[t.Renderer,t.ElementRef,t.ChangeDetectorRef],null,{ionChange:"ionChange"}),t["ɵqud"](335544320,1,{_header:0}),t["ɵprd"](1024,null,T.NG_VALUE_ACCESSOR,function(l){return[l]},[y.a]),t["ɵdid"](13,671744,null,0,T.NgModel,[[8,null],[8,null],[8,null],[2,T.NG_VALUE_ACCESSOR]],{model:[0,"model"]},{update:"ngModelChange"}),t["ɵprd"](2048,null,T.NgControl,null,[T.NgModel]),t["ɵdid"](15,16384,null,0,T.NgControlStatus,[T.NgControl],null,null),t["ɵdid"](16,16384,null,0,V.a,[C.a,t.ElementRef,t.Renderer,w.a,j.m,A.a],null,null),(l()(),t["ɵted"](-1,null,["\n\n        "])),(l()(),t["ɵeld"](18,0,null,null,6,"ion-list-header",[["class"," item"]],null,null,null,h.b,h.a)),t["ɵdid"](19,1097728,null,3,R.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,E.a]],null,null),t["ɵqud"](335544320,2,{contentLabel:0}),t["ɵqud"](603979776,3,{_buttons:1}),t["ɵqud"](603979776,4,{_icons:1}),t["ɵdid"](23,16384,[[1,4]],0,x.a,[C.a,t.Renderer,t.ElementRef,[8,null]],null,null),(l()(),t["ɵted"](-1,2,["\n          SELECT THE OPTION\n        "])),(l()(),t["ɵted"](-1,null,["\n      \n        "])),(l()(),t["ɵeld"](26,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,h.b,h.a)),t["ɵdid"](27,1097728,null,3,R.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,E.a]],null,null),t["ɵqud"](335544320,5,{contentLabel:0}),t["ɵqud"](603979776,6,{_buttons:1}),t["ɵqud"](603979776,7,{_icons:1}),t["ɵdid"](31,16384,null,0,_.a,[],null,null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](33,0,null,1,2,"ion-label",[],null,null,null,null,null)),t["ɵdid"](34,16384,[[5,4]],0,M.a,[C.a,t.ElementRef,t.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t["ɵted"](-1,null,["CHANGE"])),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](37,0,null,4,1,"ion-radio",[["value","change"]],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==t["ɵnov"](l,38)._click(e)&&u}return u},k.b,k.a)),t["ɵdid"](38,245760,null,0,q.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,R.a],[2,y.a]],{value:[0,"value"]},null),(l()(),t["ɵted"](-1,2,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      \n        "])),(l()(),t["ɵand"](16777216,null,null,1,null,u)),t["ɵdid"](42,16384,null,0,G.j,[t.ViewContainerRef,t.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),t["ɵted"](-1,null,["\n      \n        "])),(l()(),t["ɵeld"](44,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,h.b,h.a)),t["ɵdid"](45,1097728,null,3,R.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,E.a]],null,null),t["ɵqud"](335544320,11,{contentLabel:0}),t["ɵqud"](603979776,12,{_buttons:1}),t["ɵqud"](603979776,13,{_icons:1}),t["ɵdid"](49,16384,null,0,_.a,[],null,null),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](51,0,null,1,2,"ion-label",[],null,null,null,null,null)),t["ɵdid"](52,16384,[[11,4]],0,M.a,[C.a,t.ElementRef,t.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t["ɵted"](-1,null,["REMOVE"])),(l()(),t["ɵted"](-1,2,["\n          "])),(l()(),t["ɵeld"](55,0,null,4,1,"ion-radio",[["value","remove"]],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==t["ɵnov"](l,56)._click(e)&&u}return u},k.b,k.a)),t["ɵdid"](56,245760,null,0,q.a,[b.a,C.a,t.ElementRef,t.Renderer,[2,R.a],[2,y.a]],{value:[0,"value"]},null),(l()(),t["ɵted"](-1,2,["\n        "])),(l()(),t["ɵted"](-1,null,["\n      \n      "])),(l()(),t["ɵted"](-1,null,["\n\n    "])),(l()(),t["ɵted"](-1,null,["\n\n    "])),(l()(),t["ɵeld"](61,0,null,null,10,"ion-row",[["class","justify-content-center row"]],null,null,null,null,null)),t["ɵdid"](62,16384,null,0,U.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵeld"](64,0,null,null,6,"ion-col",[["class","text-center col"],["col-6",""]],null,null,null,null,null)),t["ɵdid"](65,16384,null,0,B.a,[],null,null),(l()(),t["ɵted"](-1,null,["\n        "])),(l()(),t["ɵeld"](67,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.exitModal()&&u}return u},H.b,H.a)),t["ɵdid"](68,1097728,null,0,J.a,[[8,""],C.a,t.ElementRef,t.Renderer],{round:[0,"round"]},null),(l()(),t["ɵted"](-1,0,["\n          EXIT\n        "])),(l()(),t["ɵted"](-1,null,["\n      "])),(l()(),t["ɵted"](-1,null,["\n    "])),(l()(),t["ɵted"](-1,null,["\n   \n  "])),(l()(),t["ɵted"](-1,1,["\n\n"])),(l()(),t["ɵted"](-1,null,["\n"]))],function(l,n){var e=n.component;l(n,13,0,e.options);l(n,38,0,"change");l(n,42,0,e.showAllot);l(n,56,0,"remove");l(n,68,0,"")},function(l,n){l(n,0,0,t["ɵnov"](n,1).statusbarPadding,t["ɵnov"](n,1)._hasRefresher);l(n,9,0,t["ɵnov"](n,15).ngClassUntouched,t["ɵnov"](n,15).ngClassTouched,t["ɵnov"](n,15).ngClassPristine,t["ɵnov"](n,15).ngClassDirty,t["ɵnov"](n,15).ngClassValid,t["ɵnov"](n,15).ngClassInvalid,t["ɵnov"](n,15).ngClassPending);l(n,37,0,t["ɵnov"](n,38)._disabled);l(n,55,0,t["ɵnov"](n,56)._disabled)})}Object.defineProperty(n,"__esModule",{value:!0});var t=e(0),a=(e(2),e(26),function(){function l(l,n,e,u){this.viewController=l,this.navCtrl=n,this.navParams=e,this.modalCtrl=u,this.options="",this.showAllot=!0,this.vehicles="",this.vehicles=JSON.parse(localStorage.getItem("vehicle_details")),this.showAllot=void 0==this.vehicles.driver_details||null==this.vehicles.driver_details}return l.prototype.presentModal=function(){if("change"==this.options){this.modalCtrl.create("ChangeDriverPage").present()}else if("allot"==this.options){this.modalCtrl.create("AllotDriverPage").present()}else if("remove"==this.options){this.modalCtrl.create("RemoveDriverPage").present()}},l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad DecisionModalPage")},l.prototype.exitModal=function(){this.viewController.dismiss()},l}()),o=function(){return function(){}}(),i=e(500),r=e(501),s=e(502),c=e(503),m=e(504),v=e(505),f=e(506),g=e(507),p=e(508),h=e(511),R=e(31),b=e(28),C=e(4),E=e(59),_=e(122),M=e(60),k=e(515),q=e(89),y=e(62),L=e(509),N=e(32),w=e(7),A=e(14),P=e(13),D=e(40),F=e(8),O=e(29),S=e(192),I=e(193),T=e(19),V=e(87),j=e(11),x=e(131),G=e(15),U=e(186),B=e(185),H=e(39),J=e(27),X=e(17),Z=e(121),z=t["ɵcrt"]({encapsulation:2,styles:[],data:{}}),K=t["ɵccf"]("page-decision-modal",a,function(l){return t["ɵvid"](0,[(l()(),t["ɵeld"](0,0,null,null,1,"page-decision-modal",[],null,null,null,d,z)),t["ɵdid"](1,49152,null,0,a,[F.a,O.a,X.a,Z.a],null,null)],null,null)},{},{},[]),Q=e(184),W=e(55);e.d(n,"DecisionModalPageModuleNgFactory",function(){return Y});var Y=t["ɵcmf"](o,[],function(l){return t["ɵmod"]([t["ɵmpd"](512,t.ComponentFactoryResolver,t["ɵCodegenComponentFactoryResolver"],[[8,[i.a,r.a,s.a,c.a,m.a,v.a,f.a,g.a,p.a,K]],[3,t.ComponentFactoryResolver],t.NgModuleRef]),t["ɵmpd"](4608,G.l,G.k,[t.LOCALE_ID,[2,G.t]]),t["ɵmpd"](4608,T["ɵi"],T["ɵi"],[]),t["ɵmpd"](4608,T.FormBuilder,T.FormBuilder,[]),t["ɵmpd"](512,G.b,G.b,[]),t["ɵmpd"](512,T["ɵba"],T["ɵba"],[]),t["ɵmpd"](512,T.FormsModule,T.FormsModule,[]),t["ɵmpd"](512,T.ReactiveFormsModule,T.ReactiveFormsModule,[]),t["ɵmpd"](512,Q.a,Q.a,[]),t["ɵmpd"](512,Q.b,Q.b,[]),t["ɵmpd"](512,o,o,[]),t["ɵmpd"](256,W.a,a,[])])})}});
+webpackJsonp([72],{
+
+/***/ 849:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddDriverPageModule", function() { return AddDriverPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_driver__ = __webpack_require__(928);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddDriverPageModule = /** @class */ (function () {
+    function AddDriverPageModule() {
+    }
+    AddDriverPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__add_driver__["a" /* AddDriverPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_driver__["a" /* AddDriverPage */]),
+            ],
+        })
+    ], AddDriverPageModule);
+    return AddDriverPageModule;
+}());
+
+//# sourceMappingURL=add-driver.module.js.map
+
+/***/ }),
+
+/***/ 928:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddDriverPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_contacts__ = __webpack_require__(498);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var AddDriverPage = /** @class */ (function () {
+    function AddDriverPage(navCtrl, navParams, contacts, rest, codes, message, modalCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.contacts = contacts;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.gender = '';
+        this.myDate = '';
+        this.vari = '';
+        this.typeOfPerson = '';
+        this.addMore = false;
+        this.worker_id = '';
+        this.worker_type = '';
+        this.name = '';
+        this.salary = '';
+        this.phone_number = '';
+        this.start_date = '';
+        this.city = '';
+        this.aadhar_card_number = '';
+        this.aadhar_card_front_image_id = '0';
+        this.aadhar_card_back_image_id = '0';
+        this.aadhar_card_front_image = null;
+        this.aadhar_card_back_image = null;
+        this.pan_card_number = '';
+        this.pan_card_front_image_id = '0';
+        this.pan_card_back_image_id = '0';
+        this.pan_card_front_image = null;
+        this.pan_card_back_image = null;
+        this.license_number = '';
+        this.license_card_front_image_id = '0';
+        this.license_card_back_image_id = '0';
+        this.license_card_front_image = null;
+        this.license_card_back_image = null;
+        this.account_number = '';
+        this.ifsc = '';
+        this.reference_person = '';
+        this.GSTN = '';
+        this.pan = '';
+        this.address_line_1 = '';
+        this.address_line_2 = '';
+        this.state = '';
+        this.pincode = '';
+        this.paid_money = '0';
+        this.due_money = '0';
+        this.profile_image_id = '0';
+        this.extra_image_1_id = '0';
+        this.extra_image_2_id = '0';
+        this.profile_image = null;
+        this.extra_image_1 = null;
+        this.extra_image_2 = null;
+        this.last_maint_id = 'srth-app';
+        this.opt_counter = '0';
+        this.is_update = false;
+        var update = this.navParams.get("update");
+        if (this.navParams.get('type') != undefined && this.navParams.get('type') != null) {
+            this.worker_type = this.navParams.get('type');
+            this.typeOfPerson = this.worker_type;
+        }
+        if (update == "true") {
+            this.is_update = true;
+            this.addMore = true;
+            var worker = JSON.parse(localStorage.getItem("worker"));
+            this.worker_id = worker['worker_id'];
+            this.worker_type = worker['worker_type'];
+            this.name = worker['name'];
+            this.salary = worker['salary'];
+            this.phone_number = worker['phone_number'];
+            this.start_date = worker['start_date'];
+            this.city = worker['city'];
+            this.aadhar_card_number = worker['aadhar_card_number'];
+            this.aadhar_card_front_image_id = worker['aadhar_card_front_image_id'];
+            ;
+            this.aadhar_card_back_image_id = worker['aadhar_card_back_image_id'];
+            ;
+            this.pan_card_number = worker['pan_card_number'];
+            this.pan_card_front_image_id = worker['pan_card_front_image_id'];
+            this.pan_card_back_image_id = worker['pan_card_back_image_id'];
+            this.license_number = worker['license_number'];
+            this.license_card_front_image_id = worker['license_card_front_image_id'];
+            this.license_card_back_image_id = worker['license_card_back_image_id'];
+            this.account_number = worker['account_number'];
+            this.ifsc = worker['ifsc'];
+            this.reference_person = worker['reference_person'];
+            this.GSTN = worker['GSTN'];
+            this.pan = worker['pan'];
+            this.address_line_1 = worker['address_line_1'];
+            this.address_line_2 = worker['address_line_2'];
+            this.state = worker['state'];
+            this.pincode = worker['pincode'];
+            this.paid_money = worker['paid_money'];
+            this.due_money = worker['due_money'];
+            this.profile_image_id = worker['profile_image_id'];
+            this.profile_image = worker['profile_image_id'];
+            this.extra_image_1_id = worker['extra_image_1_id'];
+            this.extra_image_2_id = worker['extra_image_2_id'];
+            this.last_maint_id = 'srth-app';
+            this.opt_counter = '0';
+        }
+    }
+    AddDriverPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddDriverPage');
+    };
+    AddDriverPage.prototype.change = function ($event) {
+        this.vari = $event;
+    };
+    AddDriverPage.prototype.choosePerson = function ($event) {
+        this.typeOfPerson = $event;
+    };
+    AddDriverPage.prototype.openCameraPopup = function (num, type) {
+        var _this = this;
+        if (this.worker_type == '' || this.worker_type == null) {
+            this.message.displayToast("Please select worker type");
+            return;
+        }
+        var data = {
+            "worker_type": this.worker_type,
+            "doc": type
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": this.worker_type,
+            "worker_id": this.worker_id,
+            "document_type": "profile",
+            "type": "profileimage",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var img = {
+            "image_url": this.profile_image_id
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': img });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+                img = JSON.parse(localStorage.getItem("selectedimage"));
+                if (type == 'Pancard') {
+                    if (num == 1) {
+                        _this.pan_card_front_image_id = img['image_url'];
+                        _this.pan_card_front_image = img['image_url'];
+                    }
+                    else {
+                        _this.pan_card_back_image_id = img['image_url'];
+                        _this.pan_card_back_image = img['image_url'];
+                    }
+                }
+                else if (type == 'Aadharcard') {
+                    if (num == 1) {
+                        _this.aadhar_card_front_image_id = img['image_url'];
+                        _this.aadhar_card_front_image = img['image_url'];
+                    }
+                    else {
+                        _this.aadhar_card_back_image_id = img['image_url'];
+                        _this.aadhar_card_back_image = img['image_url'];
+                    }
+                }
+                else if (type == 'LicenseImage') {
+                    if (num == 1) {
+                        _this.license_card_front_image_id = img['image_url'];
+                        _this.license_card_front_image = img['image_url'];
+                    }
+                    else {
+                        _this.license_card_back_image_id = img['image_url'];
+                        _this.license_card_back_image = img['image_url'];
+                    }
+                }
+                else if (type == 'Profile') {
+                    if (num == 0) {
+                        _this.profile_image_id = img['image_url'];
+                        _this.profile_image = img['image_url'];
+                    }
+                }
+                else if (type == 'CancelledCheque') {
+                    if (num == 0) {
+                        _this.extra_image_1_id = img['image_url'];
+                    }
+                }
+            }
+        });
+        cameraModalPage.present();
+    };
+    AddDriverPage.prototype.storeImage = function (num, type) {
+        var _this = this;
+        var cameraModalPage = this.modalCtrl.create('AllImageKhataPage', { "isselect": true, "type": "profile" });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (type == 'Pancard') {
+                if (num == 1) {
+                    _this.pan_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+                else {
+                    _this.pan_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+            }
+            else if (type == 'Aadharcard') {
+                if (num == 1) {
+                    _this.aadhar_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+                else {
+                    _this.aadhar_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+            }
+            else if (type == 'LicenseImage') {
+                if (num == 1) {
+                    _this.license_card_front_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+                else {
+                    _this.license_card_back_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+            }
+            else if (type == 'Profile') {
+                if (num == 0) {
+                    _this.profile_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+            }
+            else if (type == 'CancelledCheque') {
+                if (num == 0) {
+                    _this.profile_image_id = JSON.parse(localStorage.getItem("selectedimage"));
+                }
+            }
+        });
+        cameraModalPage.present();
+    };
+    AddDriverPage.prototype.viewContact = function () {
+        var _this = this;
+        this.contacts.pickContact().then(function (resp) {
+            _this.name = resp['displayName'];
+            _this.phone_number = resp['phoneNumbers'][0]['value'];
+        });
+    };
+    AddDriverPage.prototype.addMoreDetails = function () {
+        this.addMore = !this.addMore;
+    };
+    AddDriverPage.prototype.openCalendarPopup = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.start_date = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
+    };
+    AddDriverPage.prototype.savePerson = function () {
+        var _this = this;
+        var userdata = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userdata[0]['srth_id'],
+            "worker_type": this.worker_type,
+            "name": this.name,
+            "salary": this.salary,
+            "phone_number": this.phone_number,
+            "start_date": this.start_date,
+            "city": this.city,
+            "aadhar_card_number": this.aadhar_card_number,
+            "aadhar_card_front_image_id": this.aadhar_card_front_image_id != '0' ? this.aadhar_card_front_image_id['image_id'] : '0',
+            "aadhar_card_back_image_id": this.aadhar_card_back_image_id != '0' ? this.aadhar_card_back_image_id['image_id'] : '0',
+            "pan_card_number": this.pan_card_number,
+            "pan_card_front_image_id": this.pan_card_front_image_id != '0' ? this.pan_card_front_image_id['image_id'] : '0',
+            "pan_card_back_image_id": this.pan_card_back_image_id != '0' ? this.pan_card_back_image_id['image_id'] : '0',
+            "license_number": this.license_number,
+            "license_card_front_image_id": this.license_card_front_image_id != '0' ? this.license_card_front_image_id['image_id'] : '0',
+            "license_card_back_image_id": this.license_card_back_image_id != '0' ? this.license_card_back_image_id['image_id'] : '0',
+            "account_number": this.account_number,
+            "ifsc": this.ifsc,
+            "reference_person": this.reference_person,
+            "GSTN": this.GSTN,
+            "pan": this.pan,
+            "address_line_1": this.address_line_1,
+            "address_line_2": this.address_line_2,
+            "state": this.state,
+            "pincode": this.pincode,
+            "paid_money": this.paid_money,
+            "due_money": this.due_money,
+            "profile_image_id": this.profile_image,
+            "extra_image_1_id": this.extra_image_1_id,
+            "extra_image_2_id": this.extra_image_2_id,
+            "last_maint_id": this.last_maint_id,
+            "opt_counter": this.opt_counter
+        };
+        this.rest.post(this.codes.CREATE_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have added a ' + _this.worker_type + ' successfully!');
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AddDriverPage.prototype.updateworker = function () {
+        var _this = this;
+        var userdata = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "worker_id": this.worker_id,
+            "worker_type": this.worker_type,
+            "name": this.name,
+            "salary": this.salary,
+            "phone_number": this.phone_number,
+            "start_date": this.start_date,
+            "city": this.city,
+            "aadhar_card_number": this.aadhar_card_number,
+            "aadhar_card_front_image_id": this.aadhar_card_front_image_id,
+            "aadhar_card_back_image_id": this.aadhar_card_back_image_id,
+            "pan_card_number": this.pan_card_number,
+            "pan_card_front_image_id": this.pan_card_front_image_id,
+            "pan_card_back_image_id": this.pan_card_back_image_id,
+            "license_number": this.license_number,
+            "license_card_front_image_id": this.license_card_front_image_id,
+            "license_card_back_image_id": this.license_card_back_image_id,
+            "account_number": this.account_number,
+            "ifsc": this.ifsc,
+            "reference_person": this.reference_person,
+            "GSTN": this.GSTN,
+            "pan": this.pan,
+            "address_line_1": this.address_line_1,
+            "address_line_2": this.address_line_2,
+            "state": this.state,
+            "pincode": this.pincode,
+            "paid_money": this.paid_money,
+            "due_money": this.due_money,
+            "profile_image_id": this.profile_image,
+            "extra_image_1_id": this.extra_image_1_id,
+            "extra_image_2_id": '0',
+            "last_maint_id": this.last_maint_id,
+            "opt_counter": this.opt_counter
+        };
+        this.rest.post(this.codes.UPDATE_WORKER, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have updated a ' + _this.worker_type + ' successfully!');
+                localStorage.setItem("worker", JSON.stringify(data));
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AddDriverPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-add-driver',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-driver/add-driver.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user-circle" aria-hidden="true"></i>\n          ADD PERSON\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <!-- <ion-list> -->\n    \n      <ion-item class="label-select">\n        <ion-label floating style="margin-left: 10px;">TYPE</ion-label>\n\n        <ion-select interface="popover" [(ngModel)]="worker_type" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" (ionChange)="choosePerson($event)">\n          <ion-option value="mechanic">MECHANIC</ion-option>\n          <ion-option value="shop">SHOP</ion-option>\n          <ion-option value="driver">DRIVER</ion-option>\n\n          <ion-option value="documents">DOCUMENTS</ion-option>\n\n          <ion-option value="insurance">INSURANCE</ion-option>\n        </ion-select>\n\n       \n      </ion-item>\n\n\n    \n\n\n      <ion-row class="profile-picture">\n        <ion-col col-6 class="text-center">\n          <img *ngIf="typeOfPerson  == \'mechanic\'" src="../../assets/saarthi-icon/png/007-mechanic.png" alt="">\n          <img *ngIf="typeOfPerson  == \'shop\'" src="../../assets/saarthi-icon/png/004-shop.png" alt="">\n          <img *ngIf="typeOfPerson  == \'driver\'" src="../../assets/saarthi-icon/png/driver.png" alt="">\n          <img *ngIf="typeOfPerson  == \'documents\'" src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n          <img *ngIf="typeOfPerson  == \'insurance\'" src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n        </ion-col>\n        <ion-col col-6 class="text-center" (click)="openCameraPopup(0,\'Profile\')">\n          <i class="fa fa-camera" *ngIf="profile_image == \'0\' || profile_image == null" aria-hidden="true" ></i> \n          <span *ngIf="profile_image != \'0\' && profile_image != null">\n            <img  [src]="profile_image" />\n          </span>\n\n          <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create" ></ion-icon>\n\n        </ion-col>\n\n      </ion-row>\n\n\n      <!-- <div class="label-float" >\n        <input type="text" [(ngModel)]="name"  placeholder=" " />\n        <label>NAME</label>\n        <i class="fa fa-user" aria-hidden="true"></i>\n\n      </div> -->\n\n      <!-- <br/>\n      <br/>\n      <br/> -->\n      <!-- (click)="viewContact()" -->\n      <p style="margin-left: 6px;font-size: 14px;color: #0752af;">{{name}}</p>\n      <div class="label-float" >\n        <input type="text" [(ngModel)]="phone_number" (click)="viewContact()"  placeholder=" " />\n        <label>NAME & PHONE</label>\n        <i class="fa fa-address-book" aria-hidden="true"></i>\n\n      </div>\n      \n\n    <div class="label-float" *ngIf="typeOfPerson  == \'driver\'" >\n      <input type="tel" [(ngModel)]="salary" (keyup.enter)="openCalendarPopup()"  placeholder=" " />\n      <label>SALARY (MONTHLY) &#x20b9;</label>\n      <i class="fa fa-money" aria-hidden="true"></i>\n    </div>  \n\n\n\n      <div class="label-float" *ngIf="typeOfPerson  == \'driver\'" (click)="openCalendarPopup()">\n        <input type="text" [(ngModel)]="start_date"/>\n        <label>START DATE</label>\n        <i class="fa fa-calendar" aria-hidden="true"></i>\n\n      </div>\n\n    \n\n    <div *ngIf="addMore">\n\n      <ion-item class="label-select"  >\n        <ion-label style="margin-left: 10px;" floating>DOC</ion-label>\n\n        <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"  (ionChange)="change($event)">\n          <ion-option value="Aadharcard">AADHAR CARD</ion-option>\n          <ion-option value="Pancard">PAN CARD</ion-option>\n        </ion-select>\n      </ion-item>\n\n\n\n        <div *ngIf="vari  == \'Aadharcard\'" class="label-float" >\n          <input type="tel" maxlength="12" max="12" [(ngModel)]="aadhar_card_number"  placeholder=" " />\n          <label>AADHAR NUMBER</label>\n          <i class="fa fa-file" aria-hidden="true"></i>\n\n        </div>\n\n        <div *ngIf="vari  == \'Pancard\'" class="label-float" >\n          <input type="tel"  [(ngModel)]="pan_card_number"   placeholder=" " />\n          <label>PAN NUMBER</label>\n          <i class="fa fa-file" aria-hidden="true"></i>\n\n        </div>\n\n        <ion-row *ngIf="vari  == \'Aadharcard\'">\n          <ion-col col-6 class="text-center" >\n            <div class="add-circle-div">\n              <button ion-button clear (click)="openCameraPopup(1,\'Aadharcard\')">              \n                <i class="fa fa-camera" *ngIf="aadhar_card_front_image_id == \'0\'" aria-hidden="true" ></i> \n                <span *ngIf="aadhar_card_front_image_id != \'0\'">\n                  <img  [src]="aadhar_card_front_image_id" />\n                </span>\n              </button>\n              <p>(DOCUMENT FRONT SIDE)</p>\n            </div>           \n          </ion-col>\n          <ion-col col-6 class="text-center" >\n            <div class="add-circle-div">\n              <button ion-button clear (click)="openCameraPopup(2,\'Aadharcard\')">              \n                <i class="fa fa-camera" *ngIf="aadhar_card_back_image_id == \'0\'" aria-hidden="true" ></i> \n                <span *ngIf="aadhar_card_back_image_id != \'0\'">\n                  <img  [src]="aadhar_card_back_image_id" />\n                </span>\n              </button>\n              <p>(DOCUMENT BACK SIDE)</p>\n            </div>\n          </ion-col>\n        </ion-row>\n\n        <ion-row *ngIf="vari  == \'Pancard\'">\n          <ion-col col-6 class="text-center" >\n            <div class="add-circle-div">\n              <button ion-button clear class="img-buttons" (click)="openCameraPopup(1,\'Pancard\')">              \n                <i class="fa fa-camera" *ngIf="pan_card_front_image_id == \'0\'" aria-hidden="true" ></i> \n                <span *ngIf="pan_card_front_image_id != \'0\'">\n                  <img  [src]="pan_card_front_image_id" />\n                </span>\n              </button>\n              <p>(DOCUMENT FRONT SIDE)</p>\n            </div>           \n          </ion-col>\n          <ion-col col-6 class="text-center" >\n            <div class="add-circle-div">\n              <button ion-button clear class="img-buttons" (click)="openCameraPopup(2,\'Pancard\')">              \n                <i class="fa fa-camera" *ngIf="pan_card_back_image_id == \'0\'" aria-hidden="true" ></i> \n                <span *ngIf="pan_card_back_image_id != \'0\'">\n                  <img  [src]="pan_card_back_image_id" />\n                </span>\n              </button>\n              <p>(DOCUMENT BACK SIDE)</p>\n            </div>\n          </ion-col>\n        </ion-row>\n\n      <!-- </ion-item> -->\n\n      <div class="label-float" *ngIf="typeOfPerson  == \'driver\'">\n        <input type="tel" [(ngModel)]="license_number"  placeholder=" " />\n        <label>LICENSE NUMBER</label>\n        <i class="fa fa-file" aria-hidden="true"></i>\n\n      </div>\n\n      <ion-row *ngIf="typeOfPerson  == \'driver\'">\n        <ion-col col-6 class="text-center" >\n          <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->\n          <div class="add-circle-div">\n            <button ion-button clear class="img-buttons" (click)="openCameraPopup(1,\'LicenseImage\')">              \n              <i class="fa fa-camera" aria-hidden="true" *ngIf="license_card_front_image_id == \'0\'" ></i> \n              <span *ngIf="license_card_front_image_id != \'0\'">\n                <img  [src]="license_card_front_image_id" />\n              </span>\n            </button>\n\n            <!-- <i class="fa fa-camera" aria-hidden="true" ></i>  -->\n            <!-- <ion-icon class="add-circle" name="ios-add-circle"></ion-icon> -->\n            <p>(DOCUMENT FRONT SIDE)</p>\n\n          </div>\n\n         \n        </ion-col>\n        <ion-col col-6 class="text-center" >\n          <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->\n          <div class="add-circle-div">\n            <button ion-button clear class="img-buttons" (click)="openCameraPopup(2,\'LicenseImage\')">   \n              <span *ngIf="license_card_back_image_id != \'0\'">\n                <img  [src]="license_card_back_image_id" />\n              </span>           \n              <i class="fa fa-camera" *ngIf="license_card_back_image_id == \'0\'" aria-hidden="true" ></i> \n            </button>\n\n            <!-- <i class="fa fa-camera" aria-hidden="true" ></i>  -->\n            <!-- <ion-icon class="add-circle" name="ios-add-circle"></ion-icon> -->\n            <p>(DOCUMENT BACK SIDE)</p>\n\n          </div>\n\n            <!-- <ion-icon class="add-circle" name="ios-add-circle" style="font-size: 40px;"></ion-icon> -->\n\n    \n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-item class="label-select" >\n        <ion-label style="margin-left: 10px;" floating>CITY</ion-label>\n\n        <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="city" >\n          <ion-option value="city1">CITY 1</ion-option>\n          <ion-option value="city2">CITY 2</ion-option>\n          <ion-option value="city3">CITY 3</ion-option>\n\n          <ion-option value="city4">CITY 4</ion-option>\n\n          <ion-option value="city5">CITY 5</ion-option>\n\n        </ion-select>\n      </ion-item>\n\n      <div class="label-float" >\n        <input type="tel" [(ngModel)]="pan"  placeholder=" " />\n        <label>PAN NUMBER</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n      <div class="label-float" >\n        <input type="tel" [(ngModel)]="GSTN"  placeholder=" " />\n        <label>GST NUMBER (OPTIONAL)</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="GST NUMBER (OPTIONAL)"></ion-input>\n      </ion-item> -->\n\n<!--    \n      <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 1"></ion-input>\n      </ion-item> -->\n      <div class="label-float" >\n        <input type="text" [(ngModel)]="address_line_1"  placeholder=" " />\n        <label>ADDRESS LINE 1</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="ADDRESS LINE 2"></ion-input>\n      </ion-item> -->\n\n      <div class="label-float" >\n        <input type="text"  [(ngModel)]="address_line_2"   placeholder=" " />\n        <label>ADDRESS LINE 2</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n      <ion-row class="state" >\n        <ion-col col-6>\n          <ion-item class="label-select">\n            <ion-label style="margin-left: 10px;" floating>STATE</ion-label>\n            <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="state">\n              <ion-option value="state 1">State 1</ion-option>\n              <ion-option value="state 2">State 2</ion-option>\n            </ion-select>\n          </ion-item>\n        </ion-col>\n        <ion-col col-6>\n          <!-- <ion-item>\n            <ion-input type="text" placeholder="PINCODE"></ion-input>\n          </ion-item> -->\n          <div class="label-float" >\n            <input type="tel" [(ngModel)]="pincode"  placeholder=" " />\n            <label>PINCODE</label>\n            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n    \n          </div>\n        </ion-col>\n      </ion-row>\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>\n      </ion-item> -->\n      <div class="label-float" >\n        <input type="tel" [(ngModel)]="account_number"  placeholder=" " />\n        <label>ACCOUNT NUMBER</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n      <!-- <ion-item>\n        <ion-input type="text" placeholder="IFSC"></ion-input>\n      </ion-item> -->\n      <div class="label-float" >\n        <input type="text" [(ngModel)]="ifsc"  placeholder=" " />\n        <label>IFSC</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n      <!-- <div class="add-icon">\n        <ion-item>\n          <ion-input type="text" placeholder="REFERENCE PERSON"></ion-input>\n        </ion-item>\n        <i class="fa fa-address-book" aria-hidden="true"></i>\n      </div>\n       -->\n      <div class="label-float" *ngIf="typeOfPerson  == \'driver\'">\n        <input type="text" [(ngModel)]="reference_person"  placeholder=" " />\n        <label>REFERENCE PERSON</label>\n        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n      </div>\n\n\n      <ion-row class="profile-picture">\n        <ion-col col-5 (click)="openCameraPopup(0,\'CancelledCheque\')">\n          <!-- <i class="fa fa-camera" aria-hidden="true"></i> -->\n          \n\n          <i class="fa fa-camera" *ngIf="extra_image_1_id == \'0\'" aria-hidden="true" ></i> \n          <span *ngIf="extra_image_1_id != \'0\'">\n            <img  [src]="extra_image_1_id" />\n          </span>\n\n          <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n        </ion-col>\n        <ion-col col-6>\n          <h6>CANCELLED CHEQUE</h6> \n        </ion-col>\n\n      </ion-row>\n\n    </div>\n      \n\n    \n\n      <!-- <div class="text-center mt-4">\n\n        <button ion-button round class="custom-button">SAVE DETAILS</button>\n      </div> -->\n      \n    <!-- </ion-list> -->\n\n  </div>\n\n  <ion-row style="margin: 0;">\n    <ion-col col-12 class="text-center">\n      <button ion-button round  class="custom-button save-button" *ngIf="is_update" (click)="updateworker()">UPDATE</button>\n\n    </ion-col>\n\n    <ion-col col-6 class="text-center">\n      <button ion-button  class="custom-button add-more-button"  *ngIf="!is_update" (click)="addMoreDetails()">ADD MORE DETAILS</button>\n\n    </ion-col>\n    <ion-col col-6 class="text-center">\n      <button ion-button round class="custom-button save-button"  *ngIf="!is_update" (click)="savePerson()">SAVE</button>\n\n    </ion-col>\n  </ion-row>\n</ion-content> \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-driver/add-driver.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_contacts__["b" /* Contacts */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], AddDriverPage);
+    return AddDriverPage;
+}());
+
+//# sourceMappingURL=add-driver.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=72.js.map

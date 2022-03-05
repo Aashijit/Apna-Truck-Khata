@@ -2,7 +2,6 @@
   <ion-navbar>
     <ion-row>
       <ion-col col-1 class="custom-back-button">
-        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
       </ion-col>
 
       <ion-col col-9 class="person-name text-left">
@@ -24,120 +23,6 @@
   <ion-col col-12>
     <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>
   </ion-col>
-  <!-- <ion-card style="border-radius: 8px !important;">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-12 style="text-align: center;">
-          <h2 class="subhead">Upload Image</h2>
-        </ion-col>
-        <ion-col col-7 style="text-align: center;">
-          <ion-item style="background: none !important;">
-            <ion-label floating style="text-align: left !important;">Type</ion-label>
-            <ion-select [disabled]="isselect && type != 'all'" [(ngModel)]="tp" interface="popover">
-              <ion-option value="sbills">Shop Bills</ion-option>
-              <ion-option value="mbills">Mechanic Bills</ion-option>
-              <ion-option value="preceipts">Payment Receipts</ion-option>
-              <ion-option value="drbills">Driver Bills</ion-option>
-              <ion-option value="profile">Profile</ion-option>
-              <ion-option value="drdoc">Driver Document</ion-option>
-              <ion-option value="vhdoc">Vehicle Document</ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-
-
-      <ion-row>
-        <ion-col col-6>
-          <button ion-button class="custom-button" style="width: 150px !important;margin-left: 18px;"
-            (click)="getImage('camera')">Camera &nbsp; <ion-icon name="camera"></ion-icon></button>
-        </ion-col>
-        <ion-col col-6>
-          <button ion-button class="custom-button" style="width: 150px !important;margin-left: -4px;"
-            (click)="getImage('gallery')">Gallery &nbsp; <ion-icon ios="ios-image" md="md-image"></ion-icon></button>
-        </ion-col>
-      </ion-row>
-
-      <ion-row *ngIf="upload_image != ''">
-        <ion-col col-6>
-          <img [src]="upload_image" class="upl_img" />
-        </ion-col>
-        <ion-col col-6>
-          <button ion-button class="custom-button" style="width: 150px !important;margin-left: -4px;"
-            (click)="presentConfirm()">Save Image</button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card> -->
-
-  <!-- <h2 class="subhead">Select type of images</h2>
-
-  <ion-row no-lines [disabled]="isselect && type != 'all'" radio-group style="margin: 0;" [(ngModel)]="type"
-    (ionChange)="getImagesByType($event)">
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label>Shop Bills</ion-label>
-        <ion-radio value="sbills"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label>Mechanic Bills</ion-label>
-        <ion-radio value="mbills"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label>Payment Receipts</ion-label>
-        <ion-radio value="preceipts"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label> Driver Bills</ion-label>
-        <ion-radio value="drbills"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label> Document Bills</ion-label>
-        <ion-radio value="dbills"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label> Profile</ion-label>
-        <ion-radio value="profile"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label> Driver Document</ion-label>
-        <ion-radio value="drdocument"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-
-    <ion-col col-6>
-      <ion-item>
-        <ion-label> Vehicle Document</ion-label>
-        <ion-radio value="vhdocument"></ion-radio>
-      </ion-item>
-    </ion-col>
-
-  </ion-row> -->
-
 
   <ion-list>
       <ion-item *ngFor="let img of filterimages" (click)="viewImage(img)">
@@ -157,22 +42,5 @@
         </ion-grid>
       </ion-item>
   </ion-list>
-
-  <!-- <ion-row style="padding-left:16px !important; padding-right:16px !important">
-    <ion-col col-12>
-      <div *ngFor="let img of images" >
-        <p *ngIf="img['image_url'] != null">
-          <img [src]="img['image_url']" imageViewer />
-        </p>
-        <p class="dt">
-          {{datetransform.transform(img['last_maint_ts'],'d, MMM yy')}}
-          <span>
-            {{img['tag_cloud']}}
-          </span>
-        </p>
-      </div>
-    </ion-col>
-  </ion-row> -->
-
 
 </ion-content>

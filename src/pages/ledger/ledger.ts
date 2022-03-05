@@ -18,6 +18,7 @@ export class LedgerPage {
   img : any = null;
 
   payment_id : any = '';
+  payid : any = '';
   paid_to_worker_id : any = '';
   date_of_payment : any = '';
   mode_of_payment : any = '';
@@ -40,6 +41,8 @@ export class LedgerPage {
   payment : any = '';
 
   isUpdate : boolean = false;
+
+  
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
@@ -74,7 +77,9 @@ export class LedgerPage {
   }
 
   ionViewWillEnter(){
-
+    this.rest.post(this.codes.GET_LAST_PAYMENT_ID,{}).then(resp => {
+      this.payid= Number(resp['data']) + 1;
+    });
   }
 
   openCalendarPopup() {
@@ -122,7 +127,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "date_of_payment":this.date_of_payment,
       "worker_type":this.worker['worker_type'],
-      "payment_id":this.payment_id
+      "payment_id":this.payid
     };
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
  
@@ -139,8 +144,10 @@ export class LedgerPage {
     let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':this.img});
 
     cameraModalPage.onDidDismiss(resp => {
-      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
-        this.img = JSON.parse(localStorage.getItem("selectedimage"));
+      if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+        var image = JSON.parse(localStorage.getItem("selectedimage")); 
+        this.img = image['image_url'];
+      }
       else
         this.img = null;
     });
@@ -207,6 +214,9 @@ export class LedgerPage {
         this.details  = '' ;
         this.payment_amount = '';
         this.bill_ids = [];
+        this.rest.post(this.codes.GET_LAST_PAYMENT_ID,{}).then(resp => {
+          this.payid= Number(resp['data']) + 1;
+        });
       }
     });
   }

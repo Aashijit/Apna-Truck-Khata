@@ -1,1 +1,570 @@
-webpackJsonp([47],{810:function(l,n,u){"use strict";function e(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,7,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n            "])),(l()(),_["ɵeld"](2,0,null,null,1,"p",[["style","color: #000;"]],null,null,null,null,null)),(l()(),_["ɵted"](3,null,["",""])),(l()(),_["ɵted"](-1,null,["\n             "])),(l()(),_["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["Person"])),(l()(),_["ɵted"](-1,null,["\n            "]))],null,function(l,n){l(n,3,0,n.parent.context.$implicit.name)})}function t(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,7,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n              "])),(l()(),_["ɵeld"](2,0,null,null,1,"p",[["style","color: #000;"]],null,null,null,null,null)),(l()(),_["ɵted"](3,null,["",""])),(l()(),_["ɵted"](-1,null,["\n              "])),(l()(),_["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["Status"])),(l()(),_["ɵted"](-1,null,["\n           "]))],null,function(l,n){l(n,3,0,n.parent.context.$implicit.name)})}function i(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,12,"ion-item",[["class","item item-block"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.clickedsearchitem(l.context.$implicit)&&e}return e},V.b,V.a)),_["ɵdid"](1,1097728,null,3,M.a,[A.a,j.a,_.ElementRef,_.Renderer,[2,L.a]],null,null),_["ɵqud"](335544320,1,{contentLabel:0}),_["ɵqud"](603979776,2,{_buttons:1}),_["ɵqud"](603979776,3,{_icons:1}),_["ɵdid"](5,16384,null,0,U.a,[],null,null),(l()(),_["ɵted"](-1,2,["\n           "])),(l()(),_["ɵand"](16777216,null,2,1,null,e)),_["ɵdid"](8,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,2,["\n           "])),(l()(),_["ɵand"](16777216,null,2,1,null,t)),_["ɵdid"](11,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,2,["\n          "]))],function(l,n){l(n,8,0,"name"==n.context.$implicit.type);l(n,11,0,"type"==n.context.$implicit.type)},null)}function o(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,13,"ion-card",[],null,null,null,null,null)),_["ɵdid"](1,16384,null,0,K.a,[j.a,_.ElementRef,_.Renderer],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,9,"ion-card-content",[],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,q.a,[j.a,_.ElementRef,_.Renderer],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](6,0,null,null,5,"ion-list",[],null,null,null,null,null)),_["ɵdid"](7,16384,null,0,J.a,[j.a,_.ElementRef,_.Renderer,H.a,W.m,Y.a],null,null),(l()(),_["ɵted"](-1,null,["\n          "])),(l()(),_["ɵand"](16777216,null,null,1,null,i)),_["ɵdid"](10,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,10,0,n.component.displaysearchitems)},null)}function c(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function d(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,4,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,c)),_["ɵdid"](3,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,3,0,n.component.filterworkers)},null)}function a(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function r(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function s(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function m(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,10,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,a)),_["ɵdid"](3,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,r)),_["ɵdid"](6,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,s)),_["ɵdid"](9,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n  "]))],function(l,n){var u=n.component;l(n,3,0,u.di);l(n,6,0,u.ms);l(n,9,0,u.dr)},null)}function p(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function f(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function h(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function v(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,10,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,p)),_["ɵdid"](3,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,f)),_["ɵdid"](6,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,h)),_["ɵdid"](9,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n  "]))],function(l,n){var u=n.component;l(n,3,0,u.ms);l(n,6,0,u.di);l(n,9,0,u.dr)},null)}function y(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function g(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function w(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,14,"ion-row",[["class","every-details justify-content-center row"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.details(l.context.$implicit)&&e}return e},null,null)),_["ɵdid"](1,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](3,0,null,null,2,"ion-col",[["class","name col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](4,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](5,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](7,0,null,null,2,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](8,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](9,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](11,0,null,null,2,"ion-col",[["class","money col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](12,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](13,null,["\n        ","\n      "])),(l()(),_["ɵted"](-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,5,0,n.context.$implicit.name);l(n,9,0,n.context.$implicit.worker_type);l(n,13,0,u.num(n.context.$implicit.total_bill_money)-u.num(n.context.$implicit.paid_money))})}function b(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,10,"div",[],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,y)),_["ɵdid"](3,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,g)),_["ɵdid"](6,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,w)),_["ɵdid"](9,802816,null,0,B.i,[_.ViewContainerRef,_.TemplateRef,_.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),_["ɵted"](-1,null,["\n  "]))],function(l,n){var u=n.component;l(n,3,0,u.dr);l(n,6,0,u.di);l(n,9,0,u.ms)},null)}function k(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,31,"ion-header",[],null,null,null,null,null)),_["ɵdid"](1,16384,null,0,z.a,[j.a,_.ElementRef,_.Renderer,[2,Q.a]],null,null),(l()(),_["ɵted"](-1,null,["\n  "])),(l()(),_["ɵeld"](3,0,null,null,27,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,X.b,X.a)),_["ɵdid"](4,49152,null,0,ll.a,[nl.a,[2,Q.a],[2,ul.a],j.a,_.ElementRef,_.Renderer],null,null),(l()(),_["ɵted"](-1,3,["\n    "])),(l()(),_["ɵeld"](6,0,null,3,23,"ion-row",[["class","row"]],null,null,null,null,null)),_["ɵdid"](7,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),_["ɵdid"](10,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n      \n      "])),(l()(),_["ɵeld"](14,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-7",""]],null,null,null,null,null)),_["ɵdid"](15,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](17,0,null,null,4,"ion-title",[["style","margin-left: -30px;"]],null,null,null,el.b,el.a)),_["ɵdid"](18,49152,null,0,tl.a,[j.a,_.ElementRef,_.Renderer,[2,il.a],[2,ll.a]],null,null),(l()(),_["ɵted"](-1,0,["        \n          "])),(l()(),_["ɵeld"](20,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-file-text"],["style","margin-left: 10px"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,0,["   ACCOUNT KHATA\n        "])),(l()(),_["ɵted"](-1,null,["\n\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](24,0,null,null,4,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),_["ɵdid"](25,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](27,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,3,["\n  "])),(l()(),_["ɵted"](-1,null,["\n"])),(l()(),_["ɵted"](-1,null,["\n\n"])),(l()(),_["ɵeld"](33,0,null,null,131,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ol.b,ol.a)),_["ɵdid"](34,4374528,null,0,cl.a,[j.a,H.a,Y.a,_.ElementRef,_.Renderer,nl.a,dl.a,_.NgZone,[2,Q.a],[2,ul.a]],null,null),(l()(),_["ɵted"](-1,1,["\n  "])),(l()(),_["ɵeld"](36,0,null,1,127,"div",[["class","container"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵeld"](39,0,null,null,32,"ion-row",[["class","bill row"]],null,null,null,null,null)),_["ɵdid"](40,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](42,0,null,null,8,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](43,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](45,0,null,null,1,"p",[["class","total-bill"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["TOTAL BILL"])),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](48,0,null,null,1,"div",[["class","ammount"]],null,null,null,null,null)),(l()(),_["ɵted"](49,null,["₹ ",""])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](52,0,null,null,8,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](53,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](55,0,null,null,1,"p",[["class","paid-money"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["PAID MONEY"])),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](58,0,null,null,1,"div",[["class","ammount"]],null,null,null,null,null)),(l()(),_["ɵted"](59,null,["₹ ",""])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](62,0,null,null,8,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),_["ɵdid"](63,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        "])),(l()(),_["ɵeld"](65,0,null,null,1,"p",[["class","due-money"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["DUE MONEY"])),(l()(),_["ɵted"](-1,null,["\n        \n        "])),(l()(),_["ɵeld"](68,0,null,null,1,"div",[["class","ammount"]],null,null,null,null,null)),(l()(),_["ɵted"](69,null,["₹ ",""])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵeld"](73,0,null,null,8,"ion-row",[["class","full-report row"]],null,null,null,null,null)),_["ɵdid"](74,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,[" \n      "])),(l()(),_["ɵeld"](76,0,null,null,4,"ion-col",[["class","col"],["col-12",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.fullreport()&&e}return e},null,null)),_["ɵdid"](77,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n          FULL REPORT "])),(l()(),_["ɵeld"](79,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-file-text"],["style","margin-left: 10px"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n\n      "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵeld"](83,0,null,null,23,"ion-row",[["class","justify-content-center row"]],null,null,null,null,null)),_["ɵdid"](84,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](86,0,null,null,3,"ion-col",[["class","col"],["col-3",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.selectMechanicShop()&&e}return e},null,null)),_["ɵdid"](87,278528,null,0,B.h,[_.IterableDiffers,_.KeyValueDiffers,_.ElementRef,_.Renderer2],{ngClass:[0,"ngClass"]},null),_["ɵdid"](88,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        MECHANIC SHOP\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](91,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),_["ɵdid"](92,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](94,0,null,null,3,"ion-col",[["class","col"],["col-3",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.selectDocumentInsurance()&&e}return e},null,null)),_["ɵdid"](95,278528,null,0,B.h,[_.IterableDiffers,_.KeyValueDiffers,_.ElementRef,_.Renderer2],{ngClass:[0,"ngClass"]},null),_["ɵdid"](96,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        DOCUMENT INSURANCE\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](99,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),_["ɵdid"](100,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](102,0,null,null,3,"ion-col",[["class","col"],["col-3",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.selectDriver()&&e}return e},null,null)),_["ɵdid"](103,278528,null,0,B.h,[_.IterableDiffers,_.KeyValueDiffers,_.ElementRef,_.Renderer2],{ngClass:[0,"ngClass"]},null),_["ɵdid"](104,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        DRIVER\n\n      "])),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵeld"](109,0,null,null,9,"div",[["class","custom-searchbar-div"],["style","position: relative;"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](111,0,null,null,4,"ion-searchbar",[["class","custom-searchbar"],["placeholder","SEARCH"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ngModelChange"],[null,"click"],[null,"ionInput"]],function(l,n,u){var e=!0,t=l.component;if("ngModelChange"===n){e=!1!==(t.searchTerm=u)&&e}if("click"===n){e=!1!==t.clicksearchbar()&&e}if("ionInput"===n){e=!1!==t.filterWorker(u)&&e}return e},al.b,al.a)),_["ɵdid"](112,671744,null,0,rl.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),_["ɵprd"](2048,null,rl.NgControl,null,[rl.NgModel]),_["ɵdid"](114,16384,null,0,rl.NgControlStatus,[rl.NgControl],null,null),_["ɵdid"](115,1294336,null,0,sl.a,[j.a,H.a,_.ElementRef,_.Renderer,[2,rl.NgControl]],{placeholder:[0,"placeholder"]},{ionInput:"ionInput"}),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](117,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-angle-down"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,o)),_["ɵdid"](121,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,null,["\n    \n    "])),(l()(),_["ɵeld"](123,0,null,null,20,"ion-row",[["class","justify-content-center row"]],null,null,null,null,null)),_["ɵdid"](124,16384,null,0,G.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](126,0,null,null,2,"ion-col",[["class","details driver-name col"],["col-3",""]],null,null,null,null,null)),_["ɵdid"](127,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        NAME\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](130,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),_["ɵdid"](131,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](133,0,null,null,2,"ion-col",[["class","details status col"],["col-3",""]],null,null,null,null,null)),_["ɵdid"](134,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        STATUS\n      "])),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](137,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),_["ɵdid"](138,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](140,0,null,null,2,"ion-col",[["class","details col"],["col-3",""]],null,null,null,null,null)),_["ɵdid"](141,16384,null,0,Z.a,[],null,null),(l()(),_["ɵted"](-1,null,["\n        DUE AMOUNT\n      "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵand"](16777216,null,null,1,null,d)),_["ɵdid"](146,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,null,["\n\n  "])),(l()(),_["ɵand"](16777216,null,null,1,null,m)),_["ɵdid"](149,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,null,["\n\n  "])),(l()(),_["ɵand"](16777216,null,null,1,null,v)),_["ɵdid"](152,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,null,["\n\n  "])),(l()(),_["ɵand"](16777216,null,null,1,null,b)),_["ɵdid"](155,16384,null,0,B.j,[_.ViewContainerRef,_.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),_["ɵted"](-1,null,["\n\n    "])),(l()(),_["ɵeld"](157,0,null,null,5,"div",[["class","fixed-div text-center mt-4"]],null,null,null,null,null)),(l()(),_["ɵted"](-1,null,["\n      "])),(l()(),_["ɵeld"](159,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openDriverAddPage()&&e}return e},ml.b,ml.a)),_["ɵdid"](160,1097728,null,0,pl.a,[[8,""],j.a,_.ElementRef,_.Renderer],{round:[0,"round"]},null),(l()(),_["ɵted"](-1,0,["+ ADD PERSON"])),(l()(),_["ɵted"](-1,null,["\n    "])),(l()(),_["ɵted"](-1,null,["\n    \n  "])),(l()(),_["ɵted"](-1,1,["\n"])),(l()(),_["ɵted"](-1,null,["  \n"]))],function(l,n){var u=n.component;l(n,87,0,1==u.mechanicshop?"sort-option mechanic selected":"sort-option mechanic");l(n,95,0,1==u.documentinsurance?"sort-option document selected":"sort-option document");l(n,103,0,1==u.driver?"sort-option drive selected":"sort-option drive");l(n,112,0,u.searchTerm);l(n,115,0,"SEARCH");l(n,121,0,u.displayfilter);l(n,146,0,u.all&&!u.documentinsurance&&!u.mechanicshop&&!u.driver);l(n,149,0,u.documentinsurance&&!u.all&&!u.mechanicshop&&!u.driver);l(n,152,0,u.mechanicshop&&!u.all&&!u.documentinsurance&&!u.driver);l(n,155,0,u.driver&&!u.all&&!u.mechanicshop&&!u.documentinsurance);l(n,160,0,"")},function(l,n){var u=n.component;l(n,3,0,_["ɵnov"](n,4)._hidden,_["ɵnov"](n,4)._sbPadding);l(n,33,0,_["ɵnov"](n,34).statusbarPadding,_["ɵnov"](n,34)._hasRefresher);l(n,49,0,u.total_bill);l(n,59,0,u.paid_money);l(n,69,0,u.due_money);l(n,111,1,[_["ɵnov"](n,114).ngClassUntouched,_["ɵnov"](n,114).ngClassTouched,_["ɵnov"](n,114).ngClassPristine,_["ɵnov"](n,114).ngClassDirty,_["ɵnov"](n,114).ngClassValid,_["ɵnov"](n,114).ngClassInvalid,_["ɵnov"](n,114).ngClassPending,_["ɵnov"](n,115)._animated,_["ɵnov"](n,115)._value,_["ɵnov"](n,115)._isActive,_["ɵnov"](n,115)._showCancelButton,_["ɵnov"](n,115)._shouldAlignLeft,_["ɵnov"](n,115)._isFocus])})}Object.defineProperty(n,"__esModule",{value:!0});var _=u(0),R=(u(2),u(26),u(84)),C=u(183),x=function(){function l(l,n,u,e,t){this.modalCtrl=l,this.navCtrl=n,this.navParams=u,this.rest=e,this.codes=t,this.workers=[],this.filterworkers=[],this.mechanicshop=!1,this.ms=[],this.documentinsurance=!1,this.di=[],this.driver=!1,this.dr=[],this.all=!0,this.displayfilter=!1,this.displaysearchitems=[],this.searchTerm="",this.search=[],this.total_bill=0,this.paid_money=0,this.due_money=0}return l.prototype.details=function(l){localStorage.setItem("worker",JSON.stringify(l)),"driver"==l.worker_type?this.navCtrl.push("DriverPage"):"mechanic"==l.worker_type?this.navCtrl.push("MechanicPage"):"shop"==l.worker_type?this.navCtrl.push("ShopPage"):"documents"==l.worker_type?this.navCtrl.push("DocumentPage"):"insurance"==l.worker_type&&this.navCtrl.push("InsurancePage")},l.prototype.fullreport=function(){this.modalCtrl.create("ReportFullPage").present()},l.prototype.clicksearchbar=function(){this.displayfilter=!0,this.displaysearchitems=this.search},l.prototype.filterWorker=function(l){var n=this;""!=this.searchTerm&&(this.displayfilter=!0,this.displaysearchitems=this.search),""==this.searchTerm&&(this.displayfilter=!1,this.displaysearchitems=this.search,this.filterworkers=this.workers),this.displaysearchitems=this.search.filter(function(l){if(""!=n.searchTerm){return(l.type+l.name).toLowerCase().indexOf(n.searchTerm.toLowerCase())>-1}return n.search})},l.prototype.clickedsearchitem=function(l){if(this.displayfilter=!1,this.displaysearchitems=this.search,"name"==l.type){this.searchTerm=l.name,this.filterworkers=[];for(var n=0;n<this.workers.length;n++)this.workers[n].name==l.name&&this.filterworkers.push(this.workers[n])}else if("type"==l.type)for(n=0;n<this.workers.length;n++)this.workers[n].worker_type==l.name&&(this.filterworkers=[],this.searchTerm=l.name,this.filterworkers.push(this.workers[n]))},l.prototype.num=function(l){return Number(l)},l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AccountKhataPage")},l.prototype.selectMechanicShop=function(){this.documentinsurance=!1,this.driver=!1,this.all=!1,this.mechanicshop=!0},l.prototype.selectDocumentInsurance=function(){this.mechanicshop=!1,this.driver=!1,this.all=!1,this.documentinsurance=!0},l.prototype.selectDriver=function(){this.documentinsurance=!1,this.mechanicshop=!1,this.all=!1,this.driver=!0},l.prototype.ionViewWillEnter=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_WORKER,{srth_id:n[0].srth_id}).then(function(n){if("0"==n._ReturnCode){l.workers=n.data,l.ms=[],l.di=[],l.dr=[],l.total_bill=0,l.due_money=0,l.paid_money=0,l.search=[];for(var u=0;u<l.workers.length;u++){l.total_bill=l.total_bill+Number(l.workers[u].total_bill_money),l.paid_money=l.paid_money+Number(l.workers[u].paid_money),l.filterworkers=l.workers;var e={type:"name",name:l.workers[u].name};l.search.push(e),"driver"==l.workers[u].worker_type?l.dr.push(l.workers[u]):"mechanic"==l.workers[u].worker_type||"shop"==l.workers[u].worker_type?l.ms.push(l.workers[u]):"documents"!=l.workers[u].worker_type&&"insurance"!=l.workers[u].worker_type||l.di.push(l.workers[u])}console.debug("Drivers : "+JSON.stringify(l.dr)),console.debug("DI : "+JSON.stringify(l.di)),console.debug("MS : "+JSON.stringify(l.ms))}l.search.push(e={type:"type",name:"mechanic"}),l.search.push(e={type:"type",name:"shop"}),l.search.push(e={type:"type",name:"documents"}),l.search.push(e={type:"type",name:"driver"}),l.search.push(e={type:"type",name:"insurance"}),l.due_money=l.total_bill-l.paid_money})},l.prototype.openDriverAddPage=function(){this.navCtrl.push("AddDriverPage",{update:"false"})},l.prototype.openDriverPage=function(){this.navCtrl.push("DriverPage")},l.prototype.openDocumentPage=function(){this.navCtrl.push("DocumentPage")},l.prototype.openInsurancePage=function(){this.navCtrl.push("InsurancePage")},l.prototype.openShopPage=function(){this.navCtrl.push("ShopPage")},l.prototype.openMechanicPage=function(){this.navCtrl.push("MechanicPage")},l}(),I=function(){return function(){}}(),$=u(500),D=u(501),O=u(502),T=u(503),F=u(504),E=u(505),P=u(506),N=u(507),S=u(508),V=u(511),M=u(31),A=u(28),j=u(4),L=u(59),U=u(122),B=u(15),K=u(192),q=u(193),J=u(87),H=u(7),W=u(11),Y=u(14),G=u(186),Z=u(185),z=u(85),Q=u(8),X=u(188),ll=u(37),nl=u(13),ul=u(29),el=u(510),tl=u(86),il=u(42),ol=u(509),cl=u(32),dl=u(40),al=u(889),rl=u(19),sl=u(189),ml=u(39),pl=u(27),fl=u(121),hl=u(17),vl=_["ɵcrt"]({encapsulation:2,styles:[],data:{}}),yl=_["ɵccf"]("page-account-khata",x,function(l){return _["ɵvid"](0,[(l()(),_["ɵeld"](0,0,null,null,1,"page-account-khata",[],null,null,null,k,vl)),_["ɵdid"](1,49152,null,0,x,[fl.a,ul.a,hl.a,C.a,R.a],null,null)],null,null)},{},{},[]),gl=u(184),wl=u(55);u.d(n,"AccountKhataPageModuleNgFactory",function(){return bl});var bl=_["ɵcmf"](I,[],function(l){return _["ɵmod"]([_["ɵmpd"](512,_.ComponentFactoryResolver,_["ɵCodegenComponentFactoryResolver"],[[8,[$.a,D.a,O.a,T.a,F.a,E.a,P.a,N.a,S.a,yl]],[3,_.ComponentFactoryResolver],_.NgModuleRef]),_["ɵmpd"](4608,B.l,B.k,[_.LOCALE_ID,[2,B.t]]),_["ɵmpd"](4608,rl["ɵi"],rl["ɵi"],[]),_["ɵmpd"](4608,rl.FormBuilder,rl.FormBuilder,[]),_["ɵmpd"](512,B.b,B.b,[]),_["ɵmpd"](512,rl["ɵba"],rl["ɵba"],[]),_["ɵmpd"](512,rl.FormsModule,rl.FormsModule,[]),_["ɵmpd"](512,rl.ReactiveFormsModule,rl.ReactiveFormsModule,[]),_["ɵmpd"](512,gl.a,gl.a,[]),_["ɵmpd"](512,gl.b,gl.b,[]),_["ɵmpd"](512,I,I,[]),_["ɵmpd"](256,wl.a,x,[])])})},889:function(l,n,u){"use strict";function e(l){return t["ɵvid"](0,[t["ɵqud"](402653184,1,{_searchbarInput:0}),t["ɵqud"](402653184,2,{_searchbarIcon:0}),t["ɵqud"](402653184,3,{_cancelButton:0}),(l()(),t["ɵeld"](3,0,null,null,8,"div",[["class","searchbar-input-container"]],null,null,null,null,null)),(l()(),t["ɵeld"](4,0,null,null,3,"button",[["class","searchbar-md-cancel"],["clear",""],["color","dark"],["ion-button",""],["mode","md"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.cancelSearchbar(u)&&e}if("mousedown"===n){e=!1!==t.cancelSearchbar(u)&&e}return e},i.b,i.a)),t["ɵdid"](5,1097728,null,0,o.a,[[8,""],c.a,t.ElementRef,t.Renderer],{color:[0,"color"],mode:[1,"mode"],clear:[2,"clear"]},null),(l()(),t["ɵeld"](6,0,null,0,1,"ion-icon",[["name","md-arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t["ɵdid"](7,147456,null,0,d.a,[c.a,t.ElementRef,t.Renderer],{name:[0,"name"]},null),(l()(),t["ɵeld"](8,0,[[2,0],["searchbarIcon",1]],null,0,"div",[["class","searchbar-search-icon"]],null,null,null,null,null)),(l()(),t["ɵeld"](9,0,[[1,0],["searchbarInput",1]],null,0,"input",[["class","searchbar-input"],["dir","auto"]],[[1,"placeholder",0],[1,"type",0],[1,"autocomplete",0],[1,"autocorrect",0],[1,"spellcheck",0]],[[null,"input"],[null,"blur"],[null,"focus"]],function(l,n,u){var e=!0,t=l.component;if("input"===n){e=!1!==t.inputChanged(u)&&e}if("blur"===n){e=!1!==t.inputBlurred()&&e}if("focus"===n){e=!1!==t.inputFocused()&&e}return e},null,null)),(l()(),t["ɵeld"](10,0,null,null,1,"button",[["class","searchbar-clear-icon"],["clear",""],["ion-button",""],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.clearInput(u)&&e}if("mousedown"===n){e=!1!==t.clearInput(u)&&e}return e},i.b,i.a)),t["ɵdid"](11,1097728,null,0,o.a,[[8,""],c.a,t.ElementRef,t.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),t["ɵeld"](12,0,[[3,0]],null,2,"button",[["class","searchbar-ios-cancel"],["clear",""],["ion-button",""],["mode","ios"],["type","button"]],[[8,"tabIndex",0]],[[null,"click"],[null,"mousedown"]],function(l,n,u){var e=!0,t=l.component;if("click"===n){e=!1!==t.cancelSearchbar(u)&&e}if("mousedown"===n){e=!1!==t.cancelSearchbar(u)&&e}return e},i.b,i.a)),t["ɵdid"](13,1097728,[["cancelButton",4]],0,o.a,[[8,""],c.a,t.ElementRef,t.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),t["ɵted"](14,0,["",""]))],function(l,n){var u=n.component;l(n,5,0,"dark","md","");l(n,7,0,"md-arrow-back");l(n,11,0,u._mode,"");l(n,13,0,"ios","")},function(l,n){var u=n.component;l(n,6,0,t["ɵnov"](n,7)._hidden);l(n,9,0,u.placeholder,u.type,u._autocomplete,u._autocorrect,u._spellcheck);l(n,12,0,u._isActive?1:-1);l(n,14,0,u.cancelButtonText)})}u.d(n,"a",function(){return a}),n.b=e;var t=u(0),i=u(39),o=u(27),c=u(4),d=u(41),a=(u(7),t["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([47],{
+
+/***/ 875:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentPageModule", function() { return DocumentPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document__ = __webpack_require__(954);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DocumentPageModule = /** @class */ (function () {
+    function DocumentPageModule() {
+    }
+    DocumentPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__document__["a" /* DocumentPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document__["a" /* DocumentPage */]),
+            ],
+        })
+    ], DocumentPageModule);
+    return DocumentPageModule;
+}());
+
+//# sourceMappingURL=document.module.js.map
+
+/***/ }),
+
+/***/ 954:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var DocumentPage = /** @class */ (function () {
+    function DocumentPage(alertCtrl, message, navCtrl, navParams, rest, codes, modalCtrl, pv) {
+        this.alertCtrl = alertCtrl;
+        this.message = message;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.modalCtrl = modalCtrl;
+        this.pv = pv;
+        this.isShown = false;
+        this.document = '';
+        this.total = 0.00;
+        this.due = 0.00;
+        this.selectedfilters = [];
+        this.payments = [];
+        this.filterpayments = [];
+        this.searchTerm = '';
+        this.updatebill = false;
+        this.updatepayment = false;
+        this.selectedbill = '';
+        this.selectedpayment = '';
+        this.updatebill1 = false;
+        this.bills = [];
+        this.selectedbill1 = '';
+        this.type = 'ano';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.filterbills = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.document = JSON.parse(localStorage.getItem("worker"));
+        this.due = Number(this.document['total_bill_money']) - Number(this.document['paid_money']);
+    }
+    DocumentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DocumentPage');
+    };
+    DocumentPage.prototype.checkChange = function () {
+    };
+    DocumentPage.prototype.viewImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Payment Image', { 'share': true });
+    };
+    DocumentPage.prototype.viewBillImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Bill Image', { 'share': true });
+    };
+    DocumentPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.document['worker_id']
+        };
+        this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.document = resp['data'][0];
+                _this.due = Number(_this.document['total_bill_money']) - Number(_this.document['paid_money']);
+            }
+        });
+        var data = {
+            "worker_id": this.document['worker_id']
+        };
+        this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.payments = resp['data'];
+                _this.filterpayments = _this.payments;
+            }
+        });
+        this.getAllBillsByWorkerId();
+    };
+    DocumentPage.prototype.getAllBillsByWorkerId = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.document['worker_id'],
+            "worker_type": "documents"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.billDetails = resp['data'];
+                _this.filterbillDetails = _this.billDetails;
+            }
+        });
+    };
+    DocumentPage.prototype.showMore = function () {
+        if (this.isShown) {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+        }
+        else {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        }
+        this.isShown = !this.isShown;
+    };
+    DocumentPage.prototype.openLedgePage = function () {
+        localStorage.setItem("worker_type", "documents");
+        this.navCtrl.push('LedgerPage', { "worker": this.document });
+    };
+    DocumentPage.prototype.update = function () {
+        this.navCtrl.push('AddDriverPage', { "update": "true" });
+    };
+    DocumentPage.prototype.deleteWorker = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.document['worker_id']
+        };
+        this.rest.post(this.codes.DELETE_WORKER, data).then(function (resp) {
+            _this.message.displayToast('You have successfully deleted this worker!');
+            _this.navCtrl.pop();
+        });
+    };
+    DocumentPage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this worker?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteWorker();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.searchBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('BillPaymentSearchPage', { "worker_type": "document", "worker_id": this.document['worker_id'] });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("bill_payment_search") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("bill_payment_search"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterpayments = _this.payments;
+                    return;
+                }
+                _this.filterpayments = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'reasons') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['reason'] == _this.selectedfilters[i]['name']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'payments') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            if (_this.payments[j]['payment_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterpayments.push(_this.payments[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['bill_id'] == _this.selectedfilters[i]['id']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterpayments));
+            }
+        });
+        mdl.present();
+    };
+    DocumentPage.prototype.selectThisPayment = function (payment) {
+        this.updatebill = false;
+        this.updatebill1 = false;
+        this.updatepayment = true;
+        this.selectedbill1 = null;
+        this.selectedpayment = payment;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        payment['selected'] = 'true';
+    };
+    DocumentPage.prototype.selectThisBill = function (bill, payment) {
+        if (payment == null) {
+            this.selectedbill1 = bill;
+            this.updatebill1 = true;
+            this.selectedbill = null;
+            this.updatebill = false;
+            this.updatepayment = false;
+            this.selectedpayment = null;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            bill['selected'] = 'true';
+            return;
+        }
+        this.updatepayment = false;
+        this.updatebill = true;
+        this.updatebill1 = false;
+        this.selectedpayment = payment;
+        this.selectedbill = bill;
+        this.selectedbill1 = null;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        bill['selected'] = 'true';
+    };
+    DocumentPage.prototype.viewBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedpayment = {
+                "bills": [
+                    this.selectedbill1
+                ]
+            };
+        }
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    DocumentPage.prototype.updateBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        localStorage.setItem('bill', JSON.stringify(this.selectedbill));
+        console.log(JSON.stringify(this.selectedbill));
+        var doc = {
+            "document_name": this.selectedbill['reason']
+        };
+        this.navCtrl.push('DocumentRenewalPage', { 'update': 'true', 'bill': this.selectedbill, 'document': doc });
+    };
+    DocumentPage.prototype.deleteBill = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this bill?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteBillByBillId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.deleteBillByBillId = function () {
+        var _this = this;
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        var data = {
+            "bill_id": this.selectedbill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    DocumentPage.prototype.viewPayment = function () {
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    DocumentPage.prototype.updatePayment = function () {
+        localStorage.setItem("worker_type", "document");
+        this.navCtrl.push('LedgerPage', { "worker": this.document, 'payment': this.selectedpayment, 'isupdate': 'true' });
+    };
+    DocumentPage.prototype.deletePayment = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this payment?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletePaymentByPaymentId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.deletePaymentByPaymentId = function () {
+        var _this = this;
+        var data = {
+            "payment_id": this.selectedpayment['payment_id']
+        };
+        this.rest.post(this.codes.DELETE_PAYMENT, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a payment.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    DocumentPage.prototype.removeTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterpayments = this.payments;
+            return;
+        }
+        this.filterpayments = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'reasons') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['reason'] == this.selectedfilters[i]['name']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'payments') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    if (this.payments[j]['payment_id'] == this.selectedfilters[i]['id']) {
+                        this.filterpayments.push(this.payments[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['bill_id'] == this.selectedfilters[i]['id']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
+                    }
+                }
+            }
+        }
+    };
+    DocumentPage.prototype.searchOnlyBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('AccountPaymentSearchModalPage', { 'worker_type': 'documents' });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("searchbilldetails") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("searchbilldetails"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterbillDetails = _this.billDetails;
+                    return;
+                }
+                _this.filterbillDetails = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'problems') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['problem_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'vehicles') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['vehicle_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'shopname') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['person_shop_name'] == _this.selectedfilters[i]['name']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['bill_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterbillDetails));
+            }
+        });
+        mdl.present();
+    };
+    DocumentPage.prototype.removeOnlyTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterbillDetails = this.billDetails;
+            return;
+        }
+        this.filterbillDetails = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'problems') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'vehicles') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'shopname') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+        }
+    };
+    DocumentPage.prototype.getOnlyItems = function ($event) {
+        var _this = this;
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filterbills = this.bills;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            for (var i = 0; i < this.filterbills.length; i++) {
+                this.filterbills[i]['selected'] = 'false';
+            }
+        }
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    DocumentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-document',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document/document.html"*/'<!--\n  Generated template for the DocumentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          DOCUMENT\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 style="text-align: right !important;">\n        <button ion-button outline (click)="update()">\n          <ion-icon name="create"></ion-icon>\n        </button>\n        <button ion-button outline color="danger" (click)="presentConfirmDelete()">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center">\n       <!-- <p style="margin-top: 10px">ADD PHOTO</p> -->\n        <img width="80px" height="80px" *ngIf="document[\'profile_image_id\'] == \'0\' || document[\'profile_image_id\'] == null || document[\'profile_image_id\'] == undefined" src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n        <img width="80px" height="80px" *ngIf="document[\'profile_image_id\'] != \'0\' && document[\'profile_image_id\'] != null && document[\'profile_image_id\'] != undefined" [src]="document[\'profile_image_id\']" alt="">\n       \n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{document[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{document[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{document[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">{{document[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        BUSINESS NAME: <br>  <span class="text-color-primary">{{document[\'name\']}}</span>\n      </ion-col>\n      \n      <ion-col col-6>\n      \n      </ion-col>\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <!-- <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{insurance[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{insurance[\'reference_person\']}}</span>\n        </ion-col> -->\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary" *ngIf="document[\'aadhar_card_number\'] != null">AADHAR - {{document[\'aadhar_card_number\']}}</span>\n              <span class="text-color-primary" *ngIf="document[\'pan_card_number\'] != null">PAN - {{document[\'pan_card_number\']}}</span>\n        \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{document[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n      <!-- <ion-col col-6>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="update()">Update</button>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="presentConfirmDelete()">Delete</button>\n      </ion-col> -->\n\n    </ion-row>\n\n    \n\n    <!-- <ion-col col-12 class="text-center">\n      <button ion-button round class="remove-driver"> REMOVE DRIVER</button>\n    </ion-col> -->\n\n   \n\n    <ion-row class="report-statement">\n      <ion-col col-6>\n        <div class="full-report-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.document})">\n          <i class="fa fa-file-o" aria-hidden="true"></i>\n\n          FULL REPORT\n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="monthy-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.document})">\n          <i class="fa fa-file" aria-hidden="true"></i>\n\n          MONTHY STATEMENT\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="bill">\n      <ion-col col-4>\n        <p class="total-bill">TOTAL BILL</p>\n        <div class="ammount">&#x20b9;{{document[\'total_bill_money\'] }}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="paid-money">PAID MONEY</p>\n        <div class="ammount">&#x20b9;{{document[\'paid_money\']}}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="due-money">DUE MONEY</p>\n        \n        <div class="ammount">&#x20b9;{{due}}</div>\n      </ion-col>\n    </ion-row>\n\n    <h2>Bill Khata</h2>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getOnlyItems($event)" (click)="searchOnlyBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeOnlyTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n\n    <div class="scroll-grid" style="margin-top: 20px !important;">\n      <div class="scrollmenu">\n       \n        <a href="#home">BILL#</a>\n        <a href="#news">BILL </a>\n        <a href="#contact">VEHICLES</a>\n        <a href="#about">COST</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">IMAGE</a>\n\n        <div *ngIf="filterbillDetails.length == 0" style="padding: 15px;text-align: center;">\n            <ion-spinner></ion-spinner>\n            <br/>\n          <span style="color: rgb(63, 63, 63);">\n            Loading\n          </span>\n        </div>\n    \n        <div class="scrollmenu-list total-bill " *ngFor="let bill of filterbillDetails" >\n         \n          <div class="scrollmenu-list " (click)="selectThisBill(bill,null)">\n            <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>{{bill[\'bill_id\']}}</p>\n            <p>{{bill[\'bill_date\']}}</p>\n            <p>{{bill[\'vehicle_number\']}}</p>\n            <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n            <p>{{bill[\'bill_details\']}}</p>\n            <p>\n              <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n              </span>\n            </p>\n            </div>\n          </div>\n        </div>\n        </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n\n        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill1" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="searchBillDetails()" placeholder="SEARCH"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <!-- <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Bill #</ion-label>\n          <ion-radio value="bno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Payment #</ion-label>\n          <ion-radio value="pno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>All</ion-label>\n          <ion-radio value="ano"></ion-radio>\n        </ion-item>\n      </ion-col>\n    </ion-row> -->\n\n    <!-- <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'payments\'" >Payment # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'reasons\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p> -->\n\n\n    <h2>Payments</h2>\n\n      <div class="scroll-grid" >\n        <div class="scrollmenu">\n         \n          <a href="#home">BILL# / PAYMENT#</a>\n          <a href="#news">BILL / PAYMENT</a>\n          <a href="#contact">VEHICLES</a>\n          <a href="#about">COST / PAID</a>\n          <a href="#about">DETAILS</a>\n          <a href="#about">IMAGE</a>\n  \n          <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">\n              <ion-spinner></ion-spinner>\n              <br/>\n            <span style="color: rgb(63, 63, 63);">\n              Loading\n            </span>\n          </div>\n      \n          <div class="scrollmenu-list paid-money " *ngFor="let payment of filterpayments" >\n            <div *ngIf="type==\'pno\' || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_id\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p *ngIf="payment[\'bills\'] != undefined && payment[\'bills\'].length > 0">{{payment[\'bills\'][0][\'vehicle_number\']}}</p>\n            <p *ngIf="payment[\'bills\'] == undefined || payment[\'bills\'].length == 0"></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            </div>\n            </div>\n  \n            <div *ngIf="type==\'bno\'  || type == \'\'">\n            <div class="scrollmenu-list paid-money" *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_id\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n          </div>\n          <div *ngIf="type==\'ano\'  || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_id\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p></p>\n            <!-- <p *ngIf="payment[\'bills\'] != undefined && payment[\'bills\'].length > 0">{{payment[\'bills\'][0][\'vehicle_number\']}}</p> -->\n            <p *ngIf="payment[\'bills\'] == undefined || payment[\'bills\'].length == 0"></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_id\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n            </div>\n          </div>\n  \n          </div>\n    \n         \n        </div>\n        <div class="show-arrows">\n          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n  \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatepayment" (click)="viewPayment()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="updatePayment()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="deletePayment()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n    \n          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n    \n        </div>\n      </div>\n\n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openLedgePage()">GIVE MONEY</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document/document.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], DocumentPage);
+    return DocumentPage;
+}());
+
+//# sourceMappingURL=document.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=47.js.map

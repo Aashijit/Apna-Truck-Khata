@@ -75,6 +75,7 @@ var VehicleDetailsPage = /** @class */ (function () {
         this.paid = 0;
         this.unpaid = 0;
         this.total = 0;
+        this.driverJoinedDate = '';
         this.vehicle = this.navParams.get("vehicle");
     }
     VehicleDetailsPage.prototype.getVehicleWorkDetails = function () {
@@ -107,6 +108,11 @@ var VehicleDetailsPage = /** @class */ (function () {
         this.rest.post(this.codes.GET_VEHICLE_BY_WORKER_ID, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
                 _this.driverhistory = resp['data'];
+                for (var i = 0; i < _this.driverhistory.length; i++) {
+                    if (_this.driverhistory[i]['vehicle_id'] == _this.vehicle['vehicle_id']) {
+                        _this.driverJoinedDate = _this.driverhistory[i]['driver_start_date'];
+                    }
+                }
                 // for(let i=0;i<this.driverhistory.length;i++){
                 //   if(this.driverhistory[i]['is_remove'] == '0'){
                 //     this.vehicle_number = this.driverhistory[i]['vehicle']['vehicle_number'];
@@ -183,7 +189,7 @@ var VehicleDetailsPage = /** @class */ (function () {
         document.getElementById(i).classList.toggle("selected");
     };
     VehicleDetailsPage.prototype.openDriverDocument = function () {
-        this.navCtrl.push('DriverDocumentPage', { "driver": this.vehicle['driver_details'] });
+        this.navCtrl.push('DriverDocumentPage', { "driver": this.vehicle['driver_details'], "vehicle": this.vehicle, "joining": this.driverJoinedDate });
     };
     VehicleDetailsPage.prototype.openVehicleDocument = function () {
         this.navCtrl.push('VehicleDocumentPage', { "vehicle": this.vehicle });

@@ -93,6 +93,7 @@ export class CodesProvider {
 
 
   public GET_LAST_BILL_ID = this.BASE_URL+"getlastbillid";
+  public GET_LAST_PAYMENT_ID = this.BASE_URL + "getlastpaymentid";
 
   public SAVE_IMAGE=this.BASE_URL+"saveimage";
   public GET_IMAGE_BY_IMAGE_ID=this.BASE_URL+"getimagebyimageid";

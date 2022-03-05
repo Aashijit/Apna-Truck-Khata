@@ -84,6 +84,7 @@ var ReportFullPage = /** @class */ (function () {
         this.displayCalendar = false;
         this.dateRange = { from: '', to: '' };
         this.downloadURL = '';
+        this.srth_id = '';
         this.apiendpoint = '';
         this.downloadendpoint = '';
         this.optionsMulti = {
@@ -97,6 +98,8 @@ var ReportFullPage = /** @class */ (function () {
         if (this.navParams.get("person") != null || this.navParams.get("person") != undefined) {
             this.worker_id = this.navParams.get("person")['worker_id'];
         }
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        this.srth_id = json[0]['srth_id'];
     }
     ReportFullPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ReportFullPage');
@@ -146,7 +149,8 @@ var ReportFullPage = /** @class */ (function () {
         var data = {
             "worker_id": this.worker_id,
             "date_from": this.dateRange['from'],
-            "date_to": this.dateRange['to']
+            "date_to": this.dateRange['to'],
+            "srth_id": this.srth_id
         };
         this.rest.post(this.codes.FULL_REPORT, data).then(function (resp) {
             console.log(resp);
