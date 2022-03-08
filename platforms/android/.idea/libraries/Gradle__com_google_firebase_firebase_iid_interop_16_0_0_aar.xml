@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-iid-interop:16.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-iid-interop-16.0.0.aar/24bd1f357427cd9749533b588966f04c/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e0187d79d03f19383453595353ec517/firebase-iid-interop-16.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e0187d79d03f19383453595353ec517/firebase-iid-interop-16.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e0187d79d03f19383453595353ec517/firebase-iid-interop-16.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5d72e1a9f4c2875f7fabcd036b74cf3/firebase-iid-interop-16.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5d72e1a9f4c2875f7fabcd036b74cf3/firebase-iid-interop-16.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d5d72e1a9f4c2875f7fabcd036b74cf3/firebase-iid-interop-16.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
