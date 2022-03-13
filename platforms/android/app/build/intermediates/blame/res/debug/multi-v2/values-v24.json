@@ -4,7 +4,7 @@
             "outputFile": "/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/f2bad2cd47cd16cf058ade4a8c249970/support-media-compat-27.1.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/209ac031b6e0f44e928e2b7bb9376526/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

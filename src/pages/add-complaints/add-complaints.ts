@@ -15,6 +15,7 @@ export class AddComplaintsPage {
   isSelectedBill: boolean = false;
 
   complaints_id: any = '';
+  complaints_number : number = null;
   vehicle_id: any = '';
   srth_id: any = '';
   problem_id: any = '';
@@ -47,6 +48,7 @@ export class AddComplaintsPage {
       var comp = this.navParams.get("selectedcomplaint");
 
       this.complaints_id = comp['complaints_id'];
+      this.complaints_number = comp['complaints_number'];
       this.vehicle_id = comp['vehicle_id'];
       this.srth_id = comp['srth_id'];
       this.problem_id = comp['problem_id'];
@@ -74,10 +76,13 @@ export class AddComplaintsPage {
       }
     });
 
-
-    if(this.complaints_id == '') {
-      this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID,{}).then(resp => {
-        this.complaints_id = Number(resp['data']) + 1;
+    var data1 = {
+      "srth_id": userinfo[0]['srth_id']
+    };
+    
+    if(this.complaints_number == null) {
+      this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID,data1).then(resp => {
+        this.complaints_number = Number(resp['data']) + 1;
       })
     }
 
@@ -87,6 +92,7 @@ export class AddComplaintsPage {
   updatecomplaint() {
     var data = {
       "complaints_id": this.complaints_id,
+      "complaints_number":this.complaints_number,
       "vehicle_id": this.vehicle_id,
       "srth_id": this.srth_id,
       "problem_id": this.problem_id,
@@ -220,6 +226,7 @@ export class AddComplaintsPage {
 
   selectThis(comp) {
     this.complaints_id = comp['complaints_id'];
+    this.complaints_number = comp['complaints_number'];
     this.vehicle_id = comp['vehicle_id'];
     this.srth_id = comp['srth_id'];
     this.problem_id = comp['problem_id'];
@@ -283,6 +290,7 @@ export class AddComplaintsPage {
 
     var data = {
       "vehicle_id": this.vehicle_id,
+      "complaints_number":this.complaints_number,
       "srth_id": userinfo[0]['srth_id'],
       "problem_id": this.problem_id,
       "date_of_complaint": this.date_of_complaint,
@@ -301,7 +309,7 @@ export class AddComplaintsPage {
     this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(resp => {
       if (resp['_ReturnCode'] == '0') {
         data['complaints_id'] = this.complaints_id;
-        alert(this.vehicle_number);
+        data['complaints_number'] = this.complaints_number;
         data['vehicle_number'] = this.vehicle_number;
         data['selected'] = false;
         this.problem_id = '';
@@ -326,6 +334,4 @@ export class AddComplaintsPage {
     });
 
   }
-
-
 }

@@ -66,18 +66,6 @@
 
       </ion-row>
 
-
-      <!-- <div class="label-float" >
-        <input type="text" [(ngModel)]="name"  placeholder=" " />
-        <label>NAME</label>
-        <i class="fa fa-user" aria-hidden="true"></i>
-
-      </div> -->
-
-      <!-- <br/>
-      <br/>
-      <br/> -->
-      <!-- (click)="viewContact()" -->
       <p style="margin-left: 6px;font-size: 14px;color: #0752af;">{{name}}</p>
       <div class="label-float" >
         <input type="text" [(ngModel)]="phone_number" (click)="viewContact()"  placeholder=" " />
@@ -118,14 +106,14 @@
 
 
         <div *ngIf="vari  == 'Aadharcard'" class="label-float" >
-          <input type="tel" maxlength="12" max="12" [(ngModel)]="aadhar_card_number"  placeholder=" " />
+          <input maxlength="12" max="12" [(ngModel)]="aadhar_card_number"  placeholder=" " />
           <label>AADHAR NUMBER</label>
           <i class="fa fa-file" aria-hidden="true"></i>
 
         </div>
 
         <div *ngIf="vari  == 'Pancard'" class="label-float" >
-          <input type="tel"  [(ngModel)]="pan_card_number"   placeholder=" " />
+          <input [(ngModel)]="pan_card_number"   placeholder=" " />
           <label>PAN NUMBER</label>
           <i class="fa fa-file" aria-hidden="true"></i>
 
@@ -184,7 +172,7 @@
       <!-- </ion-item> -->
 
       <div class="label-float" *ngIf="typeOfPerson  == 'driver'">
-        <input type="tel" [(ngModel)]="license_number"  placeholder=" " />
+        <input [(ngModel)]="license_number"  placeholder=" " />
         <label>LICENSE NUMBER</label>
         <i class="fa fa-file" aria-hidden="true"></i>
 
@@ -247,13 +235,6 @@
 
         </ion-select>
       </ion-item>
-
-      <div class="label-float" >
-        <input type="tel" [(ngModel)]="pan"  placeholder=" " />
-        <label>PAN NUMBER</label>
-        <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
-
-      </div>
 
       <div class="label-float" >
         <input type="tel" [(ngModel)]="GSTN"  placeholder=" " />

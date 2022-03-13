@@ -96,7 +96,7 @@
 
       <div  *ngFor="let cm of filtercomplaints" >
         <div [ngClass]="cm['selected'] == true ?  'scrollmenu-list selected' : 'scrollmenu-list' " (click)="selectThis(cm)">
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_number']}} </p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
           <p *ngIf="cm['driver'] != null">{{cm['driver']['name']}}</p>
           <p *ngIf="cm['driver'] == null"></p>
@@ -111,7 +111,7 @@
     <div *ngIf="problem">
       <div  *ngFor="let cm of problemcomplaints" >
         <div [ngClass]="cm['selected'] == true ?  'scrollmenu-list selected' : 'scrollmenu-list' " (click)="selectThis(cm)">
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_number']}} </p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
           <p *ngIf="cm['driver'] != null">{{cm['driver']['name']}}</p>
           <p *ngIf="cm['driver'] == null"></p>
@@ -127,7 +127,7 @@
       <div *ngIf="ok">
       <div  *ngFor="let cm of solvedcomplaints" >
         <div [ngClass]="cm['selected'] == true ?  'scrollmenu-list selected' : 'scrollmenu-list' " (click)="selectThis(cm)">
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_number']}} </p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
           <p *ngIf="cm['driver'] != null">{{cm['driver']['name']}}</p>
           <p *ngIf="cm['driver'] == null"></p>

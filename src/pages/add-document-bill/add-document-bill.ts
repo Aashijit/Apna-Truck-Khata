@@ -4,7 +4,6 @@ import { RestProvider } from './../../../src/providers/rest/rest';
 import { CodesProvider } from './../../../src/providers/codes/codes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Loading, LoadingController } from 'ionic-angular';
-import { DocumentRenewalPage } from '../document-renewal/document-renewal';
 
 @IonicPage()
 @Component({
@@ -36,13 +35,11 @@ export class AddDocumentBillPage {
     private message: MessageProvider, private alertCtrl: AlertController, private ldl: LoadingController,
     private pv : PhotoViewer) {
     this.document = this.navParams.get("document");
-    alert(JSON.stringify(this.document));
     console.log(JSON.stringify(this.document));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddDocumentBillPage');
-    // this.getBillsBySrthId();
   }
 
   ionViewWillEnter(){
@@ -125,7 +122,7 @@ export class AddDocumentBillPage {
       }
     } else if (sr['type'] == 'bills') {
       for (let i = 0; i < this.bills.length; i++) {
-        if (this.bills[i]['bill_id'] == sr['id']) {
+        if (this.bills[i]['bill_number'] == sr['id']) {
           this.filterbills = [];
           this.searchTerm = sr['id'];
           this.filterbills.push(this.bills[i]);
@@ -166,7 +163,7 @@ export class AddDocumentBillPage {
         for (let i = 0; i < this.bills.length; i++) {
           var searchobj2 = {
             "type": "bills",
-            "id": this.bills[i]['bill_id'],
+            "id": this.bills[i]['bill_number'],
             "name": this.bills[i]['person_shop_name'],
             "amount": this.bills[i]['total_bill']
           };

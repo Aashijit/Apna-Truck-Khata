@@ -47,6 +47,7 @@ export class AddDriverExpensesPage {
   rejoin_date : any = '';
 
   is_update : boolean = false;
+  bill_number : number = null;
   img : any = null;
   vehicle_number : any = '';
   
@@ -71,6 +72,7 @@ export class AddDriverExpensesPage {
         this.total_bill =bill['total_bill'];
         this.bill_image_id =bill['bill_image_id'];
         this.bill_details =bill['bill_details'];
+        this.bill_number = bill['bill_number'];
         this.reason = bill['reason'];
         this.img = bill['image'];
         this.is_update = true;
@@ -78,11 +80,17 @@ export class AddDriverExpensesPage {
       this.getDrivers();
 
 
-      if(this.bill_id == null)
+      var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+      var data= {
+        "srth_id":json[0]['srth_id']
+      };
+
+      if(this.bill_number == null)
       {
-        this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
+        this.rest.post(this.codes.GET_LAST_BILL_ID,data).then(resp => {
           if(resp['_ReturnCode'] == '0'){
-            this.bill_id = resp['data'];
+            this.bill_number = resp['data'];
+            this.bill_number ++;
           }
         });
         
@@ -248,6 +256,7 @@ export class AddDriverExpensesPage {
  
       var data = {
         "person_shop_name":this.name,
+        "bill_number":this.bill_number,
         "srth_id":json[0]['srth_id'],
         "vehicle_id":this.vehicle_id,
         "reason":this.reason,
@@ -270,7 +279,6 @@ export class AddDriverExpensesPage {
             resp['data']['worker_id'] = this.name;
             this.bills.push(resp['data']);
                   
-        this.vehicle_id  = '';
         this.km_reading = '';
         this.bill_date  = '';
         this.rejoin_date = '';
@@ -280,7 +288,7 @@ export class AddDriverExpensesPage {
         this.bill_details  = '';
         this.img = null;
 
-        this.bill_id = Number(resp['_LatestBillId']) + 1;
+        this.bill_number = Number(resp['_LatestBillId']) + 1;
 
             for(let i=0;i<this.bills.length;i++) 
               this.bills[i]['selected'] = 'false';
@@ -304,6 +312,7 @@ export class AddDriverExpensesPage {
     this.worker_type =bill['worker_type'];
     this.total_bill =bill['total_bill'];
     this.bill_image_id =bill['bill_image_id'];
+    this.bill_number = bill['bill_number'];
     this.bill_details =bill['bill_details'];
     this.reason = bill['reason'];
     this.is_update = true;
@@ -315,6 +324,7 @@ export class AddDriverExpensesPage {
     var data = {
       "bill_id":this.bill_id,
       "person_shop_name":this.name,
+      "bill_number":this.bill_number,
       "srth_id":json[0]['srth_id'],
       "vehicle_id":this.vehicle_id,
       "reason":this.reason,
@@ -336,7 +346,6 @@ export class AddDriverExpensesPage {
           resp['data']['vehicle_number'] = this.vehicle_number;
           resp['data']['image'] = this.img;
 
-          this.vehicle_id  = '';
           this.km_reading = '';
           this.bill_date  = '';
           this.rejoin_date = '';
@@ -358,7 +367,7 @@ export class AddDriverExpensesPage {
           {
             this.bills.push(resp['data']);
           }
-          this.bill_id = Number(resp['_LatestBillId']) + 1;
+          this.bill_number = Number(resp['_LatestBillId']) + 1;
           
       }
     });

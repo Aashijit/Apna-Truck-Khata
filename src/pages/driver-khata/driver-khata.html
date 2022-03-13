@@ -76,6 +76,7 @@
         <a href="#news">DRIVER NAME</a>
         <a href="#contact">VEHICLE NUMBER</a>
         <a href="#about">REASON</a>
+        <a href="#about">REJOIN DATE</a>
         <a href="#support">COST</a>
         <a href="#blog">DETAIL</a>
         <a href="#tools">KM READING</a>
@@ -83,10 +84,11 @@
 
         <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
           <div [ngClass]="bill['total_bill'] < 0 ? 'green' : 'red'">
-          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['bill_number']}}</p>
           <p>{{bill['worker_name']}}</p>
           <p>{{bill['vehicle_number']}}</p>
           <p>{{bill['reason']}}</p>
+          <p>{{bill['rejoin_date']}}</p>
           <p>{{bill['total_bill']}}</p>
           <p>{{bill['bill_details']}}</p>
           <p>{{bill['km_reading']}}</p>

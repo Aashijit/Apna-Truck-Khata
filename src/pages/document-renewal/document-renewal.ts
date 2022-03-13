@@ -32,6 +32,7 @@ export class DocumentRenewalPage {
 
 
   bill_id: any = null;
+  bill_number : number = null;
   worker_id: any = '';
   person_shop_name: any = '';
   srth_id: any = '';
@@ -91,6 +92,7 @@ export class DocumentRenewalPage {
       this.is_update = true;
       this.details = bl['details'];
       this.bill_id = bl['bill_id'];
+      this.bill_number = bl['bill_number'];
       this.worker_id = bl['worker_id'];
       this.person_shop_name = bl['person_shop_name'];
       this.srth_id = bl['srth_id'];
@@ -108,11 +110,11 @@ export class DocumentRenewalPage {
     }
 
 
-    if (this.bill_id == null) {
-      this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(resp => {
+    if (this.bill_number == null) {
+      this.rest.post(this.codes.GET_LAST_BILL_ID, data).then(resp => {
         if (resp['_ReturnCode'] == '0') {
-          this.bill_id = resp['data'];
-          this.bill_id = Number(this.bill_id) + 1;
+          this.bill_number = resp['data'];
+          this.bill_number = Number(this.bill_number) + 1;
         }
       });
 
@@ -188,6 +190,7 @@ export class DocumentRenewalPage {
 
     var data = {
       "person_shop_name": this.person_shop_name,
+      "bill_number":this.bill_number,
       "srth_id": json[0]['srth_id'],
       "vehicle_id": this.vehicle_id,
       "reason": this.document['document_name'],
@@ -216,8 +219,8 @@ export class DocumentRenewalPage {
       this.total_bill = 0;
       if (resp['_ReturnCode'] == '0') {
         this.is_update = false;
-
-        this.bill_id = Number(resp['data']['bill_id']) + 1;
+        resp['data']['bill_number'] = this.bill_number;
+        this.bill_number = Number(resp['data']['bill_number']) + 1;
 
         if (this.img != null)
           resp['data']['image_content'] = this.img['image_content'];
@@ -325,6 +328,7 @@ export class DocumentRenewalPage {
     // alert(JSON.stringify(this.img));
     var data = {
       "person_shop_name": this.person_shop_name,
+      "bill_number":this.bill_number,
       "srth_id": json[0]['srth_id'],
       "vehicle_id": this.vehicle_id,
       "reason": this.document['document_name'],
@@ -350,8 +354,10 @@ export class DocumentRenewalPage {
       this.bill_details = '';
       this.total_bill = 0;
       if (resp['_ReturnCode'] == '0') {
+        
+        resp['data']['bill_number'] = this.bill_number;
 
-        this.bill_id = Number(resp['data']['bill_id']) + 1;
+        this.bill_number = Number(resp['data']['bill_number']) + 1;
 
         if (this.img != null)
           resp['data']['image_content'] = this.img['image_content'];
@@ -415,6 +421,7 @@ export class DocumentRenewalPage {
       this.details = bl['details'] == undefined ? this.details : bl['details'];
       // alert(JSON.stringify(this.details));
       this.bill_id = bl['bill_id'];
+      this.bill_number = bl['bill_number'];
       this.worker_id = bl['worker_id'];
       this.person_shop_name = bl['person_shop_name'];
       this.srth_id = bl['srth_id'];

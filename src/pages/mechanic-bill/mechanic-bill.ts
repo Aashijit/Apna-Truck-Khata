@@ -24,6 +24,7 @@ export class MechanicBillPage {
   drivers : any = [];
 
   bill_id : any = null;
+  bill_number : number = null;
   worker_id : any = '';
   person_shop_name : any = '';
   srth_id : any = '';
@@ -49,6 +50,7 @@ export class MechanicBillPage {
       if(upd == 'true'){
         var bill = JSON.parse(localStorage.getItem("bill"));
         this.bill_id  = bill['bill_id'];
+        this.bill_number = bill['bill_number'];
         this.worker_id = bill['worker_id'];
         this.person_shop_name = bill['person_shop_name'];
         this.srth_id = bill['srth_id'];
@@ -86,12 +88,18 @@ export class MechanicBillPage {
         }
     });
 
-    if(this.bill_id == null)
+    var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+
+    var data = {
+      "srth_id":userinfo[0]['srth_id']
+    };
+
+    if(this.bill_number == null)
     {
-      this.rest.post(this.codes.GET_LAST_BILL_ID,{}).then(resp => {
+      this.rest.post(this.codes.GET_LAST_BILL_ID,data).then(resp => {
         if(resp['_ReturnCode'] == '0'){
-          this.bill_id = resp['data'];
-          this.bill_id ++;
+          this.bill_number = resp['data'];
+          this.bill_number ++;
         }
       });
       
@@ -206,6 +214,7 @@ export class MechanicBillPage {
     
     bill['selected'] = 'true';
     this.bill_id  = bill['bill_id'];
+    this.bill_number = bill['bill_number'];
     this.worker_id = bill['worker_id'];
     this.person_shop_name = bill['person_shop_name'];
     this.srth_id = bill['srth_id'];
@@ -242,6 +251,7 @@ export class MechanicBillPage {
  
     var data = {
       "person_shop_name":this.person_shop_name,
+      "bill_number":this.bill_number,
       "srth_id":json[0]['srth_id'],
       "vehicle_id":this.vehicle_id,
       "reason":this.reason,
@@ -268,7 +278,7 @@ export class MechanicBillPage {
         this.img = null;
 
 
-        this.bill_id = Number(resp['_LatestBillId']) + 1;
+        this.bill_number = Number(resp['_LatestBillId']) + 1;
 
         
         if(this.img != null)
@@ -286,6 +296,7 @@ export class MechanicBillPage {
     var data = {
       "bill_id":this.bill_id,
       "person_shop_name":this.person_shop_name,
+      "bill_number":this.bill_number,
       "srth_id":json[0]['srth_id'],
       "vehicle_id":this.vehicle_id,
       "reason":this.reason,
@@ -312,7 +323,7 @@ export class MechanicBillPage {
         this.img = null;
         this.is_update = false;
 
-        this.bill_id = Number(resp['_LatestBillId']) + 1;
+        this.bill_number = Number(resp['_LatestBillId']) + 1;
 
         for(let i=0;i<this.bills.length;i++)
           this.bills[i]['selected'] = 'false';

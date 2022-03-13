@@ -51,7 +51,7 @@
 
         <div *ngFor="let cm of complaints">
         <div [ngClass]="cm['selected']=='true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThis(cm)" >
-          <p>{{cm['complaints_id']}} </p>
+          <p>{{cm['complaints_number']}} </p>
           <p>{{cm['vehicle_number']}}</p>
           <p>{{cm['problem_id']}}</p>
           <p>{{cm['date_of_complaint']}}</p>
@@ -79,7 +79,7 @@
       </ion-select>
     </ion-item> -->
 
-    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_id}}</ion-badge>
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_number}}</ion-badge>
 
 
     <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">

@@ -102,7 +102,7 @@ export class MechanicKhataPage {
           for(let i=0;i<this.bills.length;i++){
             var searchobj2 = {
               "type":"bills",
-              "id":this.bills[i]['bill_id'],
+              "id":this.bills[i]['bill_number'],
               "name":this.bills[i]['person_shop_name'],
               "amount":this.bills[i]['total_bill']
             };
@@ -269,7 +269,7 @@ export class MechanicKhataPage {
 
     } else if(sr['type'] == 'bills') {
       for(let i=0;i<this.bills.length;i++){
-        if(this.bills[i]['bill_id'] == sr['id']){
+        if(this.bills[i]['bill_number'] == sr['id']){
           this.filterbills = [];
           this.searchTerm = sr['id'];
           this.filterbills.push(this.bills[i]);

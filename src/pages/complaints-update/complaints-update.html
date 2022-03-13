@@ -71,7 +71,7 @@
           <p>12/09/2020</p>
           <p>BILL123</p>
           <p>RS 200</p> -->
-          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_id']}} </p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['complaints_number']}} </p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['vehicle_info']['vehicle_number']}}</p>
           <p *ngIf="cm['driver'] != null">{{cm['driver']['name']}}</p>
           <p *ngIf="cm['driver'] == null"></p>

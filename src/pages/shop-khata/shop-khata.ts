@@ -69,7 +69,7 @@ export class ShopKhataPage {
           for(let i=0;i<this.bills.length;i++){
             var searchobj2 = {
               "type":"bills",
-              "id":this.bills[i]['bill_id'],
+              "id":this.bills[i]['bill_number'],
               "name":this.bills[i]['person_shop_name'],
               "amount":this.bills[i]['total_bill']
             };
@@ -124,16 +124,6 @@ export class ShopKhataPage {
 
           localStorage.setItem("shop_bills",JSON.stringify(this.bills));
 
-          // var dt = {  
-          //   "image_id":this.bills[i]['bill_image_id']
-          // };
-
-          // this.rest.post(this.codes.GET_IMAGE_BY_IMAGE_ID, dt).then(resp => {
-          //   if(resp['data'].length > 0){
-          //     this.bills[i]['image_content'] = resp['data'][0]['image_content'];
-          //     this.filterbills[i]['image_content'] = resp['data'][0]['image_content'];
-          //   }
-          // });
         }
         this.getShops();
       }
@@ -276,7 +266,7 @@ export class ShopKhataPage {
 
     } else if(sr['type'] == 'bills') {
       for(let i=0;i<this.bills.length;i++){
-        if(this.bills[i]['bill_id'] == sr['id']){
+        if(this.bills[i]['bill_number'] == sr['id']){
           this.filterbills = [];
           this.searchTerm = sr['id'];
           this.filterbills.push(this.bills[i]);

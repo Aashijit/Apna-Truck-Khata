@@ -486,7 +486,7 @@ export class ShopPage {
 
             } else if(this.selectedfilters[i]['type'] == 'bills') {
               for(let j=0;j<this.billDetails.length;j++){
-                if(this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+                if(this.billDetails[j]['bill_number'] == this.selectedfilters[i]['id']) {
                   this.filterbillDetails.push(this.billDetails[j]);
                 }
               }
@@ -544,7 +544,7 @@ export class ShopPage {
 
         } else if(this.selectedfilters[i]['type'] == 'bills') {
           for(let j=0;j<this.billDetails.length;j++){
-            if(this.billDetails[j]['bill_id'] == this.selectedfilters[i]['id']) {
+            if(this.billDetails[j]['bill_number'] == this.selectedfilters[i]['id']) {
               this.filterbillDetails.push(this.billDetails[j]);
             }
           }

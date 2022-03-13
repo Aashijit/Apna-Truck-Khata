@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-measurement-connector:16.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16cf6f6cc4a678e3605403e63d80cde6/firebase-measurement-connector-16.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16cf6f6cc4a678e3605403e63d80cde6/firebase-measurement-connector-16.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16cf6f6cc4a678e3605403e63d80cde6/firebase-measurement-connector-16.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-16.0.0.aar/2e36c7272a43cf1b79e4caa94283b1b7/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8800ae155f40f029ca3a89f7c3a82105/firebase-measurement-connector-16.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8800ae155f40f029ca3a89f7c3a82105/firebase-measurement-connector-16.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8800ae155f40f029ca3a89f7c3a82105/firebase-measurement-connector-16.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

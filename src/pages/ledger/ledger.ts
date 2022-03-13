@@ -18,6 +18,7 @@ export class LedgerPage {
   img : any = null;
 
   payment_id : any = '';
+  payment_number : number = null;
   payid : any = '';
   paid_to_worker_id : any = '';
   date_of_payment : any = '';
@@ -54,6 +55,7 @@ export class LedgerPage {
       this.getAllBillsByWorkerId();
       this.payment = this.navParams.get("payment");
       this.payment_id = this.payment['payment_id'];
+      this.payment_number = this.payment['payment_number'];
       this.payment_amount = this.payment['payment_amount'];
       this.date_of_payment = this.payment['date_of_payment'];
       this.mode_of_payment = this.payment['mode_of_payment'];
@@ -77,8 +79,12 @@ export class LedgerPage {
   }
 
   ionViewWillEnter(){
-    this.rest.post(this.codes.GET_LAST_PAYMENT_ID,{}).then(resp => {
-      this.payid= Number(resp['data']) + 1;
+    var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+    var data = {
+      "srth_id": json[0]['srth_id']
+    };
+    this.rest.post(this.codes.GET_LAST_PAYMENT_ID,data).then(resp => {
+      this.payment_number= Number(resp['data']) + 1;
     });
   }
 
@@ -127,7 +133,7 @@ export class LedgerPage {
       "mode_of_payment":this.mode_of_payment,
       "date_of_payment":this.date_of_payment,
       "worker_type":this.worker['worker_type'],
-      "payment_id":this.payid
+      "payment_id":this.payment_number
     };
     var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
  
@@ -135,7 +141,7 @@ export class LedgerPage {
       "srth_id":json[0]['srth_id'],
       "worker_type":this.worker['worker_type'],
       "worker_id":this.worker['worker_id'],
-      "document_type":"paym",
+      "document_type":"payment",
       "type":"bills",
       "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
       "tags":JSON.stringify(data)
@@ -158,6 +164,7 @@ export class LedgerPage {
   update() {
     var data = {
       'payment_id':this.payment_id,
+      "payment_number":this.payment_number,
       "paid_to_worker_id":this.worker['worker_id'],
       "date_of_payment":this.date_of_payment,
       "mode_of_payment":this.mode_of_payment,
@@ -189,6 +196,7 @@ export class LedgerPage {
   save(){
     var data = {
       "paid_to_worker_id":this.worker['worker_id'],
+      "payment_number":this.payment_number,
       "date_of_payment":this.date_of_payment,
       "mode_of_payment":this.mode_of_payment,
       "payment_amount":this.payment_amount,
@@ -214,8 +222,13 @@ export class LedgerPage {
         this.details  = '' ;
         this.payment_amount = '';
         this.bill_ids = [];
-        this.rest.post(this.codes.GET_LAST_PAYMENT_ID,{}).then(resp => {
-          this.payid= Number(resp['data']) + 1;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data1 = {
+          "srth_id": json[0]['srth_id']
+        };
+
+        this.rest.post(this.codes.GET_LAST_PAYMENT_ID,data1).then(resp => {
+          this.payment_number= Number(resp['data']) + 1;
         });
       }
     });

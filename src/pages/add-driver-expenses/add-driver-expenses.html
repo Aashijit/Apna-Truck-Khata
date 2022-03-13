@@ -1,25 +1,14 @@
-<!--
-  Generated template for the AddDriverExpensesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
     <ion-row>
-      <!-- <ion-col col-2 class="custom-back-button"> -->
-        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->
-      <!-- </ion-col> -->
-    
       <ion-col col-10 class="person-name text-center">
-        <ion-title>        
+        <ion-title>
           <ion-icon ios="ios-person" md="md-person"></ion-icon>
           ADD DRIVER EXPENSES
         </ion-title>
-
       </ion-col>
       <ion-col col-2 class="youtube">
-        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >
+        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">
       </ion-col>
     </ion-row>
   </ion-navbar>
@@ -27,33 +16,10 @@
 
 <ion-content padding>
   <div class="container white-section">
-
-    <!-- <div class="scrollmenu">
-      <a href="#home">BILL NUMBER</a>
-      <a href="#news">DRIVER NAME</a>
-      <a href="#contact">VEHICLE NUMBER</a>
-      <a href="#about">REASON</a>
-      <a href="#about">DATE-START/END</a>
-      <a href="#support">COST</a>
-      <a href="#blog">DETAIL</a>
-      <a href="#tools">KM READING</a> -->
-            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>
-      <i class="fa fa-angle-right" aria-hidden="true"></i> -->
-
-      <!-- <div style="height: 200px;width: 400px">
-
-      </div>
-    </div> -->
-
-
     <div class="mt-4">
-
-
     </div>
 
-    
-
-    <div class="scroll-grid" >
+    <div class="scroll-grid">
       <div class="scrollmenu">
 
         <a href="#home">BILL NUMBER</a>
@@ -62,23 +28,26 @@
         <a href="#about">REASON</a>
         <a href="#support">COST</a>
         <a href="#blog">DETAIL</a>
+        <a href="#tools">REJOIN DATE</a>
         <a href="#tools">KM READING</a>
         <a href="#tools">IMAGE</a>
-         
-        <div [ngClass]="bl['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bl of bills">
-        <div [ngClass]="bl['total_bill'] < 0 ? 'green' : 'red'"  (click)="selectThis(bl)" >
-          <p>{{bl['bill_id']}}</p>
-          <p>{{bl['person_shop_name']}}</p>
-          <p>{{bl['vehicle_number']}}</p>
-          <p>{{bl['reason']}}</p>
-          <p>{{bl['total_bill']}}</p>
-          <p>{{bl['bill_details']}}</p>
-          <p>{{bl['km_reading']}}</p>
-          <p *ngIf="bl['image'] != undefined">
+
+        <div [ngClass]="bl['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"
+          *ngFor="let bl of bills">
+          <div [ngClass]="bl['total_bill'] < 0 ? 'green' : 'red'" (click)="selectThis(bl)">
+            <p>{{bl['bill_number']}}</p>
+            <p>{{bl['person_shop_name']}}</p>
+            <p>{{bl['vehicle_number']}}</p>
+            <p>{{bl['reason']}}</p>
+            <p>{{bl['total_bill']}}</p>
+            <p>{{bl['bill_details']}}</p>
+            <p>{{bl['rejoin_date']}}</p>
+            <p>{{bl['km_reading']}}</p>
+            <p *ngIf="bl['image'] != undefined">
               <img [src]="bl['image']['image_url']" style="width:11% !important" (click)="viewImage(bl['image'])" />
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
 
       </div>
       <div class="show-arrows">
@@ -88,20 +57,23 @@
         <button ion-button class="custom-button-u" *ngIf="isupdate" (click)="presentConfirmDelete()">Delete</button>
    -->
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-  
+
       </div>
     </div>
 
-    
 
-    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
 
-        
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_number}}</ion-badge>
+
+
     <ion-item *ngIf="!isSelectedBill" class="label-select">
       <ion-label floating>SELECT DRIVER</ion-label>
       <!--  -->
-      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important" #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)" >
-        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} <span *ngIf="dr['vehicle']!=undefined">-  {{dr['vehicle']['vehicle_number']}}</span></ion-option>
+      <ion-select interface="action-sheet"
+        style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important"
+        #driverselect [(ngModel)]="worker_id" (ionChange)="change($event)">
+        <ion-option *ngFor="let dr of drivers" value="{{dr['worker_id']}}">{{dr['name']}} <span
+            *ngIf="dr['vehicle']!=undefined">- {{dr['vehicle']['vehicle_number']}}</span></ion-option>
 
         <ion-option value="add">Add Driver</ion-option>
 
@@ -110,48 +82,48 @@
 
 
 
- 
+
     <ion-row class="selected-details" *ngIf="isSelectedBill">
       <ion-col col-4 class="text-center" style="color: white;">
-        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">
+        <img src="../../assets/saarthi-icon/png/driver.png" alt="">
       </ion-col>
-      <ion-col col-4 class="text-center"  style="color: white;">
+      <ion-col col-4 class="text-center" style="color: white;">
         <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{name}}<br> {{vehicle_number}}</h6>
       </ion-col>
-      <ion-col col-4 class="text-center"> 
+      <ion-col col-4 class="text-center">
 
         <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>
       </ion-col>
     </ion-row>
     <!-- (click)="" -->
-   
 
 
-    <div class="label-float" >
-      <input type="text" [(ngModel)]="reason" (click)="openReasonDialog()"  placeholder=" " />
+
+    <div class="label-float">
+      <input type="text" [(ngModel)]="reason" (click)="openReasonDialog()" placeholder=" " />
       <label>REASON</label>
-     <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
     </div>
 
 
 
 
 
-    <div class="label-float" >
-      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()"/>
+    <div class="label-float">
+      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()" />
       <label>DATE OF EVENT</label>
       <i class="fa fa-calendar" aria-hidden="true"></i>
     </div>
 
-    <div class="label-float" *ngIf="reason == 'Holiday'" >
-      <input type="text" [(ngModel)]="rejoin_date" (click)="openCalendarPopup1()"/>
+    <div class="label-float" *ngIf="reason == 'Holiday'">
+      <input type="text" [(ngModel)]="rejoin_date" (click)="openCalendarPopup1()" />
       <label>REJOIN DATE</label>
       <i class="fa fa-calendar" aria-hidden="true"></i>
     </div>
 
 
-    <div class="label-float" >
-      <input type="tel" [(ngModel)]="total_bill"  placeholder=" " />
+    <div class="label-float">
+      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />
       <label>&#x20b9; COST</label>
       <i class="fa fa-money" aria-hidden="true"></i>
 
@@ -159,63 +131,54 @@
 
 
 
-    <div class="label-float" >
+    <div class="label-float">
       <input type="tel" [(ngModel)]="km_reading" placeholder=" " />
       <label>KM READING</label>
     </div>
 
-    <ion-row >
+    <ion-row>
       <ion-col col-9>
 
-        <ion-row >
-          <ion-col style="margin-left: 20px;margin-top: -11px;" col-10  (click)="openDetailPopup()">
-            <div class="label-float" >
+        <ion-row>
+          <ion-col style="margin-left: 20px;margin-top: -11px;" col-10 (click)="openDetailPopup()">
+            <div class="label-float">
               <input type="text" [(ngModel)]="bill_details" placeholder=" " />
               <label>DETAILS</label>
-              <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
-        
             </div>
-            
-    
-          </ion-col>    
-        </ion-row>  
+          </ion-col>
+        </ion-row>
       </ion-col>
       <ion-col col-2>
         <ion-row class="detail-picture">
-          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">
+          <ion-col col-4 *ngIf="img == null" (click)="openCameraPopup()">
             <i class="fa fa-camera" aria-hidden="true"></i>
-            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->
-    
-          </ion-col>    
-          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
-            <img [src]="img['image_url']" style="opacity: 0.3 !important;"/>
-           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>
-    
           </ion-col>
-        </ion-row>      
+          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">
+            <img [src]="img['image_url']" style="opacity: 0.3 !important;" />
+            <ion-icon class="edit-pencil" ios="ios-create" md="md-create"
+              style="position: absolute;right: 19px;top: 21px;"></ion-icon>
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </div>
 
   <ion-row>
     <ion-col col-6 class="text-center">
-      <button ion-button round class="add-button" (click)="saveExpense('0')" *ngIf="!is_update"> ADD <br>EXPENSE</button>
+      <button ion-button round class="add-button" (click)="saveExpense('0')" *ngIf="!is_update"> ADD
+        <br>EXPENSE</button>
     </ion-col>
     <ion-col col-6 class="text-center">
-      <button ion-button round class="monthy-button" (click)="saveExpense('1')" *ngIf="!is_update"> MINUS <br>EXPENSE</button>
+      <button ion-button round class="monthy-button" (click)="saveExpense('1')" *ngIf="!is_update"> MINUS
+        <br>EXPENSE</button>
     </ion-col>
 
-    <!-- <ion-col col-12 class="text-center">
-      <button ion-button round class="custom-button" *ngIf="is_update" (click)="updateExpense()">Update</button>
-    </ion-col> -->
-
     <ion-col col-6 *ngIf="is_update" class="text-center">
-      <button ion-button round class="add-button" (click)="updateExpense()" > ADD <br>EXPENSE</button>
+      <button ion-button round class="add-button" (click)="updateExpense()"> ADD <br>EXPENSE</button>
     </ion-col>
     <ion-col col-6 *ngIf="is_update" class="text-center">
-      <button ion-button round class="monthy-button" (click)="updateExpense()" > MINUS <br>EXPENSE</button>
+      <button ion-button round class="monthy-button" (click)="updateExpense()"> MINUS <br>EXPENSE</button>
     </ion-col>
 
   </ion-row>
-</ion-content> 
-
+</ion-content>

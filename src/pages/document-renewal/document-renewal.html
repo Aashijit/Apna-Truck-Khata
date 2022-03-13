@@ -33,7 +33,7 @@
 
         <div *ngFor="let bill of displayBills" (click)="selectThis(bill)">
           <!-- <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list' : 'scrollmenu-list selected'"> -->
-            <p>{{bill['bill_id']}}</p>
+            <p>{{bill['bill_number']}}</p>
             <p>{{bill['person_shop_name']}}</p>
             <p>{{bill['vehicle_number']}}</p>
             <p>{{bill['expiry_date']}}</p>
@@ -56,7 +56,7 @@
 
 
 
-    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_number}}</ion-badge>
 
     <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">
       Total &#x20b9; {{total_bill}}</ion-badge>

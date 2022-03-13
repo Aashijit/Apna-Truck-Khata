@@ -77,7 +77,7 @@ export class AccountPaymentSearchModalPage {
         for(let i=0;i<this.bills.length;i++){
           var searchobj = {
             "type":"bills",
-            "id":String(this.bills[i]['bill_id']),
+            "id":String(this.bills[i]['bill_number']),
             "name":this.bills[i]['person_shop_name'],
             "amount":String(this.bills[i]['total_bill']),
             "details":String(this.bills[i]['bill_details'])

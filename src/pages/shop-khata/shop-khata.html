@@ -23,13 +23,13 @@
   <div class="container">
 
     <ion-row class="document-button">
-      <ion-col col-6 (click)="report('shopbuyreport')">
+      <!-- <ion-col col-6 (click)="report('shopbuyreport')">
         <div>
           SHOP BUY REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
         </div>
-      </ion-col>
-      <ion-col col-6 (click)="report('shopbillreport')">
+      </ion-col> -->
+      <ion-col col-12 (click)="report('shopbillreport')">
         <div>
           SHOP BILL REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
@@ -72,7 +72,7 @@
         
         <div [ngClass]="bill['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" *ngFor="let bill of filterbills" (click)="selectThis(bill)" >
           <div>
-          <p>{{bill['bill_id']}}</p>
+          <p>{{bill['bill_number']}}</p>
           <p>{{bill['person_shop_name']}}</p>
           <p>{{bill['vehicle_number']}}</p>
           <p>{{bill['bill_date']}}</p>
@@ -101,17 +101,13 @@
    
       </div>
     </div>
-  
-    
- 
-
 
     <div class="text-center">
       <button ion-button round class="custom-button" (click)="openBuyFromShopPage()">ADD PARTS BILL</button>
     </div>
 
 
-    <div class="custom-searchbar-div" style="position: relative;">
+    <!-- <div class="custom-searchbar-div" style="position: relative;">
       <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" (click)="searchBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
@@ -124,46 +120,34 @@
       </ion-chip>
       </p>
 
-
-
-
-
     <div class="scroll-grid" >
       <div class="scrollmenu">
        
       <a href="#home">BILL NUMBER</a>
       <a href="#news">SHOP</a>
-      <!-- <a href="#news">BUSINESS NAME</a> -->
       <a href="#contact">VEHICLE</a>
       <a href="#about">REPAIR DATE</a>
-      <!-- <a href="#about">EXCHANGE DATE</a> -->
       <a href="#support">PROBLEM</a>
       <a href="#blog">PARTS</a>
       <a href="#tools">QUANTITY</a>
       <a href="#tools">RATE/PC</a> 
       <a href="#tools">TOTAL</a>
       <a href="#tools">DETAIL</a>
-      <!-- <a href="#tools">ID(OPTIONAL)</a> --> 
       <a href="#tools">KM READING</a>
 
 
-      <!-- (click)="selectThis(1)" -->
-  
         <div *ngFor="let detail of filterbillDetails" [ngClass]="detail['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThisDetails(detail)">
           <p>{{detail['bill_id']}}</p>
           <p>{{detail['person_shop_name']}}</p>
-          <!-- <p>XYZ BUSINESS</p> -->
           <p>{{detail['vehicle_number']}}</p>
           <p>{{detail['date_of_repair']}}</p>
-          <!-- <p>MECHANICAL</p> -->
           <p>{{detail['problem_name']}}</p>
           <p>{{detail['part_name']}}</p>
           <p>{{detail['qty']}}</p>
           <p>RS {{detail['rate']}}</p>
           <p>RS {{detail['total_amount']}}</p>
           <p>{{detail['additional_info']}}</p>
-          <!-- <p>{{detail['']}}</p> -->
-          <!-- <p>ID123</p> -->
+
           <p>{{detail['km_reading']}}</p>
      
         </div>
@@ -174,7 +158,6 @@
         <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
 
         <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="updateDetails()">Change &nbsp; <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>
-        <!-- <button ion-button class="custom-button-u" *ngIf="isupdate1" (click)="presentConfirmDelete()"> &nbsp;  Erase &nbsp; <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button> -->
   
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
   
@@ -183,7 +166,7 @@
 
     <div class="text-center">
       <button ion-button round class="custom-button" (click)="openShopBillDetailsPage()">PARTS BILL DETAILS</button>
-    </div>
+    </div> -->
 
 
   </div>

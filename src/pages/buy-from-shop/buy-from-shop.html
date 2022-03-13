@@ -36,7 +36,7 @@
         
         <div [ngClass]="bl['selected'] == 'true' ? 'scrollmenu-list selected' : 'scrollmenu-list'"  *ngFor="let bl of bills">
         <div (click)="selectThis(bl)">
-          <p>{{bl['bill_id']}}</p>
+          <p>{{bl['bill_number']}}</p>
           <p>{{bl['person_shop_name']}}</p>
           <p>{{bl['vehicle_id']}}</p>
           <p>{{bl['bill_date']}}</p>
@@ -57,7 +57,7 @@
     </div>
 
 
-    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>
+    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_number}}</ion-badge>
 
 
     <ion-item *ngIf="!isSelectedBill" class="label-select">
