@@ -1,1 +1,570 @@
-webpackJsonp([34],{858:function(l,n,e){"use strict";function t(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,7,"div",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n            "])),(l()(),h["ɵeld"](2,0,null,null,1,"p",[["style","color: #000;"]],null,null,null,null,null)),(l()(),h["ɵted"](3,null,["",""])),(l()(),h["ɵted"](-1,null,["\n             "])),(l()(),h["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["Mechanic"])),(l()(),h["ɵted"](-1,null,["\n            "]))],null,function(l,n){l(n,3,0,n.parent.context.$implicit.name)})}function i(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,7,"div",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n              "])),(l()(),h["ɵeld"](2,0,null,null,1,"p",[["style","color: #000;"]],null,null,null,null,null)),(l()(),h["ɵted"](3,null,[""," ~ ",""])),(l()(),h["ɵted"](-1,null,["\n              "])),(l()(),h["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](6,null,["Mechanic : ",""])),(l()(),h["ɵted"](-1,null,["\n           "]))],null,function(l,n){l(n,3,0,n.parent.context.$implicit.id,n.parent.context.$implicit.amount);l(n,6,0,n.parent.context.$implicit.name)})}function u(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,12,"ion-item",[["class","item item-block"]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.clickedsearchitem(l.context.$implicit)&&t}return t},k.b,k.a)),h["ɵdid"](1,1097728,null,3,w.a,[S.a,T.a,h.ElementRef,h.Renderer,[2,L.a]],null,null),h["ɵqud"](335544320,1,{contentLabel:0}),h["ɵqud"](603979776,2,{_buttons:1}),h["ɵqud"](603979776,3,{_icons:1}),h["ɵdid"](5,16384,null,0,M.a,[],null,null),(l()(),h["ɵted"](-1,2,["\n           "])),(l()(),h["ɵand"](16777216,null,2,1,null,t)),h["ɵdid"](8,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,2,["\n           "])),(l()(),h["ɵand"](16777216,null,2,1,null,i)),h["ɵdid"](11,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,2,["\n          "]))],function(l,n){l(n,8,0,"mechanic"==n.context.$implicit.type);l(n,11,0,"bills"==n.context.$implicit.type)},null)}function s(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,13,"ion-card",[],null,null,null,null,null)),h["ɵdid"](1,16384,null,0,A.a,[T.a,h.ElementRef,h.Renderer],null,null),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](3,0,null,null,9,"ion-card-content",[],null,null,null,null,null)),h["ɵdid"](4,16384,null,0,x.a,[T.a,h.ElementRef,h.Renderer],null,null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](6,0,null,null,5,"ion-list",[],null,null,null,null,null)),h["ɵdid"](7,16384,null,0,O.a,[T.a,h.ElementRef,h.Renderer,P.a,F.m,$.a],null,null),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵand"](16777216,null,null,1,null,u)),h["ɵdid"](10,802816,null,0,N.i,[h.ViewContainerRef,h.TemplateRef,h.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,10,0,n.component.displaysearchitems)},null)}function a(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,3,"span",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n              "])),(l()(),h["ɵeld"](2,0,null,null,0,"img",[["imageViewer",""],["style","width:11% !important"]],[[8,"src",4]],null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n            "]))],null,function(l,n){l(n,2,0,n.parent.context.$implicit.image_content)})}function r(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,29,"div",[],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.selectThis(l.context.$implicit)&&t}return t},null,null)),h["ɵdid"](1,278528,null,0,N.h,[h.IterableDiffers,h.KeyValueDiffers,h.ElementRef,h.Renderer2],{ngClass:[0,"ngClass"]},null),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](3,0,null,null,25,"div",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](5,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](6,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](8,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](9,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](11,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](12,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](14,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](15,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](17,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](18,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](20,0,null,null,1,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](21,null,["",""])),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵeld"](23,0,null,null,4,"p",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n            "])),(l()(),h["ɵand"](16777216,null,null,1,null,a)),h["ɵdid"](26,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,null,["\n          "])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵted"](-1,null,["\n\n        "]))],function(l,n){l(n,1,0,"true"==n.context.$implicit.selected?"scrollmenu-list selected":"scrollmenu-list");l(n,26,0,null!=n.context.$implicit.image_content&&void 0!=n.context.$implicit.image_content)},function(l,n){l(n,6,0,n.context.$implicit.person_shop_name);l(n,9,0,n.context.$implicit.bill_number);l(n,12,0,n.context.$implicit.vehicle_number);l(n,15,0,n.context.$implicit.bill_date);l(n,18,0,n.context.$implicit.total_bill);l(n,21,0,n.context.$implicit.bill_details)})}function o(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,5,"button",[["class","custom-button-u"],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.update()&&t}return t},V.b,V.a)),h["ɵdid"](1,1097728,null,0,H.a,[[8,""],T.a,h.ElementRef,h.Renderer],null,null),(l()(),h["ɵted"](-1,0,["Change   "])),(l()(),h["ɵeld"](3,0,null,0,1,"ion-icon",[["class","ion-icon-w"],["name","create"],["role","img"]],[[2,"hide",null]],null,null,null,null)),h["ɵdid"](4,147456,null,0,J.a,[T.a,h.ElementRef,h.Renderer],{name:[0,"name"]},null),(l()(),h["ɵted"](-1,0,[" "]))],function(l,n){l(n,4,0,"create")},function(l,n){l(n,3,0,h["ɵnov"](n,4)._hidden)})}function d(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,5,"button",[["class","custom-button-u"],["ion-button",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.presentConfirmDelete()&&t}return t},V.b,V.a)),h["ɵdid"](1,1097728,null,0,H.a,[[8,""],T.a,h.ElementRef,h.Renderer],null,null),(l()(),h["ɵted"](-1,0,["Erase   "])),(l()(),h["ɵeld"](3,0,null,0,1,"ion-icon",[["class","ion-icon-w"],["name","ios-trash"],["role","img"]],[[2,"hide",null]],null,null,null,null)),h["ɵdid"](4,147456,null,0,J.a,[T.a,h.ElementRef,h.Renderer],{name:[0,"name"]},null),(l()(),h["ɵted"](-1,0,[" "]))],function(l,n){l(n,4,0,"ios-trash")},function(l,n){l(n,3,0,h["ɵnov"](n,4)._hidden)})}function c(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,32,"ion-header",[],null,null,null,null,null)),h["ɵdid"](1,16384,null,0,G.a,[T.a,h.ElementRef,h.Renderer,[2,U.a]],null,null),(l()(),h["ɵted"](-1,null,["\n  "])),(l()(),h["ɵeld"](3,0,null,null,28,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,K.b,K.a)),h["ɵdid"](4,49152,null,0,j.a,[q.a,[2,U.a],[2,Y.a],T.a,h.ElementRef,h.Renderer],null,null),(l()(),h["ɵted"](-1,3,["\n    "])),(l()(),h["ɵeld"](6,0,null,3,24,"ion-row",[["class","row"]],null,null,null,null,null)),h["ɵdid"](7,16384,null,0,W.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](9,0,null,null,3,"ion-col",[["class","custom-back-button col"],["col-2",""]],null,null,null,null,null)),h["ɵdid"](10,16384,null,0,X.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵted"](-1,null,["\n    \n      "])),(l()(),h["ɵeld"](14,0,null,null,9,"ion-col",[["class","person-name text-left col"],["col-6",""]],null,null,null,null,null)),h["ɵdid"](15,16384,null,0,X.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](17,0,null,null,5,"ion-title",[],null,null,null,Z.b,Z.a)),h["ɵdid"](18,49152,null,0,z.a,[T.a,h.ElementRef,h.Renderer,[2,Q.a],[2,j.a]],null,null),(l()(),h["ɵted"](-1,0,["        \n          "])),(l()(),h["ɵeld"](20,0,null,0,1,"ion-icon",[["ios","ios-pricetag"],["md","md-pricetag"],["role","img"]],[[2,"hide",null]],null,null,null,null)),h["ɵdid"](21,147456,null,0,J.a,[T.a,h.ElementRef,h.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),h["ɵted"](-1,0,["\n          MECHANIC KHATA\n        "])),(l()(),h["ɵted"](-1,null,["\n\n      "])),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](25,0,null,null,4,"ion-col",[["class","youtube text-right col"],["col-3",""]],null,null,null,null,null)),h["ɵdid"](26,16384,null,0,X.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](28,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/youtube.png"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵted"](-1,null,["\n    "])),(l()(),h["ɵted"](-1,3,["\n  "])),(l()(),h["ɵted"](-1,null,["\n"])),(l()(),h["ɵted"](-1,null,["\n\n"])),(l()(),h["ɵeld"](34,0,null,null,84,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,ll.b,ll.a)),h["ɵdid"](35,4374528,null,0,nl.a,[T.a,P.a,$.a,h.ElementRef,h.Renderer,q.a,el.a,h.NgZone,[2,U.a],[2,Y.a]],null,null),(l()(),h["ɵted"](-1,1,["\n  "])),(l()(),h["ɵeld"](37,0,null,1,80,"div",[["class","container"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n\n    "])),(l()(),h["ɵeld"](39,0,null,null,12,"ion-row",[["class","document-button row"]],null,null,null,null,null)),h["ɵdid"](40,16384,null,0,W.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](43,0,null,null,7,"ion-col",[["class","col"],["col-12",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.shopBillReport()&&t}return t},null,null)),h["ɵdid"](44,16384,null,0,X.a,[],null,null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](46,0,null,null,3,"div",[],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n          MECHANIC BILL REPORT\n          "])),(l()(),h["ɵeld"](48,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-download"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵted"](-1,null,["\n    "])),(l()(),h["ɵted"](-1,null,["\n\n    "])),(l()(),h["ɵeld"](53,0,null,null,9,"div",[["class","custom-searchbar-div"],["style","position: relative;"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](55,0,null,null,4,"ion-searchbar",[["class","custom-searchbar"],["placeholder","SEARCH MECHANIC, BILL NUMBER"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ngModelChange"],[null,"click"],[null,"ionInput"]],function(l,n,e){var t=!0,i=l.component;if("ngModelChange"===n){t=!1!==(i.searchTerm=e)&&t}if("click"===n){t=!1!==i.clicksearchbar()&&t}if("ionInput"===n){t=!1!==i.getItems(e)&&t}return t},tl.b,tl.a)),h["ɵdid"](56,671744,null,0,il.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),h["ɵprd"](2048,null,il.NgControl,null,[il.NgModel]),h["ɵdid"](58,16384,null,0,il.NgControlStatus,[il.NgControl],null,null),h["ɵdid"](59,1294336,null,0,ul.a,[T.a,P.a,h.ElementRef,h.Renderer,[2,il.NgControl]],{placeholder:[0,"placeholder"]},{ionInput:"ionInput"}),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](61,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-angle-down"]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.closesearchbar()&&t}return t},null,null)),(l()(),h["ɵted"](-1,null,["\n    "])),(l()(),h["ɵted"](-1,null,["\n\n    "])),(l()(),h["ɵand"](16777216,null,null,1,null,s)),h["ɵdid"](65,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,null,["\n    \n\n    "])),(l()(),h["ɵeld"](67,0,null,null,41,"div",[["class","scroll-grid"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](69,0,null,null,25,"div",[["class","scrollmenu"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](71,0,null,null,1,"a",[["href","#home"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["MECHANIC"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](74,0,null,null,1,"a",[["href","#news"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["BILL NUMBER"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](77,0,null,null,1,"a",[["href","#contact"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["VEHICLE NUMBER"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](80,0,null,null,1,"a",[["href","#about"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["PURCHASE DATE"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](83,0,null,null,1,"a",[["href","#support"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["BILL"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](86,0,null,null,1,"a",[["href","#blog"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["DETAIL"])),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](89,0,null,null,1,"a",[["href","#tools"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["IMAGE"])),(l()(),h["ɵted"](-1,null,["\n        \n        "])),(l()(),h["ɵand"](16777216,null,null,1,null,r)),h["ɵdid"](93,802816,null,0,N.i,[h.ViewContainerRef,h.TemplateRef,h.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),h["ɵted"](-1,null,["\n  \n     \n        "])),(l()(),h["ɵted"](-1,null,["\n    \n      "])),(l()(),h["ɵeld"](96,0,null,null,11,"div",[["class","show-arrows"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵeld"](98,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-down"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n\n        "])),(l()(),h["ɵand"](16777216,null,null,1,null,o)),h["ɵdid"](101,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,null,["\n        "])),(l()(),h["ɵand"](16777216,null,null,1,null,d)),h["ɵdid"](104,16384,null,0,N.j,[h.ViewContainerRef,h.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),h["ɵted"](-1,null,["\n  \n  \n        "])),(l()(),h["ɵeld"](106,0,null,null,0,"i",[["aria-hidden","true"],["class","fa fa-long-arrow-right"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n  \n      "])),(l()(),h["ɵted"](-1,null,["\n    "])),(l()(),h["ɵted"](-1,null,["\n  \n    \n \n\n\n    "])),(l()(),h["ɵeld"](110,0,null,null,5,"div",[["class","text-center"]],null,null,null,null,null)),(l()(),h["ɵted"](-1,null,["\n      "])),(l()(),h["ɵeld"](112,0,null,null,2,"button",[["class","custom-button"],["ion-button",""],["round",""]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.openMechanicBillPage()&&t}return t},V.b,V.a)),h["ɵdid"](113,1097728,null,0,H.a,[[8,""],T.a,h.ElementRef,h.Renderer],{round:[0,"round"]},null),(l()(),h["ɵted"](-1,0,["MECHANIC BILL"])),(l()(),h["ɵted"](-1,null,["\n    "])),(l()(),h["ɵted"](-1,null,["\n\n\n    "])),(l()(),h["ɵted"](-1,null,["\n\n\n  "])),(l()(),h["ɵted"](-1,1,["\n"])),(l()(),h["ɵted"](-1,null,[" \n\n\n\n\n"])),(l()(),h["ɵted"](-1,null,["\n"]))],function(l,n){var e=n.component;l(n,21,0,"ios-pricetag","md-pricetag");l(n,56,0,e.searchTerm);l(n,59,0,"SEARCH MECHANIC, BILL NUMBER");l(n,65,0,e.displayfilter);l(n,93,0,e.filterbills);l(n,101,0,e.isupdate);l(n,104,0,e.isupdate);l(n,113,0,"")},function(l,n){l(n,3,0,h["ɵnov"](n,4)._hidden,h["ɵnov"](n,4)._sbPadding);l(n,20,0,h["ɵnov"](n,21)._hidden);l(n,34,0,h["ɵnov"](n,35).statusbarPadding,h["ɵnov"](n,35)._hasRefresher);l(n,55,1,[h["ɵnov"](n,58).ngClassUntouched,h["ɵnov"](n,58).ngClassTouched,h["ɵnov"](n,58).ngClassPristine,h["ɵnov"](n,58).ngClassDirty,h["ɵnov"](n,58).ngClassValid,h["ɵnov"](n,58).ngClassInvalid,h["ɵnov"](n,58).ngClassPending,h["ɵnov"](n,59)._animated,h["ɵnov"](n,59)._value,h["ɵnov"](n,59)._isActive,h["ɵnov"](n,59)._showCancelButton,h["ɵnov"](n,59)._shouldAlignLeft,h["ɵnov"](n,59)._isFocus])})}Object.defineProperty(n,"__esModule",{value:!0});var h=e(0),f=(e(2),e(26),e(187)),p=e(84),m=e(183),b=function(){function l(l,n,e,t,i,u,s,a){this.alertCtrl=l,this.navCtrl=n,this.navParams=e,this.rest=t,this.codes=i,this.message=u,this.modalCtrl=s,this.ldctrl=a,this.bills=[],this.isupdate=!1,this.isupdate1=!1,this.filterbills="",this.searchTerm="",this.billDetails=[],this.filterbillDetails=[],this.shops=[],this.search=[],this.displayfilter=!1,this.displaysearchitems=[],this.selectedfilters=[]}return l.prototype.selectThisDetails=function(l){for(var n=0;n<this.billDetails.length;n++)this.billDetails[n].selected="false";for(n=0;n<this.filterbillDetails.length;n++)this.filterbillDetails[n].selected="false";l.selected="true",this.isupdate1=!0;this.rest.post(this.codes.GET_BILL_DETAILS_BY_BILL_ID,{bill_id:l.bill_id}).then(function(n){console.debug("GET BILL DETAILS : "+JSON.stringify(n));var e=n.data;e.km_reading=l.km_reading,localStorage.setItem("bill_details",JSON.stringify(e))})},l.prototype.shopBuyReport=function(){this.modalCtrl.create("ReportModalPage",{name:"mechanicbuyreport"}).present()},l.prototype.shopBillReport=function(){this.modalCtrl.create("ReportModalPage",{name:"mechanicbillreport"}).present()},l.prototype.getShops=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_WORKER,{srth_id:n[0].srth_id}).then(function(n){if("0"==n._ReturnCode){for(var e=n.data,t=0;t<e.length;t++)"mechanic"==e[t].worker_type&&l.shops.push(e[t]);for(t=0;t<l.shops.length;t++){l.search.push({type:"mechanic",name:l.shops[t].name,id:"",amount:""})}for(t=0;t<l.bills.length;t++){l.search.push({type:"bills",id:l.bills[t].bill_number,name:l.bills[t].person_shop_name,amount:l.bills[t].total_bill})}}})},l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad MechanicKhataPage")},l.prototype.openMechanicBillPage=function(){this.navCtrl.push("MechanicBillPage",{update:"false"})},l.prototype.update=function(){this.navCtrl.push("MechanicBillPage",{update:"true"})},l.prototype.updateDetails=function(){this.navCtrl.push("ShopBillDetailsPage",{worker_type:"mechanic",update:"true"})},l.prototype.ionViewWillEnter=function(){var l=this.ldctrl.create({content:"Loading the bills ..."});this.getBillsBySrthId(l),this.getBillDetailsBySrthId()},l.prototype.getBillsBySrthId=function(l){var n=this;this.isupdate=!1;var e={srth_id:JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO))[0].srth_id,worker_type:"mechanic"};l.present(),this.rest.post(this.codes.GET_EXPENSE_BILL_BY_SRTH_ID,e).then(function(e){if(l.dismiss(),"0"==e._ReturnCode){n.bills=e.data,n.filterbills=n.bills;for(var t=function(l){n.bills[l].selected="false",n.filterbills[l].selected="false",localStorage.setItem("mechanic_bills",JSON.stringify(n.bills)),n.rest.post(n.codes.GET_IMAGE_BY_IMAGE_ID,{image_id:n.bills[l].bill_image_id}).then(function(e){e.data.length>0&&(n.bills[l].image_content=e.data[0].image_content,n.filterbills[l].image_content=e.data[0].image_content)})},i=0;i<n.bills.length;i++)t(i);n.getShops()}})},l.prototype.getBillDetailsBySrthId=function(){var l=this;this.isupdate=!1;var n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_PROBLEM_PARTS,{srth_id:n[0].srth_id,worker_type:"mechanic"}).then(function(n){if("0"==n._ReturnCode){l.billDetails=n.data,l.filterbillDetails=l.billDetails;for(var e=0;e<l.billDetails.length;e++)l.billDetails[e].selected="false",l.filterbillDetails[e].selected="false"}})},l.prototype.selectThis=function(l){for(var n=0;n<this.bills.length;n++)this.bills[n].selected="false";for(n=0;n<this.filterbills.length;n++)this.filterbills[n].selected="false";l.selected="true",this.isupdate=!0,localStorage.setItem("bill",JSON.stringify(l))},l.prototype.presentConfirmDelete=function(){var l=this;this.alertCtrl.create({title:"Confirm",message:"Are you sure you want to delete this bill?",buttons:[{text:"Cancel",role:"cancel",handler:function(){console.log("Cancel clicked")}},{text:"Delete",handler:function(){l.deletebill()}}]}).present()},l.prototype.deletebill=function(){var l=this,n=JSON.parse(localStorage.getItem("bill")),e=this.ldctrl.create({content:"Refreshing the bill list : "+n.bill_id});this.rest.post(this.codes.DELETE_BILL_EXPENSE,{bill_id:n.bill_id}).then(function(n){"0"==n._ReturnCode&&(l.message.displayToast("Congratulations! You have deleted a bill."),l.getBillsBySrthId(e))})},l.prototype.openShopBillDetailsPage=function(){this.navCtrl.push("ShopBillDetailsPage",{worker_type:"mechanic"})},l.prototype.clickedsearchitem=function(l){if(this.displayfilter=!1,this.displaysearchitems=this.search,"mechanic"==l.type){this.searchTerm=l.name,this.filterbills=[];for(var n=0;n<this.bills.length;n++)this.bills[n].person_shop_name==l.name&&this.filterbills.push(this.bills[n])}else if("bills"==l.type)for(n=0;n<this.bills.length;n++)this.bills[n].bill_number==l.id&&(this.filterbills=[],this.searchTerm=l.id,this.filterbills.push(this.bills[n]),this.selectThis(this.bills[n]))},l.prototype.clicksearchbar=function(){this.displayfilter=!0,this.displaysearchitems=this.search},l.prototype.closesearchbar=function(){this.displayfilter=!1,this.displaysearchitems=this.search},l.prototype.searchBillDetails=function(){var l=this,n=this.modalCtrl.create("BuyDetailsSearchModalPage");n.onDidDismiss(function(n){if(void 0!=localStorage.getItem("searchbilldetails")){if(l.selectedfilters=JSON.parse(localStorage.getItem("searchbilldetails")),0==l.selectedfilters.length)return void(l.filterbillDetails=l.billDetails);l.filterbillDetails=[];for(var e=0;e<l.selectedfilters.length;e++)if("problems"==l.selectedfilters[e].type)for(var t=0;t<l.billDetails.length;t++)l.billDetails[t].problem_id==l.selectedfilters[e].id&&l.filterbillDetails.push(l.billDetails[t]);else if("vehicles"==l.selectedfilters[e].type)for(t=0;t<l.billDetails.length;t++)l.billDetails[t].vehicle_id==l.selectedfilters[e].id&&l.filterbillDetails.push(l.billDetails[t]);else if("mechanic"==l.selectedfilters[e].type)for(t=0;t<l.billDetails.length;t++)l.billDetails[t].person_shop_name==l.selectedfilters[e].name&&l.filterbillDetails.push(l.billDetails[t]);else if("bills"==l.selectedfilters[e].type)for(t=0;t<l.billDetails.length;t++)l.billDetails[t].bill_id==l.selectedfilters[e].id&&l.filterbillDetails.push(l.billDetails[t]);console.error(JSON.stringify(l.filterbillDetails))}}),n.present()},l.prototype.removeTerm=function(l){for(var n=[],e=0;e<this.selectedfilters.length;e++)this.selectedfilters[e].type==l.type&&this.selectedfilters[e].id==l.id||n.push(this.selectedfilters[e]);if(this.selectedfilters=n,0!=this.selectedfilters.length){this.filterbillDetails=[];for(e=0;e<this.selectedfilters.length;e++)if("problems"==this.selectedfilters[e].type)for(var t=0;t<this.billDetails.length;t++)this.billDetails[t].problem_id==this.selectedfilters[e].id&&this.filterbillDetails.push(this.billDetails[t]);else if("vehicles"==this.selectedfilters[e].type)for(t=0;t<this.billDetails.length;t++)this.billDetails[t].vehicle_id==this.selectedfilters[e].id&&this.filterbillDetails.push(this.billDetails[t]);else if("mechanic"==this.selectedfilters[e].type)for(t=0;t<this.billDetails.length;t++)this.billDetails[t].person_shop_name==this.selectedfilters[e].name&&this.filterbillDetails.push(this.billDetails[t]);else if("bills"==this.selectedfilters[e].type)for(t=0;t<this.billDetails.length;t++)this.billDetails[t].bill_id==this.selectedfilters[e].id&&this.filterbillDetails.push(this.billDetails[t])}else this.filterbillDetails=this.billDetails},l.prototype.getItems=function(l){var n=this;if(""!=this.searchTerm&&(this.displayfilter=!0,this.displaysearchitems=this.search),""==this.searchTerm){this.displayfilter=!1,this.displaysearchitems=this.search,this.filterbills=this.bills,this.isupdate=!1;for(var e=0;e<this.bills.length;e++)this.bills[e].selected="false";for(e=0;e<this.filterbills.length;e++)this.filterbills[e].selected="false"}this.displaysearchitems=this.search.filter(function(l){if(""!=n.searchTerm){return(l.id+l.name).toLowerCase().indexOf(n.searchTerm.toLowerCase())>-1}return n.search})},l}(),g=function(){return function(){}}(),v=e(500),_=e(501),y=e(502),R=e(503),D=e(504),C=e(505),I=e(506),E=e(507),B=e(508),k=e(511),w=e(31),S=e(28),T=e(4),L=e(59),M=e(122),N=e(15),A=e(192),x=e(193),O=e(87),P=e(7),F=e(11),$=e(14),V=e(39),H=e(27),J=e(41),G=e(85),U=e(8),K=e(188),j=e(37),q=e(13),Y=e(29),W=e(186),X=e(185),Z=e(510),z=e(86),Q=e(42),ll=e(509),nl=e(32),el=e(40),tl=e(889),il=e(19),ul=e(189),sl=e(124),al=e(17),rl=e(121),ol=e(125),dl=h["ɵcrt"]({encapsulation:2,styles:[],data:{}}),cl=h["ɵccf"]("page-mechanic-khata",b,function(l){return h["ɵvid"](0,[(l()(),h["ɵeld"](0,0,null,null,1,"page-mechanic-khata",[],null,null,null,c,dl)),h["ɵdid"](1,49152,null,0,b,[sl.a,Y.a,al.a,m.a,p.a,f.a,rl.a,ol.a],null,null)],null,null)},{},{},[]),hl=e(184),fl=e(55);e.d(n,"MechanicKhataPageModuleNgFactory",function(){return pl});var pl=h["ɵcmf"](g,[],function(l){return h["ɵmod"]([h["ɵmpd"](512,h.ComponentFactoryResolver,h["ɵCodegenComponentFactoryResolver"],[[8,[v.a,_.a,y.a,R.a,D.a,C.a,I.a,E.a,B.a,cl]],[3,h.ComponentFactoryResolver],h.NgModuleRef]),h["ɵmpd"](4608,N.l,N.k,[h.LOCALE_ID,[2,N.t]]),h["ɵmpd"](4608,il["ɵi"],il["ɵi"],[]),h["ɵmpd"](4608,il.FormBuilder,il.FormBuilder,[]),h["ɵmpd"](512,N.b,N.b,[]),h["ɵmpd"](512,il["ɵba"],il["ɵba"],[]),h["ɵmpd"](512,il.FormsModule,il.FormsModule,[]),h["ɵmpd"](512,il.ReactiveFormsModule,il.ReactiveFormsModule,[]),h["ɵmpd"](512,hl.a,hl.a,[]),h["ɵmpd"](512,hl.b,hl.b,[]),h["ɵmpd"](512,g,g,[]),h["ɵmpd"](256,fl.a,b,[])])})},889:function(l,n,e){"use strict";function t(l){return i["ɵvid"](0,[i["ɵqud"](402653184,1,{_searchbarInput:0}),i["ɵqud"](402653184,2,{_searchbarIcon:0}),i["ɵqud"](402653184,3,{_cancelButton:0}),(l()(),i["ɵeld"](3,0,null,null,8,"div",[["class","searchbar-input-container"]],null,null,null,null,null)),(l()(),i["ɵeld"](4,0,null,null,3,"button",[["class","searchbar-md-cancel"],["clear",""],["color","dark"],["ion-button",""],["mode","md"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,i=l.component;if("click"===n){t=!1!==i.cancelSearchbar(e)&&t}if("mousedown"===n){t=!1!==i.cancelSearchbar(e)&&t}return t},u.b,u.a)),i["ɵdid"](5,1097728,null,0,s.a,[[8,""],a.a,i.ElementRef,i.Renderer],{color:[0,"color"],mode:[1,"mode"],clear:[2,"clear"]},null),(l()(),i["ɵeld"](6,0,null,0,1,"ion-icon",[["name","md-arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),i["ɵdid"](7,147456,null,0,r.a,[a.a,i.ElementRef,i.Renderer],{name:[0,"name"]},null),(l()(),i["ɵeld"](8,0,[[2,0],["searchbarIcon",1]],null,0,"div",[["class","searchbar-search-icon"]],null,null,null,null,null)),(l()(),i["ɵeld"](9,0,[[1,0],["searchbarInput",1]],null,0,"input",[["class","searchbar-input"],["dir","auto"]],[[1,"placeholder",0],[1,"type",0],[1,"autocomplete",0],[1,"autocorrect",0],[1,"spellcheck",0]],[[null,"input"],[null,"blur"],[null,"focus"]],function(l,n,e){var t=!0,i=l.component;if("input"===n){t=!1!==i.inputChanged(e)&&t}if("blur"===n){t=!1!==i.inputBlurred()&&t}if("focus"===n){t=!1!==i.inputFocused()&&t}return t},null,null)),(l()(),i["ɵeld"](10,0,null,null,1,"button",[["class","searchbar-clear-icon"],["clear",""],["ion-button",""],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,i=l.component;if("click"===n){t=!1!==i.clearInput(e)&&t}if("mousedown"===n){t=!1!==i.clearInput(e)&&t}return t},u.b,u.a)),i["ɵdid"](11,1097728,null,0,s.a,[[8,""],a.a,i.ElementRef,i.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),i["ɵeld"](12,0,[[3,0]],null,2,"button",[["class","searchbar-ios-cancel"],["clear",""],["ion-button",""],["mode","ios"],["type","button"]],[[8,"tabIndex",0]],[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,i=l.component;if("click"===n){t=!1!==i.cancelSearchbar(e)&&t}if("mousedown"===n){t=!1!==i.cancelSearchbar(e)&&t}return t},u.b,u.a)),i["ɵdid"](13,1097728,[["cancelButton",4]],0,s.a,[[8,""],a.a,i.ElementRef,i.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),i["ɵted"](14,0,["",""]))],function(l,n){var e=n.component;l(n,5,0,"dark","md","");l(n,7,0,"md-arrow-back");l(n,11,0,e._mode,"");l(n,13,0,"ios","")},function(l,n){var e=n.component;l(n,6,0,i["ɵnov"](n,7)._hidden);l(n,9,0,e.placeholder,e.type,e._autocomplete,e._autocorrect,e._spellcheck);l(n,12,0,e._isActive?1:-1);l(n,14,0,e.cancelButtonText)})}e.d(n,"a",function(){return o}),n.b=t;var i=e(0),u=e(39),s=e(27),a=e(4),r=e(41),o=(e(7),i["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([34],{
+
+/***/ 888:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InsurancePageModule", function() { return InsurancePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__insurance__ = __webpack_require__(967);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var InsurancePageModule = /** @class */ (function () {
+    function InsurancePageModule() {
+    }
+    InsurancePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__insurance__["a" /* InsurancePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__insurance__["a" /* InsurancePage */]),
+            ],
+        })
+    ], InsurancePageModule);
+    return InsurancePageModule;
+}());
+
+//# sourceMappingURL=insurance.module.js.map
+
+/***/ }),
+
+/***/ 967:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InsurancePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var InsurancePage = /** @class */ (function () {
+    function InsurancePage(navCtrl, navParams, rest, codes, alertCtrl, message, modalCtrl, pv) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.alertCtrl = alertCtrl;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.pv = pv;
+        this.isShown = false;
+        this.insurance = '';
+        this.total = 0.00;
+        this.due = 0.00;
+        this.selectedfilters = [];
+        this.payments = [];
+        this.filterpayments = [];
+        this.searchTerm = '';
+        this.updatebill = false;
+        this.updatepayment = false;
+        this.selectedbill = '';
+        this.selectedpayment = '';
+        this.updatebill1 = false;
+        this.bills = [];
+        this.selectedbill1 = '';
+        this.type = 'ano';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.filterbills = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.insurance = JSON.parse(localStorage.getItem("worker"));
+        this.due = Number(this.insurance['total_bill_money']) - Number(this.insurance['paid_money']);
+    }
+    InsurancePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad InsurancePage');
+    };
+    InsurancePage.prototype.viewImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Payment Image', { 'share': true });
+    };
+    InsurancePage.prototype.viewBillImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Bill Image', { 'share': true });
+    };
+    InsurancePage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.insurance['worker_id']
+        };
+        this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.insurance = resp['data'][0];
+                _this.due = Number(_this.insurance['total_bill_money']) - Number(_this.insurance['paid_money']);
+            }
+        });
+        var data = {
+            "worker_id": this.insurance['worker_id']
+        };
+        this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.payments = resp['data'];
+                _this.filterpayments = _this.payments;
+            }
+        });
+        this.getAllBillsByWorkerId();
+    };
+    InsurancePage.prototype.getAllBillsByWorkerId = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.insurance['worker_id'],
+            "worker_type": "insurance"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.billDetails = resp['data'];
+                _this.filterbillDetails = _this.billDetails;
+            }
+        });
+    };
+    InsurancePage.prototype.showMore = function () {
+        if (this.isShown) {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+        }
+        else {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        }
+        this.isShown = !this.isShown;
+    };
+    InsurancePage.prototype.update = function () {
+        this.navCtrl.push('AddDriverPage', { "update": "true" });
+    };
+    InsurancePage.prototype.deleteWorker = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.insurance['worker_id']
+        };
+        this.rest.post(this.codes.DELETE_WORKER, data).then(function (resp) {
+            _this.message.displayToast('You have successfully deleted this worker!');
+            _this.navCtrl.pop();
+        });
+    };
+    InsurancePage.prototype.checkChange = function () {
+    };
+    InsurancePage.prototype.openLedgePage = function () {
+        localStorage.setItem("worker_type", "insurance");
+        this.navCtrl.push('LedgerPage', { "worker": this.insurance });
+    };
+    InsurancePage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this worker?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteWorker();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    InsurancePage.prototype.selectThisPayment = function (payment) {
+        this.updatebill = false;
+        this.updatebill1 = false;
+        this.updatepayment = true;
+        this.selectedbill1 = null;
+        this.selectedpayment = payment;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        payment['selected'] = 'true';
+    };
+    InsurancePage.prototype.selectThisBill = function (bill, payment) {
+        if (payment == null) {
+            this.selectedbill1 = bill;
+            this.updatebill1 = true;
+            this.selectedbill = null;
+            this.updatebill = false;
+            this.updatepayment = false;
+            this.selectedpayment = null;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            bill['selected'] = 'true';
+            return;
+        }
+        this.updatepayment = false;
+        this.updatebill = true;
+        this.updatebill1 = false;
+        this.selectedpayment = payment;
+        this.selectedbill = bill;
+        this.selectedbill1 = null;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        bill['selected'] = 'true';
+    };
+    InsurancePage.prototype.viewBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedpayment = {
+                "bills": [
+                    this.selectedbill1
+                ]
+            };
+        }
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    InsurancePage.prototype.updateBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        localStorage.setItem('bill', JSON.stringify(this.selectedbill));
+        console.log(JSON.stringify(this.selectedbill));
+        var doc = {
+            "document_name": this.selectedbill['reason']
+        };
+        this.navCtrl.push('DocumentRenewalPage', { 'update': 'true', 'bill': this.selectedbill, 'document': doc });
+    };
+    InsurancePage.prototype.deleteBill = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this bill?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteBillByBillId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    InsurancePage.prototype.deleteBillByBillId = function () {
+        var _this = this;
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        var data = {
+            "bill_id": this.selectedbill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    InsurancePage.prototype.viewPayment = function () {
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    InsurancePage.prototype.updatePayment = function () {
+        localStorage.setItem("worker_type", "insurance");
+        this.navCtrl.push('LedgerPage', { "worker": this.insurance, 'payment': this.selectedpayment, 'isupdate': 'true' });
+    };
+    InsurancePage.prototype.deletePayment = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this payment?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletePaymentByPaymentId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    InsurancePage.prototype.deletePaymentByPaymentId = function () {
+        var _this = this;
+        var data = {
+            "payment_id": this.selectedpayment['payment_id']
+        };
+        this.rest.post(this.codes.DELETE_PAYMENT, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a payment.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    InsurancePage.prototype.searchBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('BillPaymentSearchPage', { "worker_type": "insurance", "worker_id": this.insurance['worker_id'] });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("bill_payment_search") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("bill_payment_search"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterpayments = _this.payments;
+                    return;
+                }
+                _this.filterpayments = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'reasons') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['reason'] == _this.selectedfilters[i]['name']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'payments') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            if (_this.payments[j]['payment_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterpayments.push(_this.payments[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['bill_id'] == _this.selectedfilters[i]['id']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterpayments));
+            }
+        });
+        mdl.present();
+    };
+    InsurancePage.prototype.removeTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterpayments = this.payments;
+            return;
+        }
+        this.filterpayments = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'reasons') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['reason'] == this.selectedfilters[i]['name']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'payments') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    if (this.payments[j]['payment_id'] == this.selectedfilters[i]['id']) {
+                        this.filterpayments.push(this.payments[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['bill_id'] == this.selectedfilters[i]['id']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
+                    }
+                }
+            }
+        }
+    };
+    InsurancePage.prototype.searchOnlyBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('AccountPaymentSearchModalPage', { 'worker_type': 'insurance' });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("searchbilldetails") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("searchbilldetails"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterbillDetails = _this.billDetails;
+                    return;
+                }
+                _this.filterbillDetails = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'problems') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['problem_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'vehicles') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['vehicle_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'shopname') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['person_shop_name'] == _this.selectedfilters[i]['name']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['bill_number'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterbillDetails));
+            }
+        });
+        mdl.present();
+    };
+    InsurancePage.prototype.removeOnlyTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterbillDetails = this.billDetails;
+            return;
+        }
+        this.filterbillDetails = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'problems') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'vehicles') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'shopname') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['bill_number'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+        }
+    };
+    InsurancePage.prototype.getOnlyItems = function ($event) {
+        var _this = this;
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filterbills = this.bills;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            for (var i = 0; i < this.filterbills.length; i++) {
+                this.filterbills[i]['selected'] = 'false';
+            }
+        }
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    InsurancePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
+            selector: 'page-insurance',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/insurance/insurance.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          INSURANCE\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 style="text-align: right !important;">\n        <button ion-button outline (click)="update()">\n          <ion-icon name="create"></ion-icon>\n        </button>\n        <button ion-button outline color="danger" (click)="presentConfirmDelete()">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center">\n        <img width="80px" height="80px" *ngIf="insurance[\'profile_image_id\'] == \'0\' || insurance[\'profile_image_id\'] == null || insurance[\'profile_image_id\'] == undefined" src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n        <img width="80px" height="80px" *ngIf="insurance[\'profile_image_id\'] != \'0\' && insurance[\'profile_image_id\'] != null && insurance[\'profile_image_id\'] != undefined" [src]="insurance[\'profile_image_id\']" alt="">\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{insurance[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{insurance[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{insurance[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary" *ngIf="insurance[\'address_line_1\'] != null">{{insurance[\'address_line_1\']+","+insurance[\'address_line_2\']+" "+insurance[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        BUSINESS NAME: <br>  <span class="text-color-primary">{{insurance[\'name\']}}</span>\n      </ion-col>\n      \n      <ion-col col-6>\n      \n      </ion-col>\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <!-- <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{insurance[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{insurance[\'reference_person\']}}</span>\n        </ion-col> -->\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary" *ngIf="insurance[\'aadhar_card_number\'] != null">AADHAR - {{insurance[\'aadhar_card_number\']}}</span>\n              <span class="text-color-primary" *ngIf="insurance[\'pan_card_number\'] != null">PAN - {{insurance[\'pan_card_number\']}}</span>\n        \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{insurance[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n      <!-- <ion-col col-6>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="update()">Update</button>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="presentConfirmDelete()">Delete</button>\n      </ion-col> -->\n\n    </ion-row>\n\n    \n\n    <!-- <ion-col col-12 class="text-center">\n      <button ion-button round class="remove-driver"> REMOVE DRIVER</button>\n    </ion-col> -->\n\n   \n\n    <ion-row class="report-statement">\n      <ion-col col-6>\n        <div class="full-report-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.insurance, \'isfullreport\':true})">\n          <i class="fa fa-file-o" aria-hidden="true"></i>\n\n          FULL REPORT\n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="monthy-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.insurance, \'isfullreport\':false})">\n          <i class="fa fa-file" aria-hidden="true"></i>\n\n          MONTHY STATEMENT\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="bill">\n      <ion-col col-4>\n        <p class="total-bill">TOTAL BILL</p>\n        <div class="ammount">&#x20b9;{{insurance[\'total_bill_money\'] }}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="paid-money">PAID MONEY</p>\n        <div class="ammount">&#x20b9;{{insurance[\'paid_money\']}}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="due-money">DUE MONEY</p>\n        \n        <div class="ammount">&#x20b9;{{due}}</div>\n      </ion-col>\n    </ion-row>\n\n\n    <h2>Bill Khata</h2>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getOnlyItems($event)" (click)="searchOnlyBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeOnlyTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n    <div class="scroll-grid" style="margin-top: 20px !important;">\n      <div class="scrollmenu">\n       \n        <a href="#home">BILL#</a>\n        <a href="#news">BILL </a>\n        <a href="#contact">VEHICLES</a>\n        <a href="#about">COST</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">IMAGE</a>\n\n        <div *ngIf="filterbillDetails.length == 0" style="padding: 15px;text-align: center;">\n            <ion-spinner></ion-spinner>\n            <br/>\n          <span style="color: rgb(63, 63, 63);">\n            Loading\n          </span>\n        </div>\n    \n        <div class="scrollmenu-list total-bill " *ngFor="let bill of filterbillDetails" >\n         \n          <div class="scrollmenu-list" (click)="selectThisBill(bill,null)">\n            <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>{{bill[\'bill_number\']}}</p>\n            <p>{{bill[\'bill_date\']}}</p>\n            <p>{{bill[\'vehicle_number\']}}</p>\n            <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n            <p>{{bill[\'bill_details\']}}</p>\n            <p>\n              <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n              </span>\n            </p>\n            </div>\n          </div>\n        </div>\n        </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n\n        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill1" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n\n    <h2>Payments</h2>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="searchBillDetails()" placeholder="SEARCH"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <!-- <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Bill #</ion-label>\n          <ion-radio value="bno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Payment #</ion-label>\n          <ion-radio value="pno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>All</ion-label>\n          <ion-radio value="ano"></ion-radio>\n        </ion-item>\n      </ion-col>\n    </ion-row> -->\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'payments\'" >Payment # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'reasons\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n      <div class="scroll-grid" >\n        <div class="scrollmenu">\n         \n          <a href="#home">BILL# / PAYMENT#</a>\n          <a href="#news">BILL / PAYMENT</a>\n          <a href="#contact">VEHICLES</a>\n          <a href="#about">COST / PAID</a>\n          <a href="#about">DETAILS</a>\n          <a href="#about">IMAGE</a>\n  \n          <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">\n              <ion-spinner></ion-spinner>\n              <br/>\n            <span style="color: rgb(63, 63, 63);">\n              Loading\n            </span>\n          </div>\n      \n          <div class="scrollmenu-list paid-money " *ngFor="let payment of filterpayments" >\n            <div *ngIf="type==\'pno\' || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_number\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            </div>\n            </div>\n  \n            <div *ngIf="type==\'bno\'  || type == \'\'">\n            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_number\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n          </div>\n          <div *ngIf="type==\'ano\'  || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_number\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_number\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n            </div>\n          </div>\n  \n          </div>\n    \n         \n        </div>\n        <div class="show-arrows">\n          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n  \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatepayment" (click)="viewPayment()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="updatePayment()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="deletePayment()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n    \n          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n    \n        </div>\n      </div>\n\n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openLedgePage()">GIVE MONEY</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/insurance/insurance.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], InsurancePage);
+    return InsurancePage;
+}());
+
+//# sourceMappingURL=insurance.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=34.js.map

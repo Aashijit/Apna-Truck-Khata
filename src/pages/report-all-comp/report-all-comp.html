@@ -44,10 +44,10 @@
         {{per['name']}}
       </ion-col>
       <ion-col col-6>
-        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per})">Full Report</button>
+        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per, 'isfullreport':true})">Full Report</button>
       </ion-col>
       <ion-col col-6>
-        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per})">Monthly Report</button>
+        <button ion-button full (click)="navCtrl.push('ReportFullPage',{'person':per, 'isfullreport':false})">Monthly Report</button>
       </ion-col>
     </ion-row>
   </p>

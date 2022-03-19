@@ -1,1 +1,321 @@
-webpackJsonp([66],{852:function(l,n,u){"use strict";function e(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"h2",[],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["Recent Notifications"]))],null,null)}function t(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,2,"button",[["ion-button",""],["outline",""],["round",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.goToActionPage(l.parent.context.$implicit.click_page,l.parent.context.$implicit.next_link)&&e}return e},R.b,R.a)),d["ɵdid"](1,1097728,[[3,4]],0,P.a,[[8,""],C.a,d.ElementRef,d.Renderer],{outline:[0,"outline"],round:[1,"round"]},null),(l()(),d["ɵted"](-1,0,["\n          Update Now\n        "]))],function(l,n){l(n,1,0,"","")},null)}function o(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,A.b,A.a)),d["ɵdid"](1,1097728,null,3,_.a,[k.a,C.a,d.ElementRef,d.Renderer,[2,E.a]],null,null),d["ɵqud"](335544320,2,{contentLabel:0}),d["ɵqud"](603979776,3,{_buttons:1}),d["ɵqud"](603979776,4,{_icons:1}),d["ɵdid"](5,16384,null,0,I.a,[],null,null),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](7,0,null,2,1,"h2",[["class","title-n"]],null,null,null,null,null)),(l()(),d["ɵted"](8,null,["",""])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](10,0,null,2,1,"p",[["class","message-n"]],null,null,null,null,null)),(l()(),d["ɵted"](11,null,[" \n          ","\n        "])),(l()(),d["ɵted"](-1,2,["\n        "])),(l()(),d["ɵeld"](13,0,null,2,4,"p",[["style","float: right !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵand"](16777216,null,null,1,null,t)),d["ɵdid"](16,16384,null,0,K.j,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,2,["\n    "]))],function(l,n){l(n,16,0,""!=n.context.$implicit.click_page)},function(l,n){l(n,8,0,n.context.$implicit.title);l(n,11,0,n.context.$implicit.message)})}function a(l){return d["ɵvid"](0,[d["ɵqud"](402653184,1,{slides:0}),(l()(),d["ɵeld"](1,0,null,null,32,"ion-header",[],null,null,null,null,null)),d["ɵdid"](2,16384,null,0,D.a,[C.a,d.ElementRef,d.Renderer,[2,T.a]],null,null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵeld"](4,0,null,null,28,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,N.b,N.a)),d["ɵdid"](5,49152,null,0,O.a,[S.a,[2,T.a],[2,F.a],C.a,d.ElementRef,d.Renderer],null,null),(l()(),d["ɵted"](-1,3,["\n    "])),(l()(),d["ɵeld"](7,0,null,3,24,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](8,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](10,0,null,null,5,"ion-col",[["class","person-picture col"],["col-3",""]],null,null,null,null,null)),d["ɵdid"](11,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](13,0,null,null,1,"ion-icon",[["ios","ios-contact"],["md","md-contact"],["role","img"],["style","margin-top: 4px;font-size:4.2rem !important; color: #999999 !important;"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](14,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{ios:[0,"ios"],md:[1,"md"]},null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](17,0,null,null,6,"ion-col",[["class","person-name col"],["col-6",""]],null,null,null,null,null)),d["ɵdid"](18,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](20,0,null,null,2,"ion-title",[],null,null,null,B.b,B.a)),d["ɵdid"](21,49152,null,0,L.a,[C.a,d.ElementRef,d.Renderer,[2,U.a],[2,O.a]],null,null),(l()(),d["ɵted"](22,0,["",""])),(l()(),d["ɵted"](-1,null,["\n\n      "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](25,0,null,null,5,"ion-col",[["class","youtube col"],["col-3",""]],null,null,null,null,null)),d["ɵdid"](26,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](28,0,null,null,1,"ion-icon",[["color","danger"],["name","logo-youtube"],["role","img"],["style","font-size: 4.2rem;margin-top: 3px;color: #999999 !important;"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](29,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{color:[0,"color"],name:[1,"name"]},null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,3,["\n  "])),(l()(),d["ɵted"](-1,null,["\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵted"](-1,null,["\n\n"])),(l()(),d["ɵeld"](36,0,null,null,275,"ion-content",[["class","home"],["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),d["ɵdid"](37,4374528,null,0,q.a,[C.a,G.a,J.a,d.ElementRef,d.Renderer,S.a,j.a,d.NgZone,[2,T.a],[2,F.a]],null,null),(l()(),d["ɵted"](-1,1,["\n\n\n\n\n  "])),(l()(),d["ɵeld"](39,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](40,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](42,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openAccountKhata()&&e}return e},null,null)),d["ɵdid"](43,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](45,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](46,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](48,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](49,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](51,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/003-file.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](54,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](55,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          ACCOUNTS & PAYMENT KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](58,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](59,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](61,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](62,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n\n  "])),(l()(),d["ɵeld"](68,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](69,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](71,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openVehicleKhata()&&e}return e},null,null)),d["ɵdid"](72,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](74,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](75,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](77,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](78,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](80,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/006-delivery-truck.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](83,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](84,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          VEHICLE KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](87,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](88,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](90,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](91,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](97,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](98,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](100,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openDriverKhata()&&e}return e},null,null)),d["ɵdid"](101,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](103,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](104,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](106,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](107,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](109,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/driver.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](112,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](113,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          DRIVER KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](116,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](117,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](119,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](120,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](126,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](127,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](129,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openShopKhata()&&e}return e},null,null)),d["ɵdid"](130,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](132,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](133,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](135,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](136,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](138,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/004-shop.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](141,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](142,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          SHOP KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](145,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](146,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](148,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](149,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](155,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](156,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](158,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openMechanicalKhata()&&e}return e},null,null)),d["ɵdid"](159,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](161,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](162,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](164,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](165,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](167,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/007-mechanic.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](170,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](171,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          MECHANIC KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](174,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](175,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](177,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](178,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n\n  "])),(l()(),d["ɵeld"](184,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](185,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](187,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openDocumentAndInsurance()&&e}return e},null,null)),d["ɵdid"](188,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](190,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](191,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](193,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](194,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](196,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/002-folder.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](199,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](200,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          DOCUMENT KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](203,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](204,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](206,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](207,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](213,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](214,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](216,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openComplaintKhata()&&e}return e},null,null)),d["ɵdid"](217,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](219,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](220,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](222,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](223,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](225,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/008-report.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](228,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](229,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          COMPLAINT KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](232,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](233,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](235,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](236,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](243,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](244,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](246,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openReportKhata()&&e}return e},null,null)),d["ɵdid"](247,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](249,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](250,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](252,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](253,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](255,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/001-clipboard.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](258,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](259,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          REPORTS KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](262,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](263,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](265,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](266,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵeld"](272,0,null,1,27,"ion-row",[["class","pd row"],["padding",""]],null,null,null,null,null)),d["ɵdid"](273,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵeld"](275,0,null,null,23,"ion-col",[["class","col"],["col-12",""],["style","background: #287ac4 !important; color: #fff !important; border-radius: 5px !important;    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.openAllImageKhata()&&e}return e},null,null)),d["ɵdid"](276,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵeld"](278,0,null,null,19,"ion-row",[["class","row"]],null,null,null,null,null)),d["ɵdid"](279,16384,null,0,M.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](281,0,null,null,4,"ion-col",[["class","col"],["col-2",""],["style","text-align:center !important;"]],null,null,null,null,null)),d["ɵdid"](282,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](284,0,null,null,0,"img",[["alt",""],["src","../../assets/saarthi-icon/png/009-image.png"],["style","width: 50% !important;"]],null,null,null,null,null)),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](287,0,null,null,2,"ion-col",[["class","col"],["col-9",""],["style","margin-top: 6px;font-weight: 1000;"]],null,null,null,null,null)),d["ɵdid"](288,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          ALL IMAGE KHATA\n        "])),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵeld"](291,0,null,null,5,"ion-col",[["class","col"],["col-1",""],["style","    margin-top: 7px;"]],null,null,null,null,null)),d["ɵdid"](292,16384,null,0,V.a,[],null,null),(l()(),d["ɵted"](-1,null,["\n          "])),(l()(),d["ɵeld"](294,0,null,null,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d["ɵdid"](295,147456,null,0,H.a,[C.a,d.ElementRef,d.Renderer],{name:[0,"name"]},null),(l()(),d["ɵted"](-1,null,["\n        "])),(l()(),d["ɵted"](-1,null,["\n      "])),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n\n  "])),(l()(),d["ɵand"](16777216,null,1,1,null,e)),d["ɵdid"](302,16384,null,0,K.j,[d.ViewContainerRef,d.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),d["ɵted"](-1,1,["\n  "])),(l()(),d["ɵeld"](304,0,null,1,5,"ion-list",[],null,null,null,null,null)),d["ɵdid"](305,16384,null,0,z.a,[C.a,d.ElementRef,d.Renderer,G.a,Y.m,J.a],null,null),(l()(),d["ɵted"](-1,null,["\n    "])),(l()(),d["ɵand"](16777216,null,null,1,null,o)),d["ɵdid"](308,802816,null,0,K.i,[d.ViewContainerRef,d.TemplateRef,d.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),d["ɵted"](-1,null,["\n  "])),(l()(),d["ɵted"](-1,1,["\n\n  "])),(l()(),d["ɵted"](-1,1,["\n\n\n\n \n\n\n"]))],function(l,n){var u=n.component;l(n,14,0,"ios-contact","md-contact");l(n,29,0,"danger","logo-youtube");l(n,62,0,"arrow-forward");l(n,91,0,"arrow-forward");l(n,120,0,"arrow-forward");l(n,149,0,"arrow-forward");l(n,178,0,"arrow-forward");l(n,207,0,"arrow-forward");l(n,236,0,"arrow-forward");l(n,266,0,"arrow-forward");l(n,295,0,"arrow-forward");l(n,302,0,u.notifications.length>0);l(n,308,0,u.notifications)},function(l,n){var u=n.component;l(n,4,0,d["ɵnov"](n,5)._hidden,d["ɵnov"](n,5)._sbPadding);l(n,13,0,d["ɵnov"](n,14)._hidden);l(n,22,0,u.name);l(n,28,0,d["ɵnov"](n,29)._hidden);l(n,36,0,d["ɵnov"](n,37).statusbarPadding,d["ɵnov"](n,37)._hasRefresher);l(n,61,0,d["ɵnov"](n,62)._hidden);l(n,90,0,d["ɵnov"](n,91)._hidden);l(n,119,0,d["ɵnov"](n,120)._hidden);l(n,148,0,d["ɵnov"](n,149)._hidden);l(n,177,0,d["ɵnov"](n,178)._hidden);l(n,206,0,d["ɵnov"](n,207)._hidden);l(n,235,0,d["ɵnov"](n,236)._hidden);l(n,265,0,d["ɵnov"](n,266)._hidden);l(n,294,0,d["ɵnov"](n,295)._hidden)})}Object.defineProperty(n,"__esModule",{value:!0});var d=u(0),i=(u(2),u(211)),r=u(183),c=u(84),s=(u(26),function(){function l(l,n,u,e,t){var o=this;this.navCtrl=l,this.codes=n,this.rest=u,this.push=e,this.platform=t,this.name="",this.fuel="",this.notifications=[],this.slideOptsOne={initialSlide:0,slidesPerView:1,autoplay:!0};var a=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));if(void 0!=localStorage.getItem("name")&&null!=localStorage.getItem("name")){this.rest.post(this.codes.GET_PROFILE,{srth_id:a[0].srth_id}).then(function(l){localStorage.setItem("name",l.data[0].name),o.name=l.data[0].name})}this.name=localStorage.getItem("name")}return l.prototype.ionViewWillEnter=function(){this.refresh(),this.initPushNotification()},l.prototype.initPushNotification=function(){var l=this;if(this.platform.is("cordova")){var n=this.push.init({android:{senderID:"1092655619979"},ios:{alert:"true",badge:!1,sound:"true"},windows:{}});n.on("registration").subscribe(function(n){console.log("device token -> "+n.registrationId);var u=JSON.parse(localStorage.getItem(l.codes.K_ACCOUNT_INFO));l.rest.post(l.codes.SAVE_NOTIFICATION_FCM_TOKEN,n={srth_id:u[0].srth_id,fcm:n.registrationId,last_maint_id:"srth_ws",opt_counter:"0"}).then(function(l){console.log("Successfully Stored")})}),n.on("error").subscribe(function(l){return console.error("Error with Push plugin"+l)})}else console.warn("Push notifications not initialized. Cordova is not available - Run in physical device")},l.prototype.goToActionPage=function(l,n){var u=this;if("DocumentAddBill"==l){this.rest.post(this.codes.GET_DOCUMENT_INFO_BY_DOCUMENT_ID,{document_id:n}).then(function(l){u.navCtrl.push("DocumentRenewalPage",{document:l.data})})}},l.prototype.refresh=function(){var l=this,n=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));this.rest.post(this.codes.GET_NOTIFICATIONS,{srth_id:n[0].srth_id}).then(function(n){if(null!=n&&n.data!=[]){l.notifications=n.data}})},l.prototype.openProfilePage=function(){this.navCtrl.push("ProfilePage")},l.prototype.openVehicleKhata=function(){this.navCtrl.push("VehicleKhataPage")},l.prototype.openDriverKhata=function(){this.navCtrl.push("DriverKhataPage")},l.prototype.openDocumentAndInsurance=function(){this.navCtrl.push("DocumentAndInsurancePage")},l.prototype.openDocumentBill=function(){this.navCtrl.push("AddDocumentBillPage")},l.prototype.openEditProfilePage=function(){this.navCtrl.push("EditProfilePage")},l.prototype.openLanguagePage=function(){this.navCtrl.push("LanguagePage")},l.prototype.openSettingsPage=function(){this.navCtrl.push("SettingsPage")},l.prototype.openDriverPage=function(){this.navCtrl.push("DriverPage")},l.prototype.openAddNewBankPage=function(){this.navCtrl.push("AddNewBankAccountPage")},l.prototype.openSecurityAndBackup=function(){this.navCtrl.push("SecurityAndBackupPage")},l.prototype.openAddDriverPage=function(){this.navCtrl.push("AddDriverPage")},l.prototype.openAddMechanicPage=function(){this.navCtrl.push("AddMechanicPage")},l.prototype.openLedgerPage=function(){this.navCtrl.push("LedgerPage")},l.prototype.openVehicleDetailsPage=function(){this.navCtrl.push("VehicleDetailsPage")},l.prototype.openDriverDocumentPage=function(){this.navCtrl.push("DriverDocumentPage")},l.prototype.openAddDriverExpensePage=function(){this.navCtrl.push("AddDriverExpensesPage")},l.prototype.openComplaintKhata=function(){this.navCtrl.push("ComplaintsKhataPage")},l.prototype.openMechanicalKhata=function(){this.navCtrl.push("MechanicKhataPage")},l.prototype.openShopKhata=function(){this.navCtrl.push("ShopKhataPage")},l.prototype.openAllImageKhata=function(){this.navCtrl.push("AllImageKhataPage")},l.prototype.openReportKhata=function(){this.navCtrl.push("ReportKhataPage")},l.prototype.openBillDetails=function(){this.navCtrl.push("BillDetailsPage")},l.prototype.openAccountKhata=function(){this.navCtrl.push("AccountKhataPage")},l.prototype.openVehicleDocument=function(){this.navCtrl.push("VehicleDocumentPage")},l}()),p=function(){return function(){}}(),m=u(500),h=u(501),g=u(502),f=u(503),w=u(504),v=u(505),y=u(506),x=u(507),b=u(508),R=u(39),P=u(27),C=u(4),A=u(511),_=u(31),k=u(28),E=u(59),I=u(122),K=u(15),D=u(85),T=u(8),N=u(188),O=u(37),S=u(13),F=u(29),M=u(186),V=u(185),H=u(41),B=u(510),L=u(86),U=u(42),$=u(509),q=u(32),G=u(7),J=u(14),j=u(40),z=u(87),Y=u(11),W=d["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Z=d["ɵccf"]("page-home",s,function(l){return d["ɵvid"](0,[(l()(),d["ɵeld"](0,0,null,null,1,"page-home",[],null,null,null,a,W)),d["ɵdid"](1,49152,null,0,s,[F.a,c.a,r.a,i.a,G.a],null,null)],null,null)},{},{},[]),Q=u(19),X=u(184),ll=u(55);u.d(n,"HomePageModuleNgFactory",function(){return nl});var nl=d["ɵcmf"](p,[],function(l){return d["ɵmod"]([d["ɵmpd"](512,d.ComponentFactoryResolver,d["ɵCodegenComponentFactoryResolver"],[[8,[m.a,h.a,g.a,f.a,w.a,v.a,y.a,x.a,b.a,Z]],[3,d.ComponentFactoryResolver],d.NgModuleRef]),d["ɵmpd"](4608,K.l,K.k,[d.LOCALE_ID,[2,K.t]]),d["ɵmpd"](4608,Q["ɵi"],Q["ɵi"],[]),d["ɵmpd"](4608,Q.FormBuilder,Q.FormBuilder,[]),d["ɵmpd"](512,K.b,K.b,[]),d["ɵmpd"](512,Q["ɵba"],Q["ɵba"],[]),d["ɵmpd"](512,Q.FormsModule,Q.FormsModule,[]),d["ɵmpd"](512,Q.ReactiveFormsModule,Q.ReactiveFormsModule,[]),d["ɵmpd"](512,X.a,X.a,[]),d["ɵmpd"](512,X.b,X.b,[]),d["ɵmpd"](512,p,p,[]),d["ɵmpd"](256,ll.a,s,[])])})}});
+webpackJsonp([66],{
+
+/***/ 855:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllImageKhataPageModule", function() { return AllImageKhataPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__all_image_khata__ = __webpack_require__(934);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AllImageKhataPageModule = /** @class */ (function () {
+    function AllImageKhataPageModule() {
+    }
+    AllImageKhataPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__all_image_khata__["a" /* AllImageKhataPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__all_image_khata__["a" /* AllImageKhataPage */]),
+            ],
+        })
+    ], AllImageKhataPageModule);
+    return AllImageKhataPageModule;
+}());
+
+//# sourceMappingURL=all-image-khata.module.js.map
+
+/***/ }),
+
+/***/ 934:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllImageKhataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(497);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_photo_viewer__ = __webpack_require__(495);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var AllImageKhataPage = /** @class */ (function () {
+    function AllImageKhataPage(navCtrl, navParams, camera, alertCtrl, rest, codes, ldcontroller, message, datetransform, view, photoViewer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.camera = camera;
+        this.alertCtrl = alertCtrl;
+        this.rest = rest;
+        this.codes = codes;
+        this.ldcontroller = ldcontroller;
+        this.message = message;
+        this.datetransform = datetransform;
+        this.view = view;
+        this.photoViewer = photoViewer;
+        this.type = '';
+        this.upload_image = '';
+        this.tp = '';
+        this.images = [];
+        this.filterimages = [];
+        this.isselect = false;
+        this.keys = [];
+        this.searchTerm = '';
+        this.isselect = this.navParams.get("isselect");
+        this.type = this.navParams.get("type");
+        this.tp = this.type;
+        this.getImagesBySrthId();
+    }
+    AllImageKhataPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AllImageKhataPage');
+    };
+    AllImageKhataPage.prototype.saveImage = function () {
+        var _this = this;
+        if (this.tp == '') {
+            this.message.displayToast("Please add a type ");
+            return;
+        }
+        var data = {};
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        data['image_content'] = this.upload_image;
+        data['document_type'] = 'image';
+        data['srth_id'] = json[0]['srth_id'];
+        if (this.tp == 'sbills') {
+            data['worker_type'] = 'shop';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'mbills') {
+            data['worker_type'] = 'mechanic';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'preceipts') {
+            data['worker_type'] = null;
+            data['type'] = 'payment';
+        }
+        else if (this.tp == 'drbills') {
+            data['worker_type'] = 'driver';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'profile') {
+            data['worker_type'] = null;
+            data['type'] = 'profile';
+        }
+        else if (this.tp == 'drdoc' || this.tp == 'vhdoc') {
+            data['worker_type'] = "document";
+            data['type'] = 'bills';
+        }
+        var ldcon = this.ldcontroller.create({
+            content: 'Uploading image to ATK server ... '
+        });
+        ldcon.present();
+        this.rest.post(this.codes.SAVE_IMAGE, data).then(function (resp) {
+            ldcon.dismiss();
+            _this.type = _this.tp;
+            _this.upload_image = '';
+            _this.getImagesByType(_this.type);
+        });
+    };
+    AllImageKhataPage.prototype.filterList = function (events) {
+        var _this = this;
+        this.filterimages = this.images.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var sterm = _this.searchTerm.trim();
+                sterm = sterm.replace(/[^a-zA-Z0-9]/g, "");
+                var tag_cloud = wp.tag_cloud.replace(/[^a-zA-Z0-9]/g, "");
+                return (tag_cloud.toLowerCase().indexOf(sterm.toLowerCase()) > -1);
+            }
+            else
+                return _this.images;
+        });
+    };
+    AllImageKhataPage.prototype.dismiss = function () {
+        this.view.dismiss();
+    };
+    AllImageKhataPage.prototype.selectImage = function (img) {
+        localStorage.setItem("selectedimage", JSON.stringify(img));
+        this.view.dismiss();
+    };
+    AllImageKhataPage.prototype.viewImage = function (image) {
+        this.photoViewer.show(image['image_url'], image['tag_cloud'], { share: true });
+    };
+    AllImageKhataPage.prototype.getImagesBySrthId = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        var ldcon = this.ldcontroller.create({
+            content: 'Loading all the images ... '
+        });
+        ldcon.present();
+        this.rest.post(this.codes.GET_IMAGES_BY_SRTH_ID, data).then(function (resp) {
+            ldcon.dismiss();
+            if (resp['_ReturnCode'] == '0') {
+                _this.images = resp['data'];
+                for (var i = 0; i < _this.images.length; i++) {
+                    console.log(_this.images[i]['image_tags']);
+                    var json = JSON.parse(_this.images[i]['image_tags']);
+                    var keys = Object.keys(json);
+                    _this.keys = keys;
+                    var tagcloud = "";
+                    for (var j = 0; j < keys.length; j++) {
+                        tagcloud += "#" + json[keys[j]] + " ";
+                    }
+                    // keys[j]+":"
+                    _this.images[i]['tag_cloud'] = tagcloud;
+                }
+                _this.filterimages = _this.images;
+            }
+        });
+    };
+    AllImageKhataPage.prototype.getImagesByType = function (event) {
+        var _this = this;
+        this.tp = event;
+        var data = {};
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        data['srth_id'] = json[0]['srth_id'];
+        if (this.tp == 'sbills') {
+            data['worker_type'] = 'shop';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'mbills') {
+            data['worker_type'] = 'mechanic';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'preceipts') {
+            data['worker_type'] = null;
+            data['type'] = 'payment';
+        }
+        else if (this.tp == 'drbills') {
+            data['worker_type'] = 'driver';
+            data['type'] = 'bills';
+        }
+        else if (this.tp == 'profile') {
+            data['worker_type'] = null;
+            data['type'] = 'profile';
+        }
+        else if (this.tp == 'drdoc' || this.tp == 'vhdoc') {
+            data['worker_type'] = "document";
+            data['type'] = 'bills';
+        }
+        this.rest.post(this.codes.GET_IMAGE_BY_TYPE_WORKER_TYPE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.images = resp['data'];
+                var _loop_1 = function (i) {
+                    data = {
+                        "image_id": _this.images[i]['image_id']
+                    };
+                    _this.rest.post(_this.codes.GET_IMAGE_BY_IMAGE_ID, data).then(function (resp) {
+                        if (resp['data'].length > 0)
+                            _this.images[i]['image_content'] = resp['data'][0]['image_content'];
+                    });
+                };
+                var data;
+                for (var i = 0; i < _this.images.length; i++) {
+                    _loop_1(i);
+                }
+            }
+        });
+    };
+    AllImageKhataPage.prototype.presentConfirm = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to save this image?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Save',
+                    handler: function () {
+                        _this.saveImage();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    AllImageKhataPage.prototype.getImage = function (img) {
+        var _this = this;
+        if (img == 'camera') {
+            var options = {
+                quality: 10,
+                destinationType: this.camera.DestinationType.DATA_URL,
+                encodingType: this.camera.EncodingType.JPEG,
+                mediaType: this.camera.MediaType.PICTURE,
+                sourceType: this.camera.PictureSourceType.CAMERA
+            };
+            this.camera.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.upload_image = base64Image;
+            }, function (err) {
+                // Handle error
+            });
+        }
+        else {
+            var options = {
+                quality: 10,
+                destinationType: this.camera.DestinationType.DATA_URL,
+                encodingType: this.camera.EncodingType.JPEG,
+                mediaType: this.camera.MediaType.PICTURE,
+                sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+            };
+            this.camera.getPicture(options).then(function (imageData) {
+                var base64Image = 'data:image/jpeg;base64,' + imageData;
+                _this.upload_image = base64Image;
+            }, function (err) {
+                // Handle error
+            });
+        }
+    };
+    AllImageKhataPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-all-image-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/all-image-khata/all-image-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-1 class="custom-back-button">\n      </ion-col>\n\n      <ion-col col-9 class="person-name text-left">\n        <ion-title>\n          <i class="fa fa-file-image-o" aria-hidden="true"></i>\n          ALL PHOTO KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube">\n        <ion-icon name="close" style="font-size: 2em;margin-top: 12px;" (click)="dismiss()"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-col col-12>\n    <ion-searchbar mode="md" (ionInput)="filterList($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n  </ion-col>\n\n  <ion-list>\n      <ion-item *ngFor="let img of filterimages" (click)="viewImage(img)">\n        <ion-grid>\n          <ion-row>\n          <ion-col col-4>\n            <p *ngIf="img[\'image_url\'] != null">\n              <img [src]="img[\'image_url\']" style="width: 100px;"  />\n            </p>\n          </ion-col>\n          <ion-col col-8 style="text-align: left !important;margin-top: 10px;">\n            <span style="white-space: normal;font-size: 12px !important;font-weight: 800;color: #0752af;">\n              {{img[\'tag_cloud\']}}\n            </span>\n          </ion-col>\n        </ion-row>\n        </ion-grid>\n      </ion-item>\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/all-image-khata/all-image-khata.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["LoadingController"], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_common__["d" /* DatePipe */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_7__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], AllImageKhataPage);
+    return AllImageKhataPage;
+}());
+
+//# sourceMappingURL=all-image-khata.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=66.js.map

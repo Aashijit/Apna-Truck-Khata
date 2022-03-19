@@ -1,1 +1,110 @@
-webpackJsonp([54],{886:function(l,n,e){"use strict";function u(l){return a["ɵvid"](0,[(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵeld"](1,0,null,null,10,"ion-header",[],null,null,null,null,null)),a["ɵdid"](2,16384,null,0,v.a,[R.a,a.ElementRef,a.Renderer,[2,g.a]],null,null),(l()(),a["ɵted"](-1,null,["\n  "])),(l()(),a["ɵeld"](4,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,F.b,F.a)),a["ɵdid"](5,49152,null,0,h.a,[w.a,[2,g.a],[2,y.a],R.a,a.ElementRef,a.Renderer],null,null),(l()(),a["ɵted"](-1,3,["\n    "])),(l()(),a["ɵeld"](7,0,null,3,2,"ion-title",[],null,null,null,M.b,M.a)),a["ɵdid"](8,49152,null,0,C.a,[R.a,a.ElementRef,a.Renderer,[2,P.a],[2,h.a]],null,null),(l()(),a["ɵted"](-1,0,["view-bill"])),(l()(),a["ɵted"](-1,3,["\n  "])),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵted"](-1,null,["\n\n"])),(l()(),a["ɵeld"](13,0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,_.b,_.a)),a["ɵdid"](14,4374528,null,0,E.a,[R.a,B.a,L.a,a.ElementRef,a.Renderer,w.a,V.a,a.NgZone,[2,g.a],[2,y.a]],null,null),(l()(),a["ɵted"](-1,1,["\n\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],null,function(l,n){l(n,4,0,a["ɵnov"](n,5)._hidden,a["ɵnov"](n,5)._sbPadding);l(n,13,0,a["ɵnov"](n,14).statusbarPadding,a["ɵnov"](n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var a=e(0),d=(e(2),e(26),function(){function l(l,n){this.navCtrl=l,this.navParams=n}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad ViewBillPage")},l}()),t=function(){return function(){}}(),o=e(500),i=e(501),r=e(502),s=e(503),c=e(504),m=e(505),p=e(506),f=e(507),b=e(508),v=e(85),R=e(4),g=e(8),F=e(188),h=e(37),w=e(13),y=e(29),M=e(510),C=e(86),P=e(42),_=e(509),E=e(32),B=e(7),L=e(14),V=e(40),D=e(17),N=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),k=a["ɵccf"]("page-view-bill",d,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"page-view-bill",[],null,null,null,u,N)),a["ɵdid"](1,49152,null,0,d,[y.a,D.a],null,null)],null,null)},{},{},[]),O=e(15),j=e(19),A=e(184),I=e(55);e.d(n,"ViewBillPageModuleNgFactory",function(){return J});var J=a["ɵcmf"](t,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[o.a,i.a,r.a,s.a,c.a,m.a,p.a,f.a,b.a,k]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,O.l,O.k,[a.LOCALE_ID,[2,O.t]]),a["ɵmpd"](4608,j["ɵi"],j["ɵi"],[]),a["ɵmpd"](4608,j.FormBuilder,j.FormBuilder,[]),a["ɵmpd"](512,O.b,O.b,[]),a["ɵmpd"](512,j["ɵba"],j["ɵba"],[]),a["ɵmpd"](512,j.FormsModule,j.FormsModule,[]),a["ɵmpd"](512,j.ReactiveFormsModule,j.ReactiveFormsModule,[]),a["ɵmpd"](512,A.a,A.a,[]),a["ɵmpd"](512,A.b,A.b,[]),a["ɵmpd"](512,t,t,[]),a["ɵmpd"](256,I.a,d,[])])})}});
+webpackJsonp([54],{
+
+/***/ 867:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__contact__ = __webpack_require__(946);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ContactPageModule = /** @class */ (function () {
+    function ContactPageModule() {
+    }
+    ContactPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_0__contact__["a" /* ContactPage */]),
+            ],
+        })
+    ], ContactPageModule);
+    return ContactPageModule;
+}());
+
+//# sourceMappingURL=contact.module.js.map
+
+/***/ }),
+
+/***/ 946:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl, rest, codes) {
+        this.navCtrl = navCtrl;
+        this.rest = rest;
+        this.codes = codes;
+        this.notifications = [];
+    }
+    ContactPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_NOTIFICATIONS, data).then(function (resp) {
+            if (resp != null) {
+                if (resp['data'] != []) {
+                    var n = resp['data'];
+                    _this.notifications = n;
+                }
+            }
+        });
+    };
+    ContactPage.prototype.goToActionPage = function (page, objectId) {
+        var _this = this;
+        if (page == 'DocumentAddBill') {
+            var dt = {
+                "document_id": objectId
+            };
+            this.rest.post(this.codes.GET_DOCUMENT_INFO_BY_DOCUMENT_ID, dt).then(function (resp) {
+                _this.navCtrl.push('DocumentRenewalPage', { 'document': resp['data'] });
+            });
+        }
+    };
+    ContactPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Notifications\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item *ngFor="let n of notifications">\n        <h2 class="title-n">{{n[\'title\']}}</h2>\n        <p class="message-n"> \n          {{n[\'message\']}}\n        </p>\n        <p style="float: right !important;">\n        <button ion-button outline round *ngIf="n[\'click_page\'] != \'\'" (click)="goToActionPage(n[\'click_page\'],n[\'next_link\'])">\n          Update Now\n        </button>\n      </p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/contact/contact.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
+    ], ContactPage);
+    return ContactPage;
+}());
+
+//# sourceMappingURL=contact.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=54.js.map

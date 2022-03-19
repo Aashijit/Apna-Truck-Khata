@@ -186,14 +186,14 @@
 
     <ion-row class="report-statement">
       <ion-col col-6>
-        <div class="full-report-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.driver})">
+        <div class="full-report-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.driver, 'isfullreport':true})">
           <i class="fa fa-file-o" aria-hidden="true"></i>
 
           FULL REPORT
         </div>
       </ion-col>
       <ion-col col-6>
-        <div class="monthy-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.driver})">
+        <div class="monthy-statement" (click)="navCtrl.push('ReportFullPage',{'person':this.driver, 'isfullreport':false})">
           <i class="fa fa-file" aria-hidden="true"></i>
 
           MONTHY STATEMENT
