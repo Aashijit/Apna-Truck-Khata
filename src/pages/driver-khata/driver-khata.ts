@@ -34,9 +34,14 @@ export class DriverKhataPage {
     this.getBillsBySrthId();
   }
 
-  report() {
-    let modalCtrl = this.modalCtrl.create('ReportFullPage',{"worker_type":'driver'});
+  report(key) {
+    if(key == 'alldriverreport') {
+    let modalCtrl = this.modalCtrl.create('AllDriverReportPage',{"worker_type":'driver'});
     modalCtrl.present();
+    } else {
+      let modalCtrl = this.modalCtrl.create('DriverExpensePage',{"worker_type":'driver'});
+      modalCtrl.present();
+    }
   }
 
 

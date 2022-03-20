@@ -23,20 +23,20 @@
   <div class="container">
 
     <ion-row class="document-button">
-      <ion-col col-12 (click)="report()">
+      <ion-col col-6 (click)="report('alldriverreport')">
         <div>
-          DRIVER REPORT
+          ALL DRIVER REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
 
         </div>
       </ion-col>
-      <!-- <ion-col col-6 (click)="report('documentbillreport')">
+      <ion-col col-6 (click)="report('driverexpensereport')">
         <div>
-          DOCUMENTS BILL REPORT
+          DRIVER EXPENSE REPORT
           <i class="fa fa-download" aria-hidden="true"></i>
 
         </div>
-      </ion-col> -->
+      </ion-col>
     </ion-row>
 
     <div class="custom-searchbar-div" style="position: relative;">
@@ -76,6 +76,7 @@
         <a href="#news">DRIVER NAME</a>
         <a href="#contact">VEHICLE NUMBER</a>
         <a href="#about">REASON</a>
+        <a href="#about">DATE OF EVENT</a>
         <a href="#about">REJOIN DATE</a>
         <a href="#support">COST</a>
         <a href="#blog">DETAIL</a>
@@ -88,6 +89,7 @@
           <p>{{bill['worker_name']}}</p>
           <p>{{bill['vehicle_number']}}</p>
           <p>{{bill['reason']}}</p>
+          <p>{{bill['bill_date']}}</p>
           <p>{{bill['rejoin_date']}}</p>
           <p>{{bill['total_bill']}}</p>
           <p>{{bill['bill_details']}}</p>

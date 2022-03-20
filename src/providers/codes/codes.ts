@@ -20,6 +20,8 @@ export class CodesProvider {
   public SAVE_REGISTRATION_INFO=this.BASE_URL+"saveregistrationinfo";
   public LOGIN=this.BASE_URL+"login";
 
+  // driverexpensereportapi
+
   public SAVE_VEHICLE_DETAILS=this.BASE_URL+"savevehicledetails";
   public UPDATE_VEHICLE_DETAILS=this.BASE_URL+"updatevehiclebyvehicleid";
   public DELETE_VEHICLE_DETAILS=this.BASE_URL+"deletevehiclebyid";
@@ -122,6 +124,12 @@ export class CodesProvider {
 
 
   //Reports
+
+  public ALL_DRIVER_REPORT = this.BASE_URL_REPORT + "alldriverreportapi";
+  public ALL_DRIVER_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "alldriverreportweb";
+
+  public DRIVER_EXPENSE_REPORT = this.BASE_URL_REPORT + "driverexpensereportapi";
+  public DRIVER_EXPENSE_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "driverexpensereportweb";
 
   public SHOP_BILL_REPORT = this.BASE_URL_REPORT + "shopbillreportweb";
   public SHOP_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "shopbillreport";

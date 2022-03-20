@@ -145,7 +145,11 @@ export class ReportFullPage {
       });
       // this.html = resp['data'];
     })
-    this.downloadURL = this.codes.FULL_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
+    if (this.isfullreport) {
+      this.downloadURL = this.codes.FULL_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.dateRange['from'] + "&date_to=" + this.dateRange['to'];
+    } else {
+      this.downloadURL = this.codes.FULL_REPORT_DOWNLOAD + "?worker_id=" + this.worker_id + "&date_from=" + this.currentYear+"-"+this.getMonthIndex(this.currentMonth)+"-1" + "&date_to=" + this.currentYear+"-"+this.getMonthIndex(this.currentMonth)+"-"+this.monthDays[this.getMonthIndex(this.currentMonth) - 1];
+    }
   }
 
   getMonthIndex(monthString) {
