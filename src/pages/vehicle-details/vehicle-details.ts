@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
@@ -22,7 +23,7 @@ export class VehicleDetailsPage {
   driverJoinedDate : any = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private modalCtrl : ModalController, 
-    private rest : RestProvider, private codes : CodesProvider) {
+    private rest : RestProvider, private codes : CodesProvider, private photoViewer : PhotoViewer) {
     this.vehicle = this.navParams.get("vehicle");
   }
 
@@ -96,17 +97,11 @@ export class VehicleDetailsPage {
 
     this.rest.post(this.codes.GET_BILL_SUMMARY, data).then(resp => {
       var det = resp['data'];
+      
+      this.paid = (det['payment'] != undefined && det['payment'] != null)  ? det['payment'] : 0;
+      this.unpaid = (det['bill'] != undefined && det['bill'] != null) ? det['bill'] : 0;
 
-      for(let i=0;i<det.length;i++){
-        if(det[i]['status'] == 'PAID') {
-          this.paid = Number(det[i]['count']);
-        }
-         else {
-           this.unpaid = Number(det[i]['count']);
-         }
-      }
-
-      this.total = this.unpaid + this.paid;
+      this.total = Number(this.unpaid) + Number(this.paid);
 
     });
     
@@ -165,6 +160,10 @@ export class VehicleDetailsPage {
 
   openVehicleDocument() {
     this.navCtrl.push('VehicleDocumentPage',{"vehicle":this.vehicle})
+  }
+
+  openImage(imageUrl) {
+    this.photoViewer.show(imageUrl,"Vehicle Image", {share: true});
   }
 
 }

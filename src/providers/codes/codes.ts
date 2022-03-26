@@ -162,6 +162,8 @@ export class CodesProvider {
   public GET_NOTIFICATIONS=this.BASE_URL + "getnotificatonsbysrthid";
 
   
+  public UPDATE_BANK_DETAILS=this.BASE_URL+"updatebankdetails";
+  public GET_BANK_DETAILS=this.BASE_URL+"getbankdetails";
 
 
 

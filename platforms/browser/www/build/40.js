@@ -1,6 +1,6 @@
 webpackJsonp([40],{
 
-/***/ 881:
+/***/ 883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditProfilePageModule", function() { return EditProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profile__ = __webpack_require__(960);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_profile__ = __webpack_require__(964);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var EditProfilePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 960:
+/***/ 964:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var EditProfilePage = /** @class */ (function () {
     function EditProfilePage(navCtrl, navParams, codes, rest, loading, msg) {
-        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.codes = codes;
@@ -86,6 +85,24 @@ var EditProfilePage = /** @class */ (function () {
             "last_maint_id": 'srth_app',
             "opt_counter": '0'
         };
+        this.profileTemp = {
+            "srth_id": '1',
+            "name": '',
+            "business_name": '',
+            "city": '',
+            "GSTN": '',
+            "pan": '',
+            "address_line_1": '',
+            "address_line_2": '',
+            "state": '',
+            "pincode": '',
+            "profile_image_id": '',
+            "last_maint_id": 'srth_app',
+            "opt_counter": '0'
+        };
+    }
+    EditProfilePage.prototype.ionViewWillEnter = function () {
+        var _this = this;
         var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         this.profile['srth_id'] = acc[0]['srth_id'];
         var data = {
@@ -93,13 +110,18 @@ var EditProfilePage = /** @class */ (function () {
         };
         this.rest.post(this.codes.GET_PROFILE, data).then(function (resp) {
             _this.profile = resp['data'][0];
+            if (_this.profile == undefined || _this.profile == null) {
+                _this.profile = _this.profileTemp;
+            }
         });
-    }
+    };
     EditProfilePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad EditProfilePage');
     };
     EditProfilePage.prototype.saveDetails = function () {
         var _this = this;
+        var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        this.profile['srth_id'] = acc[0]['srth_id'];
         var lng = this.loading.create({
             content: 'Saving the profile ...'
         });

@@ -8,6 +8,7 @@ import { AlertController, IonicPage, NavController, NavParams, ViewController } 
 import { ModalController } from 'ionic-angular';
 import { DetailsModalPage } from '../details-modal/details-modal';
 import { CameraModalPage } from '../camera-modal/camera-modal';
+import { textChangeRangeIsUnchanged } from 'typescript';
 
 
 
@@ -23,6 +24,7 @@ export class AddVehiclePage {
   vehicle_number = '';
   year_purchase = '';
   vehicle_model = '';
+  vehicle_model_custom = '';
   vehicle_brand = '';
   vehicle_type = '';
   vehicle_image_1_id = '';
@@ -44,7 +46,7 @@ export class AddVehiclePage {
   updatework : boolean = false;
 
 
-
+  open_vehicle : boolean = false;
   vehicle_update_id : any = '';
   vehicle_id : any= '';
   vehicle_update_date : any = '';
@@ -89,6 +91,7 @@ export class AddVehiclePage {
         this.vehicle_number = vehicledetails['vehicle_number'];
         this.year_purchase = vehicledetails['year_purchase'];
         this.vehicle_model = vehicledetails['vehicle_model'];
+        this.vehicle_model_custom = vehicledetails['vehicle_model'];
         this.vehicle_brand = vehicledetails['vehicle_brand'];
         this.vehicle_type = vehicledetails['vehicle_type'];
 
@@ -112,6 +115,14 @@ export class AddVehiclePage {
         this.models = this.brands[i]['models'];
       }
     }
+  }
+
+  addBrands() {
+      if(this.vehicle_model == "Add Model") {
+        this.open_vehicle = true;
+      } else {
+        this.open_vehicle = false;
+      }
   }
 
   addBrandsModel(obj) {
@@ -218,7 +229,7 @@ export class AddVehiclePage {
       vehicle_owner_srth_id : userdata[0]['srth_id'],
       vehicle_number  : this.vehicle_number,
       year_purchase : this.year_purchase,
-      vehicle_model : this.vehicle_model,
+      vehicle_model : this.vehicle_model == 'Add Model' ? this.vehicle_model_custom : this.vehicle_model,
       vehicle_brand : this.vehicle_brand,
       vehicle_type : this.vehicle_type,
       vehicle_image_1_id : 0,
@@ -251,8 +262,7 @@ export class AddVehiclePage {
       vehicle_owner_srth_id : userdata[0]['srth_id'],
       vehicle_number  : this.vehicle_number,
       year_purchase : this.year_purchase,
-      vehicle_model : this.vehicle_model,
-      vehicle_brand : this.vehicle_brand,
+      vehicle_model : this.vehicle_model == 'Add Model' ? this.vehicle_model_custom : this.vehicle_model,
       vehicle_type : this.vehicle_type,
       vehicle_image_1_id : 0,
       vehicle_image_2_id : 0,
@@ -271,7 +281,8 @@ export class AddVehiclePage {
       if(resp['_ReturnCode'] == '0'){
         this.message.displayToast('Congratulations! You have added a vehicle. Now you may update its work history.'); 
         localStorage.setItem(this.codes.ADDED_VEHICLE_ID,resp['vehicle_id']);
-        this.addWork = true;
+        // this.addWork = true;
+        this.navCtrl.pop();
       }
 
     });

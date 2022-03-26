@@ -265,9 +265,9 @@
       </div> -->
         
 
-      <div class="text-center" style="padding-top: 20px;">
+      <!-- <div class="text-center" style="padding-top: 20px;">
         <button ion-button round class="exchange-button" (click)="openExchangeModal()">EXCHANGE PARTS</button>
-      </div>
+      </div> -->
 
 
       <div class="scroll-grid" >
@@ -287,6 +287,7 @@
         <a href="#tools">RATE</a> -->
         <a href="#tools">TOTAL</a>
         <a href="#tools">DETAILS</a> 
+        <a href="#tools">IMAGE</a> 
 
           <div class="scrollmenu-list" *ngFor="let vhc of vehicleworkdetails" id="5" (click)="selectThis(5)">
             <!-- <p>{{vhc['problem']}}</p>
@@ -298,6 +299,9 @@
             <p>{{vhc['rate']}}</p> -->
             <p>{{vhc['total_amount']}}</p>
             <p>{{vhc['bill_details']}}</p>
+            <p *ngIf="vhc['bill_image'] != null" (click)="openImage(vhc['bill_image'])">
+              <img [src]="vhc['bill_image']" style="width: 10% !important;"/>
+            </p>
           </div>
         </div>
         <div class="show-arrows">

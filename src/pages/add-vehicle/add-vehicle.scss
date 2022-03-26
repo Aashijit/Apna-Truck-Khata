@@ -8,6 +8,10 @@ page-add-vehicle {
     }
   }
 
+  .item-label-stacked .select-md, .item-label-floating .select-md {
+    padding-left: 15px !important;
+  }
+
   .item {
     margin-top: 20px;
     padding-left: 0px;

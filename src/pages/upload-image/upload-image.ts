@@ -57,7 +57,7 @@ export class UploadImagePage {
 
     if(img == 'camera'){
       const options: CameraOptions = {
-        quality: 10,
+        quality: 5,
         destinationType: this.cm.DestinationType.DATA_URL,
         encodingType: this.cm.EncodingType.JPEG,
         mediaType: this.cm.MediaType.PICTURE,
@@ -89,7 +89,7 @@ export class UploadImagePage {
 
     }else {
       const options: CameraOptions = {
-        quality: 10,
+        quality: 5,
         destinationType: this.cm.DestinationType.DATA_URL,
         encodingType: this.cm.EncodingType.JPEG,
         mediaType: this.cm.MediaType.PICTURE,

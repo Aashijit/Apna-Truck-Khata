@@ -1,14 +1,14 @@
 webpackJsonp([52],{
 
-/***/ 869:
+/***/ 871:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsModalPageModule", function() { return DetailsModalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentAndInsurancePageModule", function() { return DocumentAndInsurancePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__details_modal__ = __webpack_require__(948);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document_and_insurance__ = __webpack_require__(952);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DetailsModalPageModule = /** @class */ (function () {
-    function DetailsModalPageModule() {
+var DocumentAndInsurancePageModule = /** @class */ (function () {
+    function DocumentAndInsurancePageModule() {
     }
-    DetailsModalPageModule = __decorate([
+    DocumentAndInsurancePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__details_modal__["a" /* DetailsModalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__document_and_insurance__["a" /* DocumentAndInsurancePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__details_modal__["a" /* DetailsModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document_and_insurance__["a" /* DocumentAndInsurancePage */]),
             ],
         })
-    ], DetailsModalPageModule);
-    return DetailsModalPageModule;
+    ], DocumentAndInsurancePageModule);
+    return DocumentAndInsurancePageModule;
 }());
 
-//# sourceMappingURL=details-modal.module.js.map
+//# sourceMappingURL=document-and-insurance.module.js.map
 
 /***/ }),
 
-/***/ 948:
+/***/ 952:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailsModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentAndInsurancePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,39 +60,105 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DetailsModalPage = /** @class */ (function () {
-    function DetailsModalPage(viewController, navCtrl, navParams, modalCtrl, codes) {
-        // this.navParams.get("note");
-        this.viewController = viewController;
+var DocumentAndInsurancePage = /** @class */ (function () {
+    function DocumentAndInsurancePage(navCtrl, navParams, codes, rest) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
         this.codes = codes;
-        this.note = '';
-        this.date = new Date();
-        this.note = this.navParams.get("details");
+        this.rest = rest;
+        this.segment = "all";
+        this.documents = [];
+        this.docs = [];
+        this.ok = false;
+        this.expired = false;
+        this.all = true;
     }
-    DetailsModalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DetailsModalPage');
+    DocumentAndInsurancePage.prototype.ionViewWillEnter = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var req = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_DOCUMENT_INFO_BY_SRTH_ID, req).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.documents = resp['data'];
+                _this.docs = [];
+                for (var i = 0; i < _this.documents.length; i++) {
+                    _this.docs = _this.insertIntoArray(_this.docs, _this.documents[i]);
+                }
+            }
+        });
     };
-    DetailsModalPage.prototype.exitModal = function () {
-        this.viewController.dismiss();
+    DocumentAndInsurancePage.prototype.insertIntoArray = function (docs, document) {
+        var flag = false;
+        for (var i = 0; i < docs.length; i++) {
+            if (docs[i]['document_name'] == document['document_name']) {
+                var expiryDate = new Date(document['document_expiry_date'] + "T00:00:00");
+                if (expiryDate.getTime() <= new Date().getTime()) {
+                    docs[i]['expiryCount']++;
+                }
+                docs[i]['count']++;
+                flag = true;
+            }
+        }
+        if (!flag) {
+            var expiryDate = new Date(document['document_expiry_date'] + "T00:00:00");
+            var dtr = {
+                "document_name": document['document_name'],
+                "count": 1
+            };
+            if (expiryDate.getTime() <= new Date().getTime()) {
+                dtr['expiryCount'] = 1;
+            }
+            else
+                dtr['expiryCount'] = 0;
+            docs.push(dtr);
+        }
+        return docs;
     };
-    DetailsModalPage.prototype.storetext = function () {
-        localStorage.setItem(this.codes.DETAILS, this.note);
-        this.viewController.dismiss();
+    DocumentAndInsurancePage.prototype.displayOk = function () {
+        this.all = false;
+        this.ok = true;
+        this.expired = false;
     };
-    DetailsModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
-            selector: 'page-details-modal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/details-modal/details-modal.html"*/'\n\n<ion-content padding style="background-color: rgba(0, 0, 0, 0.8) !important;">\n\n\n\n  <ion-card class="modal-card-details">\n    <ion-card-header class="custom-card-header">\n      DETAILS\n      <span style="float: right;" (click)="exitModal()">\n        <i class="fa fa-times-circle" aria-hidden="true"></i>\n\n      </span>\n    </ion-card-header>\n    <ion-card-content>\n      \n\n      <div class="details-div">\n        <ion-row>\n          <ion-col col-12 class="date">\n            <p style="font-size: 9px !important;">{{date}}</p>\n          </ion-col>\n          <ion-col col-12>\n            <ion-item no-lines>\n              <ion-textarea rows="5" placeholder="Tap here" \n                  [(ngModel)]="note" [(ngModel)]="note" autocomplete="on" autocorrect="on"></ion-textarea>\n             </ion-item>\n          </ion-col>\n        </ion-row>\n        \n       \n      </div>\n      \n\n        <!-- <div class="label-float" >\n          <input type="text"  placeholder=" " />\n          <label>DETAILS</label> -->\n          <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n    \n        <!-- </div> -->\n\n\n      <!-- <div class="label-float" >\n        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n        <label>DATE</label>\n        <i class="fa fa-calendar" aria-hidden="true"></i>\n\n      </div> -->\n      \n        <ion-row class="justify-content-center">\n          <ion-col col-6 class="text-center">\n            <button ion-button round class="custom-button save-button" (click)="storetext()"> SAVE </button>\n          </ion-col>\n          <!-- <ion-col col-6 class="text-center">\n            <button ion-button round  class="custom-button exit-button">\n              EXIT\n            </button>\n          </ion-col> -->\n        </ion-row>\n      \n\n     </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/details-modal/details-modal.html"*/,
+    DocumentAndInsurancePage.prototype.displayExpired = function () {
+        this.all = false;
+        this.ok = false;
+        this.expired = true;
+    };
+    DocumentAndInsurancePage.prototype.displayALL = function () {
+        this.all = true;
+        this.ok = false;
+        this.expired = false;
+    };
+    DocumentAndInsurancePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DocumentAndInsurancePage');
+    };
+    DocumentAndInsurancePage.prototype.openDocumentBill = function () {
+        this.navCtrl.push('AddDocumentBillPage');
+    };
+    DocumentAndInsurancePage.prototype.openDocumentBillA = function (avr) {
+        var doc = '';
+        for (var i = 0; i < this.documents.length; i++) {
+            if (this.documents[i]['document_name'] == avr) {
+                doc = this.documents[i];
+                break;
+            }
+        }
+        this.navCtrl.push('AddDocumentBillPage', { "document": doc });
+    };
+    DocumentAndInsurancePage.prototype.getItems = function ($event) {
+    };
+    DocumentAndInsurancePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
+            selector: 'page-document-and-insurance',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-and-insurance/document-and-insurance.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-10 class="person-name text-left">\n        <ion-title>        \n          <ion-icon name="ios-copy"></ion-icon>\n          DOCUMENT AND INSURANCE\n        </ion-title>\n      </ion-col>\n      <ion-col col-2 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <ion-row class="document-button">\n      <ion-col col-6 (click)="navCtrl.push(\'DocumentDateReportPage\')">\n        <div>\n          DOCUMENTS DATE REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n      <ion-col col-6 (click)="navCtrl.push(\'DocumentBillReportPage\')">\n        <div>\n          DOCUMENTS BILL REPORT\n          <i class="fa fa-download" aria-hidden="true"></i>\n\n        </div>\n        <!-- <button ion-button round outline small></button> -->\n      </ion-col>\n    </ion-row>\n\n    <!-- <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH VEHICLE NUMBER, PERSON"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div> -->\n\n    <!-- <ion-row>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="ok == true ? \'ok-button-selected\' : \'ok-button\'" (click)="displayOk()">OK</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="expired == true ? \'problem-button-selected\' : \'problem-button\'" (click)="displayExpired()">EXPIRED</button>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n        <button ion-button round [ngClass]="all == true ? \'all-button-selected\' : \'all-button\'" (click)="displayALL()">ALL</button>\n      </ion-col>\n    </ion-row> -->\n\n    \n\n      <ion-row>\n        <ion-col col-6 style="padding-bottom: 0px !important;">\n          Documents\n        </ion-col>\n        <!-- <ion-col col-3 style="text-align: center;">\n          Expiring\n        </ion-col> -->\n        <ion-col col-3 style="text-align: center;padding-bottom: 0px !important;">\n          Expired\n        </ion-col>\n        <ion-col col-3 style="text-align: center;padding-bottom: 0px !important;">\n          Total\n        </ion-col>\n      </ion-row>\n \n\n<ion-list>\n\n<ion-row class="doc-back" *ngFor="let dc of docs" (click)="openDocumentBillA(dc[\'document_name\'])">\n\n  <ion-col *ngIf="ok && (dc[\'expiryCount\'] == 0)" col-6 class="doc-name">\n    {{dc[\'document_name\']}}\n  </ion-col>\n  <ion-col *ngIf="expired && (dc[\'expiryCount\'] == dc[\'count\'])" col-6 class="doc-name">\n    {{dc[\'document_name\']}}\n  </ion-col>\n  <ion-col *ngIf="all" col-6 class="doc-name">\n    {{dc[\'document_name\']}}\n  </ion-col>\n\n\n  <ion-col *ngIf="ok && (dc[\'expiryCount\'] == 0)" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'expiryCount\']}}</span>\n  </ion-col>\n  <ion-col *ngIf="expired && (dc[\'expiryCount\'] == dc[\'count\'])" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'expiryCount\']}}</span>\n  </ion-col>\n  <ion-col *ngIf="all" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'expiryCount\']}}</span>\n  </ion-col>\n\n\n  <ion-col *ngIf="ok && (dc[\'expiryCount\'] == 0)" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'count\']}}</span>\n  </ion-col>\n  <ion-col *ngIf="expired && (dc[\'expiryCount\'] == dc[\'count\'])" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'count\']}}</span>\n  </ion-col>\n  <ion-col *ngIf="all" col-3 style="text-align: center;">\n    <span class="doc-number">{{dc[\'count\']}}</span>\n  </ion-col>\n\n\n</ion-row>\n\n</ion-list>\n\n\n\n\n  </div>\n</ion-content> \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-and-insurance/document-and-insurance.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ViewController"],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], DetailsModalPage);
-    return DetailsModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__src_providers_rest_rest__["a" /* RestProvider */]])
+    ], DocumentAndInsurancePage);
+    return DocumentAndInsurancePage;
 }());
 
-//# sourceMappingURL=details-modal.js.map
+//# sourceMappingURL=document-and-insurance.js.map
 
 /***/ })
 

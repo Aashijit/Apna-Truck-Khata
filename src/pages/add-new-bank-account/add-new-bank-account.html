@@ -1,10 +1,3 @@
-<!--
-  Generated template for the AddNewBankAccountPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
 <!--  Bank Details -->
 <ion-header>
   <ion-navbar>
@@ -32,13 +25,9 @@
   <div class="container">
 
     <ion-list class="bank-details">
-<!-- 
-      <ion-item>
-        <ion-input type="text" placeholder="ACCOUNT NUMBER"></ion-input>
-      </ion-item> -->
 
       <div class="label-float" >
-        <input type="text"  placeholder=" " />
+        <input type="text"  placeholder=" " [(ngModel)]="bankDetails.account_number" />
         <label>ACCOUNT NUMBER</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
   
@@ -52,45 +41,27 @@
       </div>
 
       <div class="label-float" >
-        <input type="text"  placeholder=" " />
+        <input type="text"  placeholder=" " [(ngModel)]="bankDetails.account_holder_name"/>
         <label>ACCOUNT HOLDER NAME</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
   
       </div>
 
       <div class="label-float" >
-        <input type="text"  placeholder=" " />
+        <input type="text"  placeholder=" " [(ngModel)]="bankDetails.ifsc_code"/>
         <label>IFSC CODE</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
   
       </div>
 
       <div class="label-float" >
-        <input type="text"  placeholder=" " />
+        <input type="text"  placeholder=" " [(ngModel)]="bankDetails.bank_name" />
         <label>BANK NAME</label>
         <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
   
       </div>
     
-      <!-- <ion-item>
-        <ion-input type="text" placeholder="CONFIRM ACCOUNT NUMBER"></ion-input>
-      </ion-item>
-
-
-      <ion-item>
-        <ion-input type="text" placeholder="ACCOUNT HOLDER NAME"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-input type="text" placeholder="IFSC CODE"></ion-input>
-      </ion-item> -->
-
-      <!-- <ion-item>
-        <ion-input type="text" placeholder="BANK NAME"></ion-input>
-      </ion-item> -->
-
-     
-      <p style="margin: 20px 0; font-weight: 700;">PASSBOOK/CHEQUE PHOTO</p>
+      <!-- <p style="margin: 20px 0; font-weight: 700;">PASSBOOK/CHEQUE PHOTO</p>
 
       <ion-row class="profile-picture">
         <ion-col col-4>
@@ -112,12 +83,10 @@
 
     
 
-    </div>
-
-
+    </div> -->
 
       <div class="text-center mt-4">
-        <button ion-button round class="custom-button" >CONFIRM</button>
+        <button ion-button round class="custom-button" (click)="updateBankDetails()">CONFIRM</button>
       </div>
       
       

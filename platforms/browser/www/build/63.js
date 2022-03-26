@@ -1,14 +1,14 @@
 webpackJsonp([63],{
 
-/***/ 858:
+/***/ 860:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BillDetailsPageModule", function() { return BillDetailsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BillPaymentSearchPageModule", function() { return BillPaymentSearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bill_details__ = __webpack_require__(937);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bill_payment_search__ = __webpack_require__(941);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var BillDetailsPageModule = /** @class */ (function () {
-    function BillDetailsPageModule() {
+var BillPaymentSearchPageModule = /** @class */ (function () {
+    function BillPaymentSearchPageModule() {
     }
-    BillDetailsPageModule = __decorate([
+    BillPaymentSearchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__bill_details__["a" /* BillDetailsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__bill_payment_search__["a" /* BillPaymentSearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__bill_details__["a" /* BillDetailsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__bill_payment_search__["a" /* BillPaymentSearchPage */]),
             ],
         })
-    ], BillDetailsPageModule);
-    return BillDetailsPageModule;
+    ], BillPaymentSearchPageModule);
+    return BillPaymentSearchPageModule;
 }());
 
-//# sourceMappingURL=bill-details.module.js.map
+//# sourceMappingURL=bill-payment-search.module.js.map
 
 /***/ }),
 
-/***/ 937:
+/***/ 941:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillDetailsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillPaymentSearchPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,30 +59,210 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the BillDetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var BillDetailsPage = /** @class */ (function () {
-    function BillDetailsPage(navCtrl, navParams) {
+
+
+
+var BillPaymentSearchPage = /** @class */ (function () {
+    // BILL NUMBER, PAYMENT NUMBER, REASONS
+    function BillPaymentSearchPage(alertCtrl, navCtrl, navParams, rest, codes, message, modalCtrl) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.rest = rest;
+        this.codes = codes;
+        this.message = message;
+        this.modalCtrl = modalCtrl;
+        this.bills = [];
+        this.isupdate = false;
+        this.filterbills = '';
+        this.searchTerm = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.shops = [];
+        this.vehicles = [];
+        this.worker_type = '';
+        this.worker_id = '';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.problems = [];
+        this.selectedfilters = [];
+        this.payments = [];
+        this.filterpayments = [];
+        this.reasons = [];
+        this.worker_type = this.navParams.get("worker_type");
+        this.worker_id = this.navParams.get("worker_id");
+        this.getBillsBySrthId();
     }
-    BillDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad BillDetailsPage');
+    BillPaymentSearchPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Bill Payment Search Page');
     };
-    BillDetailsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-bill-details',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-details/bill-details.html"*/'\n<!--\n  Generated template for the DocumentRenewalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--\n  Generated template for the AddDriverExpensesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n    \n      <ion-col col-10 class="person-name text-left">\n        <ion-title>        \n          <ion-icon name="ios-copy"></ion-icon>\n          BILL DETAILS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <!-- <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getItems($event)" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div> -->\n\n    <!-- <div class="scrollmenu">\n      <a href="#home">BILL NUMBER</a>\n      <a href="#news">VEHICLE</a>\n      <a href="#contact">PROBLEM/WORK (PART & ID)</a>\n      <a href="#about">DATE OF REPAIR</a>\n      <a href="#support">REPAIR</a>\n      <a href="#blog">QUANTITY</a>\n      <a href="#tools">RATE(PC/FULL)</a>\n      <a href="#tools">TOTAL</a>\n      <a href="#tools">DETAILS</a>\n      <a href="#tools">ID(OPTIONAL)</a>\n      <a href="#tools">KM READING</a> -->\n\n            <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n<!-- \n      <div style="height: 200px;width: 400px">\n\n      </div>\n    </div> -->\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n\n        <a href="#home">BILL NUMBER</a>\n        <a href="#news">VEHICLE</a>\n        <a href="#contact">PROBLEM/WORK (PART & ID)</a>\n        <a href="#about">DATE OF REPAIR</a>\n        <a href="#support">REPAIR</a>\n        <a href="#blog">QUANTITY</a>\n        <a href="#tools">RATE(PC/FULL)</a>\n        <a href="#tools">TOTAL</a>\n        <a href="#tools">DETAILS</a>\n        <a href="#tools">ID(OPTIONAL)</a>\n        <a href="#tools">KM READING</a>\n\n        <div class="scrollmenu-list" id="5" (click)="selectThis(5)">\n          <p>BILL1</p>\n          <p>V1234</p>\n          <p>PROBLEM ID23</p>\n          <p>12/09/2020</p>\n          <p>Yes</p>\n          <p>2</p>\n          <p>RS 25</p>\n          <p>RS 25</p>\n          <p>THIS IS THE DETAILS</p>\n          <p>ID2</p>\n          <p>25KM</p>\n\n        </div>\n  \n        <div class="scrollmenu-list" id="6" (click)="selectThis(6)">\n          <p>BILL1</p>\n          <p>V1234</p>\n          <p>PROBLEM ID23</p>\n          <p>12/09/2020</p>\n          <p>Yes</p>\n          <p>2</p>\n          <p>RS 25</p>\n          <p>RS 25</p>\n          <p>THIS IS THE DETAILS</p>\n          <p>ID2</p>\n          <p>25KM</p>\n        </div>\n  \n        <div class="scrollmenu-list" id="7" (click)="selectThis(7)">\n          <p>BILL1</p>\n          <p>V1234</p>\n          <p>PROBLEM ID23</p>\n          <p>12/09/2020</p>\n          <p>Yes</p>\n          <p>2</p>\n          <p>RS 25</p>\n          <p>RS 25</p>\n          <p>THIS IS THE DETAILS</p>\n          <p>ID2</p>\n          <p>25KM</p>\n\n        </div>\n  \n        <div class="scrollmenu-list" id="8" (click)="selectThis(8)">\n          <p>BILL1</p>\n          <p>V1234</p>\n          <p>PROBLEM ID23</p>\n          <p>12/09/2020</p>\n          <p>Yes</p>\n          <p>2</p>\n          <p>RS 25</p>\n          <p>RS 25</p>\n          <p>THIS IS THE DETAILS</p>\n          <p>ID2</p>\n          <p>25KM</p>\n\n        </div>\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-angle-down"  aria-hidden="true"></i>\n  \n        <i class="fa fa-angle-right" aria-hidden="true"></i>            \n  \n      </div>\n    </div>\n\n\n\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; border-radius: 5px;">\n      <ion-label>BILL NUMBER</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="f">Female</ion-option>\n        <ion-option value="m">Male</ion-option>\n      </ion-select>\n    </ion-item>\n\n  \n    <!-- <ion-item>\n      <ion-input type="text" placeholder="PERSON NAME"></ion-input>\n    </ion-item> -->\n\n\n    <div class="label-float"  >\n      <input type="text"  placeholder=" " />\n      <label>PERSON AND BUSINESS NAME</label>\n      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n    </div>\n\n    <!-- <ion-item>\n      <ion-input type="text" placeholder="BUSINESS NAME"></ion-input>\n    </ion-item> -->\n\n<!-- \n    <div class="label-float"  >\n      <input type="text"  placeholder=" " />\n      <label>BUSINESS NAME</label> -->\n      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n<!-- \n    </div> -->\n\n    <!-- <ion-item>\n      <ion-input type="text" placeholder="VEHICLE NUMBER"></ion-input>\n    </ion-item> -->\n\n\n    <div class="label-float"  >\n      <input type="text"  placeholder=" " />\n      <label>VEHICLE NUMBER</label>\n      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n    </div>\n\n    <!-- <ion-item>\n      <ion-label>DATE OF REPAIR</ion-label>\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n    </ion-item> -->\n\n\n    <div class="label-float" >\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n      <label>DATE OF BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n\n    </div>\n\n    <!-- <div class="label-float" >\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n      <label>TOTAL BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n\n    </div> -->\n\n    <div class="label-float"  >\n      <input type="text"  placeholder=" " />\n      <label>TOTAL BILL &#x20b9;</label>\n      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n    </div>\n\n    <div class="mt-4 text-center">\n\n      <button ion-button round class="share-button">ADD NEW</button>\n\n  \n    </div>\n<!-- \n    <ion-item>\n      <ion-input type="text" placeholder="TOTAL BILL"></ion-input>\n    </ion-item> -->\n\n    <!-- <div class="problem-work-div">\n    <ion-item class="problem-work">\n\n      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="f">Female</ion-option>\n        <ion-option value="m">Male</ion-option>\n      </ion-select>\n\n    </ion-item>\n      <ion-icon name="ios-add-circle" ></ion-icon>\n    </div> -->\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  >\n      <ion-label>PROBLEM/WORK(PART & ID)</ion-label>\n\n      <ion-select [(ngModel)]="document" >\n        <ion-option value="Aadharcard">TYRE - 10</ion-option>\n        <ion-option value="Pancard">TYRE - 50</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n\n    <div class="label-float" >\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n      <label>DATE OF REPAIR</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n\n    </div>\n\n    <!-- <ion-item>\n      <ion-label>DATE OF REPAIR</ion-label>\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>\n    </ion-item> -->\n\n    <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px"  *ngIf="typeOfPerson  == \'driver\'">\n      <ion-label>LOAN ITEM(PART & ID)</ion-label>\n\n      <ion-select [(ngModel)]="document" >\n        <ion-option value="Aadharcard">TYRE - 10</ion-option>\n        <ion-option value="Pancard">TYRE - 50</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n      <div class="mt-4 text-center">\n\n        <button ion-button round class="share-button">ADD NEW WORK</button>\n  \n    \n      </div>\n  \n      <!-- <ion-item class="ion-col col-3">\n        <ion-label>QUANTITY (PC/LTR)</ion-label>\n        <ion-select [(ngModel)]="gender">\n          <ion-option value="f">Female</ion-option>\n          <ion-option value="m">Male</ion-option>\n        </ion-select>\n      </ion-item> -->\n\n \n\n      <ion-row >\n        <ion-col col-9>\n          <!-- <div class="label-float" >\n            <input type="text"  placeholder=" " />\n            <label>DETAILS</label>\n            <i class="fa fa-money" aria-hidden="true"></i>\n      \n          </div> -->\n          <ion-row >\n            <ion-col col-10 class="detail-popup" (click)="openDetailPopup()">\n              DETAILS\n              <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n      \n            </ion-col>    \n          </ion-row>  \n        </ion-col>\n        <ion-col col-2>\n          <ion-row class="detail-picture">\n            <ion-col col-4 (click)="openCameraPopup()">\n              <i class="fa fa-camera" aria-hidden="true"></i>\n              <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n      \n            </ion-col>    \n          </ion-row>      \n        </ion-col>\n      </ion-row>\n\n    <div class="label-float"  >\n      <input type="text"  placeholder=" " />\n      <label>KM READING</label>\n      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->\n\n    </div>\n\n<!-- \n    <ion-row class="profile-picture">\n      <ion-col col-4>\n        <i class="fa fa-camera" aria-hidden="true"></i>\n        <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon>\n\n      </ion-col>\n      <ion-col>\n        <h6></h6> \n      </ion-col>\n\n    </ion-row> -->\n \n\n    <!-- <ion-item >\n      \n      <ion-input type="text" placeholder="KM READING"></ion-input>\n\n\n    </ion-item> -->\n\n    <div class="mt-4 text-right">\n\n      <button ion-button round class="share-button">SHARE &nbsp;<ion-icon ios="ios-share-alt" md="md-share-alt"></ion-icon>\n      </button>\n\n    \n\n    </div>\n\n    <div class="text-center mt-4">\n      <button ion-button round class="custom-button" > SAVE</button>\n\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-details/bill-details.html"*/,
+    BillPaymentSearchPage.prototype.clickedTerm = function (sr) {
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+                return;
+            }
+        }
+        this.selectedfilters.push(sr);
+    };
+    BillPaymentSearchPage.prototype.removeTerm = function (sr) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sr['type'] && this.selectedfilters[i]['id'] == sr['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+    };
+    BillPaymentSearchPage.prototype.searchGrid = function () {
+        localStorage.setItem("bill_payment_search", JSON.stringify(this.selectedfilters));
+        this.navCtrl.pop();
+    };
+    BillPaymentSearchPage.prototype.getReasons = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": json[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_REASON, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.reasons = resp['data'];
+                for (var i = 0; i < _this.reasons.length; i++) {
+                    var searchobj = {
+                        "type": "reasons",
+                        "id": "",
+                        "name": _this.reasons[i]['reason'],
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.payments.length; i++) {
+                    var searchobj = {
+                        "type": "payments",
+                        "id": String(_this.payments[i]['payment_number']),
+                        "name": _this.payments[i]['mode_of_payment'],
+                        "amount": String(_this.payments[i]['payment_amount'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['payment_number']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getBillsBySrthId = function () {
+        var _this = this;
+        this.isupdate = false;
+        var data = {
+            "worker_id": this.worker_id,
+            "worker_type": this.worker_type
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.bills = resp['data'];
+                _this.filterbills = _this.bills;
+                for (var i = 0; i < _this.bills.length; i++) {
+                    _this.bills[i]['selected'] = 'false';
+                    _this.filterbills[i]['selected'] = 'false';
+                }
+                _this.getPayments();
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getPayments = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.worker_id
+        };
+        this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.payments = resp['data'];
+                _this.filterpayments = _this.payments;
+                for (var i = 0; i < _this.payments.length; i++) {
+                    _this.payments[i]['selected'] = 'false';
+                    _this.filterpayments[i]['selected'] = 'false';
+                }
+                if (_this.worker_type == 'shop' || _this.worker_type == 'mechanic')
+                    _this.getVehicles();
+                else
+                    _this.getReasons();
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.getVehicles = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+                for (var i = 0; i < _this.vehicles.length; i++) {
+                    var searchobj = {
+                        "type": "vehicles",
+                        "id": String(_this.vehicles[i]['vehicle_id']),
+                        "name": _this.vehicles[i]['vehicle_number'],
+                        "amount": ""
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.payments.length; i++) {
+                    var searchobj = {
+                        "type": "payments",
+                        "id": String(_this.payments[i]['payment_number']),
+                        "name": _this.payments[i]['mode_of_payment'],
+                        "amount": String(_this.payments[i]['payment_amount'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                for (var i = 0; i < _this.bills.length; i++) {
+                    var searchobj = {
+                        "type": "bills",
+                        "id": String(_this.bills[i]['bill_number']),
+                        "name": _this.bills[i]['person_shop_name'],
+                        "amount": String(_this.bills[i]['total_bill'])
+                    };
+                    _this.search.push(searchobj);
+                }
+                _this.displaysearchitems = _this.search;
+                console.log(JSON.stringify(_this.search));
+            }
+        });
+    };
+    BillPaymentSearchPage.prototype.filterDetails = function (event) {
+        var _this = this;
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+            }
+            else
+                return _this.search;
+        });
+    };
+    BillPaymentSearchPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-bill-payment-search',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-payment-search/bill-payment-search.html"*/'<ion-header>\n  <ion-searchbar (ionInput)="filterDetails($event)" [(ngModel)]="searchTerm"></ion-searchbar>\n\n\n\n</ion-header>\n<ion-content padding>\n\n  <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n    <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n      <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'payments\'" >Payment # {{sc[\'id\']}}</ion-label>\n      <ion-label *ngIf="sc[\'type\'] == \'reasons\' || sc[\'type\'] == \'vehicles\'" >{{sc[\'name\']}}</ion-label>\n      <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n    </ion-chip>\n    </p>\n\n\n  <ion-list style="margin-top: 20px;">\n\n    <p *ngFor="let sr of displaysearchitems" >\n\n      <ion-item *ngIf="sr[\'type\'] == \'vehicles\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Vehicle</p>\n      </ion-item>\n \n      <ion-item *ngIf="sr[\'type\'] == \'reasons\'" (click)="clickedTerm(sr)">\n        <h2>{{sr[\'name\']}}</h2>\n        <p>Reason</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'payments\'" (click)="clickedTerm(sr)">\n        <h2>Payment # {{sr[\'id\']}}</h2>\n        <p>Shop</p>\n      </ion-item>\n\n      <ion-item *ngIf="sr[\'type\'] == \'bills\'" (click)="clickedTerm(sr)">\n        <h2>Bill # {{sr[\'id\']}}</h2>\n      </ion-item>\n    </p>\n\n\n\n  </ion-list>\n\n\n\n\n</ion-content>\n<ion-footer>\n  <button ion-button full (click)="searchGrid()">\n    Search\n  </button>\n</ion-footer>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/bill-payment-search/bill-payment-search.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"]])
-    ], BillDetailsPage);
-    return BillDetailsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], BillPaymentSearchPage);
+    return BillPaymentSearchPage;
 }());
 
-//# sourceMappingURL=bill-details.js.map
+//# sourceMappingURL=bill-payment-search.js.map
 
 /***/ })
 

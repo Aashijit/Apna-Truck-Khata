@@ -10,7 +10,7 @@
   <ion-card>
     <ion-card-content>
       <ion-grid>
-        <ion-row>
+        <ion-row *ngIf="payment['payment_number'] != undefined">
           <ion-col col-6 class="hd">
             Payment Id
           </ion-col>
@@ -18,7 +18,7 @@
             {{payment['payment_number']}}
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngIf="payment['date_of_payment'] != undefined">
           <ion-col col-6 class="hd">
             Date of payment
           </ion-col>
@@ -26,7 +26,7 @@
             {{payment['date_of_payment']}}
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngIf="payment['mode_of_payment'] != undefined">
           <ion-col col-6 class="hd">
             Mode of payment
           </ion-col>
@@ -34,7 +34,7 @@
             {{payment['mode_of_payment']}}
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngIf="payment['payment_amount'] != undefined">
           <ion-col col-6 class="hd">
             Payment amount
           </ion-col>
@@ -42,7 +42,7 @@
             {{payment['payment_amount']}}
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngIf="payment['details'] != undefined">
           <ion-col col-6 class="hd">
             Details
           </ion-col>

@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -28,7 +29,7 @@ export class MechanicKhataPage {
 
   constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, 
     private rest : RestProvider, private codes : CodesProvider, private message : MessageProvider, private modalCtrl : ModalController,
-    private ldctrl : LoadingController) {
+    private ldctrl : LoadingController, private photoViewer : PhotoViewer) {
 
   }
 
@@ -125,6 +126,10 @@ export class MechanicKhataPage {
   }
   updateDetails(){
     this.navCtrl.push('ShopBillDetailsPage',{"worker_type":"mechanic",'update':'true'});
+  }
+
+  viewImage(image) {
+    this.photoViewer.show(image['image_url'],image['tag_cloud'], {share: true});
   }
 
   ionViewWillEnter(){

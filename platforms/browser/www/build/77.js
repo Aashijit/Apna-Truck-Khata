@@ -1,14 +1,14 @@
 webpackJsonp([77],{
 
-/***/ 844:
+/***/ 846:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountKhataPageModule", function() { return AccountKhataPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddComplaintsPageModule", function() { return AddComplaintsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__account_khata__ = __webpack_require__(923);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_complaints__ = __webpack_require__(927);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AccountKhataPageModule = /** @class */ (function () {
-    function AccountKhataPageModule() {
+var AddComplaintsPageModule = /** @class */ (function () {
+    function AddComplaintsPageModule() {
     }
-    AccountKhataPageModule = __decorate([
+    AddComplaintsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__account_khata__["a" /* AccountKhataPage */],
+                __WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__account_khata__["a" /* AccountKhataPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__add_complaints__["a" /* AddComplaintsPage */]),
             ],
         })
-    ], AccountKhataPageModule);
-    return AccountKhataPageModule;
+    ], AddComplaintsPageModule);
+    return AddComplaintsPageModule;
 }());
 
-//# sourceMappingURL=account-khata.module.js.map
+//# sourceMappingURL=add-complaints.module.js.map
 
 /***/ }),
 
-/***/ 923:
+/***/ 927:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountKhataPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__ = __webpack_require__(159);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddComplaintsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_message_message__ = __webpack_require__(494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,215 +61,291 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AccountKhataPage = /** @class */ (function () {
-    function AccountKhataPage(modalCtrl, navCtrl, navParams, rest, codes) {
-        this.modalCtrl = modalCtrl;
+
+var AddComplaintsPage = /** @class */ (function () {
+    function AddComplaintsPage(navCtrl, navParams, modalCtrl, codes, rest, message) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.rest = rest;
+        this.modalCtrl = modalCtrl;
         this.codes = codes;
-        this.workers = [];
-        this.filterworkers = [];
-        this.mechanicshop = false;
-        this.ms = [];
-        this.documentinsurance = false;
-        this.di = [];
-        this.driver = false;
-        this.dr = [];
-        this.all = true;
-        this.displayfilter = false;
-        this.displaysearchitems = [];
-        this.searchTerm = '';
-        this.search = [];
-        this.total_bill = 0.00;
-        this.paid_money = 0.00;
-        this.due_money = 0.00;
+        this.rest = rest;
+        this.message = message;
+        this.vari = '';
+        this.isSelectedBill = false;
+        this.complaints_id = '';
+        this.complaints_number = null;
+        this.vehicle_id = '';
+        this.srth_id = '';
+        this.problem_id = '';
+        this.date_of_complaint = '';
+        this.date_of_reminder = '';
+        this.details = '';
+        this.km_reading = '';
+        this.status = '';
+        this.last_maint_id = '';
+        this.opt_counter = '';
+        this.vehicle_number = '';
+        this.isupdate = false;
+        this.vehicles = [];
+        this.complaints = [];
+        this.problems = [];
+        this.img = null;
+        var update = this.navParams.get("update");
+        if (update == "true") {
+            var comp = this.navParams.get("selectedcomplaint");
+            this.complaints_id = comp['complaints_id'];
+            this.complaints_number = comp['complaints_number'];
+            this.vehicle_id = comp['vehicle_id'];
+            this.srth_id = comp['srth_id'];
+            this.problem_id = comp['problem_id'];
+            this.date_of_complaint = comp['date_of_complaint'];
+            this.date_of_reminder = comp['date_of_reminder'];
+            this.details = comp['details'];
+            this.km_reading = comp['km_reading'];
+            this.status = comp['status'];
+            this.img = comp['image'];
+            this.isupdate = true;
+        }
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_owner_srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.vehicles = resp['data'];
+            }
+        });
+        var data1 = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        if (this.complaints_number == null) {
+            this.rest.post(this.codes.GET_LAST_COMPLAINTS_ID, data1).then(function (resp) {
+                _this.complaints_number = Number(resp['data']) + 1;
+            });
+        }
+        // this.getcomplaints();
     }
-    AccountKhataPage.prototype.details = function (worker) {
-        localStorage.setItem("worker", JSON.stringify(worker));
-        if (worker['worker_type'] == 'driver') {
-            this.navCtrl.push('DriverPage');
-        }
-        else if (worker['worker_type'] == 'mechanic') {
-            this.navCtrl.push('MechanicPage');
-        }
-        else if (worker['worker_type'] == 'shop') {
-            this.navCtrl.push('ShopPage');
-        }
-        else if (worker['worker_type'] == 'documents') {
-            this.navCtrl.push('DocumentPage');
-        }
-        else if (worker['worker_type'] == 'insurance') {
-            this.navCtrl.push('InsurancePage');
-        }
-    };
-    AccountKhataPage.prototype.fullreport = function () {
-        var modalCtrl = this.modalCtrl.create('ReportFullPage');
-        modalCtrl.present();
-    };
-    AccountKhataPage.prototype.clicksearchbar = function () {
-        this.displayfilter = true;
-        this.displaysearchitems = this.search;
-    };
-    AccountKhataPage.prototype.filterWorker = function (event) {
+    AddComplaintsPage.prototype.updatecomplaint = function () {
         var _this = this;
-        if (this.searchTerm != '') {
-            this.displayfilter = true;
-            this.displaysearchitems = this.search;
+        var data = {
+            "complaints_id": this.complaints_id,
+            "complaints_number": this.complaints_number,
+            "vehicle_id": this.vehicle_id,
+            "srth_id": this.srth_id,
+            "problem_id": this.problem_id,
+            "date_of_complaint": this.date_of_complaint,
+            "date_of_reminder": this.date_of_reminder,
+            "details": this.details,
+            "km_reading": this.km_reading,
+            "status": this.status,
+            "image": this.img,
+            "last_maint_id": "srth-app",
+            "opt_counter": "0",
+            "problems": this.problems
+        };
+        this.rest.post(this.codes.UPDATE_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.navCtrl.pop();
+            }
+        });
+    };
+    AddComplaintsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddComplaintsPage');
+    };
+    AddComplaintsPage.prototype.change = function (vehicleId) {
+        this.isSelectedBill = true;
+        for (var i = 0; i < this.vehicles.length; i++) {
+            if (this.vehicles[i]['vehicle_id'] == vehicleId) {
+                this.vehicle_number = this.vehicles[i]['vehicle_number'];
+            }
         }
-        if (this.searchTerm == '') {
-            this.displayfilter = false;
-            this.displaysearchitems = this.search;
-            this.filterworkers = this.workers;
+    };
+    AddComplaintsPage.prototype.openCameraPopup = function () {
+        var _this = this;
+        if (this.vehicle_id == '' || this.vehicle_id == null) {
+            this.message.displayToast("Please select vehicle");
+            return;
         }
-        this.displaysearchitems = this.search.filter(function (wp) {
-            if (_this.searchTerm != '') {
-                var str = wp.type + wp.name;
-                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
+        if (this.date_of_complaint == '' || this.date_of_complaint == null) {
+            this.message.displayToast("Please select date of complaint");
+            return;
+        }
+        if (this.date_of_reminder == '' || this.date_of_reminder == null) {
+            this.message.displayToast("Please select date of reminder");
+            return;
+        }
+        if (this.problem_id == '' || this.problem_id == null) {
+            this.message.displayToast("Please enter problem id");
+            return;
+        }
+        if (this.details == '' || this.details == null) {
+            this.message.displayToast("Please enter details");
+            return;
+        }
+        var data = {
+            "vehicle_id": this.vehicle_id,
+            "complaint_date": this.date_of_complaint,
+            "reminder_date": this.date_of_reminder,
+            "details": this.details
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "",
+            "worker_id": 0,
+            "document_type": "complaintimage",
+            "type": "complaints",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+                var selectedImage = JSON.parse(localStorage.getItem("selectedimage"));
+                _this.img = selectedImage['image_url'];
             }
             else
-                return _this.search;
+                _this.img = null;
         });
+        cameraModalPage.present();
     };
-    AccountKhataPage.prototype.clickedsearchitem = function (sr) {
-        this.displayfilter = false;
-        this.displaysearchitems = this.search;
-        if (sr['type'] == 'name') {
-            this.searchTerm = sr['name'];
-            this.filterworkers = [];
-            for (var i = 0; i < this.workers.length; i++) {
-                if (this.workers[i]['name'] == sr['name']) {
-                    this.filterworkers.push(this.workers[i]);
-                }
-            }
-        }
-        else if (sr['type'] == 'type') {
-            for (var i = 0; i < this.workers.length; i++) {
-                if (this.workers[i]['worker_type'] == sr['name']) {
-                    this.filterworkers = [];
-                    this.searchTerm = sr['name'];
-                    this.filterworkers.push(this.workers[i]);
-                }
-            }
-        }
-    };
-    AccountKhataPage.prototype.num = function (str) {
-        return Number(str);
-    };
-    AccountKhataPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AccountKhataPage');
-    };
-    AccountKhataPage.prototype.selectMechanicShop = function () {
-        this.documentinsurance = false;
-        this.driver = false;
-        this.all = false;
-        this.mechanicshop = true;
-    };
-    AccountKhataPage.prototype.selectDocumentInsurance = function () {
-        this.mechanicshop = false;
-        this.driver = false;
-        this.all = false;
-        this.documentinsurance = true;
-    };
-    AccountKhataPage.prototype.selectDriver = function () {
-        this.documentinsurance = false;
-        this.mechanicshop = false;
-        this.all = false;
-        this.driver = true;
-    };
-    AccountKhataPage.prototype.ionViewWillEnter = function () {
+    AddComplaintsPage.prototype.openProblemModal = function () {
         var _this = this;
-        var userdata = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "srth_id": userdata[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.workers = resp['data'];
-                _this.ms = [];
-                _this.di = [];
-                _this.dr = [];
-                _this.total_bill = 0.00;
-                _this.due_money = 0.00;
-                _this.paid_money = 0.00;
-                _this.search = [];
-                for (var i = 0; i < _this.workers.length; i++) {
-                    // alert(this.workers[i]['worker_type']);
-                    _this.total_bill = _this.total_bill + Number(_this.workers[i]['total_bill_money']);
-                    _this.paid_money = _this.paid_money + Number(_this.workers[i]['paid_money']);
-                    _this.filterworkers = _this.workers;
-                    var searchobj = {
-                        "type": "name",
-                        "name": _this.workers[i]['name'],
-                    };
-                    _this.search.push(searchobj);
-                    if (_this.workers[i]['worker_type'] == 'driver')
-                        _this.dr.push(_this.workers[i]);
-                    else if (_this.workers[i]['worker_type'] == 'mechanic' || _this.workers[i]['worker_type'] == 'shop')
-                        _this.ms.push(_this.workers[i]);
-                    else if (_this.workers[i]['worker_type'] == 'documents' || _this.workers[i]['worker_type'] == 'insurance')
-                        _this.di.push(_this.workers[i]);
+        var problemModal = this.modalCtrl.create('ProblemWorkPartModalPage');
+        problemModal.onDidDismiss(function (data) {
+            if (localStorage.getItem("problem_id") != undefined) {
+                _this.problems = JSON.parse(localStorage.getItem("problem_id"));
+                var str = "";
+                var str2 = "";
+                for (var i = 0; i < _this.problems.length; i++) {
+                    str += _this.problems[i]['problem_id'] + " ";
+                    str2 += (_this.problems[i]['problem_name'] + "-" + _this.problems[i]['vehicle_part_name']) + " ";
                 }
-                console.debug("Drivers : " + JSON.stringify(_this.dr));
-                console.debug("DI : " + JSON.stringify(_this.di));
-                console.debug("MS : " + JSON.stringify(_this.ms));
+                _this.problem_id = str;
+                _this.problem_id = str2;
             }
-            searchobj = {
-                "type": "type",
-                "name": "mechanic",
-            };
-            _this.search.push(searchobj);
-            searchobj = {
-                "type": "type",
-                "name": "shop",
-            };
-            _this.search.push(searchobj);
-            searchobj = {
-                "type": "type",
-                "name": "documents",
-            };
-            _this.search.push(searchobj);
-            searchobj = {
-                "type": "type",
-                "name": "driver",
-            };
-            _this.search.push(searchobj);
-            searchobj = {
-                "type": "type",
-                "name": "insurance",
-            };
-            _this.search.push(searchobj);
-            _this.due_money = _this.total_bill - _this.paid_money;
+        });
+        problemModal.present();
+    };
+    AddComplaintsPage.prototype.openDetailPopup = function () {
+        var _this = this;
+        var detailsModalPage = this.modalCtrl.create('DetailsModalPage', { 'details': this.details });
+        detailsModalPage.onDidDismiss(function (data) {
+            _this.details = localStorage.getItem(_this.codes.DETAILS);
+        });
+        detailsModalPage.present();
+    };
+    AddComplaintsPage.prototype.selectThis = function (comp) {
+        this.complaints_id = comp['complaints_id'];
+        this.complaints_number = comp['complaints_number'];
+        this.vehicle_id = comp['vehicle_id'];
+        this.srth_id = comp['srth_id'];
+        this.problem_id = comp['problem_id'];
+        this.date_of_complaint = comp['date_of_complaint'];
+        this.date_of_reminder = comp['date_of_reminder'];
+        this.details = comp['details'];
+        this.km_reading = comp['km_reading'];
+        this.status = comp['status'];
+        this.img = comp['image'];
+        for (var i = 0; i < this.complaints.length; i++)
+            this.complaints[i]['selected'] = 'false';
+        comp['selected'] = 'true';
+        this.isupdate = true;
+    };
+    AddComplaintsPage.prototype.getcomplaints = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "srth_id": userinfo[0]['srth_id']
+        };
+        this.rest.post(this.codes.GET_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.complaints = resp['data'];
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    if (_this.complaints[i]['problems'] != undefined) {
+                        var str = "";
+                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
+                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
+                        }
+                        _this.complaints[i]['problem_id'] = str;
+                    }
+                }
+            }
         });
     };
-    AccountKhataPage.prototype.openDriverAddPage = function () {
-        this.navCtrl.push('AddDriverPage', { "update": "false" });
+    AddComplaintsPage.prototype.openCalendarPopup = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.date_of_complaint = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
     };
-    AccountKhataPage.prototype.openDriverPage = function () {
-        this.navCtrl.push('DriverPage');
+    AddComplaintsPage.prototype.openCalendarPopup2 = function () {
+        var _this = this;
+        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+        calendarModalPage.onDidDismiss(function (data) {
+            _this.date_of_reminder = localStorage.getItem(_this.codes.DATE);
+        });
+        calendarModalPage.present();
     };
-    AccountKhataPage.prototype.openDocumentPage = function () {
-        this.navCtrl.push('DocumentPage');
+    AddComplaintsPage.prototype.savecomplaint = function () {
+        var _this = this;
+        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data = {
+            "vehicle_id": this.vehicle_id,
+            "complaints_number": this.complaints_number,
+            "srth_id": userinfo[0]['srth_id'],
+            "problem_id": this.problem_id,
+            "date_of_complaint": this.date_of_complaint,
+            "date_of_reminder": this.date_of_reminder,
+            "details": this.details,
+            "km_reading": this.km_reading,
+            "status": this.status,
+            "image": this.img,
+            "last_maint_id": "srth-app",
+            "opt_counter": "0",
+            "problems": this.problems
+        };
+        console.error("Check the problems : " + JSON.stringify(data));
+        this.rest.post(this.codes.SAVE_COMPLAINTS, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                data['complaints_id'] = _this.complaints_id;
+                data['complaints_number'] = _this.complaints_number;
+                data['vehicle_number'] = _this.vehicle_number;
+                data['selected'] = false;
+                _this.problem_id = '';
+                _this.date_of_complaint = '';
+                _this.date_of_reminder = '';
+                _this.details = '';
+                _this.km_reading = '';
+                _this.img = null;
+                _this.complaints_id++;
+                _this.complaints.push(data);
+                for (var i = 0; i < _this.complaints.length; i++) {
+                    if (_this.complaints[i]['problems'] != undefined) {
+                        var str = "";
+                        for (var j = 0; j < _this.complaints[i]['problems'].length; j++) {
+                            str += _this.complaints[i]['problems'][j]['problem_id'] + " ";
+                        }
+                        _this.complaints[i]['problem_id'] = str;
+                    }
+                }
+            }
+        });
     };
-    AccountKhataPage.prototype.openInsurancePage = function () {
-        this.navCtrl.push('InsurancePage');
-    };
-    AccountKhataPage.prototype.openShopPage = function () {
-        this.navCtrl.push('ShopPage');
-    };
-    AccountKhataPage.prototype.openMechanicPage = function () {
-        this.navCtrl.push('MechanicPage');
-    };
-    AccountKhataPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Component"])({
-            selector: 'page-account-khata',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-khata/account-khata.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-7 class="person-name text-left">\n        <ion-title style="margin-left: -30px;">        \n          <i style="margin-left: 10px" class="fa fa-file-text" aria-hidden="true"></i> &nbsp; ACCOUNT KHATA\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container">\n\n    <!-- <ion-row class="justify-content-center">\n      <ion-col col-3 class="total-cost selected">\n        TOTAL COST\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="total-cost">\n        TOTAL PAID\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="total-cost">\n        TOTAL DUE\n\n      </ion-col>\n\n    </ion-row> -->\n\n    <ion-row class="bill">\n      <ion-col col-4>\n        <p class="total-bill">TOTAL BILL</p>\n        <div class="ammount">&#x20b9; {{total_bill}}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="paid-money">PAID MONEY</p>\n        <div class="ammount">&#x20b9; {{paid_money}}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="due-money">DUE MONEY</p>\n        \n        <div class="ammount">&#x20b9; {{due_money}}</div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="full-report"> \n      <ion-col col-12 (click)="fullreport()">\n          FULL REPORT <i style="margin-left: 10px" class="fa fa-file-text" aria-hidden="true"></i>\n\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="justify-content-center">\n      <ion-col col-3 [ngClass]="mechanicshop == true ? \'sort-option mechanic selected\' : \'sort-option mechanic\'" (click)="selectMechanicShop()">\n        MECHANIC SHOP\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 [ngClass]="documentinsurance== true ? \'sort-option document selected\' : \'sort-option document\'"  (click)="selectDocumentInsurance()">\n        DOCUMENT INSURANCE\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 [ngClass]="driver== true ? \'sort-option drive selected\' : \'sort-option drive\'" (click)="selectDriver()">\n        DRIVER\n\n      </ion-col>\n\n    </ion-row>\n    <!-- (ionInput)="getItems($event)" -->\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="clicksearchbar()" (ionInput)="filterWorker($event)"  placeholder="SEARCH"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <ion-card *ngIf="displayfilter">\n      <ion-card-content>\n        <ion-list >\n          <ion-item *ngFor="let sr of displaysearchitems" (click)="clickedsearchitem(sr)">\n           <div *ngIf="sr[\'type\']==\'name\'">\n            <p style="color: #000;">{{sr[\'name\']}}</p>\n             <p>Person</p>\n            </div>\n           <div *ngIf="sr[\'type\']==\'type\'">\n              <p style="color: #000;">{{sr[\'name\']}}</p>\n              <p>Status</p>\n           </div>\n          </ion-item>\n        </ion-list>\n      </ion-card-content>\n    </ion-card>\n    \n    <ion-row class="justify-content-center">\n      <ion-col col-3 class="details driver-name">\n        NAME\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="details status">\n        STATUS\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="details">\n        DUE AMOUNT\n      </ion-col>\n    </ion-row>\n    <div *ngIf="all && !documentinsurance && !mechanicshop && !driver">\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of filterworkers"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n  </div>\n\n  <div *ngIf="documentinsurance && !all && !mechanicshop && !driver">\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n  </div>\n\n  <div *ngIf="mechanicshop && !all && !documentinsurance && !driver">\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n  </div>\n\n  <div *ngIf="driver && !all && !mechanicshop && !documentinsurance">\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of dr"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of di"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n    <ion-row class="every-details justify-content-center" *ngFor="let worker of ms"  (click)="details(worker)">\n      <ion-col col-4 class="name" >\n        {{worker[\'name\']}}\n      </ion-col>\n      <ion-col col-4 >\n        {{worker[\'worker_type\']}}\n      </ion-col>\n      <ion-col col-4 class="money">\n        {{num(worker[\'total_bill_money\']) - num(worker[\'paid_money\'])}}\n      </ion-col>\n    </ion-row>\n  </div>\n\n    <div class="fixed-div text-center mt-4" >\n      <button ion-button round class="custom-button" (click)="openDriverAddPage()">+ ADD PERSON</button>\n    </div>\n    \n  </div>\n</ion-content>  \n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/account-khata/account-khata.html"*/,
+    AddComplaintsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-add-complaints',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n    \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-file" aria-hidden="true"></i>\n          ADD COMPLAINTS\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-3 class="youtube">\n        <ion-icon name="logo-youtube" color="danger" style="font-size: 4.2rem;margin-top: 3px;"></ion-icon>\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n  \n\n    <!-- <div class="scrollmenu">\n      <a href="#home">NUMBER</a>\n      <a href="#news">VEHICLE NUMBER(DRIVER NAME)</a>\n      <a href="#contact">PROBLEM PART AND ID</a>\n      <a href="#about">DATE OF COMPLAINT/REMINDER</a>\n      <a href="#about">DETAILS/KM READING</a> -->\n    <!-- <i class="fa fa-angle-down"  aria-hidden="true"></i>\n      <i class="fa fa-angle-right" aria-hidden="true"></i> -->\n\n    <!-- <div style="height: 200px;width: 400px">\n\n      </div>\n    </div> -->\n\n    <div class="scroll-grid" >\n      <div class="scrollmenu">\n       \n        <a href="#home">NUMBER</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">PROBLEM PART & ID</a>\n        <a href="#about">COMPLAINT DATE</a>\n        <a href="#about">REMINDER DATE</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">KM READING</a>\n\n        <div *ngFor="let cm of complaints">\n        <div [ngClass]="cm[\'selected\']==\'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'" (click)="selectThis(cm)" >\n          <p>{{cm[\'complaints_number\']}} </p>\n          <p>{{cm[\'vehicle_number\']}}</p>\n          <p>{{cm[\'problem_id\']}}</p>\n          <p>{{cm[\'date_of_complaint\']}}</p>\n          <p>{{cm[\'date_of_reminder\']}}</p>\n          <p>{{cm[\'details\']}}</p>\n          <p>{{cm[\'km_reading\']}}</p>\n     \n        </div>\n      </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <!-- <ion-item>\n      <ion-label>VEHICLE NUMBER &nbsp; &nbsp; &nbsp; &nbsp; DRIVER</ion-label>\n      <ion-select [(ngModel)]="gender">\n        <ion-option value="f">Female</ion-option>\n        <ion-option value="m">Male</ion-option>\n      </ion-select>\n    </ion-item> -->\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Complaints # {{complaints_number}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>VEHICLE NUMBER</ion-label>\n\n      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id" (ionChange)="change($event)">\n        <ion-option value="{{vh[\'vehicle_id\']}}" *ngFor="let vh of vehicles">{{vh[\'vehicle_number\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img  src="../../assets/saarthi-icon/png/driver.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center"  style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{vehicle_number}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center"> \n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill=!isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" (click)="openProblemModal()">\n      <input type="text"  [(ngModel)]="problem_id" placeholder=" " />\n      <label>PROBLEM/WORK(PART & ID)</label>\n    </div>\n\n\n\n\n    <ion-row style="margin: 0 -5px;" class="complaint">\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"  [(ngModel)]="date_of_complaint" (click)="openCalendarPopup()"/>\n          <label>COMPLAINT</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="label-float" >\n          <input type="text" style="font-size: 14px !important;"   [(ngModel)]="date_of_reminder" (click)="openCalendarPopup2()"/>\n          <label>REMINDER</label>\n          <i class="fa fa-calendar" style="bottom: 12px;" aria-hidden="true"></i>\n    \n        </div>\n      </ion-col>\n    </ion-row>\n  \n\n\n\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <ion-col  col-12 (click)="openDetailPopup()" style="padding-left: 27px;margin-top: -6px;">\n            <div class="label-float" style="padding-top: 8px;">\n              <input type="text"  [(ngModel)]="details" placeholder=" " />\n              <label>DETAILS</label>\n            </div>\n    \n          </ion-col>    \n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture">\n          <ion-col col-12 *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img" style="opacity: 0.9 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n    <div class="label-float" style="padding-top: 8px;" >\n      <input type="tel" [(ngModel)]="km_reading" placeholder=" " />\n      <label>KM READING</label>\n    </div>\n\n   \n\n  </div>\n  <div class="text-center mt-4">\n    <button ion-button round class="custom-button" *ngIf="!isupdate" (click)="savecomplaint()"> SAVE</button>\n    <button ion-button round class="custom-button" *ngIf="isupdate" (click)="updatecomplaint()"> UPDATE</button>\n  </div>\n</ion-content> \n\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/add-complaints/add-complaints.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_codes_codes__["a" /* CodesProvider */]])
-    ], AccountKhataPage);
-    return AccountKhataPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"],
+            __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_0__providers_message_message__["a" /* MessageProvider */]])
+    ], AddComplaintsPage);
+    return AddComplaintsPage;
 }());
 
-//# sourceMappingURL=account-khata.js.map
+//# sourceMappingURL=add-complaints.js.map
 
 /***/ })
 

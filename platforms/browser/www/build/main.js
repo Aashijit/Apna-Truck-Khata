@@ -1,4 +1,4 @@
-webpackJsonp([79],{
+webpackJsonp([81],{
 
 /***/ 159:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -32,6 +32,7 @@ var CodesProvider = /** @class */ (function () {
         this.GET_REGISTRATION_INFO = this.BASE_URL + "getregistrationinfo";
         this.SAVE_REGISTRATION_INFO = this.BASE_URL + "saveregistrationinfo";
         this.LOGIN = this.BASE_URL + "login";
+        // driverexpensereportapi
         this.SAVE_VEHICLE_DETAILS = this.BASE_URL + "savevehicledetails";
         this.UPDATE_VEHICLE_DETAILS = this.BASE_URL + "updatevehiclebyvehicleid";
         this.DELETE_VEHICLE_DETAILS = this.BASE_URL + "deletevehiclebyid";
@@ -96,6 +97,10 @@ var CodesProvider = /** @class */ (function () {
         this.GET_LAST_COMPLAINTS_ID = this.BASE_URL + "getlastcomplaintid";
         this.GET_FUEL_PRICES = "https://fuelprice-api-india.herokuapp.com/price/West-Bengal/KOLKATA";
         //Reports
+        this.ALL_DRIVER_REPORT = this.BASE_URL_REPORT + "alldriverreportapi";
+        this.ALL_DRIVER_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "alldriverreportweb";
+        this.DRIVER_EXPENSE_REPORT = this.BASE_URL_REPORT + "driverexpensereportapi";
+        this.DRIVER_EXPENSE_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "driverexpensereportweb";
         this.SHOP_BILL_REPORT = this.BASE_URL_REPORT + "shopbillreportweb";
         this.SHOP_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "shopbillreport";
         this.SHOP_BUY_REPORT = this.BASE_URL_REPORT + "shopbuyreportweb";
@@ -115,6 +120,8 @@ var CodesProvider = /** @class */ (function () {
         this.VEHICLE_BILL_REPORT = this.BASE_URL_REPORT + "vehiclebillreportapi";
         this.VEHICLE_BILL_REPORT_DOWNLOAD = this.BASE_URL_REPORT_DOWNLOAD + "vehiclebillreportweb";
         this.GET_NOTIFICATIONS = this.BASE_URL + "getnotificatonsbysrthid";
+        this.UPDATE_BANK_DETAILS = this.BASE_URL + "updatebankdetails";
+        this.GET_BANK_DETAILS = this.BASE_URL + "getbankdetails";
         this.K_ACCOUNT_INFO = "accountinfo";
         this.SELECTED_WORK_PART = "selectedworkpart";
         this.DETAILS = "details";
@@ -157,318 +164,326 @@ webpackEmptyAsyncContext.id = 170;
 var map = {
 	"../pages/about/about.module": [
 		843,
-		78
+		80
 	],
 	"../pages/account-khata/account-khata.module": [
 		844,
-		77
+		79
 	],
 	"../pages/account-payment-search-modal/account-payment-search-modal.module": [
 		845,
-		76
+		78
 	],
 	"../pages/add-complaints/add-complaints.module": [
 		846,
-		75
+		77
 	],
 	"../pages/add-document-bill/add-document-bill.module": [
 		847,
-		74
+		76
 	],
 	"../pages/add-driver-expenses/add-driver-expenses.module": [
 		848,
-		73
+		75
 	],
 	"../pages/add-driver/add-driver.module": [
 		849,
-		72
+		74
 	],
 	"../pages/add-mechanic/add-mechanic.module": [
 		850,
-		71
+		73
 	],
 	"../pages/add-more-modal/add-more-modal.module": [
 		851,
-		70
+		72
 	],
 	"../pages/add-new-bank-account/add-new-bank-account.module": [
 		852,
-		69
+		71
 	],
 	"../pages/add-permit/add-permit.module": [
 		853,
-		68
+		70
 	],
 	"../pages/add-vehicle/add-vehicle.module": [
 		854,
-		67
+		69
+	],
+	"../pages/all-driver-report/all-driver-report.module": [
+		855,
+		68
 	],
 	"../pages/all-image-khata/all-image-khata.module": [
-		855,
-		66
+		856,
+		67
 	],
 	"../pages/allot-driver/allot-driver.module": [
-		856,
-		65
+		857,
+		66
 	],
 	"../pages/bill-description/bill-description.module": [
-		857,
-		64
+		858,
+		65
 	],
 	"../pages/bill-details/bill-details.module": [
-		858,
-		63
+		859,
+		64
 	],
 	"../pages/bill-payment-search/bill-payment-search.module": [
-		859,
-		62
+		860,
+		63
 	],
 	"../pages/buy-details-search-modal/buy-details-search-modal.module": [
-		860,
-		61
+		861,
+		62
 	],
 	"../pages/buy-from-shop/buy-from-shop.module": [
-		861,
-		60
+		862,
+		61
 	],
 	"../pages/calendar-modal/calendar-modal.module": [
-		862,
-		59
+		863,
+		60
 	],
 	"../pages/camera-modal/camera-modal.module": [
-		863,
-		58
+		864,
+		59
 	],
 	"../pages/change-driver/change-driver.module": [
-		864,
-		57
+		865,
+		58
 	],
 	"../pages/complaints-khata/complaints-khata.module": [
-		865,
-		56
+		866,
+		57
 	],
 	"../pages/complaints-update/complaints-update.module": [
-		866,
-		55
+		867,
+		56
 	],
 	"../pages/contact/contact.module": [
-		867,
-		54
+		868,
+		55
 	],
 	"../pages/decision-modal/decision-modal.module": [
-		868,
-		53
+		869,
+		54
 	],
 	"../pages/details-modal/details-modal.module": [
-		869,
-		52
+		870,
+		53
 	],
 	"../pages/document-and-insurance/document-and-insurance.module": [
-		870,
-		51
+		871,
+		52
 	],
 	"../pages/document-bill-report/document-bill-report.module": [
-		871,
-		50
+		872,
+		51
 	],
 	"../pages/document-date-report/document-date-report.module": [
-		872,
-		49
+		873,
+		50
 	],
 	"../pages/document-renewal/document-renewal.module": [
-		873,
-		48
+		874,
+		49
 	],
 	"../pages/document/document.module": [
-		874,
-		47
+		875,
+		48
 	],
 	"../pages/driver-details-search/driver-details-search.module": [
-		875,
-		46
+		876,
+		47
 	],
 	"../pages/driver-document/driver-document.module": [
-		876,
+		877,
+		46
+	],
+	"../pages/driver-expense/driver-expense.module": [
+		878,
 		45
 	],
 	"../pages/driver-khata-search/driver-khata-search.module": [
-		877,
+		879,
 		44
 	],
 	"../pages/driver-khata/driver-khata.module": [
-		878,
+		880,
 		43
 	],
 	"../pages/driver/driver.module": [
-		879,
+		881,
 		42
 	],
 	"../pages/edit-other-document-name/edit-other-document-name.module": [
-		880,
+		882,
 		41
 	],
 	"../pages/edit-profile/edit-profile.module": [
-		881,
+		883,
 		40
 	],
 	"../pages/exchange-modal/exchange-modal.module": [
-		882,
+		884,
 		39
 	],
 	"../pages/fatal-error/fatal-error.module": [
-		883,
+		885,
 		38
 	],
 	"../pages/full-report/full-report.module": [
-		884,
+		886,
 		37
 	],
 	"../pages/home/home.module": [
-		885,
+		887,
 		36
 	],
 	"../pages/init/init.module": [
-		886,
+		888,
 		35
 	],
 	"../pages/insurance/insurance.module": [
-		887,
+		889,
 		34
 	],
 	"../pages/language/language.module": [
-		888,
+		890,
 		33
 	],
 	"../pages/ledger/ledger.module": [
-		889,
+		891,
 		32
 	],
 	"../pages/mechanic-bill/mechanic-bill.module": [
-		890,
+		892,
 		31
 	],
 	"../pages/mechanic-khata/mechanic-khata.module": [
-		891,
+		893,
 		30
 	],
 	"../pages/mechanic/mechanic.module": [
-		892,
+		894,
 		29
 	],
 	"../pages/parts-bill-details-modal/parts-bill-details-modal.module": [
-		893,
+		895,
 		28
 	],
 	"../pages/parts-work-modal/parts-work-modal.module": [
-		894,
+		896,
 		27
 	],
 	"../pages/problem-modal/problem-modal.module": [
-		895,
+		897,
 		26
 	],
 	"../pages/problem-work-part-modal/problem-work-part-modal.module": [
-		896,
+		898,
 		25
 	],
 	"../pages/profile/profile.module": [
-		897,
+		899,
 		24
 	],
 	"../pages/reason-modal/reason-modal.module": [
-		898,
+		900,
 		23
 	],
 	"../pages/remove-driver-from-account/remove-driver-from-account.module": [
-		899,
+		901,
 		22
 	],
 	"../pages/remove-driver/remove-driver.module": [
-		900,
+		902,
 		21
 	],
 	"../pages/report-all-comp/report-all-comp.module": [
-		901,
+		903,
 		20
 	],
 	"../pages/report-full/report-full.module": [
-		903,
+		904,
 		19
 	],
 	"../pages/report-khata/report-khata.module": [
-		902,
+		905,
 		18
 	],
 	"../pages/report-modal/report-modal.module": [
-		905,
+		906,
 		17
 	],
 	"../pages/security-and-backup/security-and-backup.module": [
-		904,
+		907,
 		16
 	],
 	"../pages/settings/settings.module": [
-		906,
+		908,
 		15
 	],
 	"../pages/shop-bill-description/shop-bill-description.module": [
-		907,
+		909,
 		14
 	],
 	"../pages/shop-bill-details/shop-bill-details.module": [
-		908,
+		910,
 		13
 	],
 	"../pages/shop-khata/shop-khata.module": [
-		909,
+		911,
 		12
 	],
 	"../pages/shop/shop.module": [
-		910,
+		912,
 		11
 	],
 	"../pages/tabs/tabs.module": [
-		911,
+		913,
 		10
 	],
 	"../pages/upload-image/upload-image.module": [
-		912,
+		914,
 		9
 	],
 	"../pages/vehicle-bill-report/vehicle-bill-report.module": [
-		913,
+		915,
 		8
 	],
 	"../pages/vehicle-details/vehicle-details.module": [
-		914,
+		916,
 		7
 	],
 	"../pages/vehicle-document-bill/vehicle-document-bill.module": [
-		915,
+		917,
 		6
 	],
 	"../pages/vehicle-document/vehicle-document.module": [
-		916,
+		918,
 		5
 	],
 	"../pages/vehicle-khata/vehicle-khata.module": [
-		917,
+		919,
 		4
 	],
 	"../pages/vehicle-work-report/vehicle-work-report.module": [
-		918,
+		920,
 		3
 	],
 	"../pages/view-bill/view-bill.module": [
-		919,
+		921,
 		2
 	],
 	"../pages/view-payment/view-payment.module": [
-		920,
+		922,
 		1
 	],
 	"../pages/view-transaction/view-transaction.module": [
-		921,
+		923,
 		0
 	]
 };
@@ -707,6 +722,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/add-new-bank-account/add-new-bank-account.module#AddNewBankAccountPageModule', name: 'AddNewBankAccountPage', segment: 'add-new-bank-account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-permit/add-permit.module#AddPermitPageModule', name: 'AddPermitPage', segment: 'add-permit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-vehicle/add-vehicle.module#AddVehiclePageModule', name: 'AddVehiclePage', segment: 'add-vehicle', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-driver-report/all-driver-report.module#AllDriverReportPageModule', name: 'AllDriverReportPage', segment: 'all-driver-report', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/all-image-khata/all-image-khata.module#AllImageKhataPageModule', name: 'AllImageKhataPage', segment: 'all-image-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/allot-driver/allot-driver.module#AllotDriverPageModule', name: 'AllotDriverPage', segment: 'allot-driver', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bill-description/bill-description.module#BillDescriptionPageModule', name: 'BillDescriptionPage', segment: 'bill-description', priority: 'low', defaultHistory: [] },
@@ -729,6 +745,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/document/document.module#DocumentPageModule', name: 'DocumentPage', segment: 'document', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-details-search/driver-details-search.module#DriverDetailsSearchPageModule', name: 'DriverDetailsSearchPage', segment: 'driver-details-search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-document/driver-document.module#DriverDocumentPageModule', name: 'DriverDocumentPage', segment: 'driver-document', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/driver-expense/driver-expense.module#DriverExpensePageModule', name: 'DriverExpensePage', segment: 'driver-expense', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-khata-search/driver-khata-search.module#DriverKhataSearchPageModule', name: 'DriverKhataSearchPage', segment: 'driver-khata-search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver-khata/driver-khata.module#DriverKhataPageModule', name: 'DriverKhataPage', segment: 'driver-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/driver/driver.module#DriverPageModule', name: 'DriverPage', segment: 'driver', priority: 'low', defaultHistory: [] },
@@ -754,10 +771,10 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/remove-driver-from-account/remove-driver-from-account.module#RemoveDriverFromAccountPageModule', name: 'RemoveDriverFromAccountPage', segment: 'remove-driver-from-account', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/remove-driver/remove-driver.module#RemoveDriverPageModule', name: 'RemoveDriverPage', segment: 'remove-driver', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-all-comp/report-all-comp.module#ReportAllCompPageModule', name: 'ReportAllCompPage', segment: 'report-all-comp', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/report-khata/report-khata.module#ReportKhataPageModule', name: 'ReportKhataPage', segment: 'report-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-full/report-full.module#ReportFullPageModule', name: 'ReportFullPage', segment: 'report-full', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/security-and-backup/security-and-backup.module#SecurityAndBackupPageModule', name: 'SecurityAndBackupPage', segment: 'security-and-backup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/report-khata/report-khata.module#ReportKhataPageModule', name: 'ReportKhataPage', segment: 'report-khata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/report-modal/report-modal.module#ReportModalPageModule', name: 'ReportModalPage', segment: 'report-modal', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/security-and-backup/security-and-backup.module#SecurityAndBackupPageModule', name: 'SecurityAndBackupPage', segment: 'security-and-backup', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shop-bill-description/shop-bill-description.module#ShopBillDescriptionPageModule', name: 'ShopBillDescriptionPage', segment: 'shop-bill-description', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shop-bill-details/shop-bill-details.module#ShopBillDetailsPageModule', name: 'ShopBillDetailsPage', segment: 'shop-bill-details', priority: 'low', defaultHistory: [] },

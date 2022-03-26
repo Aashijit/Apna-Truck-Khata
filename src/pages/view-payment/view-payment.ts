@@ -13,7 +13,6 @@ export class ViewPaymentPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private view : ViewController) {
     this.payment = this.navParams.get("payment");
     console.error(JSON.stringify(this.payment));
-
   }
 
   ionViewDidLoad() {

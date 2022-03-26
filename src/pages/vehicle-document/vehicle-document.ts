@@ -4,6 +4,7 @@ import { RestProvider } from './../../../src/providers/rest/rest';
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, ViewController } from 'ionic-angular';
 import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
+import { P } from '@angular/core/src/render3';
 
 
 @IonicPage()
@@ -111,6 +112,24 @@ export class VehicleDocumentPage {
 
   }
 
+  openCalendarPopup(type, documentName) {
+    let calendarModalPage = this.modalCtrl.create('CalendarModalPage');
+
+    calendarModalPage.onDidDismiss(data => {
+      for(let i=0;i<this.documents.length;i++) {
+          if(this.documents[i]['document_name'] == documentName) {
+            if(type == 'expiry') {
+              this.documents[i]['document_expiry_date'] = localStorage.getItem(this.codes.DATE);
+            } else {
+              this.documents[i]['document_reminder_date'] = localStorage.getItem(this.codes.DATE);
+            }
+          }
+      }
+    });
+
+    calendarModalPage.present();
+  }
+
   uploadPhoto(dc) {
       var data = {
         "dodcument_name":dc['document_name'],
@@ -127,15 +146,16 @@ export class VehicleDocumentPage {
         "file_name":json[0]['srth_id']+"_"+Date.now()+".jpg",
         "tags":JSON.stringify(data)
       }
+      var irl = {"image_url":dc["document_image_id"]}
       
-      let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':dc['document_image_id']});
+      let cameraModalPage = this.modalCtrl.create('UploadImagePage',{"request":data2,'image':irl});
   
       cameraModalPage.onDidDismiss(resp => {
         if(localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
           var img = JSON.parse(localStorage.getItem("selectedimage"));
           dc['document_image_id'] = img['image_url'];
         }
-        else
+        else if(dc['document_image_id'] == null || dc['document_image_id'] == undefined || dc['document_image_id'] == '0')
           dc['document_image_id'] = "0";
       });
       

@@ -1,1 +1,249 @@
-webpackJsonp([46],{823:function(l,n,e){"use strict";function t(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,3,"p",[],null,null,null,null,null)),(l()(),i["ɵted"](-1,null,["\n              "])),(l()(),i["ɵeld"](2,0,null,null,0,"img",[["style","width: 100px;"]],[[8,"src",4]],null,null,null,null)),(l()(),i["ɵted"](-1,null,["\n            "]))],null,function(l,n){l(n,2,0,n.parent.context.$implicit.image_url)})}function a(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,28,"ion-item",[["class","item item-block"]],null,[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.viewImage(l.context.$implicit)&&t}return t},T.b,T.a)),i["ɵdid"](1,1097728,null,3,C.a,[k.a,E.a,i.ElementRef,i.Renderer,[2,A.a]],null,null),i["ɵqud"](335544320,1,{contentLabel:0}),i["ɵqud"](603979776,2,{_buttons:1}),i["ɵqud"](603979776,3,{_icons:1}),i["ɵdid"](5,16384,null,0,P.a,[],null,null),(l()(),i["ɵted"](-1,2,["\n        "])),(l()(),i["ɵeld"](7,0,null,2,20,"ion-grid",[["class","grid"]],null,null,null,null,null)),i["ɵdid"](8,16384,null,0,O.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n          "])),(l()(),i["ɵeld"](10,0,null,null,16,"ion-row",[["class","row"]],null,null,null,null,null)),i["ɵdid"](11,16384,null,0,S.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n          "])),(l()(),i["ɵeld"](13,0,null,null,5,"ion-col",[["class","col"],["col-4",""]],null,null,null,null,null)),i["ɵdid"](14,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n            "])),(l()(),i["ɵand"](16777216,null,null,1,null,t)),i["ɵdid"](17,16384,null,0,c.j,[i.ViewContainerRef,i.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),i["ɵted"](-1,null,["\n          "])),(l()(),i["ɵted"](-1,null,["\n          "])),(l()(),i["ɵeld"](20,0,null,null,5,"ion-col",[["class","col"],["col-8",""],["style","text-align: left !important;margin-top: 10px;"]],null,null,null,null,null)),i["ɵdid"](21,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n            "])),(l()(),i["ɵeld"](23,0,null,null,1,"span",[["style","white-space: normal;font-size: 12px !important;font-weight: 800;color: #0752af;"]],null,null,null,null,null)),(l()(),i["ɵted"](24,null,["\n              ","\n            "])),(l()(),i["ɵted"](-1,null,["\n          "])),(l()(),i["ɵted"](-1,null,["\n        "])),(l()(),i["ɵted"](-1,null,["\n        "])),(l()(),i["ɵted"](-1,2,["\n      "]))],function(l,n){l(n,17,0,null!=n.context.$implicit.image_url)},function(l,n){l(n,24,0,n.context.$implicit.tag_cloud)})}function u(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,31,"ion-header",[],null,null,null,null,null)),i["ɵdid"](1,16384,null,0,N.a,[E.a,i.ElementRef,i.Renderer,[2,F.a]],null,null),(l()(),i["ɵted"](-1,null,["\n  "])),(l()(),i["ɵeld"](3,0,null,null,27,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,L.b,L.a)),i["ɵdid"](4,49152,null,0,x.a,[B.a,[2,F.a],[2,D.a],E.a,i.ElementRef,i.Renderer],null,null),(l()(),i["ɵted"](-1,3,["\n    "])),(l()(),i["ɵeld"](6,0,null,3,23,"ion-row",[["class","row"]],null,null,null,null,null)),i["ɵdid"](7,16384,null,0,S.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n      "])),(l()(),i["ɵeld"](9,0,null,null,2,"ion-col",[["class","custom-back-button col"],["col-1",""]],null,null,null,null,null)),i["ɵdid"](10,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n      "])),(l()(),i["ɵted"](-1,null,["\n\n      "])),(l()(),i["ɵeld"](13,0,null,null,8,"ion-col",[["class","person-name text-left col"],["col-9",""]],null,null,null,null,null)),i["ɵdid"](14,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n        "])),(l()(),i["ɵeld"](16,0,null,null,4,"ion-title",[],null,null,null,G.b,G.a)),i["ɵdid"](17,49152,null,0,U.a,[E.a,i.ElementRef,i.Renderer,[2,q.a],[2,x.a]],null,null),(l()(),i["ɵted"](-1,0,["\n          "])),(l()(),i["ɵeld"](19,0,null,0,0,"i",[["aria-hidden","true"],["class","fa fa-file-image-o"]],null,null,null,null,null)),(l()(),i["ɵted"](-1,0,["\n          ALL PHOTO KHATA\n        "])),(l()(),i["ɵted"](-1,null,["\n\n      "])),(l()(),i["ɵted"](-1,null,["\n      "])),(l()(),i["ɵeld"](23,0,null,null,5,"ion-col",[["class","youtube col"],["col-2",""]],null,null,null,null,null)),i["ɵdid"](24,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n        "])),(l()(),i["ɵeld"](26,0,null,null,1,"ion-icon",[["name","close"],["role","img"],["style","font-size: 2em;margin-top: 12px;"]],[[2,"hide",null]],[[null,"click"]],function(l,n,e){var t=!0;if("click"===n){t=!1!==l.component.dismiss()&&t}return t},null,null)),i["ɵdid"](27,147456,null,0,J.a,[E.a,i.ElementRef,i.Renderer],{name:[0,"name"]},null),(l()(),i["ɵted"](-1,null,["\n      "])),(l()(),i["ɵted"](-1,null,["\n    "])),(l()(),i["ɵted"](-1,3,["\n  "])),(l()(),i["ɵted"](-1,null,["\n"])),(l()(),i["ɵted"](-1,null,["\n\n\n"])),(l()(),i["ɵeld"](33,0,null,null,19,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,K.b,K.a)),i["ɵdid"](34,4374528,null,0,V.a,[E.a,Y.a,j.a,i.ElementRef,i.Renderer,B.a,z.a,i.NgZone,[2,F.a],[2,D.a]],null,null),(l()(),i["ɵted"](-1,1,["\n  "])),(l()(),i["ɵeld"](36,0,null,1,8,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),i["ɵdid"](37,16384,null,0,M.a,[],null,null),(l()(),i["ɵted"](-1,null,["\n    "])),(l()(),i["ɵeld"](39,0,null,null,4,"ion-searchbar",[["mode","md"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ionInput"],[null,"ngModelChange"]],function(l,n,e){var t=!0,a=l.component;if("ionInput"===n){t=!1!==a.filterList(e)&&t}if("ngModelChange"===n){t=!1!==(a.searchTerm=e)&&t}return t},H.b,H.a)),i["ɵdid"](40,671744,null,0,$.NgModel,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),i["ɵprd"](2048,null,$.NgControl,null,[$.NgModel]),i["ɵdid"](42,16384,null,0,$.NgControlStatus,[$.NgControl],null,null),i["ɵdid"](43,1294336,null,0,Z.a,[E.a,Y.a,i.ElementRef,i.Renderer,[2,$.NgControl]],{mode:[0,"mode"]},{ionInput:"ionInput"}),(l()(),i["ɵted"](-1,null,["\n  "])),(l()(),i["ɵted"](-1,1,["\n\n  "])),(l()(),i["ɵeld"](46,0,null,1,5,"ion-list",[],null,null,null,null,null)),i["ɵdid"](47,16384,null,0,W.a,[E.a,i.ElementRef,i.Renderer,Y.a,Q.m,j.a],null,null),(l()(),i["ɵted"](-1,null,["\n      "])),(l()(),i["ɵand"](16777216,null,null,1,null,a)),i["ɵdid"](50,802816,null,0,c.i,[i.ViewContainerRef,i.TemplateRef,i.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),i["ɵted"](-1,null,["\n  "])),(l()(),i["ɵted"](-1,1,["\n\n"]))],function(l,n){var e=n.component;l(n,27,0,"close");l(n,40,0,e.searchTerm);l(n,43,0,"md");l(n,50,0,e.filterimages)},function(l,n){l(n,3,0,i["ɵnov"](n,4)._hidden,i["ɵnov"](n,4)._sbPadding);l(n,26,0,i["ɵnov"](n,27)._hidden);l(n,33,0,i["ɵnov"](n,34).statusbarPadding,i["ɵnov"](n,34)._hasRefresher);l(n,39,1,[i["ɵnov"](n,42).ngClassUntouched,i["ɵnov"](n,42).ngClassTouched,i["ɵnov"](n,42).ngClassPristine,i["ɵnov"](n,42).ngClassDirty,i["ɵnov"](n,42).ngClassValid,i["ɵnov"](n,42).ngClassInvalid,i["ɵnov"](n,42).ngClassPending,i["ɵnov"](n,43)._animated,i["ɵnov"](n,43)._value,i["ɵnov"](n,43)._isActive,i["ɵnov"](n,43)._showCancelButton,i["ɵnov"](n,43)._shouldAlignLeft,i["ɵnov"](n,43)._isFocus])})}Object.defineProperty(n,"__esModule",{value:!0});var i=e(0),o=(e(2),e(26),e(187)),r=e(84),s=e(183),d=e(206),c=e(15),p=e(191),m=function(){function l(l,n,e,t,a,u,i,o,r,s,d){this.navCtrl=l,this.navParams=n,this.camera=e,this.alertCtrl=t,this.rest=a,this.codes=u,this.ldcontroller=i,this.message=o,this.datetransform=r,this.view=s,this.photoViewer=d,this.type="",this.upload_image="",this.tp="",this.images=[],this.filterimages=[],this.isselect=!1,this.keys=[],this.searchTerm="",this.isselect=this.navParams.get("isselect"),this.type=this.navParams.get("type"),this.tp=this.type,this.getImagesBySrthId()}return l.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad AllImageKhataPage")},l.prototype.saveImage=function(){var l=this;if(""!=this.tp){var n={},e=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));n.image_content=this.upload_image,n.document_type="image",n.srth_id=e[0].srth_id,"sbills"==this.tp?(n.worker_type="shop",n.type="bills"):"mbills"==this.tp?(n.worker_type="mechanic",n.type="bills"):"preceipts"==this.tp?(n.worker_type=null,n.type="payment"):"drbills"==this.tp?(n.worker_type="driver",n.type="bills"):"profile"==this.tp?(n.worker_type=null,n.type="profile"):"drdoc"!=this.tp&&"vhdoc"!=this.tp||(n.worker_type="document",n.type="bills");var t=this.ldcontroller.create({content:"Uploading image to ATK server ... "});t.present(),this.rest.post(this.codes.SAVE_IMAGE,n).then(function(n){t.dismiss(),l.type=l.tp,l.upload_image="",l.getImagesByType(l.type)})}else this.message.displayToast("Please add a type ")},l.prototype.filterList=function(l){var n=this;this.filterimages=this.images.filter(function(l){if(""!=n.searchTerm){var e=n.searchTerm.trim();e=e.replace(/[^a-zA-Z0-9]/g,"");return l.tag_cloud.replace(/[^a-zA-Z0-9]/g,"").toLowerCase().indexOf(e.toLowerCase())>-1}return n.images})},l.prototype.dismiss=function(){this.view.dismiss()},l.prototype.selectImage=function(l){localStorage.setItem("selectedimage",JSON.stringify(l)),this.view.dismiss()},l.prototype.viewImage=function(l){this.photoViewer.show(l.image_url,l.tag_cloud,{share:!0})},l.prototype.getImagesBySrthId=function(){var l=this,n={srth_id:JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO))[0].srth_id},e=this.ldcontroller.create({content:"Loading all the images ... "});e.present(),this.rest.post(this.codes.GET_IMAGES_BY_SRTH_ID,n).then(function(n){if(e.dismiss(),"0"==n._ReturnCode){l.images=n.data;for(var t=0;t<l.images.length;t++){console.log(l.images[t].image_tags);var a=JSON.parse(l.images[t].image_tags),u=Object.keys(a);l.keys=u;for(var i="",o=0;o<u.length;o++)i+="#"+a[u[o]]+" ";l.images[t].tag_cloud=i}l.filterimages=l.images}})},l.prototype.getImagesByType=function(l){var n=this;this.tp=l;var e={},t=JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));e.srth_id=t[0].srth_id,"sbills"==this.tp?(e.worker_type="shop",e.type="bills"):"mbills"==this.tp?(e.worker_type="mechanic",e.type="bills"):"preceipts"==this.tp?(e.worker_type=null,e.type="payment"):"drbills"==this.tp?(e.worker_type="driver",e.type="bills"):"profile"==this.tp?(e.worker_type=null,e.type="profile"):"drdoc"!=this.tp&&"vhdoc"!=this.tp||(e.worker_type="document",e.type="bills"),this.rest.post(this.codes.GET_IMAGE_BY_TYPE_WORKER_TYPE,e).then(function(l){if("0"==l._ReturnCode){n.images=l.data;for(var e=function(l){n.rest.post(n.codes.GET_IMAGE_BY_IMAGE_ID,{image_id:n.images[l].image_id}).then(function(e){e.data.length>0&&(n.images[l].image_content=e.data[0].image_content)})},t=0;t<n.images.length;t++)e(t)}})},l.prototype.presentConfirm=function(){var l=this;this.alertCtrl.create({title:"Confirm",message:"Are you sure you want to save this image?",buttons:[{text:"Cancel",role:"cancel",handler:function(){console.log("Cancel clicked")}},{text:"Save",handler:function(){l.saveImage()}}]}).present()},l.prototype.getImage=function(l){var n=this;if("camera"==l){this.camera.getPicture({quality:10,destinationType:this.camera.DestinationType.DATA_URL,encodingType:this.camera.EncodingType.JPEG,mediaType:this.camera.MediaType.PICTURE,sourceType:this.camera.PictureSourceType.CAMERA}).then(function(l){n.upload_image="data:image/jpeg;base64,"+l},function(l){})}else{this.camera.getPicture({quality:10,destinationType:this.camera.DestinationType.DATA_URL,encodingType:this.camera.EncodingType.JPEG,mediaType:this.camera.MediaType.PICTURE,sourceType:this.camera.PictureSourceType.PHOTOLIBRARY}).then(function(l){n.upload_image="data:image/jpeg;base64,"+l},function(l){})}},l}(),h=function(){return function(){}}(),g=e(500),f=e(501),y=e(502),v=e(503),_=e(504),b=e(505),I=e(506),R=e(507),w=e(508),T=e(511),C=e(31),k=e(28),E=e(4),A=e(59),P=e(122),O=e(197),S=e(186),M=e(185),N=e(85),F=e(8),L=e(188),x=e(37),B=e(13),D=e(29),G=e(510),U=e(86),q=e(42),J=e(41),K=e(509),V=e(32),Y=e(7),j=e(14),z=e(40),H=e(892),$=e(19),Z=e(190),W=e(87),Q=e(11),X=e(17),ll=e(124),nl=e(125),el=i["ɵcrt"]({encapsulation:2,styles:[],data:{}}),tl=i["ɵccf"]("page-all-image-khata",m,function(l){return i["ɵvid"](0,[(l()(),i["ɵeld"](0,0,null,null,1,"page-all-image-khata",[],null,null,null,u,el)),i["ɵdid"](1,49152,null,0,m,[D.a,X.a,d.a,ll.a,s.a,r.a,nl.a,o.a,c.d,F.a,p.a],null,null)],null,null)},{},{},[]),al=e(184),ul=e(55);e.d(n,"AllImageKhataPageModuleNgFactory",function(){return il});var il=i["ɵcmf"](h,[],function(l){return i["ɵmod"]([i["ɵmpd"](512,i.ComponentFactoryResolver,i["ɵCodegenComponentFactoryResolver"],[[8,[g.a,f.a,y.a,v.a,_.a,b.a,I.a,R.a,w.a,tl]],[3,i.ComponentFactoryResolver],i.NgModuleRef]),i["ɵmpd"](4608,c.l,c.k,[i.LOCALE_ID,[2,c.t]]),i["ɵmpd"](4608,$["ɵi"],$["ɵi"],[]),i["ɵmpd"](4608,$.FormBuilder,$.FormBuilder,[]),i["ɵmpd"](512,c.b,c.b,[]),i["ɵmpd"](512,$["ɵba"],$["ɵba"],[]),i["ɵmpd"](512,$.FormsModule,$.FormsModule,[]),i["ɵmpd"](512,$.ReactiveFormsModule,$.ReactiveFormsModule,[]),i["ɵmpd"](512,al.a,al.a,[]),i["ɵmpd"](512,al.b,al.b,[]),i["ɵmpd"](512,h,h,[]),i["ɵmpd"](256,ul.a,m,[])])})},892:function(l,n,e){"use strict";function t(l){return a["ɵvid"](0,[a["ɵqud"](402653184,1,{_searchbarInput:0}),a["ɵqud"](402653184,2,{_searchbarIcon:0}),a["ɵqud"](402653184,3,{_cancelButton:0}),(l()(),a["ɵeld"](3,0,null,null,8,"div",[["class","searchbar-input-container"]],null,null,null,null,null)),(l()(),a["ɵeld"](4,0,null,null,3,"button",[["class","searchbar-md-cancel"],["clear",""],["color","dark"],["ion-button",""],["mode","md"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,a=l.component;if("click"===n){t=!1!==a.cancelSearchbar(e)&&t}if("mousedown"===n){t=!1!==a.cancelSearchbar(e)&&t}return t},u.b,u.a)),a["ɵdid"](5,1097728,null,0,i.a,[[8,""],o.a,a.ElementRef,a.Renderer],{color:[0,"color"],mode:[1,"mode"],clear:[2,"clear"]},null),(l()(),a["ɵeld"](6,0,null,0,1,"ion-icon",[["name","md-arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),a["ɵdid"](7,147456,null,0,r.a,[o.a,a.ElementRef,a.Renderer],{name:[0,"name"]},null),(l()(),a["ɵeld"](8,0,[[2,0],["searchbarIcon",1]],null,0,"div",[["class","searchbar-search-icon"]],null,null,null,null,null)),(l()(),a["ɵeld"](9,0,[[1,0],["searchbarInput",1]],null,0,"input",[["class","searchbar-input"],["dir","auto"]],[[1,"placeholder",0],[1,"type",0],[1,"autocomplete",0],[1,"autocorrect",0],[1,"spellcheck",0]],[[null,"input"],[null,"blur"],[null,"focus"]],function(l,n,e){var t=!0,a=l.component;if("input"===n){t=!1!==a.inputChanged(e)&&t}if("blur"===n){t=!1!==a.inputBlurred()&&t}if("focus"===n){t=!1!==a.inputFocused()&&t}return t},null,null)),(l()(),a["ɵeld"](10,0,null,null,1,"button",[["class","searchbar-clear-icon"],["clear",""],["ion-button",""],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,a=l.component;if("click"===n){t=!1!==a.clearInput(e)&&t}if("mousedown"===n){t=!1!==a.clearInput(e)&&t}return t},u.b,u.a)),a["ɵdid"](11,1097728,null,0,i.a,[[8,""],o.a,a.ElementRef,a.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),a["ɵeld"](12,0,[[3,0]],null,2,"button",[["class","searchbar-ios-cancel"],["clear",""],["ion-button",""],["mode","ios"],["type","button"]],[[8,"tabIndex",0]],[[null,"click"],[null,"mousedown"]],function(l,n,e){var t=!0,a=l.component;if("click"===n){t=!1!==a.cancelSearchbar(e)&&t}if("mousedown"===n){t=!1!==a.cancelSearchbar(e)&&t}return t},u.b,u.a)),a["ɵdid"](13,1097728,[["cancelButton",4]],0,i.a,[[8,""],o.a,a.ElementRef,a.Renderer],{mode:[0,"mode"],clear:[1,"clear"]},null),(l()(),a["ɵted"](14,0,["",""]))],function(l,n){var e=n.component;l(n,5,0,"dark","md","");l(n,7,0,"md-arrow-back");l(n,11,0,e._mode,"");l(n,13,0,"ios","")},function(l,n){var e=n.component;l(n,6,0,a["ɵnov"](n,7)._hidden);l(n,9,0,e.placeholder,e.type,e._autocomplete,e._autocorrect,e._spellcheck);l(n,12,0,e._isActive?1:-1);l(n,14,0,e.cancelButtonText)})}e.d(n,"a",function(){return s}),n.b=t;var a=e(0),u=e(39),i=e(27),o=e(4),r=e(41),s=(e(7),a["ɵcrt"]({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([46],{
+
+/***/ 877:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DriverDocumentPageModule", function() { return DriverDocumentPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__driver_document__ = __webpack_require__(958);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DriverDocumentPageModule = /** @class */ (function () {
+    function DriverDocumentPageModule() {
+    }
+    DriverDocumentPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__driver_document__["a" /* DriverDocumentPage */]),
+            ],
+        })
+    ], DriverDocumentPageModule);
+    return DriverDocumentPageModule;
+}());
+
+//# sourceMappingURL=driver-document.module.js.map
+
+/***/ }),
+
+/***/ 958:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DriverDocumentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DriverDocumentPage = /** @class */ (function () {
+    function DriverDocumentPage(message, codes, rest, viewController, navCtrl, navParams, modalCtrl) {
+        var _this = this;
+        this.message = message;
+        this.codes = codes;
+        this.rest = rest;
+        this.viewController = viewController;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.isShown = false;
+        this.driver = '';
+        this.vehicle = '';
+        this.driverJoiningDate = '';
+        this.documents = [
+            {
+                "document_name": "National Permit",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Insurance",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Pollution Certificate",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Certificate of fitness",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Tax token",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "5 Year Authorization",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Registration Certificate",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Others 1X",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            },
+            {
+                "document_name": "Others 2X",
+                "document_image_id": "0",
+                "document_expiry_date": "",
+                "document_reminder_date": ""
+            }
+        ];
+        this.driver = this.navParams.get("driver");
+        this.vehicle = this.navParams.get("vehicle");
+        this.driverJoiningDate = this.navParams.get('joining');
+        console.error("vehicle : " + JSON.stringify(this.vehicle));
+        var req = {
+            "type": "driver",
+            "driver_id": this.driver['worker_id']
+        };
+        this.rest.post(this.codes.GET_DOCUMENT_INFO, req).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                if (resp['data'].length > 0) {
+                    var docs = resp['data'];
+                    for (var i = 0; i < docs.length; i++) {
+                        for (var j = 0; j < _this.documents.length; j++) {
+                            if (docs[i]['document_name'] == _this.documents[j]['document_name']) {
+                                _this.documents[j]['dc_id'] = docs[i]['document_id'];
+                                _this.documents[j]['document_image_id'] = docs[i]['document_image_id'];
+                                _this.documents[j]['document_expiry_date'] = docs[i]['document_expiry_date'];
+                                _this.documents[j]['document_reminder_date'] = docs[i]['document_reminder_date'];
+                                _this.documents[j]['previous'] = true;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+    DriverDocumentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DriverDocumentPage');
+    };
+    DriverDocumentPage.prototype.showMore = function () {
+        if (this.isShown) {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+        }
+        else {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        }
+        this.isShown = !this.isShown;
+    };
+    DriverDocumentPage.prototype.goToModal = function () {
+        var addMoreModal = this.modalCtrl.create('AddMoreModalPage');
+        addMoreModal.present();
+    };
+    DriverDocumentPage.prototype.uploadPhoto = function (dc) {
+        var data = {
+            "document_name": dc['document_name']
+        };
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var data2 = {
+            "srth_id": json[0]['srth_id'],
+            "worker_type": "driver",
+            "worker_id": this.driver['worker_id'],
+            "document_type": "document",
+            "type": "document",
+            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
+            "tags": JSON.stringify(data)
+        };
+        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': dc['document_image_id'] });
+        cameraModalPage.onDidDismiss(function (resp) {
+            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined) {
+                var img = JSON.parse(localStorage.getItem("selectedimage"));
+                dc['document_image_id'] = img['image_url'];
+            }
+            else
+                dc['document_image_id'] = "0";
+        });
+        cameraModalPage.present();
+    };
+    DriverDocumentPage.prototype.addPermit = function () {
+        var addPermit = this.modalCtrl.create('AddPermitPage');
+        addPermit.present();
+    };
+    DriverDocumentPage.prototype.exitModal = function () {
+        this.viewController.dismiss();
+    };
+    DriverDocumentPage.prototype.save = function () {
+        var _this = this;
+        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+        var _loop_1 = function (i) {
+            this_1.documents[i]['worker_type'] = 'driver';
+            this_1.documents[i]['srth_id'] = json[0]['srth_id'];
+            this_1.documents[i]['driver_id'] = this_1.driver['worker_id'];
+            this_1.documents[i]['is_active'] = '1';
+            this_1.documents[i]['is_remove'] = '0';
+            this_1.documents[i]['last_maint_id'] = 'srth_app';
+            this_1.documents[i]['opt_counter'] = '0';
+            this_1.rest.post(this_1.codes.UPDATE_DOCUMENT_INFO, this_1.documents[i]).then(function (resp) {
+                _this.message.displayToast(_this.documents[i]['document_name'] + " saved.");
+            });
+        };
+        var this_1 = this;
+        for (var i = 0; i < this.documents.length; i++) {
+            _loop_1(i);
+        }
+        this.navCtrl.pop();
+        // this.message.displayToast("All the documents are saved");
+    };
+    DriverDocumentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["Component"])({
+            selector: 'page-driver-document',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/'<!-- Driver -->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-7 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          DRIVER DOCUMENT\n        </ion-title>\n\n      </ion-col>\n      <!-- <ion-col col-1></ion-col> -->\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <!-- <ion-row class="driver-modal">\n      <ion-col col-12 class="text-center driver-modal-header">\n        DRIVER DETAIL\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center mb-4">\n        <img width="120px" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="">\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}}</span> <i class="fa fa-phone" aria-hidden="true" style="color: #0752af; font-size: 12px"></i>\n\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">DRIVER</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">KOLKATA</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">3/05/2021</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">XUX-423</span>\n      </ion-col>\n      \n      <ion-col col-6>\n        SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        TOTAL KM: <br>  <span  class="text-color-primary">XXXX</span>\n      </ion-col>\n      <ion-col col-6>\n        REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n      </ion-col>\n\n      <ion-col col-6>\n        PREVIOUS VEHICLE NUMBER: <br>  <span class="text-color-primary">XXXX</span>\n      </ion-col>\n\n      <ion-col col-6>\n\n      </ion-col>\n\n\n\n      <ion-col col-6 (click)="showMore()" class="text-right show-more-fa">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;"></i>\n\n      </ion-col>\n\n\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">PAN CARD - 10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">10242424</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row> -->\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 class="profile-picture text-center">\n        <img width="80px" src="../../assets/saarthi-icon/png/driver.png" alt="">\n        <p style="margin-top: 10px">ADD PHOTO</p>\n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{driver[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{driver[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{driver[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary">{{driver[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        JOINED SINCE: <br>  <span  class="text-color-primary">{{driverJoiningDate}}</span>\n      </ion-col>\n      <ion-col col-6>\n        VEHICLE NUMBER:  <br>  <span class="text-color-primary">{{vehicle[\'vehicle_number\']}}</span>\n      </ion-col>\n\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{driver[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{driver[\'reference_person\']}}</span>\n        </ion-col>\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary">AADHAR - {{driver[\'aadhar_card_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DRIVER LICENSE: <br>\n              <span class="text-color-primary">{{driver[\'license_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{driver[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n    </ion-row>\n \n\n    <div class="segment row mt-4">\n      <!-- <div class="content-heading"> -->\n        <!-- <div class="text-center text-color-primary " >\n          <h2></h2>\n         \n        </div> -->\n        <ion-col col-12>\n          <div class="text-center text-color-primary " style="padding: 10px;">\n            <h4>DOCUMENTS &nbsp; <i class="fa fa-file-text-o" aria-hidden="true"></i> </h4>\n            <hr>\n          </div>\n\n          <ion-item>\n            <ion-label>REMINDER TIME</ion-label>\n            <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" value="1990-02-19T07:43Z"> </ion-datetime>           \n\n          </ion-item>\n \n        </ion-col>\n   \n\n      <!-- </div> -->\n\n      <hr>\n\n      <ion-row class="driver-modal  mt-4" *ngFor="let dc of documents">\n        <ion-col col-12 class="driver-modal-header">\n          <!-- (click)="goToModal()" -->\n          <span class="permit" >{{dc[\'document_name\']}}</span>\n          <!-- (click)="addPermit()" -->\n          <!-- <span class="add-more-modal"  >ADD MORE <i class="fa fa-plus-circle" aria-hidden="true"></i>\n          </span> -->\n        </ion-col>\n        <ion-col col-4 class="picture-upload text-center" (click)="uploadPhoto(dc)">\n          <i class="fa fa-camera" aria-hidden="true" *ngIf="dc[\'document_image_id\'] == null || dc[\'document_image_id\'] == undefined || dc[\'document_image_id\'] == \'0\'" ></i><br>\n          <img [src]="dc[\'document_image_id\']" *ngIf="dc[\'document_image_id\'] != \'0\'" />\n          <!-- <small>ADD PHOTO</small> -->\n        </ion-col>\n        <ion-col col-8 class="text-center">\n          <ion-item>\n            <ion-label floating>EXPIRY DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_expiry_date\']"></ion-datetime>\n          </ion-item>\n          <ion-item>\n            <ion-label floating>REMINDER DATE</ion-label>\n            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dc[\'document_reminder_date\']"></ion-datetime>\n          </ion-item>\n        </ion-col>\n        <ion-col col-12 class="text-right">\n            <ion-toggle checked="false" ></ion-toggle>\n        </ion-col>\n      </ion-row>\n\n \n\n    </div>\n   \n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="save()">SAVE</button>\n    </div>\n\n  </div>\n\n\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/driver-document/driver-document.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__src_providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_1__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
+            __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ViewController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["ModalController"]])
+    ], DriverDocumentPage);
+    return DriverDocumentPage;
+}());
+
+//# sourceMappingURL=driver-document.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=46.js.map

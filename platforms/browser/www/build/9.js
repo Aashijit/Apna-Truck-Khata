@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 912:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UploadImagePageModule", function() { return UploadImagePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upload_image__ = __webpack_require__(991);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__upload_image__ = __webpack_require__(995);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var UploadImagePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 991:
+/***/ 995:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var UploadImagePage = /** @class */ (function () {
         var _this = this;
         if (img == 'camera') {
             var options = {
-                quality: 10,
+                quality: 5,
                 destinationType: this.cm.DestinationType.DATA_URL,
                 encodingType: this.cm.EncodingType.JPEG,
                 mediaType: this.cm.MediaType.PICTURE,
@@ -128,7 +128,7 @@ var UploadImagePage = /** @class */ (function () {
         }
         else {
             var options = {
-                quality: 10,
+                quality: 5,
                 destinationType: this.cm.DestinationType.DATA_URL,
                 encodingType: this.cm.EncodingType.JPEG,
                 mediaType: this.cm.MediaType.PICTURE,

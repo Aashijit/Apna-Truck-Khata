@@ -30004,6 +30004,10 @@ page-add-vehicle .document-button div {
   border-radius: 10px;
 }
 
+page-add-vehicle .item-label-stacked .select-md, page-add-vehicle .item-label-floating .select-md {
+  padding-left: 15px !important;
+}
+
 page-add-vehicle .item {
   margin-top: 20px;
   padding-left: 0px;
@@ -30142,6 +30146,10 @@ page-add-vehicle .segment {
   padding: 10px 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+page-all-driver-report .item {
+  background: none !important;
 }
 
 page-all-image-khata .custom-searchbar-div {
@@ -32267,6 +32275,10 @@ page-driver-document .segment {
   padding: 10px 20px;
 }
 
+page-driver-expense .item {
+  background: none !important;
+}
+
 page-driver-khata .document-button div {
   background: #0752af;
   padding: 10px;
@@ -33956,6 +33968,10 @@ page-mechanic-khata .document-button div {
   border-radius: 10px;
 }
 
+page-mechanic-khata div.scrollmenu {
+  height: 52vh !important;
+}
+
 page-mechanic-khata .custom-searchbar-div {
   position: relative;
   margin: 20px 0 10px;
@@ -34874,6 +34890,10 @@ page-shop-khata .shop-khata {
 
 page-shop-khata .shop-khata a {
   color: #0752af;
+}
+
+page-shop-khata div.scrollmenu {
+  height: 52vh !important;
 }
 
 page-shop-khata .custom-searchbar-div {

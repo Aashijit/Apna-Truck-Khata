@@ -1,14 +1,14 @@
 webpackJsonp([48],{
 
-/***/ 873:
+/***/ 875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentRenewalPageModule", function() { return DocumentRenewalPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocumentPageModule", function() { return DocumentPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document_renewal__ = __webpack_require__(952);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__document__ = __webpack_require__(956);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DocumentRenewalPageModule = /** @class */ (function () {
-    function DocumentRenewalPageModule() {
+var DocumentPageModule = /** @class */ (function () {
+    function DocumentPageModule() {
     }
-    DocumentRenewalPageModule = __decorate([
+    DocumentPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__document_renewal__["a" /* DocumentRenewalPage */],
+                __WEBPACK_IMPORTED_MODULE_2__document__["a" /* DocumentPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document_renewal__["a" /* DocumentRenewalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["IonicPageModule"].forChild(__WEBPACK_IMPORTED_MODULE_2__document__["a" /* DocumentPage */]),
             ],
         })
-    ], DocumentRenewalPageModule);
-    return DocumentRenewalPageModule;
+    ], DocumentPageModule);
+    return DocumentPageModule;
 }());
 
-//# sourceMappingURL=document-renewal.module.js.map
+//# sourceMappingURL=document.module.js.map
 
 /***/ }),
 
-/***/ 952:
+/***/ 956:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentRenewalPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__ = __webpack_require__(495);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_message_message__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(493);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -64,365 +64,505 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DocumentRenewalPage = /** @class */ (function () {
-    function DocumentRenewalPage(navCtrl, navParams, codes, rest, modalCtrl, message, pv) {
-        var _this = this;
+var DocumentPage = /** @class */ (function () {
+    function DocumentPage(alertCtrl, message, navCtrl, navParams, rest, codes, modalCtrl, pv) {
+        this.alertCtrl = alertCtrl;
+        this.message = message;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.codes = codes;
         this.rest = rest;
+        this.codes = codes;
         this.modalCtrl = modalCtrl;
-        this.message = message;
         this.pv = pv;
-        // UPDATE_DOCUMENT_BILL
-        this.gender = '';
-        this.myDate = '';
-        this.vari = '';
-        this.isSelectedBill = false;
-        this.persons = [];
-        this.vehicles = [];
-        this.vehicle_string = "";
-        this.saveupdatebillid = null;
-        this.bill_id = null;
-        this.worker_id = '';
-        this.person_shop_name = '';
-        this.srth_id = '';
-        this.vehicle_id = '';
-        this.km_reading = '';
-        this.bill_date = '';
-        this.worker_type = '';
-        this.total_bill = 0;
-        this.bill_image_id = '';
-        this.bill_details = '';
-        this.last_maint_id = '';
-        this.opt_counte = '';
-        this.expiry_date = '';
-        this.total_bill_full = 0;
-        this.bills = [];
-        this.details = [];
-        this.is_update = false;
+        this.isShown = false;
         this.document = '';
-        this.img = null;
-        this.displayBills = [];
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        this.document = this.navParams.get("document");
-        console.log(JSON.stringify(this.document));
+        this.total = 0.00;
+        this.due = 0.00;
+        this.selectedfilters = [];
+        this.payments = [];
+        this.filterpayments = [];
+        this.searchTerm = '';
+        this.updatebill = false;
+        this.updatepayment = false;
+        this.selectedbill = '';
+        this.selectedpayment = '';
+        this.updatebill1 = false;
+        this.bills = [];
+        this.selectedbill1 = '';
+        this.type = 'ano';
+        this.search = [];
+        this.displayfilter = false;
+        this.displaysearchitems = [];
+        this.filterbills = '';
+        this.billDetails = [];
+        this.filterbillDetails = [];
+        this.document = JSON.parse(localStorage.getItem("worker"));
+        this.due = Number(this.document['total_bill_money']) - Number(this.document['paid_money']);
+    }
+    DocumentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DocumentPage');
+    };
+    DocumentPage.prototype.checkChange = function () {
+    };
+    DocumentPage.prototype.viewImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Payment Image', { 'share': true });
+    };
+    DocumentPage.prototype.viewBillImage = function (imageUrl) {
+        this.pv.show(imageUrl, 'Bill Image', { 'share': true });
+    };
+    DocumentPage.prototype.ionViewWillEnter = function () {
+        var _this = this;
         var data = {
-            "srth_id": json[0]['srth_id']
+            "worker_id": this.document['worker_id']
         };
-        this.rest.post(this.codes.GET_WORKER, data).then(function (resp) {
+        this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID, data).then(function (resp) {
             if (resp['_ReturnCode'] == '0') {
-                var dt = resp['data'];
-                for (var i = 0; i < dt.length; i++) {
-                    if (dt[i]['worker_type'] == 'documents' || dt[i]['worker_type'] == 'insurance') {
-                        _this.persons.push(dt[i]);
+                _this.document = resp['data'][0];
+                _this.due = Number(_this.document['total_bill_money']) - Number(_this.document['paid_money']);
+            }
+        });
+        var data = {
+            "worker_id": this.document['worker_id']
+        };
+        this.rest.post(this.codes.GET_DISPLAY_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.payments = resp['data'];
+                _this.filterpayments = _this.payments;
+            }
+        });
+        this.getAllBillsByWorkerId();
+    };
+    DocumentPage.prototype.getAllBillsByWorkerId = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.document['worker_id'],
+            "worker_type": "documents"
+        };
+        this.rest.post(this.codes.GET_EXPENSE_BILL_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.billDetails = resp['data'];
+                _this.filterbillDetails = _this.billDetails;
+            }
+        });
+    };
+    DocumentPage.prototype.showMore = function () {
+        if (this.isShown) {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-up");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-down");
+        }
+        else {
+            document.getElementById("fa-arrow-circle-down-driver").classList.remove("fa-arrow-circle-down");
+            document.getElementById("fa-arrow-circle-down-driver").classList.add("fa-arrow-circle-up");
+        }
+        this.isShown = !this.isShown;
+    };
+    DocumentPage.prototype.openLedgePage = function () {
+        localStorage.setItem("worker_type", "documents");
+        this.navCtrl.push('LedgerPage', { "worker": this.document });
+    };
+    DocumentPage.prototype.update = function () {
+        this.navCtrl.push('AddDriverPage', { "update": "true" });
+    };
+    DocumentPage.prototype.deleteWorker = function () {
+        var _this = this;
+        var data = {
+            "worker_id": this.document['worker_id']
+        };
+        this.rest.post(this.codes.DELETE_WORKER, data).then(function (resp) {
+            _this.message.displayToast('You have successfully deleted this worker!');
+            _this.navCtrl.pop();
+        });
+    };
+    DocumentPage.prototype.presentConfirmDelete = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this worker?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteWorker();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.searchBillDetails = function () {
+        var _this = this;
+        var mdl = this.modalCtrl.create('BillPaymentSearchPage', { "worker_type": "document", "worker_id": this.document['worker_id'] });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("bill_payment_search") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("bill_payment_search"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterpayments = _this.payments;
+                    return;
+                }
+                _this.filterpayments = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'reasons') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['reason'] == _this.selectedfilters[i]['name']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'payments') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            if (_this.payments[j]['payment_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterpayments.push(_this.payments[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.payments.length; j++) {
+                            for (var k = 0; k < _this.payments[j]['bills'].length; k++) {
+                                if (_this.payments[j]['bills'][k]['bill_id'] == _this.selectedfilters[i]['id']) {
+                                    _this.filterpayments.push(_this.payments[j]);
+                                }
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterpayments));
+            }
+        });
+        mdl.present();
+    };
+    DocumentPage.prototype.selectThisPayment = function (payment) {
+        this.updatebill = false;
+        this.updatebill1 = false;
+        this.updatepayment = true;
+        this.selectedbill1 = null;
+        this.selectedpayment = payment;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        payment['selected'] = 'true';
+    };
+    DocumentPage.prototype.selectThisBill = function (bill, payment) {
+        if (payment == null) {
+            this.selectedbill1 = bill;
+            this.updatebill1 = true;
+            this.selectedbill = null;
+            this.updatebill = false;
+            this.updatepayment = false;
+            this.selectedpayment = null;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            bill['selected'] = 'true';
+            return;
+        }
+        this.updatepayment = false;
+        this.updatebill = true;
+        this.updatebill1 = false;
+        this.selectedpayment = payment;
+        this.selectedbill = bill;
+        this.selectedbill1 = null;
+        for (var i = 0; i < this.filterpayments.length; i++) {
+            if (this.filterpayments[i]['payment_id'] == payment['payment_id']) {
+                this.filterpayments[i]['selected'] = 'true';
+            }
+            this.filterpayments[i]['selected'] = 'false';
+        }
+        for (var i = 0; i < payment.bills.length; i++) {
+            payment.bills[i]['selected'] = 'false';
+        }
+        bill['selected'] = 'true';
+    };
+    DocumentPage.prototype.viewBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedpayment = {
+                "bills": [
+                    this.selectedbill1
+                ]
+            };
+        }
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    DocumentPage.prototype.updateBill = function () {
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        localStorage.setItem('bill', JSON.stringify(this.selectedbill));
+        console.log(JSON.stringify(this.selectedbill));
+        var doc = {
+            "document_name": this.selectedbill['reason']
+        };
+        this.navCtrl.push('DocumentRenewalPage', { 'update': 'true', 'bill': this.selectedbill, 'document': doc });
+    };
+    DocumentPage.prototype.deleteBill = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this bill?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deleteBillByBillId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.deleteBillByBillId = function () {
+        var _this = this;
+        if (this.updatebill1 == true && this.updatebill == false) {
+            this.selectedbill = this.selectedbill1;
+        }
+        var data = {
+            "bill_id": this.selectedbill['bill_id']
+        };
+        this.rest.post(this.codes.DELETE_BILL_EXPENSE, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a bill.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    DocumentPage.prototype.viewPayment = function () {
+        var mdl = this.modalCtrl.create('ViewPaymentPage', { 'payment': this.selectedpayment });
+        mdl.present();
+    };
+    DocumentPage.prototype.updatePayment = function () {
+        localStorage.setItem("worker_type", "document");
+        this.navCtrl.push('LedgerPage', { "worker": this.document, 'payment': this.selectedpayment, 'isupdate': 'true' });
+    };
+    DocumentPage.prototype.deletePayment = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirm',
+            message: "Are you sure you want to delete this payment?",
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('Cancel clicked');
+                    }
+                },
+                {
+                    text: 'Delete',
+                    handler: function () {
+                        _this.deletePaymentByPaymentId();
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    DocumentPage.prototype.deletePaymentByPaymentId = function () {
+        var _this = this;
+        var data = {
+            "payment_id": this.selectedpayment['payment_id']
+        };
+        this.rest.post(this.codes.DELETE_PAYMENT, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.message.displayToast('Congratulations! You have deleted a payment.');
+                _this.ionViewWillEnter();
+            }
+        });
+    };
+    DocumentPage.prototype.removeTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
+            }
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterpayments = this.payments;
+            return;
+        }
+        this.filterpayments = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'reasons') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['reason'] == this.selectedfilters[i]['name']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
                     }
                 }
             }
-        });
-        var bl = this.navParams.get("bill");
-        if (bl != undefined && bl != null) {
-            this.is_update = true;
-            this.details = bl['details'];
-            this.bill_id = bl['bill_id'];
-            this.worker_id = bl['worker_id'];
-            this.person_shop_name = bl['person_shop_name'];
-            this.srth_id = bl['srth_id'];
-            this.km_reading = bl['km_reading'];
-            this.bill_date = bl['bill_date'];
-            this.worker_type = bl['worker_type'];
-            this.total_bill = bl['total_bill'];
-            this.bill_details = bl['bill_details'];
-            this.img = bl['image'];
-            if (this.details != undefined) {
-                for (var i = 0; i < this.details.length; i++) {
-                    this.details[i]['expiry_date'] = this.details[i]['document_expiry_date'];
+            else if (this.selectedfilters[i]['type'] == 'payments') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    if (this.payments[j]['payment_id'] == this.selectedfilters[i]['id']) {
+                        this.filterpayments.push(this.payments[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.payments.length; j++) {
+                    for (var k = 0; k < this.payments[j]['bills'].length; k++) {
+                        if (this.payments[j]['bills'][k]['bill_id'] == this.selectedfilters[i]['id']) {
+                            this.filterpayments.push(this.payments[j]);
+                        }
+                    }
                 }
             }
         }
-        if (this.bill_id == null) {
-            this.rest.post(this.codes.GET_LAST_BILL_ID, {}).then(function (resp) {
-                if (resp['_ReturnCode'] == '0') {
-                    _this.bill_id = resp['data'];
-                    _this.bill_id = Number(_this.bill_id) + 1;
-                }
-            });
-        }
-        if (this.details == undefined || this.details == null) {
-            this.details = [];
-        }
-        this.getVehicles();
-    }
-    DocumentRenewalPage.prototype.addDocumentBills = function (br) {
+    };
+    DocumentPage.prototype.searchOnlyBillDetails = function () {
         var _this = this;
-        var mdl = this.modalCtrl.create('VehicleDocumentBillPage', { 'action': br, 'worker_type': this.worker_type, 'worker_id': this.worker_id, 'details': this.details, "document": this.document });
+        var mdl = this.modalCtrl.create('AccountPaymentSearchModalPage', { 'worker_type': 'documents' });
+        mdl.onDidDismiss(function (data) {
+            if (localStorage.getItem("searchbilldetails") != undefined) {
+                _this.selectedfilters = JSON.parse(localStorage.getItem("searchbilldetails"));
+                if (_this.selectedfilters.length == 0) {
+                    _this.filterbillDetails = _this.billDetails;
+                    return;
+                }
+                _this.filterbillDetails = [];
+                for (var i = 0; i < _this.selectedfilters.length; i++) {
+                    if (_this.selectedfilters[i]['type'] == 'problems') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['problem_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'vehicles') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['vehicle_id'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'shopname') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['person_shop_name'] == _this.selectedfilters[i]['name']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                    else if (_this.selectedfilters[i]['type'] == 'bills') {
+                        for (var j = 0; j < _this.billDetails.length; j++) {
+                            if (_this.billDetails[j]['bill_number'] == _this.selectedfilters[i]['id']) {
+                                _this.filterbillDetails.push(_this.billDetails[j]);
+                            }
+                        }
+                    }
+                }
+                console.error(JSON.stringify(_this.filterbillDetails));
+            }
+        });
         mdl.present();
-        mdl.onDidDismiss(function (resp) {
-            if (localStorage.getItem("vehicle_document_bills") != undefined)
-                _this.details = JSON.parse(localStorage.getItem("vehicle_document_bills"));
-            _this.bills = [];
-            var vhcls = "";
-            for (var i = 0; i < _this.details.length; i++) {
-                var bill = {
-                    "bill_id": _this.bill_id,
-                    "vehicle_id": _this.details[i]['vehicle_id'],
-                    "expiry_date": _this.details[i]['expiry_date'],
-                    "total_bill": _this.details[i]['bill_amount'],
-                    "person_shop_name": _this.person_shop_name,
-                    "vehicle_number": _this.details[i]['vehicle_number'],
-                    "image": _this.details[i]['image_url']
-                };
-                // console.error("Vehicle number : " + JSON.stringify(this.details[i]));
-                // if (this.details[i]['vehicle_number'] == undefined || this.details[i]['vehicle_number'] == "undefined")
-                //   vhcls += " ";
-                // else
-                //   vhcls += this.details[i]['vehicle_number'] + " ";
-                _this.bills.push(bill);
-                for (var i_1 = 0; i_1 < _this.bills.length; i_1++)
-                    _this.bills[i_1]['selected'] = 'false';
+    };
+    DocumentPage.prototype.removeOnlyTerm = function (sc) {
+        var sFilters = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == sc['type'] && this.selectedfilters[i]['id'] == sc['id']) {
             }
-            if (_this.displayBills.length > 0) {
-                _this.displayBills.push(_this.bills);
+            else {
+                sFilters.push(this.selectedfilters[i]);
+            }
+        }
+        this.selectedfilters = sFilters;
+        if (this.selectedfilters.length == 0) {
+            this.filterbillDetails = this.billDetails;
+            return;
+        }
+        this.filterbillDetails = [];
+        for (var i = 0; i < this.selectedfilters.length; i++) {
+            if (this.selectedfilters[i]['type'] == 'problems') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['problem_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'vehicles') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['vehicle_id'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'shopname') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['person_shop_name'] == this.selectedfilters[i]['name']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+            else if (this.selectedfilters[i]['type'] == 'bills') {
+                for (var j = 0; j < this.billDetails.length; j++) {
+                    if (this.billDetails[j]['bill_number'] == this.selectedfilters[i]['id']) {
+                        this.filterbillDetails.push(this.billDetails[j]);
+                    }
+                }
+            }
+        }
+    };
+    DocumentPage.prototype.getOnlyItems = function ($event) {
+        var _this = this;
+        if (this.searchTerm != '') {
+            this.displayfilter = true;
+            this.displaysearchitems = this.search;
+        }
+        if (this.searchTerm == '') {
+            this.displayfilter = false;
+            this.displaysearchitems = this.search;
+            this.filterbills = this.bills;
+            for (var i = 0; i < this.bills.length; i++) {
+                this.bills[i]['selected'] = 'false';
+            }
+            for (var i = 0; i < this.filterbills.length; i++) {
+                this.filterbills[i]['selected'] = 'false';
+            }
+        }
+        this.displaysearchitems = this.search.filter(function (wp) {
+            if (_this.searchTerm != '') {
+                var str = wp.id + wp.name;
+                return (str.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1);
             }
             else
-                _this.displayBills = _this.bills;
-            _this.vehicle_string = vhcls.replace("undefined", "");
-            _this.changeCost({});
+                return _this.search;
         });
     };
-    DocumentRenewalPage.prototype.getVehicles = function () {
-        var _this = this;
-        var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "vehicle_owner_srth_id": userinfo[0]['srth_id']
-        };
-        this.rest.post(this.codes.GET_VEHICLE_DETAILS, data).then(function (resp) {
-            if (resp['_ReturnCode'] == '0') {
-                _this.vehicles = resp['data'];
-            }
-        });
-    };
-    DocumentRenewalPage.prototype.viewBillImage = function (imageUrl) {
-        this.pv.show(imageUrl, 'Document Image', { 'share': true });
-    };
-    DocumentRenewalPage.prototype.updateBill = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data = {
-            "person_shop_name": this.person_shop_name,
-            "srth_id": json[0]['srth_id'],
-            "vehicle_id": this.vehicle_id,
-            "reason": this.document['document_name'],
-            "km_reading": this.km_reading,
-            "bill_date": this.bill_date,
-            "worker_type": this.worker_type,
-            "worker_id": this.worker_id,
-            "total_bill": this.total_bill,
-            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
-            "bill_details": this.bill_details,
-            "last_maint_id": 'srth-app',
-            "opt_counter": '0',
-            "expiry_date": this.expiry_date,
-            "details": this.details
-        };
-        if (this.is_update == true) {
-            data['bill_id'] = this.bill_id;
-            this.saveupdatebillid = this.bill_id;
-        }
-        this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(function (resp) {
-            _this.bill_date = '';
-            _this.km_reading = '';
-            _this.bill_details = '';
-            _this.total_bill = 0;
-            if (resp['_ReturnCode'] == '0') {
-                _this.is_update = false;
-                _this.bill_id = Number(resp['data']['bill_id']) + 1;
-                if (_this.img != null)
-                    resp['data']['image_content'] = _this.img['image_content'];
-                _this.bills = [];
-                resp['data']['details'] = _this.details;
-                var exp_date = "";
-                for (var j = 0; j < _this.details.length; j++) {
-                    exp_date += _this.details[j]['expiry_date'] + " ";
-                }
-                resp['data']['expiry_date'] = exp_date;
-                resp['data']['bill_id'] = _this.saveupdatebillid;
-                _this.bills.push(resp['data']);
-                for (var i = 0; i < _this.bills.length; i++)
-                    _this.bills[i]['selected'] = 'false';
-                _this.details = [];
-            }
-        });
-    };
-    DocumentRenewalPage.prototype.openDetailPopup = function () {
-        var _this = this;
-        var detailsModalPage = this.modalCtrl.create('DetailsModalPage', { "details": this.bill_details });
-        detailsModalPage.onDidDismiss(function (data) {
-            _this.bill_details = localStorage.getItem(_this.codes.DETAILS);
-        });
-        detailsModalPage.present();
-    };
-    DocumentRenewalPage.prototype.openCameraPopup = function () {
-        var _this = this;
-        if (this.person_shop_name == '' || this.person_shop_name == null) {
-            this.message.displayToast("Please select shop");
-            return;
-        }
-        if (this.bill_date == '' || this.bill_date == null) {
-            this.message.displayToast("Please enter bill date");
-            return;
-        }
-        if (this.bill_details == '' || this.bill_details == null) {
-            this.message.displayToast("Please enter bill details");
-            return;
-        }
-        var data = {
-            "person_shop_name": this.person_shop_name,
-            "vehicle_id": this.vehicle_id,
-            "bill_date": this.bill_date,
-            "worker_type": this.worker_type,
-            "bill_details": this.bill_details
-        };
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        var data2 = {
-            "srth_id": json[0]['srth_id'],
-            "worker_type": "document",
-            "worker_id": this.worker_id,
-            "document_type": "dbill",
-            "type": "bills",
-            "file_name": json[0]['srth_id'] + "_" + Date.now() + ".jpg",
-            "tags": JSON.stringify(data)
-        };
-        var cameraModalPage = this.modalCtrl.create('UploadImagePage', { "request": data2, 'image': this.img });
-        cameraModalPage.onDidDismiss(function (resp) {
-            if (localStorage.getItem("selectedimage") != null && localStorage.getItem("selectedimage") != undefined)
-                _this.img = JSON.parse(localStorage.getItem("selectedimage"));
-            else
-                _this.img = null;
-        });
-        cameraModalPage.present();
-    };
-    DocumentRenewalPage.prototype.addNew = function () {
-        var dtls = {
-            "bill_amount": "",
-            "expiry_date": "",
-            "vehicle_id": "",
-            "img": null
-        };
-        this.details.push(dtls);
-    };
-    DocumentRenewalPage.prototype.changeCost = function (det) {
-        // alert(JSON.stringify(det));
-        this.total_bill = 0;
-        for (var i = 0; i < this.details.length; i++) {
-            this.total_bill = Number(this.total_bill) + Number(this.details[i]['bill_amount']);
-        }
-    };
-    DocumentRenewalPage.prototype.saveBill = function () {
-        var _this = this;
-        var json = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
-        // alert(JSON.stringify(this.img));
-        var data = {
-            "person_shop_name": this.person_shop_name,
-            "srth_id": json[0]['srth_id'],
-            "vehicle_id": this.vehicle_id,
-            "reason": this.document['document_name'],
-            "km_reading": this.km_reading,
-            "bill_date": this.bill_date,
-            "worker_type": this.worker_type,
-            "worker_id": this.worker_id,
-            "total_bill": this.total_bill,
-            "bill_image_id": this.img != null ? this.img['image_id'] : '0',
-            "bill_details": this.bill_details,
-            "last_maint_id": 'srth-app',
-            "opt_counter": '0',
-            "expiry_date": this.expiry_date,
-            "details": this.details
-        };
-        if (this.is_update == true)
-            data['bill_id'] = this.bill_id;
-        this.rest.post(this.codes.UPDATE_DOCUMENT_BILL, data).then(function (resp) {
-            _this.bill_date = '';
-            _this.km_reading = '';
-            _this.bill_details = '';
-            _this.total_bill = 0;
-            if (resp['_ReturnCode'] == '0') {
-                _this.bill_id = Number(resp['data']['bill_id']) + 1;
-                if (_this.img != null)
-                    resp['data']['image_content'] = _this.img['image_content'];
-                _this.bills = [];
-                var exp_date = "";
-                for (var j = 0; j < _this.details.length; j++) {
-                    exp_date += _this.details[j]['expiry_date'] + " ";
-                }
-                resp['data']['expiry_date'] = exp_date;
-                resp['data']['details'] = _this.details;
-                _this.bills.push(resp['data']);
-                for (var i = 0; i < _this.bills.length; i++)
-                    _this.bills[i]['selected'] = 'false';
-                _this.details = [];
-            }
-        });
-    };
-    DocumentRenewalPage.prototype.change = function (event) {
-        this.vari = event;
-        this.isSelectedBill = true;
-        for (var i = 0; i < this.persons.length; i++) {
-            if (this.persons[i]['worker_id'] == event) {
-                this.person_shop_name = this.persons[i]['name'];
-                this.worker_type = this.persons[i]['worker_type'];
-            }
-        }
-    };
-    DocumentRenewalPage.prototype.openCalendarPopup = function () {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            _this.bill_date = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    DocumentRenewalPage.prototype.openCalendarPopup2 = function (det) {
-        var _this = this;
-        var calendarModalPage = this.modalCtrl.create('CalendarModalPage');
-        calendarModalPage.onDidDismiss(function (data) {
-            det['expiry_date'] = localStorage.getItem(_this.codes.DATE);
-        });
-        calendarModalPage.present();
-    };
-    DocumentRenewalPage.prototype.selectThis = function (bl) {
-        if (bl != undefined && bl != null) {
-            this.is_update = true;
-            this.details = bl['details'] == undefined ? this.details : bl['details'];
-            // alert(JSON.stringify(this.details));
-            this.bill_id = bl['bill_id'];
-            this.worker_id = bl['worker_id'];
-            this.person_shop_name = bl['person_shop_name'];
-            this.srth_id = bl['srth_id'];
-            this.km_reading = bl['km_reading'];
-            this.bill_date = bl['bill_date'] == undefined ? this.bill_date : bl['bill_date'];
-            this.worker_type = bl['worker_type'];
-            this.total_bill = bl['total_bill'];
-            this.bill_details = bl['bill_details'] == undefined ? this.bill_details : bl['bill_details'];
-        }
-        for (var i = 0; i < this.bills.length; i++)
-            if (this.bills[i]['bill_id'] == bl['bill_id'])
-                this.bills[i]['selected'] = 'true';
-    };
-    DocumentRenewalPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad DocumentRenewalPage');
-    };
-    DocumentRenewalPage = __decorate([
+    DocumentPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_4__angular_core__["Component"])({
-            selector: 'page-document-renewal',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <!-- <ion-col col-2 class="custom-back-button"> -->\n      <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      <!-- </ion-col> -->\n\n      <ion-col col-10 class="person-name text-left">\n        <ion-title>\n          <ion-icon name="ios-copy"></ion-icon>\n          {{document[\'document_name\']}} - RENEWAL\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-2 class="youtube" style="margin-left: -20px;">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="">\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container white-section">\n\n    <div class="scroll-grid">\n      <div class="scrollmenu">\n        <a href="#about">BILL NUMBER</a>\n        <a href="#home">PERSON</a>\n        <a href="#news">VEHICLE NUMBER</a>\n        <a href="#contact">EXPIRY DATE</a>\n        <a href="#support">COST</a>\n        <a href="#support">IMAGE</a>\n\n        <div *ngFor="let bill of displayBills" (click)="selectThis(bill)">\n          <!-- <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list\' : \'scrollmenu-list selected\'"> -->\n            <p>{{bill[\'bill_id\']}}</p>\n            <p>{{bill[\'person_shop_name\']}}</p>\n            <p>{{bill[\'vehicle_number\']}}</p>\n            <p>{{bill[\'expiry_date\']}}</p>\n            <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n            <p>\n                <img [src]="bill[\'image\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n            </p>\n          <!-- </div> -->\n        </div>\n\n      </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n\n      </div>\n    </div>\n\n\n\n\n    <ion-badge color="primary" style="margin-top: 13px;margin-left: 2px;padding: 7px;">Bill # {{bill_id}}</ion-badge>\n\n    <ion-badge color="secondary" style="margin-top: 13px;margin-left: 2px;padding: 7px;" *ngIf="details.length > 0">\n      Total &#x20b9; {{total_bill}}</ion-badge>\n\n\n    <ion-item *ngIf="!isSelectedBill" class="label-select" style="margin-top: 0px !important;">\n      <ion-label floating>SELECT PERSON</ion-label>\n\n      <ion-select interface="action-sheet"\n        style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;"\n        [(ngModel)]="worker_id" (ionChange)="change($event)">\n        <ion-option value="{{per[\'worker_id\']}}" *ngFor="let per of persons">{{per[\'name\']}}</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-row class="selected-details" *ngIf="isSelectedBill">\n      <ion-col col-4 class="text-center" style="color: white;">\n        <img src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n      </ion-col>\n      <ion-col col-4 class="text-center" style="color: white;">\n        <h6 style="margin-top: 16px;font-size: 14px;color: #fff;font-weight: 1000;">{{person_shop_name}}\n          <br>{{document[\'document_name\']}}</h6>\n      </ion-col>\n      <ion-col col-4 class="text-center">\n\n        <button ion-button round style="margin-top: 15px;" (click)="isSelectedBill = !isSelectedBill">CHANGE</button>\n      </ion-col>\n    </ion-row>\n\n\n    <div style="border: 2px solid #3951b2;margin-top: 10px;border-radius: 10px;">\n      <button ion-button [disabled]="details.length > 0" round class="custom-button"\n        style="width: 150px !important;font-size: 10px !important;height: 25px !important;margin-left: 20px !important;"\n        (click)="addDocumentBills(\'save\')">ADD DOCUMENT BILLS</button>\n\n      <span *ngIf="details.length > 0"\n        style="color: green;font-size: 11px;position: relative;top: -18px;right: -39px;background: #fff;padding-left: 5px;padding-right: 5px;">\n        <ion-icon name="thumbs-up" color="success"></ion-icon>\n        &nbsp;\n        Vehciles Added\n      </span>\n\n      <span style="float: right !important;float: right !important;position: absolute;right: 22px;">\n        <button ion-button clear color="danger" (click)="addDocumentBills(\'edit\')" [disabled]="details.length == 0"\n          style="margin-top: 6px;">\n          Edit &nbsp;\n          <ion-icon name="create"></ion-icon>\n        </button>\n      </span>\n    </div>\n\n    <div class="label-float">\n      <input type="tel" [(ngModel)]="total_bill" placeholder=" " />\n      <label>TOTAL</label>\n    </div>\n\n    <div class="label-float">\n      <input type="text" [(ngModel)]="bill_date" (click)="openCalendarPopup()" />\n      <label>DATE OF BILL</label>\n      <i class="fa fa-calendar" aria-hidden="true"></i>\n    </div>\n\n    <!-- <div class="label-float" (click)="openDetailPopup()">\n      <input type="text" placeholder="" [(ngModel)]="bill_details" />\n      <label>DETAILS</label>\n    </div> -->\n    <ion-row >\n      <ion-col col-9>\n\n        <ion-row >\n          <div class="label-float" style="margin-left: 25px;margin-top: -6px;width: 90%;" >\n            <input type="text" [(ngModel)]="bill_details" (click)="openDetailPopup()" placeholder=" " />\n            <label>DETAILS</label>\n          </div>\n        </ion-row>  \n      </ion-col>\n      <ion-col col-2>\n        <ion-row class="detail-picture" style="margin-top:0px !important;">\n          <ion-col col-4   *ngIf="img == null" (click)="openCameraPopup()">\n            <i class="fa fa-camera" aria-hidden="true"></i>\n            <!-- <ion-icon class="edit-pencil" ios="ios-create" md="md-create"></ion-icon> -->\n    \n          </ion-col>    \n          <ion-col col-12 *ngIf="img != null" (click)="openCameraPopup()">\n            <img [src]="img[\'image_url\']" style="opacity: 0.3 !important;"/>\n           <ion-icon class="edit-pencil" ios="ios-create" md="md-create" style="position: absolute;right: 19px;top: 21px;"></ion-icon>\n    \n          </ion-col>\n        </ion-row>      \n      </ion-col>\n    </ion-row>\n\n\n  </div>\n\n  <div class="text-center mt-4" *ngIf="!is_update">\n    <button ion-button round class="custom-button" (click)="saveBill()"> SAVE</button>\n  </div>\n  <div class="text-center mt-4" *ngIf="is_update">\n    <button ion-button round class="custom-button" (click)="updateBill()"> UPDATE</button>\n  </div>\n\n</ion-content>'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document-renewal/document-renewal.html"*/,
+            selector: 'page-document',template:/*ion-inline-start:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document/document.html"*/'<!--\n  Generated template for the DocumentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-row>\n      <ion-col col-2 class="custom-back-button">\n        <!-- <ion-icon name="ios-arrow-round-back"></ion-icon> -->\n      </ion-col>\n      \n      <ion-col col-6 class="person-name text-left">\n        <ion-title>        \n          <i class="fa fa-user" aria-hidden="true"></i>\n          DOCUMENT\n        </ion-title>\n\n      </ion-col>\n      <ion-col col-1></ion-col>\n      <ion-col col-3 class="youtube">\n        <img src="../../assets/saarthi-icon/png/youtube.png" alt="" >\n      </ion-col>\n    </ion-row>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="container driver">\n\n    <ion-row class="profile-details ">\n      <ion-col col-12 style="text-align: right !important;">\n        <button ion-button outline (click)="update()">\n          <ion-icon name="create"></ion-icon>\n        </button>\n        <button ion-button outline color="danger" (click)="presentConfirmDelete()">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n      </ion-col>\n      <ion-col col-12 class="profile-picture text-center">\n       <!-- <p style="margin-top: 10px">ADD PHOTO</p> -->\n        <img width="80px" height="80px" *ngIf="document[\'profile_image_id\'] == \'0\' || document[\'profile_image_id\'] == null || document[\'profile_image_id\'] == undefined" src="../../assets/saarthi-icon/png/002-folder.png" alt="">\n        <img width="80px" height="80px" *ngIf="document[\'profile_image_id\'] != \'0\' && document[\'profile_image_id\'] != null && document[\'profile_image_id\'] != undefined" [src]="document[\'profile_image_id\']" alt="">\n       \n      </ion-col>\n      <ion-col col-6>\n        NAME: <br> <span class="text-color-primary">{{document[\'name\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        PHONE: <br>  <span class="text-color-primary">{{document[\'phone_number\']}} <i style="font-size: 18px; margin-left: 10px;" class="fa fa-phone" aria-hidden="true"></i>\n        </span>\n      </ion-col>\n      <ion-col col-6>\n        STATUS:<br>  <span  class="text-color-primary">{{document[\'worker_type\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        LOCATION: <br>  <span class="text-color-primary" *ngIf="document[\'address_line_1\'] != null">{{document[\'address_line_1\']+","+document[\'address_line_2\']+" "+document[\'city\']}}</span>\n      </ion-col>\n      <ion-col col-6>\n        BUSINESS NAME: <br>  <span class="text-color-primary">{{document[\'name\']}}</span>\n      </ion-col>\n      \n      <ion-col col-6>\n      \n      </ion-col>\n\n      <ion-col col-12 (click)="showMore()" class="text-right">\n        <i id="fa-arrow-circle-down-driver" class="fa fa-arrow-circle-down"  aria-hidden="true" style="font-size: 20px;color: #0752af;"></i>\n      </ion-col>\n\n      \n        <!-- <ion-col col-6 *ngIf="isShown">\n          SALARY: <br>  <span  class="text-color-primary">{{insurance[\'salary\']}}</span>\n        </ion-col>\n        <ion-col col-6 *ngIf="isShown"> \n          REFERENCE: <br>  <span class="text-color-primary">{{insurance[\'reference_person\']}}</span>\n        </ion-col> -->\n  \n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              DOCUMENT NUMBER: <br>\n              <span class="text-color-primary" *ngIf="document[\'aadhar_card_number\'] != null">AADHAR - {{document[\'aadhar_card_number\']}}</span>\n              <span class="text-color-primary" *ngIf="document[\'pan_card_number\'] != null">PAN - {{document[\'pan_card_number\']}}</span>\n        \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n\n        <ion-col col-12 *ngIf="isShown">\n          <ion-row style="padding: 15px;">\n            <ion-col col-7 class="pt-5">\n              BANK DETAILS: <br>\n              <span class="text-color-primary">{{document[\'account_number\']}}</span>\n              \n            </ion-col>\n            <ion-col col-5 >\n              <img src="../../assets/imgs/logo.png" alt="" width="100px">\n            </ion-col>\n          </ion-row>\n        </ion-col>\n      <!-- <ion-col col-6>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="update()">Update</button>\n        <button ion-button round class="custom-button" style="width: 60px !important; height: 30px !important;" (click)="presentConfirmDelete()">Delete</button>\n      </ion-col> -->\n\n    </ion-row>\n\n    \n\n    <!-- <ion-col col-12 class="text-center">\n      <button ion-button round class="remove-driver"> REMOVE DRIVER</button>\n    </ion-col> -->\n\n   \n\n    <ion-row class="report-statement">\n      <ion-col col-6>\n        <div class="full-report-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.document, \'isfullreport\':true})">\n          <i class="fa fa-file-o" aria-hidden="true"></i>\n\n          FULL REPORT\n        </div>\n      </ion-col>\n      <ion-col col-6>\n        <div class="monthy-statement" (click)="navCtrl.push(\'ReportFullPage\',{\'person\':this.document, \'isfullreport\':false})">\n          <i class="fa fa-file" aria-hidden="true"></i>\n\n          MONTHY STATEMENT\n        </div>\n      </ion-col>\n    </ion-row>\n\n    <ion-row class="bill">\n      <ion-col col-4>\n        <p class="total-bill">TOTAL BILL</p>\n        <div class="ammount">&#x20b9;{{document[\'total_bill_money\'] }}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="paid-money">PAID MONEY</p>\n        <div class="ammount">&#x20b9;{{document[\'paid_money\']}}</div>\n      </ion-col>\n      <ion-col col-4>\n        <p class="due-money">DUE MONEY</p>\n        \n        <div class="ammount">&#x20b9;{{due}}</div>\n      </ion-col>\n    </ion-row>\n\n    <h2>Bill Khata</h2>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" (ionInput)="getOnlyItems($event)" (click)="searchOnlyBillDetails()" placeholder="SEARCH BILL NUMBER, VEHICLE NUMBER, TYPE OF WORK, ITEM, SHOP"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'problems\' || sc[\'type\'] == \'vehicles\' || sc[\'type\'] == \'shopname\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeOnlyTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p>\n\n\n    <div class="scroll-grid" style="margin-top: 20px !important;">\n      <div class="scrollmenu">\n       \n        <a href="#home">BILL#</a>\n        <a href="#news">BILL </a>\n        <a href="#contact">VEHICLES</a>\n        <a href="#about">COST</a>\n        <a href="#about">DETAILS</a>\n        <a href="#about">IMAGE</a>\n\n        <div *ngIf="filterbillDetails.length == 0" style="padding: 15px;text-align: center;">\n            <ion-spinner></ion-spinner>\n            <br/>\n          <span style="color: rgb(63, 63, 63);">\n            Loading\n          </span>\n        </div>\n    \n        <div class="scrollmenu-list total-bill " *ngFor="let bill of filterbillDetails" >\n         \n          <div class="scrollmenu-list " (click)="selectThisBill(bill,null)">\n            <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>{{bill[\'bill_number\']}}</p>\n            <p>{{bill[\'bill_date\']}}</p>\n            <p>{{bill[\'vehicle_number\']}}</p>\n            <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n            <p>{{bill[\'bill_details\']}}</p>\n            <p>\n              <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n              </span>\n            </p>\n            </div>\n          </div>\n        </div>\n        </div>\n      <div class="show-arrows">\n        <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n\n\n        <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill1" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n        <button ion-button class="custom-button-u" *ngIf="updatebill1" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n  \n        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n  \n      </div>\n    </div>\n\n    <div class="custom-searchbar-div" style="position: relative;">\n      <ion-searchbar class="custom-searchbar" [(ngModel)]="searchTerm" (click)="searchBillDetails()" placeholder="SEARCH"></ion-searchbar>\n      <i class="fa fa-angle-down" aria-hidden="true"></i>\n    </div>\n\n    <!-- <ion-row radio-group mode="ios" [(ngModel)]="type" (ionChange)="checkChange()">\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Bill #</ion-label>\n          <ion-radio value="bno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>Payment #</ion-label>\n          <ion-radio value="pno"></ion-radio>\n        </ion-item>\n      </ion-col>\n      <ion-col col-4>\n        <ion-item>\n          <ion-label>All</ion-label>\n          <ion-radio value="ano"></ion-radio>\n        </ion-item>\n      </ion-col>\n    </ion-row> -->\n\n    <!-- <p style="padding-left: 9px !important;padding-right: 9px !important; padding-bottom: 5px !important;">\n      <ion-chip *ngFor="let sc of selectedfilters" style="margin-right: 5px !important; margin-left: 5px !important;">\n        <ion-label *ngIf="sc[\'type\'] == \'bills\'" >Bill # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'payments\'" >Payment # {{sc[\'id\']}}</ion-label>\n        <ion-label *ngIf="sc[\'type\'] == \'reasons\'" >{{sc[\'name\']}}</ion-label>\n        <ion-icon name="close" style="margin-right: 6px;background:transparent !important; color: red !important;" (click)="removeTerm(sc)"></ion-icon>\n      </ion-chip>\n      </p> -->\n\n\n    <h2>Payments</h2>\n\n      <div class="scroll-grid" >\n        <div class="scrollmenu">\n         \n          <a href="#home">BILL# / PAYMENT#</a>\n          <a href="#news">BILL / PAYMENT</a>\n          <a href="#contact">VEHICLES</a>\n          <a href="#about">COST / PAID</a>\n          <a href="#about">DETAILS</a>\n          <a href="#about">IMAGE</a>\n  \n          <div *ngIf="filterpayments.length == 0" style="padding: 15px;text-align: center;">\n              <ion-spinner></ion-spinner>\n              <br/>\n            <span style="color: rgb(63, 63, 63);">\n              Loading\n            </span>\n          </div>\n      \n          <div class="scrollmenu-list paid-money " *ngFor="let payment of filterpayments" >\n            <div *ngIf="type==\'pno\' || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_number\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p *ngIf="payment[\'bills\'] != undefined && payment[\'bills\'].length > 0">{{payment[\'bills\'][0][\'vehicle_number\']}}</p>\n            <p *ngIf="payment[\'bills\'] == undefined || payment[\'bills\'].length == 0"></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            </div>\n            </div>\n  \n            <div *ngIf="type==\'bno\'  || type == \'\'">\n            <div class="scrollmenu-list paid-money" *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_number\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n          </div>\n          <div *ngIf="type==\'ano\'  || type == \'\'" (click)="selectThisPayment(payment)">\n            <div [ngClass]="payment[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n            <p>Pymt #{{payment[\'payment_number\']}}</p>\n            <p>{{payment[\'date_of_payment\']}}</p>\n            <p></p>\n            <!-- <p *ngIf="payment[\'bills\'] != undefined && payment[\'bills\'].length > 0">{{payment[\'bills\'][0][\'vehicle_number\']}}</p> -->\n            <p *ngIf="payment[\'bills\'] == undefined || payment[\'bills\'].length == 0"></p>\n            <p>&#x20b9; {{payment[\'payment_amount\']}}</p>\n            <p>{{payment[\'details\']}}</p>\n            <p>\n              <span *ngIf="payment[\'payment_image_1_id\'] != null && payment[\'payment_image_1_id\'] != undefined">\n                <img [src]="payment[\'payment_image_1_id\']" style="width:11% !important" (click)="viewImage(payment[\'payment_image_1_id\'])" />\n              </span>\n            </p>\n            <div class="scrollmenu-list paid-money " *ngFor="let bill of payment[\'bills\']" (click)="selectThisBill(bill,payment)">\n              <div [ngClass]="bill[\'selected\'] == \'true\' ? \'scrollmenu-list selected\' : \'scrollmenu-list\'">\n              <p>Bill #{{bill[\'bill_number\']}}</p>\n              <p>{{bill[\'bill_date\']}}</p>\n              <p>{{bill[\'vehicle_number\']}}</p>\n              <p>&#x20b9; {{bill[\'total_bill\']}}</p>\n              <p>{{bill[\'bill_details\']}}</p>\n              <p>\n                <span *ngIf="bill[\'image\'] != null && bill[\'image\'] != undefined">\n                  <img [src]="bill[\'image\'][\'image_url\']" style="width:11% !important" (click)="viewBillImage(bill[\'image\'])" />\n                </span>\n              </p>\n              </div>\n            </div>\n            </div>\n          </div>\n  \n          </div>\n    \n         \n        </div>\n        <div class="show-arrows">\n          <i class="fa fa-long-arrow-down" aria-hidden="true"></i>\n  \n  \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatebill" (click)="viewBill()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="updateBill()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatebill" (click)="deleteBill()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n          <button ion-button class="custom-button-u" style="width: 34px !important;" *ngIf="updatepayment" (click)="viewPayment()"> <ion-icon name="eye" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="updatePayment()">  &nbsp;  Change  &nbsp;  <ion-icon name="create" class="ion-icon-w"></ion-icon> </button>\n          <button ion-button class="custom-button-u" *ngIf="updatepayment" (click)="deletePayment()"> &nbsp;Erase  &nbsp;  <ion-icon name="ios-trash" class="ion-icon-w"></ion-icon> </button>\n   \n    \n          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>\n    \n        </div>\n      </div>\n\n    \n    <div class="text-center">\n      <button ion-button round class="custom-button" (click)="openLedgePage()">GIVE MONEY</button>\n    </div>\n\n\n  </div>\n</ion-content> \n\n\n<!-- <ion-card>\n  <ion-card-header>\n    REMOVE DRIVER\n  </ion-card-header>\n  <ion-card-content>\n    \n  </ion-card-content>\n</ion-card>  -->\n'/*ion-inline-end:"/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/src/pages/document/document.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__src_providers_codes_codes__["a" /* CodesProvider */], __WEBPACK_IMPORTED_MODULE_2__src_providers_rest_rest__["a" /* RestProvider */],
-            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
-    ], DocumentRenewalPage);
-    return DocumentRenewalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5_ionic_angular__["AlertController"], __WEBPACK_IMPORTED_MODULE_1__providers_message_message__["a" /* MessageProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavController"],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_codes_codes__["a" /* CodesProvider */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_0__ionic_native_photo_viewer__["a" /* PhotoViewer */]])
+    ], DocumentPage);
+    return DocumentPage;
 }());
 
-//# sourceMappingURL=document-renewal.js.map
+//# sourceMappingURL=document.js.map
 
 /***/ })
 

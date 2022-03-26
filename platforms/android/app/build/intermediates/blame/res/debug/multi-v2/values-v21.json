@@ -4,7 +4,7 @@
             "outputFile": "/Users/aashijitmukhopadhyay/Documents/Apna-Truck-Khata/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/209ac031b6e0f44e928e2b7bb9376526/res/values-v21/values-v21.xml",
+                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/f2bad2cd47cd16cf058ade4a8c249970/support-media-compat-27.1.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/89c3e38d72e162e6b30c8ad60c8f1458/res/values-v21/values-v21.xml",
+                    "source": "/Users/aashijitmukhopadhyay/.gradle/caches/transforms-2/files-2.1/1571ccc0f7a263c23c091db147965d8b/support-compat-27.1.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

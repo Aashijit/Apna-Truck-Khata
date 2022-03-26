@@ -107,27 +107,42 @@
     <h4 class="text-color-primary text-left" style="font-size: 14px;">VEHICLE BRAND </h4>
    
 
-    <ion-row radio-group style="margin: 0;" [(ngModel)]="vehicle_brand">
+  
+      <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
+      <ion-label floating> Vehicle Brand</ion-label>
+      <ion-select interface="popover" [(ngModel)]="vehicle_brand" (ionChange)="selectedBrand()">
+          <ion-option value="{{brand['name']}}" *ngFor="let brand of brands">{{brand['name']}}</ion-option>
+      </ion-select>
+      </ion-item>
     
-      <ion-col col-12 *ngFor="let brand of brands">
+      <!-- <ion-col col-12 *ngFor="let brand of brands">
         <ion-item>
           <ion-label style="font-size: 18px !important;"> {{brand['name']}}</ion-label>
           <ion-radio value="{{brand['name']}}" (ionSelect)="selectedBrand()"></ion-radio>
         </ion-item>
-      </ion-col>
-    </ion-row>
+      </ion-col> -->
+    
 
 
 
  
     <ion-item class="label-select" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px; margin-top: 13px">
       <ion-label floating>VEHICLE MODEL</ion-label>
-      <ion-select interface="action-sheet" [(ngModel)]="vehicle_model">
+      <ion-select interface="popover" [(ngModel)]="vehicle_model" (ionChange)="addBrands()">
+        <ion-option value="Add Model">Add Model</ion-option>
         <div *ngFor="let model of models">
           <ion-option value="{{model}}">{{model}}</ion-option>
         </div>
       </ion-select>
     </ion-item>
+
+
+    <div class="label-float" *ngIf="open_vehicle">
+      <input type="text"  placeholder=" " [(ngModel)]="vehicle_model_custom" />
+      <label>CUSTOM VEHICLE MODEL</label>
+      <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+    </div>
 
 
     <ion-row style="margin: 0 -5px;">
@@ -173,7 +188,7 @@
     </div>
 
     <div class="text-center mt-4">
-      <button ion-button round class="custom-button" *ngIf="!updateVehicle" (click)="presentConfirm('Are you sure you want to save this vehicle?')"> ADD WORK HISTORY &nbsp;   <ion-icon name="arrow-forward"></ion-icon>
+      <button ion-button round class="custom-button" *ngIf="!updateVehicle" (click)="presentConfirm('Are you sure you want to save this vehicle?')"> SAVE VEHICLE &nbsp;   <ion-icon name="arrow-forward"></ion-icon>
       </button>
       <button ion-button round class="custom-button" *ngIf="updateVehicle" (click)="updatevehicledetails()"> UPDATE VEHICLE</button>
 

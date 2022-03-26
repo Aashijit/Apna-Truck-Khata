@@ -28,20 +28,40 @@ export class EditProfilePage {
       "opt_counter":'0'
   };
 
+  profileTemp : any = {
+    "srth_id":'1',
+    "name":'',
+    "business_name":'',
+    "city":'',
+    "GSTN":'',
+    "pan":'',
+    "address_line_1":'',
+    "address_line_2":'',
+    "state":'',
+    "pincode":'',
+    "profile_image_id":'',
+    "last_maint_id":'srth_app',
+    "opt_counter":'0'
+};
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes : CodesProvider, 
     private rest : RestProvider, private loading : LoadingController, private msg : MessageProvider) {
+
+  }
+
+  ionViewWillEnter(){
     var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
     this.profile['srth_id'] = acc[0]['srth_id'];
-
     var data = {
       "srth_id" : acc[0]['srth_id']
     };
 
     this.rest.post(this.codes.GET_PROFILE,data).then(resp => {
       this.profile = resp['data'][0];
+      if(this.profile == undefined || this.profile == null) {
+        this.profile = this.profileTemp;
+      }
     });
-
-
 
   }
 
@@ -50,7 +70,9 @@ export class EditProfilePage {
   }
 
   saveDetails() {
-      let lng = this.loading.create( 
+    var acc = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
+    this.profile['srth_id'] = acc[0]['srth_id'];
+    let lng = this.loading.create( 
         {
         content:'Saving the profile ...'
         });

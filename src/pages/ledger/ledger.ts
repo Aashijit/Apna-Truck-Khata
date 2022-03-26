@@ -48,8 +48,20 @@ export class LedgerPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     private modalCtrl : ModalController,private codes : CodesProvider, private rest : RestProvider, private message : MessageProvider ) {
-    this.worker = JSON.parse(localStorage.getItem("worker"));
-    this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
+      this.worker = JSON.parse(localStorage.getItem("worker"));
+      var data = {
+        "worker_id":this.worker['worker_id']
+      };
+  
+      this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID,data).then(resp => {
+        if(resp['_ReturnCode'] == '0') {
+          this.worker = resp['data'][0];
+          this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
+        }
+      });
+
+    // this.worker = JSON.parse(localStorage.getItem("worker"));
+    // this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
 
     if(this.navParams.get("payment") != undefined) {
       this.getAllBillsByWorkerId();
