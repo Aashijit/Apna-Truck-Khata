@@ -63,7 +63,6 @@ export class VehicleKhataPage {
     this.rest.post(this.codes.GET_VEHICLE_DETAILS,data).then(resp => {
       if(resp['_ReturnCode'] == '0') {
         this.vehicles = resp['data'];
-
         for(let i=0;i<this.vehicles.length;i++) {
           this.vehicles[i]['displaycontrol'] = false;
           this.vehicles[i]['selected'] = false;
@@ -119,6 +118,9 @@ export class VehicleKhataPage {
 
 
   ionViewWillEnter(){
+    this.vehicles = [];
+    this.vehicledrivers = [];
+    this.vehiclenodrivers = [];
     var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
 
     var data = {

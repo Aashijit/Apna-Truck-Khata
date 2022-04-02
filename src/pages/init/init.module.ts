@@ -1,3 +1,4 @@
+import { CountdownModule } from 'ngx-countdown';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { InitPage } from './init';
@@ -9,6 +10,7 @@ import { NgOtpInputModule } from  'ng-otp-input';
   ],
   imports: [
     NgOtpInputModule,
+    CountdownModule,
     IonicPageModule.forChild(InitPage),
   ]
 })

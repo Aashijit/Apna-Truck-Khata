@@ -29,6 +29,7 @@
 
     <ion-card-content>
 
+
   <div class="label-float" >
     <input type="tel" maxlength="10"  placeholder=" " [(ngModel)]="phoneNumber" />
     <label>ENTER MOBILE NUMBER</label>
@@ -36,16 +37,30 @@
   </div>
   <!-- *ngIf='showpassword'  -->
   <ion-row style="margin-top: 20px !important;" *ngIf='showpassword'>
+ 
+    
+
     <ion-col col-12 style="margin-left: 16px !important;">
-      <h2 >
+
+      <h2 *ngIf="!timeOver">Your OTP should reach in </h2>
+      <div *ngIf="!timeOver">
+        <countdown [config]="{ leftTime: 60, size:'medium', notify:[1], template:'$!s!s' }" (event)="handleEvent($event)"></countdown>
+      </div>
+
+      <button ion-button clear (click)="otpNotReceived = true" *ngIf="timeOver">Did not receive OTP ?</button>
+      <h2 *ngIf="!otpNotReceived">
         ENTER OTP
       </h2>
-      <ng-otp-input #input1 style="margin-top:10px;"   (onInputChange)="updateOtp($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
+      <ng-otp-input #input1 style="margin-top:10px;"  *ngIf="!otpNotReceived" (onInputChange)="updateOtp($event)" [config]="{length:4,allowNumbersOnly:true}"></ng-otp-input>
     
     </ion-col>
     <ion-col col-12 style="margin-left: 16px !important;">
-      <h2>
+      <h2 *ngIf="!otpNotReceived">
         CREATE NEW PIN
+      </h2>
+
+      <h2 *ngIf="otpNotReceived">
+        CREATE NEW PIN WITHOUT OTP
       </h2>
       <ng-otp-input #input2 style="margin-top:10px;" (onInputChange)="updatePassword($event)" [config]="{length:4,allowNumbersOnly:true,isPasswordInput:true}"></ng-otp-input>
     

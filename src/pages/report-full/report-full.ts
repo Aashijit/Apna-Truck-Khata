@@ -39,6 +39,9 @@ export class ReportFullPage {
   downloadendpoint : any = '';
   isfullreport : boolean = true;
 
+
+  reportHtml : any = '';
+
   optionsMulti: CalendarComponentOptions = {
     pickMode: 'range',
     from:this.dt,
@@ -140,6 +143,7 @@ export class ReportFullPage {
     this.rest.post(this.codes.FULL_REPORT, data).then(resp => {
       console.log(resp);
       document.getElementById("report").innerHTML = resp['data'];
+      // this.reportHtml = resp['data'];
       this.zone.run(() => {
         console.log("screen refreshed");
       });

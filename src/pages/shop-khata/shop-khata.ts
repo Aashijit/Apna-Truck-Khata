@@ -61,7 +61,8 @@ export class ShopKhataPage {
               "type":"shopname",
               "name":this.shops[i]['name'],
               "id":"",
-              "amount":""
+              "amount":"",
+              "details":""
             };
             this.search.push(searchobj);
           }
@@ -71,7 +72,8 @@ export class ShopKhataPage {
               "type":"bills",
               "id":this.bills[i]['bill_number'],
               "name":this.bills[i]['person_shop_name'],
-              "amount":this.bills[i]['total_bill']
+              "amount":this.bills[i]['total_bill'],
+              "details":this.bills[i]['bill_details']
             };
             this.search.push(searchobj2);
           }
@@ -426,7 +428,7 @@ export class ShopKhataPage {
 
     this.displaysearchitems = this.search.filter(wp => {
       if (this.searchTerm != '') {
-        var str = wp.id+wp.name;
+        var str = wp.id+wp.name+wp.details;
         return (str.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1);
       }
       else 

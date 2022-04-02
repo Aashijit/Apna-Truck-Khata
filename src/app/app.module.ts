@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { NgOtpInputModule } from  'ng-otp-input';
+import { CountdownModule } from 'ngx-countdown';
+
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { NgOtpInputModule } from  'ng-otp-input';
     IonicImageViewerModule,
     BrowserAnimationsModule,
     NgOtpInputModule,
+    CountdownModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

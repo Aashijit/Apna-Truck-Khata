@@ -1,3 +1,4 @@
+import { CountdownModule } from 'ngx-countdown';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
@@ -18,6 +19,9 @@ export class InitPage {
   message : any = '';
   otp  :any = '';
   srth_id : any = '';
+  notify = '';
+  timeOver : boolean = false;
+  otpNotReceived : boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
     private codes : CodesProvider, private loading : LoadingController) {
@@ -41,7 +45,20 @@ export class InitPage {
     this.otp = otp;
   }
 
+  handleEvent(e) {
+    this.notify = e.action.toUpperCase();
+    if (e.action === 'notify') {
+      this.timeOver = true;
+    }
+    console.log('Notify', e);
+  }
+
   updatePassword(password){
+
+    if(this.otpNotReceived){
+      this.otp = -1;
+    }
+
     this.password = password;
   }
 
