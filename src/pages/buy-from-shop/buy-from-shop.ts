@@ -16,6 +16,7 @@ export class BuyFromShopPage {
   isSelectedBill: boolean = false;
   shops: any = [];
   vehicles: any = [];
+  vehicle_number : any = '';
   reason: any = '';
   bills: any = [];
   drivers: any = [];
@@ -134,6 +135,7 @@ export class BuyFromShopPage {
     this.bill_details = bill['bill_details'];
     this.reason = bill['reason'];
     this.is_update = true;
+    this.selectVehicle();
   }
 
 
@@ -141,6 +143,16 @@ export class BuyFromShopPage {
     this.vari = $event;
     this.isSelectedBill = true;
 
+  }
+
+
+  selectVehicle() {
+    for(let i=0;i<this.vehicles.length;i++) {
+      if(this.vehicles[i]['vehicle_id'] == this.vehicle_id) {
+        this.vehicle_number = this.vehicles[i]['vehicle_number'];
+        break;
+      }
+    }
   }
 
 
@@ -243,8 +255,9 @@ export class BuyFromShopPage {
 
     this.rest.post(this.codes.ADD_EXPENSE_BILL, data).then(resp => {
       if (resp['_ReturnCode'] == '0') {
+        resp['data']['vehicle_number'] = this.vehicle_number;
         if (this.img != null)
-          resp['data']['image_content'] = this.img['image_url'];
+          resp['data']['image_url'] = this.img['image_url'];
         this.bills.push(resp['data']);
         // this.worker_id  = '';
         // this.person_shop_name  = '';
@@ -329,6 +342,7 @@ export class BuyFromShopPage {
         for (let i = 0; i < this.bills.length; i++)
           this.bills[i]['selected'] = 'false';
 
+        this.navCtrl.pop();
       }
     });
   }

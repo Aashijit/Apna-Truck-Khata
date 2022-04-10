@@ -48,6 +48,7 @@
         <a href="#about">REMINDER DATE</a>
         <a href="#about">DETAILS</a>
         <a href="#about">KM READING</a>
+        <a href="#about">IMAGE</a>
 
         <div *ngFor="let cm of complaints">
         <div [ngClass]="cm['selected']=='true' ? 'scrollmenu-list selected' : 'scrollmenu-list'" (click)="selectThis(cm)" >
@@ -58,7 +59,9 @@
           <p>{{cm['date_of_reminder']}}</p>
           <p>{{cm['details']}}</p>
           <p>{{cm['km_reading']}}</p>
-     
+          <p *ngIf="cm['image'] != undefined && cm['image'] != null">
+            <img [src]="cm['image']" (click)="viewImage(cm['image'])" style="width: 11% !important;" />
+          </p>
         </div>
       </div>
 

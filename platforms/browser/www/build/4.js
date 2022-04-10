@@ -118,6 +118,9 @@ var VehicleKhataPage = /** @class */ (function () {
     };
     VehicleKhataPage.prototype.ionViewWillEnter = function () {
         var _this = this;
+        this.vehicles = [];
+        this.vehicledrivers = [];
+        this.vehiclenodrivers = [];
         var userinfo = JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
         var data = {
             "vehicle_owner_srth_id": userinfo[0]['srth_id']

@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 891:
+/***/ 892:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LedgerPageModule", function() { return LedgerPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ledger__ = __webpack_require__(972);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ledger__ = __webpack_require__(973);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var LedgerPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 972:
+/***/ 973:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,6 +64,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LedgerPage = /** @class */ (function () {
     function LedgerPage(navCtrl, navParams, modalCtrl, codes, rest, message) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.modalCtrl = modalCtrl;
@@ -97,7 +98,17 @@ var LedgerPage = /** @class */ (function () {
         this.payment = '';
         this.isUpdate = false;
         this.worker = JSON.parse(localStorage.getItem("worker"));
-        this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
+        var data = {
+            "worker_id": this.worker['worker_id']
+        };
+        this.rest.post(this.codes.GET_WORKER_BY_WORKER_ID, data).then(function (resp) {
+            if (resp['_ReturnCode'] == '0') {
+                _this.worker = resp['data'][0];
+                _this.dueMoney = Number(_this.worker['total_bill_money']) - Number(_this.worker['paid_money']);
+            }
+        });
+        // this.worker = JSON.parse(localStorage.getItem("worker"));
+        // this.dueMoney = Number(this.worker['total_bill_money']) - Number(this.worker['paid_money']);
         if (this.navParams.get("payment") != undefined) {
             this.getAllBillsByWorkerId();
             this.payment = this.navParams.get("payment");

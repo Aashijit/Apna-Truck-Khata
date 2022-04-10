@@ -16,7 +16,7 @@ export class MechanicBillPage {
   isSelectedBill : boolean = false;
   mechanics : any = [];
   vehicles : any = [];
-
+  vehicle_number : any = '';
   reason : any = '';
 
   bills : any = [];
@@ -154,6 +154,16 @@ export class MechanicBillPage {
     console.log('ionViewDidLoad MechanicBillPage');
   }
 
+  selectVehicle() {
+    for(let i=0;i<this.vehicles.length;i++) {
+      if(this.vehicles[i]['vehicle_id'] == this.vehicle_id) {
+        this.vehicle_number = this.vehicles[i]['vehicle_number'];
+        break;
+      }
+    }
+  }
+
+
 
   openCameraPopup() {
 
@@ -180,6 +190,7 @@ export class MechanicBillPage {
     var data = {
       "person_shop_name":this.person_shop_name,
       "vehicle_id":this.vehicle_id,
+      "vehicle_number":this.vehicle_number,
       "bill_date":this.bill_date,
       "worker_type":'shop',
       "bill_details":this.bill_details
@@ -227,6 +238,7 @@ export class MechanicBillPage {
     this.bill_details =bill['bill_details'];
     this.reason = bill['reason'];
     this.is_update = true;
+    this.selectVehicle();
   }
 
 
@@ -275,15 +287,20 @@ export class MechanicBillPage {
         this.total_bill  = '';
         this.bill_image_id  = '';
         this.bill_details  = '';
-        this.img = null;
+      
 
 
         this.bill_number = Number(resp['_LatestBillId']) + 1;
 
         
-        if(this.img != null)
-        resp['data']['image_content'] = this.img['image_content'];
+        if(this.img != null) {
+          resp['data']['image_content'] = this.img['image_url'];
+        }
+        resp['data']['vehicle_number'] = this.vehicle_number;
+        this.vehicle_number = "";
+          this.img = null;
           this.bills.push(resp['data']);
+          console.log(JSON.stringify(this.bills));
           for(let i=0;i<this.bills.length;i++)
             this.bills[i]['selected'] = 'false';
       }
@@ -327,6 +344,8 @@ export class MechanicBillPage {
 
         for(let i=0;i<this.bills.length;i++)
           this.bills[i]['selected'] = 'false';
+
+          this.navCtrl.pop();
       }
     });
   }

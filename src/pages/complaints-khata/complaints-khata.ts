@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
 import { Component } from '@angular/core';
@@ -31,7 +32,7 @@ export class ComplaintsKhataPage {
   searchTerm : any = '';
 
   constructor(private alertCtrl : AlertController, public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider, 
-    private codes : CodesProvider, private mdl : ModalController) {
+    private codes : CodesProvider, private mdl : ModalController, private pv : PhotoViewer) {
 
   }
 
@@ -61,6 +62,11 @@ export class ComplaintsKhataPage {
     this.displayfilter = true;
     this.displaysearchitems = this.search;
   }
+
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl, 'Complaint Image', { 'share': true })
+  }
+
 
   closesearchbar(){
     this.displayfilter = false;

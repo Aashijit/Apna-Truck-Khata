@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { MessageProvider } from './../../providers/message/message';
 import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
@@ -39,7 +40,8 @@ export class AddComplaintsPage {
   img : any = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private modalCtrl: ModalController,
-    private codes: CodesProvider, private rest: RestProvider, private message : MessageProvider) {
+    private codes: CodesProvider, private rest: RestProvider, private message : MessageProvider, 
+    private pv : PhotoViewer) {
 
     var update = this.navParams.get("update");
 
@@ -118,6 +120,10 @@ export class AddComplaintsPage {
     console.log('ionViewDidLoad AddComplaintsPage');
   }
 
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl, 'Complaint Image', { 'share': true })
+  }
+
   
 
   change(vehicleId) {
@@ -160,6 +166,7 @@ export class AddComplaintsPage {
 
     var data = {
       "vehicle_id":this.vehicle_id,
+      "vehicle_number":this.vehicle_number,
       "complaint_date":this.date_of_complaint,
       "reminder_date":this.date_of_reminder,
       "details":this.details
@@ -325,7 +332,7 @@ export class AddComplaintsPage {
           if (this.complaints[i]['problems'] != undefined) {
             var str = "";
             for (let j = 0; j < this.complaints[i]['problems'].length; j++) {
-              str += this.complaints[i]['problems'][j]['problem_id'] + " ";
+              str += this.complaints[i]['problems'][j]['problem_name'] + " ";
             }
             this.complaints[i]['problem_id'] = str;
           }

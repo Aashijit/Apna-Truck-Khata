@@ -41,7 +41,7 @@
           <!-- <p>Ajay Das </p> -->
           <p>{{bl['person_shop_name']}}</p>
           <p>{{bl['bill_number']}}</p>
-          <p>{{bl['vehicle_id']}}</p>
+          <p>{{bl['vehicle_number']}}</p>
           <p>{{bl['bill_date']}}</p>
           <p>{{bl['total_bill']}}</p>
           <p>{{bl['bill_details']}}</p>
@@ -89,7 +89,7 @@
 
     <ion-item class="label-select">
       <ion-label floating>SELECT VEHICLE</ion-label>
-      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id">
+      <ion-select interface="action-sheet" style="border: 2px solid #3951b2; color: #3951b2; border-radius: 5px;font-size: 16px;padding-top: 12px;padding-left: 10px; padding-bottom: 13px !important;" [(ngModel)]="vehicle_id"  (ionChange)="selectVehicle()">
         <ion-option value="{{vh['vehicle_id']}}" *ngFor="let vh of vehicles">{{vh['vehicle_number']}}</ion-option>
       </ion-select>
     </ion-item>

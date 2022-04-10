@@ -82,6 +82,7 @@
         <a href="#about">REMINDER</a>
         <a href="#support">DETAILS</a>
         <a href="#support">KM READING</a>
+        <a href="#support">IMAGE</a>
     
 
       <div *ngIf="complaints.length == 0 && !nocomplaints" style="padding: 15px;text-align: center;">
@@ -105,6 +106,9 @@
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['date_of_reminder']}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['details']}}</p>
           <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">{{cm['km_reading']}}</p>
+          <p [ngClass]="cm['status'] == '' ? 'prob' : 'sol'">
+            <img [src]="cm['image']" style="width: 11% !important;" (click)="viewImage(cm['image'])" />
+          </p>
         </div>
       </div>
     </div>

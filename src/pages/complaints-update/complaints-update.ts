@@ -1,3 +1,4 @@
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { RestProvider } from './../../providers/rest/rest';
 import { CodesProvider } from './../../providers/codes/codes';
 import { Component } from '@angular/core';
@@ -30,7 +31,7 @@ export class ComplaintsUpdatePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private codes : CodesProvider, 
     private rest : RestProvider, private modalCtrl : ModalController, 
-    private ldl : LoadingController) {
+    private ldl : LoadingController, private pv : PhotoViewer) {
     this.getcomplaints(0,null);
     this.getVehicles();
   }
@@ -69,6 +70,10 @@ export class ComplaintsUpdatePage {
           this.getDrivers();
         }
     });
+  }
+
+  viewImage(imageUrl) {
+    this.pv.show(imageUrl, 'Complaint Image', { 'share': true })
   }
 
   clicksearchbar(){
