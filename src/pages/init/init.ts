@@ -1,3 +1,4 @@
+import { MessageProvider } from './../../providers/message/message';
 import { CountdownModule } from 'ngx-countdown';
 import { CodesProvider } from './../../providers/codes/codes';
 import { RestProvider } from './../../providers/rest/rest';
@@ -22,15 +23,17 @@ export class InitPage {
   notify = '';
   timeOver : boolean = false;
   otpNotReceived : boolean = false;
+  forgotPinFlag : boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rest : RestProvider,
-    private codes : CodesProvider, private loading : LoadingController) {
+    private codes : CodesProvider, private loading : LoadingController, private msg : MessageProvider) {
 
       if(localStorage.getItem(this.codes.K_ACCOUNT_INFO) != null && localStorage.getItem(this.codes.K_ACCOUNT_INFO) != undefined) {
           var json =  JSON.parse(localStorage.getItem(this.codes.K_ACCOUNT_INFO));
           this.phoneNumber = json[0]['mobile_number'];
-          if(json['password_salt'] != '') 
+          if(json['password_salt'] != '')  {
             this.enterpassword = true;
+          }
           else 
             this.showpassword = true;
       }
@@ -39,6 +42,22 @@ export class InitPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InitPage');
+  }
+
+  changeMobileNumber() {
+    this.enterpassword = false;
+    this.phoneNumber = "";
+    localStorage.clear();
+  }
+
+  forgotPin() {
+    if(localStorage.getItem(this.codes.K_ACCOUNT_INFO) != null && localStorage.getItem(this.codes.K_ACCOUNT_INFO) != undefined) {
+      this.forgotPinFlag = true;
+      this.phoneNumber = "";
+      this.enterpassword = false;
+    } else {
+      this.msg.displayToast(" Please reload the app. We could not detect your mobile number!!");
+    }
   }
 
   updateOtp(otp){
@@ -68,13 +87,17 @@ export class InitPage {
       'mobile_number':this.phoneNumber
     }
 
+    if(this.forgotPinFlag) {
+      data['forgot_pin'] = '1';
+    }
+
     var load = this.loading.create({
       content:'Checking your mobile number ... '
     });
     load.present();
     this.rest.post(this.codes.GET_REGISTRATION_INFO,data).then(res => {
       load.dismiss();
-      if(res['data']['password_salt'] == ""){
+      if(res['data']['password_salt'] == "" || (this.forgotPinFlag == true)){
         this.showpassword = true;
         this.srth_id = res['data']['srth_id'];
       }
@@ -98,6 +121,7 @@ export class InitPage {
       "otp_text":this.otp,
       "password": this.password
     };
+
     var load = this.loading.create({
       content:'Registering your account  ... '
     });

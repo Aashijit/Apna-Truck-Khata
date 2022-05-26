@@ -97,13 +97,23 @@ export class AllImageKhataPage {
       this.filterimages = this.images.filter(wp => {
         if (this.searchTerm != '') {
           var sterm = this.searchTerm.trim();
-          sterm = sterm.replace(/[^a-zA-Z0-9]/g,"");
+          var stermArray = sterm.split(" ");
+          // sterm = sterm.replace(/[^a-zA-Z0-9]/g,"");
           var tag_cloud =  wp.tag_cloud.replace(/[^a-zA-Z0-9]/g,"");
-          return (tag_cloud.toLowerCase().indexOf(sterm.toLowerCase()) > -1);
+          for(let i=0;i<stermArray.length;i++) {
+            if(this.checkIfImageMatchesSearch(stermArray[i], tag_cloud)) 
+              return true;
+          }
+          return false;
         } 
         else 
           return this.images;
       });
+  }
+
+
+  checkIfImageMatchesSearch(sterm, tag_cloud) {  
+    return (tag_cloud.toLowerCase().indexOf(sterm.toLowerCase()) > -1);
   }
 
   dismiss(){

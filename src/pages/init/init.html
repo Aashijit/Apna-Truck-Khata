@@ -24,7 +24,10 @@
 
   <ion-card>
     <ion-card-header>
-      GET STARTED
+      GET STARTED 
+      <p *ngIf="forgotPinFlag" style="white-space:normal;color:red;">
+        Enter your phone number so that we can help you create new pin
+      </p>
     </ion-card-header>
 
     <ion-card-content>
@@ -37,7 +40,8 @@
   </div>
   <!-- *ngIf='showpassword'  -->
   <ion-row style="margin-top: 20px !important;" *ngIf='showpassword'>
- 
+    
+
     
 
     <ion-col col-12 style="margin-left: 16px !important;">
@@ -67,7 +71,13 @@
     </ion-col>
   </ion-row>
 
+
   <ion-row *ngIf='enterpassword'>
+    <ion-col col-12>
+      <button ion-button clear  (click)="changeMobileNumber()">Change Mobile Number</button>
+      <button ion-button clear (click)="forgotPin()">Forgot pin</button>
+    </ion-col>
+
     <ion-col col-12 style="margin-left: 16px !important;">
     <h2>
       ENTER YOUR PIN

@@ -99,15 +99,11 @@ export class MechanicBillPage {
       this.rest.post(this.codes.GET_LAST_BILL_ID,data).then(resp => {
         if(resp['_ReturnCode'] == '0'){
           this.bill_number = resp['data'];
-          this.bill_number ++;
+          this.bill_number++;
         }
       });
-      
     }
-
-
     this.getVehicles();
-
   }
 
   openCalendarPopup() {

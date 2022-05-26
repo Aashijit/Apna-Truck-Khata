@@ -19,48 +19,6 @@ export class DriverDocumentPage {
   driverJoiningDate : any = '';
   documents : any = [
     {
-      "document_name":"National Permit",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"Insurance",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"Pollution Certificate",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"Certificate of fitness",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"Tax token",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"5 Year Authorization",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
-      "document_name":"Registration Certificate",
-      "document_image_id":"0",
-      "document_expiry_date":"",
-      "document_reminder_date":""
-    },
-    {
       "document_name":"Others 1X",
       "document_image_id":"0",
       "document_expiry_date":"",

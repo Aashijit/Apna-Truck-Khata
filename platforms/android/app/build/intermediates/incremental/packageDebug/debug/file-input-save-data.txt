@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Apr 10 18:03:06 IST 2022
+#Thu May 26 16:51:37 IST 2022
 124.path=www/assets/saarthi-icon/png/005-delivery-man.png
 60.set=ASSET
 52.set=ASSET
